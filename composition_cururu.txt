@@ -1,0 +1,21 @@
+VIDA: NODE
+- var vida
+- func recebe dano
+- func recebe cura
+
+HURT BOX: AREA 2D
+- var comp_vida
+- var knockback
+- var hit sfx
+- func recebe dano
+- func aplica knockback
+
+HIT BOX: AREA 2D
+- var screenshake
+- func aplica dano
+- func aplica shake
+
+
+
+
+

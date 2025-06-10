@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://dye4iyc8e4ryy"]
+
+[ext_resource type="Script" uid="uid://hsdutxxttrp3" path="res://Scripts/Vida.gd" id="1_ibkyn"]
+
+[node name="Vida" type="Node"]
+editor_description = "Adiciona vida a um componente"
+script = ExtResource("1_ibkyn")
