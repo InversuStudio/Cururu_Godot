@@ -437,7 +437,7 @@ unique_name_in_owner = true
 position = Vector2(0, -110)
 scale = Vector2(0.5, 0.5)
 sprite_frames = SubResource("SpriteFrames_t2cfw")
-animation = &"Idle"
+animation = &"Jump"
 frame = 1
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
