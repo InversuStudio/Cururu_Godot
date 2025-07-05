@@ -1,4 +1,4 @@
-[gd_scene load_steps=55 format=3 uid="uid://nohq28uk7lfk"]
+[gd_scene load_steps=56 format=3 uid="uid://nohq28uk7lfk"]
 
 [ext_resource type="Script" uid="uid://cfu4ciwll8jcj" path="res://Scripts/Cururu.gd" id="1_asluq"]
 [ext_resource type="Texture2D" uid="uid://oueeifn344de" path="res://Sprites/Cururu/Idle/01.png" id="1_sqf2x"]
@@ -199,6 +199,10 @@ animations = [{
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_qakxq"]
 radius = 44.0
 height = 200.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_xx3r0"]
+radius = 44.0
+height = 208.0
 
 [sub_resource type="Animation" id="Animation_rpndr"]
 resource_name = "Fall"
@@ -422,14 +426,15 @@ _data = {
 &"Run": SubResource("Animation_prtj7")
 }
 
-[node name="Player" type="CharacterBody2D" node_paths=PackedStringArray("vida", "hurtbox", "state_machine")]
+[node name="Player" type="CharacterBody2D" node_paths=PackedStringArray("vida", "state_machine")]
 script = ExtResource("1_asluq")
-speed = 60.0
-air_speed = 45.0
-jump_force = 60.0
-fall_gravity = 40.0
+velocidade = 5.0
+velocidade_ar = 4.5
+altura_pulo = 3.0
+tempo_pulo = 0.8
+tempo_cair = 0.5
+tempo_coyote = 0.1
 vida = NodePath("Vida")
-hurtbox = NodePath("HurtBox")
 state_machine = NodePath("StateMachine")
 
 [node name="Cururu" type="AnimatedSprite2D" parent="."]
@@ -452,8 +457,9 @@ comp_vida = NodePath("../Vida")
 hit_sfx = ExtResource("40_xx3r0")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HurtBox"]
-position = Vector2(5.5, -74)
-rotation = -1.57079
+position = Vector2(0, -104)
+shape = SubResource("CapsuleShape2D_xx3r0")
+debug_color = Color(0.92912, 0, 0.16329, 0.42)
 
 [node name="Anim" type="AnimationPlayer" parent="."]
 unique_name_in_owner = true
@@ -463,11 +469,9 @@ libraries = {
 autoplay = "Idle"
 
 [node name="Coyote" type="Timer" parent="."]
-unique_name_in_owner = true
 wait_time = 0.15
 
 [node name="MeleeTime" type="Timer" parent="."]
-unique_name_in_owner = true
 wait_time = 0.3
 one_shot = true
 
@@ -481,9 +485,10 @@ script = ExtResource("29_prtj7")
 pulo_state = NodePath("../Pulo")
 fall_state = NodePath("../Fall")
 
-[node name="Fall" type="Node" parent="StateMachine" node_paths=PackedStringArray("chao_state")]
+[node name="Fall" type="Node" parent="StateMachine" node_paths=PackedStringArray("chao_state", "pulo_state")]
 script = ExtResource("31_g0l4m")
 chao_state = NodePath("../Chao")
+pulo_state = NodePath("../Pulo")
 
 [node name="Pulo" type="Node" parent="StateMachine" node_paths=PackedStringArray("fall_state")]
 script = ExtResource("32_7ba70")
@@ -492,3 +497,5 @@ fall_state = NodePath("../Fall")
 [node name="WallSlide" type="Node" parent="StateMachine"]
 
 [node name="Nadando" type="Node" parent="StateMachine"]
+
+[connection signal="timeout" from="Coyote" to="StateMachine/Fall" method="_on_coyote_timeout"]

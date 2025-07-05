@@ -18,7 +18,7 @@ func Enter() -> void:
 func FixedUpdate(_delta: float) -> State:
 	# Recebe input de movimento, aplica movimento
 	parent.input_move = Input.get_axis("esquerda","direita")
-	parent.velocity.x = parent.input_move * parent.speed * 10
+	parent.velocity.x = parent.input_move * parent.speed
 	
 	if parent.is_on_floor() and atacando == false:
 		# Controla animações de parado e correndo
@@ -29,6 +29,9 @@ func FixedUpdate(_delta: float) -> State:
 			return pulo_state
 	# Se não estiver no chão, mudar State
 	if not parent.is_on_floor():
+		print("AIAIAII")
+		parent.is_coyote = true
+		parent.coyote.start()
 		return fall_state
 	# INPUT MELEE
 	if Input.is_action_just_pressed("melee"):

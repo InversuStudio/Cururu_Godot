@@ -25,12 +25,34 @@ texture_region_size = Vector2i(170, 170)
 0:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-85, -85, 85, -85, 85, 85, -85, 85)
 
 [sub_resource type="TileSet" id="TileSet_x70df"]
+<<<<<<< Updated upstream
 tile_size = Vector2i(170, 170)
+=======
+tile_size = Vector2i(128, 128)
+>>>>>>> Stashed changes
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_0kgpq")
 
 [node name="FaseTeste" type="Node2D"]
 
+<<<<<<< Updated upstream
+=======
+[node name="BackgroundTeste" type="Sprite2D" parent="."]
+position = Vector2(-104.274, -2258)
+scale = Vector2(12.9508, 12.9508)
+texture = ExtResource("1_md0x5")
+
+[node name="ImagemDoWhatsAppDe2025-07-04ÀS18_44_499e9c9e51-removebg-preview" type="Sprite2D" parent="BackgroundTeste"]
+position = Vector2(-45.7226, 2.4549)
+scale = Vector2(1.47678, 1.47678)
+texture = ExtResource("2_yj0h4")
+
+[node name="ImagemDoWhatsAppDe2025-07-04ÀS18_44_4981d590d4-removebg-preview" type="Sprite2D" parent="BackgroundTeste"]
+position = Vector2(-11.3901, 0.30687)
+scale = Vector2(1.46186, 1.46186)
+texture = ExtResource("3_xy1dn")
+
+>>>>>>> Stashed changes
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
 position = Vector2(-1, 0)
 tile_map_data = PackedByteArray("AAD+/wAAAAABAAAAAAD//wAAAAABAAAAAAAAAAAAAAABAAAAAAABAAAAAAABAAAAAAACAAAAAAABAAAAAAADAAAAAAABAAEAAAD4/wAAAAABAAAAAAD5/wAAAAABAAAAAAD6/wAAAAABAAAAAAD7/wAAAAABAAAAAAD8/wAAAAABAAAAAAD9/wAAAAABAAAAAAAEAAAAAAABAAEAAAAFAAAAAAABAAAAAAAGAAAAAAABAAAAAAAHAAAAAAABAAAAAAAIAAAAAAABAAAAAAADAP//AAAAAAEAAAADAP7/AAAAAAEAAAADAP3/AAAAAAEAAAADAPz/AAAAAAAAAAAEAPz/AAACAAAAAAAEAP3/AAACAAEAAAAEAP7/AAACAAEAAAAEAP//AAACAAEAAAA=")

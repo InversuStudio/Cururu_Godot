@@ -9,16 +9,16 @@ extends State
 # INICIA O STATE
 func Enter() -> void:
 	print("JUMP")
-	parent.velocity.y = -parent.jump_force * 10 # Aplica pulo
+	parent.velocity.y = -parent.jump_force # Aplica pulo
 	parent.anim.play("Jump") # Animação de pulo
 
 # COMPORTAMENTO PHYSICS_PROCESS
-func FixedUpdate(_delta: float) -> State:
+func FixedUpdate(delta: float) -> State:
 	# Aplica gravidade de pulo
-	parent.velocity.y += parent.jump_gravity
+	parent.velocity.y += parent.jump_gravity * delta
 	# Recebe input de movimento, aplica movimento
 	parent.input_move = Input.get_axis("esquerda","direita")
-	parent.velocity.x = parent.input_move * parent.air_speed * 10
+	parent.velocity.x = parent.input_move * parent.air_speed
 	
 	# Se estiver caindo, muda State
 	if parent.velocity.y >= 0.0:

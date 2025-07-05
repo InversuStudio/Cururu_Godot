@@ -31,6 +31,7 @@ func recebe_dano(ataque : Ataque):
 	await som.finished
 	som.queue_free()
 
+# FUNÇÃO DE MORRER
 func morre():
 	print("MORRI")
 	get_parent().queue_free()
