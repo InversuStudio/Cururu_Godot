@@ -14,21 +14,26 @@ func Enter() -> void:
 	parent.velocity.y = -parent.jump_force # Aplica pulo
 	%Anim.play("Jump") # Animação de pulo
 
+func Update(_delta: float) -> State:
+	# INPUT DASH
+	if Input.is_action_just_pressed("dash") and parent.pode_dash:
+		return dash_state
+		
+	return null
+
 # COMPORTAMENTO PHYSICS_PROCESS
 func FixedUpdate(delta: float) -> State:
 	# Aplica gravidade de pulo
 	parent.velocity.y += parent.jump_gravity * delta
 	
-	# Recebe input de movimento
-	var input_move = Input.get_axis("esquerda","direita")
 	# Aplica movimento
-	parent.velocity.x = input_move * parent.speed
+	parent.velocity.x = parent.input_move * parent.air_speed
 	
 	# Espelha o sprite de acordo com o input
-	if input_move > 0:
+	if parent.input_move > 0:
 		%Cururu.flip_h = false
 		parent.hitbox_container.scale.x = 1
-	elif input_move < 0:
+	elif parent.input_move < 0:
 		%Cururu.flip_h = true
 		parent.hitbox_container.scale.x = -1
 	
@@ -39,9 +44,5 @@ func FixedUpdate(delta: float) -> State:
 	if Input.is_action_just_released("pulo"):
 		parent.velocity.y = 0.0
 		return fall_state
-	
-	# INPUT DASH
-	if Input.is_action_just_pressed("dash") and parent.pode_dash:
-		return dash_state
 		
 	return null # Não muda o State

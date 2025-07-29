@@ -2,7 +2,9 @@ extends CharacterBody2D
 
 @export_group("Movimento")
 ## Velocidade de movimento terrestre, em m/s
-@export var velocidade: float = 0.0
+@export var vel: float = 0.0
+## Velocidade de movimento aéreo, em m/s
+@export var vel_aerea: float = 0.0
 
 @export_group("Pulo")
 ## Altura do pulo, em metros
@@ -25,7 +27,9 @@ extends CharacterBody2D
 @export var cooldown_dash: float = 0.0
 
 # Velocidade terrestre convertida -> 170 = tamanho tile
-@onready var speed: float = velocidade  * 128
+@onready var speed: float = vel  * 128
+# Velocidade aérea
+@onready var air_speed: float = vel_aerea * 128
 # Velocidade do dash
 @onready var dash_speed: float = (distancia_dash / tempo_dash) * 128
 # Velocidade do pulo
@@ -47,11 +51,21 @@ var pode_dash: bool = true
 
 @onready var hitbox_container: Node2D = $HitBoxes
 
+var input_move: float = 0.0
+
 func _ready() -> void:
+	print(vel)
+	print(vel_aerea)
 	%Coyote.wait_time = tempo_coyote
 	%JumpLag.wait_time = lag_pulo
 	%DashTime.wait_time = tempo_dash
 	%DashCooldown.wait_time = cooldown_dash
+
+func _process(delta: float) -> void:
+	# Recebe input
+	input_move = Input.get_axis("esquerda", "direita")
+	# Aplica PROCESS do StateMachine
+	state_machine.Update(delta)
 
 func _physics_process(delta: float) -> void:
 	# Aplica PHYSICS_PROCESS do StateMachine

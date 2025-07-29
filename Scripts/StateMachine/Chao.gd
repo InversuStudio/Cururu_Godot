@@ -21,34 +21,7 @@ var combo_anim: Array[String] = [
 func Enter() -> void:
 	print("CHAO")
 
-# COMPORTAMENTO PHYSICS_PROCESS
-func FixedUpdate(_delta: float) -> State:
-	# Recebe input de movimento
-	var input_move = Input.get_axis("esquerda","direita")
-	# Aplica movimento
-	parent.velocity.x = input_move * parent.speed
-	
-	# Espelha o sprite de acordo com o input
-	if input_move > 0:
-		%Cururu.flip_h = false
-		parent.hitbox_container.scale.x = 1
-	elif input_move < 0:
-		%Cururu.flip_h = true
-		parent.hitbox_container.scale.x = -1
-	
-	if parent.is_on_floor() and atacando == false:
-		# Controla animações de parado e correndo
-		if input_move: %Anim.play("Run")
-		else: %Anim.play("Idle")
-		# Ao pressionar input de Pulo, mudar State
-		if Input.is_action_just_pressed("pulo"):
-			return pulo_state
-	# Se não estiver no chão, mudar State
-	if not parent.is_on_floor():
-		parent.is_coyote = true
-		%Coyote.start()
-		return fall_state
-	
+func Update(_delta: float) -> State:
 	# INPUT MELEE
 	if Input.is_action_just_pressed("melee") and not atacando:
 		atacando = true # Define que está atacando
@@ -67,6 +40,35 @@ func FixedUpdate(_delta: float) -> State:
 	# INPUT DASH
 	if Input.is_action_just_pressed("dash") and parent.pode_dash:
 		return dash_state
+		
+	return null # Não muda o State
+
+# COMPORTAMENTO PHYSICS_PROCESS
+func FixedUpdate(_delta: float) -> State:
+	# Aplica movimento
+	parent.velocity.x = parent.input_move * parent.speed
+	
+	# Espelha o sprite de acordo com o input
+	if parent.input_move > 0:
+		%Cururu.flip_h = false
+		parent.hitbox_container.scale.x = 1
+	elif parent.input_move < 0:
+		%Cururu.flip_h = true
+		parent.hitbox_container.scale.x = -1
+	
+	if parent.is_on_floor() and atacando == false:
+		# Controla animações de parado e correndo
+		if parent.input_move: %Anim.play("Run")
+		else: %Anim.play("Idle")
+		# Ao pressionar input de Pulo, mudar State
+		if Input.is_action_just_pressed("pulo"):
+			return pulo_state
+	# Se não estiver no chão, mudar State
+	if not parent.is_on_floor() and not atacando:
+		parent.is_coyote = true
+		%Coyote.start()
+		return fall_state
+		
 	return null # Não muda o State
 
 # Função para resetar variável "atacando" e iniciar timer de ataque,

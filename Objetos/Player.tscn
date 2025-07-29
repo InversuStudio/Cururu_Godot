@@ -1,4 +1,4 @@
-[gd_scene load_steps=61 format=3 uid="uid://nohq28uk7lfk"]
+[gd_scene load_steps=62 format=3 uid="uid://nohq28uk7lfk"]
 
 [ext_resource type="Script" uid="uid://cfu4ciwll8jcj" path="res://Scripts/Cururu.gd" id="1_asluq"]
 [ext_resource type="Texture2D" uid="uid://oueeifn344de" path="res://Sprites/Cururu/Idle/01.png" id="1_sqf2x"]
@@ -200,11 +200,15 @@ animations = [{
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_qakxq"]
 radius = 44.0
-height = 200.0
+height = 194.0
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_xx3r0"]
-radius = 44.0
-height = 208.0
+radius = 32.0
+height = 84.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_buhp1"]
+radius = 43.0
+height = 168.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_xx3r0"]
 radius = 74.0068
@@ -514,7 +518,8 @@ _data = {
 [node name="Player" type="CharacterBody2D" node_paths=PackedStringArray("vida", "state_machine")]
 collision_layer = 2
 script = ExtResource("1_asluq")
-velocidade = 5.0
+vel = 7.0
+vel_aerea = 5.0
 altura_pulo = 3.0
 tempo_pulo = 0.8
 tempo_cair = 0.5
@@ -535,7 +540,7 @@ animation = &"Idle"
 frame = 1
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, -100)
+position = Vector2(0, -97)
 shape = SubResource("CapsuleShape2D_qakxq")
 
 [node name="Vida" type="Node" parent="."]
@@ -550,8 +555,14 @@ hit_sfx = ExtResource("40_xx3r0")
 metadata/_custom_type_script = "uid://bp8oxr810tyxf"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HurtBox"]
-position = Vector2(0, -104)
+position = Vector2(0, -168)
+rotation = -1.57079
 shape = SubResource("CapsuleShape2D_xx3r0")
+debug_color = Color(0.92912, 0, 0.16329, 0.42)
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="HurtBox"]
+position = Vector2(0, -84)
+shape = SubResource("CapsuleShape2D_buhp1")
 debug_color = Color(0.92912, 0, 0.16329, 0.42)
 
 [node name="HitBoxes" type="Node2D" parent="."]

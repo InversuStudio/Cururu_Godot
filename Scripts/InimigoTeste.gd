@@ -11,7 +11,7 @@ func _ready() -> void:
 
 func _physics_process(delta: float) -> void:
 	if !is_on_floor():
-		velocity.y += 10 * delta
+		velocity.y += 10 * 128 * delta
 	
 	if %RayDireita.is_colliding() or %RayEsquerda.is_colliding():
 		velocity.x *= -1
