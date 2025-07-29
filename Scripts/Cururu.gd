@@ -2,9 +2,9 @@ extends CharacterBody2D
 
 @export_group("Movimento")
 ## Velocidade de movimento terrestre, em m/s
-@export var velocidade: float = 0
-## Multiplicador da velocidade aérea
-@export var velocidade_ar: float = 0.0
+@export var velocidade: float = 0.0
+
+@export_group("Pulo")
 ## Altura do pulo, em metros
 @export var altura_pulo: float = 0.0
 ## Tempo até altura máxima do pulo, em segundos
@@ -13,11 +13,21 @@ extends CharacterBody2D
 @export var tempo_cair: float = 0.0
 ## Tempo de efeito to coyote time
 @export var tempo_coyote: float = 0.0
+## Espaço de tempo para aceitar input de pulo antes de chegar ao chão
+@export var lag_pulo: float = 0.0
+
+@export_group("Dash")
+## Tempo de duração do dash, em segundos
+@export var tempo_dash: float = 0.0
+## Distância percorrida pelo dash, em metros
+@export var distancia_dash: float = 0.0
+## Tempo de recarga do dash
+@export var cooldown_dash: float = 0.0
 
 # Velocidade terrestre convertida -> 170 = tamanho tile
 @onready var speed: float = velocidade  * 128
-# Velocidade de movimento aéreo, em m/s
-@onready var air_speed: float = velocidade_ar * 128
+# Velocidade do dash
+@onready var dash_speed: float = (distancia_dash / tempo_dash) * 128
 # Velocidade do pulo
 @onready var jump_force: float = ((2.0 * altura_pulo) / tempo_pulo) * 128
 # Gravidade do pulo
@@ -31,24 +41,23 @@ extends CharacterBody2D
 ## Componente StateMachine
 @export var state_machine : StateMachine
 
-@onready var anim: AnimationPlayer = $Anim # Animação
-@onready var coyote: Timer = $Coyote
 var is_coyote: bool = false
+var is_jump_lag: bool = false
+var pode_dash: bool = true
 
-var input_move : float = 0.0 # Input de movimento
+@onready var hitbox_container: Node2D = $HitBoxes
 
 func _ready() -> void:
-	coyote.wait_time = tempo_coyote
+	%Coyote.wait_time = tempo_coyote
+	%JumpLag.wait_time = lag_pulo
+	%DashTime.wait_time = tempo_dash
+	%DashCooldown.wait_time = cooldown_dash
 
 func _physics_process(delta: float) -> void:
-	# Recebe input de movimento
-	input_move = Input.get_axis("esquerda","direita")
-	
-	if input_move: # Se o input for diferente de 0
-		# Espelha o sprite de acordo com o input
-		%Cururu.flip_h = true if input_move < 0 else false
-	
 	# Aplica PHYSICS_PROCESS do StateMachine
 	state_machine.FixedUpdate(delta)
-	
 	move_and_slide()
+
+func _on_dash_cooldown_timeout() -> void:
+	print("Pode dar dash")
+	pode_dash = true

@@ -158,7 +158,6 @@ physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_5klsl")
 
 [node name="MataAtlantica" type="Node2D"]
-position = Vector2(657, 249)
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 
@@ -225,7 +224,6 @@ texture = ExtResource("7_f56qt")
 position = Vector2(-5943, 509)
 scale = Vector2(0.959163, 0.959163)
 velocidade = 13.5
-velocidade_ar = 6.5
 altura_pulo = 3.8
 tempo_pulo = 0.6
 tempo_cair = 0.33

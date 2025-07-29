@@ -6,16 +6,11 @@ extends Area2D
 ## Força do knockback
 @export var knockback : float = 0.0
 ## Som de acerto
-@export var hit_sfx : AudioStream
-
-func _physics_process(_delta: float) -> void:
-	if Input.is_action_just_pressed("teste"):
-		var atk : Ataque = Ataque.new()
-		atk.dano = 500
-		recebe_dano(atk)
+@export var hit_sfx : AudioStream = null
 
 # FUNÇÃO DE RECEBER DANO
 func recebe_dano(ataque : Ataque):
+	print("AIAIAIAIAIIA")
 	# Se houver componente de vida, recebe dano
 	if comp_vida:
 		comp_vida.recebe_dano(ataque)
@@ -26,7 +21,8 @@ func recebe_dano(ataque : Ataque):
 	# Toca som de dano
 	var som := AudioStreamPlayer2D.new()
 	som.stream = hit_sfx
-	add_sibling(som)
+	get_tree().root.add_child(som)
+	som.global_position = global_position
 	som.play()
 	await som.finished
 	som.queue_free()
