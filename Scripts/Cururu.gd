@@ -53,19 +53,25 @@ var pode_dash: bool = true
 
 var input_move: float = 0.0
 
+@onready var sprite: AnimatedSprite2D = %Cururu
+
 func _ready() -> void:
-	print(vel)
-	print(vel_aerea)
 	%Coyote.wait_time = tempo_coyote
 	%JumpLag.wait_time = lag_pulo
 	%DashTime.wait_time = tempo_dash
 	%DashCooldown.wait_time = cooldown_dash
+	global_position = GameData.posicao
+	%Cururu.flip_h = GameData.direcao
 
 func _process(delta: float) -> void:
 	# Recebe input
 	input_move = Input.get_axis("esquerda", "direita")
 	# Aplica PROCESS do StateMachine
 	state_machine.Update(delta)
+	if Input.is_physical_key_pressed(KEY_ENTER):
+		var dano = Ataque.new()
+		dano.dano = vida.vida_max
+		vida.recebe_dano(dano)
 
 func _physics_process(delta: float) -> void:
 	# Aplica PHYSICS_PROCESS do StateMachine
@@ -75,3 +81,8 @@ func _physics_process(delta: float) -> void:
 func _on_dash_cooldown_timeout() -> void:
 	print("Pode dar dash")
 	pode_dash = true
+
+# COMPORTAMENTO AO MORRER
+func morte() -> void:
+	print("MORRI")
+	GameData.Reload()
