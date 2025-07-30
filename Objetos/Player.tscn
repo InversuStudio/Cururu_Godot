@@ -518,7 +518,7 @@ _data = {
 &"Run": SubResource("Animation_prtj7")
 }
 
-[node name="Player" type="CharacterBody2D" node_paths=PackedStringArray("vida", "state_machine")]
+[node name="Player" type="CharacterBody2D" node_paths=PackedStringArray("vida", "state_machine") groups=["Player"]]
 collision_layer = 2
 script = ExtResource("1_asluq")
 vel = 7.0
@@ -526,7 +526,7 @@ vel_aerea = 5.0
 altura_pulo = 3.0
 tempo_pulo = 0.8
 tempo_cair = 0.5
-tempo_coyote = 0.2
+tempo_coyote = 0.1
 lag_pulo = 0.1
 tempo_dash = 0.2
 distancia_dash = 4.0

@@ -12,7 +12,17 @@ func _ready() -> void:
 # FUNÇÃO PARA DIMINUIR VIDA
 func recebe_dano(dano:Ataque) -> void:
 	vida_atual -= dano.dano
+	# Se vida for zerada, morre
+	if vida_atual <= 0:
+		if get_parent().has_method("morte"):
+			get_parent().morte()
+		else: morre()
 
 # FUNÇÃO PARA AUMENTAR VIDA
 func recebe_cura(cura:int) -> void:
 	vida_atual += cura
+
+# FUNÇÃO DE MORRER
+func morre():
+	print("MORRI")
+	get_parent().queue_free()

@@ -14,9 +14,6 @@ func recebe_dano(ataque : Ataque):
 	# Se houver componente de vida, recebe dano
 	if comp_vida:
 		comp_vida.recebe_dano(ataque)
-		# Se vida for zerada, morre
-		if comp_vida.vida_atual <= 0:
-			morre()
 	
 	# Toca som de dano
 	var som := AudioStreamPlayer2D.new()
@@ -26,8 +23,3 @@ func recebe_dano(ataque : Ataque):
 	som.play()
 	await som.finished
 	som.queue_free()
-
-# FUNÇÃO DE MORRER
-func morre():
-	print("MORRI")
-	get_parent().queue_free()
