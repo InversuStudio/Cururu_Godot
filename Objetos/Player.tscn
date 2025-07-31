@@ -540,6 +540,7 @@ position = Vector2(0, -110)
 scale = Vector2(0.5, 0.5)
 sprite_frames = SubResource("SpriteFrames_t2cfw")
 animation = &"Run"
+frame = 1
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, -97)
