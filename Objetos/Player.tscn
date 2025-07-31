@@ -659,4 +659,4 @@ fall_state = NodePath("../Fall")
 [connection signal="timeout" from="Timers/JumpLag" to="StateMachine/Fall" method="_on_jump_lag_timeout"]
 [connection signal="timeout" from="Timers/MeleeTime" to="StateMachine/Chao" method="_on_melee_time_timeout"]
 [connection signal="timeout" from="Timers/DashTime" to="StateMachine/Dash" method="_on_dash_time_timeout"]
-[connection signal="timeout" from="Timers/DashCooldown" to="." method="_on_dash_cooldown_timeout"]
+[connection signal="timeout" from="Timers/DashCooldown" to="StateMachine/Chao" method="_on_dash_cooldown_timeout"]

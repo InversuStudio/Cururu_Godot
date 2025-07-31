@@ -20,6 +20,8 @@ var combo_anim: Array[String] = [
 # INICIA O STATE
 func Enter() -> void:
 	print("CHAO")
+	# Reseta dash, pois tocou no chão
+	parent.pode_dash = true
 
 func Update(_delta: float) -> State:
 	# INPUT MELEE
@@ -28,7 +30,6 @@ func Update(_delta: float) -> State:
 		%MeleeTime.stop() # Reseta timer para mudar de combo
 		
 		# Toca animação em ordem, loopando lista
-		print(combo_num)
 		%Anim.play(combo_anim[combo_num])
 		var next_combo = combo_num + 1
 		combo_num = next_combo if next_combo <= combo_limit else 0
@@ -60,9 +61,11 @@ func FixedUpdate(_delta: float) -> State:
 		# Controla animações de parado e correndo
 		if parent.input_move: %Anim.play("Run")
 		else: %Anim.play("Idle")
+		
 		# Ao pressionar input de Pulo, mudar State
 		if Input.is_action_just_pressed("pulo"):
 			return pulo_state
+			
 	# Se não estiver no chão, mudar State
 	if not parent.is_on_floor() and not atacando:
 		parent.is_coyote = true
@@ -77,5 +80,10 @@ func Reset_Ataque() -> void:
 	atacando = false
 	%MeleeTime.start()
 
+# Reseta combo, caso demore muito para atacar
 func _on_melee_time_timeout() -> void:
 	combo_num = 0
+
+# Habilita dash após cooldown
+func _on_dash_cooldown_timeout() -> void:
+	if parent.is_on_floor(): parent.pode_dash = true

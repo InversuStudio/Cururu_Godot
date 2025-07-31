@@ -78,10 +78,6 @@ func _physics_process(delta: float) -> void:
 	state_machine.FixedUpdate(delta)
 	move_and_slide()
 
-func _on_dash_cooldown_timeout() -> void:
-	print("Pode dar dash")
-	pode_dash = true
-
 # COMPORTAMENTO AO MORRER
 func morte() -> void:
 	print("MORRI")
