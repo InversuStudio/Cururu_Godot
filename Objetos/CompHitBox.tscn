@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://pc4mgv2nv8af"]
 
-[ext_resource type="Script" uid="uid://32imhtwu4l7" path="res://Scripts/HitBox.gd" id="1_187c1"]
+[ext_resource type="Script" uid="uid://32imhtwu4l7" path="res://Scripts/Componentes/HitBox.gd" id="1_187c1"]
 
 [node name="HitBox" type="Area2D"]
 editor_description = "Adiciona colisão a um componente. Requer componente de vida"

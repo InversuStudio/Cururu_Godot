@@ -11,13 +11,14 @@ config_version=5
 [application]
 
 config/name="Cururu"
-run/main_scene="uid://c8b5coitcrxvi"
+run/main_scene="uid://drlbsodypev3g"
 config/features=PackedStringArray("4.4", "GL Compatibility")
 config/icon="res://icon.svg"
 
 [autoload]
 
-GameData="*res://Scripts/GameData.gd"
+GameData="*res://Scripts/Globais/GameData.gd"
+Mundos="*res://Scripts/Globais/Mundos.gd"
 
 [display]
 

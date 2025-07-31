@@ -27,7 +27,8 @@ func Update(_delta: float) -> State:
 	
 	# INPUT DASH
 	if Input.is_action_just_pressed("dash") and parent.pode_dash:
-		return dash_state
+		if parent.deu_air_dash == false:
+			return dash_state
 		
 	return null
 
@@ -49,6 +50,7 @@ func FixedUpdate(delta: float) -> State:
 	
 	# Se estiver no chão, mudar State
 	if parent.is_on_floor():
+		parent.deu_air_dash = false
 		# Aplica Jump Lag
 		if parent.is_jump_lag:
 			parent.is_jump_lag = false

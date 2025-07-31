@@ -20,8 +20,6 @@ var combo_anim: Array[String] = [
 # INICIA O STATE
 func Enter() -> void:
 	print("CHAO")
-	# Reseta dash, pois tocou no chão
-	parent.pode_dash = true
 
 func Update(_delta: float) -> State:
 	# INPUT MELEE
@@ -83,7 +81,3 @@ func Reset_Ataque() -> void:
 # Reseta combo, caso demore muito para atacar
 func _on_melee_time_timeout() -> void:
 	combo_num = 0
-
-# Habilita dash após cooldown
-func _on_dash_cooldown_timeout() -> void:
-	if parent.is_on_floor(): parent.pode_dash = true

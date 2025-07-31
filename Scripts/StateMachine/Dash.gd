@@ -25,7 +25,9 @@ func FixedUpdate(_delta:float) -> State:
 	if acabou:
 		if parent.is_on_floor():
 			return chao_state
-		else: return fall_state
+		else:
+			parent.deu_air_dash = true
+			return fall_state
 	return null
 
 func _on_dash_time_timeout() -> void:

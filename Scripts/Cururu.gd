@@ -48,6 +48,7 @@ extends CharacterBody2D
 var is_coyote: bool = false
 var is_jump_lag: bool = false
 var pode_dash: bool = true
+var deu_air_dash: bool = false
 
 @onready var hitbox_container: Node2D = $HitBoxes
 
@@ -60,7 +61,6 @@ func _ready() -> void:
 	%JumpLag.wait_time = lag_pulo
 	%DashTime.wait_time = tempo_dash
 	%DashCooldown.wait_time = cooldown_dash
-	global_position = GameData.posicao
 	%Cururu.flip_h = GameData.direcao
 
 func _process(delta: float) -> void:
@@ -78,7 +78,14 @@ func _physics_process(delta: float) -> void:
 	state_machine.FixedUpdate(delta)
 	move_and_slide()
 
+# Habilita dash após cooldown
+func _on_dash_cooldown_timeout() -> void:
+	pode_dash = true
+
 # COMPORTAMENTO AO MORRER
 func morte() -> void:
 	print("MORRI")
-	GameData.Reload()
+	if GameData.Load() == false:
+		#Mundos.Reload()
+		Mundos.CarregaFase(GameData.fase)
+		GameData.moedas = 0

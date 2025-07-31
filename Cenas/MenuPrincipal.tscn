@@ -1,0 +1,62 @@
+[gd_scene load_steps=2 format=3 uid="uid://drlbsodypev3g"]
+
+[ext_resource type="Script" uid="uid://jrl1634sm6lb" path="res://Scripts/MenuPrincipal.gd" id="1_sgs44"]
+
+[node name="MenuPrincipal" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_sgs44")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.27722, 0.471239, 0.335598, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 120
+text = "CURURURURURURURURURU"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="Main" type="Button" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 40
+text = "MAIN"
+
+[node name="VSeparator" type="VSeparator" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 128
+
+[node name="FaseTeste" type="Button" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 40
+text = "FASE TESTE"
+
+[connection signal="pressed" from="VBoxContainer/HBoxContainer/Main" to="." method="_on_main_pressed"]
+[connection signal="pressed" from="VBoxContainer/HBoxContainer/FaseTeste" to="." method="_on_fase_teste_pressed"]

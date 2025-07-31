@@ -2,8 +2,8 @@
 
 [ext_resource type="Script" uid="uid://bxwx72gohremh" path="res://Scripts/InimigoTeste.gd" id="1_ntg74"]
 [ext_resource type="Texture2D" uid="uid://c3tl3oddronfh" path="res://icon.svg" id="1_u1ubb"]
-[ext_resource type="Script" uid="uid://hsdutxxttrp3" path="res://Scripts/Vida.gd" id="2_34dr1"]
-[ext_resource type="Script" uid="uid://bp8oxr810tyxf" path="res://Scripts/HurtBox.gd" id="3_ntg74"]
+[ext_resource type="Script" uid="uid://hsdutxxttrp3" path="res://Scripts/Componentes/Vida.gd" id="2_34dr1"]
+[ext_resource type="Script" uid="uid://bp8oxr810tyxf" path="res://Scripts/Componentes/HurtBox.gd" id="3_ntg74"]
 [ext_resource type="PackedScene" uid="uid://pc4mgv2nv8af" path="res://Objetos/CompHitBox.tscn" id="4_0687k"]
 [ext_resource type="AudioStream" uid="uid://dhgsnus0fna7q" path="res://Audio/SOM TESTE.mp3" id="5_0687k"]
 
