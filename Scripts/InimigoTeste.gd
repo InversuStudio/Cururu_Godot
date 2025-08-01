@@ -20,3 +20,7 @@ func _physics_process(delta: float) -> void:
 		velocity.x *= -1
 	
 	move_and_slide()
+
+func morte() -> void:
+	Mundos.SpawnMoeda(global_position)
+	queue_free()

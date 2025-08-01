@@ -56,6 +56,8 @@ var input_move: float = 0.0
 
 @onready var sprite: AnimatedSprite2D = %Cururu
 
+var em_transicao: bool = false
+
 func _ready() -> void:
 	%Coyote.wait_time = tempo_coyote
 	%JumpLag.wait_time = lag_pulo
@@ -64,6 +66,7 @@ func _ready() -> void:
 	%Cururu.flip_h = GameData.direcao
 
 func _process(delta: float) -> void:
+	if em_transicao: return
 	# Recebe input
 	input_move = Input.get_axis("esquerda", "direita")
 	# Aplica PROCESS do StateMachine
