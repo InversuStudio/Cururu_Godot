@@ -51,12 +51,12 @@ var pode_dash: bool = true
 var deu_air_dash: bool = false
 
 @onready var hitbox_container: Node2D = $HitBoxes
-
-var input_move: float = 0.0
-
 @onready var sprite: AnimatedSprite2D = %Cururu
 
+var input_move: float = 0.0
 var em_transicao: bool = false
+
+signal morreu
 
 func _ready() -> void:
 	%Coyote.wait_time = tempo_coyote
@@ -66,6 +66,7 @@ func _ready() -> void:
 	%Cururu.flip_h = GameData.direcao
 
 func _process(delta: float) -> void:
+	# Ignora tudo se estiver em uma transição de fase
 	if em_transicao: return
 	# Recebe input
 	input_move = Input.get_axis("esquerda", "direita")
@@ -88,7 +89,6 @@ func _on_dash_cooldown_timeout() -> void:
 # COMPORTAMENTO AO MORRER
 func morte() -> void:
 	print("MORRI")
+	morreu.emit()
 	if GameData.Load() == false:
-		#Mundos.Reload()
 		Mundos.CarregaFase(GameData.fase)
-		GameData.moedas = 0

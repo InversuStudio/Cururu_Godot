@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=4 uid="uid://driflyxauqbxs"]
+[gd_scene load_steps=25 format=4 uid="uid://driflyxauqbxs"]
 
 [ext_resource type="Texture2D" uid="uid://c374cwih425cq" path="res://Sprites/Tilemap/BACKGROUND.png" id="1_52y5a"]
 [ext_resource type="Texture2D" uid="uid://dt8o7r2gdnfv3" path="res://Sprites/Background/ParallaxBack3.png" id="1_nxqjs"]
@@ -50,6 +50,9 @@ metadata/_custom_type_script = "uid://8umksf8e80fw"
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_id35g"]
 size = Vector2(29, 419)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bp4ag"]
+size = Vector2(28, 386)
 
 [node name="FaseTeste" type="Node2D"]
 
@@ -163,11 +166,11 @@ process_physics_priority = 300
 script = ExtResource("13_56qbx")
 metadata/_custom_type_script = "uid://bd046eokvcnu2"
 
-[node name="StaticBody2D" type="StaticBody2D" parent="."]
+[node name="LimitCamera" type="StaticBody2D" parent="."]
 collision_layer = 0
 collision_mask = 0
 
-[node name="LimiteCamPrincipal" type="CollisionShape2D" parent="StaticBody2D"]
+[node name="LimiteCamPrincipal" type="CollisionShape2D" parent="LimitCamera"]
 position = Vector2(-637, -947.5)
 shape = SubResource("RectangleShape2D_g237d")
 debug_color = Color(0, 0.6, 0.701961, 0)
@@ -183,7 +186,7 @@ follow_target = NodePath("../../Player")
 tween_resource = SubResource("Resource_0ho33")
 tween_on_load = false
 draw_limits = true
-limit_target = NodePath("../../StaticBody2D/LimiteCamPrincipal")
+limit_target = NodePath("../../LimitCamera/LimiteCamPrincipal")
 
 [node name="AreaAberta" type="Node2D" parent="Cameras"]
 position = Vector2(2955, -985)
@@ -204,3 +207,12 @@ collision_mask = 2
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CameraManager/TransicaoSalao"]
 position = Vector2(15.5, -171.5)
 shape = SubResource("RectangleShape2D_id35g")
+
+[node name="TRASICAO_PR_LA" parent="." instance=ExtResource("10_wqlrc")]
+position = Vector2(387, -137)
+destino = 1
+posicao = Vector2(-2738, -832)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TRASICAO_PR_LA"]
+position = Vector2(111, -181)
+shape = SubResource("RectangleShape2D_bp4ag")
