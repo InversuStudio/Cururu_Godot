@@ -72,7 +72,6 @@ func _ready() -> void:
 	for h: HurtBox in hurtbox_container.get_children():
 		h.distancia_knockback = distancia_knockback
 		h.tempo_knockback = tempo_knockback
-	%StunDano.wait_time = tempo_knockback
 	%Coyote.wait_time = tempo_coyote
 	%JumpLag.wait_time = lag_pulo
 	%DashTime.wait_time = tempo_dash

@@ -9,7 +9,6 @@ func Enter() -> void:
 	print("DANO")
 	%Anim.play("Dano")
 	acabou = false
-	%StunDano.start()
 
 func Exit() -> void:
 	print("DANO ACABOU")
@@ -17,8 +16,8 @@ func Exit() -> void:
 
 func FixedUpdate(_delta:float) -> State:
 	# Reduz velocidade com o tempo
-	parent.velocity.x = lerpf(parent.velocity.x, 0.0, .15)
-	parent.velocity.y = lerpf(parent.velocity.y, 0.0, .15)
+	parent.velocity.x = lerpf(parent.velocity.x, 0.0, .1)
+	parent.velocity.y = lerpf(parent.velocity.y, 0.0, .1)
 	
 	# Se tempo de stun já acabou
 	if acabou:
@@ -28,5 +27,6 @@ func FixedUpdate(_delta:float) -> State:
 		return fall_state
 	return null
 
-func _on_stun_dano_timeout() -> void:
-	acabou = true
+func _on_anim_animation_finished(anim_name: StringName) -> void:
+	if anim_name == "Dano":
+		acabou = true
