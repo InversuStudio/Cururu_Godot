@@ -574,7 +574,7 @@ debug_color = Color(0.92912, 0, 0.16329, 0.42)
 position = Vector2(44, -119)
 collision_layer = 4
 collision_mask = 4
-dano = 250
+script = null
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HitBoxes/Melee1"]
 shape = SubResource("CircleShape2D_xx3r0")
@@ -585,7 +585,7 @@ debug_color = Color(0.69455, 0.495447, 0, 0.42)
 position = Vector2(44, -102)
 collision_layer = 4
 collision_mask = 4
-dano = 250
+script = null
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HitBoxes/Melee2"]
 shape = SubResource("CircleShape2D_ren7w")
