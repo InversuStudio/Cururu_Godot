@@ -35,20 +35,23 @@ script = ExtResource("2_34dr1")
 vida_max = 500
 metadata/_custom_type_script = "uid://hsdutxxttrp3"
 
-[node name="HitBox" parent="." instance=ExtResource("4_0687k")]
-script = null
+[node name="HitBox" parent="." node_paths=PackedStringArray("ignore") instance=ExtResource("4_0687k")]
+ignore = NodePath("../HurtBox")
+sfx = ExtResource("5_0687k")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="HitBox"]
 position = Vector2(0, -52)
 shape = SubResource("RectangleShape2D_8mgrx")
 debug_color = Color(0.807155, 0.414602, 3.85046e-07, 0.42)
 
-[node name="HurtBox" type="Area2D" parent="." node_paths=PackedStringArray("comp_vida")]
+[node name="HurtBox" type="Area2D" parent="." node_paths=PackedStringArray("comp_vida", "parent")]
 collision_layer = 4
 collision_mask = 4
 script = ExtResource("3_ntg74")
 comp_vida = NodePath("../Vida")
-hit_sfx = ExtResource("5_0687k")
+distancia_knockback = 2.0
+tempo_knockback = 0.2
+parent = NodePath("..")
 metadata/_custom_type_script = "uid://bp8oxr810tyxf"
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="HurtBox"]

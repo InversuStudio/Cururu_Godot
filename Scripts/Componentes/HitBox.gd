@@ -3,8 +3,6 @@ extends Area2D
 
 ## Dano aplicado a uma HurtBox
 @export var dano: int = 1
-#@export var knockback: float = 0.0
-@export var tempo_stun: float = 0.0
 ## Força de vibração da tela
 @export var screenshake : float = 0.0
 ## Hurtbox a ser ignorada
@@ -15,14 +13,8 @@ extends Area2D
 func _on_area_entered(area: Area2D) -> void:
 	if area is HurtBox: # Se a colisão for uma HurtBox
 		if area == ignore: return
-		
-		print(area.get_parent().name)
-		var ataque:Ataque = Ataque.new()
-		ataque.dano = dano
-		ataque.tempo_stun = tempo_stun
-		#ataque.knockback = knockback
-		
-		area.recebe_dano(ataque)
+
+		area.recebe_dano(dano, global_position)
 		
 		# Toca som
 		if sfx:

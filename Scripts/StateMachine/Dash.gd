@@ -7,6 +7,8 @@ extends State
 @export var fall_state : State = null
 ## State de wall slide
 @export var wall_state : State = null
+## State de dano
+@export var dano_state: State = null
 
 var acabou: bool = false
 
@@ -21,8 +23,15 @@ func Enter() -> void:
 	var mult = -1 if %Cururu.flip_h == true else 1
 	parent.velocity.x = parent.dash_speed * mult
 
+func Update(_delta:float) -> State:
+	# DANO
+	if parent.recebeu_dano == true:
+		return dano_state
+	return null
+	
 func FixedUpdate(_delta:float) -> State:
 	if acabou:
+		parent.velocity = Vector2.ZERO
 		if parent.is_on_floor():
 			return chao_state
 		else:

@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=4 uid="uid://jgubb6mfikfv"]
+[gd_scene load_steps=20 format=4 uid="uid://jgubb6mfikfv"]
 
 [ext_resource type="Texture2D" uid="uid://c374cwih425cq" path="res://Sprites/Tilemap/BACKGROUND.png" id="4_2iwj7"]
 [ext_resource type="PackedScene" uid="uid://dbp8j3rqvdpna" path="res://Objetos/CompSecret.tscn" id="4_urp4b"]
@@ -6,7 +6,11 @@
 [ext_resource type="PackedScene" uid="uid://1apfpwlqocxn" path="res://Objetos/TransicaoFase.tscn" id="5_2u6rl"]
 [ext_resource type="PackedScene" uid="uid://cqyub70sv0ofp" path="res://Objetos/SavePoint.tscn" id="6_5alkp"]
 [ext_resource type="PackedScene" uid="uid://nohq28uk7lfk" path="res://Objetos/Player.tscn" id="6_aivbr"]
+[ext_resource type="PackedScene" uid="uid://bp84n65st6t5l" path="res://Objetos/CameraManager.tscn" id="8_7pkwg"]
+[ext_resource type="Script" uid="uid://bd046eokvcnu2" path="res://addons/phantom_camera/scripts/phantom_camera_host/phantom_camera_host.gd" id="8_d17v6"]
 [ext_resource type="PackedScene" uid="uid://bs5i45df7rwnf" path="res://UI/HUD.tscn" id="9_1yukm"]
+[ext_resource type="Script" uid="uid://bhexx6mj1xv3q" path="res://addons/phantom_camera/scripts/phantom_camera/phantom_camera_2d.gd" id="9_2iwj7"]
+[ext_resource type="Script" uid="uid://8umksf8e80fw" path="res://addons/phantom_camera/scripts/resources/tween_resource.gd" id="10_d17v6"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gjd7l"]
 texture = ExtResource("4_2iwj7")
@@ -26,6 +30,24 @@ size = Vector2(1125, 937)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5alkp"]
 size = Vector2(56, 395)
 
+[sub_resource type="Resource" id="Resource_2iwj7"]
+script = ExtResource("10_d17v6")
+duration = 0.5
+transition = 1
+ease = 2
+
+[sub_resource type="Resource" id="Resource_kq68w"]
+script = ExtResource("10_d17v6")
+duration = 0.5
+transition = 1
+ease = 2
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7pkwg"]
+size = Vector2(15, 262)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_d17v6"]
+size = Vector2(3406, 1243)
+
 [node name="FaseTeste2" type="Node2D"]
 
 [node name="Chao" type="TileMapLayer" parent="."]
@@ -39,9 +61,6 @@ tile_set = SubResource("TileSet_l7pwf")
 
 [node name="Player" parent="." instance=ExtResource("6_aivbr")]
 position = Vector2(-1219, -296)
-
-[node name="Camera2D" type="Camera2D" parent="Player"]
-position = Vector2(0, -251)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
@@ -68,3 +87,62 @@ shape = SubResource("RectangleShape2D_5alkp")
 
 [node name="SavePoint" parent="." instance=ExtResource("6_5alkp")]
 position = Vector2(-1864, 0)
+
+[node name="MainCamera" type="Camera2D" parent="."]
+physics_interpolation_mode = 1
+position = Vector2(-1219, -454)
+process_callback = 0
+limit_left = -2759
+limit_top = -1966
+limit_right = 1485
+limit_bottom = 71
+editor_draw_limits = true
+
+[node name="PhantomCameraHost" type="Node" parent="MainCamera"]
+process_priority = 300
+process_physics_priority = 300
+script = ExtResource("8_d17v6")
+metadata/_custom_type_script = "uid://bd046eokvcnu2"
+
+[node name="Cameras" type="Node2D" parent="."]
+
+[node name="Main" type="Node2D" parent="Cameras" node_paths=PackedStringArray("follow_target")]
+top_level = true
+position = Vector2(-1219, -454)
+script = ExtResource("9_2iwj7")
+follow_mode = 2
+follow_target = NodePath("../../Player")
+tween_resource = SubResource("Resource_2iwj7")
+tween_on_load = false
+draw_limits = true
+limit_target = NodePath("../../LimiteCamera/CollisionShape2D")
+metadata/_custom_type_script = "uid://bhexx6mj1xv3q"
+
+[node name="SalaSecreta" type="Node2D" parent="Cameras"]
+position = Vector2(-3519, -370)
+script = ExtResource("9_2iwj7")
+zoom = Vector2(1.2, 1.2)
+tween_resource = SubResource("Resource_kq68w")
+tween_on_load = false
+draw_limits = true
+metadata/_custom_type_script = "uid://bhexx6mj1xv3q"
+
+[node name="CameraManager" parent="." node_paths=PackedStringArray("phantom_cameras", "transicoes") instance=ExtResource("8_7pkwg")]
+phantom_cameras = [NodePath("../Cameras/Main"), NodePath("../Cameras/SalaSecreta")]
+transicoes = [NodePath("TransicaoSecret")]
+
+[node name="TransicaoSecret" type="Area2D" parent="CameraManager"]
+position = Vector2(-2906, -3)
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CameraManager/TransicaoSecret"]
+position = Vector2(30.5, -121)
+shape = SubResource("RectangleShape2D_7pkwg")
+
+[node name="LimiteCamera" type="StaticBody2D" parent="."]
+collision_layer = 0
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LimiteCamera"]
+position = Vector2(-1151, -535.5)
+shape = SubResource("RectangleShape2D_d17v6")

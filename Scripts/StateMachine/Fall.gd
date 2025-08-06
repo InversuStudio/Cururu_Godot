@@ -11,6 +11,8 @@ extends State
 @export var nadando_state : State = null
 ## State de dash
 @export var dash_state : State = null
+## State de dano
+@export var dano_state: State = null
 
 # INICIA O STATE
 func Enter() -> void:
@@ -25,6 +27,10 @@ func Update(_delta: float) -> State:
 		parent.is_jump_lag = true
 		%JumpLag.start()
 	
+	# DANO
+	if parent.recebeu_dano == true:
+		return dano_state
+	
 	# INPUT DASH
 	if Input.is_action_just_pressed("dash") and parent.pode_dash:
 		if parent.deu_air_dash == false:
@@ -38,7 +44,9 @@ func FixedUpdate(delta: float) -> State:
 	parent.velocity.y += parent.fall_gravity * delta
 	
 	# Aplica movimento
-	parent.velocity.x = parent.input_move * parent.air_speed
+	var dir = parent.input_move * parent.air_speed
+	parent.velocity.x = move_toward(parent.velocity.x, dir, parent.air_speed / 8)
+	#parent.velocity.x = parent.input_move * parent.air_speed
 	
 	# Espelha o sprite de acordo com o input
 	if parent.input_move > 0:

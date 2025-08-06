@@ -1,13 +1,20 @@
-[gd_scene load_steps=62 format=3 uid="uid://nohq28uk7lfk"]
+[gd_scene load_steps=71 format=3 uid="uid://nohq28uk7lfk"]
 
 [ext_resource type="Script" uid="uid://cfu4ciwll8jcj" path="res://Scripts/Cururu.gd" id="1_asluq"]
 [ext_resource type="Texture2D" uid="uid://oueeifn344de" path="res://Sprites/Cururu/Idle/01.png" id="1_sqf2x"]
 [ext_resource type="Texture2D" uid="uid://g0sntps8nmbd" path="res://Sprites/Cururu/Idle/02.png" id="2_asluq"]
+[ext_resource type="Texture2D" uid="uid://djy1g5ftd682w" path="res://Sprites/Cururu/Hit/03.png" id="2_bcuq0"]
 [ext_resource type="Texture2D" uid="uid://cnj5thpgkvv23" path="res://Sprites/Cururu/Pulo/4.png" id="2_igkqb"]
+[ext_resource type="Texture2D" uid="uid://cwvw1pwco17gj" path="res://Sprites/Cururu/Hit/04.png" id="3_v408m"]
+[ext_resource type="Texture2D" uid="uid://c0gcdq37vc5jo" path="res://Sprites/Cururu/Hit/05.png" id="4_ts6ax"]
+[ext_resource type="Texture2D" uid="uid://o5dfjhogimb" path="res://Sprites/Cururu/Hit/06.png" id="5_5gmro"]
 [ext_resource type="Texture2D" uid="uid://ckhr6xysd1748" path="res://Sprites/Cururu/Pulo/1.png" id="5_o3utp"]
 [ext_resource type="Texture2D" uid="uid://bcmpceltuv7om" path="res://Sprites/Cururu/Pulo/2.png" id="6_p4wm8"]
+[ext_resource type="Texture2D" uid="uid://l08p16oovcgi" path="res://Sprites/Cururu/Hit/07.png" id="6_vvomf"]
+[ext_resource type="Texture2D" uid="uid://cvqcka7at8bvd" path="res://Sprites/Cururu/Hit/08.png" id="7_gbyrg"]
 [ext_resource type="Texture2D" uid="uid://374vii38ugep" path="res://Sprites/Cururu/Pulo/3.png" id="7_jxeb6"]
 [ext_resource type="Texture2D" uid="uid://6waqj22kj7vk" path="res://Sprites/Cururu/Pulo/5.png" id="8_u1qnh"]
+[ext_resource type="Texture2D" uid="uid://d02lqeocw78bt" path="res://Sprites/Cururu/Hit/09.png" id="8_uvey4"]
 [ext_resource type="Texture2D" uid="uid://cwihk6wsxfi67" path="res://Sprites/Cururu/Pulo/6.png" id="9_8hqes"]
 [ext_resource type="Texture2D" uid="uid://da56a8ouefnh0" path="res://Sprites/Cururu/Melee/01.png" id="10_e7e5s"]
 [ext_resource type="Texture2D" uid="uid://btrq28uf3nshw" path="res://Sprites/Cururu/Magia/01.png" id="10_js0c4"]
@@ -42,13 +49,40 @@
 [ext_resource type="Texture2D" uid="uid://dmdjrd1l2fqgh" path="res://Sprites/Cururu/Run/Run 2.0 Concept/corrida_09.png" id="36_bcuq0"]
 [ext_resource type="Texture2D" uid="uid://c0h41nl840vof" path="res://Sprites/Cururu/Run/Run 2.0 Concept/corrida_10.png" id="37_v408m"]
 [ext_resource type="Script" uid="uid://hsdutxxttrp3" path="res://Scripts/Componentes/Vida.gd" id="38_buhp1"]
-[ext_resource type="Script" uid="uid://bp8oxr810tyxf" path="res://Scripts/Componentes/HurtBox.gd" id="39_ren7w"]
 [ext_resource type="AudioStream" uid="uid://dhgsnus0fna7q" path="res://Audio/SOM TESTE.mp3" id="40_xx3r0"]
 [ext_resource type="PackedScene" uid="uid://pc4mgv2nv8af" path="res://Objetos/CompHitBox.tscn" id="41_ren7w"]
+[ext_resource type="PackedScene" uid="uid://va5pjd6vuuo2" path="res://Objetos/CompHurtBox.tscn" id="46_4thdd"]
 [ext_resource type="Script" uid="uid://ctu2e3ln1kydq" path="res://Scripts/StateMachine/Dash.gd" id="46_buhp1"]
+[ext_resource type="Script" uid="uid://brymvmxc6n166" path="res://Scripts/StateMachine/Dano.gd" id="47_gop6h"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_t2cfw"]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_bcuq0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_v408m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_ts6ax")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_5gmro")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_vvomf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_gbyrg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_uvey4")
+}],
+"loop": true,
+"name": &"Dano",
+"speed": 12.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("2_igkqb")
@@ -219,6 +253,33 @@ radius = 74.0068
 [sub_resource type="CircleShape2D" id="CircleShape2D_ren7w"]
 radius = 69.2604
 
+[sub_resource type="Animation" id="Animation_aofpm"]
+resource_name = "Dano"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Cururu:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"Dano"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Cururu:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 6]
+}
+
 [sub_resource type="Animation" id="Animation_buhp1"]
 resource_name = "Dash"
 length = 0.001
@@ -375,7 +436,7 @@ tracks/2/keys = {
 tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("HitBoxes/Melee1/CollisionShape2D:disabled")
+tracks/3/path = NodePath("HitContainer/Melee1/CollisionShape2D:disabled")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
@@ -429,7 +490,7 @@ tracks/2/keys = {
 tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("HitBoxes/Melee2/CollisionShape2D:disabled")
+tracks/3/path = NodePath("HitContainer/Melee2/CollisionShape2D:disabled")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
@@ -456,7 +517,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("HitBoxes/Melee1/CollisionShape2D:disabled")
+tracks/1/path = NodePath("HitContainer/Melee1/CollisionShape2D:disabled")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -468,7 +529,7 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("HitBoxes/Melee2/CollisionShape2D:disabled")
+tracks/2/path = NodePath("HitContainer/Melee2/CollisionShape2D:disabled")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
@@ -508,6 +569,7 @@ tracks/1/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_g0l4m"]
 _data = {
+&"Dano": SubResource("Animation_aofpm"),
 &"Dash": SubResource("Animation_buhp1"),
 &"Fall": SubResource("Animation_rpndr"),
 &"Idle": SubResource("Animation_e7e5s"),
@@ -518,7 +580,7 @@ _data = {
 &"Run": SubResource("Animation_prtj7")
 }
 
-[node name="Player" type="CharacterBody2D" node_paths=PackedStringArray("vida", "state_machine") groups=["Player"]]
+[node name="Player" type="CharacterBody2D" node_paths=PackedStringArray("vida", "state_machine", "hitbox_container", "hurtbox_container") groups=["Player"]]
 collision_layer = 2
 script = ExtResource("1_asluq")
 vel = 7.0
@@ -531,15 +593,19 @@ lag_pulo = 0.1
 tempo_dash = 0.2
 distancia_dash = 4.0
 cooldown_dash = 0.7
+distancia_knockback = 2.0
+tempo_knockback = 0.2
 vida = NodePath("Vida")
 state_machine = NodePath("StateMachine")
+hitbox_container = NodePath("HitContainer")
+hurtbox_container = NodePath("HurtContainer")
 
 [node name="Cururu" type="AnimatedSprite2D" parent="."]
 unique_name_in_owner = true
 position = Vector2(0, -110)
 scale = Vector2(0.5, 0.5)
 sprite_frames = SubResource("SpriteFrames_t2cfw")
-animation = &"Run"
+animation = &"Melee1"
 frame = 1
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -551,43 +617,41 @@ script = ExtResource("38_buhp1")
 vida_max = 1000
 metadata/_custom_type_script = "uid://hsdutxxttrp3"
 
-[node name="HurtBox" type="Area2D" parent="." node_paths=PackedStringArray("comp_vida")]
-script = ExtResource("39_ren7w")
-comp_vida = NodePath("../Vida")
-hit_sfx = ExtResource("40_xx3r0")
-metadata/_custom_type_script = "uid://bp8oxr810tyxf"
+[node name="HurtContainer" type="Node2D" parent="."]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="HurtBox"]
+[node name="HurtBox" parent="HurtContainer" node_paths=PackedStringArray("comp_vida", "parent") instance=ExtResource("46_4thdd")]
+comp_vida = NodePath("../../Vida")
+parent = NodePath("../..")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HurtContainer/HurtBox"]
 position = Vector2(0, -168)
 rotation = -1.57079
 shape = SubResource("CapsuleShape2D_xx3r0")
 debug_color = Color(0.92912, 0, 0.16329, 0.42)
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="HurtBox"]
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="HurtContainer/HurtBox"]
 position = Vector2(0, -84)
 shape = SubResource("CapsuleShape2D_buhp1")
 debug_color = Color(0.92912, 0, 0.16329, 0.42)
 
-[node name="HitBoxes" type="Node2D" parent="."]
+[node name="HitContainer" type="Node2D" parent="."]
 
-[node name="Melee1" parent="HitBoxes" instance=ExtResource("41_ren7w")]
+[node name="Melee1" parent="HitContainer" node_paths=PackedStringArray("ignore") instance=ExtResource("41_ren7w")]
+ignore = NodePath("../../HurtContainer/HurtBox")
+sfx = ExtResource("40_xx3r0")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HitContainer/Melee1"]
 position = Vector2(44, -119)
-collision_layer = 4
-collision_mask = 4
-script = null
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="HitBoxes/Melee1"]
 shape = SubResource("CircleShape2D_xx3r0")
 disabled = true
 debug_color = Color(0.69455, 0.495447, 0, 0.42)
 
-[node name="Melee2" parent="HitBoxes" instance=ExtResource("41_ren7w")]
-position = Vector2(44, -102)
-collision_layer = 4
-collision_mask = 4
-script = null
+[node name="Melee2" parent="HitContainer" node_paths=PackedStringArray("ignore") instance=ExtResource("41_ren7w")]
+ignore = NodePath("../../HurtContainer/HurtBox")
+sfx = ExtResource("40_xx3r0")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="HitBoxes/Melee2"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HitContainer/Melee2"]
+position = Vector2(44, -102)
 shape = SubResource("CircleShape2D_ren7w")
 disabled = true
 
@@ -624,32 +688,45 @@ unique_name_in_owner = true
 wait_time = 0.7
 one_shot = true
 
+[node name="StunDano" type="Timer" parent="Timers"]
+unique_name_in_owner = true
+one_shot = true
+
 [node name="StateMachine" type="Node" parent="." node_paths=PackedStringArray("start_state")]
 unique_name_in_owner = true
 script = ExtResource("29_8v2dh")
 start_state = NodePath("Fall")
 
-[node name="Chao" type="Node" parent="StateMachine" node_paths=PackedStringArray("pulo_state", "fall_state", "dash_state")]
+[node name="Chao" type="Node" parent="StateMachine" node_paths=PackedStringArray("pulo_state", "fall_state", "dash_state", "dano_state")]
 script = ExtResource("29_prtj7")
 pulo_state = NodePath("../Pulo")
 fall_state = NodePath("../Fall")
 dash_state = NodePath("../Dash")
+dano_state = NodePath("../Dano")
 
-[node name="Fall" type="Node" parent="StateMachine" node_paths=PackedStringArray("chao_state", "pulo_state", "dash_state")]
+[node name="Fall" type="Node" parent="StateMachine" node_paths=PackedStringArray("chao_state", "pulo_state", "dash_state", "dano_state")]
 script = ExtResource("31_g0l4m")
 chao_state = NodePath("../Chao")
 pulo_state = NodePath("../Pulo")
 dash_state = NodePath("../Dash")
+dano_state = NodePath("../Dano")
 
-[node name="Pulo" type="Node" parent="StateMachine" node_paths=PackedStringArray("fall_state", "dash_state")]
+[node name="Pulo" type="Node" parent="StateMachine" node_paths=PackedStringArray("fall_state", "dash_state", "dano_state")]
 script = ExtResource("32_7ba70")
 fall_state = NodePath("../Fall")
 dash_state = NodePath("../Dash")
+dano_state = NodePath("../Dano")
 
-[node name="Dash" type="Node" parent="StateMachine" node_paths=PackedStringArray("chao_state", "fall_state")]
+[node name="Dash" type="Node" parent="StateMachine" node_paths=PackedStringArray("chao_state", "fall_state", "dano_state")]
 script = ExtResource("46_buhp1")
 chao_state = NodePath("../Chao")
 fall_state = NodePath("../Fall")
+dano_state = NodePath("../Dano")
+
+[node name="Dano" type="Node" parent="StateMachine" node_paths=PackedStringArray("fall_state", "chao_state")]
+script = ExtResource("47_gop6h")
+fall_state = NodePath("../Fall")
+chao_state = NodePath("../Chao")
 
 [node name="WallSlide" type="Node" parent="StateMachine"]
 
@@ -660,3 +737,4 @@ fall_state = NodePath("../Fall")
 [connection signal="timeout" from="Timers/MeleeTime" to="StateMachine/Chao" method="_on_melee_time_timeout"]
 [connection signal="timeout" from="Timers/DashTime" to="StateMachine/Dash" method="_on_dash_time_timeout"]
 [connection signal="timeout" from="Timers/DashCooldown" to="." method="_on_dash_cooldown_timeout"]
+[connection signal="timeout" from="Timers/StunDano" to="StateMachine/Dano" method="_on_stun_dano_timeout"]

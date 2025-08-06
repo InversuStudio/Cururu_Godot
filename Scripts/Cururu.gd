@@ -26,6 +26,12 @@ extends CharacterBody2D
 ## Tempo de recarga do dash
 @export var cooldown_dash: float = 0.0
 
+@export_group("Combate")
+## Distância do knockback, em metros
+@export var distancia_knockback : float = 0.0
+## Duração do knockback, em segundos
+@export var tempo_knockback : float = 0.0
+
 # Velocidade terrestre convertida -> 170 = tamanho tile
 @onready var speed: float = vel  * 128
 # Velocidade aérea
@@ -41,29 +47,38 @@ extends CharacterBody2D
 
 @export_group("Componentes")
 ## Componente Vida
-@export var vida : Vida
+@export var vida : Vida = null
 ## Componente StateMachine
-@export var state_machine : StateMachine
+@export var state_machine : StateMachine = null
+## Node container de HIT BOX
+@export var hitbox_container: Node2D = null
+## Node container de HURT BOX
+@export var hurtbox_container: Node2D = null
 
 var is_coyote: bool = false
 var is_jump_lag: bool = false
 var pode_dash: bool = true
 var deu_air_dash: bool = false
 
-@onready var hitbox_container: Node2D = $HitBoxes
 @onready var sprite: AnimatedSprite2D = %Cururu
 
 var input_move: float = 0.0
 var em_transicao: bool = false
+var recebeu_dano: bool = false
 
 signal morreu
 
 func _ready() -> void:
+	for h: HurtBox in hurtbox_container.get_children():
+		h.distancia_knockback = distancia_knockback
+		h.tempo_knockback = tempo_knockback
+	%StunDano.wait_time = tempo_knockback
 	%Coyote.wait_time = tempo_coyote
 	%JumpLag.wait_time = lag_pulo
 	%DashTime.wait_time = tempo_dash
 	%DashCooldown.wait_time = cooldown_dash
 	%Cururu.flip_h = GameData.direcao
+	vida.connect("recebeu_dano", RecebeuDano)
 
 func _process(delta: float) -> void:
 	# Ignora tudo se estiver em uma transição de fase
@@ -72,10 +87,10 @@ func _process(delta: float) -> void:
 	input_move = Input.get_axis("esquerda", "direita")
 	# Aplica PROCESS do StateMachine
 	state_machine.Update(delta)
+	
+	# !!!!!!!!DEBUG - TIRAR DEPOIS!!!!!!!!!!!
 	if Input.is_physical_key_pressed(KEY_ENTER):
-		var dano = Ataque.new()
-		dano.dano = vida.vida_max
-		vida.recebe_dano(dano)
+		vida.recebe_dano(vida.vida_max)
 
 func _physics_process(delta: float) -> void:
 	# Aplica PHYSICS_PROCESS do StateMachine
@@ -92,3 +107,7 @@ func morte() -> void:
 	morreu.emit()
 	if GameData.Load() == false:
 		Mundos.CarregaFase(GameData.fase)
+
+func RecebeuDano() -> void:
+	print("RECEBI DANO")
+	recebeu_dano = true

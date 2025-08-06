@@ -21,6 +21,7 @@ func _on_body_entered(body: Node2D) -> void:
 			var som: AudioStreamPlayer2D = AudioStreamPlayer2D.new()
 			som.stream = sfx
 			get_parent().add_child(som)
+			som.global_position = global_position
 			som.play()
 			await som.finished
 			som.queue_free()

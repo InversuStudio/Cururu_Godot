@@ -7,6 +7,8 @@ extends State
 @export var fall_state : State = null
 ## State de dash
 @export var dash_state : State = null
+## State de dano
+@export var dano_state: State = null
 # Armazena se está atacando 
 var atacando : bool = false
 # Armazena número do ataque
@@ -21,9 +23,14 @@ var combo_anim: Array[String] = [
 func Enter() -> void:
 	print("CHAO")
 
+func Exit() -> void:
+	atacando = false
+
 func Update(_delta: float) -> State:
 	# INPUT MELEE
-	if Input.is_action_just_pressed("melee") and not atacando:
+	if atacando: return null
+	
+	if Input.is_action_just_pressed("melee"):
 		atacando = true # Define que está atacando
 		%MeleeTime.stop() # Reseta timer para mudar de combo
 		
@@ -44,8 +51,14 @@ func Update(_delta: float) -> State:
 
 # COMPORTAMENTO PHYSICS_PROCESS
 func FixedUpdate(_delta: float) -> State:
+	# DANO
+	if parent.recebeu_dano == true:
+		return dano_state
+		
 	# Aplica movimento
-	parent.velocity.x = parent.input_move * parent.speed
+	var dir = parent.input_move * parent.speed
+	parent.velocity.x = move_toward(parent.velocity.x, dir, parent.speed / 8)
+	#parent.velocity.x = parent.input_move * parent.speed
 	
 	# Espelha o sprite de acordo com o input
 	if parent.input_move > 0:
