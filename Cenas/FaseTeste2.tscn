@@ -70,7 +70,6 @@ position = Vector2(-1219, -296)
 
 [node name="AreaSecreta" parent="." node_paths=PackedStringArray("area_escondida") instance=ExtResource("4_urp4b")]
 position = Vector2(-2952, 0)
-collision_mask = 2
 area_escondida = NodePath("../Obscuro")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AreaSecreta"]
@@ -153,3 +152,4 @@ collision_mask = 0
 [node name="CollisionShape2D" type="CollisionShape2D" parent="LimiteCamera"]
 position = Vector2(-1151, -535.5)
 shape = SubResource("RectangleShape2D_d17v6")
+debug_color = Color(0, 0.6, 0.701961, 0)

@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://dx7a1y8253nqj" path="res://Scripts/Componentes/TransicaoFase.gd" id="1_3c6c0"]
 
 [node name="TransicaoFase" type="Area2D"]
+collision_layer = 0
 collision_mask = 2
 script = ExtResource("1_3c6c0")
 
