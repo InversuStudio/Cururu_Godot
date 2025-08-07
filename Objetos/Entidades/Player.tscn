@@ -1,83 +1,83 @@
 [gd_scene load_steps=71 format=3 uid="uid://nohq28uk7lfk"]
 
-[ext_resource type="Script" uid="uid://cfu4ciwll8jcj" path="res://Scripts/Cururu/Cururu.gd" id="1_asluq"]
-[ext_resource type="Texture2D" uid="uid://oueeifn344de" path="res://Sprites/Cururu/Idle/01.png" id="1_sqf2x"]
-[ext_resource type="Texture2D" uid="uid://g0sntps8nmbd" path="res://Sprites/Cururu/Idle/02.png" id="2_asluq"]
-[ext_resource type="Texture2D" uid="uid://djy1g5ftd682w" path="res://Sprites/Cururu/Hit/03.png" id="2_bcuq0"]
-[ext_resource type="Texture2D" uid="uid://cnj5thpgkvv23" path="res://Sprites/Cururu/Pulo/4.png" id="2_igkqb"]
-[ext_resource type="Texture2D" uid="uid://cwvw1pwco17gj" path="res://Sprites/Cururu/Hit/04.png" id="3_v408m"]
-[ext_resource type="Texture2D" uid="uid://c0gcdq37vc5jo" path="res://Sprites/Cururu/Hit/05.png" id="4_ts6ax"]
-[ext_resource type="Texture2D" uid="uid://o5dfjhogimb" path="res://Sprites/Cururu/Hit/06.png" id="5_5gmro"]
-[ext_resource type="Texture2D" uid="uid://ckhr6xysd1748" path="res://Sprites/Cururu/Pulo/1.png" id="5_o3utp"]
-[ext_resource type="Texture2D" uid="uid://bcmpceltuv7om" path="res://Sprites/Cururu/Pulo/2.png" id="6_p4wm8"]
-[ext_resource type="Texture2D" uid="uid://l08p16oovcgi" path="res://Sprites/Cururu/Hit/07.png" id="6_vvomf"]
-[ext_resource type="Texture2D" uid="uid://cvqcka7at8bvd" path="res://Sprites/Cururu/Hit/08.png" id="7_gbyrg"]
-[ext_resource type="Texture2D" uid="uid://374vii38ugep" path="res://Sprites/Cururu/Pulo/3.png" id="7_jxeb6"]
-[ext_resource type="Texture2D" uid="uid://6waqj22kj7vk" path="res://Sprites/Cururu/Pulo/5.png" id="8_u1qnh"]
-[ext_resource type="Texture2D" uid="uid://d02lqeocw78bt" path="res://Sprites/Cururu/Hit/09.png" id="8_uvey4"]
-[ext_resource type="Texture2D" uid="uid://cwihk6wsxfi67" path="res://Sprites/Cururu/Pulo/6.png" id="9_8hqes"]
-[ext_resource type="Texture2D" uid="uid://da56a8ouefnh0" path="res://Sprites/Cururu/Melee/01.png" id="10_e7e5s"]
-[ext_resource type="Texture2D" uid="uid://btrq28uf3nshw" path="res://Sprites/Cururu/Magia/01.png" id="10_js0c4"]
-[ext_resource type="Texture2D" uid="uid://b13yxab66ve2s" path="res://Sprites/Cururu/Melee/02.png" id="11_prtj7"]
-[ext_resource type="Texture2D" uid="uid://bnmshxa17gou7" path="res://Sprites/Cururu/Magia/02.png" id="11_xx3r0"]
-[ext_resource type="Texture2D" uid="uid://xalr154lfpix" path="res://Sprites/Cururu/Melee/03.png" id="12_8v2dh"]
-[ext_resource type="Texture2D" uid="uid://b13t8yqr8jutj" path="res://Sprites/Cururu/Magia/03.png" id="12_ren7w"]
-[ext_resource type="Texture2D" uid="uid://bk50ktfh8vvds" path="res://Sprites/Cururu/Magia/04.png" id="13_buhp1"]
-[ext_resource type="Texture2D" uid="uid://db18wnpxgwosm" path="res://Sprites/Cururu/Melee/04.png" id="13_rpndr"]
-[ext_resource type="Texture2D" uid="uid://cer7wfxkxaems" path="res://Sprites/Cururu/Melee/05.png" id="14_g0l4m"]
-[ext_resource type="Texture2D" uid="uid://bdstuu5v57h56" path="res://Sprites/Cururu/Magia/05.png" id="14_gop6h"]
-[ext_resource type="Texture2D" uid="uid://d14w2r75avcbe" path="res://Sprites/Cururu/Melee/06.png" id="15_7ba70"]
-[ext_resource type="Texture2D" uid="uid://bw4y8414tr7wg" path="res://Sprites/Cururu/Magia/06.png" id="15_m0h4l"]
-[ext_resource type="Texture2D" uid="uid://rbeyv4lpxncr" path="res://Sprites/Cururu/Magia/07.png" id="16_qvgo3"]
-[ext_resource type="Texture2D" uid="uid://1gd71hpyeid3" path="res://Sprites/Cururu/Melee/07.png" id="16_yd0lm"]
-[ext_resource type="Texture2D" uid="uid://ih4uq0k4wybx" path="res://Sprites/Cururu/Melee/08.png" id="17_djev5"]
-[ext_resource type="Texture2D" uid="uid://b63h14rbag2ci" path="res://Sprites/Cururu/Magia/08.png" id="17_o5r5q"]
-[ext_resource type="Texture2D" uid="uid://dnyyp5db2hpj7" path="res://Sprites/Cururu/Magia/09.png" id="18_4muok"]
-[ext_resource type="Texture2D" uid="uid://bx0odhtfbvdc" path="res://Sprites/Cururu/Magia/10.png" id="19_eeeko"]
-[ext_resource type="Texture2D" uid="uid://bool7vts11mq6" path="res://Sprites/Cururu/Run/Run 2.0 Concept/corrida_01.png" id="28_buhp1"]
-[ext_resource type="Script" uid="uid://cerjc6sna0dxs" path="res://Scripts/StateMachine/StateMachine.gd" id="29_8v2dh"]
-[ext_resource type="Texture2D" uid="uid://xaqws430plc2" path="res://Sprites/Cururu/Run/Run 2.0 Concept/corrida_02.png" id="29_gop6h"]
-[ext_resource type="Script" uid="uid://dmpgwk6x2wyq6" path="res://Scripts/Cururu/Chao.gd" id="29_prtj7"]
-[ext_resource type="Texture2D" uid="uid://rprnowptx04w" path="res://Sprites/Cururu/Run/Run 2.0 Concept/corrida_03.png" id="30_m0h4l"]
-[ext_resource type="Script" uid="uid://dqm1rg2yvcp87" path="res://Scripts/Cururu/Fall.gd" id="31_g0l4m"]
-[ext_resource type="Texture2D" uid="uid://cbbmswgu3mk3" path="res://Sprites/Cururu/Run/Run 2.0 Concept/corrida_04.png" id="31_qvgo3"]
-[ext_resource type="Script" uid="uid://c1tkv8brk85ke" path="res://Scripts/Cururu/Pulo.gd" id="32_7ba70"]
-[ext_resource type="Texture2D" uid="uid://dty56kk65gq3i" path="res://Sprites/Cururu/Run/Run 2.0 Concept/corrida_05.png" id="32_o5r5q"]
-[ext_resource type="Texture2D" uid="uid://ypt6ksbjr48h" path="res://Sprites/Cururu/Run/Run 2.0 Concept/corrida_06.png" id="33_4muok"]
-[ext_resource type="Texture2D" uid="uid://cyy4j4f8ve33c" path="res://Sprites/Cururu/Run/Run 2.0 Concept/corrida_07.png" id="34_eeeko"]
-[ext_resource type="Texture2D" uid="uid://dnr0vvvo43kvs" path="res://Sprites/Cururu/Run/Run 2.0 Concept/corrida_08.png" id="35_4thdd"]
-[ext_resource type="Texture2D" uid="uid://dmdjrd1l2fqgh" path="res://Sprites/Cururu/Run/Run 2.0 Concept/corrida_09.png" id="36_bcuq0"]
-[ext_resource type="Texture2D" uid="uid://c0h41nl840vof" path="res://Sprites/Cururu/Run/Run 2.0 Concept/corrida_10.png" id="37_v408m"]
-[ext_resource type="Script" uid="uid://hsdutxxttrp3" path="res://Scripts/Componentes/Vida.gd" id="38_buhp1"]
-[ext_resource type="AudioStream" uid="uid://dhgsnus0fna7q" path="res://Audio/SOM TESTE.mp3" id="40_xx3r0"]
-[ext_resource type="PackedScene" uid="uid://pc4mgv2nv8af" path="res://Objetos/CompHitBox.tscn" id="41_ren7w"]
-[ext_resource type="PackedScene" uid="uid://va5pjd6vuuo2" path="res://Objetos/CompHurtBox.tscn" id="46_4thdd"]
-[ext_resource type="Script" uid="uid://ctu2e3ln1kydq" path="res://Scripts/Cururu/Dash.gd" id="46_buhp1"]
-[ext_resource type="Script" uid="uid://brymvmxc6n166" path="res://Scripts/Cururu/Dano.gd" id="47_gop6h"]
+[ext_resource type="Script" uid="uid://cfu4ciwll8jcj" path="res://Scripts/Cururu/Cururu.gd" id="1_gwpdq"]
+[ext_resource type="Texture2D" uid="uid://djy1g5ftd682w" path="res://Sprites/Cururu/Hit/03.png" id="2_0hf88"]
+[ext_resource type="Texture2D" uid="uid://cwvw1pwco17gj" path="res://Sprites/Cururu/Hit/04.png" id="3_7uoqt"]
+[ext_resource type="Texture2D" uid="uid://c0gcdq37vc5jo" path="res://Sprites/Cururu/Hit/05.png" id="4_61o3p"]
+[ext_resource type="Texture2D" uid="uid://o5dfjhogimb" path="res://Sprites/Cururu/Hit/06.png" id="5_0r6tj"]
+[ext_resource type="Texture2D" uid="uid://l08p16oovcgi" path="res://Sprites/Cururu/Hit/07.png" id="6_wao3i"]
+[ext_resource type="Texture2D" uid="uid://cvqcka7at8bvd" path="res://Sprites/Cururu/Hit/08.png" id="7_bo6dy"]
+[ext_resource type="Texture2D" uid="uid://d02lqeocw78bt" path="res://Sprites/Cururu/Hit/09.png" id="8_g8tdn"]
+[ext_resource type="Texture2D" uid="uid://cnj5thpgkvv23" path="res://Sprites/Cururu/Pulo/4.png" id="9_3kywn"]
+[ext_resource type="Texture2D" uid="uid://oueeifn344de" path="res://Sprites/Cururu/Idle/01.png" id="10_cj33d"]
+[ext_resource type="Texture2D" uid="uid://g0sntps8nmbd" path="res://Sprites/Cururu/Idle/02.png" id="11_32f06"]
+[ext_resource type="Texture2D" uid="uid://ckhr6xysd1748" path="res://Sprites/Cururu/Pulo/1.png" id="12_6q3px"]
+[ext_resource type="Texture2D" uid="uid://bcmpceltuv7om" path="res://Sprites/Cururu/Pulo/2.png" id="13_d2bxm"]
+[ext_resource type="Texture2D" uid="uid://374vii38ugep" path="res://Sprites/Cururu/Pulo/3.png" id="14_kbhwl"]
+[ext_resource type="Texture2D" uid="uid://6waqj22kj7vk" path="res://Sprites/Cururu/Pulo/5.png" id="15_548ar"]
+[ext_resource type="Texture2D" uid="uid://cwihk6wsxfi67" path="res://Sprites/Cururu/Pulo/6.png" id="16_18egk"]
+[ext_resource type="Texture2D" uid="uid://btrq28uf3nshw" path="res://Sprites/Cururu/Magia/01.png" id="17_d45jk"]
+[ext_resource type="Texture2D" uid="uid://bnmshxa17gou7" path="res://Sprites/Cururu/Magia/02.png" id="18_vdd7f"]
+[ext_resource type="Texture2D" uid="uid://b13t8yqr8jutj" path="res://Sprites/Cururu/Magia/03.png" id="19_x4yiv"]
+[ext_resource type="Texture2D" uid="uid://bk50ktfh8vvds" path="res://Sprites/Cururu/Magia/04.png" id="20_6iqbf"]
+[ext_resource type="Texture2D" uid="uid://bdstuu5v57h56" path="res://Sprites/Cururu/Magia/05.png" id="21_x3lr7"]
+[ext_resource type="Texture2D" uid="uid://bw4y8414tr7wg" path="res://Sprites/Cururu/Magia/06.png" id="22_wpp42"]
+[ext_resource type="Texture2D" uid="uid://rbeyv4lpxncr" path="res://Sprites/Cururu/Magia/07.png" id="23_kmqi2"]
+[ext_resource type="Texture2D" uid="uid://b63h14rbag2ci" path="res://Sprites/Cururu/Magia/08.png" id="24_2q4c8"]
+[ext_resource type="Texture2D" uid="uid://dnyyp5db2hpj7" path="res://Sprites/Cururu/Magia/09.png" id="25_wq158"]
+[ext_resource type="Texture2D" uid="uid://bx0odhtfbvdc" path="res://Sprites/Cururu/Magia/10.png" id="26_1mxu7"]
+[ext_resource type="Texture2D" uid="uid://da56a8ouefnh0" path="res://Sprites/Cururu/Melee/01.png" id="27_lwl7b"]
+[ext_resource type="Texture2D" uid="uid://b13yxab66ve2s" path="res://Sprites/Cururu/Melee/02.png" id="28_e0rx1"]
+[ext_resource type="Texture2D" uid="uid://xalr154lfpix" path="res://Sprites/Cururu/Melee/03.png" id="29_ga1ek"]
+[ext_resource type="Texture2D" uid="uid://db18wnpxgwosm" path="res://Sprites/Cururu/Melee/04.png" id="30_jpq87"]
+[ext_resource type="Texture2D" uid="uid://cer7wfxkxaems" path="res://Sprites/Cururu/Melee/05.png" id="31_eyqrd"]
+[ext_resource type="Texture2D" uid="uid://d14w2r75avcbe" path="res://Sprites/Cururu/Melee/06.png" id="32_tms4o"]
+[ext_resource type="Texture2D" uid="uid://1gd71hpyeid3" path="res://Sprites/Cururu/Melee/07.png" id="33_1dbdn"]
+[ext_resource type="Texture2D" uid="uid://ih4uq0k4wybx" path="res://Sprites/Cururu/Melee/08.png" id="34_0w8y8"]
+[ext_resource type="Texture2D" uid="uid://bool7vts11mq6" path="res://Sprites/Cururu/Run/Run 2.0 Concept/corrida_01.png" id="35_d7mdf"]
+[ext_resource type="Texture2D" uid="uid://xaqws430plc2" path="res://Sprites/Cururu/Run/Run 2.0 Concept/corrida_02.png" id="36_w1841"]
+[ext_resource type="Texture2D" uid="uid://rprnowptx04w" path="res://Sprites/Cururu/Run/Run 2.0 Concept/corrida_03.png" id="37_ny8nr"]
+[ext_resource type="Texture2D" uid="uid://cbbmswgu3mk3" path="res://Sprites/Cururu/Run/Run 2.0 Concept/corrida_04.png" id="38_2t31h"]
+[ext_resource type="Texture2D" uid="uid://dty56kk65gq3i" path="res://Sprites/Cururu/Run/Run 2.0 Concept/corrida_05.png" id="39_s2eek"]
+[ext_resource type="Texture2D" uid="uid://ypt6ksbjr48h" path="res://Sprites/Cururu/Run/Run 2.0 Concept/corrida_06.png" id="40_vpyrf"]
+[ext_resource type="Texture2D" uid="uid://cyy4j4f8ve33c" path="res://Sprites/Cururu/Run/Run 2.0 Concept/corrida_07.png" id="41_7spwe"]
+[ext_resource type="Texture2D" uid="uid://dnr0vvvo43kvs" path="res://Sprites/Cururu/Run/Run 2.0 Concept/corrida_08.png" id="42_gjjix"]
+[ext_resource type="Texture2D" uid="uid://dmdjrd1l2fqgh" path="res://Sprites/Cururu/Run/Run 2.0 Concept/corrida_09.png" id="43_0digr"]
+[ext_resource type="Texture2D" uid="uid://c0h41nl840vof" path="res://Sprites/Cururu/Run/Run 2.0 Concept/corrida_10.png" id="44_50sin"]
+[ext_resource type="Script" uid="uid://hsdutxxttrp3" path="res://Scripts/Componentes/Vida.gd" id="45_vkjtj"]
+[ext_resource type="PackedScene" uid="uid://va5pjd6vuuo2" path="res://Objetos/Funcionalidade/CompHurtBox.tscn" id="46_wjcvp"]
+[ext_resource type="PackedScene" uid="uid://pc4mgv2nv8af" path="res://Objetos/Funcionalidade/CompHitBox.tscn" id="47_grb16"]
+[ext_resource type="AudioStream" uid="uid://dhgsnus0fna7q" path="res://Audio/SOM TESTE.mp3" id="48_c8qv2"]
+[ext_resource type="Script" uid="uid://cerjc6sna0dxs" path="res://Scripts/StateMachine/StateMachine.gd" id="49_1ribx"]
+[ext_resource type="Script" uid="uid://dmpgwk6x2wyq6" path="res://Scripts/Cururu/Chao.gd" id="50_3s0sn"]
+[ext_resource type="Script" uid="uid://dqm1rg2yvcp87" path="res://Scripts/Cururu/Fall.gd" id="51_dvy3r"]
+[ext_resource type="Script" uid="uid://c1tkv8brk85ke" path="res://Scripts/Cururu/Pulo.gd" id="52_damx7"]
+[ext_resource type="Script" uid="uid://ctu2e3ln1kydq" path="res://Scripts/Cururu/Dash.gd" id="53_k0fov"]
+[ext_resource type="Script" uid="uid://brymvmxc6n166" path="res://Scripts/Cururu/Dano.gd" id="54_jgcph"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_t2cfw"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_bcuq0")
+"texture": ExtResource("2_0hf88")
 }, {
 "duration": 1.0,
-"texture": ExtResource("3_v408m")
+"texture": ExtResource("3_7uoqt")
 }, {
 "duration": 1.0,
-"texture": ExtResource("4_ts6ax")
+"texture": ExtResource("4_61o3p")
 }, {
 "duration": 1.0,
-"texture": ExtResource("5_5gmro")
+"texture": ExtResource("5_0r6tj")
 }, {
 "duration": 1.0,
-"texture": ExtResource("6_vvomf")
+"texture": ExtResource("6_wao3i")
 }, {
 "duration": 1.0,
-"texture": ExtResource("7_gbyrg")
+"texture": ExtResource("7_bo6dy")
 }, {
 "duration": 1.0,
-"texture": ExtResource("8_uvey4")
+"texture": ExtResource("8_g8tdn")
 }],
 "loop": true,
 "name": &"Dano",
@@ -85,7 +85,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_igkqb")
+"texture": ExtResource("9_3kywn")
 }],
 "loop": true,
 "name": &"Fall",
@@ -93,10 +93,10 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("1_sqf2x")
+"texture": ExtResource("10_cj33d")
 }, {
 "duration": 1.0,
-"texture": ExtResource("2_asluq")
+"texture": ExtResource("11_32f06")
 }],
 "loop": true,
 "name": &"Idle",
@@ -104,13 +104,13 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("5_o3utp")
+"texture": ExtResource("12_6q3px")
 }, {
 "duration": 1.0,
-"texture": ExtResource("6_p4wm8")
+"texture": ExtResource("13_d2bxm")
 }, {
 "duration": 1.0,
-"texture": ExtResource("7_jxeb6")
+"texture": ExtResource("14_kbhwl")
 }],
 "loop": true,
 "name": &"Jump",
@@ -118,10 +118,10 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("8_u1qnh")
+"texture": ExtResource("15_548ar")
 }, {
 "duration": 1.0,
-"texture": ExtResource("9_8hqes")
+"texture": ExtResource("16_18egk")
 }],
 "loop": true,
 "name": &"Land",
@@ -129,34 +129,34 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("10_js0c4")
+"texture": ExtResource("17_d45jk")
 }, {
 "duration": 1.0,
-"texture": ExtResource("11_xx3r0")
+"texture": ExtResource("18_vdd7f")
 }, {
 "duration": 1.0,
-"texture": ExtResource("12_ren7w")
+"texture": ExtResource("19_x4yiv")
 }, {
 "duration": 1.0,
-"texture": ExtResource("13_buhp1")
+"texture": ExtResource("20_6iqbf")
 }, {
 "duration": 1.0,
-"texture": ExtResource("14_gop6h")
+"texture": ExtResource("21_x3lr7")
 }, {
 "duration": 1.0,
-"texture": ExtResource("15_m0h4l")
+"texture": ExtResource("22_wpp42")
 }, {
 "duration": 1.0,
-"texture": ExtResource("16_qvgo3")
+"texture": ExtResource("23_kmqi2")
 }, {
 "duration": 1.0,
-"texture": ExtResource("17_o5r5q")
+"texture": ExtResource("24_2q4c8")
 }, {
 "duration": 1.0,
-"texture": ExtResource("18_4muok")
+"texture": ExtResource("25_wq158")
 }, {
 "duration": 1.0,
-"texture": ExtResource("19_eeeko")
+"texture": ExtResource("26_1mxu7")
 }],
 "loop": true,
 "name": &"Magia",
@@ -164,16 +164,16 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("10_e7e5s")
+"texture": ExtResource("27_lwl7b")
 }, {
 "duration": 1.0,
-"texture": ExtResource("11_prtj7")
+"texture": ExtResource("28_e0rx1")
 }, {
 "duration": 1.0,
-"texture": ExtResource("12_8v2dh")
+"texture": ExtResource("29_ga1ek")
 }, {
 "duration": 1.0,
-"texture": ExtResource("13_rpndr")
+"texture": ExtResource("30_jpq87")
 }],
 "loop": true,
 "name": &"Melee1",
@@ -181,16 +181,16 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("14_g0l4m")
+"texture": ExtResource("31_eyqrd")
 }, {
 "duration": 1.0,
-"texture": ExtResource("15_7ba70")
+"texture": ExtResource("32_tms4o")
 }, {
 "duration": 1.0,
-"texture": ExtResource("16_yd0lm")
+"texture": ExtResource("33_1dbdn")
 }, {
 "duration": 1.0,
-"texture": ExtResource("17_djev5")
+"texture": ExtResource("34_0w8y8")
 }],
 "loop": true,
 "name": &"Melee2",
@@ -198,37 +198,37 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("28_buhp1")
+"texture": ExtResource("35_d7mdf")
 }, {
 "duration": 1.0,
-"texture": ExtResource("29_gop6h")
+"texture": ExtResource("36_w1841")
 }, {
 "duration": 1.0,
-"texture": ExtResource("30_m0h4l")
+"texture": ExtResource("37_ny8nr")
 }, {
 "duration": 1.0,
-"texture": ExtResource("31_qvgo3")
+"texture": ExtResource("38_2t31h")
 }, {
 "duration": 1.0,
-"texture": ExtResource("32_o5r5q")
+"texture": ExtResource("39_s2eek")
 }, {
 "duration": 1.0,
-"texture": ExtResource("33_4muok")
+"texture": ExtResource("40_vpyrf")
 }, {
 "duration": 1.0,
-"texture": ExtResource("33_4muok")
+"texture": ExtResource("40_vpyrf")
 }, {
 "duration": 1.0,
-"texture": ExtResource("34_eeeko")
+"texture": ExtResource("41_7spwe")
 }, {
 "duration": 1.0,
-"texture": ExtResource("35_4thdd")
+"texture": ExtResource("42_gjjix")
 }, {
 "duration": 1.0,
-"texture": ExtResource("36_bcuq0")
+"texture": ExtResource("43_0digr")
 }, {
 "duration": 1.0,
-"texture": ExtResource("37_v408m")
+"texture": ExtResource("44_50sin")
 }],
 "loop": true,
 "name": &"Run",
@@ -607,7 +607,7 @@ _data = {
 
 [node name="Player" type="CharacterBody2D" node_paths=PackedStringArray("vida", "state_machine", "hitbox_container", "hurtbox_container") groups=["Player"]]
 collision_layer = 2
-script = ExtResource("1_asluq")
+script = ExtResource("1_gwpdq")
 vel = 7.0
 vel_aerea = 5.0
 altura_pulo = 3.0
@@ -638,13 +638,13 @@ position = Vector2(0, -97)
 shape = SubResource("CapsuleShape2D_qakxq")
 
 [node name="Vida" type="Node" parent="."]
-script = ExtResource("38_buhp1")
+script = ExtResource("45_vkjtj")
 vida_max = 10
 metadata/_custom_type_script = "uid://hsdutxxttrp3"
 
 [node name="HurtContainer" type="Node2D" parent="."]
 
-[node name="HurtBox" parent="HurtContainer" node_paths=PackedStringArray("comp_vida", "parent") instance=ExtResource("46_4thdd")]
+[node name="HurtBox" parent="HurtContainer" node_paths=PackedStringArray("comp_vida", "parent") instance=ExtResource("46_wjcvp")]
 comp_vida = NodePath("../../Vida")
 parent = NodePath("../..")
 
@@ -661,9 +661,9 @@ debug_color = Color(0.92912, 0, 0.16329, 0.42)
 
 [node name="HitContainer" type="Node2D" parent="."]
 
-[node name="Melee1" parent="HitContainer" node_paths=PackedStringArray("ignore") instance=ExtResource("41_ren7w")]
+[node name="Melee1" parent="HitContainer" node_paths=PackedStringArray("ignore") instance=ExtResource("47_grb16")]
 ignore = NodePath("../../HurtContainer/HurtBox")
-sfx = ExtResource("40_xx3r0")
+sfx = ExtResource("48_c8qv2")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HitContainer/Melee1"]
 position = Vector2(44, -119)
@@ -671,9 +671,9 @@ shape = SubResource("CircleShape2D_xx3r0")
 disabled = true
 debug_color = Color(0.69455, 0.495447, 0, 0.42)
 
-[node name="Melee2" parent="HitContainer" node_paths=PackedStringArray("ignore") instance=ExtResource("41_ren7w")]
+[node name="Melee2" parent="HitContainer" node_paths=PackedStringArray("ignore") instance=ExtResource("47_grb16")]
 ignore = NodePath("../../HurtContainer/HurtBox")
-sfx = ExtResource("40_xx3r0")
+sfx = ExtResource("48_c8qv2")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HitContainer/Melee2"]
 position = Vector2(44, -102)
@@ -715,37 +715,37 @@ one_shot = true
 
 [node name="StateMachine" type="Node" parent="." node_paths=PackedStringArray("start_state")]
 unique_name_in_owner = true
-script = ExtResource("29_8v2dh")
+script = ExtResource("49_1ribx")
 start_state = NodePath("Fall")
 
 [node name="Chao" type="Node" parent="StateMachine" node_paths=PackedStringArray("pulo_state", "fall_state", "dash_state", "dano_state")]
-script = ExtResource("29_prtj7")
+script = ExtResource("50_3s0sn")
 pulo_state = NodePath("../Pulo")
 fall_state = NodePath("../Fall")
 dash_state = NodePath("../Dash")
 dano_state = NodePath("../Dano")
 
 [node name="Fall" type="Node" parent="StateMachine" node_paths=PackedStringArray("chao_state", "pulo_state", "dash_state", "dano_state")]
-script = ExtResource("31_g0l4m")
+script = ExtResource("51_dvy3r")
 chao_state = NodePath("../Chao")
 pulo_state = NodePath("../Pulo")
 dash_state = NodePath("../Dash")
 dano_state = NodePath("../Dano")
 
 [node name="Pulo" type="Node" parent="StateMachine" node_paths=PackedStringArray("fall_state", "dash_state", "dano_state")]
-script = ExtResource("32_7ba70")
+script = ExtResource("52_damx7")
 fall_state = NodePath("../Fall")
 dash_state = NodePath("../Dash")
 dano_state = NodePath("../Dano")
 
 [node name="Dash" type="Node" parent="StateMachine" node_paths=PackedStringArray("chao_state", "fall_state", "dano_state")]
-script = ExtResource("46_buhp1")
+script = ExtResource("53_k0fov")
 chao_state = NodePath("../Chao")
 fall_state = NodePath("../Fall")
 dano_state = NodePath("../Dano")
 
 [node name="Dano" type="Node" parent="StateMachine" node_paths=PackedStringArray("fall_state", "chao_state")]
-script = ExtResource("47_gop6h")
+script = ExtResource("54_jgcph")
 fall_state = NodePath("../Fall")
 chao_state = NodePath("../Chao")
 

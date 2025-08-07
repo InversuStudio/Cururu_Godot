@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://b0hyovdafhkyk"]
+
+[ext_resource type="Script" uid="uid://wgaa3gr6k7xf" path="res://Scripts/Componentes/TransicaoCamera.gd" id="1_y3xge"]
+
+[node name="TransicaoCamera" type="Area2D"]
+collision_layer = 0
+collision_mask = 2
+script = ExtResource("1_y3xge")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

@@ -2,10 +2,10 @@
 
 [ext_resource type="Texture2D" uid="uid://c374cwih425cq" path="res://Sprites/Tilemap/BACKGROUND.png" id="1_xg2uk"]
 [ext_resource type="Texture2D" uid="uid://cjl88xeknofui" path="res://Sprites/Tilemap/Ground/Mata_Atlantica/grama_reto2.png" id="2_fu41u"]
-[ext_resource type="PackedScene" uid="uid://cqyub70sv0ofp" path="res://Objetos/SavePoint.tscn" id="3_g2atg"]
-[ext_resource type="PackedScene" uid="uid://nohq28uk7lfk" path="res://Objetos/Player.tscn" id="4_60vee"]
+[ext_resource type="PackedScene" uid="uid://cqyub70sv0ofp" path="res://Objetos/Props/SavePoint.tscn" id="3_g2atg"]
+[ext_resource type="PackedScene" uid="uid://nohq28uk7lfk" path="res://Objetos/Entidades/Player.tscn" id="4_60vee"]
 [ext_resource type="Texture2D" uid="uid://bembi0ndmgdfc" path="res://Sprites/Cururu/Idle/CUP.png" id="5_5a6lk"]
-[ext_resource type="PackedScene" uid="uid://1apfpwlqocxn" path="res://Objetos/TransicaoFase.tscn" id="6_xnus2"]
+[ext_resource type="PackedScene" uid="uid://1apfpwlqocxn" path="res://Objetos/Funcionalidade/TransicaoFase.tscn" id="6_xnus2"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_a5ukd"]
 texture = ExtResource("1_xg2uk")

@@ -87,7 +87,10 @@ func _process(delta: float) -> void:
 	
 	# !!!!!!!!DEBUG - TIRAR DEPOIS!!!!!!!!!!!
 	if Input.is_physical_key_pressed(KEY_ENTER):
-		vida.recebe_dano(vida.vida_max)
+		if Input.is_physical_key_pressed(KEY_SPACE):
+			GameData.leu_data = false
+			GameData.Load()
+		else: vida.recebe_dano(vida.vida_max)
 
 func _physics_process(delta: float) -> void:
 	# Aplica PHYSICS_PROCESS do StateMachine
@@ -101,6 +104,7 @@ func _on_dash_cooldown_timeout() -> void:
 # COMPORTAMENTO AO MORRER
 func morte() -> void:
 	print("MORRI")
+	GameData.vida_atual = vida.vida_max
 	if GameData.Load() == false:
 		Mundos.CarregaFase(GameData.fase)
 

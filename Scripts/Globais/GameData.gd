@@ -18,6 +18,9 @@ var moedas: int = 0:
 		moedas = valor
 		# Quando o valor é alterado, é emitido update_moedas
 		update_moeda.emit()
+# Armazena informações de vida do player
+var vida_atual: int = 0
+var vida_max: int = 0
 
 # Instância de controle do arquivo de save
 var config: ConfigFile = ConfigFile.new()
@@ -53,6 +56,8 @@ func Load() -> bool:
 		moedas = config.get_value("save", "moedas")
 		# Carrega o jogo, com os dados certos
 		Mundos.CarregaFase(fase, true, posicao, direcao)
+		if GameData.vida_max > 0:
+			GameData.vida_atual = GameData.vida_max
 		return true
 		
 	return false

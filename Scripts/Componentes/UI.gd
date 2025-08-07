@@ -10,7 +10,9 @@ func _ready() -> void:
 		# Inicializa valores da barra de vida
 		var vida:int = player.vida.vida_max
 		%BarraVida.max_value = vida
-		%BarraVida.value = vida
+		if GameData.vida_atual > 0:
+			%BarraVida.value = GameData.vida_atual
+		else: %BarraVida.value = vida
 		# Conecta sinal de receber dano
 		player.vida.connect("recebeu_dano", UpdateVida.bind(player))
 		# Conecta sinal de morte
@@ -19,9 +21,9 @@ func _ready() -> void:
 	GameData.update_moeda.connect(UpdateMoeda)
 	# Se ainda não leu o arquivo de save...
 	if GameData.leu_data == false:
-	# ...e houver arquivo de save...
-		# ...atualiza contador de moedas com o número salvo
+		# ...e houver arquivo de save...
 		if GameData.config.has_section_key("save", "moedas"):
+		# ...atualiza contador de moedas com o número salvo
 			GameData.moedas = GameData.config.get_value("save", "moedas")
 			GameData.leu_data = true
 	# Atualiza contador pela primeira vez
