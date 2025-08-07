@@ -41,8 +41,8 @@ ease = 2
 
 [sub_resource type="Resource" id="Resource_kq68w"]
 script = ExtResource("10_d17v6")
-duration = 0.5
-transition = 1
+duration = 0.4
+transition = 0
 ease = 2
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_d17v6"]
@@ -109,10 +109,10 @@ position = Vector2(-1864, 0)
 physics_interpolation_mode = 1
 position = Vector2(-1219, -454)
 process_callback = 0
-limit_left = -2854
-limit_top = -1157
-limit_right = 552
-limit_bottom = 86
+limit_left = -2759
+limit_top = -1966
+limit_right = 1485
+limit_bottom = 71
 editor_draw_limits = true
 
 [node name="PhantomCameraHost" type="Node" parent="MainCamera"]

@@ -6,6 +6,7 @@ extends Node
 var vida_atual : int = 0
 
 signal recebeu_dano
+signal recebeu_vida
 signal morreu
 
 func _ready() -> void:
@@ -18,23 +19,26 @@ func _ready() -> void:
 		vida_atual = GameData.vida_atual
 
 # FUNÇÃO PARA DIMINUIR VIDA
-func recebe_dano(dano:int) -> void:
+func RecebeDano(dano:int) -> void:
 	vida_atual -= dano
+	vida_atual = clampi(vida_atual, 0, vida_max)
 	GameData.vida_atual = vida_atual
 	recebeu_dano.emit()
 	# Se vida for zerada, morre
 	if vida_atual <= 0:
 		morreu.emit()
-		if get_parent().has_method("morte"):
-			get_parent().morte()
-		else: morre()
+		if get_parent().has_method("Morte"):
+			get_parent().Morte()
+		else: Morre()
 
 # FUNÇÃO PARA AUMENTAR VIDA
-func recebe_cura(cura:int) -> void:
+func RecebeCura(cura:int) -> void:
 	vida_atual += cura
+	vida_atual = clampi(vida_atual, 0, vida_max)
 	GameData.vida_atual = vida_atual
+	recebeu_vida.emit()
 
 # FUNÇÃO DE MORRER
-func morre():
+func Morre():
 	print("MORRI")
 	get_parent().queue_free()

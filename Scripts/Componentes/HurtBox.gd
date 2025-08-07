@@ -15,13 +15,13 @@ extends Area2D
 @export var parent: Node2D = null
 
 # FUNÇÃO DE RECEBER DANO
-func recebe_dano(dano:int, pos_target:Vector2):
+func RecebeDano(dano:int, pos_target:Vector2):
 	print("Dano")
 	# Desabilita colisão
 	set_deferred("monitorable", false)
 	# Se houver componente de vida, recebe dano
 	if comp_vida:
-		comp_vida.recebe_dano(dano)
+		comp_vida.RecebeDano(dano)
 	# Aplica knockback, se for definido
 	if distancia_knockback > 0.0 and parent != null:
 		parent.velocity = Vector2.ZERO

@@ -53,9 +53,9 @@ shape = SubResource("RectangleShape2D_ntg74")
 unique_name_in_owner = true
 self_modulate = Color(0.965667, 0, 0.340985, 1)
 position = Vector2(-7.45058e-09, -48)
-rotation = 0.0556767
 scale = Vector2(0.535156, 0.535156)
 sprite_frames = SubResource("SpriteFrames_tkh53")
+autoplay = "default"
 
 [node name="Vida" type="Node" parent="."]
 script = ExtResource("5_6imq8")

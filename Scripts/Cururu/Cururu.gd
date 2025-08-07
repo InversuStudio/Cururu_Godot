@@ -102,7 +102,7 @@ func _on_dash_cooldown_timeout() -> void:
 	pode_dash = true
 
 # COMPORTAMENTO AO MORRER
-func morte() -> void:
+func Morte() -> void:
 	print("MORRI")
 	GameData.vida_atual = vida.vida_max
 	if GameData.Load() == false:

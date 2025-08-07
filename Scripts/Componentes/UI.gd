@@ -13,9 +13,9 @@ func _ready() -> void:
 		if GameData.vida_atual > 0:
 			%BarraVida.value = GameData.vida_atual
 		else: %BarraVida.value = vida
-		# Conecta sinal de receber dano
+		# Conecta sinais de dano, cura e morte
 		player.vida.connect("recebeu_dano", UpdateVida.bind(player))
-		# Conecta sinal de morte
+		player.vida.connect("recebeu_vida", UpdateVida.bind(player))
 		player.vida.connect("morreu", PlayerMorreu)
 	# Conecta UpdateMoeda ao sinal de mudança na quintidade de moedas
 	GameData.update_moeda.connect(UpdateMoeda)
