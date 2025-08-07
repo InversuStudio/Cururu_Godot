@@ -1,10 +1,11 @@
-[gd_scene load_steps=9 format=4 uid="uid://bsch3csrjxaua"]
+[gd_scene load_steps=10 format=4 uid="uid://bsch3csrjxaua"]
 
 [ext_resource type="Texture2D" uid="uid://c374cwih425cq" path="res://Sprites/Tilemap/BACKGROUND.png" id="1_o3hho"]
 [ext_resource type="PackedScene" uid="uid://cqyub70sv0ofp" path="res://Objetos/SavePoint.tscn" id="2_ctw0e"]
 [ext_resource type="PackedScene" uid="uid://nohq28uk7lfk" path="res://Objetos/Player.tscn" id="3_gdjfr"]
 [ext_resource type="Texture2D" uid="uid://bembi0ndmgdfc" path="res://Sprites/Cururu/Idle/CUP.png" id="4_3ltwp"]
 [ext_resource type="PackedScene" uid="uid://1apfpwlqocxn" path="res://Objetos/TransicaoFase.tscn" id="5_ck3rm"]
+[ext_resource type="Texture2D" uid="uid://cjl88xeknofui" path="res://Sprites/Tilemap/Ground/Mata_Atlantica/grama_reto2.png" id="6_ctw0e"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_u3rx3"]
 texture = ExtResource("1_o3hho")
@@ -158,6 +159,7 @@ position = Vector2(-5795, 489)
 scale = Vector2(1.88663, 1.88663)
 
 [node name="SavePoint" parent="Save Point" instance=ExtResource("2_ctw0e")]
+script = null
 
 [node name="Player" parent="." instance=ExtResource("3_gdjfr")]
 position = Vector2(-6810, 468)
@@ -191,3 +193,16 @@ virado_a_esquerda = true
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TransicaoFase"]
 position = Vector2(194, -104.5)
 shape = SubResource("RectangleShape2D_upnla")
+
+[node name="Savepoint2" type="Sprite2D" parent="."]
+position = Vector2(-13612, 664)
+scale = Vector2(0.844631, 0.961002)
+
+[node name="GramaReto16" type="Sprite2D" parent="Savepoint2"]
+position = Vector2(22710.5, -15982.3)
+texture = ExtResource("6_ctw0e")
+
+[node name="SavePoint2" parent="Savepoint2/GramaReto16" instance=ExtResource("2_ctw0e")]
+position = Vector2(-2.36621, -24.9739)
+scale = Vector2(2.23367, 1.96319)
+script = null

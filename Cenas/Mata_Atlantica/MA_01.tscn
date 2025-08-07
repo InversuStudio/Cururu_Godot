@@ -235,8 +235,14 @@ tile_set = SubResource("TileSet_cc005")
 position = Vector2(-5795, 489)
 scale = Vector2(1.88663, 1.88663)
 
+[node name="GramaReto35" type="Sprite2D" parent="Save Point"]
+position = Vector2(-22.2619, 25.9722)
+scale = Vector2(0.501024, 0.534424)
+texture = ExtResource("9_iahq4")
+
 [node name="SavePoint" parent="Save Point" instance=ExtResource("10_3vwte")]
-position = Vector2(-18.5516, 2.65023)
+position = Vector2(-18.5516, 12.1911)
+script = null
 
 [node name="Player" parent="." instance=ExtResource("11_rtpw0")]
 position = Vector2(-6810, 508)
@@ -278,7 +284,7 @@ scale = Vector2(1.05785, 1.05785)
 texture = ExtResource("9_iahq4")
 
 [node name="GramaReto8" type="Sprite2D" parent="Assets 2D Cenário"]
-position = Vector2(-6671.86, 4.23138)
+position = Vector2(-6641.19, 4.23138)
 scale = Vector2(1.05785, 1.05785)
 texture = ExtResource("9_iahq4")
 
