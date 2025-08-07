@@ -5,10 +5,16 @@ var player_morreu: bool = false
 
 func _ready() -> void:
 	var player:CharacterBody2D = get_tree().get_first_node_in_group("Player")
-	# Se achar Player na cena, conecta sinal de morte
+	# Se achar Player na cena...
 	if player:
-		print(player)
-		player.connect("morreu", PlayerMorreu)
+		# Inicializa valores da barra de vida
+		var vida:int = player.vida.vida_max
+		%BarraVida.max_value = vida
+		%BarraVida.value = vida
+		# Conecta sinal de receber dano
+		player.vida.connect("recebeu_dano", UpdateVida.bind(player))
+		# Conecta sinal de morte
+		player.vida.connect("morreu", PlayerMorreu)
 	# Conecta UpdateMoeda ao sinal de mudança na quintidade de moedas
 	GameData.update_moeda.connect(UpdateMoeda)
 	# Se ainda não leu o arquivo de save...
@@ -30,3 +36,7 @@ func UpdateMoeda() -> void:
 	# Funciona apenas se o player não estiver morto
 	if player_morreu == false:
 		%CounterMoeda.text = str(GameData.moedas)
+
+# Função para alterar valor da barra de vida
+func UpdateVida(player:CharacterBody2D) -> void:
+	%BarraVida.value = player.vida.vida_atual

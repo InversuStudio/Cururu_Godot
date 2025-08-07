@@ -6,6 +6,7 @@ extends Node
 var vida_atual : int = 0
 
 signal recebeu_dano
+signal morreu
 
 func _ready() -> void:
 	# Inicia vida_atual no início do jogo
@@ -13,10 +14,11 @@ func _ready() -> void:
 
 # FUNÇÃO PARA DIMINUIR VIDA
 func recebe_dano(dano:int) -> void:
-	recebeu_dano.emit()
 	vida_atual -= dano
+	recebeu_dano.emit()
 	# Se vida for zerada, morre
 	if vida_atual <= 0:
+		morreu.emit()
 		if get_parent().has_method("morte"):
 			get_parent().morte()
 		else: morre()

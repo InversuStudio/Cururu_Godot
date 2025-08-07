@@ -32,7 +32,7 @@ texture = ExtResource("1_u1ubb")
 
 [node name="Vida" type="Node" parent="."]
 script = ExtResource("2_34dr1")
-vida_max = 500
+vida_max = 10
 metadata/_custom_type_script = "uid://hsdutxxttrp3"
 
 [node name="HitBox" parent="." node_paths=PackedStringArray("ignore") instance=ExtResource("4_0687k")]

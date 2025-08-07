@@ -66,8 +66,6 @@ var input_move: float = 0.0
 var em_transicao: bool = false
 var recebeu_dano: bool = false
 
-signal morreu
-
 func _ready() -> void:
 	for h: HurtBox in hurtbox_container.get_children():
 		h.distancia_knockback = distancia_knockback
@@ -103,7 +101,6 @@ func _on_dash_cooldown_timeout() -> void:
 # COMPORTAMENTO AO MORRER
 func morte() -> void:
 	print("MORRI")
-	morreu.emit()
 	if GameData.Load() == false:
 		Mundos.CarregaFase(GameData.fase)
 
