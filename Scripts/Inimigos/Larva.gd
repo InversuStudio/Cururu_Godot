@@ -6,9 +6,14 @@ var dir: int = 1
 func _ready() -> void:
 	velocidade *= 128
 	var rand: int = randi_range(0,1)
-	dir = -1 if rand == 0 else 1
-	print(dir)
-	#velocity.x = velocidade * dir
+	#dir = -1 if rand == 0 else 1
+	match rand:
+		0:
+			dir = -1
+			%Sprite.flip_h = false
+		1:
+			dir = 1
+			%Sprite.flip_h = true
 
 func _physics_process(delta: float) -> void:
 	if !is_on_floor():
@@ -18,9 +23,13 @@ func _physics_process(delta: float) -> void:
 	
 	if %RayDireita.is_colliding() or !%RayVazioDireita.is_colliding():
 		dir = -1
+		%Sprite.flip_h = false
+		%HitBox.scale.x = 1
 	
 	if %RayEsquerda.is_colliding() or !%RayVazioEsquerda.is_colliding():
 		dir = 1
+		%Sprite.flip_h = true
+		%HitBox.scale.x = -1
 	
 	move_and_slide()
 

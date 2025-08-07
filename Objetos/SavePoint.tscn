@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://cqyub70sv0ofp"]
 
-[ext_resource type="Script" uid="uid://dvol8qmgk0lx8" path="res://Scripts/SavePoint.gd" id="1_hntd5"]
+[ext_resource type="Script" uid="uid://dvol8qmgk0lx8" path="res://Scripts/Componentes/SavePoint.gd" id="1_hntd5"]
 [ext_resource type="Texture2D" uid="uid://ij4a2cnrhm8a" path="res://Sprites/Tilemap/Background_Paralax/SP.png" id="2_hntd5"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hntd5"]

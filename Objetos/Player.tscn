@@ -1,6 +1,6 @@
 [gd_scene load_steps=71 format=3 uid="uid://nohq28uk7lfk"]
 
-[ext_resource type="Script" uid="uid://cfu4ciwll8jcj" path="res://Scripts/Cururu.gd" id="1_asluq"]
+[ext_resource type="Script" uid="uid://cfu4ciwll8jcj" path="res://Scripts/Cururu/Cururu.gd" id="1_asluq"]
 [ext_resource type="Texture2D" uid="uid://oueeifn344de" path="res://Sprites/Cururu/Idle/01.png" id="1_sqf2x"]
 [ext_resource type="Texture2D" uid="uid://g0sntps8nmbd" path="res://Sprites/Cururu/Idle/02.png" id="2_asluq"]
 [ext_resource type="Texture2D" uid="uid://djy1g5ftd682w" path="res://Sprites/Cururu/Hit/03.png" id="2_bcuq0"]
@@ -37,11 +37,11 @@
 [ext_resource type="Texture2D" uid="uid://bool7vts11mq6" path="res://Sprites/Cururu/Run/Run 2.0 Concept/corrida_01.png" id="28_buhp1"]
 [ext_resource type="Script" uid="uid://cerjc6sna0dxs" path="res://Scripts/StateMachine/StateMachine.gd" id="29_8v2dh"]
 [ext_resource type="Texture2D" uid="uid://xaqws430plc2" path="res://Sprites/Cururu/Run/Run 2.0 Concept/corrida_02.png" id="29_gop6h"]
-[ext_resource type="Script" uid="uid://dmpgwk6x2wyq6" path="res://Scripts/StateMachine/Chao.gd" id="29_prtj7"]
+[ext_resource type="Script" uid="uid://dmpgwk6x2wyq6" path="res://Scripts/Cururu/Chao.gd" id="29_prtj7"]
 [ext_resource type="Texture2D" uid="uid://rprnowptx04w" path="res://Sprites/Cururu/Run/Run 2.0 Concept/corrida_03.png" id="30_m0h4l"]
-[ext_resource type="Script" uid="uid://dqm1rg2yvcp87" path="res://Scripts/StateMachine/Fall.gd" id="31_g0l4m"]
+[ext_resource type="Script" uid="uid://dqm1rg2yvcp87" path="res://Scripts/Cururu/Fall.gd" id="31_g0l4m"]
 [ext_resource type="Texture2D" uid="uid://cbbmswgu3mk3" path="res://Sprites/Cururu/Run/Run 2.0 Concept/corrida_04.png" id="31_qvgo3"]
-[ext_resource type="Script" uid="uid://c1tkv8brk85ke" path="res://Scripts/StateMachine/Pulo.gd" id="32_7ba70"]
+[ext_resource type="Script" uid="uid://c1tkv8brk85ke" path="res://Scripts/Cururu/Pulo.gd" id="32_7ba70"]
 [ext_resource type="Texture2D" uid="uid://dty56kk65gq3i" path="res://Sprites/Cururu/Run/Run 2.0 Concept/corrida_05.png" id="32_o5r5q"]
 [ext_resource type="Texture2D" uid="uid://ypt6ksbjr48h" path="res://Sprites/Cururu/Run/Run 2.0 Concept/corrida_06.png" id="33_4muok"]
 [ext_resource type="Texture2D" uid="uid://cyy4j4f8ve33c" path="res://Sprites/Cururu/Run/Run 2.0 Concept/corrida_07.png" id="34_eeeko"]
@@ -52,8 +52,8 @@
 [ext_resource type="AudioStream" uid="uid://dhgsnus0fna7q" path="res://Audio/SOM TESTE.mp3" id="40_xx3r0"]
 [ext_resource type="PackedScene" uid="uid://pc4mgv2nv8af" path="res://Objetos/CompHitBox.tscn" id="41_ren7w"]
 [ext_resource type="PackedScene" uid="uid://va5pjd6vuuo2" path="res://Objetos/CompHurtBox.tscn" id="46_4thdd"]
-[ext_resource type="Script" uid="uid://ctu2e3ln1kydq" path="res://Scripts/StateMachine/Dash.gd" id="46_buhp1"]
-[ext_resource type="Script" uid="uid://brymvmxc6n166" path="res://Scripts/StateMachine/Dano.gd" id="47_gop6h"]
+[ext_resource type="Script" uid="uid://ctu2e3ln1kydq" path="res://Scripts/Cururu/Dash.gd" id="46_buhp1"]
+[ext_resource type="Script" uid="uid://brymvmxc6n166" path="res://Scripts/Cururu/Dano.gd" id="47_gop6h"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_t2cfw"]
 animations = [{

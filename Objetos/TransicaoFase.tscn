@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://1apfpwlqocxn"]
 
-[ext_resource type="Script" uid="uid://dx7a1y8253nqj" path="res://Scripts/TransicaoFase.gd" id="1_3c6c0"]
+[ext_resource type="Script" uid="uid://dx7a1y8253nqj" path="res://Scripts/Componentes/TransicaoFase.gd" id="1_3c6c0"]
 
 [node name="TransicaoFase" type="Area2D"]
 collision_mask = 2
