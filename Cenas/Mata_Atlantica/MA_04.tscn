@@ -161,6 +161,9 @@ scale = Vector2(1.88663, 1.88663)
 [node name="SavePoint" parent="Save Point" instance=ExtResource("2_ctw0e")]
 script = null
 
+[node name="SavePoint" parent="." instance=ExtResource("2_ctw0e")]
+position = Vector2(5516, -14721)
+
 [node name="Player" parent="." instance=ExtResource("3_gdjfr")]
 position = Vector2(-6810, 468)
 scale = Vector2(0.959163, 0.959163)
@@ -201,8 +204,3 @@ scale = Vector2(0.844631, 0.961002)
 [node name="GramaReto16" type="Sprite2D" parent="Savepoint2"]
 position = Vector2(22710.5, -15982.3)
 texture = ExtResource("6_ctw0e")
-
-[node name="SavePoint2" parent="Savepoint2/GramaReto16" instance=ExtResource("2_ctw0e")]
-position = Vector2(-2.36621, -24.9739)
-scale = Vector2(2.23367, 1.96319)
-script = null

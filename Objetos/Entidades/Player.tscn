@@ -34,16 +34,16 @@
 [ext_resource type="Texture2D" uid="uid://d14w2r75avcbe" path="res://Sprites/Cururu/Melee/06.png" id="32_tms4o"]
 [ext_resource type="Texture2D" uid="uid://1gd71hpyeid3" path="res://Sprites/Cururu/Melee/07.png" id="33_1dbdn"]
 [ext_resource type="Texture2D" uid="uid://ih4uq0k4wybx" path="res://Sprites/Cururu/Melee/08.png" id="34_0w8y8"]
-[ext_resource type="Texture2D" uid="uid://bool7vts11mq6" path="res://Sprites/Cururu/Run/Run 2.0 Concept/corrida_01.png" id="35_d7mdf"]
-[ext_resource type="Texture2D" uid="uid://xaqws430plc2" path="res://Sprites/Cururu/Run/Run 2.0 Concept/corrida_02.png" id="36_w1841"]
-[ext_resource type="Texture2D" uid="uid://rprnowptx04w" path="res://Sprites/Cururu/Run/Run 2.0 Concept/corrida_03.png" id="37_ny8nr"]
-[ext_resource type="Texture2D" uid="uid://cbbmswgu3mk3" path="res://Sprites/Cururu/Run/Run 2.0 Concept/corrida_04.png" id="38_2t31h"]
-[ext_resource type="Texture2D" uid="uid://dty56kk65gq3i" path="res://Sprites/Cururu/Run/Run 2.0 Concept/corrida_05.png" id="39_s2eek"]
-[ext_resource type="Texture2D" uid="uid://ypt6ksbjr48h" path="res://Sprites/Cururu/Run/Run 2.0 Concept/corrida_06.png" id="40_vpyrf"]
-[ext_resource type="Texture2D" uid="uid://cyy4j4f8ve33c" path="res://Sprites/Cururu/Run/Run 2.0 Concept/corrida_07.png" id="41_7spwe"]
-[ext_resource type="Texture2D" uid="uid://dnr0vvvo43kvs" path="res://Sprites/Cururu/Run/Run 2.0 Concept/corrida_08.png" id="42_gjjix"]
-[ext_resource type="Texture2D" uid="uid://dmdjrd1l2fqgh" path="res://Sprites/Cururu/Run/Run 2.0 Concept/corrida_09.png" id="43_0digr"]
-[ext_resource type="Texture2D" uid="uid://c0h41nl840vof" path="res://Sprites/Cururu/Run/Run 2.0 Concept/corrida_10.png" id="44_50sin"]
+[ext_resource type="Texture2D" uid="uid://bfd8dyt3xsbs" path="res://Sprites/Cururu/Run/1.png" id="35_gwpdq"]
+[ext_resource type="Texture2D" uid="uid://4g67xd644aev" path="res://Sprites/Cururu/Run/2.png" id="36_0hf88"]
+[ext_resource type="Texture2D" uid="uid://smseucq1udn1" path="res://Sprites/Cururu/Run/3.png" id="37_7uoqt"]
+[ext_resource type="Texture2D" uid="uid://dyoqghu88374l" path="res://Sprites/Cururu/Run/4.png" id="38_61o3p"]
+[ext_resource type="Texture2D" uid="uid://c288v371veon" path="res://Sprites/Cururu/Run/5.png" id="39_0r6tj"]
+[ext_resource type="Texture2D" uid="uid://buo8arlmdbube" path="res://Sprites/Cururu/Run/6.png" id="40_wao3i"]
+[ext_resource type="Texture2D" uid="uid://b4rkkf6c11cxg" path="res://Sprites/Cururu/Run/7.png" id="41_bo6dy"]
+[ext_resource type="Texture2D" uid="uid://b3ldrsqqg8jow" path="res://Sprites/Cururu/Run/8.png" id="42_g8tdn"]
+[ext_resource type="Texture2D" uid="uid://mpoan00rbfws" path="res://Sprites/Cururu/Run/9.png" id="43_3kywn"]
+[ext_resource type="Texture2D" uid="uid://cgojsc8x3iriq" path="res://Sprites/Cururu/Run/10.png" id="44_cj33d"]
 [ext_resource type="Script" uid="uid://hsdutxxttrp3" path="res://Scripts/Componentes/Vida.gd" id="45_vkjtj"]
 [ext_resource type="PackedScene" uid="uid://va5pjd6vuuo2" path="res://Objetos/Funcionalidade/CompHurtBox.tscn" id="46_wjcvp"]
 [ext_resource type="PackedScene" uid="uid://pc4mgv2nv8af" path="res://Objetos/Funcionalidade/CompHitBox.tscn" id="47_grb16"]
@@ -198,37 +198,34 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("35_d7mdf")
+"texture": ExtResource("35_gwpdq")
 }, {
 "duration": 1.0,
-"texture": ExtResource("36_w1841")
+"texture": ExtResource("36_0hf88")
 }, {
 "duration": 1.0,
-"texture": ExtResource("37_ny8nr")
+"texture": ExtResource("37_7uoqt")
 }, {
 "duration": 1.0,
-"texture": ExtResource("38_2t31h")
+"texture": ExtResource("38_61o3p")
 }, {
 "duration": 1.0,
-"texture": ExtResource("39_s2eek")
+"texture": ExtResource("39_0r6tj")
 }, {
 "duration": 1.0,
-"texture": ExtResource("40_vpyrf")
+"texture": ExtResource("40_wao3i")
 }, {
 "duration": 1.0,
-"texture": ExtResource("40_vpyrf")
+"texture": ExtResource("41_bo6dy")
 }, {
 "duration": 1.0,
-"texture": ExtResource("41_7spwe")
+"texture": ExtResource("42_g8tdn")
 }, {
 "duration": 1.0,
-"texture": ExtResource("42_gjjix")
+"texture": ExtResource("43_3kywn")
 }, {
 "duration": 1.0,
-"texture": ExtResource("43_0digr")
-}, {
-"duration": 1.0,
-"texture": ExtResource("44_50sin")
+"texture": ExtResource("44_cj33d")
 }],
 "loop": true,
 "name": &"Run",
@@ -630,7 +627,7 @@ unique_name_in_owner = true
 position = Vector2(0, -110)
 scale = Vector2(0.5, 0.5)
 sprite_frames = SubResource("SpriteFrames_t2cfw")
-animation = &"Dano"
+animation = &"Run"
 frame = 1
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
