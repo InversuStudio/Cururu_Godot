@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://2b1nn3swfp41"
-path="res://.godot/imported/grama_curv_fora1.png-2fd0c8d6a2366dde19a46ff765c5dc49.ctex"
+uid="uid://cj4rj4oj20ogb"
+path="res://.godot/imported/chap_interno.png-f61593e911c9a070ebb859acc071723e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Tilemap/Ground/Mata_Atlantica/grama_curv_fora1.png"
-dest_files=["res://.godot/imported/grama_curv_fora1.png-2fd0c8d6a2366dde19a46ff765c5dc49.ctex"]
+source_file="res://Sprites/Tilemap/Ground/Mata_Atlantica/chap_interno.png"
+dest_files=["res://.godot/imported/chap_interno.png-f61593e911c9a070ebb859acc071723e.ctex"]
 
 [params]
 

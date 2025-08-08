@@ -315,7 +315,7 @@ position = Vector2(-12180, 535)
 texture = ExtResource("7_g2atg")
 
 [node name="Chão3" type="Sprite2D" parent="Chaoruinas"]
-position = Vector2(-212, 0)
+position = Vector2(-198, 0)
 texture = ExtResource("7_g2atg")
 
 [node name="Chão4" type="Sprite2D" parent="Chaoruinas"]

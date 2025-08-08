@@ -1,12 +1,13 @@
-[gd_scene load_steps=26 format=4 uid="uid://driflyxauqbxs"]
+[gd_scene load_steps=27 format=4 uid="uid://driflyxauqbxs"]
 
 [ext_resource type="Texture2D" uid="uid://c374cwih425cq" path="res://Sprites/Tilemap/BACKGROUND.png" id="1_52y5a"]
-[ext_resource type="Texture2D" uid="uid://dt8o7r2gdnfv3" path="res://Sprites/Background/ParallaxBack3.png" id="1_nxqjs"]
-[ext_resource type="Texture2D" uid="uid://bxjhu7t48ftev" path="res://Sprites/Background/ParallaxBack2.png" id="2_56qbx"]
-[ext_resource type="Texture2D" uid="uid://balhletbs6ogr" path="res://Sprites/Background/ParallaxBack1.png" id="3_2ryh1"]
+[ext_resource type="Texture2D" uid="uid://l6b625ae8udc" path="res://Sprites/Tilemap/Assets/CenarioFloresta/BACK.png" id="1_id35g"]
+[ext_resource type="Texture2D" uid="uid://cov3k8uja4wwj" path="res://Sprites/Tilemap/Assets/CenarioFloresta/PAU_BRASIL.png" id="2_bp4ag"]
+[ext_resource type="Texture2D" uid="uid://dxylu3tdlsq2" path="res://Sprites/Tilemap/Assets/CenarioFloresta/FOG01.png" id="3_0he43"]
 [ext_resource type="PackedScene" uid="uid://nohq28uk7lfk" path="res://Objetos/Entidades/Player.tscn" id="3_2vimk"]
-[ext_resource type="Texture2D" uid="uid://csvwpwkl07cyi" path="res://Sprites/Background/ParallaxFront.png" id="4_0ho33"]
+[ext_resource type="Texture2D" uid="uid://csr2gynumyiv2" path="res://Sprites/Tilemap/Assets/CenarioFloresta/PAU_BRASIL03.png" id="4_77bok"]
 [ext_resource type="PackedScene" uid="uid://cqyub70sv0ofp" path="res://Objetos/Props/SavePoint.tscn" id="4_fo4t4"]
+[ext_resource type="Texture2D" uid="uid://bdh06r7m0p0js" path="res://Sprites/Tilemap/Assets/CenarioFloresta/Folhas02.png" id="5_npj8t"]
 [ext_resource type="PackedScene" uid="uid://bu62qgilsxetf" path="res://Objetos/Entidades/Larva.tscn" id="7_2vimk"]
 [ext_resource type="PackedScene" uid="uid://bktu336s6ruri" path="res://Objetos/Props/Moeda.tscn" id="8_fo4t4"]
 [ext_resource type="Script" uid="uid://bhexx6mj1xv3q" path="res://addons/phantom_camera/scripts/phantom_camera/phantom_camera_2d.gd" id="9_2ryh1"]
@@ -70,8 +71,14 @@ scroll_scale = Vector2(0.2, 1)
 repeat_size = Vector2(1920, 0)
 repeat_times = 3
 
+[node name="Back" type="Sprite2D" parent="Background/Parallax2D"]
+position = Vector2(1597.25, 214)
+scale = Vector2(1.48389, 1)
+texture = ExtResource("1_id35g")
+
 [node name="Sprite2D" type="Sprite2D" parent="Background/Parallax2D"]
-texture = ExtResource("1_nxqjs")
+position = Vector2(237, -622)
+texture = ExtResource("2_bp4ag")
 centered = false
 
 [node name="Parallax2D2" type="Parallax2D" parent="Background"]
@@ -79,16 +86,27 @@ scroll_scale = Vector2(0.6, 1)
 repeat_size = Vector2(1920, 0)
 repeat_times = 3
 
+[node name="Fog01" type="Sprite2D" parent="Background/Parallax2D2"]
+position = Vector2(765.25, 546)
+scale = Vector2(2.33992, 1)
+texture = ExtResource("3_0he43")
+
 [node name="Sprite2D" type="Sprite2D" parent="Background/Parallax2D2"]
-texture = ExtResource("2_56qbx")
+position = Vector2(-318, -659)
+texture = ExtResource("4_77bok")
 centered = false
+
+[node name="Folhas02" type="Sprite2D" parent="Background/Parallax2D2"]
+position = Vector2(391, 650)
+texture = ExtResource("5_npj8t")
 
 [node name="Parallax2D3" type="Parallax2D" parent="Background"]
 repeat_size = Vector2(1920, 0)
 repeat_times = 3
 
 [node name="Sprite2D" type="Sprite2D" parent="Background/Parallax2D3"]
-texture = ExtResource("3_2ryh1")
+position = Vector2(807, -622)
+texture = ExtResource("2_bp4ag")
 centered = false
 
 [node name="Parallax2D4" type="Parallax2D" parent="Background"]
@@ -99,8 +117,9 @@ repeat_times = 3
 
 [node name="Sprite2D" type="Sprite2D" parent="Background/Parallax2D4"]
 modulate = Color(0, 0, 0, 1)
-position = Vector2(0, 78)
-texture = ExtResource("4_0ho33")
+position = Vector2(-104, -808)
+scale = Vector2(1.23047, 1.23047)
+texture = ExtResource("2_bp4ag")
 centered = false
 
 [node name="Node2D" type="Node2D" parent="."]
