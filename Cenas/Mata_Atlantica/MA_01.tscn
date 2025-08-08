@@ -835,19 +835,19 @@ position = Vector2(-5521, 125)
 scale = Vector2(1.25391, 1.25391)
 
 [node name="PauBrasil05" type="Sprite2D" parent="Frontground"]
-position = Vector2(3180.46, -207.352)
+position = Vector2(3162.91, -271.949)
 rotation = -0.0872665
 scale = Vector2(1.20249, 1.20249)
 texture = ExtResource("24_y7ghq")
 
 [node name="PauBrasil04" type="Sprite2D" parent="Frontground"]
-position = Vector2(569.421, -207.352)
+position = Vector2(575.002, -266.367)
 rotation = 0.0872665
 scale = Vector2(1.20249, 1.20249)
 texture = ExtResource("24_y7ghq")
 
 [node name="PauBrasil06" type="Sprite2D" parent="Frontground"]
-position = Vector2(5169.45, -207.352)
+position = Vector2(5135.14, -285.507)
 rotation = 0.0872665
 scale = Vector2(1.20249, 1.20249)
 texture = ExtResource("24_y7ghq")
