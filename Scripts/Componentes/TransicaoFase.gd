@@ -10,4 +10,10 @@ extends Area2D
 func _on_body_entered(body: Node2D) -> void:
 	if body.is_in_group("Player"):
 		body.pode_mover = false
+		match virado_a_esquerda:
+			false:
+				body.input_move = 1.0
+			true:
+				body.input_move = -1.0
+				
 		Mundos.CarregaFase(destino, true, posicao, virado_a_esquerda)
