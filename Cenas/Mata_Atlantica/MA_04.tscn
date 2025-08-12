@@ -175,7 +175,6 @@ tempo_cair = 0.37
 tempo_coyote = 0.15
 tempo_dash = 0.18
 distancia_dash = 8.0
-cooldown_dash = 0.2
 
 [node name="Cup" type="Sprite2D" parent="Player"]
 visible = false
