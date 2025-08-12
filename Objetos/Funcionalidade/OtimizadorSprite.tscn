@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://ffqi6t0ahbmk"]
+
+[ext_resource type="Script" uid="uid://b2ls33ys55oyt" path="res://Scripts/Componentes/OtimizadorSprite.gd" id="1_wtr41"]
+
+[node name="OtimizadorSprite" type="VisibleOnScreenEnabler2D"]
+script = ExtResource("1_wtr41")

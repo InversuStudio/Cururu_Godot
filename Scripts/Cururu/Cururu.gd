@@ -73,7 +73,6 @@ func _ready() -> void:
 	%Coyote.wait_time = tempo_coyote
 	%JumpLag.wait_time = lag_pulo
 	%DashTime.wait_time = tempo_dash
-	print(cooldown_dash)
 	%DashCooldown.wait_time = cooldown_dash
 	%Cururu.flip_h = GameData.direcao
 	vida.connect("recebeu_dano", RecebeuDano)

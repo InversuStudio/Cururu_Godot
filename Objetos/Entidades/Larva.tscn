@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://bu62qgilsxetf"]
+[gd_scene load_steps=14 format=3 uid="uid://bu62qgilsxetf"]
 
 [ext_resource type="Script" uid="uid://bxwx72gohremh" path="res://Scripts/Inimigos/Larva.gd" id="1_upplv"]
 [ext_resource type="Texture2D" uid="uid://w3mtclikmpd" path="res://Sprites/Inimigos/Larva/larva_frame01.png" id="2_e4ug0"]
@@ -8,6 +8,7 @@
 [ext_resource type="Script" uid="uid://bp8oxr810tyxf" path="res://Scripts/Componentes/HurtBox.gd" id="6_dt3r8"]
 [ext_resource type="PackedScene" uid="uid://pc4mgv2nv8af" path="res://Objetos/Funcionalidade/CompHitBox.tscn" id="7_dsbcb"]
 [ext_resource type="AudioStream" uid="uid://dhgsnus0fna7q" path="res://Audio/SOM TESTE.mp3" id="8_yecop"]
+[ext_resource type="Script" uid="uid://b2ls33ys55oyt" path="res://Scripts/Componentes/OtimizadorSprite.gd" id="9_e4ug0"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ntg74"]
 size = Vector2(223, 83)
@@ -51,7 +52,6 @@ shape = SubResource("RectangleShape2D_ntg74")
 
 [node name="Sprite" type="AnimatedSprite2D" parent="."]
 unique_name_in_owner = true
-self_modulate = Color(0.965667, 0, 0.340985, 1)
 position = Vector2(-7.45058e-09, -48)
 scale = Vector2(0.535156, 0.535156)
 sprite_frames = SubResource("SpriteFrames_tkh53")
@@ -110,3 +110,9 @@ position = Vector2(-120, -24)
 [node name="SpawnMoeda" type="Marker2D" parent="."]
 unique_name_in_owner = true
 position = Vector2(0, -43)
+
+[node name="OtimizadorSprite" type="VisibleOnScreenEnabler2D" parent="."]
+position = Vector2(0, -42)
+scale = Vector2(11.7, 6)
+script = ExtResource("9_e4ug0")
+metadata/_custom_type_script = "uid://b2ls33ys55oyt"
