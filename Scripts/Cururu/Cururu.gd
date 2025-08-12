@@ -63,7 +63,7 @@ var deu_air_dash: bool = false
 @onready var sprite: AnimatedSprite2D = %Cururu
 
 var input_move: float = 0.0
-var em_transicao: bool = false
+var pode_mover: bool = true
 var recebeu_dano: bool = false
 
 func _ready() -> void:
@@ -73,13 +73,14 @@ func _ready() -> void:
 	%Coyote.wait_time = tempo_coyote
 	%JumpLag.wait_time = lag_pulo
 	%DashTime.wait_time = tempo_dash
+	print(cooldown_dash)
 	%DashCooldown.wait_time = cooldown_dash
 	%Cururu.flip_h = GameData.direcao
 	vida.connect("recebeu_dano", RecebeuDano)
 
 func _process(delta: float) -> void:
-	# Ignora tudo se estiver em uma transição de fase
-	if em_transicao: return
+	# Controla se pode mover
+	if !pode_mover: return
 	# Recebe input
 	input_move = Input.get_axis("esquerda", "direita")
 	# Aplica PROCESS do StateMachine
@@ -99,6 +100,7 @@ func _physics_process(delta: float) -> void:
 
 # Habilita dash após cooldown
 func _on_dash_cooldown_timeout() -> void:
+	print("Cooldown acabou")
 	pode_dash = true
 
 # COMPORTAMENTO AO MORRER

@@ -614,7 +614,7 @@ tempo_coyote = 0.1
 lag_pulo = 0.1
 tempo_dash = 0.2
 distancia_dash = 4.0
-cooldown_dash = 0.7
+cooldown_dash = 0.2
 distancia_knockback = 2.0
 tempo_knockback = 0.2
 vida = NodePath("Vida")
@@ -688,26 +688,21 @@ autoplay = "Idle"
 
 [node name="Coyote" type="Timer" parent="Timers"]
 unique_name_in_owner = true
-wait_time = 0.15
 
 [node name="JumpLag" type="Timer" parent="Timers"]
 unique_name_in_owner = true
-wait_time = 0.15
 one_shot = true
 
 [node name="MeleeTime" type="Timer" parent="Timers"]
 unique_name_in_owner = true
-wait_time = 0.3
 one_shot = true
 
 [node name="DashTime" type="Timer" parent="Timers"]
 unique_name_in_owner = true
-wait_time = 0.2
 one_shot = true
 
 [node name="DashCooldown" type="Timer" parent="Timers"]
 unique_name_in_owner = true
-wait_time = 0.7
 one_shot = true
 
 [node name="StateMachine" type="Node" parent="." node_paths=PackedStringArray("start_state")]

@@ -52,7 +52,7 @@ func Update(_delta: float) -> State:
 # COMPORTAMENTO PHYSICS_PROCESS
 func FixedUpdate(_delta: float) -> State:
 	# DANO
-	if parent.recebeu_dano == true:
+	if parent.recebeu_dano:
 		return dano_state
 		
 	# Aplica movimento
@@ -74,7 +74,7 @@ func FixedUpdate(_delta: float) -> State:
 		else: %Anim.play("Idle")
 		
 		# Ao pressionar input de Pulo, mudar State
-		if Input.is_action_just_pressed("pulo"):
+		if Input.is_action_just_pressed("pulo") and parent.pode_mover:
 			return pulo_state
 			
 	# Se não estiver no chão, mudar State

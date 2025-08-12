@@ -106,3 +106,7 @@ target_position = Vector2(-20, 0)
 [node name="RayVazioEsquerda" type="RayCast2D" parent="."]
 unique_name_in_owner = true
 position = Vector2(-120, -24)
+
+[node name="SpawnMoeda" type="Marker2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(0, -43)

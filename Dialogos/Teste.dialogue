@@ -1,0 +1,13 @@
+~ start
+Godotsson: Fala, meu consagrado!
+Godotsson: Eu sou um [wave][b][color=green][NPC][/color][/b][/wave]
+Godotsson: Maneiro, né?
+- SIM
+	Godotsson: Tamo junto
+- NÃO
+	Godotsson: Sério?
+	- Nem kkkkkkkkkkk
+		Godotsson: Aaaaa tu me pegou
+	- Papo reto
+		Godotsson: Morre, então
+=> END

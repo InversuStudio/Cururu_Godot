@@ -6,7 +6,6 @@ var dir: int = 1
 func _ready() -> void:
 	velocidade *= 128
 	var rand: int = randi_range(0,1)
-	#dir = -1 if rand == 0 else 1
 	match rand:
 		0:
 			dir = -1
@@ -33,6 +32,6 @@ func _physics_process(delta: float) -> void:
 	
 	move_and_slide()
 
-func morte() -> void:
-	Mundos.SpawnMoeda(global_position)
+func Morte() -> void:
+	Mundos.SpawnMoeda(%SpawnMoeda.global_position)
 	queue_free()

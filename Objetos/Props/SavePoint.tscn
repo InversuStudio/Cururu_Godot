@@ -1,14 +1,17 @@
-[gd_scene load_steps=4 format=3 uid="uid://cqyub70sv0ofp"]
+[gd_scene load_steps=5 format=3 uid="uid://cqyub70sv0ofp"]
 
 [ext_resource type="Script" uid="uid://dvol8qmgk0lx8" path="res://Scripts/Componentes/SavePoint.gd" id="1_hntd5"]
+[ext_resource type="Script" uid="uid://dd7svcu8l7fxu" path="res://Scripts/Componentes/Interacao.gd" id="1_xf6ij"]
 [ext_resource type="Texture2D" uid="uid://51el42c2q8f7" path="res://Sprites/Tilemap/Assets/CenarioObjetos/SAVE POINT.png" id="2_hntd5"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hntd5"]
 size = Vector2(300, 281)
 
-[node name="SavePoint" type="Area2D"]
+[node name="SavePoint" type="Area2D" node_paths=PackedStringArray("objeto_interacao")]
 collision_mask = 2
-script = ExtResource("1_hntd5")
+script = ExtResource("1_xf6ij")
+objeto_interacao = NodePath("Node")
+metadata/_custom_type_script = "uid://dd7svcu8l7fxu"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(58, -139.5)
@@ -19,5 +22,5 @@ position = Vector2(45, -137)
 scale = Vector2(0.612061, 0.612061)
 texture = ExtResource("2_hntd5")
 
-[connection signal="body_entered" from="." to="." method="_on_body_entered"]
-[connection signal="body_exited" from="." to="." method="_on_body_exited"]
+[node name="Node" type="Node" parent="."]
+script = ExtResource("1_hntd5")

@@ -25,7 +25,7 @@ func Enter() -> void:
 
 func Update(_delta:float) -> State:
 	# DANO
-	if parent.recebeu_dano == true:
+	if parent.recebeu_dano:
 		return dano_state
 	return null
 	

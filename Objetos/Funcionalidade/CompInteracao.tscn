@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://bjfaj0cftdqdm"]
+
+[ext_resource type="Script" uid="uid://dd7svcu8l7fxu" path="res://Scripts/Componentes/Interacao.gd" id="1_ynvia"]
+
+[node name="Interacao" type="Area2D"]
+collision_layer = 0
+collision_mask = 2
+script = ExtResource("1_ynvia")
