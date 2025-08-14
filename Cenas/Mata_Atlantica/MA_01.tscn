@@ -1424,7 +1424,7 @@ scale = Vector2(1.17383, 1.17383)
 texture = ExtResource("31_gmgf4")
 
 [node name="MoitaTeste55" type="Sprite2D" parent="Teto 2D"]
-position = Vector2(6706, -3257)
+position = Vector2(6717, -3242)
 scale = Vector2(1.17383, 1.17383)
 texture = ExtResource("31_gmgf4")
 
@@ -2533,7 +2533,12 @@ scale = Vector2(0.797505, 0.797505)
 texture = ExtResource("31_618ui")
 
 [node name="Cipó8" type="Sprite2D" parent="Frontground"]
-position = Vector2(5219.67, -2935.62)
+position = Vector2(5168.63, -2908.5)
+scale = Vector2(0.797505, 0.797505)
+texture = ExtResource("31_618ui")
+
+[node name="Cipó36" type="Sprite2D" parent="Frontground"]
+position = Vector2(4741.17, -2848.69)
 scale = Vector2(0.797505, 0.797505)
 texture = ExtResource("31_618ui")
 
@@ -2757,7 +2762,13 @@ scale = Vector2(0.797505, 0.797505)
 texture = ExtResource("25_8ofyf")
 
 [node name="Frontfolha15" type="Sprite2D" parent="Frontground"]
-position = Vector2(4796.2, -2961.94)
+position = Vector2(4601.61, -2987.46)
+rotation = 3.14159
+scale = Vector2(0.797505, 0.797505)
+texture = ExtResource("25_8ofyf")
+
+[node name="Frontfolha63" type="Sprite2D" parent="Frontground"]
+position = Vector2(5227.65, -3078.37)
 rotation = 3.14159
 scale = Vector2(0.797505, 0.797505)
 texture = ExtResource("25_8ofyf")
