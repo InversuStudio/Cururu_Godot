@@ -2,11 +2,11 @@
 
 [ext_resource type="Script" uid="uid://dvol8qmgk0lx8" path="res://Scripts/Componentes/SavePoint.gd" id="1_hntd5"]
 [ext_resource type="Script" uid="uid://dd7svcu8l7fxu" path="res://Scripts/Componentes/Interacao.gd" id="1_xf6ij"]
-[ext_resource type="Texture2D" uid="uid://51el42c2q8f7" path="res://Sprites/Tilemap/Assets/CenarioObjetos/SAVE POINT.png" id="2_hntd5"]
+[ext_resource type="Texture2D" uid="uid://bf0q4vuc2s0md" path="res://Sprites/Tilemap/Background_Paralax/apagado.png" id="2_3f5lj"]
 [ext_resource type="Script" uid="uid://b2ls33ys55oyt" path="res://Scripts/Componentes/OtimizadorSprite.gd" id="4_3f5lj"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hntd5"]
-size = Vector2(300, 281)
+size = Vector2(415, 395.5)
 
 [node name="SavePoint" type="Area2D" node_paths=PackedStringArray("objeto_interacao")]
 collision_mask = 2
@@ -15,19 +15,19 @@ objeto_interacao = NodePath("Script")
 metadata/_custom_type_script = "uid://dd7svcu8l7fxu"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(58, -139.5)
+position = Vector2(115.5, -195.25)
 shape = SubResource("RectangleShape2D_hntd5")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(45, -137)
-scale = Vector2(0.612061, 0.612061)
-texture = ExtResource("2_hntd5")
+position = Vector2(118, -218)
+scale = Vector2(0.999695, 0.999695)
+texture = ExtResource("2_3f5lj")
 
 [node name="Script" type="Node" parent="."]
 script = ExtResource("1_hntd5")
 
 [node name="OtimizadorSprite" type="VisibleOnScreenEnabler2D" parent="."]
-position = Vector2(55.5, -130.5)
-scale = Vector2(14.45, 14.75)
+position = Vector2(115.75, -199.875)
+scale = Vector2(19.225, 20.1125)
 script = ExtResource("4_3f5lj")
 metadata/_custom_type_script = "uid://b2ls33ys55oyt"
