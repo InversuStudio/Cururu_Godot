@@ -1,4 +1,4 @@
-[gd_scene load_steps=42 format=4 uid="uid://c8b5coitcrxvi"]
+[gd_scene load_steps=43 format=4 uid="uid://c8b5coitcrxvi"]
 
 [ext_resource type="Texture2D" uid="uid://bauiv8yaq7syq" path="res://Sprites/Tilemap/Background_Paralax/ARV_03.png" id="1_y7ghq"]
 [ext_resource type="Texture2D" uid="uid://c6yqqiictvdhh" path="res://Sprites/Tilemap/Background_Paralax/ARV_01.png" id="2_hcg3w"]
@@ -24,6 +24,7 @@
 [ext_resource type="Texture2D" uid="uid://ojm1cabd7530" path="res://Sprites/Tilemap/Assets/CenarioFloresta/WT.png" id="18_jt57j"]
 [ext_resource type="Texture2D" uid="uid://rwmi1ggde5dy" path="res://Sprites/VFX/Iluminação/PORTAL.png" id="20_ipc6x"]
 [ext_resource type="Texture2D" uid="uid://cj4rj4oj20ogb" path="res://Sprites/Tilemap/Ground/Mata_Atlantica/chap_interno.png" id="21_mr4ht"]
+[ext_resource type="Script" uid="uid://crbottt3m7apw" path="res://Cenas/Mata_Atlantica/camera_2d.gd" id="22_gmgf4"]
 [ext_resource type="Texture2D" uid="uid://cw2yeg7ynw0kl" path="res://Sprites/Tilemap/Ground/Mata_Atlantica/chap_externo.png" id="22_vky08"]
 [ext_resource type="PackedScene" uid="uid://1apfpwlqocxn" path="res://Objetos/Funcionalidade/TransicaoFase.tscn" id="23_x6mjr"]
 [ext_resource type="PackedScene" uid="uid://cqyub70sv0ofp" path="res://Objetos/Props/SavePoint.tscn" id="24_uo6u3"]
@@ -713,8 +714,7 @@ position = Vector2(12729, 0)
 texture = ExtResource("6_y7ghq")
 
 [node name="Cururu-LevelDesign-Zonas" type="Sprite2D" parent="."]
-visible = false
-position = Vector2(-814, -6786)
+position = Vector2(40462, -3611)
 scale = Vector2(8.83652, 8.83652)
 texture = ExtResource("7_vky08")
 
@@ -760,6 +760,7 @@ texture = ExtResource("12_aityi")
 [node name="Camera2D" type="Camera2D" parent="Player"]
 position = Vector2(132.407, -447.265)
 zoom = Vector2(0.7, 0.7)
+script = ExtResource("22_gmgf4")
 
 [node name="LarvaFrame01" type="Sprite2D" parent="."]
 position = Vector2(-2144, 464)
@@ -1122,7 +1123,7 @@ scale = Vector2(1.05785, 1.05785)
 texture = ExtResource("9_iahq4")
 
 [node name="GramaReto10" type="Sprite2D" parent="Cenariochao"]
-position = Vector2(-5690.17, 4.23138)
+position = Vector2(-5716.63, 5.28923)
 scale = Vector2(1.05785, 1.05785)
 texture = ExtResource("9_iahq4")
 
@@ -1152,7 +1153,7 @@ scale = Vector2(1.05988, 0.91346)
 texture = ExtResource("9_iahq4")
 
 [node name="GramaReto11" type="Sprite2D" parent="Cenariochao"]
-position = Vector2(-5220.63, -2.08038)
+position = Vector2(-5220.49, 5.28926)
 scale = Vector2(0.945765, 1.00881)
 texture = ExtResource("9_iahq4")
 
@@ -1605,7 +1606,7 @@ scale = Vector2(0.475206, 0.475206)
 texture = ExtResource("29_uaoi8")
 
 [node name="AbelhaFrame5" type="Sprite2D" parent="Cenariochao"]
-position = Vector2(3378.78, -4171.11)
+position = Vector2(3146.05, -4173.22)
 scale = Vector2(0.475206, 0.475206)
 texture = ExtResource("29_uaoi8")
 
