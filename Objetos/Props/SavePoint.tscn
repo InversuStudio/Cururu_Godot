@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://dvol8qmgk0lx8" path="res://Scripts/Componentes/SavePoint.gd" id="1_hntd5"]
 [ext_resource type="Script" uid="uid://dd7svcu8l7fxu" path="res://Scripts/Componentes/Interacao.gd" id="1_xf6ij"]
-[ext_resource type="Texture2D" uid="uid://bf0q4vuc2s0md" path="res://Sprites/Tilemap/Background_Paralax/apagado.png" id="2_3f5lj"]
+[ext_resource type="Texture2D" uid="uid://bf0q4vuc2s0md" path="res://Sprites/Tilemap/Assets/CenarioObjetos/apagado.png" id="2_3f5lj"]
 [ext_resource type="Script" uid="uid://b2ls33ys55oyt" path="res://Scripts/Componentes/OtimizadorSprite.gd" id="4_3f5lj"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hntd5"]

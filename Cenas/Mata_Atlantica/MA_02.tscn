@@ -33,7 +33,7 @@
 [ext_resource type="Texture2D" uid="uid://cb8kn7b5ldm37" path="res://Sprites/Tilemap/Assets/CenarioFloresta/PF02.png" id="28_sigs8"]
 [ext_resource type="Texture2D" uid="uid://cw2yeg7ynw0kl" path="res://Sprites/Tilemap/Ground/Mata_Atlantica/chap_externo.png" id="29_sigs8"]
 [ext_resource type="PackedScene" uid="uid://cqyub70sv0ofp" path="res://Objetos/Props/SavePoint.tscn" id="33_kxkiy"]
-[ext_resource type="Texture2D" uid="uid://nr8tuj0enpia" path="res://Sprites/Tilemap/Background_Paralax/banco_save.png" id="34_f4x84"]
+[ext_resource type="Texture2D" uid="uid://nr8tuj0enpia" path="res://Sprites/Tilemap/Assets/CenarioObjetos/banco_save.png" id="34_f4x84"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_a5ukd"]
 texture = ExtResource("1_xg2uk")

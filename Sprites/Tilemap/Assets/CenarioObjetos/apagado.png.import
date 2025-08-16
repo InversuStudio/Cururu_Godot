@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://nr8tuj0enpia"
-path="res://.godot/imported/banco_save.png-86d909f7e49111e78e62f386c6527964.ctex"
+uid="uid://bf0q4vuc2s0md"
+path="res://.godot/imported/apagado.png-ce98654ab0771cdcaefe7c25d38cfe24.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Tilemap/Background_Paralax/banco_save.png"
-dest_files=["res://.godot/imported/banco_save.png-86d909f7e49111e78e62f386c6527964.ctex"]
+source_file="res://Sprites/Tilemap/Assets/CenarioObjetos/apagado.png"
+dest_files=["res://.godot/imported/apagado.png-ce98654ab0771cdcaefe7c25d38cfe24.ctex"]
 
 [params]
 
