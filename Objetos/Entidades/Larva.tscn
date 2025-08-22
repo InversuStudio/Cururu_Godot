@@ -7,7 +7,7 @@
 [ext_resource type="Script" uid="uid://hsdutxxttrp3" path="res://Scripts/Componentes/Vida.gd" id="5_6imq8"]
 [ext_resource type="Script" uid="uid://bp8oxr810tyxf" path="res://Scripts/Componentes/HurtBox.gd" id="6_dt3r8"]
 [ext_resource type="PackedScene" uid="uid://pc4mgv2nv8af" path="res://Objetos/Funcionalidade/CompHitBox.tscn" id="7_dsbcb"]
-[ext_resource type="AudioStream" uid="uid://dhgsnus0fna7q" path="res://Audio/SOM TESTE.mp3" id="8_yecop"]
+[ext_resource type="AudioStream" uid="uid://dhgsnus0fna7q" path="res://Audio/SFX/SOM TESTE.mp3" id="8_yecop"]
 [ext_resource type="Script" uid="uid://b2ls33ys55oyt" path="res://Scripts/Componentes/OtimizadorSprite.gd" id="9_e4ug0"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ntg74"]

@@ -187,6 +187,8 @@ position = Vector2(-37948, -3884)
 scale = Vector2(1.10059, 1.10059)
 
 [node name="Tp01" type="Sprite2D" parent="runasbk1"]
+position = Vector2(13.1729, 6.58643)
+scale = Vector2(1.01286, 1.01286)
 texture = ExtResource("2_ftskr")
 
 [node name="Tp04" type="Sprite2D" parent="runasbk1"]

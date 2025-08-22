@@ -47,7 +47,7 @@
 [ext_resource type="Script" uid="uid://hsdutxxttrp3" path="res://Scripts/Componentes/Vida.gd" id="45_vkjtj"]
 [ext_resource type="PackedScene" uid="uid://va5pjd6vuuo2" path="res://Objetos/Funcionalidade/CompHurtBox.tscn" id="46_wjcvp"]
 [ext_resource type="PackedScene" uid="uid://pc4mgv2nv8af" path="res://Objetos/Funcionalidade/CompHitBox.tscn" id="47_grb16"]
-[ext_resource type="AudioStream" uid="uid://dhgsnus0fna7q" path="res://Audio/SOM TESTE.mp3" id="48_c8qv2"]
+[ext_resource type="AudioStream" uid="uid://dhgsnus0fna7q" path="res://Audio/SFX/SOM TESTE.mp3" id="48_c8qv2"]
 [ext_resource type="Script" uid="uid://cerjc6sna0dxs" path="res://Scripts/StateMachine/StateMachine.gd" id="49_1ribx"]
 [ext_resource type="Script" uid="uid://dmpgwk6x2wyq6" path="res://Scripts/Cururu/Chao.gd" id="50_3s0sn"]
 [ext_resource type="Script" uid="uid://dqm1rg2yvcp87" path="res://Scripts/Cururu/Fall.gd" id="51_dvy3r"]
@@ -627,7 +627,7 @@ unique_name_in_owner = true
 position = Vector2(0, -110)
 scale = Vector2(0.5, 0.5)
 sprite_frames = SubResource("SpriteFrames_t2cfw")
-animation = &"Run"
+animation = &"Magia"
 frame = 1
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -744,6 +744,8 @@ chao_state = NodePath("../Chao")
 [node name="WallSlide" type="Node" parent="StateMachine"]
 
 [node name="Ataque" type="Node" parent="StateMachine"]
+
+[node name="JumpSFX" type="AudioStreamPlayer2D" parent="."]
 
 [connection signal="animation_finished" from="Anim" to="StateMachine/Dano" method="_on_anim_animation_finished"]
 [connection signal="timeout" from="Timers/Coyote" to="StateMachine/Fall" method="_on_coyote_timeout"]
