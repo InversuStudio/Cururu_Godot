@@ -28,7 +28,11 @@ func Update(_delta:float) -> State:
 
 func FixedUpdate(delta:float) -> State:
 	# Aplica gravidade de queda
-	parent.velocity.y += parent.fall_gravity * delta
+	if not parent.is_on_floor():
+		parent.velocity.y += parent.fall_gravity * delta
+		parent.velocity.x = move_toward(parent.velocity.x, 0, parent.air_speed * delta)
+	else:
+		parent.velocity.x = move_toward(parent.velocity.x, 0, parent.speed / 8)
 	return null
 
 func UsaMagia() -> void:

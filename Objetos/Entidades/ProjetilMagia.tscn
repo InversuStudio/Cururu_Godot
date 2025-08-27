@@ -47,7 +47,7 @@ animations = [{
 radius = 154.0
 
 [node name="ProjetilMagia" type="Node2D"]
-scale = Vector2(0.2, 0.2)
+scale = Vector2(0.5, 0.5)
 script = ExtResource("1_xp004")
 
 [node name="Sprite2D" type="AnimatedSprite2D" parent="."]
