@@ -105,22 +105,6 @@ shape = SubResource("RectangleShape2D_7pkwg")
 [node name="SavePoint" parent="." instance=ExtResource("6_5alkp")]
 position = Vector2(-1864, 0)
 
-[node name="MainCamera" type="Camera2D" parent="."]
-physics_interpolation_mode = 1
-position = Vector2(-1219, -454)
-process_callback = 0
-limit_left = -2759
-limit_top = -1966
-limit_right = 1485
-limit_bottom = 71
-editor_draw_limits = true
-
-[node name="PhantomCameraHost" type="Node" parent="MainCamera"]
-process_priority = 300
-process_physics_priority = 300
-script = ExtResource("8_d17v6")
-metadata/_custom_type_script = "uid://bd046eokvcnu2"
-
 [node name="Cameras" type="Node2D" parent="."]
 
 [node name="Main" type="Node2D" parent="Cameras" node_paths=PackedStringArray("follow_target")]
@@ -153,3 +137,19 @@ collision_mask = 0
 position = Vector2(-1151, -535.5)
 shape = SubResource("RectangleShape2D_d17v6")
 debug_color = Color(0, 0.6, 0.701961, 0)
+
+[node name="MainCamera" type="Camera2D" parent="."]
+physics_interpolation_mode = 1
+position = Vector2(-1219, -454)
+process_callback = 0
+limit_left = -2759
+limit_top = -1966
+limit_right = 1485
+limit_bottom = 71
+editor_draw_limits = true
+
+[node name="PhantomCameraHost" type="Node" parent="MainCamera"]
+process_priority = 300
+process_physics_priority = 300
+script = ExtResource("8_d17v6")
+metadata/_custom_type_script = "uid://bd046eokvcnu2"

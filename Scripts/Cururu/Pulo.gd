@@ -7,6 +7,8 @@ extends State
 @export var wall_state : State = null
 ## State de dash
 @export var dash_state : State = null
+## State de ataque melee
+@export var melee_state: State = null
 ## State de dano
 @export var dano_state: State = null
 
@@ -17,6 +19,12 @@ func Enter() -> void:
 	%Anim.play("Jump") # Animação de pulo
 
 func Update(_delta: float) -> State:
+	# INPUT MELEE
+	if Input.is_action_just_pressed("melee"):
+		return melee_state
+	# INPUT MAGIA
+	if Input.is_action_just_pressed("magia"):
+		pass # nãoseioquenãoseiquelá
 	# INPUT DASH
 	if Input.is_action_just_pressed("dash") and parent.pode_dash:
 		return dash_state

@@ -10,13 +10,14 @@ signal recebeu_vida
 signal morreu
 
 func _ready() -> void:
-	GameData.vida_max = vida_max
-	# Inicia vida_atual no início do jogo
-	if GameData.vida_atual == 0:
-		vida_atual = vida_max
-		GameData.vida_atual = vida_max
-	else:
-		vida_atual = GameData.vida_atual
+	vida_atual = vida_max
+	if get_parent().is_in_group("Player"):
+		GameData.vida_max = vida_max
+		# Inicia vida_atual no início do jogo
+		if GameData.vida_atual == 0:
+			GameData.vida_atual = vida_max
+		else:
+			vida_atual = GameData.vida_atual
 
 # FUNÇÃO PARA DIMINUIR VIDA
 func RecebeDano(dano:int) -> void:
