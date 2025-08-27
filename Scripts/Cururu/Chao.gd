@@ -11,6 +11,8 @@ extends State
 @export var dano_state: State = null
 ## State de ataque melee
 @export var melee_state: State = null
+## State de ataque magico
+@export var magia_state: State = null
  
 # INICIA O STATE
 func Enter() -> void:
@@ -22,7 +24,7 @@ func Update(_delta: float) -> State:
 		return melee_state
 	# INPUT MAGIA
 	if Input.is_action_just_pressed("magia"):
-		pass # nãoseioquenãoseiquelá
+		return magia_state
 	# INPUT DASH
 	if Input.is_action_just_pressed("dash") and parent.pode_dash:
 		return dash_state
