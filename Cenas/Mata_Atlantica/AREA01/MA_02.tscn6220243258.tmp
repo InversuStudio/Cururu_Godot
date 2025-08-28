@@ -1,11 +1,11 @@
-[gd_scene load_steps=46 format=4 uid="uid://c8b5coitcrxvi"]
+[gd_scene load_steps=47 format=4 uid="uid://c8b5coitcrxvi"]
 
 [ext_resource type="Texture2D" uid="uid://l6b625ae8udc" path="res://Sprites/Tilemap/Assets/CenarioFloresta/BACK.png" id="1_nq02s"]
 [ext_resource type="Script" uid="uid://32imhtwu4l7" path="res://Scripts/Componentes/HitBox.gd" id="1_op4mj"]
 [ext_resource type="Texture2D" uid="uid://c374cwih425cq" path="res://Sprites/Tilemap/BACKGROUND.png" id="1_xg2uk"]
 [ext_resource type="Texture2D" uid="uid://cov3k8uja4wwj" path="res://Sprites/Tilemap/Assets/CenarioFloresta/PAU_BRASIL.png" id="2_bimek"]
 [ext_resource type="Texture2D" uid="uid://c8kdh61fpodr4" path="res://Sprites/Tilemap/Background_Paralax/CURURU - LEVEL DESIGN - ZONAS.png" id="2_dap2c"]
-[ext_resource type="Texture2D" uid="uid://cjl88xeknofui" path="res://Sprites/Tilemap/Ground/Mata_Atlantica/grama_reto.png" id="2_fu41u"]
+[ext_resource type="Texture2D" uid="uid://cjl88xeknofui" path="res://Sprites/Tilemap/Ground/Mata_Atlantica/grama_reto2.png" id="2_fu41u"]
 [ext_resource type="Texture2D" uid="uid://dxylu3tdlsq2" path="res://Sprites/Tilemap/Assets/CenarioFloresta/FOG01.png" id="3_n45qu"]
 [ext_resource type="PackedScene" uid="uid://nohq28uk7lfk" path="res://Objetos/Entidades/Player.tscn" id="4_60vee"]
 [ext_resource type="Texture2D" uid="uid://bnmblhnfqb45s" path="res://Sprites/Tilemap/Assets/CenarioFloresta/PAU_BRASIL04.png" id="4_p33sa"]
@@ -29,6 +29,7 @@
 [ext_resource type="Texture2D" uid="uid://cc8ddhydn2eje" path="res://Sprites/Inimigos/abelha_frame3.png" id="22_u8ai8"]
 [ext_resource type="PackedScene" uid="uid://b0hyovdafhkyk" path="res://Objetos/Funcionalidade/TransicaoCamera.tscn" id="25_y3rtv"]
 [ext_resource type="Script" uid="uid://b2ls33ys55oyt" path="res://Scripts/Componentes/OtimizadorSprite.gd" id="26_3gc4k"]
+[ext_resource type="PackedScene" uid="uid://dxl5qhok2my2n" path="res://Sprites/Tilemap/Ground/Mata_Atlantica/grama_reto_12.PNG.tscn" id="27_3863u"]
 [ext_resource type="Texture2D" uid="uid://cb8kn7b5ldm37" path="res://Sprites/Tilemap/Assets/CenarioFloresta/PF02.png" id="28_sigs8"]
 [ext_resource type="Texture2D" uid="uid://cw2yeg7ynw0kl" path="res://Sprites/Tilemap/Ground/Mata_Atlantica/chap_externo.png" id="29_sigs8"]
 [ext_resource type="PackedScene" uid="uid://dye4iyc8e4ryy" path="res://Objetos/Funcionalidade/CompVida.tscn" id="33_amaw8"]
@@ -277,6 +278,7 @@ script = ExtResource("1_op4mj")
 metadata/_custom_type_script = "uid://32imhtwu4l7"
 
 [node name="Back" type="Sprite2D" parent="."]
+visible = false
 position = Vector2(1387.48, -4237)
 scale = Vector2(10.3724, 5.51781)
 texture = ExtResource("1_nq02s")
@@ -960,6 +962,65 @@ position = Vector2(-4628, -273.25)
 rotation = -3.14159
 scale = Vector2(0.751182, 0.999999)
 
+[node name="GramaReto12" parent="Teto_Reto" instance=ExtResource("27_3863u")]
+rotation = 0.0
+scale = Vector2(1, 1)
+
+[node name="GramaReto17" parent="Teto_Reto" instance=ExtResource("27_3863u")]
+position = Vector2(476.582, 0.999207)
+rotation = 0.0
+scale = Vector2(1, 1)
+
+[node name="GramaReto19" parent="Teto_Reto" instance=ExtResource("27_3863u")]
+position = Vector2(-525.787, -0.250488)
+rotation = 0.0
+scale = Vector2(1.23967, 1.11905)
+
+[node name="GramaReto18" parent="Teto_Reto" instance=ExtResource("27_3863u")]
+position = Vector2(941.183, 0.998322)
+rotation = 0.0
+scale = Vector2(1, 1)
+
+[node name="GramaReto20" parent="Teto_Reto" instance=ExtResource("27_3863u")]
+position = Vector2(1429.75, 0.997375)
+rotation = 0.0
+scale = Vector2(1, 1)
+
+[node name="GramaReto21" parent="Teto_Reto" instance=ExtResource("27_3863u")]
+position = Vector2(1891.68, -1.00381)
+rotation = 0.0
+scale = Vector2(1, 1)
+
+[node name="GramaReto22" parent="Teto_Reto" instance=ExtResource("27_3863u")]
+position = Vector2(2388.62, 0.995544)
+rotation = -2.05264e-13
+scale = Vector2(1.10771, 1)
+
+[node name="GramaReto54" parent="Teto_Reto" instance=ExtResource("27_3863u")]
+position = Vector2(4302.55, 514.742)
+rotation = -2.05264e-13
+scale = Vector2(1.10771, 1)
+
+[node name="GramaReto55" parent="Teto_Reto" instance=ExtResource("27_3863u")]
+position = Vector2(3771.39, 514.743)
+rotation = -2.05264e-13
+scale = Vector2(1.10771, 1)
+
+[node name="GramaReto56" parent="Teto_Reto" instance=ExtResource("27_3863u")]
+position = Vector2(3232.22, 514.744)
+rotation = -2.05264e-13
+scale = Vector2(1.10771, 1)
+
+[node name="GramaReto57" parent="Teto_Reto" instance=ExtResource("27_3863u")]
+position = Vector2(2836.86, 207.744)
+rotation = 1.57079
+scale = Vector2(0.760878, 1.33124)
+
+[node name="GramaReto23" parent="Teto_Reto" instance=ExtResource("27_3863u")]
+position = Vector2(1321.92, 0.997589)
+rotation = 0.0
+scale = Vector2(1, 1)
+
 [node name="ChapInterno3" type="Sprite2D" parent="Teto_Reto"]
 position = Vector2(-1126.22, 195.756)
 rotation = -1.57079
@@ -978,6 +1039,66 @@ rotation = 1.5708
 scale = Vector2(2.018, 2.68643)
 texture = ExtResource("29_sigs8")
 
+[node name="GramaReto60" parent="Teto_Reto" instance=ExtResource("27_3863u")]
+position = Vector2(-2129.97, 1292.76)
+rotation = 0.0
+scale = Vector2(1.23967, 1.11905)
+
+[node name="GramaReto61" parent="Teto_Reto" instance=ExtResource("27_3863u")]
+position = Vector2(-2832.87, 1292.76)
+rotation = 0.0
+scale = Vector2(1.23967, 1.11905)
+
+[node name="GramaReto62" parent="Teto_Reto" instance=ExtResource("27_3863u")]
+position = Vector2(-3566.98, 1292.76)
+rotation = 0.0
+scale = Vector2(1.23967, 1.11905)
+
+[node name="GramaReto63" parent="Teto_Reto" instance=ExtResource("27_3863u")]
+position = Vector2(-4269.88, 1292.76)
+rotation = 0.0
+scale = Vector2(1.23967, 1.11905)
+
+[node name="GramaReto64" parent="Teto_Reto" instance=ExtResource("27_3863u")]
+position = Vector2(-5004.71, 1292.76)
+rotation = 0.0
+scale = Vector2(1.23967, 1.11905)
+
+[node name="GramaReto65" parent="Teto_Reto" instance=ExtResource("27_3863u")]
+position = Vector2(-5707.61, 1292.76)
+rotation = 0.0
+scale = Vector2(1.23967, 1.11905)
+
+[node name="GramaReto66" parent="Teto_Reto" instance=ExtResource("27_3863u")]
+position = Vector2(-6441.73, 1292.76)
+rotation = 0.0
+scale = Vector2(1.23967, 1.11905)
+
+[node name="GramaReto67" parent="Teto_Reto" instance=ExtResource("27_3863u")]
+position = Vector2(-7144.62, 1292.77)
+rotation = 0.0
+scale = Vector2(1.23967, 1.11905)
+
+[node name="GramaReto68" parent="Teto_Reto" instance=ExtResource("27_3863u")]
+position = Vector2(-7939.72, 1292.77)
+rotation = -1.57676e-13
+scale = Vector2(1.44203, 1.11905)
+
+[node name="GramaReto58" parent="Teto_Reto" instance=ExtResource("27_3863u")]
+position = Vector2(-1522.93, 651.757)
+rotation = -1.57079
+scale = Vector2(0.832094, 1.33124)
+
+[node name="GramaReto59" parent="Teto_Reto" instance=ExtResource("27_3863u")]
+position = Vector2(-1522.93, 927.751)
+rotation = -1.57079
+scale = Vector2(0.832094, 1.33124)
+
+[node name="GramaReto69" parent="Teto_Reto" instance=ExtResource("27_3863u")]
+position = Vector2(-8579.81, 862.764)
+rotation = 1.57079
+scale = Vector2(0.832094, 1.33124)
+
 [node name="ChapInterno5" type="Sprite2D" parent="Teto_Reto"]
 position = Vector2(-8482.63, 1212.77)
 scale = Vector2(2.67288, 2.00782)
@@ -988,6 +1109,11 @@ position = Vector2(-1626.76, 1220.75)
 rotation = -1.57079
 scale = Vector2(2.00782, 2.67288)
 texture = ExtResource("15_kyevi")
+
+[node name="GramaReto70" parent="Teto_Reto" instance=ExtResource("27_3863u")]
+position = Vector2(-8579.81, 335.866)
+rotation = 1.57079
+scale = Vector2(0.947242, 1.33124)
 
 [node name="GramaReto71" type="Sprite2D" parent="Teto_Reto"]
 position = Vector2(-12903.7, -117.225)
@@ -1050,6 +1176,26 @@ position = Vector2(-9781.93, 1225.77)
 rotation = 1.5708
 scale = Vector2(2.018, 2.68643)
 texture = ExtResource("29_sigs8")
+
+[node name="GramaReto115" parent="Teto_Reto" instance=ExtResource("27_3863u")]
+position = Vector2(-9128.27, 3340.77)
+rotation = -1.57676e-13
+scale = Vector2(1.44203, 1.11905)
+
+[node name="GramaReto116" parent="Teto_Reto" instance=ExtResource("27_3863u")]
+position = Vector2(-8261.64, 3340.77)
+rotation = -1.57676e-13
+scale = Vector2(1.44203, 1.11905)
+
+[node name="GramaReto117" parent="Teto_Reto" instance=ExtResource("27_3863u")]
+position = Vector2(-7399, 3340.77)
+rotation = -1.57676e-13
+scale = Vector2(1.44203, 1.11905)
+
+[node name="GramaReto118" parent="Teto_Reto" instance=ExtResource("27_3863u")]
+position = Vector2(-6794.62, 3340.77)
+rotation = -1.57676e-13
+scale = Vector2(1.44203, 1.11905)
 
 [node name="GramaReto114" type="Sprite2D" parent="Teto_Reto"]
 position = Vector2(-12790.5, 2299.77)
@@ -1180,6 +1326,11 @@ position = Vector2(-5220.49, 5.28926)
 scale = Vector2(0.945765, 1.00881)
 texture = ExtResource("2_fu41u")
 
+[node name="GramaReto16" parent="Composição/Cenariochao" instance=ExtResource("27_3863u")]
+position = Vector2(-4450.38, 7.40491)
+rotation = 5.9101e-06
+scale = Vector2(0.63145, 1.11905)
+
 [node name="GramaReto3" type="Sprite2D" parent="Composição/Cenariochao"]
 position = Vector2(-4829.09, 4.23138)
 scale = Vector2(1.05785, 1.05785)
@@ -1225,10 +1376,20 @@ position = Vector2(-810.446, -2.08038)
 scale = Vector2(0.945765, 1.00881)
 texture = ExtResource("2_fu41u")
 
+[node name="GramaReto44" parent="Composição/Cenariochao" instance=ExtResource("27_3863u")]
+position = Vector2(-40.1965, 7.40491)
+rotation = 5.9101e-06
+scale = Vector2(0.63145, 1.11905)
+
 [node name="GramaReto45" type="Sprite2D" parent="Composição/Cenariochao"]
 position = Vector2(-418.906, 4.23138)
 scale = Vector2(1.05785, 1.05785)
 texture = ExtResource("2_fu41u")
+
+[node name="GramaReto46" parent="Composição/Cenariochao" instance=ExtResource("27_3863u")]
+position = Vector2(-8831.99, -336.397)
+rotation = 1.5708
+scale = Vector2(0.880231, 1.05785)
 
 [node name="GramaReto6" type="Sprite2D" parent="Composição/Cenariochao"]
 position = Vector2(946.776, 5.28925)

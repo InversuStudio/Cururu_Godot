@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://xaqws430plc2"
-path="res://.godot/imported/corrida_02.png-734ba67300dc7c24b501dbcfbc2a5207.ctex"
+uid="uid://c2aitw5ocfdeq"
+path="res://.godot/imported/10.png-560448576d750f771dbdf00f5cd25cc9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Cururu/Run/Run 2.0 Concept/corrida_02.png"
-dest_files=["res://.godot/imported/corrida_02.png-734ba67300dc7c24b501dbcfbc2a5207.ctex"]
+source_file="res://Sprites/Cururu/Run/Run 2.0 Concept/10.png"
+dest_files=["res://.godot/imported/10.png-560448576d750f771dbdf00f5cd25cc9.ctex"]
 
 [params]
 

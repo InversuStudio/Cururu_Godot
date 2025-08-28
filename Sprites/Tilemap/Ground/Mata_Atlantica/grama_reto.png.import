@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d1x2urxclm63d"
-path="res://.godot/imported/B1.png-d3619feedd2ed957237e68137b952a9a.ctex"
+uid="uid://cjl88xeknofui"
+path="res://.godot/imported/grama_reto.png-a28d9b92dc84cd1e5b77b47d1e879b27.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Cururu/Idle/B1.png"
-dest_files=["res://.godot/imported/B1.png-d3619feedd2ed957237e68137b952a9a.ctex"]
+source_file="res://Sprites/Tilemap/Ground/Mata_Atlantica/grama_reto.png"
+dest_files=["res://.godot/imported/grama_reto.png-a28d9b92dc84cd1e5b77b47d1e879b27.ctex"]
 
 [params]
 
