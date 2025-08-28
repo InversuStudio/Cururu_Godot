@@ -699,7 +699,7 @@ shape = SubResource("RectangleShape2D_mw8rc")
 [node name="TransicaoFase2" parent="." instance=ExtResource("9_q40bt")]
 position = Vector2(1895, 1047)
 destino = 7
-posicao = Vector2(2121, 536)
+posicao = Vector2(2109, 509)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TransicaoFase2"]
 position = Vector2(452, -539.5)
@@ -837,4 +837,4 @@ texture = ExtResource("7_5ka01")
 flip_h = true
 
 [node name="Node2D" type="Node2D" parent="."]
-position = Vector2(2151, 1004)
+position = Vector2(2079, 1004)

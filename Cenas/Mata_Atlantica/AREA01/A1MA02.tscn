@@ -150,10 +150,11 @@ physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_k4aup")
 
 [node name="A1ma02" type="Node2D"]
-position = Vector2(-5495, -1160)
 
 [node name="TransicaoFase" parent="." instance=ExtResource("1_2ybff")]
 position = Vector2(2006, 531)
+destino = 6
+posicao = Vector2(2079, 1004)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TransicaoFase"]
 position = Vector2(-159.5, -340)
@@ -172,7 +173,6 @@ metadata/_custom_type_script = "uid://32imhtwu4l7"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Cipó18/HitBox"]
 position = Vector2(22.8179, 26.2931)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_yt3qm")
 
 [node name="Cipó19" type="Sprite2D" parent="."]
@@ -188,7 +188,6 @@ metadata/_custom_type_script = "uid://32imhtwu4l7"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Cipó19/HitBox"]
 position = Vector2(22.8179, 26.2931)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_yt3qm")
 
 [node name="Cipó20" type="Sprite2D" parent="."]
@@ -204,7 +203,6 @@ metadata/_custom_type_script = "uid://32imhtwu4l7"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Cipó20/HitBox"]
 position = Vector2(22.8179, 26.2931)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_yt3qm")
 
 [node name="Cipó21" type="Sprite2D" parent="."]
@@ -218,7 +216,6 @@ metadata/_custom_type_script = "uid://32imhtwu4l7"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Cipó21/HitBox"]
 position = Vector2(22.8179, 26.2931)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_yt3qm")
 
 [node name="Cipó22" type="Sprite2D" parent="."]
@@ -232,7 +229,6 @@ metadata/_custom_type_script = "uid://32imhtwu4l7"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Cipó22/HitBox"]
 position = Vector2(22.8179, 26.2931)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_yt3qm")
 
 [node name="Cipó23" type="Sprite2D" parent="."]
@@ -246,7 +242,6 @@ metadata/_custom_type_script = "uid://32imhtwu4l7"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Cipó23/HitBox"]
 position = Vector2(22.8179, 26.2931)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_yt3qm")
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
@@ -270,4 +265,4 @@ position = Vector2(27.1082, -457.691)
 zoom = Vector2(0.7, 0.7)
 
 [node name="Node2D" type="Node2D" parent="."]
-position = Vector2(2121, 536)
+position = Vector2(2109, 509)
