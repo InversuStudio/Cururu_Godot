@@ -17,8 +17,8 @@ var arquivo_fase: Array = [
 	preload("res://Cenas/Mata_Atlantica/AREA01/A1MA07.tscn"),
 	preload("res://Cenas/Mata_Atlantica/AREA01/A1MA08.tscn"),
 	preload("res://Cenas/Mata_Atlantica/AREA01/A1MA09.tscn"),
-	preload("res://Cenas/Mata_Atlantica/MA_03.tscn"),
-	preload("res://Cenas/Mata_Atlantica/MA_04.tscn"),
+	preload("res://Cenas/Mata_Atlantica/AREA02/MA_03.tscn"),
+	preload("res://Cenas/Mata_Atlantica/AREA03/MA_04.tscn"),
 ]
 
 # Enumerador de fases, deve seguir a mesma ordem que a lista
@@ -38,9 +38,8 @@ enum NomeFase {
 	Mata_Atlantica_AREA01_A1MA07,
 	Mata_Atlantica_AREA01_A1MA08,
 	Mata_Atlantica_AREA01_A1MA09,
-	Mata_Atlantica_MA_02,
-	Mata_Atlantica_MA_03,
-	Mata_Atlantica_MA_04,
+	Mata_Atlantica_AREA02_Mata_Atlantica_MA_03,
+	Mata_Atlantica_AREA02_Mata_Atlantica_MA_04,
 }
 
 # Registra fase atual

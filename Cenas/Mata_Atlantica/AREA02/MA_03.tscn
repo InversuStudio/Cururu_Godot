@@ -1,14 +1,14 @@
 [gd_scene load_steps=10 format=4 uid="uid://dyn8c2s7ism52"]
 
-[ext_resource type="Texture2D" uid="uid://c374cwih425cq" path="res://Sprites/Tilemap/BACKGROUND.png" id="1_aq4y6"]
-[ext_resource type="PackedScene" uid="uid://nohq28uk7lfk" path="res://Objetos/Entidades/Player.tscn" id="3_805x8"]
-[ext_resource type="Texture2D" uid="uid://bembi0ndmgdfc" path="res://Sprites/Cururu/Idle/CUP.png" id="4_efwge"]
-[ext_resource type="PackedScene" uid="uid://1apfpwlqocxn" path="res://Objetos/Funcionalidade/TransicaoFase.tscn" id="5_6jxl7"]
-[ext_resource type="Texture2D" uid="uid://cjl88xeknofui" path="res://Sprites/Tilemap/Ground/Mata_Atlantica/grama_reto.png" id="5_vtuvk"]
-[ext_resource type="PackedScene" uid="uid://cqyub70sv0ofp" path="res://Objetos/Props/SavePoint.tscn" id="6_vtuvk"]
+[ext_resource type="Texture2D" uid="uid://c374cwih425cq" path="res://Sprites/Tilemap/BACKGROUND.png" id="1_6r11q"]
+[ext_resource type="Texture2D" uid="uid://cjl88xeknofui" path="res://Sprites/Tilemap/Ground/Mata_Atlantica/grama_reto.png" id="2_2ok38"]
+[ext_resource type="PackedScene" uid="uid://cqyub70sv0ofp" path="res://Objetos/Props/SavePoint.tscn" id="3_524pr"]
+[ext_resource type="PackedScene" uid="uid://nohq28uk7lfk" path="res://Objetos/Entidades/Player.tscn" id="4_m04o2"]
+[ext_resource type="Texture2D" uid="uid://bembi0ndmgdfc" path="res://Sprites/Cururu/Idle/CUP.png" id="5_7wjub"]
+[ext_resource type="PackedScene" uid="uid://1apfpwlqocxn" path="res://Objetos/Funcionalidade/TransicaoFase.tscn" id="6_ptnp1"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_kjdo4"]
-texture = ExtResource("1_aq4y6")
+texture = ExtResource("1_6r11q")
 texture_region_size = Vector2i(128, 128)
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-64, -64, 64, -64, 64, 64, -64, 64)
@@ -160,12 +160,12 @@ scale = Vector2(0.844631, 0.961002)
 
 [node name="GramaReto16" type="Sprite2D" parent="Savepoint2"]
 position = Vector2(36537.8, -9721.1)
-texture = ExtResource("5_vtuvk")
+texture = ExtResource("2_2ok38")
 
-[node name="SavePoint" parent="." instance=ExtResource("6_vtuvk")]
+[node name="SavePoint" parent="." instance=ExtResource("3_524pr")]
 position = Vector2(17211, -8705)
 
-[node name="Player" parent="." instance=ExtResource("3_805x8")]
+[node name="Player" parent="." instance=ExtResource("4_m04o2")]
 position = Vector2(-6810, 468)
 scale = Vector2(0.959163, 0.959163)
 vel = 12.0
@@ -181,13 +181,13 @@ distancia_dash = 8.0
 visible = false
 position = Vector2(-2.08691, -101.13)
 scale = Vector2(0.814512, 0.814512)
-texture = ExtResource("4_efwge")
+texture = ExtResource("5_7wjub")
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 position = Vector2(132.407, -447.265)
 zoom = Vector2(0.7, 0.7)
 
-[node name="TransicaoFase" parent="." instance=ExtResource("5_6jxl7")]
+[node name="TransicaoFase" parent="." instance=ExtResource("6_ptnp1")]
 position = Vector2(15717, -8780)
 destino = 3
 posicao = Vector2(16127, -8113)
