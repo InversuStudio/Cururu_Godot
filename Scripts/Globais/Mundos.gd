@@ -17,8 +17,8 @@ var arquivo_fase: Array = [
 	preload("res://Cenas/Mata_Atlantica/AREA01/A1MA07.tscn"),
 	preload("res://Cenas/Mata_Atlantica/AREA01/A1MA08.tscn"),
 	preload("res://Cenas/Mata_Atlantica/AREA01/A1MA09.tscn"),
-	preload("res://Cenas/Mata_Atlantica/MA_03.tscn"),
-	preload("res://Cenas/Mata_Atlantica/MA_04.tscn"),
+	preload("res://Cenas/Mata_Atlantica/AREA 2/MA_03.tscn"),
+	preload("res://Cenas/Mata_Atlantica/AREA 3/MA_04.tscn"),
 ]
 
 # Enumerador de fases, deve seguir a mesma ordem que a lista
