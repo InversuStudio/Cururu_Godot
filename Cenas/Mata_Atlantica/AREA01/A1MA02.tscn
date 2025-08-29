@@ -250,7 +250,7 @@ tile_map_data = PackedByteArray("AAAeAAQAAAAAAAMAAAAeAAUAAAAAAAMAAAAeAAYAAAAAAAM
 tile_set = SubResource("TileSet_dr2ls")
 
 [node name="Player2" parent="." instance=ExtResource("3_dr2ls")]
-position = Vector2(2295, 516)
+position = Vector2(2319, 516)
 scale = Vector2(0.959163, 0.959163)
 vel = 12.0
 vel_aerea = 10.0
