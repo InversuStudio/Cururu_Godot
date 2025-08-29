@@ -10,12 +10,13 @@ extends Area2D
 ## Efeito sonoro
 @export var sfx : AudioStream = null
 
+signal hit
+
 func _on_area_entered(area: Area2D) -> void:
 	if area is HurtBox: # Se a colisão for uma HurtBox
 		if area == ignore: return
-
+		hit.emit()
 		area.RecebeDano(dano, global_position)
-		
 		# Toca som
 		if sfx:
 			var som := AudioStreamPlayer2D.new()
@@ -25,7 +26,6 @@ func _on_area_entered(area: Area2D) -> void:
 			som.play()
 			await som.finished
 			som.queue_free()
-		
 		# Se screenshake for maior que 0, aplicar vibração na tela
 		if screenshake > 0: aplica_shake()
 	

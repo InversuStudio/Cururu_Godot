@@ -76,6 +76,8 @@ func _ready() -> void:
 	%DashCooldown.wait_time = cooldown_dash
 	%Cururu.flip_h = GameData.direcao
 	vida.connect("recebeu_dano", RecebeuDano)
+	if sprite.flip_h == true:
+		hitbox_container.scale.x = -1
 
 func _process(delta: float) -> void:
 	# Controla se pode mover
@@ -102,13 +104,14 @@ func _on_dash_cooldown_timeout() -> void:
 	print("Cooldown acabou")
 	pode_dash = true
 
+# Função que indica dano
+func RecebeuDano() -> void:
+	print("RECEBI DANO")
+	recebeu_dano = true
+	
 # COMPORTAMENTO AO MORRER
 func Morte() -> void:
 	print("MORRI")
 	GameData.vida_atual = vida.vida_max
 	if GameData.Load() == false:
 		Mundos.CarregaFase(GameData.fase)
-
-func RecebeuDano() -> void:
-	print("RECEBI DANO")
-	recebeu_dano = true

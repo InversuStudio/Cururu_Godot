@@ -11,8 +11,12 @@ extends State
 @export var nadando_state : State = null
 ## State de dash
 @export var dash_state : State = null
+## State de ataque melee
+@export var melee_state: State = null
 ## State de dano
 @export var dano_state: State = null
+## State de ataque magico
+@export var magia_state: State = null
 
 # INICIA O STATE
 func Enter() -> void:
@@ -20,6 +24,12 @@ func Enter() -> void:
 	%Anim.play("Fall") # Animação de cair
 
 func Update(_delta: float) -> State:
+	# INPUT MELEE
+	if Input.is_action_just_pressed("melee"):
+		return melee_state
+	# INPUT MAGIA
+	if Input.is_action_just_pressed("magia"):
+		return magia_state
 	# INPUT PULO
 	if Input.is_action_just_pressed("pulo"):
 		if parent.is_coyote:
