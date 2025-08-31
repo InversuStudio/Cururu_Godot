@@ -7,6 +7,7 @@ extends Area2D
 
 func _ready() -> void:
 	connect("body_entered", _on_body_entered)
+	if sfx: $SFX.stream = sfx
 
 func _on_body_entered(body: Node2D) -> void:
 	if body.is_in_group("Player"):
@@ -15,15 +16,13 @@ func _on_body_entered(body: Node2D) -> void:
 		# Soma valor ao total obtido
 		GameData.moedas += valor_moeda
 		# Esconde sprite
-		%Imagem.hide()
+		$Imagem.hide()
 		# Toca som
 		if sfx:
-			var som: AudioStreamPlayer2D = AudioStreamPlayer2D.new()
-			som.stream = sfx
-			get_parent().add_child(som)
-			som.global_position = global_position
-			som.play()
-			await som.finished
-			som.queue_free()
+			$SFX.play()
+			return
 		# Deleta
 		queue_free()
+
+func _on_sfx_finished() -> void:
+	queue_free()

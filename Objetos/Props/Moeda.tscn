@@ -17,11 +17,13 @@ sfx = ExtResource("2_jisbj")
 shape = SubResource("CircleShape2D_jisbj")
 
 [node name="Imagem" type="Sprite2D" parent="."]
-unique_name_in_owner = true
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("2_soojx")
 
+[node name="SFX" type="AudioStreamPlayer2D" parent="."]
+
 [node name="OtimizadorSprite" type="VisibleOnScreenEnabler2D" parent="."]
-scale = Vector2(3, 3.1)
 script = ExtResource("4_0w4hx")
 metadata/_custom_type_script = "uid://b2ls33ys55oyt"
+
+[connection signal="finished" from="SFX" to="." method="_on_sfx_finished"]

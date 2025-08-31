@@ -12,6 +12,9 @@ extends Area2D
 
 signal hit
 
+func _ready() -> void:
+	if sfx: $SFX.stream = sfx
+
 func _on_area_entered(area: Area2D) -> void:
 	if area is HurtBox: # Se a colisão for uma HurtBox
 		if area == ignore: return
@@ -19,13 +22,7 @@ func _on_area_entered(area: Area2D) -> void:
 		area.RecebeDano(dano, global_position)
 		# Toca som
 		if sfx:
-			var som := AudioStreamPlayer2D.new()
-			som.stream = sfx
-			get_tree().root.add_child(som)
-			som.global_position = global_position
-			som.play()
-			await som.finished
-			som.queue_free()
+			$SFX.play()
 		# Se screenshake for maior que 0, aplicar vibração na tela
 		if screenshake > 0: aplica_shake()
 	

@@ -14,6 +14,10 @@ extends Area2D
 ## Recebe o node pai
 @export var parent: Node2D = null
 
+func _ready() -> void:
+	if hit_sfx: $SFX.stream = hit_sfx
+	$Timer.wait_time = cooldown_dano
+
 # FUNÇÃO DE RECEBER DANO
 func RecebeDano(dano:int, pos_target:Vector2):
 	print("Dano")
@@ -30,25 +34,9 @@ func RecebeDano(dano:int, pos_target:Vector2):
 		if parent is CharacterBody2D:
 			parent.velocity = dir * knockback
 	# Toca som de dano
-	TocaSom()
+	if hit_sfx: $SFX.play()
 	# Inicia cooldown
-	Cooldown()
+	$Timer.start()
 
-func TocaSom() -> void:
-	var som := AudioStreamPlayer2D.new()
-	som.stream = hit_sfx
-	get_tree().root.add_child(som)
-	som.global_position = global_position
-	som.play()
-	await som.finished
-	som.queue_free()
-	
-func Cooldown() -> void:
-	var timer: Timer = Timer.new()
-	timer.wait_time = cooldown_dano
-	timer.one_shot = true
-	add_child(timer)
-	timer.start()
-	await timer.timeout
+func _on_timer_timeout() -> void:
 	set_deferred("monitorable", true)
-	timer.queue_free()

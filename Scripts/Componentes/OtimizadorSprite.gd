@@ -5,7 +5,7 @@ var parent: Node2D = null
 
 func _ready() -> void:
 	parent = get_parent()
-	name = "Otm_" + parent.name
+	name = "OPT_" + parent.name
 	var grandad: Node = parent.get_parent()
 	await grandad.ready
 	call_deferred("reparent", grandad)
