@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=4 uid="uid://stdugviqxu01"]
+[gd_scene load_steps=33 format=4 uid="uid://stdugviqxu01"]
 
 [ext_resource type="Texture2D" uid="uid://l6b625ae8udc" path="res://Sprites/Tilemap/Assets/CenarioFloresta/BACK.png" id="1_sjad5"]
 [ext_resource type="Texture2D" uid="uid://cov3k8uja4wwj" path="res://Sprites/Tilemap/Assets/CenarioFloresta/PAU_BRASIL.png" id="2_oi0r6"]
@@ -21,6 +21,7 @@
 [ext_resource type="Script" uid="uid://bt5du2sk1ba4i" path="res://Scripts/NPCs/NPC.gd" id="19_qf0e5"]
 [ext_resource type="Resource" uid="uid://cnhau31dn3hpf" path="res://Dialogos/Teste.dialogue" id="20_ts8ms"]
 [ext_resource type="Script" uid="uid://dd7svcu8l7fxu" path="res://Scripts/Componentes/Interacao.gd" id="21_4lpr1"]
+[ext_resource type="PackedScene" uid="uid://bjvnm0aydr0vd" path="res://Objetos/Entidades/Morcego.tscn" id="22_3bxov"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gjd7l"]
 texture = ExtResource("6_fcv8f")
@@ -294,3 +295,6 @@ metadata/_custom_type_script = "uid://dd7svcu8l7fxu"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="NPC/Interacao"]
 position = Vector2(0, 15)
 shape = SubResource("RectangleShape2D_lqome")
+
+[node name="Morcego" parent="." instance=ExtResource("22_3bxov")]
+position = Vector2(-221, -462)
