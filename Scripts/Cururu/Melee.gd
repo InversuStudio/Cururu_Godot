@@ -13,6 +13,12 @@ var combo_anim: Array[String] = [
 @onready var combo_limit: int = combo_anim.size() - 1
 var terminou: bool = false
 
+func _ready() -> void:
+	await get_tree().process_frame
+	for c:Node2D in parent.hitbox_container.get_children():
+		if c is HitBox:
+			c.connect("hit", RecuperaMagia)
+
 # COMPORTAMENTO AO ENTRAR NO STATE
 func Enter() -> void:
 	print("MELEE")
@@ -48,3 +54,7 @@ func Reset_Ataque() -> void:
 # Reseta combo após certo tempo inativo
 func _on_melee_timeout() -> void:
 	combo_num = 0
+
+func RecuperaMagia() -> void:
+	print("HIT")
+	GameData.magia_atual += 2

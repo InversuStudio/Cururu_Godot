@@ -54,7 +54,7 @@
 [ext_resource type="Script" uid="uid://c1tkv8brk85ke" path="res://Scripts/Cururu/Pulo.gd" id="52_damx7"]
 [ext_resource type="Script" uid="uid://ctu2e3ln1kydq" path="res://Scripts/Cururu/Dash.gd" id="53_k0fov"]
 [ext_resource type="Script" uid="uid://brymvmxc6n166" path="res://Scripts/Cururu/Dano.gd" id="54_jgcph"]
-[ext_resource type="Script" uid="uid://dok0h5176d3rw" path="res://Scripts/Cururu/Melee.gd" id="55_0hf88"]
+[ext_resource type="Script" uid="uid://biel3i584hg88" path="res://Scripts/Cururu/Melee.gd" id="55_7uoqt"]
 [ext_resource type="Script" uid="uid://twsepycefell" path="res://Scripts/Cururu/Magia.gd" id="56_7uoqt"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_t2cfw"]
@@ -681,7 +681,7 @@ shape = SubResource("CapsuleShape2D_qakxq")
 
 [node name="Vida" type="Node" parent="."]
 script = ExtResource("45_vkjtj")
-vida_max = 10
+vida_max = 5
 metadata/_custom_type_script = "uid://hsdutxxttrp3"
 
 [node name="HurtContainer" type="Node2D" parent="."]
@@ -798,7 +798,7 @@ fall_state = NodePath("../Fall")
 chao_state = NodePath("../Chao")
 
 [node name="Melee" type="Node" parent="StateMachine" node_paths=PackedStringArray("chao_state", "fall_state", "dano_state")]
-script = ExtResource("55_0hf88")
+script = ExtResource("55_7uoqt")
 chao_state = NodePath("../Chao")
 fall_state = NodePath("../Fall")
 dano_state = NodePath("../Dano")

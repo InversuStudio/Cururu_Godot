@@ -23,7 +23,7 @@ func Update(_delta: float) -> State:
 	if Input.is_action_just_pressed("melee"):
 		return melee_state
 	# INPUT MAGIA
-	if Input.is_action_just_pressed("magia"):
+	if Input.is_action_just_pressed("magia") and GameData.magia_atual >= 4:
 		return magia_state
 	# INPUT DASH
 	if Input.is_action_just_pressed("dash") and parent.pode_dash:

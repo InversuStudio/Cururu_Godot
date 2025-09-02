@@ -31,6 +31,8 @@ extends CharacterBody2D
 @export var distancia_knockback : float = 0.0
 ## Duração do knockback, em segundos
 @export var tempo_knockback : float = 0.0
+## Pontos de magia totais
+@export var magia_max: int = 10
 
 # Velocidade terrestre convertida -> 170 = tamanho tile
 @onready var speed: float = vel  * 128
@@ -67,17 +69,26 @@ var pode_mover: bool = true
 var recebeu_dano: bool = false
 
 func _ready() -> void:
+	# Inicia HurtBoxes
 	for h: HurtBox in hurtbox_container.get_children():
 		h.distancia_knockback = distancia_knockback
 		h.tempo_knockback = tempo_knockback
+	# Configura Timers
 	%Coyote.wait_time = tempo_coyote
 	%JumpLag.wait_time = lag_pulo
 	%DashTime.wait_time = tempo_dash
 	%DashCooldown.wait_time = cooldown_dash
 	%Cururu.flip_h = GameData.direcao
+	# Conecta sinal de dano
 	vida.connect("recebeu_dano", RecebeuDano)
+	# Aplica flip, se necessário
 	if sprite.flip_h == true:
 		hitbox_container.scale.x = -1
+	# Seta Magia
+	GameData.magia_max = magia_max
+	if GameData.magia_atual < 0:
+		GameData.magia_atual = magia_max
+	print(GameData.magia_atual)
 
 func _process(delta: float) -> void:
 	# Controla se pode mover
@@ -92,7 +103,7 @@ func _process(delta: float) -> void:
 		if Input.is_physical_key_pressed(KEY_SPACE):
 			GameData.leu_data = false
 			GameData.Load()
-		else: vida.recebe_dano(vida.vida_max)
+		else: vida.RecebeDano(vida.vida_max)
 
 func _physics_process(delta: float) -> void:
 	# Aplica PHYSICS_PROCESS do StateMachine
@@ -113,5 +124,6 @@ func RecebeuDano() -> void:
 func Morte() -> void:
 	print("MORRI")
 	GameData.vida_atual = vida.vida_max
+	GameData.magia_atual = magia_max
 	if GameData.Load() == false:
 		Mundos.CarregaFase(GameData.fase)

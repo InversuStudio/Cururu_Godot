@@ -27,10 +27,7 @@ func RecebeDano(dano:int) -> void:
 	recebeu_dano.emit()
 	# Se vida for zerada, morre
 	if vida_atual <= 0:
-		morreu.emit()
-		if get_parent().has_method("Morte"):
-			get_parent().Morte()
-		else: Morre()
+		Morre()
 
 # FUNÇÃO PARA AUMENTAR VIDA
 func RecebeCura(cura:int) -> void:
@@ -42,4 +39,8 @@ func RecebeCura(cura:int) -> void:
 # FUNÇÃO DE MORRER
 func Morre():
 	print("MORRI")
-	get_parent().queue_free()
+	morreu.emit()
+	if get_parent().has_method("Morte"):
+		get_parent().Morte()
+	else:
+		get_parent().queue_free()

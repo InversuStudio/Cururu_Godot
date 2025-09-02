@@ -9,6 +9,7 @@ extends Area2D
 
 func _on_body_entered(body: Node2D) -> void:
 	if body.is_in_group("Player"):
+		if body.vida.vida_atual <= 0: return
 		body.pode_mover = false
 		match virado_a_esquerda:
 			false:

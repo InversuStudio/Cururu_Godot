@@ -19,8 +19,17 @@ var moedas: int = 0:
 		# Quando o valor é alterado, é emitido update_moedas
 		update_moeda.emit()
 # Armazena informações de vida do player
-var vida_atual: int = 0
 var vida_max: int = 0
+var vida_atual: int = 0
+# Armazena informações da magia do player
+signal update_magia
+var magia_max: int = 0
+var magia_atual: int = -1:
+	set(valor):
+		magia_atual = valor
+		magia_atual = clampi(magia_atual, 0, magia_max)
+		print(magia_atual)
+		update_magia.emit()
 
 # Instância de controle do arquivo de save
 var config: ConfigFile = ConfigFile.new()
@@ -56,8 +65,10 @@ func Load() -> bool:
 		moedas = config.get_value("save", "moedas")
 		# Carrega o jogo, com os dados certos
 		Mundos.CarregaFase(fase, true, posicao, direcao)
-		if GameData.vida_max > 0:
-			GameData.vida_atual = GameData.vida_max
+		if vida_max > 0:
+			vida_atual = vida_max
+		if magia_max > 0:
+			magia_atual = magia_max
 		return true
 		
 	return false
