@@ -85,8 +85,8 @@ func _ready() -> void:
 	if sprite.flip_h == true:
 		hitbox_container.scale.x = -1
 	# Seta Magia
-	GameData.magia_max = magia_max
-	if GameData.magia_atual < 0:
+	GameData.magia_max = int(magia_max)
+	if GameData.magia_atual > 0 and GameData.magia_atual < 1:
 		GameData.magia_atual = magia_max
 	print(GameData.magia_atual)
 

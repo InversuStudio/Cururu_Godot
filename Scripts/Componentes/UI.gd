@@ -3,6 +3,8 @@ extends Control
 # Recebe se o player morreu
 var player_morreu: bool = false
 
+@onready var coracoes:Array = %BarraHeart.get_children()
+
 func _ready() -> void:
 	var player:CharacterBody2D = get_tree().get_first_node_in_group("Player")
 	# Se achar Player na cena...
@@ -11,14 +13,15 @@ func _ready() -> void:
 		%BarraMagia.max_value = GameData.magia_max
 		%BarraMagia.value = GameData.magia_atual
 		# Inicializa valores da barra de vida
-		#var vida:int = player.vida.vida_max
-		%BarraVida.max_value = GameData.vida_max
+		#%BarraVida.max_value = GameData.vida_max
 		if GameData.vida_atual > 0:
-			%BarraVida.value = GameData.vida_atual
-		else: %BarraVida.value = GameData.vida_max
+			for c:Control in coracoes:
+				c.visible = c.get_index() + 1 <= GameData.vida_atual
+			#%BarraVida.value = GameData.vida_atual
+		#else: %BarraVida.value = GameData.vida_max
 		# Conecta sinais de dano, cura e morte
-		player.vida.connect("recebeu_dano", UpdateVida.bind(player))
-		player.vida.connect("recebeu_vida", UpdateVida.bind(player))
+		player.vida.connect("recebeu_dano", UpdateVida)#.bind(player))
+		player.vida.connect("recebeu_vida", UpdateVida)#.bind(player))
 		player.vida.connect("morreu", PlayerMorreu)
 		GameData.connect("update_magia", UpdateMagia)
 		# Conecta UpdateMoeda ao sinal de mudança na quintidade de moedas
@@ -44,9 +47,14 @@ func UpdateMoeda() -> void:
 		%CounterMoeda.text = str(GameData.moedas)
 
 # Função para alterar valor da barra de vida
-func UpdateVida(player:CharacterBody2D) -> void:
-	%BarraVida.value = player.vida.vida_atual
+func UpdateVida() -> void:#_player:CharacterBody2D) -> void:
+	#%BarraVida.value = player.vida.vida_atual
+	for c:Control in coracoes:
+		c.visible = c.get_index() + 1 <= GameData.vida_atual
 
 func UpdateMagia() -> void:
 	if player_morreu == false:
 		%BarraMagia.value = GameData.magia_atual
+
+func AvisoSave() -> void:
+	%Anim.play("JogoSalvo")

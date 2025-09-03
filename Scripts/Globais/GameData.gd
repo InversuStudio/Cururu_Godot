@@ -24,11 +24,10 @@ var vida_atual: int = 0
 # Armazena informações da magia do player
 signal update_magia
 var magia_max: int = 0
-var magia_atual: int = -1:
+var magia_atual: float = 0.5:
 	set(valor):
 		magia_atual = valor
-		magia_atual = clampi(magia_atual, 0, magia_max)
-		print(magia_atual)
+		magia_atual = clamp(magia_atual, 0, magia_max)
 		update_magia.emit()
 
 # Instância de controle do arquivo de save
