@@ -2,7 +2,6 @@
 
 [ext_resource type="Texture2D" uid="uid://c374cwih425cq" path="res://Sprites/Tilemap/BACKGROUND.png" id="1_aq4y6"]
 [ext_resource type="PackedScene" uid="uid://nohq28uk7lfk" path="res://Objetos/Entidades/Player.tscn" id="3_805x8"]
-[ext_resource type="Texture2D" uid="uid://bembi0ndmgdfc" path="res://Sprites/Cururu/Idle/CUP.png" id="4_efwge"]
 [ext_resource type="PackedScene" uid="uid://1apfpwlqocxn" path="res://Objetos/Funcionalidade/TransicaoFase.tscn" id="5_6jxl7"]
 [ext_resource type="Texture2D" uid="uid://cjl88xeknofui" path="res://Sprites/Tilemap/Ground/Mata_Atlantica/grama_reto.png" id="5_vtuvk"]
 [ext_resource type="PackedScene" uid="uid://cqyub70sv0ofp" path="res://Objetos/Props/SavePoint.tscn" id="6_vtuvk"]
@@ -144,6 +143,8 @@ tile_size = Vector2i(128, 128)
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_6r11q")
 
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_lridw"]
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ltboa"]
 size = Vector2(510, 115)
 
@@ -181,7 +182,7 @@ distancia_dash = 8.0
 visible = false
 position = Vector2(-2.08691, -101.13)
 scale = Vector2(0.814512, 0.814512)
-texture = ExtResource("4_efwge")
+texture = SubResource("CompressedTexture2D_lridw")
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 position = Vector2(132.407, -447.265)

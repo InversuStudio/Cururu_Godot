@@ -1,4 +1,4 @@
-[gd_scene load_steps=46 format=4 uid="uid://c8b5coitcrxvi"]
+[gd_scene load_steps=45 format=4 uid="uid://c8b5coitcrxvi"]
 
 [ext_resource type="Texture2D" uid="uid://l6b625ae8udc" path="res://Sprites/Tilemap/Assets/CenarioFloresta/BACK.png" id="1_nq02s"]
 [ext_resource type="Script" uid="uid://32imhtwu4l7" path="res://Scripts/Componentes/HitBox.gd" id="1_op4mj"]
@@ -9,7 +9,6 @@
 [ext_resource type="Texture2D" uid="uid://dxylu3tdlsq2" path="res://Sprites/Tilemap/Assets/CenarioFloresta/FOG01.png" id="3_n45qu"]
 [ext_resource type="PackedScene" uid="uid://nohq28uk7lfk" path="res://Objetos/Entidades/Player.tscn" id="4_60vee"]
 [ext_resource type="Texture2D" uid="uid://bnmblhnfqb45s" path="res://Sprites/Tilemap/Assets/CenarioFloresta/PAU_BRASIL04.png" id="4_p33sa"]
-[ext_resource type="Texture2D" uid="uid://bembi0ndmgdfc" path="res://Sprites/Cururu/Idle/CUP.png" id="5_5a6lk"]
 [ext_resource type="Texture2D" uid="uid://nbeswkchyrx5" path="res://Sprites/Tilemap/Assets/CenarioFloresta/FOG02.png" id="5_i15f3"]
 [ext_resource type="Texture2D" uid="uid://b3k8nvt7ux4fp" path="res://Sprites/Tilemap/Assets/CenarioFloresta/arbusto2.png" id="6_3nl6p"]
 [ext_resource type="Texture2D" uid="uid://bwos2u0qtlyp1" path="res://Sprites/Tilemap/Assets/CenarioFloresta/Folhas.png" id="6_bimek"]
@@ -271,12 +270,14 @@ size = Vector2(35.5, 1017.74)
 [node name="MataAtlantica" type="Node2D"]
 
 [node name="HitBox" type="Area2D" parent="."]
+visible = false
 position = Vector2(1387.48, -4237)
 scale = Vector2(10.3724, 5.51781)
 script = ExtResource("1_op4mj")
 metadata/_custom_type_script = "uid://32imhtwu4l7"
 
 [node name="Back" type="Sprite2D" parent="."]
+visible = false
 position = Vector2(1387.48, -4237)
 scale = Vector2(10.3724, 5.51781)
 texture = ExtResource("1_nq02s")
@@ -287,6 +288,7 @@ scale = Vector2(8.83652, 8.83652)
 texture = ExtResource("2_dap2c")
 
 [node name="Background" type="Node2D" parent="."]
+visible = false
 position = Vector2(821.5, -4313)
 scale = Vector2(1.2334, 1)
 
@@ -903,7 +905,6 @@ vida = NodePath("../Vida")
 visible = false
 position = Vector2(-2.08691, -101.13)
 scale = Vector2(0.814512, 0.814512)
-texture = ExtResource("5_5a6lk")
 
 [node name="Inimigos" type="Node2D" parent="."]
 visible = false
@@ -1120,6 +1121,7 @@ flip_h = true
 flip_v = true
 
 [node name="Composição" type="Node2D" parent="."]
+visible = false
 position = Vector2(899, 533)
 scale = Vector2(0.945313, 0.945313)
 
