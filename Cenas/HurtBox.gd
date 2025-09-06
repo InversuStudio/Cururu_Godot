@@ -16,7 +16,7 @@ extends Area2D
 
 func _ready() -> void:
 	if hit_sfx: $SFX.stream = hit_sfx
-	x$Timer.wait_time = cooldown_dano
+	$Timer.wait_time = cooldown_dano
 
 # FUNÇÃO DE RECEBER DANO
 func RecebeDano(dano:int, pos_target:Vector2):

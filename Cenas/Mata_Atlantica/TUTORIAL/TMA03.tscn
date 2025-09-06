@@ -23,7 +23,7 @@
 [ext_resource type="Texture2D" uid="uid://wyc6rjoc3c40" path="res://Sprites/Tilemap/Assets/CenarioFloresta/Ruina/rocha02.png" id="26_b8kcn"]
 [ext_resource type="PackedScene" uid="uid://nohq28uk7lfk" path="res://Objetos/Entidades/Player.tscn" id="28_yftf5"]
 [ext_resource type="Texture2D" uid="uid://b2844pf01w3jk" path="res://Sprites/Tilemap/Assets/CenarioFloresta/Ruina/TP04.png" id="29_qclta"]
-[ext_resource type="Script" uid="uid://bp8oxr810tyxf" path="res://Scripts/Componentes/HurtBox.gd" id="30_op0pn"]
+[ext_resource type="Script" uid="uid://bp8oxr810tyxf" path="res://Cenas/HurtBox.gd" id="30_op0pn"]
 [ext_resource type="Script" uid="uid://hsdutxxttrp3" path="res://Scripts/Componentes/Vida.gd" id="31_54dor"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ti6rg"]

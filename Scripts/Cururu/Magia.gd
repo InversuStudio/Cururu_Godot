@@ -10,7 +10,7 @@ const projetil: PackedScene = preload("res://Objetos/Entidades/ProjetilMagia.tsc
 # COMPORTAMENTO AO ENTRAR NO STATE
 func Enter() -> void:
 	print("MAGIA")
-	GameData.magia_atual -= 4
+	GameData.magia_atual -= 3
 	# Toca animação, de acordo com input direcional
 	%Anim.play("Magia")
 

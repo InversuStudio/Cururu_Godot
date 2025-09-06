@@ -57,4 +57,4 @@ func _on_melee_timeout() -> void:
 
 func RecuperaMagia() -> void:
 	print("HIT")
-	GameData.magia_atual += 2
+	GameData.magia_atual += 1

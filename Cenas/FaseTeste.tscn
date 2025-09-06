@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=4 uid="uid://driflyxauqbxs"]
+[gd_scene load_steps=30 format=4 uid="uid://driflyxauqbxs"]
 
 [ext_resource type="Texture2D" uid="uid://c374cwih425cq" path="res://Sprites/Tilemap/BACKGROUND.png" id="1_52y5a"]
 [ext_resource type="Texture2D" uid="uid://l6b625ae8udc" path="res://Sprites/Tilemap/Assets/CenarioFloresta/BACK.png" id="1_id35g"]
@@ -15,6 +15,7 @@
 [ext_resource type="Script" uid="uid://8umksf8e80fw" path="res://addons/phantom_camera/scripts/resources/tween_resource.gd" id="10_0ho33"]
 [ext_resource type="PackedScene" uid="uid://phfxidwhdpy7" path="res://Objetos/Funcionalidade/CompFade.tscn" id="10_bajew"]
 [ext_resource type="PackedScene" uid="uid://1apfpwlqocxn" path="res://Objetos/Funcionalidade/TransicaoFase.tscn" id="10_wqlrc"]
+[ext_resource type="PackedScene" uid="uid://d3cks8kri2olw" path="res://Objetos/Props/AreaUpgrade.tscn" id="12_77bok"]
 [ext_resource type="Script" uid="uid://bd046eokvcnu2" path="res://addons/phantom_camera/scripts/phantom_camera_host/phantom_camera_host.gd" id="13_56qbx"]
 [ext_resource type="PackedScene" uid="uid://b0hyovdafhkyk" path="res://Objetos/Funcionalidade/TransicaoCamera.tscn" id="17_id35g"]
 [ext_resource type="Script" uid="uid://b2ls33ys55oyt" path="res://Scripts/Componentes/OtimizadorSprite.gd" id="18_0he43"]
@@ -199,14 +200,20 @@ shape = SubResource("RectangleShape2D_id35g")
 script = ExtResource("18_0he43")
 metadata/_custom_type_script = "uid://b2ls33ys55oyt"
 
-[node name="SavePoints" type="Node2D" parent="."]
+[node name="Props" type="Node2D" parent="."]
 position = Vector2(0, 1)
 
-[node name="SavePoint" parent="SavePoints" instance=ExtResource("4_fo4t4")]
+[node name="SavePoint" parent="Props" instance=ExtResource("4_fo4t4")]
 position = Vector2(387, -129)
 
-[node name="SavePoint2" parent="SavePoints" instance=ExtResource("4_fo4t4")]
+[node name="SavePoint2" parent="Props" instance=ExtResource("4_fo4t4")]
 position = Vector2(5431, -386)
+
+[node name="Moeda" parent="Props" instance=ExtResource("8_fo4t4")]
+position = Vector2(-832, -210)
+
+[node name="Interacao" parent="Props" instance=ExtResource("12_77bok")]
+position = Vector2(2947, -389)
 
 [node name="Player" parent="." instance=ExtResource("3_2vimk")]
 position = Vector2(-1006, -315)
@@ -284,6 +291,3 @@ process_priority = 300
 process_physics_priority = 300
 script = ExtResource("13_56qbx")
 metadata/_custom_type_script = "uid://bd046eokvcnu2"
-
-[node name="Moeda" parent="." instance=ExtResource("8_fo4t4")]
-position = Vector2(-832, -209)

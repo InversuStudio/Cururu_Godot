@@ -9,6 +9,7 @@
 size = Vector2(315, 376.5)
 
 [node name="SavePoint" type="Area2D" node_paths=PackedStringArray("objeto_interacao")]
+collision_layer = 0
 collision_mask = 2
 script = ExtResource("1_xf6ij")
 objeto_interacao = NodePath("Script")

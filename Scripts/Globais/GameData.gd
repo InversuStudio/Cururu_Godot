@@ -30,6 +30,11 @@ var magia_atual: float = 0.5:
 		magia_atual = clamp(magia_atual, 0, magia_max)
 		update_magia.emit()
 
+var upgrade_num: int = 0
+enum upgrades {
+	MissilAgua,
+}
+
 # Instância de controle do arquivo de save
 var config: ConfigFile = ConfigFile.new()
 
@@ -46,6 +51,7 @@ func Save() -> void:
 		config.set_value("save", "posicao", posicao)
 		config.set_value("save", "direcao", direcao)
 		config.set_value("save", "moedas", moedas)
+		config.set_value("save", "upgrades", upgrade_num)
 		# Salva arquivo
 		config.save(OS.get_executable_path().get_base_dir()+"/savedata.cfg")
 		print("Jogo salvo")
@@ -62,6 +68,7 @@ func Load() -> bool:
 		posicao = config.get_value("save", "posicao")
 		direcao = config.get_value("save", "direcao")
 		moedas = config.get_value("save", "moedas")
+		upgrade_num = config.get_value("save", "upgrades")
 		# Carrega o jogo, com os dados certos
 		Mundos.CarregaFase(fase, true, posicao, direcao)
 		if vida_max > 0:
