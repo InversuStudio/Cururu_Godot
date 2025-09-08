@@ -1,0 +1,20 @@
+extends Node2D
+
+func _on_hurt(hitbox:Array) -> void:
+	if hitbox[0].get_parent().is_in_group("Magia"):
+		Disable()
+
+func _on_timer_timeout() -> void:
+	Enable()
+	print("FECHA PORTA")
+
+func Disable() -> void:
+	%Anim.play("Abre")
+	%HurtBox.set_deferred("monitoring", false)
+	%HurtBox.set_deferred("monitorable", false)
+	%Timer.start()
+
+func Enable() -> void:
+	%Anim.play("Fecha")
+	%HurtBox.set_deferred("monitoring", true)
+	%HurtBox.set_deferred("monitorable", true)

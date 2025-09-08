@@ -29,7 +29,6 @@ scale_amount_max = 30.0
 
 [node name="Script" type="Node" parent="."]
 script = ExtResource("2_hgbl4")
-upgrade = null
 
 [node name="OtimizadorSprite" type="VisibleOnScreenEnabler2D" parent="."]
 position = Vector2(0, -110)

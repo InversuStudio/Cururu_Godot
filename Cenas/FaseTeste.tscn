@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=4 uid="uid://driflyxauqbxs"]
+[gd_scene load_steps=36 format=4 uid="uid://driflyxauqbxs"]
 
 [ext_resource type="Texture2D" uid="uid://c374cwih425cq" path="res://Sprites/Tilemap/BACKGROUND.png" id="1_52y5a"]
 [ext_resource type="Texture2D" uid="uid://l6b625ae8udc" path="res://Sprites/Tilemap/Assets/CenarioFloresta/BACK.png" id="1_id35g"]
@@ -20,6 +20,9 @@
 [ext_resource type="PackedScene" uid="uid://b0hyovdafhkyk" path="res://Objetos/Funcionalidade/TransicaoCamera.tscn" id="17_id35g"]
 [ext_resource type="Script" uid="uid://b2ls33ys55oyt" path="res://Scripts/Componentes/OtimizadorSprite.gd" id="18_0he43"]
 [ext_resource type="PackedScene" uid="uid://bxixu84ahcyba" path="res://Objetos/NPCs/NpcBasico.tscn" id="18_bp4ag"]
+[ext_resource type="Texture2D" uid="uid://c3tl3oddronfh" path="res://icon.svg" id="21_lqome"]
+[ext_resource type="PackedScene" uid="uid://cdhelg6sloxbj" path="res://Objetos/Props/PortaTemp.tscn" id="21_npj8t"]
+[ext_resource type="PackedScene" uid="uid://cy10kv6jimfwh" path="res://Objetos/Funcionalidade/CompDestroiPlataforma.tscn" id="23_y7vak"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_77bok"]
 texture = ExtResource("1_52y5a")
@@ -34,17 +37,17 @@ physics_layer_0/collision_layer = 1
 physics_layer_0/collision_mask = 0
 sources/0 = SubResource("TileSetAtlasSource_77bok")
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_77bok"]
-size = Vector2(32, 400)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_bajew"]
-size = Vector2(523, 98)
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_id35g"]
 size = Vector2(29, 419)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_y7vak"]
 size = Vector2(1058, 412)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_77bok"]
+size = Vector2(32, 400)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bajew"]
+size = Vector2(523, 98)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g237d"]
 size = Vector2(4244, 2037)
@@ -67,6 +70,12 @@ script = ExtResource("10_0ho33")
 duration = 0.0
 transition = 0
 ease = 2
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lqome"]
+size = Vector2(360, 62)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_u25g5"]
+size = Vector2(353, 22)
 
 [node name="FaseTeste" type="Node2D"]
 
@@ -134,90 +143,89 @@ tile_set = SubResource("TileSet_l7pwf")
 script = ExtResource("18_0he43")
 metadata/_custom_type_script = "uid://b2ls33ys55oyt"
 
-[node name="TransicaoFase" parent="." instance=ExtResource("10_wqlrc")]
-position = Vector2(-2655, -514)
-destino = 1
-posicao = Vector2(300, 0)
+[node name="Transicoes" type="Node" parent="."]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="TransicaoFase"]
-position = Vector2(-23, -189)
-shape = SubResource("RectangleShape2D_77bok")
-
-[node name="OtimizadorSprite" type="VisibleOnScreenEnabler2D" parent="TransicaoFase"]
-script = ExtResource("18_0he43")
-metadata/_custom_type_script = "uid://b2ls33ys55oyt"
-
-[node name="TransicaoFase2" parent="." instance=ExtResource("10_wqlrc")]
-position = Vector2(-497, -1570)
-vertical = true
-destino = 2
-posicao = Vector2(0, -300)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="TransicaoFase2"]
-position = Vector2(-16.5, -246)
-shape = SubResource("RectangleShape2D_bajew")
-
-[node name="OtimizadorSprite" type="VisibleOnScreenEnabler2D" parent="TransicaoFase2"]
-script = ExtResource("18_0he43")
-metadata/_custom_type_script = "uid://b2ls33ys55oyt"
-
-[node name="TransicaoCamera" type="Node" parent="."]
-
-[node name="Main-Salao" parent="TransicaoCamera" node_paths=PackedStringArray("de_camera_x", "para_camera_y") instance=ExtResource("17_id35g")]
+[node name="Main-Salao" parent="Transicoes" node_paths=PackedStringArray("de_camera_x", "para_camera_y") instance=ExtResource("17_id35g")]
 position = Vector2(1531, -646)
 de_camera_x = NodePath("../../Cameras/AreaPrincipal")
 para_camera_y = NodePath("../../Cameras/AreaAberta")
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="TransicaoCamera/Main-Salao"]
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Transicoes/Main-Salao"]
 position = Vector2(-8, -186)
 shape = SubResource("RectangleShape2D_id35g")
 
-[node name="OtimizadorSprite" type="VisibleOnScreenEnabler2D" parent="TransicaoCamera/Main-Salao"]
+[node name="OtimizadorSprite" type="VisibleOnScreenEnabler2D" parent="Transicoes/Main-Salao"]
 position = Vector2(-23.5, 0)
 scale = Vector2(3.35, 1)
 script = ExtResource("18_0he43")
 metadata/_custom_type_script = "uid://b2ls33ys55oyt"
 
-[node name="Salao-Main" parent="TransicaoCamera" node_paths=PackedStringArray("de_camera_x", "para_camera_y") instance=ExtResource("17_id35g")]
+[node name="Salao-Main" parent="Transicoes" node_paths=PackedStringArray("de_camera_x", "para_camera_y") instance=ExtResource("17_id35g")]
 position = Vector2(1437, -646)
 de_camera_x = NodePath("../../Cameras/AreaAberta")
 para_camera_y = NodePath("../../Cameras/AreaPrincipal")
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="TransicaoCamera/Salao-Main"]
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Transicoes/Salao-Main"]
 position = Vector2(-8, -186)
 shape = SubResource("RectangleShape2D_id35g")
 
-[node name="OtimizadorSprite" type="VisibleOnScreenEnabler2D" parent="TransicaoCamera/Salao-Main"]
+[node name="OtimizadorSprite" type="VisibleOnScreenEnabler2D" parent="Transicoes/Salao-Main"]
 position = Vector2(34.5, 0)
 scale = Vector2(2.45, 1)
 script = ExtResource("18_0he43")
 metadata/_custom_type_script = "uid://b2ls33ys55oyt"
 
-[node name="Salao-Canto" parent="TransicaoCamera" node_paths=PackedStringArray("de_camera_x", "para_camera_y") instance=ExtResource("17_id35g")]
+[node name="Salao-Canto" parent="Transicoes" node_paths=PackedStringArray("de_camera_x", "para_camera_y") instance=ExtResource("17_id35g")]
 position = Vector2(4599, -388)
 de_camera_x = NodePath("../../Cameras/AreaAberta")
 para_camera_y = NodePath("../../Cameras/SalaCanto")
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="TransicaoCamera/Salao-Canto"]
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Transicoes/Salao-Canto"]
 position = Vector2(511, -193)
 shape = SubResource("RectangleShape2D_y7vak")
 debug_color = Color(0, 0.6, 0.701961, 0.137255)
 
-[node name="Canto-Salao" parent="TransicaoCamera" node_paths=PackedStringArray("de_camera_x", "para_camera_y") instance=ExtResource("17_id35g")]
+[node name="Canto-Salao" parent="Transicoes" node_paths=PackedStringArray("de_camera_x", "para_camera_y") instance=ExtResource("17_id35g")]
 position = Vector2(4457, -388)
 de_camera_x = NodePath("../../Cameras/SalaCanto")
 para_camera_y = NodePath("../../Cameras/AreaAberta")
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="TransicaoCamera/Canto-Salao"]
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Transicoes/Canto-Salao"]
 position = Vector2(-8, -186)
 shape = SubResource("RectangleShape2D_id35g")
 
-[node name="OtimizadorSprite" type="VisibleOnScreenEnabler2D" parent="TransicaoCamera/Canto-Salao"]
+[node name="OtimizadorSprite" type="VisibleOnScreenEnabler2D" parent="Transicoes/Canto-Salao"]
 script = ExtResource("18_0he43")
 metadata/_custom_type_script = "uid://b2ls33ys55oyt"
 
-[node name="Props" type="Node2D" parent="."]
-position = Vector2(0, 1)
+[node name="TransicaoFase" parent="Transicoes" instance=ExtResource("10_wqlrc")]
+position = Vector2(-2655, -514)
+destino = 1
+posicao = Vector2(300, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Transicoes/TransicaoFase"]
+position = Vector2(-23, -189)
+shape = SubResource("RectangleShape2D_77bok")
+
+[node name="OtimizadorSprite" type="VisibleOnScreenEnabler2D" parent="Transicoes/TransicaoFase"]
+script = ExtResource("18_0he43")
+metadata/_custom_type_script = "uid://b2ls33ys55oyt"
+
+[node name="TransicaoFase2" parent="Transicoes" instance=ExtResource("10_wqlrc")]
+position = Vector2(-497, -1570)
+vertical = true
+destino = 2
+posicao = Vector2(0, -300)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Transicoes/TransicaoFase2"]
+position = Vector2(-16.5, -246)
+shape = SubResource("RectangleShape2D_bajew")
+
+[node name="OtimizadorSprite" type="VisibleOnScreenEnabler2D" parent="Transicoes/TransicaoFase2"]
+script = ExtResource("18_0he43")
+metadata/_custom_type_script = "uid://b2ls33ys55oyt"
+
+[node name="Props" type="Node" parent="."]
 
 [node name="SavePoint" parent="Props" instance=ExtResource("4_fo4t4")]
 position = Vector2(387, -129)
@@ -230,6 +238,9 @@ position = Vector2(-832, -210)
 
 [node name="UpgradeMissil" parent="Props" instance=ExtResource("12_77bok")]
 position = Vector2(2947, -389)
+
+[node name="PortaTemp" parent="Props" instance=ExtResource("21_npj8t")]
+position = Vector2(4438, -560)
 
 [node name="Player" parent="." instance=ExtResource("3_2vimk")]
 position = Vector2(-1006, -315)
@@ -307,3 +318,39 @@ process_priority = 300
 process_physics_priority = 300
 script = ExtResource("13_56qbx")
 metadata/_custom_type_script = "uid://bd046eokvcnu2"
+
+[node name="PlataformaSome" type="StaticBody2D" parent="."]
+position = Vector2(-1216, -665)
+
+[node name="Sprite2D" type="Sprite2D" parent="PlataformaSome"]
+scale = Vector2(2.8125, 0.53125)
+texture = ExtResource("21_lqome")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlataformaSome"]
+shape = SubResource("RectangleShape2D_lqome")
+one_way_collision = true
+
+[node name="DestroiPlataforma" parent="PlataformaSome" instance=ExtResource("23_y7vak")]
+delay = 1.5
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlataformaSome/DestroiPlataforma"]
+position = Vector2(-0.5, -33)
+shape = SubResource("RectangleShape2D_u25g5")
+
+[node name="PlataformaSome2" type="StaticBody2D" parent="."]
+position = Vector2(-1016, -1041)
+
+[node name="Sprite2D" type="Sprite2D" parent="PlataformaSome2"]
+scale = Vector2(2.8125, 0.53125)
+texture = ExtResource("21_lqome")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlataformaSome2"]
+shape = SubResource("RectangleShape2D_lqome")
+one_way_collision = true
+
+[node name="DestroiPlataforma" parent="PlataformaSome2" instance=ExtResource("23_y7vak")]
+delay = 1.5
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlataformaSome2/DestroiPlataforma"]
+position = Vector2(-0.5, -33)
+shape = SubResource("RectangleShape2D_u25g5")

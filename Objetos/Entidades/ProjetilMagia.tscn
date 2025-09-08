@@ -46,7 +46,7 @@ animations = [{
 [sub_resource type="CircleShape2D" id="CircleShape2D_g7efx"]
 radius = 154.0
 
-[node name="ProjetilMagia" type="Node2D"]
+[node name="ProjetilMagia" type="Node2D" groups=["Magia"]]
 scale = Vector2(0.5, 0.5)
 script = ExtResource("1_xp004")
 

@@ -1,0 +1,123 @@
+[gd_scene load_steps=11 format=3 uid="uid://cdhelg6sloxbj"]
+
+[ext_resource type="Script" uid="uid://b0ou3eu3i1sxg" path="res://Scripts/Componentes/PortaTemp.gd" id="1_rixxk"]
+[ext_resource type="Texture2D" uid="uid://c3tl3oddronfh" path="res://icon.svg" id="2_41i4q"]
+[ext_resource type="PackedScene" uid="uid://va5pjd6vuuo2" path="res://Objetos/Funcionalidade/CompHurtBox.tscn" id="3_7ptwx"]
+[ext_resource type="Script" uid="uid://b2ls33ys55oyt" path="res://Scripts/Componentes/OtimizadorSprite.gd" id="4_41i4q"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rixxk"]
+size = Vector2(96, 385)
+
+[sub_resource type="Animation" id="Animation_rixxk"]
+resource_name = "Idle"
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, -17)]
+}
+
+[sub_resource type="Animation" id="Animation_41i4q"]
+resource_name = "Abre"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, -17), Vector2(0, -469)]
+}
+
+[sub_resource type="Animation" id="Animation_7ptwx"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, -469)]
+}
+
+[sub_resource type="Animation" id="Animation_h4g8d"]
+resource_name = "Fecha"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, -469), Vector2(0, -17)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_41i4q"]
+_data = {
+&"Abre": SubResource("Animation_41i4q"),
+&"Fecha": SubResource("Animation_h4g8d"),
+&"Idle": SubResource("Animation_rixxk"),
+&"RESET": SubResource("Animation_7ptwx")
+}
+
+[node name="PortaTemp" type="Node2D"]
+script = ExtResource("1_rixxk")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+self_modulate = Color(0.0475577, 0.0475576, 0.0475576, 1)
+position = Vector2(0, -469)
+scale = Vector2(0.75, 3)
+texture = ExtResource("2_41i4q")
+
+[node name="Colisao" type="StaticBody2D" parent="Sprite2D"]
+position = Vector2(0, 5.66667)
+scale = Vector2(1.33333, 0.333333)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/Colisao"]
+position = Vector2(0, -17.5)
+shape = SubResource("RectangleShape2D_rixxk")
+
+[node name="HurtBox" parent="Sprite2D" instance=ExtResource("3_7ptwx")]
+unique_name_in_owner = true
+position = Vector2(0, 5.66667)
+scale = Vector2(1.33333, 0.333333)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/HurtBox"]
+position = Vector2(0, -17.5)
+shape = SubResource("RectangleShape2D_rixxk")
+
+[node name="Timer" type="Timer" parent="."]
+unique_name_in_owner = true
+wait_time = 3.0
+one_shot = true
+
+[node name="Anim" type="AnimationPlayer" parent="."]
+unique_name_in_owner = true
+libraries = {
+&"": SubResource("AnimationLibrary_41i4q")
+}
+autoplay = "Idle"
+
+[node name="OtimizadorSprite" type="VisibleOnScreenEnabler2D" parent="."]
+script = ExtResource("4_41i4q")
+metadata/_custom_type_script = "uid://b2ls33ys55oyt"
+
+[connection signal="hurt" from="Sprite2D/HurtBox" to="." method="_on_hurt"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

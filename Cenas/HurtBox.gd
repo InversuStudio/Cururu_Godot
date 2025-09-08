@@ -14,6 +14,8 @@ extends Area2D
 ## Recebe o node pai
 @export var parent: Node2D = null
 
+signal hurt
+
 func _ready() -> void:
 	if hit_sfx: %SFX.stream = hit_sfx
 	%Timer.wait_time = cooldown_dano
@@ -21,6 +23,7 @@ func _ready() -> void:
 # FUNÇÃO DE RECEBER DANO
 func RecebeDano(dano:int, pos_target:Vector2):
 	print("Dano")
+	hurt.emit(get_overlapping_areas())
 	# Desabilita colisão
 	set_deferred("monitorable", false)
 	# Se houver componente de vida, recebe dano
@@ -28,10 +31,9 @@ func RecebeDano(dano:int, pos_target:Vector2):
 		comp_vida.RecebeDano(dano)
 	# Aplica knockback, se for definido
 	if distancia_knockback > 0.0 and parent != null:
-		parent.velocity = Vector2.ZERO
-		var dir = (global_position - pos_target).normalized()
-		var knockback = (distancia_knockback * 128) / tempo_knockback
 		if parent is CharacterBody2D:
+			var dir = (global_position - pos_target).normalized()
+			var knockback = (distancia_knockback * 128) / tempo_knockback
 			parent.velocity = dir * knockback
 	# Toca som de dano
 	if hit_sfx: %SFX.play()
