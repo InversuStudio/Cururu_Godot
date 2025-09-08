@@ -4,6 +4,7 @@ extends Node
 var arquivo_fase: Array = [
 	preload("res://Cenas/FaseTeste.tscn"),
 	preload("res://Cenas/FaseTeste2.tscn"),
+	preload("res://Cenas/FaseTeste3.tscn"),
 	preload("res://Cenas/MenuPrincipal.tscn"),
 	preload("res://Cenas/Mata_Atlantica/TUTORIAL/TMA01.tscn"),
 	preload("res://Cenas/Mata_Atlantica/TUTORIAL/TMA02.tscn"),
@@ -32,6 +33,7 @@ var arquivo_fase: Array = [
 enum NomeFase {
 	FaseTeste,
 	FaseTeste2,
+	FaseTeste3,
 	MenuPrincipal,
 	Mata_Atlantica_TUTORIAL_TMA01,
 	Mata_Atlantica_TUTORIAL_TMA02,

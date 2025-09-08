@@ -32,7 +32,10 @@ func Update(_delta: float) -> State:
 	return null # Não muda o State
 
 # COMPORTAMENTO PHYSICS_PROCESS
-func FixedUpdate(_delta: float) -> State:
+func FixedUpdate(delta: float) -> State:
+	# Aplica gravidade bem fraca
+	parent.velocity.y += 128 * delta
+	
 	# DANO
 	if parent.recebeu_dano:
 		return dano_state

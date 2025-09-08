@@ -60,7 +60,7 @@ func FixedUpdate(delta: float) -> State:
 	if parent.velocity.y >= 0.0:
 		return fall_state
 	# Se soltar botão de pulo, zera velocidade e muda State
-	if Input.is_action_just_released("pulo"):
+	if Input.is_action_just_released("pulo") and parent.pode_mover:
 		parent.velocity.y = 0.0
 		return fall_state
 		

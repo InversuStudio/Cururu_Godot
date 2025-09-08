@@ -7,7 +7,7 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qxje0"]
 size = Vector2(180, 220)
 
-[node name="Interacao" type="Area2D" node_paths=PackedStringArray("objeto_interacao")]
+[node name="AreaUpgrade" type="Area2D" node_paths=PackedStringArray("objeto_interacao")]
 collision_layer = 0
 collision_mask = 2
 script = ExtResource("1_6186v")

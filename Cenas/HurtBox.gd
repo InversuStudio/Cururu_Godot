@@ -15,8 +15,8 @@ extends Area2D
 @export var parent: Node2D = null
 
 func _ready() -> void:
-	if hit_sfx: $SFX.stream = hit_sfx
-	$Timer.wait_time = cooldown_dano
+	if hit_sfx: %SFX.stream = hit_sfx
+	%Timer.wait_time = cooldown_dano
 
 # FUNÇÃO DE RECEBER DANO
 func RecebeDano(dano:int, pos_target:Vector2):
@@ -34,9 +34,9 @@ func RecebeDano(dano:int, pos_target:Vector2):
 		if parent is CharacterBody2D:
 			parent.velocity = dir * knockback
 	# Toca som de dano
-	if hit_sfx: $SFX.play()
+	if hit_sfx: %SFX.play()
 	# Inicia cooldown
-	$Timer.start()
+	%Timer.start()
 
 func _on_timer_timeout() -> void:
 	set_deferred("monitorable", true)

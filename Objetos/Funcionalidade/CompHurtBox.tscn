@@ -9,9 +9,11 @@ collision_mask = 4
 script = ExtResource("1_2g1rk")
 
 [node name="SFX" type="AudioStreamPlayer2D" parent="."]
+unique_name_in_owner = true
 max_polyphony = 100
 
 [node name="Timer" type="Timer" parent="."]
+unique_name_in_owner = true
 one_shot = true
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
