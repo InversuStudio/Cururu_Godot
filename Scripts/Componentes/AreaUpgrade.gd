@@ -3,7 +3,7 @@ extends InteractObject
 @export var upgrade: GameData.upgrades
 
 func _ready() -> void:
-	if GameData.upgrade_num >= upgrade:
+	if GameData.upgrade_num >= upgrade + 1:
 		get_parent().queue_free()
 
 func Interact(_player:CharacterBody2D) -> void:

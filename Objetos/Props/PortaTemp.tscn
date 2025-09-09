@@ -1,9 +1,8 @@
-[gd_scene load_steps=12 format=3 uid="uid://cdhelg6sloxbj"]
+[gd_scene load_steps=11 format=3 uid="uid://cdhelg6sloxbj"]
 
 [ext_resource type="Script" uid="uid://b0ou3eu3i1sxg" path="res://Scripts/Componentes/PortaTemp.gd" id="1_rixxk"]
 [ext_resource type="Texture2D" uid="uid://c3tl3oddronfh" path="res://icon.svg" id="2_41i4q"]
 [ext_resource type="PackedScene" uid="uid://va5pjd6vuuo2" path="res://Objetos/Funcionalidade/CompHurtBox.tscn" id="3_7ptwx"]
-[ext_resource type="Script" uid="uid://b2ls33ys55oyt" path="res://Scripts/Componentes/OtimizadorSprite.gd" id="4_41i4q"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rixxk"]
 size = Vector2(96, 385)
@@ -117,10 +116,6 @@ libraries = {
 &"": SubResource("AnimationLibrary_41i4q")
 }
 autoplay = "Idle"
-
-[node name="OtimizadorSprite" type="VisibleOnScreenEnabler2D" parent="."]
-script = ExtResource("4_41i4q")
-metadata/_custom_type_script = "uid://b2ls33ys55oyt"
 
 [connection signal="hurt" from="Sprite2D/HurtBox" to="." method="_on_hurt"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
