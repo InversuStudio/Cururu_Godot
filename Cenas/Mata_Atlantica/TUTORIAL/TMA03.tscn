@@ -1,4 +1,4 @@
-[gd_scene load_steps=35 format=4 uid="uid://nqosq2wj0auk"]
+[gd_scene load_steps=29 format=4 uid="uid://nqosq2wj0auk"]
 
 [ext_resource type="Texture2D" uid="uid://c374cwih425cq" path="res://Sprites/Tilemap/BACKGROUND.png" id="1_vftmf"]
 [ext_resource type="Texture2D" uid="uid://l6b625ae8udc" path="res://Sprites/Tilemap/Assets/CenarioFloresta/BACK.png" id="2_m2axx"]
@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://dxylu3tdlsq2" path="res://Sprites/Tilemap/Assets/CenarioFloresta/FOG01.png" id="6_mndey"]
 [ext_resource type="Texture2D" uid="uid://bdh06r7m0p0js" path="res://Sprites/Tilemap/Assets/CenarioFloresta/Folhas02.png" id="7_1ljck"]
 [ext_resource type="Texture2D" uid="uid://nbeswkchyrx5" path="res://Sprites/Tilemap/Assets/CenarioFloresta/FOG02.png" id="8_gyy5i"]
+[ext_resource type="Script" uid="uid://b2ls33ys55oyt" path="res://Scripts/Componentes/OtimizadorSprite.gd" id="9_ygs8d"]
 [ext_resource type="Texture2D" uid="uid://ggamtf0lg07" path="res://Sprites/Tilemap/Assets/CenarioFloresta/cipó01.png" id="10_pjocn"]
 [ext_resource type="PackedScene" uid="uid://1apfpwlqocxn" path="res://Objetos/Funcionalidade/TransicaoFase.tscn" id="11_gwkgh"]
 [ext_resource type="Texture2D" uid="uid://rwmi1ggde5dy" path="res://Sprites/VFX/Iluminação/PORTAL.png" id="12_flheb"]
@@ -23,8 +24,6 @@
 [ext_resource type="Texture2D" uid="uid://wyc6rjoc3c40" path="res://Sprites/Tilemap/Assets/CenarioFloresta/Ruina/rocha02.png" id="26_b8kcn"]
 [ext_resource type="PackedScene" uid="uid://nohq28uk7lfk" path="res://Objetos/Entidades/Player.tscn" id="28_yftf5"]
 [ext_resource type="Texture2D" uid="uid://b2844pf01w3jk" path="res://Sprites/Tilemap/Assets/CenarioFloresta/Ruina/TP04.png" id="29_qclta"]
-[ext_resource type="Script" uid="uid://bp8oxr810tyxf" path="res://Cenas/HurtBox.gd" id="30_op0pn"]
-[ext_resource type="Script" uid="uid://hsdutxxttrp3" path="res://Scripts/Componentes/Vida.gd" id="31_54dor"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ti6rg"]
 size = Vector2(135, 708)
@@ -169,21 +168,6 @@ sources/0 = SubResource("TileSetAtlasSource_gptea")
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yftf5"]
 size = Vector2(155, 893)
 
-[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_gcn7v"]
-blend_mode = 1
-
-[sub_resource type="MeshTexture" id="MeshTexture_wkgsf"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_gcn7v"]
-size = Vector2(2740, 2582)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_od6fv"]
-size = Vector2(250, 549)
-
-[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_gcn7v"]
-friction = 0.5
-rough = true
-
 [node name="Tma03" type="Node2D"]
 
 [node name="Background" type="Node2D" parent="."]
@@ -277,6 +261,12 @@ texture = ExtResource("10_pjocn")
 position = Vector2(2973, -309)
 texture = ExtResource("10_pjocn")
 
+[node name="OtimizadorSprite" type="VisibleOnScreenEnabler2D" parent="Background"]
+position = Vector2(-56.7929, -68.8323)
+scale = Vector2(114.311, 91.244)
+script = ExtResource("9_ygs8d")
+metadata/_custom_type_script = "uid://b2ls33ys55oyt"
+
 [node name="TransicaoFase2" parent="." instance=ExtResource("11_gwkgh")]
 position = Vector2(-8043, -278)
 destino = 6
@@ -318,7 +308,6 @@ position = Vector2(-8403, -259)
 position = Vector2(-18929, -3577)
 destino = 4
 posicao = Vector2(-16453, -4087)
-virado_a_esquerda = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TransicaoFase"]
 position = Vector2(66.5, -456.5)
@@ -630,7 +619,7 @@ position = Vector2(-5421.87, -4460.52)
 rotation = 0.0872665
 texture = ExtResource("26_b8kcn")
 
-[node name="Player2" parent="." instance=ExtResource("28_yftf5")]
+[node name="Player" parent="." instance=ExtResource("28_yftf5")]
 position = Vector2(-18100, -3703)
 scale = Vector2(0.959163, 0.959163)
 vel = 12.0
@@ -641,48 +630,9 @@ tempo_cair = 0.37
 tempo_coyote = 0.15
 tempo_dash = 0.15
 
-[node name="Camera2D" type="Camera2D" parent="Player2"]
+[node name="Camera2D" type="Camera2D" parent="Player"]
 position = Vector2(27.1082, -457.691)
 zoom = Vector2(0.7, 0.7)
-
-[node name="Sprite2D" type="Sprite2D" parent="."]
-material = SubResource("CanvasItemMaterial_gcn7v")
-position = Vector2(-17415, -1812)
-scale = Vector2(2687, 2484)
-texture = SubResource("MeshTexture_wkgsf")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D"]
-visible = false
-light_mask = 4
-visibility_layer = 4
-shape = SubResource("RectangleShape2D_gcn7v")
-debug_color = Color(0, 0, 0, 1)
-
-[node name="HurtBox" type="Area2D" parent="Sprite2D" node_paths=PackedStringArray("comp_vida", "parent")]
-position = Vector2(1094, 1119)
-collision_layer = 4
-collision_mask = 4
-script = ExtResource("30_op0pn")
-comp_vida = NodePath("../Vida")
-parent = NodePath("../../Tp04")
-metadata/_custom_type_script = "uid://bp8oxr810tyxf"
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/HurtBox"]
-position = Vector2(152, -218)
-shape = SubResource("RectangleShape2D_od6fv")
-
-[node name="Vida" type="Node" parent="Sprite2D"]
-script = ExtResource("31_54dor")
-vida_max = 2
-metadata/_custom_type_script = "uid://hsdutxxttrp3"
-
-[node name="StaticBody2D" type="StaticBody2D" parent="Sprite2D"]
-position = Vector2(1099, 1164)
-physics_material_override = SubResource("PhysicsMaterial_gcn7v")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/StaticBody2D"]
-position = Vector2(153, -252)
-shape = SubResource("RectangleShape2D_od6fv")
 
 [node name="Tp04" type="Sprite2D" parent="."]
 visible = false
