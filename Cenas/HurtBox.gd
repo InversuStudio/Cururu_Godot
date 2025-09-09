@@ -8,7 +8,7 @@ extends Area2D
 ## Duração do knockback, em segundos
 @export var tempo_knockback : float = 0.0
 ## Cooldown para receber dano novamente
-@export var cooldown_dano: float = 0.5
+@export var cooldown_dano: float = 0.2
 ## Som de acerto
 @export var hit_sfx : AudioStream = null
 ## Recebe o node pai

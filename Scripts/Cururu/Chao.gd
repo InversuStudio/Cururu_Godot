@@ -19,7 +19,7 @@ var pode_anim: bool = false
 # INICIA O STATE
 func Enter() -> void:
 	print("CHAO")
-	if parent.state_machine.last_state.name == "Fall": 
+	if parent.state_machine.last_state.name == "Fall":
 		%Anim.play("Land")
 	else: pode_anim = true
 

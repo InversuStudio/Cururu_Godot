@@ -919,6 +919,7 @@ position = Vector2(154, -3)
 [node name="HurtBox" parent="HurtContainer" node_paths=PackedStringArray("comp_vida", "parent") instance=ExtResource("46_wjcvp")]
 position = Vector2(133, 0)
 comp_vida = NodePath("../../Vida")
+cooldown_dano = 0.5
 parent = NodePath("../..")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HurtContainer/HurtBox"]
