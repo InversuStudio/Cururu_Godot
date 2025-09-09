@@ -715,7 +715,6 @@ zoom = Vector2(0.7, 0.7)
 position = Vector2(-9071, -92)
 destino = 5
 posicao = Vector2(-8403, -259)
-virado_a_esquerda = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TransicaoFase"]
 position = Vector2(77, -280.5)

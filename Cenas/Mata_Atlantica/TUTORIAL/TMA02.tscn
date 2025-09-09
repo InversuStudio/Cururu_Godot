@@ -186,7 +186,7 @@ zoom = Vector2(0.7, 0.7)
 
 [node name="TransicaoFase2" parent="." instance=ExtResource("5_ermhl")]
 position = Vector2(-16271, -4098)
-destino = 5
+destino = 6
 posicao = Vector2(-18580, -3604)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TransicaoFase2"]
@@ -196,9 +196,8 @@ debug_color = Color(0, 0.6, 0.701961, 0)
 
 [node name="TransicaoFase" parent="." instance=ExtResource("5_ermhl")]
 position = Vector2(-29799, -3297)
-destino = 3
+destino = 4
 posicao = Vector2(-30369, -3330)
-virado_a_esquerda = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TransicaoFase"]
 position = Vector2(41, -411.5)

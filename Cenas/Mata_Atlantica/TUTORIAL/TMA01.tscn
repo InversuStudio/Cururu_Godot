@@ -179,7 +179,7 @@ position = Vector2(-30369, -3330)
 
 [node name="TransicaoFase" parent="." instance=ExtResource("8_kqyhf")]
 position = Vector2(-30369, -3330)
-destino = 4
+destino = 5
 posicao = Vector2(-29588, -3335)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TransicaoFase"]
