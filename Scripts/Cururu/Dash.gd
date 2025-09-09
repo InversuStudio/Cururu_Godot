@@ -14,14 +14,10 @@ var acabou: bool = false
 
 func Enter() -> void:
 	print("DASH")
-	%Anim.play("Dash")
+	%Anim.play("Dash_Start")
 	parent.pode_dash = false
-	%DashCooldown.start()
 	acabou = false
-	%DashTime.start()
 	parent.velocity.y = 0.0
-	var mult = -1 if %Cururu.flip_h == true else 1
-	parent.velocity.x = parent.dash_speed * mult
 
 func Update(_delta:float) -> State:
 	# DANO
@@ -41,4 +37,15 @@ func FixedUpdate(_delta:float) -> State:
 
 func _on_dash_time_timeout() -> void:
 	print("Dash acabou")
-	acabou = true
+	%Anim.play("Dash_End")
+
+func _on_anim_animation_finished(anim_name: StringName) -> void:
+	match anim_name:
+		"Dash_Start":
+			%Anim.play("Dash_Loop")
+			%DashCooldown.start()
+			%DashTime.start()
+			var mult = -1 if %Cururu.flip_h == true else 1
+			parent.velocity.x = parent.dash_speed * mult
+		"Dash_End":
+			acabou = true

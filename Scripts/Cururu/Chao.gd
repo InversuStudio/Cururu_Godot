@@ -13,10 +13,16 @@ extends State
 @export var melee_state: State = null
 ## State de ataque magico
 @export var magia_state: State = null
- 
+
+var pode_anim: bool = false
+
 # INICIA O STATE
 func Enter() -> void:
 	print("CHAO")
+	%Anim.play("Land")
+
+func Exit() -> void:
+	pode_anim = false
 
 func Update(_delta: float) -> State:
 	# INPUT MELEE
@@ -55,8 +61,9 @@ func FixedUpdate(delta: float) -> State:
 	
 	if parent.is_on_floor():
 		# Controla animações de parado e correndo
-		if parent.input_move: %Anim.play("Run")
-		else: %Anim.play("Idle")
+		if pode_anim:
+			if parent.input_move: %Anim.play("Run")
+			else: %Anim.play("Idle")
 		
 		# Ao pressionar input de Pulo, mudar State
 		if Input.is_action_just_pressed("pulo") and parent.pode_mover:
@@ -69,3 +76,8 @@ func FixedUpdate(delta: float) -> State:
 		return fall_state
 		
 	return null # Não muda o State
+
+
+func _on_anim_animation_finished(anim_name: StringName) -> void:
+	if anim_name == "Land":
+		pode_anim = true

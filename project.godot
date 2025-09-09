@@ -17,6 +17,10 @@ config/custom_user_dir_name="Cururu"
 config/features=PackedStringArray("4.4", "GL Compatibility")
 config/icon="res://icon.svg"
 
+[audio]
+
+buses/default_bus_layout=""
+
 [autoload]
 
 GameData="*res://Scripts/Globais/GameData.gd"

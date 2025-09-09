@@ -1,6 +1,6 @@
 [gd_scene load_steps=14 format=3 uid="uid://bjvnm0aydr0vd"]
 
-[ext_resource type="Script" uid="uid://byqf6bdnsd3m8" path="res://Morcego.gd" id="1_j5mvf"]
+[ext_resource type="Script" uid="uid://byqf6bdnsd3m8" path="res://Scripts/Inimigos/Morcego.gd" id="1_j5mvf"]
 [ext_resource type="Texture2D" uid="uid://w3mtclikmpd" path="res://Sprites/Inimigos/Larva/larva_frame01.png" id="2_63e5l"]
 [ext_resource type="Texture2D" uid="uid://bq7g048dqmrss" path="res://Sprites/Inimigos/Larva/larva_frame02.png" id="3_5qklw"]
 [ext_resource type="Texture2D" uid="uid://1ve2rek0fem2" path="res://Sprites/Inimigos/Larva/larva_frame03.png" id="4_ofpxl"]

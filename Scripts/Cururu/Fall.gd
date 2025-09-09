@@ -21,7 +21,7 @@ extends State
 # INICIA O STATE
 func Enter() -> void:
 	print("FALL")
-	%Anim.play("Fall") # Animação de cair
+	%Anim.play("Fall_Start") # Animação de cair
 
 func Update(_delta: float) -> State:
 	# INPUT MELEE
@@ -83,3 +83,7 @@ func _on_coyote_timeout() -> void:
 
 func _on_jump_lag_timeout() -> void:
 	parent.is_jump_lag = false
+
+func _on_anim_animation_finished(anim_name: StringName) -> void:
+	if anim_name == "Fall_Start":
+		%Anim.play("Fall_Loop")

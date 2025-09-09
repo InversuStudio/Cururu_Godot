@@ -1,6 +1,6 @@
 [gd_scene load_steps=9 format=4 uid="uid://bsch3csrjxaua"]
 
-[ext_resource type="Texture2D" uid="uid://c374cwih425cq" path="res://Sprites/Tilemap/BACKGROUND.png" id="1_o3hho"]
+[ext_resource type="Texture2D" uid="uid://c374cwih425cq" path="res://Sprites/Tilemap/Ground/Base.png" id="1_o3hho"]
 [ext_resource type="PackedScene" uid="uid://cqyub70sv0ofp" path="res://Objetos/Props/SavePoint.tscn" id="2_ctw0e"]
 [ext_resource type="PackedScene" uid="uid://nohq28uk7lfk" path="res://Objetos/Entidades/Player.tscn" id="3_gdjfr"]
 [ext_resource type="PackedScene" uid="uid://1apfpwlqocxn" path="res://Objetos/Funcionalidade/TransicaoFase.tscn" id="5_ck3rm"]

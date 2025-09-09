@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://67ddt0ghyjwf" path="res://Scripts/Componentes/Moeda.gd" id="1_c1as6"]
 [ext_resource type="AudioStream" uid="uid://dhgsnus0fna7q" path="res://Audio/SFX/SOM TESTE.mp3" id="2_jisbj"]
-[ext_resource type="Texture2D" uid="uid://bm1qhgu20wgaa" path="res://Sprites/Semente.png" id="2_soojx"]
+[ext_resource type="Texture2D" uid="uid://bm1qhgu20wgaa" path="res://Sprites/Props/Semente.png" id="2_soojx"]
 [ext_resource type="Script" uid="uid://b2ls33ys55oyt" path="res://Scripts/Componentes/OtimizadorSprite.gd" id="4_0w4hx"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_jisbj"]

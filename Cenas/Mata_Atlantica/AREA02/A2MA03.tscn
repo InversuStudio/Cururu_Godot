@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=4 uid="uid://vvj50hvchkhj"]
 
 [ext_resource type="Texture2D" uid="uid://ojm1cabd7530" path="res://Sprites/Tilemap/Assets/CenarioFloresta/WT.png" id="1_orfgu"]
-[ext_resource type="Texture2D" uid="uid://c374cwih425cq" path="res://Sprites/Tilemap/BACKGROUND.png" id="2_axx3v"]
+[ext_resource type="Texture2D" uid="uid://c374cwih425cq" path="res://Sprites/Tilemap/Ground/Base.png" id="2_axx3v"]
 [ext_resource type="PackedScene" uid="uid://nohq28uk7lfk" path="res://Objetos/Entidades/Player.tscn" id="3_fsywm"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_bbddv"]

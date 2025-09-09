@@ -1,7 +1,7 @@
 [gd_scene load_steps=18 format=4 uid="uid://exty4suocudj"]
 
 [ext_resource type="PackedScene" uid="uid://nohq28uk7lfk" path="res://Objetos/Entidades/Player.tscn" id="1_v83m2"]
-[ext_resource type="Texture2D" uid="uid://c374cwih425cq" path="res://Sprites/Tilemap/BACKGROUND.png" id="2_lthbn"]
+[ext_resource type="Texture2D" uid="uid://c374cwih425cq" path="res://Sprites/Tilemap/Ground/Base.png" id="2_lthbn"]
 [ext_resource type="Texture2D" uid="uid://b3k8nvt7ux4fp" path="res://Sprites/Tilemap/Assets/CenarioFloresta/arbusto2.png" id="3_hwqt5"]
 [ext_resource type="Texture2D" uid="uid://ggamtf0lg07" path="res://Sprites/Tilemap/Assets/CenarioFloresta/cipó01.png" id="4_vqpay"]
 [ext_resource type="Texture2D" uid="uid://bf0q4vuc2s0md" path="res://Sprites/Tilemap/Assets/CenarioObjetos/apagado.png" id="5_5ka01"]

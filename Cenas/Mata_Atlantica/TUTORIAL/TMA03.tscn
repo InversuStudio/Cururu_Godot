@@ -1,6 +1,6 @@
 [gd_scene load_steps=29 format=4 uid="uid://nqosq2wj0auk"]
 
-[ext_resource type="Texture2D" uid="uid://c374cwih425cq" path="res://Sprites/Tilemap/BACKGROUND.png" id="1_vftmf"]
+[ext_resource type="Texture2D" uid="uid://c374cwih425cq" path="res://Sprites/Tilemap/Ground/Base.png" id="1_vftmf"]
 [ext_resource type="Texture2D" uid="uid://l6b625ae8udc" path="res://Sprites/Tilemap/Assets/CenarioFloresta/BACK.png" id="2_m2axx"]
 [ext_resource type="Texture2D" uid="uid://dco0xi34rq1ke" path="res://Sprites/Tilemap/Assets/CenarioFloresta/ARVOREBK.png" id="3_sopud"]
 [ext_resource type="Texture2D" uid="uid://csr2gynumyiv2" path="res://Sprites/Tilemap/Assets/CenarioFloresta/PAU_BRASIL03.png" id="4_sxjek"]

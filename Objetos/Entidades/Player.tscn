@@ -1,66 +1,90 @@
-[gd_scene load_steps=75 format=3 uid="uid://nohq28uk7lfk"]
+[gd_scene load_steps=100 format=3 uid="uid://nohq28uk7lfk"]
 
 [ext_resource type="Script" uid="uid://cfu4ciwll8jcj" path="res://Scripts/Cururu/Cururu.gd" id="1_gwpdq"]
-[ext_resource type="Texture2D" uid="uid://djy1g5ftd682w" path="res://Sprites/Cururu/Hit/03.png" id="2_0hf88"]
-[ext_resource type="Texture2D" uid="uid://cwvw1pwco17gj" path="res://Sprites/Cururu/Hit/04.png" id="3_7uoqt"]
-[ext_resource type="Texture2D" uid="uid://c0gcdq37vc5jo" path="res://Sprites/Cururu/Hit/05.png" id="4_61o3p"]
-[ext_resource type="Texture2D" uid="uid://o5dfjhogimb" path="res://Sprites/Cururu/Hit/06.png" id="5_0r6tj"]
-[ext_resource type="Texture2D" uid="uid://l08p16oovcgi" path="res://Sprites/Cururu/Hit/07.png" id="6_wao3i"]
-[ext_resource type="Texture2D" uid="uid://cvqcka7at8bvd" path="res://Sprites/Cururu/Hit/08.png" id="7_bo6dy"]
-[ext_resource type="Texture2D" uid="uid://d02lqeocw78bt" path="res://Sprites/Cururu/Hit/09.png" id="8_g8tdn"]
-[ext_resource type="Texture2D" uid="uid://cnj5thpgkvv23" path="res://Sprites/Cururu/Pulo/4.png" id="9_7uoqt"]
-[ext_resource type="Texture2D" uid="uid://4g67xd644aev" path="res://Sprites/Cururu/Run/2.png" id="9_61o3p"]
-[ext_resource type="Texture2D" uid="uid://kep15tg16exx" path="res://Sprites/Cururu/Idle/V2/cururu_parado.png" id="10_6q3px"]
-[ext_resource type="Texture2D" uid="uid://ckhr6xysd1748" path="res://Sprites/Cururu/Pulo/1.png" id="11_0hf88"]
-[ext_resource type="Texture2D" uid="uid://ji67xj25sh17" path="res://Sprites/Cururu/Idle/V2/cururu_parado2.png" id="11_d2bxm"]
-[ext_resource type="Texture2D" uid="uid://bcmpceltuv7om" path="res://Sprites/Cururu/Pulo/2.png" id="12_7uoqt"]
-[ext_resource type="Texture2D" uid="uid://374vii38ugep" path="res://Sprites/Cururu/Pulo/3.png" id="13_61o3p"]
-[ext_resource type="Texture2D" uid="uid://6waqj22kj7vk" path="res://Sprites/Cururu/Pulo/5.png" id="14_0r6tj"]
-[ext_resource type="Texture2D" uid="uid://cwihk6wsxfi67" path="res://Sprites/Cururu/Pulo/6.png" id="15_wao3i"]
-[ext_resource type="Texture2D" uid="uid://btrq28uf3nshw" path="res://Sprites/Cururu/Magia/01.png" id="17_d45jk"]
-[ext_resource type="Texture2D" uid="uid://bnmshxa17gou7" path="res://Sprites/Cururu/Magia/02.png" id="18_vdd7f"]
-[ext_resource type="Texture2D" uid="uid://b13t8yqr8jutj" path="res://Sprites/Cururu/Magia/03.png" id="19_x4yiv"]
-[ext_resource type="Texture2D" uid="uid://bk50ktfh8vvds" path="res://Sprites/Cururu/Magia/04.png" id="20_6iqbf"]
-[ext_resource type="Texture2D" uid="uid://bdstuu5v57h56" path="res://Sprites/Cururu/Magia/05.png" id="21_x3lr7"]
-[ext_resource type="Texture2D" uid="uid://bw4y8414tr7wg" path="res://Sprites/Cururu/Magia/06.png" id="22_wpp42"]
-[ext_resource type="Texture2D" uid="uid://rbeyv4lpxncr" path="res://Sprites/Cururu/Magia/07.png" id="23_kmqi2"]
-[ext_resource type="Texture2D" uid="uid://b63h14rbag2ci" path="res://Sprites/Cururu/Magia/08.png" id="24_2q4c8"]
-[ext_resource type="Texture2D" uid="uid://dnyyp5db2hpj7" path="res://Sprites/Cururu/Magia/09.png" id="25_wq158"]
-[ext_resource type="Texture2D" uid="uid://bx0odhtfbvdc" path="res://Sprites/Cururu/Magia/10.png" id="26_1mxu7"]
-[ext_resource type="Texture2D" uid="uid://b2o1rf20xil55" path="res://Sprites/Cururu/Run/Run 2.0 Concept/01.png" id="43_wq158"]
-[ext_resource type="Texture2D" uid="uid://e7577gd0xg5m" path="res://Sprites/Cururu/Run/Run 2.0 Concept/02.png" id="44_1mxu7"]
-[ext_resource type="Texture2D" uid="uid://b84y1f76marxr" path="res://Sprites/Cururu/Run/Run 2.0 Concept/03.png" id="45_lwl7b"]
+[ext_resource type="Texture2D" uid="uid://6tjgxsgaflxb" path="res://Sprites/Cururu/Dano/03.png" id="2_0hf88"]
+[ext_resource type="Texture2D" uid="uid://d3t3kefd5n5xu" path="res://Sprites/Cururu/Dano/02.png" id="2_smue1"]
+[ext_resource type="Texture2D" uid="uid://cy0621jbr41p2" path="res://Sprites/Cururu/Dano/04.png" id="3_7uoqt"]
+[ext_resource type="Texture2D" uid="uid://glkn0v2wg77a" path="res://Sprites/Cururu/Dano/05.png" id="4_61o3p"]
+[ext_resource type="Texture2D" uid="uid://ba7idclgigop7" path="res://Sprites/Cururu/Dano/06.png" id="5_0r6tj"]
+[ext_resource type="Texture2D" uid="uid://bmqfc0f6fg6e8" path="res://Sprites/Cururu/Dano/07.png" id="6_wao3i"]
+[ext_resource type="Texture2D" uid="uid://dbfnbqa44gix3" path="res://Sprites/Cururu/Dano/08.png" id="7_bo6dy"]
+[ext_resource type="Texture2D" uid="uid://dtrqllxfdts32" path="res://Sprites/Cururu/Dash/02.png" id="9_pa0o1"]
+[ext_resource type="Texture2D" uid="uid://bssjqru2v4vci" path="res://Sprites/Cururu/Dash/03.png" id="10_7odhu"]
+[ext_resource type="Texture2D" uid="uid://bjhdn7dee4248" path="res://Sprites/Cururu/Dash/04.png" id="11_iqn86"]
+[ext_resource type="Texture2D" uid="uid://c3i6qokpcl81f" path="res://Sprites/Cururu/Dash/05.png" id="12_g3owr"]
+[ext_resource type="Texture2D" uid="uid://cdfi7b7xcaoy4" path="res://Sprites/Cururu/Dash/06_loop.png" id="13_xt7tl"]
+[ext_resource type="Texture2D" uid="uid://cja3f7qn1d1nb" path="res://Sprites/Cururu/Dash/07_loop.png" id="14_4eubo"]
+[ext_resource type="Texture2D" uid="uid://p17ksn71mk8i" path="res://Sprites/Cururu/Dash/08_loop.png" id="15_uel2u"]
+[ext_resource type="Texture2D" uid="uid://c04kadibrpxeu" path="res://Sprites/Cururu/Dash/09_loop.png" id="16_jun3x"]
+[ext_resource type="Texture2D" uid="uid://c4ritprjb7jh2" path="res://Sprites/Cururu/Dash/10.png" id="17_xn3d7"]
+[ext_resource type="Texture2D" uid="uid://dn2p13w4cewje" path="res://Sprites/Cururu/Dash/11.png" id="18_ynp88"]
+[ext_resource type="Texture2D" uid="uid://dqfxdfpt7btw7" path="res://Sprites/Cururu/Dash/12.png" id="19_dayuk"]
+[ext_resource type="Texture2D" uid="uid://by4jepf5vk1mq" path="res://Sprites/Cururu/Pulo/10(loop).png" id="20_0hf88"]
+[ext_resource type="Texture2D" uid="uid://oueeifn344de" path="res://Sprites/Cururu/Idle/01.png" id="20_gwpdq"]
+[ext_resource type="Texture2D" uid="uid://g0sntps8nmbd" path="res://Sprites/Cururu/Idle/02.png" id="21_0hf88"]
+[ext_resource type="Texture2D" uid="uid://ditqm67grk0sr" path="res://Sprites/Cururu/Pulo/11(loop).png" id="21_7uoqt"]
+[ext_resource type="Texture2D" uid="uid://jjtd50yifjad" path="res://Sprites/Cururu/Idle/03.png" id="22_7uoqt"]
+[ext_resource type="Texture2D" uid="uid://b5kh1wi4uttd2" path="res://Sprites/Cururu/Pulo/12(loop).png" id="22_61o3p"]
+[ext_resource type="Texture2D" uid="uid://cca88o3m22mpd" path="res://Sprites/Cururu/Pulo/13(loop).png" id="23_0r6tj"]
+[ext_resource type="Texture2D" uid="uid://dnm2d4xi8ugmj" path="res://Sprites/Cururu/Idle/04.png" id="23_61o3p"]
+[ext_resource type="Texture2D" uid="uid://vuvwsnwj4j2o" path="res://Sprites/Cururu/Idle/05.png" id="24_0r6tj"]
+[ext_resource type="Texture2D" uid="uid://c3bdxwiwi0fo" path="res://Sprites/Cururu/Pulo/07.png" id="24_wao3i"]
+[ext_resource type="Texture2D" uid="uid://dduie5pdnwf2r" path="res://Sprites/Cururu/Pulo/08.png" id="25_bo6dy"]
+[ext_resource type="Texture2D" uid="uid://cacua4a7ofiai" path="res://Sprites/Cururu/Idle/06.png" id="25_wao3i"]
+[ext_resource type="Texture2D" uid="uid://bc1jiiukoj77c" path="res://Sprites/Cururu/Idle/07.png" id="26_bo6dy"]
+[ext_resource type="Texture2D" uid="uid://cxnptk3pasjog" path="res://Sprites/Cururu/Pulo/09.png" id="26_g8tdn"]
+[ext_resource type="Texture2D" uid="uid://dga8p80xnxn22" path="res://Sprites/Cururu/Idle/08.png" id="27_g8tdn"]
+[ext_resource type="Texture2D" uid="uid://b7d736ddd7mbh" path="res://Sprites/Cururu/Idle/09.png" id="28_3kywn"]
+[ext_resource type="Texture2D" uid="uid://cl66tdiqip5of" path="res://Sprites/Cururu/Idle/10.png" id="29_cj33d"]
+[ext_resource type="Texture2D" uid="uid://dq3kklti8r44c" path="res://Sprites/Cururu/Idle/11.png" id="30_32f06"]
+[ext_resource type="Texture2D" uid="uid://clckveolmj08b" path="res://Sprites/Cururu/Idle/12.png" id="31_pa0o1"]
+[ext_resource type="Texture2D" uid="uid://dn7teanbyle7" path="res://Sprites/Cururu/Pulo/02.png" id="38_3kywn"]
+[ext_resource type="Texture2D" uid="uid://bo2cqgkghvnvi" path="res://Sprites/Cururu/Pulo/03.png" id="39_cj33d"]
+[ext_resource type="Texture2D" uid="uid://b04g02rixixdn" path="res://Sprites/Cururu/Pulo/04.png" id="40_32f06"]
+[ext_resource type="Texture2D" uid="uid://b3lsqr7m6ijwg" path="res://Sprites/Cururu/Pulo/05.png" id="41_6q3px"]
+[ext_resource type="Texture2D" uid="uid://cnp81cndugpg7" path="res://Sprites/Cururu/Pulo/14.png" id="42_d2bxm"]
+[ext_resource type="Texture2D" uid="uid://cvsapry4c5t0j" path="res://Sprites/Cururu/Pulo/15.png" id="43_kbhwl"]
+[ext_resource type="Texture2D" uid="uid://c3tl3oddronfh" path="res://icon.svg" id="45_548ar"]
+[ext_resource type="Texture2D" uid="uid://3r86hipkdfjs" path="res://Sprites/Cururu/Run/00.png" id="45_kbhwl"]
 [ext_resource type="Script" uid="uid://hsdutxxttrp3" path="res://Scripts/Componentes/Vida.gd" id="45_vkjtj"]
-[ext_resource type="Texture2D" uid="uid://cngu376ludh0k" path="res://Sprites/Cururu/Run/Run 2.0 Concept/04.png" id="46_e0rx1"]
 [ext_resource type="PackedScene" uid="uid://va5pjd6vuuo2" path="res://Objetos/Funcionalidade/CompHurtBox.tscn" id="46_wjcvp"]
-[ext_resource type="Texture2D" uid="uid://d30vsj1axw66u" path="res://Sprites/Cururu/Run/Run 2.0 Concept/05.png" id="47_ga1ek"]
 [ext_resource type="PackedScene" uid="uid://pc4mgv2nv8af" path="res://Objetos/Funcionalidade/CompHitBox.tscn" id="47_grb16"]
 [ext_resource type="AudioStream" uid="uid://dhgsnus0fna7q" path="res://Audio/SFX/SOM TESTE.mp3" id="48_c8qv2"]
-[ext_resource type="Texture2D" uid="uid://6msfhufqk2rr" path="res://Sprites/Cururu/Run/Run 2.0 Concept/06.png" id="48_jpq87"]
 [ext_resource type="Script" uid="uid://cerjc6sna0dxs" path="res://Scripts/StateMachine/StateMachine.gd" id="49_1ribx"]
-[ext_resource type="Texture2D" uid="uid://cymggy0nhcg23" path="res://Sprites/Cururu/Run/Run 2.0 Concept/07.png" id="49_eyqrd"]
 [ext_resource type="Script" uid="uid://dmpgwk6x2wyq6" path="res://Scripts/Cururu/Chao.gd" id="50_3s0sn"]
-[ext_resource type="Texture2D" uid="uid://cbbtl0c3t8rg1" path="res://Sprites/Cururu/Run/Run 2.0 Concept/08.png" id="50_tms4o"]
-[ext_resource type="Texture2D" uid="uid://cfpejknr65sef" path="res://Sprites/Cururu/Run/Run 2.0 Concept/09.png" id="51_1dbdn"]
+[ext_resource type="Texture2D" uid="uid://dlh6ijf8tldxf" path="res://Sprites/Cururu/Melee/09.png" id="51_6iqbf"]
 [ext_resource type="Script" uid="uid://dqm1rg2yvcp87" path="res://Scripts/Cururu/Fall.gd" id="51_dvy3r"]
-[ext_resource type="Texture2D" uid="uid://c2aitw5ocfdeq" path="res://Sprites/Cururu/Run/Run 2.0 Concept/10.png" id="52_32f06"]
+[ext_resource type="Texture2D" uid="uid://w6usfm7vcovw" path="res://Sprites/Cururu/Run/07.png" id="52_548ar"]
 [ext_resource type="Script" uid="uid://c1tkv8brk85ke" path="res://Scripts/Cururu/Pulo.gd" id="52_damx7"]
-[ext_resource type="Texture2D" uid="uid://da56a8ouefnh0" path="res://Sprites/Cururu/Melee/01.png" id="52_tms4o"]
-[ext_resource type="Texture2D" uid="uid://b13yxab66ve2s" path="res://Sprites/Cururu/Melee/02.png" id="53_1dbdn"]
+[ext_resource type="Texture2D" uid="uid://ba83ma0k7akgp" path="res://Sprites/Cururu/Melee/10.png" id="52_x3lr7"]
+[ext_resource type="Texture2D" uid="uid://bp8jt5ldm18ou" path="res://Sprites/Cururu/Melee/02.png" id="53_1dbdn"]
 [ext_resource type="Script" uid="uid://ctu2e3ln1kydq" path="res://Scripts/Cururu/Dash.gd" id="53_k0fov"]
-[ext_resource type="Texture2D" uid="uid://xalr154lfpix" path="res://Sprites/Cururu/Melee/03.png" id="54_0w8y8"]
+[ext_resource type="Texture2D" uid="uid://diov1n84bk23p" path="res://Sprites/Cururu/Melee/11.png" id="53_wpp42"]
+[ext_resource type="Texture2D" uid="uid://d1v3ex0xexpef" path="res://Sprites/Cururu/Melee/03.png" id="54_0w8y8"]
 [ext_resource type="Script" uid="uid://brymvmxc6n166" path="res://Scripts/Cururu/Dano.gd" id="54_jgcph"]
+[ext_resource type="Texture2D" uid="uid://dr0cp2sh6h7qh" path="res://Sprites/Cururu/Run/08.png" id="54_kmqi2"]
+[ext_resource type="Texture2D" uid="uid://cn4bj8b2eog4" path="res://Sprites/Cururu/Run/09.png" id="55_2q4c8"]
 [ext_resource type="Script" uid="uid://biel3i584hg88" path="res://Scripts/Cururu/Melee.gd" id="55_7uoqt"]
-[ext_resource type="Texture2D" uid="uid://db18wnpxgwosm" path="res://Sprites/Cururu/Melee/04.png" id="55_d7mdf"]
+[ext_resource type="Texture2D" uid="uid://cgojsc8x3iriq" path="res://Sprites/Cururu/Run/10.png" id="55_18egk"]
+[ext_resource type="Texture2D" uid="uid://canqyijdsj0qa" path="res://Sprites/Cururu/Melee/04.png" id="55_d7mdf"]
 [ext_resource type="Script" uid="uid://twsepycefell" path="res://Scripts/Cururu/Magia.gd" id="56_7uoqt"]
-[ext_resource type="Texture2D" uid="uid://cer7wfxkxaems" path="res://Sprites/Cururu/Melee/05.png" id="56_w1841"]
-[ext_resource type="Texture2D" uid="uid://d14w2r75avcbe" path="res://Sprites/Cururu/Melee/06.png" id="57_ny8nr"]
-[ext_resource type="Texture2D" uid="uid://1gd71hpyeid3" path="res://Sprites/Cururu/Melee/07.png" id="58_2t31h"]
-[ext_resource type="Texture2D" uid="uid://ih4uq0k4wybx" path="res://Sprites/Cururu/Melee/08.png" id="59_s2eek"]
+[ext_resource type="Texture2D" uid="uid://vpqiwf03ahgm" path="res://Sprites/Cururu/Melee/05.png" id="56_w1841"]
+[ext_resource type="Texture2D" uid="uid://s7dywbsrphlw" path="res://Sprites/Cururu/Run/01.png" id="56_wq158"]
+[ext_resource type="Texture2D" uid="uid://brcw3gx52yk73" path="res://Sprites/Cururu/Run/02.png" id="57_1mxu7"]
+[ext_resource type="Texture2D" uid="uid://d1ctksgo2tfrn" path="res://Sprites/Cururu/Melee/06.png" id="57_ny8nr"]
+[ext_resource type="Texture2D" uid="uid://c3rk5l2di2igp" path="res://Sprites/Cururu/Melee/07.png" id="58_2t31h"]
+[ext_resource type="Texture2D" uid="uid://c8x6cggwvhx64" path="res://Sprites/Cururu/Run/03.png" id="58_lwl7b"]
+[ext_resource type="Texture2D" uid="uid://dkoe8xa1iw2pu" path="res://Sprites/Cururu/Run/04.png" id="59_e0rx1"]
+[ext_resource type="Texture2D" uid="uid://cl48ho610vpku" path="res://Sprites/Cururu/Melee/08.png" id="59_s2eek"]
+[ext_resource type="Texture2D" uid="uid://6dnbonxcb2gu" path="res://Sprites/Cururu/Run/05.png" id="60_ga1ek"]
+[ext_resource type="Texture2D" uid="uid://dpot1mm6audq2" path="res://Sprites/Cururu/Run/06.png" id="61_jpq87"]
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_t2cfw"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_ser7u"]
 animations = [{
 "frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_smue1")
+}, {
 "duration": 1.0,
 "texture": ExtResource("2_0hf88")
 }, {
@@ -78,105 +102,168 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": ExtResource("7_bo6dy")
-}, {
-"duration": 1.0,
-"texture": ExtResource("8_g8tdn")
 }],
 "loop": true,
 "name": &"Dano",
-"speed": 12.0
+"speed": 5.0
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("9_61o3p")
+"texture": ExtResource("17_xn3d7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_ynp88")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_dayuk")
 }],
 "loop": true,
-"name": &"Dash",
-"speed": 14.0
+"name": &"Dash_End",
+"speed": 5.0
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("9_7uoqt")
+"texture": ExtResource("13_xt7tl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_4eubo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_uel2u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_jun3x")
 }],
 "loop": true,
-"name": &"Fall",
-"speed": 12.0
+"name": &"Dash_Loop",
+"speed": 5.0
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("10_6q3px")
+"texture": ExtResource("9_pa0o1")
 }, {
 "duration": 1.0,
-"texture": ExtResource("11_d2bxm")
+"texture": ExtResource("10_7odhu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_iqn86")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_g3owr")
+}],
+"loop": true,
+"name": &"Dash_Start",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("20_0hf88")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_7uoqt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_61o3p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_0r6tj")
+}],
+"loop": true,
+"name": &"Fall_Loop",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("24_wao3i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_bo6dy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_g8tdn")
+}],
+"loop": true,
+"name": &"Fall_Start",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("20_gwpdq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_0hf88")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_7uoqt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_61o3p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_0r6tj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_wao3i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_bo6dy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_g8tdn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_3kywn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_cj33d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_32f06")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_pa0o1")
 }],
 "loop": true,
 "name": &"Idle",
-"speed": 12.0
+"speed": 5.0
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("11_0hf88")
+"texture": ExtResource("38_3kywn")
 }, {
 "duration": 1.0,
-"texture": ExtResource("12_7uoqt")
+"texture": ExtResource("39_cj33d")
 }, {
 "duration": 1.0,
-"texture": ExtResource("13_61o3p")
+"texture": ExtResource("40_32f06")
+}, {
+"duration": 1.0,
+"texture": ExtResource("41_6q3px")
 }],
 "loop": true,
 "name": &"Jump",
-"speed": 8.0
+"speed": 5.0
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("14_0r6tj")
+"texture": ExtResource("42_d2bxm")
 }, {
 "duration": 1.0,
-"texture": ExtResource("15_wao3i")
+"texture": ExtResource("43_kbhwl")
 }],
 "loop": true,
 "name": &"Land",
-"speed": 8.0
+"speed": 5.0
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("17_d45jk")
-}, {
-"duration": 1.0,
-"texture": ExtResource("18_vdd7f")
-}, {
-"duration": 1.0,
-"texture": ExtResource("19_x4yiv")
-}, {
-"duration": 1.0,
-"texture": ExtResource("20_6iqbf")
-}, {
-"duration": 1.0,
-"texture": ExtResource("21_x3lr7")
-}, {
-"duration": 1.0,
-"texture": ExtResource("22_wpp42")
-}, {
-"duration": 1.0,
-"texture": ExtResource("23_kmqi2")
-}, {
-"duration": 1.0,
-"texture": ExtResource("24_2q4c8")
-}, {
-"duration": 1.0,
-"texture": ExtResource("25_wq158")
-}, {
-"duration": 1.0,
-"texture": ExtResource("26_1mxu7")
+"texture": ExtResource("45_548ar")
 }],
 "loop": true,
 "name": &"Magia",
-"speed": 13.0
+"speed": 5.0
 }, {
 "frames": [{
-"duration": 1.0,
-"texture": ExtResource("52_tms4o")
-}, {
 "duration": 1.0,
 "texture": ExtResource("53_1dbdn")
 }, {
@@ -185,12 +272,7 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": ExtResource("55_d7mdf")
-}],
-"loop": true,
-"name": &"Melee1",
-"speed": 14.0
 }, {
-"frames": [{
 "duration": 1.0,
 "texture": ExtResource("56_w1841")
 }, {
@@ -199,48 +281,65 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": ExtResource("58_2t31h")
-}, {
-"duration": 1.0,
-"texture": ExtResource("59_s2eek")
 }],
 "loop": true,
-"name": &"Melee2",
-"speed": 12.0
+"name": &"Melee1",
+"speed": 5.0
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("43_wq158")
+"texture": ExtResource("59_s2eek")
 }, {
 "duration": 1.0,
-"texture": ExtResource("44_1mxu7")
+"texture": ExtResource("51_6iqbf")
 }, {
 "duration": 1.0,
-"texture": ExtResource("45_lwl7b")
+"texture": ExtResource("52_x3lr7")
 }, {
 "duration": 1.0,
-"texture": ExtResource("46_e0rx1")
+"texture": ExtResource("53_wpp42")
+}],
+"loop": true,
+"name": &"Melee2",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("45_kbhwl")
 }, {
 "duration": 1.0,
-"texture": ExtResource("47_ga1ek")
+"texture": ExtResource("56_wq158")
 }, {
 "duration": 1.0,
-"texture": ExtResource("48_jpq87")
+"texture": ExtResource("57_1mxu7")
 }, {
 "duration": 1.0,
-"texture": ExtResource("49_eyqrd")
+"texture": ExtResource("58_lwl7b")
 }, {
 "duration": 1.0,
-"texture": ExtResource("50_tms4o")
+"texture": ExtResource("59_e0rx1")
 }, {
 "duration": 1.0,
-"texture": ExtResource("51_1dbdn")
+"texture": ExtResource("60_ga1ek")
 }, {
 "duration": 1.0,
-"texture": ExtResource("52_32f06")
+"texture": ExtResource("61_jpq87")
+}, {
+"duration": 1.0,
+"texture": ExtResource("52_548ar")
+}, {
+"duration": 1.0,
+"texture": ExtResource("54_kmqi2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("55_2q4c8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("55_18egk")
 }],
 "loop": true,
 "name": &"Run",
-"speed": 18.0
+"speed": 5.0
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_qakxq"]
@@ -256,10 +355,11 @@ radius = 51.0
 height = 112.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_xx3r0"]
-radius = 74.0068
+radius = 101.005
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_ren7w"]
-radius = 69.2604
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_wq158"]
+radius = 84.0
+height = 278.0
 
 [sub_resource type="Animation" id="Animation_aofpm"]
 resource_name = "Dano"
@@ -267,55 +367,84 @@ length = 0.7
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Cururu:animation")
+tracks/0/path = NodePath("HitContainer/Melee1/CollisionShape2D:disabled")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [&"Dano"]
+"values": [true]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("Cururu:frame")
+tracks/1/path = NodePath("HitContainer/Melee2/CollisionShape2D:disabled")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [0, 1, 2, 3, 4, 5, 6]
+"values": [true]
 }
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("HitContainer/Melee1/CollisionShape2D:disabled")
+tracks/2/path = NodePath("Cururu:animation")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [true]
+"values": [&"Dano"]
 }
 tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("HitContainer/Melee2/CollisionShape2D:disabled")
+tracks/3/path = NodePath("Cururu:frame")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 6]
+}
+
+[sub_resource type="Animation" id="Animation_x3lr7"]
+resource_name = "Dash_End"
+length = 0.15
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Cururu:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [true]
+"values": [&"Dash_End"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Cururu:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.05, 0.1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [0, 1, 2]
 }
 
 [sub_resource type="Animation" id="Animation_buhp1"]
-resource_name = "Dash"
-length = 0.001
+resource_name = "Dash_Loop"
+length = 0.4
+loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -326,7 +455,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [&"Run"]
+"values": [&"Dash_Loop"]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -335,14 +464,72 @@ tracks/1/path = NodePath("Cururu:frame")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3]
+}
+
+[sub_resource type="Animation" id="Animation_wpp42"]
+resource_name = "Dash_Start"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Cururu:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [1]
+"values": [&"Dash_Start"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Cururu:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.05, 0.1, 0.15),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3]
+}
+
+[sub_resource type="Animation" id="Animation_6iqbf"]
+resource_name = "Fall_Loop"
+length = 0.4
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Cururu:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"Fall_Loop"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Cururu:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3]
 }
 
 [sub_resource type="Animation" id="Animation_rpndr"]
-resource_name = "Fall"
+resource_name = "Fall_Start"
+length = 0.3
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -353,7 +540,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [&"Fall"]
+"values": [&"Fall_Start"]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -362,15 +549,15 @@ tracks/1/path = NodePath("Cururu:frame")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
+"times": PackedFloat32Array(0, 0.1, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1),
 "update": 1,
-"values": [0]
+"values": [0, 1, 2]
 }
 
 [sub_resource type="Animation" id="Animation_e7e5s"]
 resource_name = "Idle"
-length = 0.6
+length = 1.1
 loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -391,10 +578,10 @@ tracks/1/path = NodePath("Cururu:frame")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.3),
-"transitions": PackedFloat32Array(1, 1),
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
 "update": 1,
-"values": [0, 1]
+"values": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 }
 
 [sub_resource type="Animation" id="Animation_8v2dh"]
@@ -419,52 +606,52 @@ tracks/1/path = NodePath("Cururu:frame")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.0333333, 0.0666667),
-"transitions": PackedFloat32Array(1, 1, 1),
+"times": PackedFloat32Array(0, 0.0333333, 0.0666667, 0.1),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 1,
-"values": [0, 1, 2]
+"values": [0, 1, 2, 3]
 }
 
 [sub_resource type="Animation" id="Animation_7uoqt"]
 resource_name = "Magia"
 length = 0.75
-tracks/0/type = "value"
+tracks/0/type = "method"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Cururu:animation")
+tracks/0/path = NodePath("StateMachine/Magia")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [&"Magia"]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Cururu:frame")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.075, 0.15, 0.225, 0.3, 0.375, 0.45, 0.525, 0.6, 0.675),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
-"update": 1,
-"values": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
-}
-tracks/2/type = "method"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("StateMachine/Magia")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
 "times": PackedFloat32Array(0.525),
 "transitions": PackedFloat32Array(1),
 "values": [{
 "args": [],
 "method": &"UsaMagia"
 }]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Cururu:animation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"Magia"]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Cururu:frame")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
 }
 
 [sub_resource type="Animation" id="Animation_7ba70"]
@@ -473,149 +660,111 @@ length = 0.3
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Cururu:animation")
+tracks/0/path = NodePath("HitContainer/Melee1/CollisionShape2D:disabled")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.25),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [true, false, true]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("StateMachine/Melee")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.3),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"Reset_Ataque"
+}]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Cururu:animation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [&"Melee1"]
 }
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Cururu:frame")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.075, 0.15, 0.225),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
-"update": 1,
-"values": [0, 1, 2, 3]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("HitContainer/Melee1/CollisionShape2D:disabled")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0, 0.225),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [false, true]
-}
-tracks/3/type = "method"
+tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("StateMachine/Melee")
+tracks/3/path = NodePath("Cururu:frame")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
-"times": PackedFloat32Array(0.3),
-"transitions": PackedFloat32Array(1),
-"values": [{
-"args": [],
-"method": &"Reset_Ataque"
-}]
+"times": PackedFloat32Array(0, 0.05, 0.1, 0.15, 0.2, 0.25),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5]
 }
 
 [sub_resource type="Animation" id="Animation_yd0lm"]
 resource_name = "Melee2"
-length = 0.3
+length = 0.2
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Cururu:animation")
+tracks/0/path = NodePath("HitContainer/Melee2/CollisionShape2D:disabled")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [&"Melee2"]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Cururu:frame")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.075, 0.15, 0.225),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
-"update": 1,
-"values": [0, 1, 2, 3]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("HitContainer/Melee2/CollisionShape2D:disabled")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
 "times": PackedFloat32Array(0, 0.15),
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
 "values": [false, true]
 }
-tracks/3/type = "method"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("StateMachine/Melee")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(0.3),
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("StateMachine/Melee")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.2),
 "transitions": PackedFloat32Array(1),
 "values": [{
 "args": [],
 "method": &"Reset_Ataque"
 }]
 }
-
-[sub_resource type="Animation" id="Animation_g0l4m"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Cururu:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [1]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("HitContainer/Melee1/CollisionShape2D:disabled")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [true]
-}
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("HitContainer/Melee2/CollisionShape2D:disabled")
+tracks/2/path = NodePath("Cururu:animation")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [true]
+"values": [&"Melee2"]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Cururu:frame")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.05, 0.1, 0.15),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3]
 }
 
 [sub_resource type="Animation" id="Animation_prtj7"]
 resource_name = "Run"
+length = 1.1
 loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -636,23 +785,70 @@ tracks/1/path = NodePath("Cururu:frame")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
 "update": 1,
-"values": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+"values": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+}
+
+[sub_resource type="Animation" id="Animation_d45jk"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Cururu:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+
+[sub_resource type="Animation" id="Animation_wq158"]
+resource_name = "Land"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Cururu:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"Land"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Cururu:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [0, 1]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_g0l4m"]
 _data = {
 &"Dano": SubResource("Animation_aofpm"),
-&"Dash": SubResource("Animation_buhp1"),
-&"Fall": SubResource("Animation_rpndr"),
+&"Dash_End": SubResource("Animation_x3lr7"),
+&"Dash_Loop": SubResource("Animation_buhp1"),
+&"Dash_Start": SubResource("Animation_wpp42"),
+&"Fall_Loop": SubResource("Animation_6iqbf"),
+&"Fall_Start": SubResource("Animation_rpndr"),
 &"Idle": SubResource("Animation_e7e5s"),
 &"Jump": SubResource("Animation_8v2dh"),
+&"Land": SubResource("Animation_wq158"),
 &"Magia": SubResource("Animation_7uoqt"),
 &"Melee1": SubResource("Animation_7ba70"),
 &"Melee2": SubResource("Animation_yd0lm"),
-&"RESET": SubResource("Animation_g0l4m"),
+&"RESET": SubResource("Animation_d45jk"),
 &"Run": SubResource("Animation_prtj7")
 }
 
@@ -680,8 +876,8 @@ hurtbox_container = NodePath("HurtContainer")
 unique_name_in_owner = true
 position = Vector2(-16, -120)
 scale = Vector2(0.375651, 0.375651)
-sprite_frames = SubResource("SpriteFrames_t2cfw")
-animation = &"Idle"
+sprite_frames = SubResource("SpriteFrames_ser7u")
+animation = &"Melee2"
 frame = 1
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -716,24 +912,24 @@ debug_color = Color(0.92912, 0, 0.16329, 0.42)
 position = Vector2(-2, 0)
 
 [node name="Melee1" parent="HitContainer" node_paths=PackedStringArray("ignore") instance=ExtResource("47_grb16")]
-position = Vector2(3, -3)
+position = Vector2(33, -15)
 ignore = NodePath("../../HurtContainer/HurtBox")
 sfx = ExtResource("48_c8qv2")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HitContainer/Melee1"]
 position = Vector2(45, -94)
 shape = SubResource("CircleShape2D_xx3r0")
-disabled = true
 debug_color = Color(0.69455, 0.495447, 0, 0.42)
 
 [node name="Melee2" parent="HitContainer" node_paths=PackedStringArray("ignore") instance=ExtResource("47_grb16")]
+position = Vector2(12, 0)
 ignore = NodePath("../../HurtContainer/HurtBox")
 sfx = ExtResource("48_c8qv2")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HitContainer/Melee2"]
-position = Vector2(48, -75)
-shape = SubResource("CircleShape2D_ren7w")
-disabled = true
+position = Vector2(51, -73)
+rotation = -1.57079
+shape = SubResource("CapsuleShape2D_wq158")
 
 [node name="PosTiroMagia" type="Marker2D" parent="HitContainer"]
 unique_name_in_owner = true
@@ -822,6 +1018,9 @@ chao_state = NodePath("../Chao")
 fall_state = NodePath("../Fall")
 dano_state = NodePath("../Dano")
 
+[connection signal="animation_finished" from="Anim" to="StateMachine/Chao" method="_on_anim_animation_finished"]
+[connection signal="animation_finished" from="Anim" to="StateMachine/Fall" method="_on_anim_animation_finished"]
+[connection signal="animation_finished" from="Anim" to="StateMachine/Dash" method="_on_anim_animation_finished"]
 [connection signal="animation_finished" from="Anim" to="StateMachine/Dano" method="_on_anim_animation_finished"]
 [connection signal="animation_finished" from="Anim" to="StateMachine/Magia" method="_on_anim_animation_finished"]
 [connection signal="timeout" from="Timers/Coyote" to="StateMachine/Fall" method="_on_coyote_timeout"]

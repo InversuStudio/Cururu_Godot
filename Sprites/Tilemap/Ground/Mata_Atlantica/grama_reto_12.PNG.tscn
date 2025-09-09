@@ -1,8 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://dxl5qhok2my2n"]
-
-[ext_resource type="Texture2D" uid="uid://cjl88xeknofui" path="res://Sprites/Tilemap/Ground/Mata_Atlantica/grama_reto2.png" id="1_8flrv"]
-
-[node name="GramaReto12" type="Sprite2D"]
-rotation = -3.14159
-scale = Vector2(0.794638, 1.05785)
-texture = ExtResource("1_8flrv")
