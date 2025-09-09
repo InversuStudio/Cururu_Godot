@@ -22,7 +22,6 @@ func _ready() -> void:
 
 # FUNÇÃO DE RECEBER DANO
 func RecebeDano(dano:int, pos_target:Vector2):
-	print("Dano")
 	hurt.emit(get_overlapping_areas())
 	# Desabilita colisão
 	set_deferred("monitorable", false)

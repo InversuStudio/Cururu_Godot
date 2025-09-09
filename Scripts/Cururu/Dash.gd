@@ -22,6 +22,9 @@ func Enter() -> void:
 func Update(_delta:float) -> State:
 	# DANO
 	if parent.recebeu_dano:
+		acabou = true
+		if !parent.is_on_floor():
+			parent.deu_air_dash = true
 		return dano_state
 	return null
 	
@@ -36,6 +39,7 @@ func FixedUpdate(_delta:float) -> State:
 	return null
 
 func _on_dash_time_timeout() -> void:
+	if parent.recebeu_dano: return
 	print("Dash acabou")
 	%Anim.play("Dash_End")
 

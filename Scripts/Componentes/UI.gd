@@ -3,25 +3,31 @@ extends Control
 # Recebe se o player morreu
 var player_morreu: bool = false
 
-@onready var coracoes:Array = %BarraHeart.get_children()
+var coracoes:Array = []
+
+const sprite_cheio:Texture2D = preload("res://Sprites/UI/UIHUD-VIDACHEIA.png")
+const sprite_vazio:Texture2D = preload("res://Sprites/UI/UIHUD-VIDAVAZIZ.png")
 
 func _ready() -> void:
 	var player:CharacterBody2D = get_tree().get_first_node_in_group("Player")
 	# Se achar Player na cena...
 	if player:
+		# Adiciona corações na barra de vida
+		for n in GameData.vida_max:
+			var coracao: TextureRect = TextureRect.new()
+			coracao.custom_minimum_size = Vector2(50.0, 50.0)
+			coracao.texture = sprite_cheio
+			%BarraHeart.add_child(coracao)
+		coracoes = %BarraHeart.get_children()
 		# Inicializa valores da barra de magia
 		%BarraMagia.max_value = GameData.magia_max
 		%BarraMagia.value = GameData.magia_atual
 		# Inicializa valores da barra de vida
-		#%BarraVida.max_value = GameData.vida_max
 		if GameData.vida_atual > 0:
-			for c:Control in coracoes:
-				c.visible = c.get_index() + 1 <= GameData.vida_atual
-			#%BarraVida.value = GameData.vida_atual
-		#else: %BarraVida.value = GameData.vida_max
+			UpdateVida()
 		# Conecta sinais de dano, cura e morte
-		player.vida.connect("recebeu_dano", UpdateVida)#.bind(player))
-		player.vida.connect("recebeu_vida", UpdateVida)#.bind(player))
+		player.vida.connect("recebeu_dano", UpdateVida)
+		player.vida.connect("recebeu_vida", UpdateVida)
 		player.vida.connect("morreu", PlayerMorreu)
 		GameData.connect("update_magia", UpdateMagia)
 		# Conecta UpdateMoeda ao sinal de mudança na quintidade de moedas
@@ -48,9 +54,8 @@ func UpdateMoeda() -> void:
 
 # Função para alterar valor da barra de vida
 func UpdateVida() -> void:#_player:CharacterBody2D) -> void:
-	#%BarraVida.value = player.vida.vida_atual
-	for c:Control in coracoes:
-		c.visible = c.get_index() + 1 <= GameData.vida_atual
+	for c:TextureRect in coracoes:
+		c.texture = sprite_cheio if c.get_index() + 1 <= GameData.vida_atual else sprite_vazio
 
 func UpdateMagia() -> void:
 	if player_morreu == false:

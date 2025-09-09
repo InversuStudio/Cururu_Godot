@@ -242,18 +242,6 @@ position = Vector2(2947, -389)
 [node name="PortaTemp" parent="Props" instance=ExtResource("21_npj8t")]
 position = Vector2(4438, -560)
 
-[node name="Player" parent="." instance=ExtResource("3_2vimk")]
-position = Vector2(-1006, -315)
-vel = 9.0
-vel_aerea = 7.5
-tempo_pulo = 0.4
-tempo_cair = 0.37
-tempo_coyote = 0.15
-tempo_dash = 0.15
-
-[node name="InimigoTeste" parent="." instance=ExtResource("7_2vimk")]
-position = Vector2(-270, 0)
-
 [node name="LimitCamera" type="StaticBody2D" parent="."]
 collision_layer = 0
 collision_mask = 0
@@ -354,3 +342,15 @@ delay = 1.5
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PlataformaSome2/DestroiPlataforma"]
 position = Vector2(-0.5, -33)
 shape = SubResource("RectangleShape2D_u25g5")
+
+[node name="Player" parent="." instance=ExtResource("3_2vimk")]
+position = Vector2(-1006, -315)
+vel = 9.0
+vel_aerea = 7.5
+tempo_pulo = 0.4
+tempo_cair = 0.37
+tempo_coyote = 0.15
+tempo_dash = 0.15
+
+[node name="InimigoTeste" parent="." instance=ExtResource("7_2vimk")]
+position = Vector2(-270, 0)

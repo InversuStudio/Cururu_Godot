@@ -88,7 +88,6 @@ func _ready() -> void:
 	GameData.magia_max = int(magia_max)
 	if GameData.magia_atual > 0 and GameData.magia_atual < 1:
 		GameData.magia_atual = magia_max
-	print(GameData.magia_atual)
 
 func _process(delta: float) -> void:
 	# Controla se pode mover
