@@ -12,6 +12,8 @@ func _ready() -> void:
 	var player:CharacterBody2D = get_tree().get_first_node_in_group("Player")
 	# Se achar Player na cena...
 	if player:
+		# Espera frame para carregar tudo
+		await get_tree().process_frame
 		# Adiciona corações na barra de vida
 		for n in GameData.vida_max:
 			var coracao: TextureRect = TextureRect.new()
