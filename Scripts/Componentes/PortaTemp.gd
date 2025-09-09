@@ -1,12 +1,11 @@
 extends Node2D
 
 func _on_hurt(hitbox:Array) -> void:
-	if hitbox[0].get_parent().is_in_group("Magia"):
+	if hitbox and hitbox[0].get_parent().is_in_group("Magia"):
 		Disable()
 
 func _on_timer_timeout() -> void:
 	Enable()
-	print("FECHA PORTA")
 
 func Disable() -> void:
 	%Anim.play("Abre")
