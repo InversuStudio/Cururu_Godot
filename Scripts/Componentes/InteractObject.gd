@@ -3,3 +3,6 @@ extends Node
 
 func Interact(_player:CharacterBody2D) -> void:
 	pass
+
+func Extra(dentro:bool = true) -> void:
+	pass

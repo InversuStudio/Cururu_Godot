@@ -5,6 +5,7 @@ extends Node
 @export var start_state: State = null
 # State atual
 var current_state: State = null
+var last_state: State = null
 
 func _ready() -> void:
 	# Inicia variável parent de todos os States
@@ -39,5 +40,6 @@ func FixedUpdate(delta: float) -> void:
 # FUNÇÃO DE MUDAR STATE
 func Muda_State(new_state: State) -> void:
 	current_state.Exit() # Executa saída do State
+	last_state = current_state
 	current_state = new_state # Muda o State
 	current_state.Enter() # Executa entrada do State

@@ -12,8 +12,8 @@ var pode_interagir: bool = true
 
 # CONECTA SINAIS DE ENTRADA/SAÍDA
 func _ready() -> void:
-	connect("body_entered", _on_body_entered)
-	connect("body_exited", _on_body_exited)
+	connect("body_entered", Entrou)
+	connect("body_exited", Saiu)
 
 # CHECA INPUT DE INTERAÇÃO
 func _input(_event: InputEvent) -> void:
@@ -22,14 +22,16 @@ func _input(_event: InputEvent) -> void:
 		objeto_interacao.Interact(target)
 
 # CHECA SE PLAYER ENTROU NA ÁREA DE INTERAÇÃO
-func _on_body_entered(body: Node2D) -> void:
+func Entrou(body: Node2D) -> void:
 	if body.is_in_group("Player"):
 		print("DENTRO INTERACT")
 		target = body
 		dentro = true
+		objeto_interacao.Extra(true)
 
 # CHECA SE PLAYER SAIU DA ÁREA DE INTERAÇÃO
-func _on_body_exited(body: Node2D) -> void:
+func Saiu(body: Node2D) -> void:
 	if body.is_in_group("Player"):
 		print("FORA INTERACT")
 		dentro = false
+		objeto_interacao.Extra(false)

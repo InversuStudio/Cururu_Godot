@@ -33,9 +33,9 @@ func Exit() -> void:
 
 func Update(_delta:float) -> State:
 	if terminou == true:
-		if parent.is_on_floor:
-			return fall_state
-		if !parent.is_on_floot:
+		if parent.is_on_floor():
+			return chao_state
+		if !parent.is_on_floor():
 			return fall_state
 		if parent.recebeu_dano:
 			return dano_state

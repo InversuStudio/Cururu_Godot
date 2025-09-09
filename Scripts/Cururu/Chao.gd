@@ -19,7 +19,9 @@ var pode_anim: bool = false
 # INICIA O STATE
 func Enter() -> void:
 	print("CHAO")
-	%Anim.play("Land")
+	if parent.state_machine.last_state.name == "Fall": 
+		%Anim.play("Land")
+	else: pode_anim = true
 
 func Exit() -> void:
 	pode_anim = false
@@ -76,7 +78,6 @@ func FixedUpdate(delta: float) -> State:
 		return fall_state
 		
 	return null # Não muda o State
-
 
 func _on_anim_animation_finished(anim_name: StringName) -> void:
 	if anim_name == "Land":

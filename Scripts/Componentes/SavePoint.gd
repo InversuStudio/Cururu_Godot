@@ -5,3 +5,9 @@ func Interact(player:CharacterBody2D) -> void:
 	GameData.Save()
 	var hud:Control = get_tree().get_first_node_in_group("HUD")
 	if hud: hud.AvisoSave()
+
+func Extra(dentro:bool = true) -> void:
+	if dentro:
+		%Texto.show()
+	else:
+		%Texto.hide()
