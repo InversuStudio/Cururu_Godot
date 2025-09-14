@@ -1,9 +1,6 @@
-[gd_scene load_steps=9 format=3 uid="uid://bnm668fws2641"]
+[gd_scene load_steps=6 format=3 uid="uid://bnm668fws2641"]
 
-[ext_resource type="Script" uid="uid://bxwx72gohremh" path="res://Scripts/Inimigos/Larva.gd" id="1_k5ji4"]
-[ext_resource type="Texture2D" uid="uid://w3mtclikmpd" path="res://Sprites/Inimigos/Larva/larva_frame01.png" id="2_0cp27"]
-[ext_resource type="Texture2D" uid="uid://bq7g048dqmrss" path="res://Sprites/Inimigos/Larva/larva_frame02.png" id="3_1rowj"]
-[ext_resource type="Texture2D" uid="uid://1ve2rek0fem2" path="res://Sprites/Inimigos/Larva/larva_frame03.png" id="4_nwu52"]
+[ext_resource type="Texture2D" uid="uid://cksbnh71spiiy" path="res://Sprites/Tilemap/Assets/CenarioFloresta/cipó02.png" id="2_cmvod"]
 [ext_resource type="PackedScene" uid="uid://pc4mgv2nv8af" path="res://Objetos/Funcionalidade/CompHitBox.tscn" id="7_267nb"]
 [ext_resource type="AudioStream" uid="uid://dhgsnus0fna7q" path="res://Audio/SFX/SOM TESTE.mp3" id="8_d1fui"]
 
@@ -11,16 +8,7 @@
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_0cp27")
-}, {
-"duration": 1.0,
-"texture": ExtResource("3_1rowj")
-}, {
-"duration": 1.0,
-"texture": ExtResource("4_nwu52")
-}, {
-"duration": 1.0,
-"texture": ExtResource("3_1rowj")
+"texture": ExtResource("2_cmvod")
 }],
 "loop": true,
 "name": &"default",
@@ -28,12 +16,10 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ujy2f"]
-radius = 55.0
-height = 140.0
+radius = 244.0
+height = 510.0
 
 [node name="Armadilha" type="Node2D"]
-script = ExtResource("1_k5ji4")
-velocidade = 3.0
 
 [node name="Sprite" type="AnimatedSprite2D" parent="."]
 unique_name_in_owner = true
@@ -43,13 +29,12 @@ scale = Vector2(0.535156, 0.535156)
 sprite_frames = SubResource("SpriteFrames_tkh53")
 autoplay = "default"
 
-[node name="HitBox" parent="." node_paths=PackedStringArray("ignore") instance=ExtResource("7_267nb")]
+[node name="HitBox" parent="." instance=ExtResource("7_267nb")]
 unique_name_in_owner = true
-ignore = NodePath("")
 sfx = ExtResource("8_d1fui")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="HitBox"]
-position = Vector2(-57, -37)
+position = Vector2(7, -35)
 rotation = -1.57079
 shape = SubResource("CapsuleShape2D_ujy2f")
 debug_color = Color(0.807155, 0.414602, 3.85046e-07, 0.42)

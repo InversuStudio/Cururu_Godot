@@ -1,9 +1,9 @@
 [gd_scene load_steps=14 format=3 uid="uid://bu62qgilsxetf"]
 
 [ext_resource type="Script" uid="uid://bxwx72gohremh" path="res://Scripts/Inimigos/Larva.gd" id="1_upplv"]
-[ext_resource type="Texture2D" uid="uid://w3mtclikmpd" path="res://Sprites/Inimigos/Larva/larva_frame01.png" id="2_e4ug0"]
-[ext_resource type="Texture2D" uid="uid://bq7g048dqmrss" path="res://Sprites/Inimigos/Larva/larva_frame02.png" id="3_ehdjk"]
-[ext_resource type="Texture2D" uid="uid://1ve2rek0fem2" path="res://Sprites/Inimigos/Larva/larva_frame03.png" id="4_e1mmi"]
+[ext_resource type="Texture2D" uid="uid://b0g3aehy8v827" path="res://Sprites/Inimigos/Larva/scorpion_FRAME01.png" id="2_e4ug0"]
+[ext_resource type="Texture2D" uid="uid://cl6s3a1na1sf7" path="res://Sprites/Inimigos/Larva/scorpion_FRAME02.png" id="3_ehdjk"]
+[ext_resource type="Texture2D" uid="uid://cq8g6bvidl78b" path="res://Sprites/Inimigos/Larva/scorpion_FRAME03.png" id="4_e1mmi"]
 [ext_resource type="Script" uid="uid://hsdutxxttrp3" path="res://Scripts/Componentes/Vida.gd" id="5_6imq8"]
 [ext_resource type="PackedScene" uid="uid://va5pjd6vuuo2" path="res://Objetos/Funcionalidade/CompHurtBox.tscn" id="6_e4ug0"]
 [ext_resource type="PackedScene" uid="uid://pc4mgv2nv8af" path="res://Objetos/Funcionalidade/CompHitBox.tscn" id="7_dsbcb"]
@@ -24,9 +24,6 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": ExtResource("4_e1mmi")
-}, {
-"duration": 1.0,
-"texture": ExtResource("3_ehdjk")
 }],
 "loop": true,
 "name": &"default",
@@ -52,10 +49,11 @@ shape = SubResource("RectangleShape2D_ntg74")
 
 [node name="Sprite" type="AnimatedSprite2D" parent="."]
 unique_name_in_owner = true
-position = Vector2(-7.45058e-09, -48)
+position = Vector2(2, -89)
 scale = Vector2(0.535156, 0.535156)
 sprite_frames = SubResource("SpriteFrames_tkh53")
 autoplay = "default"
+frame_progress = 0.043297
 
 [node name="Vida" type="Node" parent="."]
 script = ExtResource("5_6imq8")
