@@ -64,8 +64,9 @@ vida_max = 10
 metadata/_custom_type_script = "uid://hsdutxxttrp3"
 
 [node name="HurtBox" parent="." node_paths=PackedStringArray("comp_vida", "parent") instance=ExtResource("6_ppnp4")]
+unique_name_in_owner = true
 comp_vida = NodePath("../Vida")
-distancia_knockback = 5.0
+distancia_knockback = 2.0
 tempo_knockback = 0.2
 parent = NodePath("..")
 
@@ -121,7 +122,7 @@ unique_name_in_owner = true
 position = Vector2(0, -43)
 
 [node name="OtimizadorSprite" type="VisibleOnScreenEnabler2D" parent="."]
-position = Vector2(6.5, -91)
-scale = Vector2(12.05, 10.5)
+position = Vector2(5.5, -90.5)
+scale = Vector2(12.25, 10.45)
 script = ExtResource("9_cusa3")
 metadata/_custom_type_script = "uid://b2ls33ys55oyt"

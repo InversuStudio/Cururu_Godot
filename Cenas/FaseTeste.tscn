@@ -295,10 +295,10 @@ position = Vector2(5014, -481)
 physics_interpolation_mode = 1
 position = Vector2(-1006, -469)
 process_callback = 0
-limit_left = -2759
-limit_top = -1966
-limit_right = 1485
-limit_bottom = 71
+limit_left = -29819
+limit_top = -5320
+limit_right = -16130
+limit_bottom = -2160
 editor_draw_limits = true
 
 [node name="PhantomCameraHost" type="Node" parent="MainCamera"]
@@ -353,4 +353,4 @@ tempo_coyote = 0.15
 tempo_dash = 0.15
 
 [node name="InimigoTeste" parent="." instance=ExtResource("7_2vimk")]
-position = Vector2(-270, 0)
+position = Vector2(-236, -19)

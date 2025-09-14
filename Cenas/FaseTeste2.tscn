@@ -142,10 +142,10 @@ debug_color = Color(0, 0.6, 0.701961, 0)
 physics_interpolation_mode = 1
 position = Vector2(-408, -454)
 process_callback = 0
-limit_left = -2759
-limit_top = -1966
-limit_right = 1485
-limit_bottom = 71
+limit_left = -29819
+limit_top = -5320
+limit_right = -16130
+limit_bottom = -2160
 editor_draw_limits = true
 
 [node name="PhantomCameraHost" type="Node" parent="MainCamera"]

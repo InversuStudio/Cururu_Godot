@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=4 uid="uid://51mlmfn0h0h"]
+[gd_scene load_steps=26 format=4 uid="uid://51mlmfn0h0h"]
 
 [ext_resource type="Texture2D" uid="uid://c374cwih425cq" path="res://Sprites/Tilemap/Ground/Base.png" id="1_m6iqj"]
 [ext_resource type="Script" uid="uid://bd046eokvcnu2" path="res://addons/phantom_camera/scripts/phantom_camera_host/phantom_camera_host.gd" id="2_45xcm"]
@@ -17,13 +17,15 @@
 [ext_resource type="Texture2D" uid="uid://c2yapafbd3cnf" path="res://Sprites/Tilemap/Assets/CenarioFloresta/cipó.png" id="10_646f2"]
 [ext_resource type="Script" uid="uid://bhexx6mj1xv3q" path="res://addons/phantom_camera/scripts/phantom_camera/phantom_camera_2d.gd" id="14_wd030"]
 [ext_resource type="Script" uid="uid://8umksf8e80fw" path="res://addons/phantom_camera/scripts/resources/tween_resource.gd" id="15_indba"]
+[ext_resource type="PackedScene" uid="uid://bs5i45df7rwnf" path="res://UI/HUD.tscn" id="18_p37rg"]
+[ext_resource type="PackedScene" uid="uid://phfxidwhdpy7" path="res://Objetos/Funcionalidade/CompFade.tscn" id="19_ispcl"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_64vq5"]
 size = Vector2(13689, 3160)
 
 [sub_resource type="Resource" id="Resource_p37rg"]
 script = ExtResource("15_indba")
-duration = 1.0
+duration = 0.0
 transition = 0
 ease = 2
 
@@ -178,13 +180,14 @@ shape = SubResource("RectangleShape2D_64vq5")
 
 [node name="PhantomCamera2D" type="Node2D" parent="." node_paths=PackedStringArray("follow_target")]
 top_level = true
-position = Vector2(-27585, -3598)
+position = Vector2(-27585, -3678)
 script = ExtResource("14_wd030")
 priority = 1
 follow_mode = 2
 follow_target = NodePath("../Cururu")
 zoom = Vector2(0.8, 0.8)
 tween_resource = SubResource("Resource_p37rg")
+follow_offset = Vector2(0, -80)
 draw_limits = true
 limit_target = NodePath("../CollisionShape2D")
 metadata/_custom_type_script = "uid://bhexx6mj1xv3q"
@@ -220,14 +223,13 @@ tempo_cair = 0.37
 tempo_coyote = 0.15
 tempo_dash = 0.18
 distancia_dash = 4.5
-distancia_knockback = 1.0
 
 [node name="Node2D" type="Node2D" parent="."]
 position = Vector2(-16453, -4087)
 
 [node name="Camera2D" type="Camera2D" parent="."]
 physics_interpolation_mode = 1
-position = Vector2(-27585, -3598)
+position = Vector2(-27585, -3678)
 zoom = Vector2(0.8, 0.8)
 process_callback = 0
 limit_left = -29819
@@ -975,3 +977,9 @@ flip_h = true
 [node name="Frontfolha3" type="Sprite2D" parent="Foreground/Camada 2"]
 position = Vector2(-26880, -2841)
 texture = ExtResource("8_646f2")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="HUD" parent="CanvasLayer" instance=ExtResource("18_p37rg")]
+
+[node name="Fade" parent="CanvasLayer" instance=ExtResource("19_ispcl")]

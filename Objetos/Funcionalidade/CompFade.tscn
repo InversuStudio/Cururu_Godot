@@ -58,6 +58,7 @@ _data = {
 
 [node name="Fade" type="ColorRect" groups=["Fade"]]
 self_modulate = Color(1, 1, 1, 0)
+z_index = 7
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
