@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=4 uid="uid://jgubb6mfikfv"]
+[gd_scene load_steps=21 format=4 uid="uid://jgubb6mfikfv"]
 
 [ext_resource type="Texture2D" uid="uid://c374cwih425cq" path="res://Sprites/Tilemap/Ground/Base.png" id="4_2iwj7"]
 [ext_resource type="PackedScene" uid="uid://dbp8j3rqvdpna" path="res://Objetos/Funcionalidade/CompSecret.tscn" id="4_urp4b"]
@@ -11,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://bs5i45df7rwnf" path="res://UI/HUD.tscn" id="9_1yukm"]
 [ext_resource type="Script" uid="uid://bhexx6mj1xv3q" path="res://addons/phantom_camera/scripts/phantom_camera/phantom_camera_2d.gd" id="9_2iwj7"]
 [ext_resource type="Script" uid="uid://8umksf8e80fw" path="res://addons/phantom_camera/scripts/resources/tween_resource.gd" id="10_d17v6"]
+[ext_resource type="PackedScene" uid="uid://bjvnm0aydr0vd" path="res://Objetos/Entidades/Morcego.tscn" id="12_2iwj7"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gjd7l"]
 texture = ExtResource("4_2iwj7")
@@ -60,7 +61,6 @@ tile_map_data = PackedByteArray("AADh//r/AAABAAAAAADh//v/AAABAAAAAADh//z/AAABAAA
 tile_set = SubResource("TileSet_l7pwf")
 
 [node name="Player" parent="." instance=ExtResource("6_aivbr")]
-position = Vector2(-1219, -296)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
@@ -109,7 +109,7 @@ position = Vector2(-1864, 0)
 
 [node name="Main" type="Node2D" parent="Cameras" node_paths=PackedStringArray("follow_target")]
 top_level = true
-position = Vector2(-1219, -454)
+position = Vector2(-408, -454)
 script = ExtResource("9_2iwj7")
 priority = 1
 follow_mode = 2
@@ -140,7 +140,7 @@ debug_color = Color(0, 0.6, 0.701961, 0)
 
 [node name="MainCamera" type="Camera2D" parent="."]
 physics_interpolation_mode = 1
-position = Vector2(-1219, -454)
+position = Vector2(-408, -454)
 process_callback = 0
 limit_left = -2759
 limit_top = -1966
@@ -153,3 +153,6 @@ process_priority = 300
 process_physics_priority = 300
 script = ExtResource("8_d17v6")
 metadata/_custom_type_script = "uid://bd046eokvcnu2"
+
+[node name="Morcego" parent="." instance=ExtResource("12_2iwj7")]
+position = Vector2(-1329, -661)

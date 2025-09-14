@@ -79,7 +79,7 @@ _data = {
 &"RESET": SubResource("Animation_7ptwx")
 }
 
-[node name="PortaTemp" type="Node2D"]
+[node name="PortaTemp" type="Node2D" groups=["Special"]]
 script = ExtResource("1_rixxk")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]

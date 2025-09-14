@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cq8g6bvidl78b"
-path="res://.godot/imported/scorpion_FRAME03.png-9aee6a53e39825674d4594d791176a29.ctex"
+uid="uid://hsargowvj610"
+path="res://.godot/imported/09.png-0b4b97e5526547244b1f25ea19f3263d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Inimigos/Larva/scorpion_FRAME03.png"
-dest_files=["res://.godot/imported/scorpion_FRAME03.png-9aee6a53e39825674d4594d791176a29.ctex"]
+source_file="res://Sprites/Cururu/Special/09.png"
+dest_files=["res://.godot/imported/09.png-0b4b97e5526547244b1f25ea19f3263d.ctex"]
 
 [params]
 

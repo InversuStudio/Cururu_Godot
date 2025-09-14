@@ -68,7 +68,9 @@ offset_left = 12.0
 offset_top = 10.0
 offset_right = 840.0
 offset_bottom = 272.0
+scale = Vector2(0.559998, 0.559998)
 texture = ExtResource("2_f2wx0")
+expand_mode = 1
 
 [node name="MaskMagia" type="TextureRect" parent="Main"]
 clip_children = 1
@@ -79,6 +81,7 @@ offset_top = 16.0
 offset_right = 238.0
 offset_bottom = 236.0
 texture = ExtResource("5_2ptjp")
+expand_mode = 1
 
 [node name="BarraMagia" type="ProgressBar" parent="Main/MaskMagia"]
 unique_name_in_owner = true
@@ -88,10 +91,6 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -6.0
-offset_top = -4.0
-offset_right = -6.0
-offset_bottom = -4.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/background = SubResource("StyleBoxEmpty_4n7mi")
@@ -105,9 +104,9 @@ show_percentage = false
 [node name="BarraHeart" type="HBoxContainer" parent="Main"]
 unique_name_in_owner = true
 layout_mode = 1
-offset_left = 281.0
+offset_left = 287.501
 offset_top = 44.0
-offset_right = 852.0
+offset_right = 858.501
 offset_bottom = 194.0
 
 [node name="CounterMoeda" type="Label" parent="."]

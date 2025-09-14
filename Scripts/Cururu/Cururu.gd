@@ -80,7 +80,7 @@ func _ready() -> void:
 	%DashCooldown.wait_time = cooldown_dash
 	%Cururu.flip_h = GameData.direcao
 	# Conecta sinal de dano
-	vida.connect("recebeu_dano", RecebeuDano)
+	vida.connect("alterou_vida", VidaMudou)
 	# Aplica flip, se necessário
 	if sprite.flip_h == true:
 		hitbox_container.scale.x = -1
@@ -115,9 +115,13 @@ func _on_dash_cooldown_timeout() -> void:
 	pode_dash = true
 
 # Função que indica dano
-func RecebeuDano() -> void:
-	print("RECEBI DANO")
-	recebeu_dano = true
+func VidaMudou(vida_nova, vida_antiga) -> void:
+	GameData.vida_atual = vida_nova
+	if vida_nova < vida_antiga:
+		print("RECEBI DANO")
+		recebeu_dano = true
+	else:
+		print("RECEBI CURA")
 	
 # COMPORTAMENTO AO MORRER
 func Morte() -> void:

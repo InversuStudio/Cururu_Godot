@@ -1,4 +1,4 @@
-[gd_scene load_steps=45 format=4 uid="uid://c8b5coitcrxvi"]
+[gd_scene load_steps=43 format=4 uid="uid://c8b5coitcrxvi"]
 
 [ext_resource type="Texture2D" uid="uid://l6b625ae8udc" path="res://Sprites/Tilemap/Assets/CenarioFloresta/BACK.png" id="1_nq02s"]
 [ext_resource type="Script" uid="uid://32imhtwu4l7" path="res://Scripts/Componentes/HitBox.gd" id="1_op4mj"]
@@ -24,8 +24,6 @@
 [ext_resource type="Texture2D" uid="uid://c2yapafbd3cnf" path="res://Sprites/Tilemap/Assets/CenarioFloresta/cipó.png" id="16_i15f3"]
 [ext_resource type="Texture2D" uid="uid://1xye63wehrqh" path="res://Sprites/Tilemap/Assets/CenarioFloresta/Moita teste.png" id="17_27ays"]
 [ext_resource type="Script" uid="uid://bd046eokvcnu2" path="res://addons/phantom_camera/scripts/phantom_camera_host/phantom_camera_host.gd" id="18_vfbi7"]
-[ext_resource type="Texture2D" uid="uid://w3mtclikmpd" path="res://Sprites/Inimigos/Larva/larva_frame01.png" id="21_gwj8a"]
-[ext_resource type="Texture2D" uid="uid://cc8ddhydn2eje" path="res://Sprites/Inimigos/abelha_frame3.png" id="22_u8ai8"]
 [ext_resource type="PackedScene" uid="uid://b0hyovdafhkyk" path="res://Objetos/Funcionalidade/TransicaoCamera.tscn" id="25_y3rtv"]
 [ext_resource type="Script" uid="uid://b2ls33ys55oyt" path="res://Scripts/Componentes/OtimizadorSprite.gd" id="26_3gc4k"]
 [ext_resource type="Texture2D" uid="uid://cb8kn7b5ldm37" path="res://Sprites/Tilemap/Assets/CenarioFloresta/PF02.png" id="28_sigs8"]
@@ -270,7 +268,6 @@ size = Vector2(35.5, 1017.74)
 [node name="MataAtlantica" type="Node2D"]
 
 [node name="Back" type="Sprite2D" parent="."]
-visible = false
 position = Vector2(1387.48, -4237)
 scale = Vector2(10.3724, 5.51781)
 texture = ExtResource("1_nq02s")
@@ -898,38 +895,6 @@ vida = NodePath("../Vida")
 visible = false
 position = Vector2(-2.08691, -101.13)
 scale = Vector2(0.814512, 0.814512)
-
-[node name="Inimigos" type="Node2D" parent="."]
-visible = false
-position = Vector2(-2144, 464)
-rotation = 0.0698132
-scale = Vector2(0.40332, 0.40332)
-
-[node name="LarvaFrame01" type="Sprite2D" parent="Inimigos"]
-texture = ExtResource("21_gwj8a")
-
-[node name="LarvaFrame02" type="Sprite2D" parent="Inimigos"]
-position = Vector2(4093.45, -286.242)
-texture = ExtResource("21_gwj8a")
-
-[node name="AbelhaFrame3" type="Sprite2D" parent="Inimigos"]
-position = Vector2(15469.1, -4663.26)
-rotation = -0.0698132
-scale = Vector2(1.1138, 1.1138)
-texture = ExtResource("22_u8ai8")
-
-[node name="AbelhaFrame5" type="Sprite2D" parent="Inimigos"]
-position = Vector2(14212, -10627.5)
-rotation = -0.0698132
-scale = Vector2(1.1138, 1.1138)
-texture = ExtResource("22_u8ai8")
-
-[node name="AbelhaFrame4" type="Sprite2D" parent="Inimigos"]
-position = Vector2(12237.4, -6875.55)
-rotation = -0.0698132
-scale = Vector2(1.1138, 1.1138)
-texture = ExtResource("22_u8ai8")
-flip_h = true
 
 [node name="Salao-Main" parent="." node_paths=PackedStringArray("de_camera_x", "para_camera_y") instance=ExtResource("25_y3rtv")]
 visible = false

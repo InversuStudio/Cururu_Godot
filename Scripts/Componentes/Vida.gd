@@ -5,9 +5,8 @@ extends Node
 @export var vida_max : int = 0
 var vida_atual : int = 0
 
-signal recebeu_dano
-signal recebeu_vida
-signal morreu
+# Sinal emite com 2 valores: vida_antiga, vida_atual
+signal alterou_vida
 
 func _ready() -> void:
 	vida_atual = vida_max
@@ -21,25 +20,22 @@ func _ready() -> void:
 
 # FUNÇÃO PARA DIMINUIR VIDA
 func RecebeDano(dano:int) -> void:
+	alterou_vida.emit(vida_atual - dano, vida_atual)
 	vida_atual -= dano
 	vida_atual = clampi(vida_atual, 0, vida_max)
-	GameData.vida_atual = vida_atual
-	recebeu_dano.emit()
 	# Se vida for zerada, morre
 	if vida_atual <= 0:
 		Morre()
 
 # FUNÇÃO PARA AUMENTAR VIDA
 func RecebeCura(cura:int) -> void:
+	alterou_vida.emit(vida_atual + cura, vida_atual)
 	vida_atual += cura
 	vida_atual = clampi(vida_atual, 0, vida_max)
-	GameData.vida_atual = vida_atual
-	recebeu_vida.emit()
 
 # FUNÇÃO DE MORRER
 func Morre():
 	print("MORRI")
-	morreu.emit()
 	if get_parent().has_method("Morte"):
 		get_parent().Morte()
 	else:

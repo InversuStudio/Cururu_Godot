@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cpkv7mb55k054"
-path="res://.godot/imported/06.png-d8a3ca18fbe1816fe089270ddc09c3a7.ctex"
+uid="uid://c6dp7nydf5jak"
+path="res://.godot/imported/01.png-baecfc50ed6b4f9fd00d907ca608e058.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Cururu/Melee/Ataque_Secundario/06.png"
-dest_files=["res://.godot/imported/06.png-d8a3ca18fbe1816fe089270ddc09c3a7.ctex"]
+source_file="res://Sprites/Cururu/Special/01.png"
+dest_files=["res://.godot/imported/01.png-baecfc50ed6b4f9fd00d907ca608e058.ctex"]
 
 [params]
 

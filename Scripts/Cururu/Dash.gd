@@ -5,8 +5,6 @@ extends State
 @export var chao_state : State = null
 ## State de queda
 @export var fall_state : State = null
-## State de wall slide
-@export var wall_state : State = null
 ## State de dano
 @export var dano_state: State = null
 

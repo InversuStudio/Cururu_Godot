@@ -3,12 +3,8 @@ extends State
 @export_group("Próximos States")
 ## State de chão
 @export var chao_state : State = null
-## State de wall slide
-@export var wall_state : State = null
 ## State de pulo
 @export var pulo_state : State = null
-## State de nado
-@export var nadando_state : State = null
 ## State de dash
 @export var dash_state : State = null
 ## State de ataque melee
@@ -16,7 +12,7 @@ extends State
 ## State de dano
 @export var dano_state: State = null
 ## State de ataque magico
-@export var magia_state: State = null
+@export var special_state: State = null
 
 # INICIA O STATE
 func Enter() -> void:
@@ -30,7 +26,7 @@ func Update(_delta: float) -> State:
 	# INPUT MAGIA
 	if Input.is_action_just_pressed("magia"
 	) and GameData.upgrade_num >= 1 and GameData.magia_atual >= 3:
-		return magia_state
+		return special_state
 	# INPUT PULO
 	if Input.is_action_just_pressed("pulo"):
 		if parent.is_coyote:

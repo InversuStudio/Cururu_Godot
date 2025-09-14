@@ -10,7 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://b0hyovdafhkyk" path="res://Objetos/Funcionalidade/TransicaoCamera.tscn" id="8_dwxye"]
 [ext_resource type="PackedScene" uid="uid://cqyub70sv0ofp" path="res://Objetos/Props/SavePoint.tscn" id="9_xdldm"]
 [ext_resource type="PackedScene" uid="uid://nohq28uk7lfk" path="res://Objetos/Entidades/Player.tscn" id="10_3ebqc"]
-[ext_resource type="PackedScene" uid="uid://bu62qgilsxetf" path="res://Objetos/Entidades/Larva.tscn" id="11_0vg4r"]
+[ext_resource type="PackedScene" uid="uid://bu62qgilsxetf" path="res://Objetos/Entidades/Escorpiao.tscn" id="11_0vg4r"]
 [ext_resource type="PackedScene" uid="uid://bktu336s6ruri" path="res://Objetos/Props/Moeda.tscn" id="12_nkv4g"]
 [ext_resource type="Script" uid="uid://bd046eokvcnu2" path="res://addons/phantom_camera/scripts/phantom_camera_host/phantom_camera_host.gd" id="13_15bf1"]
 [ext_resource type="Script" uid="uid://bhexx6mj1xv3q" path="res://addons/phantom_camera/scripts/phantom_camera/phantom_camera_2d.gd" id="14_jx43u"]

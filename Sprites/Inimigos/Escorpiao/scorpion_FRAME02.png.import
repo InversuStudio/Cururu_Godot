@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b2br0jnttod5e"
-path="res://.godot/imported/08.png-4af8d16d43289d93864f050ef7e8edbe.ctex"
+uid="uid://cl6s3a1na1sf7"
+path="res://.godot/imported/scorpion_FRAME02.png-6c23f5312a3abd7cb9e55c0106c24608.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Cururu/Melee/Ataque_Secundario/08.png"
-dest_files=["res://.godot/imported/08.png-4af8d16d43289d93864f050ef7e8edbe.ctex"]
+source_file="res://Sprites/Inimigos/Escorpiao/scorpion_FRAME02.png"
+dest_files=["res://.godot/imported/scorpion_FRAME02.png-6c23f5312a3abd7cb9e55c0106c24608.ctex"]
 
 [params]
 

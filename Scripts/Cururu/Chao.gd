@@ -12,13 +12,14 @@ extends State
 ## State de ataque melee
 @export var melee_state: State = null
 ## State de ataque magico
-@export var magia_state: State = null
+@export var special_state: State = null
 
 var pode_anim: bool = false
 
 # INICIA O STATE
 func Enter() -> void:
 	print("CHAO")
+	%Coyote.stop()
 	if parent.state_machine.last_state.name == "Fall":
 		%Anim.play("Land")
 	else: pode_anim = true
@@ -33,7 +34,7 @@ func Update(_delta: float) -> State:
 	# INPUT MAGIA
 	if Input.is_action_just_pressed("magia"
 	) and GameData.upgrade_num >= 1 and GameData.magia_atual >= 3:
-		return magia_state
+		return special_state
 	# INPUT DASH
 	if Input.is_action_just_pressed("dash") and parent.pode_dash:
 		return dash_state
@@ -43,11 +44,9 @@ func Update(_delta: float) -> State:
 func FixedUpdate(delta: float) -> State:
 	# Aplica gravidade bem fraca
 	parent.velocity.y += 128 * delta
-	
 	# DANO
 	if parent.recebeu_dano:
 		return dano_state
-		
 	# Aplica movimento
 	var dir = parent.input_move * parent.speed
 	parent.velocity.x = move_toward(parent.velocity.x, dir, parent.speed / 8)

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cc8ddhydn2eje"
-path="res://.godot/imported/abelha_frame3.png-e885a2e9637ef87380702d63d28cbb48.ctex"
+uid="uid://b0g3aehy8v827"
+path="res://.godot/imported/scorpion_FRAME01.png-24c736113facdeb263b79503cd274b02.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Inimigos/abelha_frame3.png"
-dest_files=["res://.godot/imported/abelha_frame3.png-e885a2e9637ef87380702d63d28cbb48.ctex"]
+source_file="res://Sprites/Inimigos/Escorpiao/scorpion_FRAME01.png"
+dest_files=["res://.godot/imported/scorpion_FRAME01.png-24c736113facdeb263b79503cd274b02.ctex"]
 
 [params]
 
