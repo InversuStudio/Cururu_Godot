@@ -334,6 +334,27 @@ position = Vector2(121, 159)
 [node name="Armadilha3" parent="Espinhos" instance=ExtResource("28_l7gx4")]
 position = Vector2(326, 263)
 
+[node name="Armadilha11" parent="Espinhos" instance=ExtResource("28_l7gx4")]
+position = Vector2(-1650, 1806)
+
+[node name="Armadilha12" parent="Espinhos" instance=ExtResource("28_l7gx4")]
+position = Vector2(-1852, 2037)
+
+[node name="Armadilha13" parent="Espinhos" instance=ExtResource("28_l7gx4")]
+position = Vector2(-1967, 2398)
+
+[node name="Armadilha14" parent="Espinhos" instance=ExtResource("28_l7gx4")]
+position = Vector2(-1981, 2802)
+
+[node name="Armadilha15" parent="Espinhos" instance=ExtResource("28_l7gx4")]
+position = Vector2(-2053, 2989)
+
+[node name="Armadilha16" parent="Espinhos" instance=ExtResource("28_l7gx4")]
+position = Vector2(-292, 3189)
+
+[node name="Armadilha17" parent="Espinhos" instance=ExtResource("28_l7gx4")]
+position = Vector2(-684, 3293)
+
 [node name="Armadilha4" parent="Espinhos" instance=ExtResource("28_l7gx4")]
 position = Vector2(460, 430)
 
@@ -706,10 +727,10 @@ physics_interpolation_mode = 1
 position = Vector2(-17749, -3663)
 zoom = Vector2(0.8, 0.8)
 process_callback = 0
-limit_left = -39422
-limit_top = -5163
-limit_right = -30082
-limit_bottom = -2990
+limit_left = -29819
+limit_top = -5320
+limit_right = -16130
+limit_bottom = -2160
 editor_draw_limits = true
 
 [node name="PhantomCameraHost" type="Node" parent="Camera2D"]

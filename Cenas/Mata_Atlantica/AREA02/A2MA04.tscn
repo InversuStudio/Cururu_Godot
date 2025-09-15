@@ -152,10 +152,6 @@ position = Vector2(5456, -1863)
 scale = Vector2(0.959163, 0.959163)
 vel = 12.0
 vel_aerea = 10.0
-altura_pulo = 4.6
-tempo_pulo = 0.4
-tempo_cair = 0.37
-tempo_coyote = 0.15
 tempo_dash = 0.15
 
 [node name="Camera2D" type="Camera2D" parent="Player2"]

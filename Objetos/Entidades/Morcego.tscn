@@ -32,16 +32,17 @@ animations = [{
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_87fsy"]
-radius = 134.48
+radius = 117.209
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ujy2f"]
 radius = 53.0
 height = 116.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_j5mvf"]
-radius = 549.295
+radius = 664.782
 
 [node name="Morcego" type="CharacterBody2D"]
+scale = Vector2(0.88, 0.88)
 collision_layer = 2
 script = ExtResource("1_j5mvf")
 
@@ -59,7 +60,7 @@ frame_progress = 0.537473
 
 [node name="Vida" type="Node" parent="."]
 script = ExtResource("5_ohlaa")
-vida_max = 5
+vida_max = 2
 metadata/_custom_type_script = "uid://hsdutxxttrp3"
 
 [node name="HurtBox" parent="." node_paths=PackedStringArray("comp_vida", "parent") instance=ExtResource("5_87fsy")]
