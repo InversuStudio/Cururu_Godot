@@ -23,7 +23,6 @@ height = 510.0
 
 [node name="Sprite" type="AnimatedSprite2D" parent="."]
 unique_name_in_owner = true
-self_modulate = Color(0.965667, 0, 0.340985, 1)
 position = Vector2(-7.45058e-09, -48)
 scale = Vector2(0.535156, 0.535156)
 sprite_frames = SubResource("SpriteFrames_tkh53")
