@@ -18,7 +18,7 @@
 [ext_resource type="Script" uid="uid://bhexx6mj1xv3q" path="res://addons/phantom_camera/scripts/phantom_camera/phantom_camera_2d.gd" id="14_wd030"]
 [ext_resource type="Script" uid="uid://8umksf8e80fw" path="res://addons/phantom_camera/scripts/resources/tween_resource.gd" id="15_indba"]
 [ext_resource type="PackedScene" uid="uid://bs5i45df7rwnf" path="res://UI/HUD.tscn" id="18_p37rg"]
-[ext_resource type="PackedScene" uid="uid://phfxidwhdpy7" path="res://Objetos/Funcionalidade/CompFade.tscn" id="19_ispcl"]
+[ext_resource type="Script" uid="uid://cviskiwh21kxe" path="res://Scripts/Componentes/Fade.gd" id="19_p37rg"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_64vq5"]
 size = Vector2(13689, 3160)
@@ -195,10 +195,10 @@ metadata/_custom_type_script = "uid://bhexx6mj1xv3q"
 [node name="Background" type="Node2D" parent="."]
 
 [node name="Armadilha2" parent="." instance=ExtResource("3_indba")]
-position = Vector2(-26651, -3027)
+position = Vector2(-26923, -3021)
 
 [node name="Armadilha" parent="." instance=ExtResource("3_indba")]
-position = Vector2(-26993, -3134)
+position = Vector2(-27088, -3223)
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
 position = Vector2(-2, 0)
@@ -206,10 +206,10 @@ tile_map_data = PackedByteArray("AAAX/9v/AAABAAMAAAAX/+b/AAABAAMAAAAX/+f/AAACAAM
 tile_set = SubResource("TileSet_l5dfc")
 
 [node name="Larva" parent="." instance=ExtResource("5_64vq5")]
-position = Vector2(-27213, -3603)
+position = Vector2(-28708, -3344)
 
 [node name="Morcego" parent="." instance=ExtResource("6_p37rg")]
-position = Vector2(-26732, -4030)
+position = Vector2(-24625, -4318)
 
 [node name="Cururu" parent="." instance=ExtResource("4_rnfct")]
 z_index = 0
@@ -217,12 +217,7 @@ position = Vector2(-27585, -3598)
 scale = Vector2(0.959163, 0.959163)
 vel = 12.0
 vel_aerea = 10.0
-altura_pulo = 4.6
-tempo_pulo = 0.4
-tempo_cair = 0.37
-tempo_coyote = 0.15
 tempo_dash = 0.18
-distancia_dash = 4.5
 
 [node name="Node2D" type="Node2D" parent="."]
 position = Vector2(-16453, -4087)
@@ -232,10 +227,10 @@ physics_interpolation_mode = 1
 position = Vector2(-27585, -3678)
 zoom = Vector2(0.8, 0.8)
 process_callback = 0
-limit_left = -29819
-limit_top = -5320
-limit_right = -16130
-limit_bottom = -2160
+limit_left = -39422
+limit_top = -5163
+limit_right = -30082
+limit_bottom = -2990
 editor_draw_limits = true
 
 [node name="PhantomCameraHost" type="Node" parent="Camera2D"]
@@ -978,8 +973,21 @@ flip_h = true
 position = Vector2(-26880, -2841)
 texture = ExtResource("8_646f2")
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
+[node name="UIGAME" type="CanvasLayer" parent="."]
 
-[node name="HUD" parent="CanvasLayer" instance=ExtResource("18_p37rg")]
+[node name="HUD" parent="UIGAME" instance=ExtResource("18_p37rg")]
+offset_left = -6.0
+offset_top = -2.0
+offset_right = -6.0
+offset_bottom = -2.0
 
-[node name="Fade" parent="CanvasLayer" instance=ExtResource("19_ispcl")]
+[node name="Fade" type="ColorRect" parent="UIGAME"]
+anchors_preset = -1
+anchor_right = 0.262
+anchor_bottom = 0.168
+offset_right = 0.959961
+offset_bottom = -0.440018
+color = Color(1, 1, 1, 0)
+script = ExtResource("19_p37rg")
+metadata/_custom_type_script = "uid://cviskiwh21kxe"
+metadata/_edit_use_anchors_ = true

@@ -295,10 +295,10 @@ position = Vector2(5014, -481)
 physics_interpolation_mode = 1
 position = Vector2(-1006, -469)
 process_callback = 0
-limit_left = -29819
-limit_top = -5320
-limit_right = -16130
-limit_bottom = -2160
+limit_left = -39422
+limit_top = -5163
+limit_right = -30082
+limit_bottom = -2990
 editor_draw_limits = true
 
 [node name="PhantomCameraHost" type="Node" parent="MainCamera"]
@@ -345,11 +345,6 @@ shape = SubResource("RectangleShape2D_u25g5")
 
 [node name="Player" parent="." instance=ExtResource("3_2vimk")]
 position = Vector2(-1006, -315)
-vel = 9.0
-vel_aerea = 7.5
-tempo_pulo = 0.4
-tempo_cair = 0.37
-tempo_coyote = 0.15
 tempo_dash = 0.15
 
 [node name="InimigoTeste" parent="." instance=ExtResource("7_2vimk")]

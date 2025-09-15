@@ -1,4 +1,4 @@
-[gd_scene load_steps=37 format=4 uid="uid://nqosq2wj0auk"]
+[gd_scene load_steps=39 format=4 uid="uid://nqosq2wj0auk"]
 
 [ext_resource type="Texture2D" uid="uid://c374cwih425cq" path="res://Sprites/Tilemap/Ground/Base.png" id="1_vftmf"]
 [ext_resource type="Texture2D" uid="uid://l6b625ae8udc" path="res://Sprites/Tilemap/Assets/CenarioFloresta/BACK.png" id="2_m2axx"]
@@ -28,6 +28,8 @@
 [ext_resource type="Script" uid="uid://8umksf8e80fw" path="res://addons/phantom_camera/scripts/resources/tween_resource.gd" id="27_l7gx4"]
 [ext_resource type="PackedScene" uid="uid://bnm668fws2641" path="res://Objetos/Props/Armadilha.tscn" id="28_l7gx4"]
 [ext_resource type="PackedScene" uid="uid://nohq28uk7lfk" path="res://Objetos/Entidades/Player.tscn" id="28_yftf5"]
+[ext_resource type="PackedScene" uid="uid://bs5i45df7rwnf" path="res://UI/HUD.tscn" id="29_rnx0k"]
+[ext_resource type="Script" uid="uid://cviskiwh21kxe" path="res://Scripts/Componentes/Fade.gd" id="30_qclta"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_l7gx4"]
 size = Vector2(12155, 6336)
@@ -364,12 +366,7 @@ position = Vector2(-18459, -3583)
 scale = Vector2(0.919994, 0.919994)
 vel = 12.0
 vel_aerea = 10.0
-altura_pulo = 4.6
-tempo_pulo = 0.4
-tempo_cair = 0.37
-tempo_coyote = 0.15
 tempo_dash = 0.18
-distancia_dash = 4.5
 distancia_knockback = 1.0
 
 [node name="Chaofloresta" type="Sprite2D" parent="."]
@@ -734,3 +731,22 @@ follow_offset = Vector2(0, -80)
 draw_limits = true
 limit_target = NodePath("../CollisionShape2D")
 metadata/_custom_type_script = "uid://bhexx6mj1xv3q"
+
+[node name="UIGAME" type="CanvasLayer" parent="."]
+
+[node name="HUD" parent="UIGAME" instance=ExtResource("29_rnx0k")]
+offset_left = -6.0
+offset_top = -2.0
+offset_right = -6.0
+offset_bottom = -2.0
+
+[node name="Fade" type="ColorRect" parent="UIGAME"]
+anchors_preset = -1
+anchor_right = 0.262
+anchor_bottom = 0.168
+offset_right = 0.959961
+offset_bottom = -0.440018
+color = Color(1, 1, 1, 0)
+script = ExtResource("30_qclta")
+metadata/_custom_type_script = "uid://cviskiwh21kxe"
+metadata/_edit_use_anchors_ = true

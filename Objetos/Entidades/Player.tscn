@@ -910,15 +910,15 @@ _data = {
 z_index = 1
 collision_layer = 2
 script = ExtResource("1_gwpdq")
-vel = 7.0
-vel_aerea = 5.0
-altura_pulo = 3.0
-tempo_pulo = 0.8
-tempo_cair = 0.5
-tempo_coyote = 0.1
+vel = 9.0
+vel_aerea = 7.5
+altura_pulo = 4.6
+tempo_pulo = 0.4
+tempo_cair = 0.37
+tempo_coyote = 0.15
 lag_pulo = 0.1
 tempo_dash = 0.2
-distancia_dash = 4.0
+distancia_dash = 4.5
 cooldown_dash = 0.2
 distancia_knockback = 2.0
 tempo_knockback = 0.2
@@ -947,6 +947,8 @@ metadata/_custom_type_script = "uid://hsdutxxttrp3"
 
 [node name="HurtBox" parent="HurtContainer" node_paths=PackedStringArray("comp_vida", "parent") instance=ExtResource("46_wjcvp")]
 comp_vida = NodePath("../../Vida")
+distancia_knockback = 10.0
+tempo_knockback = 0.2
 cooldown_dano = 0.5
 parent = NodePath("../..")
 
@@ -987,6 +989,7 @@ shape = SubResource("CapsuleShape2D_wq158")
 disabled = true
 
 [node name="Special" parent="HitContainer" groups=["Special"] instance=ExtResource("47_grb16")]
+dano = 2
 
 [node name="ColSpecial" type="CollisionShape2D" parent="HitContainer/Special"]
 position = Vector2(218, -78)

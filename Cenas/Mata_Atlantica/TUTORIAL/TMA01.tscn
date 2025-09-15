@@ -1,8 +1,7 @@
-[gd_scene load_steps=19 format=4 uid="uid://dfuswe0wcsy33"]
+[gd_scene load_steps=20 format=4 uid="uid://dfuswe0wcsy33"]
 
 [ext_resource type="Texture2D" uid="uid://c374cwih425cq" path="res://Sprites/Tilemap/Ground/Base.png" id="1_axyo6"]
 [ext_resource type="PackedScene" uid="uid://cqyub70sv0ofp" path="res://Objetos/Props/SavePoint.tscn" id="1_kqyhf"]
-[ext_resource type="PackedScene" uid="uid://d3cks8kri2olw" path="res://Objetos/Props/AreaUpgrade.tscn" id="2_ogbcg"]
 [ext_resource type="Texture2D" uid="uid://cjl88xeknofui" path="res://Sprites/Tilemap/Ground/Mata_Atlantica/grama_reto.png" id="5_53ur3"]
 [ext_resource type="Texture2D" uid="uid://uq6dbjep5wva" path="res://Sprites/Tilemap/Assets/CenarioFloresta/frontfolha.png" id="5_cvdhq"]
 [ext_resource type="PackedScene" uid="uid://nohq28uk7lfk" path="res://Objetos/Entidades/Player.tscn" id="6_rp2yr"]
@@ -13,9 +12,17 @@
 [ext_resource type="Texture2D" uid="uid://b3k8nvt7ux4fp" path="res://Sprites/Tilemap/Assets/CenarioFloresta/arbusto2.png" id="9_td0al"]
 [ext_resource type="Script" uid="uid://bhexx6mj1xv3q" path="res://addons/phantom_camera/scripts/phantom_camera/phantom_camera_2d.gd" id="10_kqyhf"]
 [ext_resource type="Script" uid="uid://8umksf8e80fw" path="res://addons/phantom_camera/scripts/resources/tween_resource.gd" id="11_ogbcg"]
+[ext_resource type="PackedScene" uid="uid://bs5i45df7rwnf" path="res://UI/HUD.tscn" id="13_td0al"]
+[ext_resource type="Script" uid="uid://cviskiwh21kxe" path="res://Scripts/Componentes/Fade.gd" id="14_kwvnc"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kwvnc"]
 size = Vector2(9340, 2173)
+
+[sub_resource type="Resource" id="Resource_u13vt"]
+script = ExtResource("11_ogbcg")
+duration = 0.0
+transition = 0
+ease = 2
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0f8ab"]
 texture = ExtResource("1_axyo6")
@@ -157,25 +164,47 @@ sources/0 = SubResource("TileSetAtlasSource_0f8ab")
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_td0al"]
 size = Vector2(110, 902)
 
-[sub_resource type="Resource" id="Resource_u13vt"]
-script = ExtResource("11_ogbcg")
-duration = 0.0
-transition = 0
-ease = 2
-
 [node name="Tma01" type="Node2D"]
 
 [node name="CamArea" type="CollisionShape2D" parent="."]
 position = Vector2(-34752, -4076.5)
 shape = SubResource("RectangleShape2D_kwvnc")
 
+[node name="Camera2D" type="Camera2D" parent="."]
+physics_interpolation_mode = 1
+position = Vector2(-37817, -3665)
+zoom = Vector2(0.8, 0.8)
+process_callback = 0
+limit_left = -39422
+limit_top = -5163
+limit_right = -30082
+limit_bottom = -2990
+editor_draw_limits = true
+
+[node name="PhantomCameraHost" type="Node" parent="Camera2D"]
+process_priority = 300
+process_physics_priority = 300
+script = ExtResource("9_t4xlf")
+metadata/_custom_type_script = "uid://bd046eokvcnu2"
+
+[node name="PhantomCamera2D" type="Node2D" parent="." node_paths=PackedStringArray("follow_target")]
+top_level = true
+position = Vector2(-37817, -3665)
+script = ExtResource("10_kqyhf")
+priority = 1
+follow_mode = 2
+follow_target = NodePath("../Cururu")
+zoom = Vector2(0.8, 0.8)
+tween_resource = SubResource("Resource_u13vt")
+follow_offset = Vector2(0, -80)
+draw_limits = true
+limit_target = NodePath("../CamArea")
+metadata/_custom_type_script = "uid://bhexx6mj1xv3q"
+
 [node name="Background" type="Node2D" parent="."]
 
 [node name="SavePoint" parent="." instance=ExtResource("1_kqyhf")]
 position = Vector2(-38140, -3322)
-
-[node name="AreaUpgrade" parent="." instance=ExtResource("2_ogbcg")]
-position = Vector2(-32758, -3336)
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
 position = Vector2(-2, 0)
@@ -184,17 +213,11 @@ tile_set = SubResource("TileSet_gjmfo")
 
 [node name="Cururu" parent="." instance=ExtResource("6_rp2yr")]
 z_index = 0
-position = Vector2(-37866, -3340)
+position = Vector2(-37817, -3329)
 scale = Vector2(0.959163, 0.959163)
 vel = 12.0
 vel_aerea = 10.0
-altura_pulo = 4.6
-tempo_pulo = 0.4
-tempo_cair = 0.37
-tempo_coyote = 0.15
 tempo_dash = 0.18
-distancia_dash = 4.5
-distancia_knockback = 1.0
 
 [node name="Node2D" type="Node2D" parent="."]
 position = Vector2(-30369, -3330)
@@ -547,33 +570,21 @@ texture = ExtResource("5_cvdhq")
 position = Vector2(-37220, -3190)
 texture = ExtResource("5_cvdhq")
 
-[node name="Camera2D" type="Camera2D" parent="."]
-physics_interpolation_mode = 1
-position = Vector2(-37866, -3665)
-zoom = Vector2(0.8, 0.8)
-process_callback = 0
-limit_left = -39422
-limit_top = -5163
-limit_right = -30082
-limit_bottom = -2990
-editor_draw_limits = true
+[node name="UIGAME" type="CanvasLayer" parent="."]
 
-[node name="PhantomCameraHost" type="Node" parent="Camera2D"]
-process_priority = 300
-process_physics_priority = 300
-script = ExtResource("9_t4xlf")
-metadata/_custom_type_script = "uid://bd046eokvcnu2"
+[node name="HUD" parent="UIGAME" instance=ExtResource("13_td0al")]
+offset_left = -6.0
+offset_top = -2.0
+offset_right = -6.0
+offset_bottom = -2.0
 
-[node name="PhantomCamera2D" type="Node2D" parent="." node_paths=PackedStringArray("follow_target")]
-top_level = true
-position = Vector2(-37866, -3665)
-script = ExtResource("10_kqyhf")
-priority = 1
-follow_mode = 2
-follow_target = NodePath("../Cururu")
-zoom = Vector2(0.8, 0.8)
-tween_resource = SubResource("Resource_u13vt")
-follow_offset = Vector2(0, -80)
-draw_limits = true
-limit_target = NodePath("../CamArea")
-metadata/_custom_type_script = "uid://bhexx6mj1xv3q"
+[node name="Fade" type="ColorRect" parent="UIGAME"]
+anchors_preset = -1
+anchor_right = 0.262
+anchor_bottom = 0.168
+offset_right = 0.959961
+offset_bottom = -0.440018
+color = Color(1, 1, 1, 0)
+script = ExtResource("14_kwvnc")
+metadata/_custom_type_script = "uid://cviskiwh21kxe"
+metadata/_edit_use_anchors_ = true

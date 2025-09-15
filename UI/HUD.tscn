@@ -104,10 +104,10 @@ show_percentage = false
 [node name="BarraHeart" type="HBoxContainer" parent="Main"]
 unique_name_in_owner = true
 layout_mode = 1
-offset_left = 287.501
-offset_top = 44.0
-offset_right = 858.501
-offset_bottom = 194.0
+offset_left = 307.144
+offset_top = 92.8575
+offset_right = 878.144
+offset_bottom = 242.857
 
 [node name="CounterMoeda" type="Label" parent="."]
 unique_name_in_owner = true
