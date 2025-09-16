@@ -40,7 +40,12 @@ func RecebeDano(dano:int, pos_target:Vector2):
 	%Timer.start()
 
 func AchaHit() -> void:
-	hurt.emit(get_overlapping_areas()[0])
+	var areas:Array[Area2D] = get_overlapping_areas()
+	var hitbox:Array[HitBox] = []
+	for a:Area2D in areas:
+		if a is HitBox:
+			hitbox.append(a)
+	hurt.emit(hitbox)
 
 func _on_timer_timeout() -> void:
 	set_deferred("monitorable", true)

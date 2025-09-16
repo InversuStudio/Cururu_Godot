@@ -8,8 +8,8 @@ func _ready() -> void:
 	%HurtBox.set_deferred("monitoring", true)
 	%HurtBox.set_deferred("monitorable", true)
 
-func _on_hurt(hitbox:HitBox) -> void:
-	if hitbox and hitbox.is_in_group("Special"):
+func _on_hurt(hitbox:Array[HitBox]) -> void:
+	if hitbox and hitbox[0].is_in_group("Special"):
 		Console._Print("SPECIAL")
 		Disable()
 
