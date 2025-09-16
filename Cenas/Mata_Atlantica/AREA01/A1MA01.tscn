@@ -1,8 +1,9 @@
-[gd_scene load_steps=26 format=4 uid="uid://exty4suocudj"]
+[gd_scene load_steps=27 format=4 uid="uid://exty4suocudj"]
 
 [ext_resource type="PackedScene" uid="uid://nohq28uk7lfk" path="res://Objetos/Entidades/Player.tscn" id="1_v83m2"]
 [ext_resource type="Texture2D" uid="uid://c374cwih425cq" path="res://Sprites/Tilemap/Ground/Base.png" id="2_lthbn"]
 [ext_resource type="Texture2D" uid="uid://b3k8nvt7ux4fp" path="res://Sprites/Tilemap/Assets/CenarioFloresta/arbusto2.png" id="3_hwqt5"]
+[ext_resource type="Texture2D" uid="uid://rwmi1ggde5dy" path="res://Sprites/VFX/Iluminação/PORTAL.png" id="4_1ewfi"]
 [ext_resource type="PackedScene" uid="uid://d3cks8kri2olw" path="res://Objetos/Props/AreaUpgrade.tscn" id="4_6hqtm"]
 [ext_resource type="Texture2D" uid="uid://ggamtf0lg07" path="res://Sprites/Tilemap/Assets/CenarioFloresta/cipó01.png" id="4_vqpay"]
 [ext_resource type="PackedScene" uid="uid://cqyub70sv0ofp" path="res://Objetos/Props/SavePoint.tscn" id="5_65x72"]
@@ -22,6 +23,12 @@
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6hqtm"]
 size = Vector2(11516, 2643)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mw8rc"]
+size = Vector2(174, 541)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_q40bt"]
+size = Vector2(166, 1059)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_b8uhf"]
 texture = ExtResource("2_lthbn")
@@ -160,17 +167,9 @@ tile_size = Vector2i(128, 128)
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_b8uhf")
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_mw8rc"]
-size = Vector2(174, 541)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_q40bt"]
-size = Vector2(166, 1059)
-
 [sub_resource type="Resource" id="Resource_1ewfi"]
 script = ExtResource("15_3han4")
 duration = 0.0
-transition = 0
-ease = 2
 
 [node name="A1ma01" type="Node2D"]
 
@@ -251,6 +250,35 @@ texture = ExtResource("3_hwqt5")
 [node name="Arbusto7" type="Sprite2D" parent="background/arbustochao"]
 position = Vector2(5867, 24)
 texture = ExtResource("3_hwqt5")
+flip_h = true
+
+[node name="TransicaoFase" parent="." instance=ExtResource("9_q40bt")]
+position = Vector2(-9071, -92)
+destino = 6
+posicao = Vector2(-8403, -259)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TransicaoFase"]
+position = Vector2(77, -280.5)
+shape = SubResource("RectangleShape2D_mw8rc")
+
+[node name="Portal" type="Sprite2D" parent="TransicaoFase"]
+position = Vector2(72.25, -266.25)
+scale = Vector2(0.5028986, 0.8900156)
+texture = ExtResource("4_1ewfi")
+
+[node name="TransicaoFase2" parent="." instance=ExtResource("9_q40bt")]
+position = Vector2(1895, 1047)
+destino = 8
+posicao = Vector2(2109, 509)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TransicaoFase2"]
+position = Vector2(452, -539.5)
+shape = SubResource("RectangleShape2D_q40bt")
+
+[node name="Portal2" type="Sprite2D" parent="TransicaoFase2"]
+position = Vector2(415.25, -360.75)
+scale = Vector2(0.67971015, 1.1053042)
+texture = ExtResource("4_1ewfi")
 flip_h = true
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
@@ -727,24 +755,6 @@ position = Vector2(-8645, -757)
 rotation = 3.14159
 texture = ExtResource("7_5ka01")
 
-[node name="TransicaoFase" parent="." instance=ExtResource("9_q40bt")]
-position = Vector2(-9071, -92)
-destino = 6
-posicao = Vector2(-8403, -259)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="TransicaoFase"]
-position = Vector2(77, -280.5)
-shape = SubResource("RectangleShape2D_mw8rc")
-
-[node name="TransicaoFase2" parent="." instance=ExtResource("9_q40bt")]
-position = Vector2(1895, 1047)
-destino = 8
-posicao = Vector2(2109, 509)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="TransicaoFase2"]
-position = Vector2(452, -539.5)
-shape = SubResource("RectangleShape2D_q40bt")
-
 [node name="Chão" type="Node2D" parent="."]
 
 [node name="Reto" type="Node2D" parent="Chão"]
@@ -900,10 +910,10 @@ physics_interpolation_mode = 1
 position = Vector2(-7887, -137)
 zoom = Vector2(0.8, 0.8)
 process_callback = 0
-limit_left = -29819
-limit_top = -5320
-limit_right = -16130
-limit_bottom = -2160
+limit_left = -9087
+limit_top = -1286
+limit_right = 2429
+limit_bottom = 1357
 editor_draw_limits = true
 
 [node name="PhantomCameraHost" type="Node" parent="Camera2D"]
