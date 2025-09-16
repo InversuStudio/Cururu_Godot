@@ -22,7 +22,7 @@ func _ready() -> void:
 
 # FUNÇÃO DE RECEBER DANO
 func RecebeDano(dano:int, pos_target:Vector2):
-	hurt.emit(get_overlapping_areas())
+	call_deferred("AchaHit")
 	# Desabilita colisão
 	set_deferred("monitorable", false)
 	# Se houver componente de vida, recebe dano
@@ -38,6 +38,9 @@ func RecebeDano(dano:int, pos_target:Vector2):
 	if hit_sfx: %SFX.play()
 	# Inicia cooldown
 	%Timer.start()
+
+func AchaHit() -> void:
+	hurt.emit(get_overlapping_areas()[0])
 
 func _on_timer_timeout() -> void:
 	set_deferred("monitorable", true)

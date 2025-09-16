@@ -1,7 +1,16 @@
 extends Node2D
 
-func _on_hurt(hitbox:Array) -> void:
-	if hitbox and hitbox[0].is_in_group("Special"):
+@export var tempo_aberta:float = 3.0
+
+func _ready() -> void:
+	%HurtBox.connect("hurt", _on_hurt)
+	%Timer.wait_time = tempo_aberta
+	%HurtBox.set_deferred("monitoring", true)
+	%HurtBox.set_deferred("monitorable", true)
+
+func _on_hurt(hitbox:HitBox) -> void:
+	if hitbox and hitbox.is_in_group("Special"):
+		Console._Print("SPECIAL")
 		Disable()
 
 func _on_timer_timeout() -> void:

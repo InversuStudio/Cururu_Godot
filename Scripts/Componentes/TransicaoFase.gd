@@ -20,6 +20,7 @@ func _on_body_entered(body: Node2D) -> void:
 		# Se for transição vertical
 		if vertical:
 			if body.velocity.y <= 0.0:
+				GameData.veio_de_baixo = true
 				body.velocity.y = -body.jump_force
 				body.input_move = 0.0
 		else:

@@ -988,8 +988,9 @@ rotation = -1.57079
 shape = SubResource("CapsuleShape2D_wq158")
 disabled = true
 
-[node name="Special" parent="HitContainer" groups=["Special"] instance=ExtResource("47_grb16")]
+[node name="Special" parent="HitContainer" node_paths=PackedStringArray("ignore") groups=["Special"] instance=ExtResource("47_grb16")]
 dano = 2
+ignore = NodePath("../../HurtContainer/HurtBox")
 
 [node name="ColSpecial" type="CollisionShape2D" parent="HitContainer/Special"]
 position = Vector2(218, -78)

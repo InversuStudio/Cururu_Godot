@@ -10,6 +10,8 @@ var fase: Mundos.NomeFase = Mundos.NomeFase.FaseTeste
 var posicao: Vector2 = Vector2(0, 0)
 # Define se player inicia olhando para a esquerda(true) ou direita(false)
 var direcao: bool = false
+# Armazena se player foi para outra área vindo de baixo
+var veio_de_baixo:bool = false
 # Sinal lançado quando o contador de moedas é alterado
 signal update_moeda
 # Armazena o total de moedas coletadas

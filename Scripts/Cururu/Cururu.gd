@@ -70,9 +70,14 @@ var recebeu_dano: bool = false
 
 func _ready() -> void:
 	# Inicia HurtBoxes
-	for h: HurtBox in hurtbox_container.get_children():
+	for h:HurtBox in hurtbox_container.get_children():
 		h.distancia_knockback = distancia_knockback
 		h.tempo_knockback = tempo_knockback
+	# Desabilita hitboxes
+	for h in hitbox_container.get_children():
+		if h is HitBox:
+			for c in h.get_children():
+				if c is CollisionShape2D: c.disabled = true
 	# Configura Timers
 	%Coyote.wait_time = tempo_coyote
 	%JumpLag.wait_time = lag_pulo
@@ -88,6 +93,9 @@ func _ready() -> void:
 	GameData.magia_max = int(magia_max)
 	if GameData.magia_atual > 0 and GameData.magia_atual < 1:
 		GameData.magia_atual = magia_max
+	if GameData.veio_de_baixo:
+		%StateMachine.Muda_State(%StateMachine.get_child(2))
+		GameData.veio_de_baixo = false
 
 func _process(delta: float) -> void:
 	# Controla se pode mover

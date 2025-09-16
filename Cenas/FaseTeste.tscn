@@ -1,4 +1,4 @@
-[gd_scene load_steps=37 format=4 uid="uid://driflyxauqbxs"]
+[gd_scene load_steps=36 format=4 uid="uid://driflyxauqbxs"]
 
 [ext_resource type="Texture2D" uid="uid://c374cwih425cq" path="res://Sprites/Tilemap/Ground/Base.png" id="1_52y5a"]
 [ext_resource type="Texture2D" uid="uid://l6b625ae8udc" path="res://Sprites/Tilemap/Assets/CenarioFloresta/BACK.png" id="1_id35g"]
@@ -20,9 +20,8 @@
 [ext_resource type="PackedScene" uid="uid://b0hyovdafhkyk" path="res://Objetos/Funcionalidade/TransicaoCamera.tscn" id="17_id35g"]
 [ext_resource type="Script" uid="uid://b2ls33ys55oyt" path="res://Scripts/Componentes/OtimizadorSprite.gd" id="18_0he43"]
 [ext_resource type="PackedScene" uid="uid://bxixu84ahcyba" path="res://Objetos/NPCs/NpcBasico.tscn" id="18_bp4ag"]
-[ext_resource type="PackedScene" uid="uid://b1muyegh71wmp" path="res://Objetos/Funcionalidade/DebugConsole.tscn" id="18_u25g5"]
 [ext_resource type="Texture2D" uid="uid://c3tl3oddronfh" path="res://icon.svg" id="21_lqome"]
-[ext_resource type="PackedScene" uid="uid://cdhelg6sloxbj" path="res://Objetos/Props/PortaTemp.tscn" id="21_npj8t"]
+[ext_resource type="PackedScene" uid="uid://cdhelg6sloxbj" path="res://Objetos/Props/PortaTemp.tscn" id="23_u25g5"]
 [ext_resource type="PackedScene" uid="uid://cy10kv6jimfwh" path="res://Objetos/Funcionalidade/CompDestroiPlataforma.tscn" id="23_y7vak"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_77bok"]
@@ -212,7 +211,7 @@ metadata/_custom_type_script = "uid://b2ls33ys55oyt"
 position = Vector2(-497, -1570)
 vertical = true
 destino = 2
-posicao = Vector2(0, -300)
+posicao = Vector2(13, 71)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Transicoes/TransicaoFase2"]
 position = Vector2(-16.5, -246)
@@ -236,8 +235,8 @@ position = Vector2(-832, -210)
 [node name="UpgradeMissil" parent="Props" instance=ExtResource("12_77bok")]
 position = Vector2(2947, -389)
 
-[node name="PortaTemp" parent="Props" instance=ExtResource("21_npj8t")]
-position = Vector2(4438, -560)
+[node name="PortaTemp" parent="Props" instance=ExtResource("23_u25g5")]
+position = Vector2(4448, -576)
 
 [node name="LimitCamera" type="StaticBody2D" parent="."]
 collision_layer = 0
@@ -284,8 +283,6 @@ metadata/_custom_type_script = "uid://bhexx6mj1xv3q"
 [node name="HUD" parent="Interface" instance=ExtResource("9_y1wlx")]
 
 [node name="Fade" parent="Interface" instance=ExtResource("10_bajew")]
-
-[node name="Console" parent="Interface" instance=ExtResource("18_u25g5")]
 
 [node name="NPC Basico" parent="." instance=ExtResource("18_bp4ag")]
 position = Vector2(5014, -481)

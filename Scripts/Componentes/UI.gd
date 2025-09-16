@@ -45,12 +45,12 @@ func _ready() -> void:
 # Função para atualizar contador de moedas
 func UpdateMoeda() -> void:
 	# Funciona apenas se o player não estiver morto
-	if player_morreu == false:
-		Console.Print("MOEDA!!!!")
+	if !player_morreu:
 		%CounterMoeda.text = str(GameData.moedas)
 
 # Função para alterar valor da barra de vida
 func UpdateVida(vida_nova:int, _vida_antiga:int) -> void:
+	Console._Print("[color=green]VIDA: %s[/color]" % [GameData.vida_atual])
 	for c:TextureRect in coracoes:
 		c.texture = sprite_cheio if c.get_index() + 1 <= vida_nova else sprite_vazio
 	if vida_nova <= 0:
@@ -61,7 +61,8 @@ func PlayerMorreu() -> void:
 	player_morreu = true
 	
 func UpdateMagia() -> void:
-	if player_morreu == false:
+	if !player_morreu:
+		Console._Print("[color=cyan]MAGIA: %s[/color]" % [GameData.magia_atual])
 		%BarraMagia.value = GameData.magia_atual
 
 func AvisoSave() -> void:

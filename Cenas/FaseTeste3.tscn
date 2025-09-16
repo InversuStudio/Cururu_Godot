@@ -37,12 +37,7 @@ position = Vector2(0, -384)
 position = Vector2(-618, 0)
 
 [node name="Player" parent="." instance=ExtResource("2_kiswm")]
-vel = 9.0
-vel_aerea = 7.5
-tempo_pulo = 0.4
-tempo_cair = 0.37
-tempo_coyote = 0.15
-tempo_dash = 0.15
+position = Vector2(13, 71)
 
 [node name="TransicaoFase" parent="." instance=ExtResource("3_gj2pb")]
 vertical = true
