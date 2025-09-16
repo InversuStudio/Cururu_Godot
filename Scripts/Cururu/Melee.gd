@@ -13,6 +13,8 @@ var combo_anim: Array[String] = [
 @onready var combo_limit: int = combo_anim.size() - 1
 var terminou: bool = false
 
+const sfx:AudioStream = preload("res://Audio/SFX/Ataque_Basico.wav")
+
 func _ready() -> void:
 	await get_tree().process_frame
 	for c:Node2D in parent.hitbox_container.get_children():
@@ -28,6 +30,8 @@ func Enter() -> void:
 	%Anim.play(combo_anim[combo_num])
 	var next_combo = combo_num + 1
 	combo_num = next_combo if next_combo <= combo_limit else 0
+	%SFX.stream = sfx
+	%SFX.play()
 
 func Exit() -> void:
 	terminou = false

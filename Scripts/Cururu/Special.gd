@@ -6,6 +6,8 @@ extends State
 
 var terminou: bool = false
 
+const sfx:AudioStream = preload("res://Audio/SFX/Ataque_Especial.wav")
+
 # COMPORTAMENTO AO ENTRAR NO STATE
 func Enter() -> void:
 	print("MAGIA")
@@ -16,6 +18,8 @@ func Enter() -> void:
 	if parent.sprite.flip_h:
 		parent.sprite.offset.x = -470.0
 	else: parent.sprite.offset.x = 470.0
+	%SFX.stream = sfx
+	%SFX.play()
 
 func Exit() -> void:
 	terminou = false
