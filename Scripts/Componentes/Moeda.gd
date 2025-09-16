@@ -7,7 +7,6 @@ extends Area2D
 
 func _ready() -> void:
 	connect("body_entered", _on_body_entered)
-	if sfx: $SFX.stream = sfx
 
 func _on_body_entered(body: Node2D) -> void:
 	if body.is_in_group("Player"):
@@ -20,10 +19,16 @@ func _on_body_entered(body: Node2D) -> void:
 		$Imagem.hide()
 		# Toca som
 		if sfx:
-			$SFX.play()
+			var s:AudioStreamPlayer = AudioStreamPlayer.new()
+			s.stream = sfx
+			get_tree().current_scene.add_child(s)
+			s.finished.connect(SfxTocou.bind(s))
+			s.volume_db = -5.0
+			s.play()
 			return
 		# Deleta
 		queue_free()
 
-func _on_sfx_finished() -> void:
-	queue_free()
+func SfxTocou(s:AudioStreamPlayer) -> void:
+	s.queue_free()
+	call_deferred("queue_free")

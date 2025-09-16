@@ -17,6 +17,7 @@ extends State
 # INICIA O STATE
 func Enter() -> void:
 	print("FALL")
+	Console._State(name)
 	%Anim.play("Fall_Start") # Animação de cair
 
 func Update(_delta: float) -> State:

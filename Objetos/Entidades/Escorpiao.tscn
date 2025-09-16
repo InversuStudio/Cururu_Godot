@@ -124,5 +124,7 @@ position = Vector2(0, -43)
 [node name="OtimizadorSprite" type="VisibleOnScreenEnabler2D" parent="."]
 position = Vector2(5.5, -90.5)
 scale = Vector2(12.25, 10.45)
+rect = Rect2(-11.959184, -10.5741625, 23.020409, 21.81818)
 script = ExtResource("9_cusa3")
+follow = true
 metadata/_custom_type_script = "uid://b2ls33ys55oyt"

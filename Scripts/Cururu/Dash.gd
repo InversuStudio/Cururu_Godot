@@ -12,6 +12,7 @@ var acabou: bool = false
 
 func Enter() -> void:
 	print("DASH")
+	Console._State(name)
 	%Anim.play("Dash_Start")
 	parent.pode_dash = false
 	acabou = false

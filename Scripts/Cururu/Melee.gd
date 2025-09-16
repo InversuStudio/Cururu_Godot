@@ -22,6 +22,7 @@ func _ready() -> void:
 # COMPORTAMENTO AO ENTRAR NO STATE
 func Enter() -> void:
 	print("MELEE")
+	Console._State(name)
 	%MeleeTime.stop() # Reseta timer para mudar de combo
 	# Toca animação em ordem, loopando lista
 	%Anim.play(combo_anim[combo_num])
@@ -42,6 +43,8 @@ func Update(_delta:float) -> State:
 	return null
 
 func FixedUpdate(delta:float) -> State:
+	if parent.is_on_floor():
+		parent.velocity.x = move_toward(parent.velocity.x, 0.0, parent.speed / 8)
 	# Aplica gravidade de queda
 	parent.velocity.y += parent.fall_gravity * delta
 	return null

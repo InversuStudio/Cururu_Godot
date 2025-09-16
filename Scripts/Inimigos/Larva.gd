@@ -36,4 +36,4 @@ func _physics_process(delta: float) -> void:
 
 func Morte() -> void:
 	Mundos.SpawnMoeda(%SpawnMoeda.global_position)
-	queue_free()
+	call_deferred("queue_free")

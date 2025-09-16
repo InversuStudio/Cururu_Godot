@@ -9,6 +9,7 @@ var terminou: bool = false
 # COMPORTAMENTO AO ENTRAR NO STATE
 func Enter() -> void:
 	print("MAGIA")
+	Console._State(name)
 	GameData.magia_atual -= 3
 	# Toca animação, de acordo com input direcional
 	%Anim.play("Special")

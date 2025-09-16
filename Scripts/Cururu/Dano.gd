@@ -7,6 +7,7 @@ var acabou: bool = false
 
 func Enter() -> void:
 	print("DANO")
+	Console._State(name)
 	%Anim.play("Dano")
 	acabou = false
 

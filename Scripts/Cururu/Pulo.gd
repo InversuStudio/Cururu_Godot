@@ -15,6 +15,7 @@ extends State
 # INICIA O STATE
 func Enter() -> void:
 	print("JUMP")
+	Console._State(name)
 	parent.velocity.y = -parent.jump_force # Aplica pulo
 	%Anim.play("Jump") # Animação de pulo
 

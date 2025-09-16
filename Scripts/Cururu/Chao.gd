@@ -19,6 +19,7 @@ var pode_anim: bool = false
 # INICIA O STATE
 func Enter() -> void:
 	print("CHAO")
+	Console._State(name)
 	%Coyote.stop()
 	if parent.state_machine.last_state.name == "Fall":
 		%Anim.play("Land")

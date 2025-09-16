@@ -136,6 +136,7 @@ tile_map_data = PackedByteArray("AADm//n/AAABAAAAAADm//r/AAABAAAAAADm//v/AAABAAA
 tile_set = SubResource("TileSet_l7pwf")
 
 [node name="OtimizadorSprite" type="VisibleOnScreenEnabler2D" parent="Tilemap/Escondido"]
+position = Vector2(-1891, -609)
 script = ExtResource("18_0he43")
 metadata/_custom_type_script = "uid://b2ls33ys55oyt"
 
