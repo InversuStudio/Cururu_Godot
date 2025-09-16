@@ -26,15 +26,12 @@ func _ready() -> void:
 		%BarraMagia.value = GameData.magia_atual
 		# Inicializa valores da barra de vida
 		if GameData.vida_atual > 0:
-			UpdateVida()
+			UpdateVida(GameData.vida_atual, 0)
 		# Conecta sinais de dano, cura e morte
 		player.vida.connect("alterou_vida", UpdateVida)
-		#player.vida.connect("recebeu_dano", UpdateVida)
-		#player.vida.connect("recebeu_vida", UpdateVida)
-		#player.vida.connect("morreu", PlayerMorreu)
 		GameData.connect("update_magia", UpdateMagia)
 		# Conecta UpdateMoeda ao sinal de mudança na quintidade de moedas
-		GameData.update_moeda.connect(UpdateMoeda)
+		GameData.connect("update_moeda", UpdateMoeda)
 		# Se ainda não leu o arquivo de save...
 		if GameData.leu_data == false:
 			# ...e houver arquivo de save...
@@ -45,17 +42,17 @@ func _ready() -> void:
 		# Atualiza contador pela primeira vez
 		UpdateMoeda()
 
-
 # Função para atualizar contador de moedas
 func UpdateMoeda() -> void:
 	# Funciona apenas se o player não estiver morto
 	if player_morreu == false:
+		Console.Print("MOEDA!!!!")
 		%CounterMoeda.text = str(GameData.moedas)
 
 # Função para alterar valor da barra de vida
-func UpdateVida(vida_nova:int = 0, vida_antiga:int = 0) -> void:
+func UpdateVida(vida_nova:int, _vida_antiga:int) -> void:
 	for c:TextureRect in coracoes:
-		c.texture = sprite_cheio if c.get_index() + 1 <= GameData.vida_atual else sprite_vazio
+		c.texture = sprite_cheio if c.get_index() + 1 <= vida_nova else sprite_vazio
 	if vida_nova <= 0:
 		PlayerMorreu()
 

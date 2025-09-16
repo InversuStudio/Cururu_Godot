@@ -15,6 +15,7 @@ func _on_body_entered(body: Node2D) -> void:
 		set_deferred("monitoring", false)
 		# Soma valor ao total obtido
 		GameData.moedas += valor_moeda
+		Console.Print(GameData.moedas)
 		# Esconde sprite
 		$Imagem.hide()
 		# Toca som

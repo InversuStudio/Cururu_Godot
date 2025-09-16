@@ -1,4 +1,4 @@
-[gd_scene load_steps=36 format=4 uid="uid://driflyxauqbxs"]
+[gd_scene load_steps=37 format=4 uid="uid://driflyxauqbxs"]
 
 [ext_resource type="Texture2D" uid="uid://c374cwih425cq" path="res://Sprites/Tilemap/Ground/Base.png" id="1_52y5a"]
 [ext_resource type="Texture2D" uid="uid://l6b625ae8udc" path="res://Sprites/Tilemap/Assets/CenarioFloresta/BACK.png" id="1_id35g"]
@@ -20,6 +20,7 @@
 [ext_resource type="PackedScene" uid="uid://b0hyovdafhkyk" path="res://Objetos/Funcionalidade/TransicaoCamera.tscn" id="17_id35g"]
 [ext_resource type="Script" uid="uid://b2ls33ys55oyt" path="res://Scripts/Componentes/OtimizadorSprite.gd" id="18_0he43"]
 [ext_resource type="PackedScene" uid="uid://bxixu84ahcyba" path="res://Objetos/NPCs/NpcBasico.tscn" id="18_bp4ag"]
+[ext_resource type="PackedScene" uid="uid://b1muyegh71wmp" path="res://Objetos/Funcionalidade/DebugConsole.tscn" id="18_u25g5"]
 [ext_resource type="Texture2D" uid="uid://c3tl3oddronfh" path="res://icon.svg" id="21_lqome"]
 [ext_resource type="PackedScene" uid="uid://cdhelg6sloxbj" path="res://Objetos/Props/PortaTemp.tscn" id="21_npj8t"]
 [ext_resource type="PackedScene" uid="uid://cy10kv6jimfwh" path="res://Objetos/Funcionalidade/CompDestroiPlataforma.tscn" id="23_y7vak"]
@@ -56,20 +57,16 @@ size = Vector2(4244, 2037)
 script = ExtResource("10_0ho33")
 duration = 0.4
 transition = 1
-ease = 2
 
 [sub_resource type="Resource" id="Resource_id35g"]
 script = ExtResource("10_0ho33")
 duration = 0.4
 transition = 1
-ease = 2
 metadata/_custom_type_script = "uid://8umksf8e80fw"
 
 [sub_resource type="Resource" id="Resource_g237d"]
 script = ExtResource("10_0ho33")
 duration = 0.0
-transition = 0
-ease = 2
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lqome"]
 size = Vector2(360, 62)
@@ -288,6 +285,8 @@ metadata/_custom_type_script = "uid://bhexx6mj1xv3q"
 
 [node name="Fade" parent="Interface" instance=ExtResource("10_bajew")]
 
+[node name="Console" parent="Interface" instance=ExtResource("18_u25g5")]
+
 [node name="NPC Basico" parent="." instance=ExtResource("18_bp4ag")]
 position = Vector2(5014, -481)
 
@@ -295,10 +294,10 @@ position = Vector2(5014, -481)
 physics_interpolation_mode = 1
 position = Vector2(-1006, -469)
 process_callback = 0
-limit_left = -39422
-limit_top = -5163
-limit_right = -30082
-limit_bottom = -2990
+limit_left = -2759
+limit_top = -1966
+limit_right = 1485
+limit_bottom = 71
 editor_draw_limits = true
 
 [node name="PhantomCameraHost" type="Node" parent="MainCamera"]

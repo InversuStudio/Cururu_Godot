@@ -20,18 +20,20 @@ func _ready() -> void:
 
 # FUNÇÃO PARA DIMINUIR VIDA
 func RecebeDano(dano:int) -> void:
-	alterou_vida.emit(vida_atual - dano, vida_atual)
+	var vida_antiga:int = vida_atual
 	vida_atual -= dano
 	vida_atual = clampi(vida_atual, 0, vida_max)
+	alterou_vida.emit(vida_atual, vida_antiga)
 	# Se vida for zerada, morre
 	if vida_atual <= 0:
 		Morre()
 
 # FUNÇÃO PARA AUMENTAR VIDA
 func RecebeCura(cura:int) -> void:
-	alterou_vida.emit(vida_atual + cura, vida_atual)
+	var vida_antiga:int = vida_atual
 	vida_atual += cura
 	vida_atual = clampi(vida_atual, 0, vida_max)
+	alterou_vida.emit(vida_atual, vida_antiga)
 
 # FUNÇÃO DE MORRER
 func Morre():

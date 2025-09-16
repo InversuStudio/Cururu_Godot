@@ -1,0 +1,38 @@
+[gd_scene load_steps=2 format=3 uid="uid://b1muyegh71wmp"]
+
+[ext_resource type="Script" uid="uid://d2o1tfi2jck2j" path="res://Scripts/Componentes/DebugConsole.gd" id="1_1m1b7"]
+
+[node name="Control" type="Control" groups=["Console"]]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_1m1b7")
+
+[node name="Console" type="Panel" parent="."]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -409.0
+offset_right = 661.0
+grow_vertical = 0
+
+[node name="TextoConsole" type="RichTextLabel" parent="Console"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 9.0
+offset_top = 11.0
+offset_right = -9.0
+offset_bottom = -11.0
+grow_horizontal = 2
+grow_vertical = 2
+bbcode_enabled = true
+scroll_following = true
