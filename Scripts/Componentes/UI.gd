@@ -8,6 +8,17 @@ var coracoes:Array = []
 const sprite_cheio:Texture2D = preload("res://Sprites/UI/UIHUD-VIDACHEIA.png")
 const sprite_vazio:Texture2D = preload("res://Sprites/UI/UIHUD-VIDAVAZIZ.png")
 
+func _input(_event: InputEvent) -> void:
+	var cena:Node = get_tree().current_scene
+	if Input.is_action_just_pressed("pause"):
+		if cena.process_mode == PROCESS_MODE_INHERIT:
+			%Pause.show()
+			cena.process_mode = Node.PROCESS_MODE_DISABLED
+		else:
+			cena.process_mode = Node.PROCESS_MODE_INHERIT
+			%Pause.hide()
+		
+
 func _ready() -> void:
 	var player:CharacterBody2D = get_tree().get_first_node_in_group("Player")
 	# Se achar Player na cena...
@@ -67,3 +78,11 @@ func UpdateMagia() -> void:
 
 func AvisoSave() -> void:
 	%Anim.play("JogoSalvo")
+
+
+func _on_retornar_pressed() -> void:
+	get_tree().current_scene.process_mode = Node.PROCESS_MODE_INHERIT
+	%Pause.hide()
+
+func _on_sair_pressed() -> void:
+	Mundos.CarregaFase(Mundos.NomeFase.MenuPrincipal)

@@ -19,7 +19,7 @@ func _ready() -> void:
 	await get_tree().process_frame
 	for c:Node2D in parent.hitbox_container.get_children():
 		if c is HitBox:
-			c.connect("hit", RecuperaMagia)
+			c.connect("hit", RecuperaMagia.bind(c))
 
 # COMPORTAMENTO AO ENTRAR NO STATE
 func Enter() -> void:
@@ -62,6 +62,7 @@ func Reset_Ataque() -> void:
 func _on_melee_timeout() -> void:
 	combo_num = 0
 
-func RecuperaMagia() -> void:
+func RecuperaMagia(hit:HitBox) -> void:
 	print("HIT")
-	GameData.magia_atual += 1
+	if !hit.is_in_group("Special"):
+		GameData.magia_atual += 1
