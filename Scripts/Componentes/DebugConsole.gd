@@ -19,4 +19,4 @@ func AddTexto(txt:String) -> void:
 	%TextoConsole.text += txt + "[br]"
 
 func StatePlayer(txt:String) -> void:
-	%StatePlayer.text = "State: " + txt
+	%StatePlayer.text += "State: " + txt + "[br]"

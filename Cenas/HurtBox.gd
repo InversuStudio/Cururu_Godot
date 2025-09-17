@@ -15,6 +15,7 @@ extends Area2D
 @export var parent: Node2D = null
 
 signal hurt
+signal counter
 
 func _ready() -> void:
 	if hit_sfx: %SFX.stream = hit_sfx
@@ -22,18 +23,26 @@ func _ready() -> void:
 
 # FUNÇÃO DE RECEBER DANO
 func RecebeDano(dano:int, pos_target:Vector2):
-	call_deferred("AchaHit")
-	# Desabilita colisão
-	set_deferred("monitorable", false)
 	# Se houver componente de vida, recebe dano
 	if comp_vida:
 		comp_vida.RecebeDano(dano)
 	# Aplica knockback, se for definido
 	if distancia_knockback > 0.0 and parent != null:
+		# Define direção do knockback
+		var dir:Vector2 = (global_position - pos_target).normalized()
+		# Define a força do knockback
+		var knockback:float = ((2.0 * distancia_knockback) / tempo_knockback) * 128
+		# Calcula a velocidade a ser aplicada
+		var result_vel:Vector2 = dir * knockback
 		if parent is CharacterBody2D:
-			var dir = (global_position - pos_target).normalized()
-			var knockback = (distancia_knockback * 128) / tempo_knockback
-			parent.velocity = dir * knockback
+			# Aplica velocidade
+			parent.velocity = result_vel
+			# Calcula força oposta (desaceleração)
+			var c:float = ((2.0 * distancia_knockback) / pow(tempo_knockback, 2)) * 128
+			counter.emit(c, dir)
+	call_deferred("AchaHit")
+	# Desabilita colisão
+	set_deferred("monitorable", false)
 	# Toca som de dano
 	if hit_sfx: %SFX.play()
 	# Inicia cooldown

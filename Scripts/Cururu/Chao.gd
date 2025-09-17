@@ -7,8 +7,6 @@ extends State
 @export var fall_state : State = null
 ## State de dash
 @export var dash_state : State = null
-## State de dano
-@export var dano_state: State = null
 ## State de ataque melee
 @export var melee_state: State = null
 ## State de ataque magico
@@ -45,12 +43,12 @@ func Update(_delta: float) -> State:
 func FixedUpdate(delta: float) -> State:
 	# Aplica gravidade bem fraca
 	parent.velocity.y += 128 * delta
-	# DANO
-	if parent.recebeu_dano:
-		return dano_state
 	# Aplica movimento
 	var dir = parent.input_move * parent.speed
-	parent.velocity.x = move_toward(parent.velocity.x, dir, parent.speed / 8)
+	if dir != 0.0:
+		parent.velocity.x = move_toward(parent.velocity.x, dir, parent.accel * delta)
+	else:
+		parent.velocity.x = move_toward(parent.velocity.x, dir, parent.decel * delta)
 	#parent.velocity.x = parent.input_move * parent.speed
 	
 	# Espelha o sprite de acordo com o input

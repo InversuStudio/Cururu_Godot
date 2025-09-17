@@ -5,6 +5,10 @@ extends CharacterBody2D
 @export var vel: float = 0.0
 ## Velocidade de movimento aéreo, em m/s
 @export var vel_aerea: float = 0.0
+## Tempo até atingir velocidade máxima, em segundos
+@export var acel_time: float = 0.0
+## Tempo até atingir inércia, em segundos
+@export var decel_time: float = 0.0
 
 @export_group("Pulo")
 ## Altura do pulo, em metros
@@ -38,6 +42,10 @@ extends CharacterBody2D
 @onready var speed: float = vel  * 128
 # Velocidade aérea
 @onready var air_speed: float = vel_aerea * 128
+# Aceleração
+@onready var accel: float = speed / acel_time
+# Desaceleração
+@onready var decel: float = speed / decel_time
 # Velocidade do dash
 @onready var dash_speed: float = (distancia_dash / tempo_dash) * 128
 # Velocidade do pulo
@@ -66,7 +74,6 @@ var deu_air_dash: bool = false
 
 var input_move: float = 0.0
 var pode_mover: bool = true
-var recebeu_dano: bool = false
 
 func _ready() -> void:
 	# Inicia HurtBoxes
@@ -94,7 +101,7 @@ func _ready() -> void:
 	if GameData.magia_atual > 0 and GameData.magia_atual < 1:
 		GameData.magia_atual = magia_max
 	if GameData.veio_de_baixo:
-		%StateMachine.Muda_State(%StateMachine.get_child(2))
+		%StateMachine.Muda_State(%StateMachine.find_child("Pulo"))
 		GameData.veio_de_baixo = false
 
 func _process(delta: float) -> void:
@@ -127,7 +134,7 @@ func VidaMudou(vida_nova, vida_antiga) -> void:
 	GameData.vida_atual = vida_nova
 	if vida_nova < vida_antiga:
 		print("RECEBI DANO")
-		recebeu_dano = true
+		%StateMachine.call_deferred("Muda_State", %StateMachine.find_child("Dano"))
 	else:
 		print("RECEBI CURA")
 	

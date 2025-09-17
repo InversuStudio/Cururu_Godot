@@ -2,7 +2,6 @@ extends State
 
 @export var chao_state: State = null
 @export var fall_state: State = null
-@export var dano_state: State = null
 
 var terminou: bool = false
 
@@ -15,9 +14,6 @@ func Enter() -> void:
 	GameData.magia_atual -= 3
 	# Toca animação, de acordo com input direcional
 	%Anim.play("Special")
-	if parent.sprite.flip_h:
-		parent.sprite.offset.x = -470.0
-	else: parent.sprite.offset.x = 470.0
 	%SFX.stream = sfx
 	%SFX.play()
 
@@ -32,22 +28,25 @@ func Update(_delta:float) -> State:
 			return chao_state
 		if !parent.is_on_floor():
 			return fall_state
-		if parent.recebeu_dano:
-			return dano_state
 	return null
 
 func FixedUpdate(delta:float) -> State:
 	# Aplica gravidade de queda
-	if not parent.is_on_floor():
+	if !parent.is_on_floor():
 		parent.velocity.y += parent.fall_gravity * delta
-		parent.velocity.x = move_toward(parent.velocity.x, 0, parent.air_speed * delta)
+		#parent.velocity.x = move_toward(parent.velocity.x, 0, parent.air_speed * delta)
 	else:
-		parent.velocity.x = move_toward(parent.velocity.x, 0, parent.speed / 8)
+		parent.velocity.x = move_toward(parent.velocity.x, 0, parent.decel * delta)
 	return null
 
 func _on_anim_animation_finished(anim_name: StringName) -> void:
 	if anim_name == "Special":
 		terminou = true
+
+func OffsetSprite() -> void:
+	if parent.sprite.flip_h:
+		parent.sprite.offset.x = -470.0
+	else: parent.sprite.offset.x = 470.0
 
 #func UsaMagia() -> void:
 	#var p: Node2D = projetil.instantiate()

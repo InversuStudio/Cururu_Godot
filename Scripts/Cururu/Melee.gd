@@ -2,7 +2,6 @@ extends State
 
 @export var chao_state: State = null
 @export var fall_state: State = null
-@export var dano_state: State = null
 
 # Armazena número do ataque
 var combo_num: int = 0
@@ -42,13 +41,11 @@ func Update(_delta:float) -> State:
 			return chao_state
 		if !parent.is_on_floor():
 			return fall_state
-		if parent.recebeu_dano:
-			return dano_state
 	return null
 
 func FixedUpdate(delta:float) -> State:
 	if parent.is_on_floor():
-		parent.velocity.x = move_toward(parent.velocity.x, 0.0, parent.speed / 8)
+		parent.velocity.x = move_toward(parent.velocity.x, 0.0, parent.decel * delta)
 	# Aplica gravidade de queda
 	parent.velocity.y += parent.fall_gravity * delta
 	return null

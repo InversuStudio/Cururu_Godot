@@ -9,8 +9,6 @@ extends State
 @export var dash_state : State = null
 ## State de ataque melee
 @export var melee_state: State = null
-## State de dano
-@export var dano_state: State = null
 ## State de ataque magico
 @export var special_state: State = null
 
@@ -34,16 +32,10 @@ func Update(_delta: float) -> State:
 			return pulo_state
 		parent.is_jump_lag = true
 		%JumpLag.start()
-	
-	# DANO
-	if parent.recebeu_dano == true:
-		return dano_state
-	
 	# INPUT DASH
 	if Input.is_action_just_pressed("dash") and parent.pode_dash:
 		if parent.deu_air_dash == false:
 			return dash_state
-		
 	return null
 
 # COMPORTAMENTO PHYSICS_PROCESS
@@ -53,7 +45,7 @@ func FixedUpdate(delta: float) -> State:
 	
 	# Aplica movimento
 	var dir = parent.input_move * parent.air_speed
-	parent.velocity.x = move_toward(parent.velocity.x, dir, parent.air_speed / 8)
+	parent.velocity.x = move_toward(parent.velocity.x, dir, parent.accel * delta)
 	#parent.velocity.x = parent.input_move * parent.air_speed
 	
 	# Espelha o sprite de acordo com o input

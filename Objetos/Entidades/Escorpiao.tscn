@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://bu62qgilsxetf"]
+[gd_scene load_steps=14 format=3 uid="uid://bu62qgilsxetf"]
 
 [ext_resource type="Script" uid="uid://bxwx72gohremh" path="res://Scripts/Inimigos/Larva.gd" id="1_mvbia"]
 [ext_resource type="Texture2D" uid="uid://b0g3aehy8v827" path="res://Sprites/Inimigos/Escorpiao/scorpion_FRAME01.png" id="2_dp3os"]
@@ -7,7 +7,6 @@
 [ext_resource type="Script" uid="uid://hsdutxxttrp3" path="res://Scripts/Componentes/Vida.gd" id="5_jbocm"]
 [ext_resource type="PackedScene" uid="uid://va5pjd6vuuo2" path="res://Objetos/Funcionalidade/CompHurtBox.tscn" id="6_ppnp4"]
 [ext_resource type="PackedScene" uid="uid://pc4mgv2nv8af" path="res://Objetos/Funcionalidade/CompHitBox.tscn" id="7_2oopb"]
-[ext_resource type="AudioStream" uid="uid://dhgsnus0fna7q" path="res://Audio/SFX/SOM TESTE.mp3" id="8_fl5uk"]
 [ext_resource type="Script" uid="uid://b2ls33ys55oyt" path="res://Scripts/Componentes/OtimizadorSprite.gd" id="9_cusa3"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ntg74"]
@@ -66,8 +65,9 @@ metadata/_custom_type_script = "uid://hsdutxxttrp3"
 [node name="HurtBox" parent="." node_paths=PackedStringArray("comp_vida", "parent") instance=ExtResource("6_ppnp4")]
 unique_name_in_owner = true
 comp_vida = NodePath("../Vida")
-distancia_knockback = 1.0
+distancia_knockback = 1.5
 tempo_knockback = 0.2
+cooldown_dano = 0.2
 parent = NodePath("..")
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="HurtBox"]
@@ -85,7 +85,6 @@ debug_color = Color(1, 0, 0.0941176, 0.419608)
 [node name="HitBox" parent="." node_paths=PackedStringArray("ignore") instance=ExtResource("7_2oopb")]
 unique_name_in_owner = true
 ignore = NodePath("../HurtBox")
-sfx = ExtResource("8_fl5uk")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="HitBox"]
 position = Vector2(-51, -43)
