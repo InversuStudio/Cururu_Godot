@@ -27,8 +27,10 @@ func Exit() -> void:
 func FixedUpdate(delta:float) -> State:
 	if pode_cair:
 		parent.velocity.y += parent.fall_gravity * delta
+		parent.velocity.x = move_toward(parent.velocity.x, parent.input_move,
+			parent.decel * delta)
 	if acabou:
-		parent.velocity = Vector2.ZERO
+		#parent.velocity = Vector2.ZERO
 		if parent.is_on_floor():
 			return chao_state
 		else: return fall_state
@@ -38,7 +40,6 @@ func _on_dash_time_timeout() -> void:
 	print("Dash acabou")
 	%Anim.play("Dash_End")
 	Console._Print("[color=blue]Dash Acabou[/color]")
-	#parent.velocity.x = 0.0
 	pode_cair = true
 
 func _on_anim_animation_finished(anim_name: StringName) -> void:

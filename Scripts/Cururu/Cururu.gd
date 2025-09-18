@@ -134,6 +134,7 @@ func VidaMudou(vida_nova, vida_antiga) -> void:
 	GameData.vida_atual = vida_nova
 	if vida_nova < vida_antiga:
 		print("RECEBI DANO")
+		pode_mover = false
 		%StateMachine.call_deferred("Muda_State", %StateMachine.find_child("Dano"))
 	else:
 		print("RECEBI CURA")

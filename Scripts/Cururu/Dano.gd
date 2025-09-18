@@ -16,6 +16,7 @@ func Enter() -> void:
 
 func Exit() -> void:
 	print("DANO ACABOU")
+	parent.pode_mover = true
 
 func FixedUpdate(delta:float) -> State:
 	parent.velocity.x -= counter * target_dir.x * delta
