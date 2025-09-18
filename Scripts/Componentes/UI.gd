@@ -17,7 +17,6 @@ func _input(_event: InputEvent) -> void:
 		else:
 			cena.process_mode = Node.PROCESS_MODE_INHERIT
 			%Pause.hide()
-		
 
 func _ready() -> void:
 	var player:CharacterBody2D = get_tree().get_first_node_in_group("Player")
@@ -74,11 +73,13 @@ func PlayerMorreu() -> void:
 func UpdateMagia() -> void:
 	if !player_morreu:
 		Console._Print("[color=cyan]MAGIA: %s[/color]" % [GameData.magia_atual])
-		%BarraMagia.value = GameData.magia_atual
+		#%BarraMagia.value = GameData.magia_atual
+		var tween:Tween = get_tree().create_tween()
+		tween.tween_property(%BarraMagia,"value",GameData.magia_atual,.3).set_trans(
+			Tween.TRANS_CUBIC)
 
 func AvisoSave() -> void:
 	%Anim.play("JogoSalvo")
-
 
 func _on_retornar_pressed() -> void:
 	get_tree().current_scene.process_mode = Node.PROCESS_MODE_INHERIT

@@ -1,12 +1,8 @@
-[gd_scene load_steps=13 format=3 uid="uid://bs5i45df7rwnf"]
+[gd_scene load_steps=11 format=3 uid="uid://bs5i45df7rwnf"]
 
 [ext_resource type="Script" uid="uid://dg1wm8v16vrwl" path="res://Scripts/Componentes/UI.gd" id="1_yixhe"]
-[ext_resource type="Shader" uid="uid://c5kmgpt3xfcos" path="res://Scripts/Shaders/Wave.gdshader" id="2_4n7mi"]
 [ext_resource type="Texture2D" uid="uid://dbohcm7v5pvg4" path="res://Sprites/UI/UIHUD-MAGIA.png" id="2_f2wx0"]
 [ext_resource type="Texture2D" uid="uid://8tc3pgq3fdi8" path="res://Sprites/UI/UIHUD-MAGIABK[.png" id="5_2ptjp"]
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_uk570"]
-shader = ExtResource("2_4n7mi")
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4n7mi"]
 
@@ -89,7 +85,6 @@ expand_mode = 1
 
 [node name="BarraMagia" type="ProgressBar" parent="Main/MaskMagia"]
 unique_name_in_owner = true
-material = SubResource("ShaderMaterial_uk570")
 custom_minimum_size = Vector2(150, 150)
 layout_mode = 1
 anchors_preset = 15
@@ -100,7 +95,6 @@ grow_vertical = 2
 theme_override_styles/background = SubResource("StyleBoxEmpty_4n7mi")
 theme_override_styles/fill = SubResource("StyleBoxFlat_ijstf")
 max_value = 5.0
-step = 1.0
 value = 4.0
 fill_mode = 3
 show_percentage = false
