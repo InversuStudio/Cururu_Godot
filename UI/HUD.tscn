@@ -7,7 +7,7 @@
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4n7mi"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ijstf"]
-bg_color = Color(6.16074e-06, 0.739727, 0.899234, 1)
+bg_color = Color(0.9411892, 1.0049391, 0.89736134, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_yixhe"]
 font_size = 100

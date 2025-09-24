@@ -22,7 +22,7 @@
 [ext_resource type="Script" uid="uid://cviskiwh21kxe" path="res://Scripts/Componentes/Fade.gd" id="18_6hqtm"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6hqtm"]
-size = Vector2(11516, 2643)
+size = Vector2(11519, 2643)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mw8rc"]
 size = Vector2(174, 541)
@@ -174,7 +174,7 @@ duration = 0.0
 [node name="A1ma01" type="Node2D"]
 
 [node name="AreadaCena" type="CollisionShape2D" parent="."]
-position = Vector2(-3329, 35.5)
+position = Vector2(-3330.5, 35.5)
 shape = SubResource("RectangleShape2D_6hqtm")
 debug_color = Color(0, 0.6, 0.701961, 0)
 
@@ -232,7 +232,7 @@ position = Vector2(-11, -31)
 texture = ExtResource("3_hwqt5")
 
 [node name="Arbusto3" type="Sprite2D" parent="background/arbustochao"]
-position = Vector2(2043, 15)
+position = Vector2(1924, -8)
 texture = ExtResource("3_hwqt5")
 
 [node name="Arbusto4" type="Sprite2D" parent="background/arbustochao"]
@@ -258,11 +258,11 @@ destino = 6
 posicao = Vector2(-8403, -259)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TransicaoFase"]
-position = Vector2(77, -280.5)
+position = Vector2(67, -280.5)
 shape = SubResource("RectangleShape2D_mw8rc")
 
 [node name="Portal" type="Sprite2D" parent="TransicaoFase"]
-position = Vector2(72.25, -266.25)
+position = Vector2(68, -266.25)
 scale = Vector2(0.5028986, 0.8900156)
 texture = ExtResource("4_1ewfi")
 
@@ -290,11 +290,11 @@ tile_set = SubResource("TileSet_knwlo")
 position = Vector2(-507, 1003)
 
 [node name="SavePoint" parent="." instance=ExtResource("5_65x72")]
-position = Vector2(-3602, 1015)
+position = Vector2(-3602, 1025)
 
 [node name="Cururu" parent="." instance=ExtResource("1_v83m2")]
 z_index = 0
-position = Vector2(-8530, -137)
+position = Vector2(-8515, -130)
 scale = Vector2(0.919994, 0.919994)
 vel = 12.0
 vel_aerea = 10.0
@@ -746,7 +746,7 @@ rotation = 3.14159
 texture = ExtResource("7_5ka01")
 
 [node name="Frontfolha7" type="Sprite2D" parent="Teto/Sombra"]
-position = Vector2(-7963, -719)
+position = Vector2(-7903, -788)
 rotation = 3.14159
 texture = ExtResource("7_5ka01")
 
@@ -795,17 +795,17 @@ rotation = -4.71239
 texture = ExtResource("8_5kxqo")
 
 [node name="GramaReto6" type="Sprite2D" parent="Chão/Reto"]
-position = Vector2(-3815.5, 1060)
+position = Vector2(-3815.5, 1089)
 rotation = -4.71239
 texture = ExtResource("8_5kxqo")
 
 [node name="GramaReto7" type="Sprite2D" parent="Chão/Reto"]
-position = Vector2(-3051.5, 1060)
+position = Vector2(-3051.5, 1089)
 rotation = -4.71239
 texture = ExtResource("8_5kxqo")
 
 [node name="GramaReto8" type="Sprite2D" parent="Chão/Reto"]
-position = Vector2(-2304.5, 1060)
+position = Vector2(-2304.5, 1085)
 rotation = -4.71239
 texture = ExtResource("8_5kxqo")
 
@@ -872,7 +872,7 @@ position = Vector2(1604, 1115)
 texture = ExtResource("7_5ka01")
 
 [node name="Frontfolha3" type="Sprite2D" parent="Chão/Foreground"]
-position = Vector2(-5758, 1144)
+position = Vector2(-5828, 1123)
 texture = ExtResource("7_5ka01")
 flip_h = true
 
@@ -894,7 +894,7 @@ position = Vector2(2079, 1004)
 
 [node name="PhantomCamera2D" type="Node2D" parent="Camera" node_paths=PackedStringArray("follow_target")]
 top_level = true
-position = Vector2(-7887, -137)
+position = Vector2(-7890, -130)
 script = ExtResource("14_65x72")
 priority = 1
 follow_mode = 2
@@ -907,13 +907,13 @@ metadata/_custom_type_script = "uid://bhexx6mj1xv3q"
 
 [node name="Camera2D" type="Camera2D" parent="."]
 physics_interpolation_mode = 1
-position = Vector2(-7887, -137)
+position = Vector2(-7890, -130)
 zoom = Vector2(0.8, 0.8)
 process_callback = 0
-limit_left = -9087
-limit_top = -1286
-limit_right = 2429
-limit_bottom = 1357
+limit_left = -6784
+limit_top = -12282
+limit_right = -524
+limit_bottom = -9744
 editor_draw_limits = true
 
 [node name="PhantomCameraHost" type="Node" parent="Camera2D"]

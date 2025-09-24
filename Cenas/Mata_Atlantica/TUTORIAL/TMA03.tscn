@@ -1,4 +1,4 @@
-[gd_scene load_steps=39 format=4 uid="uid://nqosq2wj0auk"]
+[gd_scene load_steps=42 format=4 uid="uid://nqosq2wj0auk"]
 
 [ext_resource type="Texture2D" uid="uid://c374cwih425cq" path="res://Sprites/Tilemap/Ground/Base.png" id="1_vftmf"]
 [ext_resource type="Texture2D" uid="uid://l6b625ae8udc" path="res://Sprites/Tilemap/Assets/CenarioFloresta/BACK.png" id="2_m2axx"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://cov3k8uja4wwj" path="res://Sprites/Tilemap/Assets/CenarioFloresta/PAU_BRASIL.png" id="5_hs5mp"]
 [ext_resource type="Texture2D" uid="uid://dxylu3tdlsq2" path="res://Sprites/Tilemap/Assets/CenarioFloresta/FOG01.png" id="6_mndey"]
 [ext_resource type="Texture2D" uid="uid://bdh06r7m0p0js" path="res://Sprites/Tilemap/Assets/CenarioFloresta/Folhas02.png" id="7_1ljck"]
+[ext_resource type="Texture2D" uid="uid://br3x4ee50wnxp" path="res://Sprites/Tilemap/Assets/TesteCenario/cipó02.png" id="8_54dor"]
 [ext_resource type="Texture2D" uid="uid://nbeswkchyrx5" path="res://Sprites/Tilemap/Assets/CenarioFloresta/FOG02.png" id="8_gyy5i"]
 [ext_resource type="Script" uid="uid://b2ls33ys55oyt" path="res://Scripts/Componentes/OtimizadorSprite.gd" id="9_ygs8d"]
 [ext_resource type="Texture2D" uid="uid://ggamtf0lg07" path="res://Sprites/Tilemap/Assets/CenarioFloresta/cipó01.png" id="10_pjocn"]
@@ -30,6 +31,8 @@
 [ext_resource type="PackedScene" uid="uid://nohq28uk7lfk" path="res://Objetos/Entidades/Player.tscn" id="28_yftf5"]
 [ext_resource type="PackedScene" uid="uid://bs5i45df7rwnf" path="res://UI/HUD.tscn" id="29_rnx0k"]
 [ext_resource type="Script" uid="uid://cviskiwh21kxe" path="res://Scripts/Componentes/Fade.gd" id="30_qclta"]
+[ext_resource type="Texture2D" uid="uid://2fu7ftsctnh6" path="res://Sprites/Tilemap/Assets/TesteCenario/grama-pedaço_01.png" id="32_od6fv"]
+[ext_resource type="Texture2D" uid="uid://ee5swdha3qcd" path="res://Sprites/Tilemap/Assets/TesteCenario/grama-reta.png" id="33_bu38j"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_l7gx4"]
 size = Vector2(12155, 6336)
@@ -186,8 +189,6 @@ size = Vector2(155, 909)
 [sub_resource type="Resource" id="Resource_rnx0k"]
 script = ExtResource("27_l7gx4")
 duration = 0.0
-transition = 0
-ease = 2
 
 [node name="Tma03" type="Node2D"]
 
@@ -265,7 +266,13 @@ position = Vector2(-4.02979, 541.497)
 scale = Vector2(1.00393, 0.939691)
 texture = ExtResource("8_gyy5i")
 
+[node name="Cipó02" type="Sprite2D" parent="Background"]
+position = Vector2(-847.4331, -549.9539)
+scale = Vector2(0.09905762, 0.17324238)
+texture = ExtResource("8_54dor")
+
 [node name="background1" type="Sprite2D" parent="Background"]
+visible = false
 position = Vector2(-827.553, -499.208)
 scale = Vector2(0.537302, 0.939691)
 
@@ -712,25 +719,15 @@ position = Vector2(-595.607, -4046.31)
 rotation = 0.0872665
 texture = ExtResource("26_b8kcn")
 
-[node name="Rocha08" type="Sprite2D" parent="foreground"]
-position = Vector2(-4627.95, -4298.71)
-rotation = 0.0872665
-texture = ExtResource("26_b8kcn")
-
-[node name="Rocha09" type="Sprite2D" parent="foreground"]
-position = Vector2(-5421.87, -4460.52)
-rotation = 0.0872665
-texture = ExtResource("26_b8kcn")
-
 [node name="Camera2D" type="Camera2D" parent="."]
 physics_interpolation_mode = 1
 position = Vector2(-17749, -3663)
 zoom = Vector2(0.8, 0.8)
 process_callback = 0
-limit_left = -29819
-limit_top = -5320
-limit_right = -16130
-limit_bottom = -2160
+limit_left = -18949
+limit_top = -5349
+limit_right = -6794
+limit_bottom = 987
 editor_draw_limits = true
 
 [node name="PhantomCameraHost" type="Node" parent="Camera2D"]
@@ -771,3 +768,18 @@ color = Color(1, 1, 1, 0)
 script = ExtResource("30_qclta")
 metadata/_custom_type_script = "uid://cviskiwh21kxe"
 metadata/_edit_use_anchors_ = true
+
+[node name="GramaPedaço01" type="Sprite2D" parent="."]
+position = Vector2(-10584.999, 497)
+scale = Vector2(0.256, 0.256)
+texture = ExtResource("32_od6fv")
+
+[node name="GramaPedaço02" type="Sprite2D" parent="."]
+position = Vector2(-10228.999, 497)
+scale = Vector2(0.256, 0.256)
+texture = ExtResource("32_od6fv")
+
+[node name="GramaReta" type="Sprite2D" parent="."]
+position = Vector2(-11154, 546)
+scale = Vector2(0.128, 0.128)
+texture = ExtResource("33_bu38j")
