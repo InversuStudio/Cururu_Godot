@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=4 uid="uid://v7rpf2dnm6y2"]
 
-[ext_resource type="Texture2D" uid="uid://c374cwih425cq" path="res://Sprites/Tilemap/Ground/Base.png" id="14_2dioi"]
-[ext_resource type="Texture2D" uid="uid://cmd5dpv6js3im" path="res://Sprites/Tilemap/Assets/CenarioFloresta/Ruina/rocha01.png" id="31_8gpol"]
+[ext_resource type="Texture2D" uid="uid://c374cwih425cq" path="res://Sprites/Cenário/Tilemaps/Base.png" id="14_2dioi"]
+[ext_resource type="Texture2D" uid="uid://cmd5dpv6js3im" path="res://Sprites/Cenário/Semuso/Ruina/rocha01.png" id="31_8gpol"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lstbb"]
 texture = ExtResource("14_2dioi")

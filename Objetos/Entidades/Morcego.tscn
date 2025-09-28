@@ -31,19 +31,20 @@ animations = [{
 "speed": 8.0
 }]
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_j5mvf"]
+radius = 664.782
+
 [sub_resource type="CircleShape2D" id="CircleShape2D_87fsy"]
 radius = 117.209
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ujy2f"]
-radius = 53.0
-height = 116.0
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_j5mvf"]
-radius = 664.782
+radius = 118.1818
+height = 236.36363
 
 [node name="Morcego" type="CharacterBody2D"]
 scale = Vector2(0.88, 0.88)
 collision_layer = 2
+safe_margin = 2.0
 script = ExtResource("1_j5mvf")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -63,9 +64,16 @@ script = ExtResource("5_ohlaa")
 vida_max = 2
 metadata/_custom_type_script = "uid://hsdutxxttrp3"
 
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_j5mvf")
+
 [node name="HurtBox" parent="." node_paths=PackedStringArray("comp_vida", "parent") instance=ExtResource("5_87fsy")]
 comp_vida = NodePath("../Vida")
-distancia_knockback = 1.0
+distancia_knockback = 0.5
 tempo_knockback = 0.2
 parent = NodePath("..")
 
@@ -81,7 +89,7 @@ ignore = NodePath("../HurtBox")
 sfx = ExtResource("8_uix47")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="HitBox"]
-position = Vector2(-57, -37)
+position = Vector2(1.136364, -42.045456)
 rotation = -1.57079
 shape = SubResource("CapsuleShape2D_ujy2f")
 debug_color = Color(0.807155, 0.414602, 3.85046e-07, 0.42)
@@ -93,13 +101,6 @@ position = Vector2(0, -43)
 [node name="Timer" type="Timer" parent="."]
 autostart = true
 
-[node name="Area2D" type="Area2D" parent="."]
-collision_layer = 0
-collision_mask = 2
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-shape = SubResource("CircleShape2D_j5mvf")
-
-[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

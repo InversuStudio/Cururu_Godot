@@ -1,13 +1,13 @@
 [gd_scene load_steps=36 format=4 uid="uid://driflyxauqbxs"]
 
-[ext_resource type="Texture2D" uid="uid://c374cwih425cq" path="res://Sprites/Tilemap/Ground/Base.png" id="1_52y5a"]
-[ext_resource type="Texture2D" uid="uid://l6b625ae8udc" path="res://Sprites/Tilemap/Assets/CenarioFloresta/BACK.png" id="1_id35g"]
-[ext_resource type="Texture2D" uid="uid://cov3k8uja4wwj" path="res://Sprites/Tilemap/Assets/CenarioFloresta/PAU_BRASIL.png" id="2_bp4ag"]
-[ext_resource type="Texture2D" uid="uid://dxylu3tdlsq2" path="res://Sprites/Tilemap/Assets/CenarioFloresta/FOG01.png" id="3_0he43"]
+[ext_resource type="Texture2D" uid="uid://c374cwih425cq" path="res://Sprites/Cenário/Tilemaps/Base.png" id="1_52y5a"]
+[ext_resource type="Texture2D" uid="uid://l6b625ae8udc" path="res://Sprites/Cenário/Mata_Atlantica/Background/BACK.png" id="1_id35g"]
+[ext_resource type="Texture2D" uid="uid://cov3k8uja4wwj" path="res://Sprites/Cenário/Semuso/PAU_BRASIL.png" id="2_bp4ag"]
+[ext_resource type="Texture2D" uid="uid://dxylu3tdlsq2" path="res://Sprites/Cenário/Semuso/FOG01.png" id="3_0he43"]
 [ext_resource type="PackedScene" uid="uid://nohq28uk7lfk" path="res://Objetos/Entidades/Player.tscn" id="3_2vimk"]
-[ext_resource type="Texture2D" uid="uid://csr2gynumyiv2" path="res://Sprites/Tilemap/Assets/CenarioFloresta/PAU_BRASIL03.png" id="4_77bok"]
+[ext_resource type="Texture2D" uid="uid://csr2gynumyiv2" path="res://Sprites/Cenário/Semuso/PAU_BRASIL03.png" id="4_77bok"]
 [ext_resource type="PackedScene" uid="uid://cqyub70sv0ofp" path="res://Objetos/Props/SavePoint.tscn" id="4_fo4t4"]
-[ext_resource type="Texture2D" uid="uid://bdh06r7m0p0js" path="res://Sprites/Tilemap/Assets/CenarioFloresta/Folhas02.png" id="5_npj8t"]
+[ext_resource type="Texture2D" uid="uid://bdh06r7m0p0js" path="res://Sprites/Cenário/Semuso/Folhas02.png" id="5_npj8t"]
 [ext_resource type="PackedScene" uid="uid://bu62qgilsxetf" path="res://Objetos/Entidades/Escorpiao.tscn" id="7_2vimk"]
 [ext_resource type="PackedScene" uid="uid://bktu336s6ruri" path="res://Objetos/Props/Moeda.tscn" id="8_fo4t4"]
 [ext_resource type="Script" uid="uid://bhexx6mj1xv3q" path="res://addons/phantom_camera/scripts/phantom_camera/phantom_camera_2d.gd" id="9_2ryh1"]
@@ -292,10 +292,10 @@ position = Vector2(5014, -481)
 physics_interpolation_mode = 1
 position = Vector2(-1018, -469)
 process_callback = 0
-limit_left = -2759
-limit_top = -1966
-limit_right = 1485
-limit_bottom = 71
+limit_left = -18949
+limit_top = -5349
+limit_right = -8192
+limit_bottom = 987
 editor_draw_limits = true
 
 [node name="PhantomCameraHost" type="Node" parent="MainCamera"]

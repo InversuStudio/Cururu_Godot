@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://bnm668fws2641"]
 
-[ext_resource type="Texture2D" uid="uid://cksbnh71spiiy" path="res://Sprites/Tilemap/Assets/CenarioFloresta/cipó02.png" id="2_cmvod"]
+[ext_resource type="Texture2D" uid="uid://br3x4ee50wnxp" path="res://Sprites/Cenário/Semuso/TesteCenario/cipó02.png" id="1_g7kmt"]
 [ext_resource type="PackedScene" uid="uid://pc4mgv2nv8af" path="res://Objetos/Funcionalidade/CompHitBox.tscn" id="7_267nb"]
 [ext_resource type="AudioStream" uid="uid://dhgsnus0fna7q" path="res://Audio/SFX/SOM TESTE.mp3" id="8_d1fui"]
 
@@ -8,7 +8,7 @@
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_cmvod")
+"texture": ExtResource("1_g7kmt")
 }],
 "loop": true,
 "name": &"default",
@@ -23,8 +23,8 @@ height = 510.0
 
 [node name="Sprite" type="AnimatedSprite2D" parent="."]
 unique_name_in_owner = true
-position = Vector2(-7.45058e-09, -48)
-scale = Vector2(0.535156, 0.535156)
+position = Vector2(9.99999, -38.0813)
+scale = Vector2(0.12333567, 0.12333567)
 sprite_frames = SubResource("SpriteFrames_tkh53")
 autoplay = "default"
 

@@ -1,9 +1,9 @@
 [gd_scene load_steps=10 format=4 uid="uid://dyn8c2s7ism52"]
 
-[ext_resource type="Texture2D" uid="uid://c374cwih425cq" path="res://Sprites/Tilemap/Ground/Base.png" id="1_aq4y6"]
+[ext_resource type="Texture2D" uid="uid://c374cwih425cq" path="res://Sprites/Cenário/Tilemaps/Base.png" id="1_aq4y6"]
 [ext_resource type="PackedScene" uid="uid://nohq28uk7lfk" path="res://Objetos/Entidades/Player.tscn" id="3_805x8"]
 [ext_resource type="PackedScene" uid="uid://1apfpwlqocxn" path="res://Objetos/Funcionalidade/TransicaoFase.tscn" id="5_6jxl7"]
-[ext_resource type="Texture2D" uid="uid://cjl88xeknofui" path="res://Sprites/Tilemap/Ground/Mata_Atlantica/grama_reto.png" id="5_vtuvk"]
+[ext_resource type="Texture2D" uid="uid://cjl88xeknofui" path="res://Sprites/Cenário/Mata_Atlantica/Chao/grama_reto.png" id="5_vtuvk"]
 [ext_resource type="PackedScene" uid="uid://cqyub70sv0ofp" path="res://Objetos/Props/SavePoint.tscn" id="6_vtuvk"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6r11q"]

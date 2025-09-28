@@ -1,6 +1,6 @@
 [gd_scene load_steps=21 format=4 uid="uid://jgubb6mfikfv"]
 
-[ext_resource type="Texture2D" uid="uid://c374cwih425cq" path="res://Sprites/Tilemap/Ground/Base.png" id="4_2iwj7"]
+[ext_resource type="Texture2D" uid="uid://c374cwih425cq" path="res://Sprites/Cenário/Tilemaps/Base.png" id="4_2iwj7"]
 [ext_resource type="PackedScene" uid="uid://dbp8j3rqvdpna" path="res://Objetos/Funcionalidade/CompSecret.tscn" id="4_urp4b"]
 [ext_resource type="PackedScene" uid="uid://phfxidwhdpy7" path="res://Objetos/Funcionalidade/CompFade.tscn" id="4_yyv7w"]
 [ext_resource type="PackedScene" uid="uid://1apfpwlqocxn" path="res://Objetos/Funcionalidade/TransicaoFase.tscn" id="5_2u6rl"]

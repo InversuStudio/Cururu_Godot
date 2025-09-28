@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=4 uid="uid://chmrn5p1wbo0m"]
 
-[ext_resource type="Texture2D" uid="uid://c374cwih425cq" path="res://Sprites/Tilemap/Ground/Base.png" id="1_swhqk"]
+[ext_resource type="Texture2D" uid="uid://c374cwih425cq" path="res://Sprites/Cenário/Tilemaps/Base.png" id="1_swhqk"]
 [ext_resource type="PackedScene" uid="uid://nohq28uk7lfk" path="res://Objetos/Entidades/Player.tscn" id="2_4gt3v"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_dn8sd"]

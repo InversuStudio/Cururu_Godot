@@ -64,11 +64,11 @@ script = ExtResource("1_yixhe")
 
 [node name="Main" type="TextureRect" parent="."]
 layout_mode = 1
-offset_left = 12.0
-offset_top = 10.0
-offset_right = 840.0
-offset_bottom = 272.0
-scale = Vector2(0.559998, 0.559998)
+offset_left = 20.0
+offset_top = 22.0
+offset_right = 848.0
+offset_bottom = 284.0
+scale = Vector2(0.39999798, 0.39999798)
 texture = ExtResource("2_f2wx0")
 expand_mode = 1
 
@@ -102,10 +102,11 @@ show_percentage = false
 [node name="BarraHeart" type="HBoxContainer" parent="Main"]
 unique_name_in_owner = true
 layout_mode = 1
-offset_left = 307.144
-offset_top = 92.8575
-offset_right = 878.144
-offset_bottom = 242.857
+offset_left = 327.50168
+offset_top = 95.00048
+offset_right = 837.32654
+offset_bottom = 228.9295
+scale = Vector2(0.85, 0.85)
 
 [node name="CounterMoeda" type="Label" parent="."]
 unique_name_in_owner = true
@@ -124,7 +125,6 @@ vertical_alignment = 1
 
 [node name="AvisoSave" type="RichTextLabel" parent="."]
 unique_name_in_owner = true
-visible = false
 self_modulate = Color(1, 1, 1, 0)
 layout_mode = 1
 anchors_preset = 3

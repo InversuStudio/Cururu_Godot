@@ -30,7 +30,7 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_gx8x6"]
-radius = 55.5
+radius = 59.00001
 height = 180.0
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_buqx5"]
@@ -65,13 +65,12 @@ metadata/_custom_type_script = "uid://hsdutxxttrp3"
 [node name="HurtBox" parent="." node_paths=PackedStringArray("comp_vida", "parent") instance=ExtResource("6_ppnp4")]
 unique_name_in_owner = true
 comp_vida = NodePath("../Vida")
-distancia_knockback = 1.5
+distancia_knockback = 0.3
 tempo_knockback = 0.2
-cooldown_dano = 0.2
 parent = NodePath("..")
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="HurtBox"]
-position = Vector2(-22, -51)
+position = Vector2(-31, -46)
 rotation = -1.57079
 shape = SubResource("CapsuleShape2D_gx8x6")
 debug_color = Color(0.99999, 0, 0.0935918, 0.42)

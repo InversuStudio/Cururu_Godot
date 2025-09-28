@@ -1,10 +1,10 @@
 [gd_scene load_steps=9 format=4 uid="uid://bsch3csrjxaua"]
 
-[ext_resource type="Texture2D" uid="uid://c374cwih425cq" path="res://Sprites/Tilemap/Ground/Base.png" id="1_o3hho"]
+[ext_resource type="Texture2D" uid="uid://c374cwih425cq" path="res://Sprites/Cenário/Tilemaps/Base.png" id="1_o3hho"]
 [ext_resource type="PackedScene" uid="uid://cqyub70sv0ofp" path="res://Objetos/Props/SavePoint.tscn" id="2_ctw0e"]
 [ext_resource type="PackedScene" uid="uid://nohq28uk7lfk" path="res://Objetos/Entidades/Player.tscn" id="3_gdjfr"]
 [ext_resource type="PackedScene" uid="uid://1apfpwlqocxn" path="res://Objetos/Funcionalidade/TransicaoFase.tscn" id="5_ck3rm"]
-[ext_resource type="Texture2D" uid="uid://cjl88xeknofui" path="res://Sprites/Tilemap/Ground/Mata_Atlantica/grama_reto.png" id="6_ctw0e"]
+[ext_resource type="Texture2D" uid="uid://cjl88xeknofui" path="res://Sprites/Cenário/Mata_Atlantica/Chao/grama_reto.png" id="6_ctw0e"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_u3rx3"]
 texture = ExtResource("1_o3hho")
