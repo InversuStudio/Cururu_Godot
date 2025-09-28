@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://bei1s8te3cwko"]
+
+[ext_resource type="Texture2D" uid="uid://36i4t28uavm" path="res://Sprites/Cenário/Mata_Atlantica/Interativos/plataforma.png" id="1_hnyem"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hnyem"]
+size = Vector2(398, 73)
+
+[node name="Plataforma" type="Node2D"]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(13, -35.5)
+shape = SubResource("RectangleShape2D_hnyem")
+debug_color = Color(0, 0.6, 0.69803923, 0)
+
+[node name="Plataforma" type="Sprite2D" parent="StaticBody2D"]
+position = Vector2(0, -2)
+scale = Vector2(1.0987655, 1.0987654)
+texture = ExtResource("1_hnyem")
