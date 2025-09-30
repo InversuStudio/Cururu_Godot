@@ -18,8 +18,6 @@ var arquivo_fase: Array = [
 	preload("res://Cenas/Mata_Atlantica/AREA01/A1MA07.tscn"),
 	preload("res://Cenas/Mata_Atlantica/AREA01/A1MA08.tscn"),
 	preload("res://Cenas/Mata_Atlantica/AREA01/A1MA09.tscn"),
-	preload("res://Cenas/Mata_Atlantica/AREA01/MA_02.tscn"),
-	preload("res://Cenas/Mata_Atlantica/AREA02/MA_03.tscn"),
 	preload("res://Cenas/Mata_Atlantica/AREA02/A2MA01.tscn"),
 	preload("res://Cenas/Mata_Atlantica/AREA02/A2MA02.tscn"),
 	preload("res://Cenas/Mata_Atlantica/AREA02/A2MA03.tscn"),
@@ -53,8 +51,6 @@ enum NomeFase {
 	Mata_Atlantica_AREA02_A2MA04,
 	Mata_Atlantica_AREA02_A2MA05,
 	Mata_Atlantica_AREA02_A2MA06,
-	Mata_Atlantica_MA_02,
-	Mata_Atlantica_MA_03,
 	Mata_Atlantica_MA_04,
 }
 

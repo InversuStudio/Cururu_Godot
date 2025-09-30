@@ -1,0 +1,89 @@
+[gd_scene load_steps=11 format=3 uid="uid://cqyub70sv0ofp"]
+
+[ext_resource type="Script" uid="uid://dvol8qmgk0lx8" path="res://Scripts/Componentes/SavePoint.gd" id="1_hntd5"]
+[ext_resource type="Script" uid="uid://dd7svcu8l7fxu" path="res://Scripts/Componentes/Interacao.gd" id="1_xf6ij"]
+[ext_resource type="Texture2D" uid="uid://bf0q4vuc2s0md" path="res://Sprites/Cenário/Assets/CenarioObjetos/Savepoint/apagado.png" id="2_3f5lj"]
+[ext_resource type="Script" uid="uid://b2ls33ys55oyt" path="res://Scripts/Componentes/OtimizadorSprite.gd" id="4_3f5lj"]
+[ext_resource type="Texture2D" uid="uid://bqe80obttjb82" path="res://Sprites/Cenário/Assets/CenarioObjetos/Savepoint/save_meio_termo.png" id="4_j20lk"]
+[ext_resource type="Texture2D" uid="uid://byyty8fw4cjjd" path="res://Sprites/Cenário/Assets/CenarioObjetos/Savepoint/save_ativado.png" id="5_41v7y"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hntd5"]
+size = Vector2(315, 376.5)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_7viry"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_3f5lj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_j20lk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_41v7y")
+}],
+"loop": true,
+"name": &"Save",
+"speed": 4.0
+}]
+
+[sub_resource type="Animation" id="Animation_ti6fj"]
+resource_name = "Save"
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_rcpl6"]
+_data = {
+&"Save": SubResource("Animation_ti6fj")
+}
+
+[node name="SavePoint" type="Area2D" node_paths=PackedStringArray("objeto_interacao")]
+light_mask = 2
+collision_layer = 0
+collision_mask = 2
+script = ExtResource("1_xf6ij")
+objeto_interacao = NodePath("Script")
+metadata/_custom_type_script = "uid://dd7svcu8l7fxu"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(6.5, -185.75)
+shape = SubResource("RectangleShape2D_hntd5")
+
+[node name="OtimizadorSprite" type="VisibleOnScreenEnabler2D" parent="."]
+position = Vector2(4.99999, -212.5)
+scale = Vector2(19.5, 21.35)
+script = ExtResource("4_3f5lj")
+metadata/_custom_type_script = "uid://b2ls33ys55oyt"
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(54, -217)
+sprite_frames = SubResource("SpriteFrames_7viry")
+animation = &"Save"
+frame_progress = 0.45612922
+script = ExtResource("1_hntd5")
+
+[node name="Script" type="Node" parent="."]
+script = ExtResource("1_hntd5")
+
+[node name="Texto" type="RichTextLabel" parent="."]
+unique_name_in_owner = true
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -187.0
+offset_top = -480.0
+offset_right = 206.0
+offset_bottom = -421.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/normal_font_size = 40
+bbcode_enabled = true
+text = "DESCANÇAR"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_rcpl6")
+}

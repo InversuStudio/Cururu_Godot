@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://bq6epiawn08wx"]
+
+[ext_resource type="Texture2D" uid="uid://bh73582qpwdem" path="res://Sprites/VFX/MIASMA.png" id="1_qwuag"]
+[ext_resource type="PackedScene" uid="uid://pc4mgv2nv8af" path="res://Objetos/Funcionalidade/CompHitBox.tscn" id="2_3hygo"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3vu2i"]
+size = Vector2(6270, 1459)
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Miasma" type="Sprite2D" parent="."]
+position = Vector2(5.00008, 31.000072)
+scale = Vector2(0.7719294, 0.77192926)
+texture = ExtResource("1_qwuag")
+
+[node name="HitBox" parent="Miasma" instance=ExtResource("2_3hygo")]
+position = Vector2(-4.151966, -2.2191575)
+scale = Vector2(0.07158556, 0.07158556)
+dano = 5
+screenshake = 0.5
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Miasma/HitBox"]
+position = Vector2(58, -739.5)
+shape = SubResource("RectangleShape2D_3vu2i")

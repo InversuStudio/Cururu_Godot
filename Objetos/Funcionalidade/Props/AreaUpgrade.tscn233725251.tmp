@@ -1,0 +1,56 @@
+[gd_scene load_steps=9 format=3 uid="uid://d3cks8kri2olw"]
+
+[ext_resource type="Script" uid="uid://dd7svcu8l7fxu" path="res://Scripts/Componentes/Interacao.gd" id="1_6186v"]
+[ext_resource type="Script" uid="uid://dv2hce0uiqes7" path="res://Scripts/Componentes/AreaUpgrade.gd" id="2_hgbl4"]
+[ext_resource type="Script" uid="uid://b2ls33ys55oyt" path="res://Scripts/Componentes/OtimizadorSprite.gd" id="3_hgbl4"]
+[ext_resource type="Texture2D" uid="uid://0agjwkmg3gef" path="res://Sprites/VFX/Iluminação/luz azul.png" id="3_qxje0"]
+[ext_resource type="Texture2D" uid="uid://f2xcf6oscqhr" path="res://Sprites/VFX/Iluminação/Poder.png" id="5_beg2k"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qxje0"]
+size = Vector2(84, 220)
+
+[sub_resource type="Gradient" id="Gradient_qxje0"]
+colors = PackedColorArray(0.82595223, 0.9054827, 0.99245375, 1, 0.44022134, 0.698929, 0.9680459, 1)
+
+[sub_resource type="Gradient" id="Gradient_beg2k"]
+colors = PackedColorArray(0.6363962, 0.831126, 0.988664, 1, 1, 1, 1, 1)
+
+[node name="AreaUpgrade" type="Area2D" node_paths=PackedStringArray("objeto_interacao")]
+collision_layer = 0
+collision_mask = 2
+script = ExtResource("1_6186v")
+objeto_interacao = NodePath("Script")
+metadata/_custom_type_script = "uid://dd7svcu8l7fxu"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -110)
+shape = SubResource("RectangleShape2D_qxje0")
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="."]
+position = Vector2(0, -217)
+amount = 15
+texture = ExtResource("3_qxje0")
+lifetime = 0.5
+speed_scale = 0.35
+lifetime_randomness = 0.2
+emission_shape = 3
+emission_rect_extents = Vector2(32, -64)
+gravity = Vector2(0, -980)
+scale_amount_min = 0.2
+color = Color(0.13725491, 0.6627451, 0.9882353, 1)
+color_ramp = SubResource("Gradient_qxje0")
+color_initial_ramp = SubResource("Gradient_beg2k")
+
+[node name="OtimizadorSprite" type="VisibleOnScreenEnabler2D" parent="."]
+position = Vector2(0, -110)
+scale = Vector2(8.9, 11)
+script = ExtResource("3_hgbl4")
+metadata/_custom_type_script = "uid://b2ls33ys55oyt"
+
+[node name="Script" type="Node" parent="."]
+script = ExtResource("2_hgbl4")
+
+[node name="Poder" type="Sprite2D" parent="."]
+position = Vector2(0, -160)
+scale = Vector2(1.6875, 1.6875)
+texture = ExtResource("5_beg2k")
