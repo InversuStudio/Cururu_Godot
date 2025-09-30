@@ -1,11 +1,11 @@
-[gd_scene load_steps=11 format=3 uid="uid://cqyub70sv0ofp"]
+[gd_scene load_steps=9 format=3 uid="uid://cqyub70sv0ofp"]
 
 [ext_resource type="Script" uid="uid://dvol8qmgk0lx8" path="res://Scripts/Componentes/SavePoint.gd" id="1_hntd5"]
 [ext_resource type="Script" uid="uid://dd7svcu8l7fxu" path="res://Scripts/Componentes/Interacao.gd" id="1_xf6ij"]
-[ext_resource type="Texture2D" uid="uid://bf0q4vuc2s0md" path="res://Sprites/Cenário/Assets/CenarioObjetos/Savepoint/apagado.png" id="2_3f5lj"]
+[ext_resource type="Texture2D" uid="uid://bf0q4vuc2s0md" path="res://Sprites/Cenário/Objetos/Savepoint/apagado.png" id="2_3f5lj"]
 [ext_resource type="Script" uid="uid://b2ls33ys55oyt" path="res://Scripts/Componentes/OtimizadorSprite.gd" id="4_3f5lj"]
-[ext_resource type="Texture2D" uid="uid://bqe80obttjb82" path="res://Sprites/Cenário/Assets/CenarioObjetos/Savepoint/save_meio_termo.png" id="4_j20lk"]
-[ext_resource type="Texture2D" uid="uid://byyty8fw4cjjd" path="res://Sprites/Cenário/Assets/CenarioObjetos/Savepoint/save_ativado.png" id="5_41v7y"]
+[ext_resource type="Texture2D" uid="uid://bqe80obttjb82" path="res://Sprites/Cenário/Objetos/Savepoint/save_meio_termo.png" id="4_j20lk"]
+[ext_resource type="Texture2D" uid="uid://byyty8fw4cjjd" path="res://Sprites/Cenário/Objetos/Savepoint/save_ativado.png" id="5_41v7y"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hntd5"]
 size = Vector2(315, 376.5)
@@ -26,14 +26,6 @@ animations = [{
 "name": &"Save",
 "speed": 4.0
 }]
-
-[sub_resource type="Animation" id="Animation_ti6fj"]
-resource_name = "Save"
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_rcpl6"]
-_data = {
-&"Save": SubResource("Animation_ti6fj")
-}
 
 [node name="SavePoint" type="Area2D" node_paths=PackedStringArray("objeto_interacao")]
 light_mask = 2
@@ -82,8 +74,3 @@ bbcode_enabled = true
 text = "DESCANÇAR"
 horizontal_alignment = 1
 vertical_alignment = 1
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-libraries = {
-&"": SubResource("AnimationLibrary_rcpl6")
-}

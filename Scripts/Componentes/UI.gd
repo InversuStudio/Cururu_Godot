@@ -5,8 +5,8 @@ var player_morreu: bool = false
 
 var coracoes:Array = []
 
-const sprite_cheio:Texture2D = preload("res://Sprites/UI/UIHUD-VIDACHEIA.png")
-const sprite_vazio:Texture2D = preload("res://Sprites/UI/UIHUD-VIDAVAZIZ.png")
+const sprite_cheio:Texture2D = preload("res://Sprites/UI/HUD/UIHUD-VIDACHEIA.png")
+const sprite_vazio:Texture2D = preload("res://Sprites/UI/HUD/UIHUD-VIDAVAZIZ.png")
 
 func _input(_event: InputEvent) -> void:
 	var cena:Node = get_tree().current_scene

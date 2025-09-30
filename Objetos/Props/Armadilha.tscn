@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://bnm668fws2641"]
 
-[ext_resource type="Texture2D" uid="uid://br3x4ee50wnxp" path="res://Sprites/Cenário/Semuso/TesteCenario/cipó02.png" id="1_g7kmt"]
+[ext_resource type="Texture2D" uid="uid://br3x4ee50wnxp" path="res://Sprites/Cenário/zSem_Uso/TesteCenario/cipó02.png" id="1_g7kmt"]
 [ext_resource type="PackedScene" uid="uid://pc4mgv2nv8af" path="res://Objetos/Funcionalidade/CompHitBox.tscn" id="7_267nb"]
 [ext_resource type="AudioStream" uid="uid://dhgsnus0fna7q" path="res://Audio/SFX/SOM TESTE.mp3" id="8_d1fui"]
 

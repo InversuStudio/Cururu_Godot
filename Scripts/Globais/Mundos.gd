@@ -2,10 +2,10 @@ extends Node
 
 # Lista de fases
 var arquivo_fase: Array = [
-	preload("res://Cenas/FaseTeste.tscn"),
-	preload("res://Cenas/FaseTeste2.tscn"),
-	preload("res://Cenas/FaseTeste3.tscn"),
-	preload("res://Cenas/MenuPrincipal.tscn"),
+	preload("res://Cenas/zTeste/FaseTeste1.tscn"),
+	preload("res://Cenas/zTeste/FaseTeste2.tscn"),
+	preload("res://Cenas/zTeste/FaseTeste3.tscn"),
+	preload("res://UI/MenuPrincipal.tscn"),
 	preload("res://Cenas/Mata_Atlantica/TUTORIAL/TMA01.tscn"),
 	preload("res://Cenas/Mata_Atlantica/TUTORIAL/TMA02.tscn"),
 	preload("res://Cenas/Mata_Atlantica/TUTORIAL/TMA03.tscn"),
@@ -29,7 +29,7 @@ var arquivo_fase: Array = [
 
 # Enumerador de fases, deve seguir a mesma ordem que a lista
 enum NomeFase {
-	FaseTeste,
+	FaseTeste1,
 	FaseTeste2,
 	FaseTeste3,
 	MenuPrincipal,

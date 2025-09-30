@@ -1,8 +1,8 @@
 [gd_scene load_steps=11 format=3 uid="uid://bs5i45df7rwnf"]
 
 [ext_resource type="Script" uid="uid://dg1wm8v16vrwl" path="res://Scripts/Componentes/UI.gd" id="1_yixhe"]
-[ext_resource type="Texture2D" uid="uid://dbohcm7v5pvg4" path="res://Sprites/UI/UIHUD-MAGIA.png" id="2_f2wx0"]
-[ext_resource type="Texture2D" uid="uid://8tc3pgq3fdi8" path="res://Sprites/UI/UIHUD-MAGIABK[.png" id="5_2ptjp"]
+[ext_resource type="Texture2D" uid="uid://dbohcm7v5pvg4" path="res://Sprites/UI/HUD/UIHUD-MAGIA.png" id="2_f2wx0"]
+[ext_resource type="Texture2D" uid="uid://8tc3pgq3fdi8" path="res://Sprites/UI/HUD/UIHUD-MAGIABK[.png" id="5_2ptjp"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4n7mi"]
 

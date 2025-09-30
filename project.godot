@@ -50,10 +50,13 @@ enabled=PackedStringArray("res://addons/dialogue_manager/plugin.cfg", "res://add
 folder_colors={
 "res://Audio/": "purple",
 "res://Cenas/": "pink",
+"res://Cenas/zTeste/": "gray",
 "res://Dialogos/": "orange",
 "res://Objetos/": "blue",
 "res://Scripts/": "green",
 "res://Sprites/": "yellow",
+"res://Sprites/Cenário/zSem_Uso/": "gray",
+"res://Sprites/zTeste_Parellax/": "gray",
 "res://UI/": "red"
 }
 

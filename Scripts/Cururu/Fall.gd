@@ -51,6 +51,8 @@ func FixedUpdate(delta: float) -> State:
 		parent.velocity.x += parent.accel * dir * delta
 		if abs(parent.velocity.x) > parent.air_speed:
 			parent.velocity.x = parent.air_speed * dir
+	#else:
+		#parent.velocity.x = move_toward(parent.velocity.x, dir, parent.decel * delta)
 	#parent.velocity.x = parent.input_move * parent.air_speed
 	
 	# Espelha o sprite de acordo com o input

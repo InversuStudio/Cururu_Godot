@@ -10,7 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://bnm668fws2641" path="res://Objetos/Props/Armadilha.tscn" id="4_fld4m"]
 [ext_resource type="PackedScene" uid="uid://bs5i45df7rwnf" path="res://UI/HUD.tscn" id="5_7afhp"]
 [ext_resource type="Script" uid="uid://cviskiwh21kxe" path="res://Scripts/Componentes/Fade.gd" id="6_xtn21"]
-[ext_resource type="PackedScene" uid="uid://bq6epiawn08wx" path="res://Sprites/Cenário/Assets/CenarioObjetos/Miasmadano.tscn" id="7_qamvx"]
+[ext_resource type="PackedScene" uid="uid://bq6epiawn08wx" path="res://Objetos/Props/Miasma.tscn" id="7_qamvx"]
 [ext_resource type="PackedScene" uid="uid://bei1s8te3cwko" path="res://Sprites/Cenário/Mata_Atlantica/Interativos/plataforma.tscn" id="7_vexem"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dxpl7"]

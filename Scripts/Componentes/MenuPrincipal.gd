@@ -8,4 +8,4 @@ func _on_fase_teste_pressed() -> void:
 		print("Jogo carregado")
 	else:
 		print("Não há arquivo de save")
-		Mundos.CarregaFase(Mundos.NomeFase.FaseTeste)
+		Mundos.CarregaFase(Mundos.NomeFase.FaseTeste1)
