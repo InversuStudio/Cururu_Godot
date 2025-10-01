@@ -1,7 +1,8 @@
-[gd_scene load_steps=11 format=3 uid="uid://bs5i45df7rwnf"]
+[gd_scene load_steps=12 format=3 uid="uid://bs5i45df7rwnf"]
 
 [ext_resource type="Script" uid="uid://dg1wm8v16vrwl" path="res://Scripts/Componentes/UI.gd" id="1_yixhe"]
 [ext_resource type="Texture2D" uid="uid://dbohcm7v5pvg4" path="res://Sprites/UI/HUD/UIHUD-MAGIA.png" id="2_f2wx0"]
+[ext_resource type="Texture2D" uid="uid://0vn3u6huw3ie" path="res://Sprites/UI/HUD/UIHUDCASH.png" id="4_uk570"]
 [ext_resource type="Texture2D" uid="uid://8tc3pgq3fdi8" path="res://Sprites/UI/HUD/UIHUD-MAGIABK[.png" id="5_2ptjp"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4n7mi"]
@@ -10,7 +11,9 @@
 bg_color = Color(0.9411892, 1.0049391, 0.89736134, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_yixhe"]
-font_size = 100
+font_size = 50
+outline_size = 12
+outline_color = Color(0, 0, 0, 1)
 
 [sub_resource type="Animation" id="Animation_4n7mi"]
 resource_name = "JogoSalvo"
@@ -108,16 +111,21 @@ offset_right = 837.32654
 offset_bottom = 228.9295
 scale = Vector2(0.85, 0.85)
 
+[node name="Uihudcash" type="Sprite2D" parent="."]
+position = Vector2(1812.9998, 68.825)
+scale = Vector2(0.16671596, 0.16671596)
+texture = ExtResource("4_uk570")
+
 [node name="CounterMoeda" type="Label" parent="."]
 unique_name_in_owner = true
 layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
-offset_left = -166.0
-offset_top = 21.0
-offset_right = 44.15625
-offset_bottom = 158.0
+offset_left = -234.0
+offset_top = 40.0
+offset_right = -23.84375
+offset_bottom = 123.0
 grow_horizontal = 0
 scale = Vector2(0.7, 0.7)
 text = "0"

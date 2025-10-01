@@ -171,7 +171,7 @@ vel = 12.0
 vel_aerea = 10.0
 tempo_dash = 0.18
 
-[node name="PointLight2D2" type="PointLight2D" parent="Cururu"]
+[node name="PointLight2D3" type="PointLight2D" parent="Cururu"]
 position = Vector2(-28.149544, -83.40631)
 range_item_cull_mask = 2
 shadow_enabled = true

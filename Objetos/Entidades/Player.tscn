@@ -1,4 +1,4 @@
-[gd_scene load_steps=108 format=3 uid="uid://nohq28uk7lfk"]
+[gd_scene load_steps=109 format=3 uid="uid://nohq28uk7lfk"]
 
 [ext_resource type="Script" uid="uid://cfu4ciwll8jcj" path="res://Scripts/Cururu/Cururu.gd" id="1_gwpdq"]
 [ext_resource type="Texture2D" uid="uid://6tjgxsgaflxb" path="res://Sprites/Cururu/Dano/03.png" id="2_0hf88"]
@@ -86,6 +86,7 @@
 [ext_resource type="Texture2D" uid="uid://cl48ho610vpku" path="res://Sprites/Cururu/Melee/08.png" id="59_s2eek"]
 [ext_resource type="Texture2D" uid="uid://6dnbonxcb2gu" path="res://Sprites/Cururu/Run/05.png" id="60_ga1ek"]
 [ext_resource type="Texture2D" uid="uid://dpot1mm6audq2" path="res://Sprites/Cururu/Run/06.png" id="61_jpq87"]
+[ext_resource type="Texture2D" uid="uid://b73nkcosr250e" path="res://Sprites/VFX/Iluminação/LightCururu.png" id="87_0w8y8"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_ser7u"]
 animations = [{
@@ -1099,6 +1100,14 @@ fall_state = NodePath("../Fall")
 script = ExtResource("56_7uoqt")
 chao_state = NodePath("../Chao")
 fall_state = NodePath("../Fall")
+
+[node name="PointLight2D2" type="PointLight2D" parent="."]
+position = Vector2(-28.149544, -83.40631)
+range_item_cull_mask = 2
+shadow_enabled = true
+shadow_color = Color(0, 0, 0, 0.7764706)
+texture = ExtResource("87_0w8y8")
+texture_scale = 1.5
 
 [connection signal="counter" from="HurtContainer/HurtBox" to="StateMachine/Dano" method="_on_hurt_box_counter"]
 [connection signal="animation_finished" from="Anim" to="StateMachine/Chao" method="_on_anim_animation_finished"]
