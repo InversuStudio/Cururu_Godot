@@ -187,8 +187,8 @@ shape = SubResource("RectangleShape2D_uhas7")
 debug_color = Color(1, 1, 1, 0.41960785)
 
 [node name="Fundoceu" type="Sprite2D" parent="."]
-position = Vector2(-3612.5796, -11293.871)
-scale = Vector2(3.468581, 1.4714717)
+position = Vector2(-3585, -10926.871)
+scale = Vector2(3.1571147, 1.1088231)
 texture = ExtResource("1_xyjrg")
 
 [node name="Arvores03" type="Node2D" parent="."]
@@ -238,8 +238,8 @@ scale = Vector2(0.57967424, 0.57967436)
 texture = ExtResource("6_yhkqu")
 
 [node name="Fundonevoa" type="Sprite2D" parent="."]
-position = Vector2(-3611.957, -10526.871)
-scale = Vector2(3.4654572, 1.1517813)
+position = Vector2(-3581.5, -10526.871)
+scale = Vector2(3.1576085, 1.1517813)
 texture = ExtResource("3_eoclm")
 
 [node name="Arvores01" type="Node2D" parent="."]
@@ -271,8 +271,8 @@ scale = Vector2(0.5796743, 0.57967436)
 texture = ExtResource("6_yhkqu")
 
 [node name="Fundonevoa2" type="Sprite2D" parent="."]
-position = Vector2(-3611.5796, -10440.466)
-scale = Vector2(3.4764116, 0.75151616)
+position = Vector2(-3587, -10413)
+scale = Vector2(3.1561265, 0.7786564)
 texture = ExtResource("4_gnpt0")
 
 [node name="UIGAME" type="CanvasLayer" parent="."]
@@ -310,7 +310,6 @@ texture = ExtResource("2_j2e36")
 flip_h = true
 
 [node name="Boitata01" type="Sprite2D" parent="Background"]
-visible = false
 position = Vector2(-619, 59)
 texture = ExtResource("11_c6gyn")
 
@@ -321,11 +320,13 @@ scale = Vector2(0.94166666, 0.94166666)
 texture = ExtResource("12_gnpt0")
 
 [node name="Boitata89" type="Sprite2D" parent="Background"]
+visible = false
 position = Vector2(-854.0001, 18.000076)
 scale = Vector2(0.78083324, 0.78083324)
 texture = ExtResource("13_781hd")
 
 [node name="Boitata93" type="Sprite2D" parent="Background"]
+visible = false
 position = Vector2(-307.99997, 442.9997)
 scale = Vector2(0.4526772, 0.4526772)
 texture = ExtResource("14_781hd")
