@@ -26,8 +26,23 @@ metadata/_custom_type_script = "uid://dd7svcu8l7fxu"
 position = Vector2(0, -110)
 shape = SubResource("RectangleShape2D_qxje0")
 
-[node name="CPUParticles2D" type="CPUParticles2D" parent="."]
-position = Vector2(0, -217)
+[node name="OtimizadorSprite" type="VisibleOnScreenEnabler2D" parent="."]
+position = Vector2(0, -110)
+scale = Vector2(8.9, 11)
+script = ExtResource("3_hgbl4")
+metadata/_custom_type_script = "uid://b2ls33ys55oyt"
+
+[node name="Script" type="Node" parent="."]
+script = ExtResource("2_hgbl4")
+
+[node name="Poder" type="Sprite2D" parent="."]
+position = Vector2(0, -120)
+scale = Vector2(1.6875, 1.6875)
+texture = ExtResource("5_beg2k")
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="Poder"]
+position = Vector2(0, -33.77777)
+scale = Vector2(0.5925926, 0.5925926)
 amount = 15
 texture = ExtResource("3_qxje0")
 lifetime = 0.5
@@ -41,16 +56,18 @@ color = Color(0.13725491, 0.6627451, 0.9882353, 1)
 color_ramp = SubResource("Gradient_qxje0")
 color_initial_ramp = SubResource("Gradient_beg2k")
 
-[node name="OtimizadorSprite" type="VisibleOnScreenEnabler2D" parent="."]
-position = Vector2(0, -110)
-scale = Vector2(8.9, 11)
-script = ExtResource("3_hgbl4")
-metadata/_custom_type_script = "uid://b2ls33ys55oyt"
-
-[node name="Script" type="Node" parent="."]
-script = ExtResource("2_hgbl4")
-
-[node name="Poder" type="Sprite2D" parent="."]
-position = Vector2(0, -160)
-scale = Vector2(1.6875, 1.6875)
-texture = ExtResource("5_beg2k")
+[node name="Texto" type="RichTextLabel" parent="."]
+unique_name_in_owner = true
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -196.5
+offset_top = -286.0
+offset_right = 196.5
+offset_bottom = -227.0
+grow_horizontal = 2
+theme_override_font_sizes/normal_font_size = 40
+bbcode_enabled = true
+text = "ABSORVER"
+horizontal_alignment = 1
+vertical_alignment = 1

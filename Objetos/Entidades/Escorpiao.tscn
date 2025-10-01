@@ -64,8 +64,9 @@ metadata/_custom_type_script = "uid://hsdutxxttrp3"
 
 [node name="HurtBox" parent="." node_paths=PackedStringArray("comp_vida", "parent") instance=ExtResource("6_ppnp4")]
 unique_name_in_owner = true
+collision_layer = 8
 comp_vida = NodePath("../Vida")
-distancia_knockback = 0.3
+distancia_knockback = 0.5
 tempo_knockback = 0.2
 parent = NodePath("..")
 

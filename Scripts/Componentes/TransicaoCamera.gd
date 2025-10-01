@@ -5,5 +5,9 @@ extends Area2D
 
 func _on_body_entered(body: Node2D) -> void:
 	if body.is_in_group("Player"):
-		de_camera_x.priority = 0
-		para_camera_y.priority = 1
+		if de_camera_x:
+			de_camera_x.priority = 0
+			para_camera_y.priority = 1
+		else:
+			para_camera_y.priority = 2
+			Console._Print("PRIORIDADE")

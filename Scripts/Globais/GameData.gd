@@ -56,6 +56,8 @@ func Save() -> void:
 		config.set_value("save", "upgrades", upgrade_num)
 		# Salva arquivo
 		config.save(OS.get_executable_path().get_base_dir()+"/savedata.cfg")
+		var hud:Control = get_tree().get_first_node_in_group("HUD")
+		if hud: hud.AvisoSave()
 		print("Jogo salvo")
 	else:
 		print("Erro ao salvar")

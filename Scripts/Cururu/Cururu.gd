@@ -31,10 +31,6 @@ extends CharacterBody2D
 @export var cooldown_dash: float = 0.0
 
 @export_group("Combate")
-## Distância do knockback, em metros
-@export var distancia_knockback : float = 0.0
-## Duração do knockback, em segundos
-@export var tempo_knockback : float = 0.0
 ## Pontos de magia totais
 @export var magia_max: int = 10
 
@@ -76,10 +72,6 @@ var input_move: float = 0.0
 var pode_mover: bool = true
 
 func _ready() -> void:
-	# Inicia HurtBoxes
-	for h:HurtBox in hurtbox_container.get_children():
-		h.distancia_knockback = distancia_knockback
-		h.tempo_knockback = tempo_knockback
 	# Desabilita hitboxes
 	for h in hitbox_container.get_children():
 		if h is HitBox:

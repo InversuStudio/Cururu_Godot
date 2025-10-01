@@ -937,8 +937,6 @@ lag_pulo = 0.1
 tempo_dash = 0.2
 distancia_dash = 4.5
 cooldown_dash = 0.2
-distancia_knockback = 1.0
-tempo_knockback = 1.0
 vida = NodePath("Vida")
 state_machine = NodePath("StateMachine")
 hitbox_container = NodePath("HitContainer")
@@ -986,6 +984,7 @@ position = Vector2(-2, 0)
 
 [node name="Melee1" parent="HitContainer" node_paths=PackedStringArray("ignore") instance=ExtResource("47_grb16")]
 position = Vector2(33, -15)
+collision_mask = 12
 ignore = NodePath("../../HurtContainer/HurtBox")
 sfx = ExtResource("48_c8qv2")
 
@@ -997,6 +996,7 @@ debug_color = Color(0.69455, 0.495447, 0, 0.42)
 
 [node name="Melee2" parent="HitContainer" node_paths=PackedStringArray("ignore") instance=ExtResource("47_grb16")]
 position = Vector2(12, 0)
+collision_mask = 12
 ignore = NodePath("../../HurtContainer/HurtBox")
 sfx = ExtResource("48_c8qv2")
 
@@ -1007,6 +1007,7 @@ shape = SubResource("CapsuleShape2D_wq158")
 disabled = true
 
 [node name="Special" parent="HitContainer" node_paths=PackedStringArray("ignore") groups=["Special"] instance=ExtResource("47_grb16")]
+collision_mask = 12
 dano = 2
 ignore = NodePath("../../HurtContainer/HurtBox")
 sfx = ExtResource("48_c8qv2")

@@ -19,6 +19,7 @@ func _input(_event: InputEvent) -> void:
 			%Pause.hide()
 
 func _ready() -> void:
+	%Pause.hide()
 	var player:CharacterBody2D = get_tree().get_first_node_in_group("Player")
 	# Se achar Player na cena...
 	if player:

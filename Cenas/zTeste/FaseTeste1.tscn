@@ -1,4 +1,4 @@
-[gd_scene load_steps=35 format=4 uid="uid://driflyxauqbxs"]
+[gd_scene load_steps=36 format=4 uid="uid://driflyxauqbxs"]
 
 [ext_resource type="Texture2D" uid="uid://c374cwih425cq" path="res://Sprites/Cenário/Tilemaps/Base.png" id="1_52y5a"]
 [ext_resource type="Texture2D" uid="uid://cov3k8uja4wwj" path="res://Sprites/Cenário/zSem_Uso/PAU_BRASIL.png" id="2_bp4ag"]
@@ -42,6 +42,9 @@ size = Vector2(29, 419)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_y7vak"]
 size = Vector2(1058, 412)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_b4qhl"]
+size = Vector2(470, 419)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_77bok"]
 size = Vector2(32, 400)
 
@@ -58,8 +61,7 @@ transition = 1
 
 [sub_resource type="Resource" id="Resource_id35g"]
 script = ExtResource("10_0ho33")
-duration = 0.4
-transition = 1
+duration = 0.0
 metadata/_custom_type_script = "uid://8umksf8e80fw"
 
 [sub_resource type="Resource" id="Resource_g237d"]
@@ -188,6 +190,15 @@ shape = SubResource("RectangleShape2D_id35g")
 [node name="OtimizadorSprite" type="VisibleOnScreenEnabler2D" parent="Transicoes/Canto-Salao"]
 script = ExtResource("18_0he43")
 metadata/_custom_type_script = "uid://b2ls33ys55oyt"
+
+[node name="MeioSalao" parent="Transicoes" node_paths=PackedStringArray("de_camera_x", "para_camera_y") instance=ExtResource("17_id35g")]
+position = Vector2(2957, -388)
+de_camera_x = NodePath("../../Cameras/AreaPrincipal")
+para_camera_y = NodePath("../../Cameras/AreaAberta")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Transicoes/MeioSalao"]
+position = Vector2(-8, -186)
+shape = SubResource("RectangleShape2D_b4qhl")
 
 [node name="TransicaoFase" parent="Transicoes" instance=ExtResource("10_wqlrc")]
 position = Vector2(-2655, -514)
@@ -335,7 +346,10 @@ position = Vector2(-0.5, -33)
 shape = SubResource("RectangleShape2D_u25g5")
 
 [node name="InimigoTeste" parent="." instance=ExtResource("7_2vimk")]
-position = Vector2(-236, -19)
+position = Vector2(-94, -19)
+
+[node name="InimigoTeste2" parent="." instance=ExtResource("7_2vimk")]
+position = Vector2(-618, -19)
 
 [node name="Player" parent="." instance=ExtResource("3_2vimk")]
 position = Vector2(-1018, -42)
