@@ -202,13 +202,16 @@ metadata/_custom_type_script = "uid://cviskiwh21kxe"
 metadata/_edit_use_anchors_ = true
 
 [node name="background" type="Node2D" parent="."]
+light_mask = 2
 
 [node name="Fundoceu" type="Sprite2D" parent="background"]
+light_mask = 2
 position = Vector2(-3334, -111.5)
 scale = Vector2(5.6897235, 1.4599802)
 texture = ExtResource("3_2ysx0")
 
 [node name="Arvores03" type="Node2D" parent="background"]
+light_mask = 2
 
 [node name="Arvore2" type="Sprite2D" parent="background/Arvores03"]
 position = Vector2(-7128.0005, 449.00003)
@@ -230,46 +233,56 @@ position = Vector2(572, 154)
 texture = ExtResource("4_6d12h")
 
 [node name="Arvores02" type="Node2D" parent="background"]
+light_mask = 2
 
 [node name="Arvore8" type="Sprite2D" parent="background/Arvores02"]
+light_mask = 2
 position = Vector2(-7484, 228)
 texture = ExtResource("4_exy77")
 
 [node name="Arvore9" type="Sprite2D" parent="background/Arvores02"]
+light_mask = 2
 position = Vector2(227, 104.16016)
 texture = ExtResource("4_exy77")
 
 [node name="Arvore10" type="Sprite2D" parent="background/Arvores02"]
+light_mask = 2
 position = Vector2(-4322.4297, 140.16016)
 rotation = -0.087266445
 texture = ExtResource("4_exy77")
 
 [node name="Arvore11" type="Sprite2D" parent="background/Arvores02"]
+light_mask = 2
 position = Vector2(-1462.4297, -26.839813)
 rotation = -0.087266445
 texture = ExtResource("4_exy77")
 
 [node name="Arvore12" type="Sprite2D" parent="background/Arvores02"]
+light_mask = 2
 position = Vector2(-6265.4297, 200.16016)
 rotation = 0.087266445
 texture = ExtResource("4_exy77")
 
 [node name="Arvore13" type="Sprite2D" parent="background/Arvores02"]
-position = Vector2(-9280.43, 45.160156)
+light_mask = 2
+position = Vector2(-8695.001, 44.999878)
 rotation = 0.087266445
 texture = ExtResource("4_exy77")
 
 [node name="Arvore14" type="Sprite2D" parent="background/Arvores02"]
+light_mask = 2
 position = Vector2(-3571.4292, -49.839844)
 rotation = 0.087266445
 texture = ExtResource("4_exy77")
 
 [node name="Fundonevoa" type="Sprite2D" parent="background"]
+light_mask = 2
 position = Vector2(-3340.5005, 709)
 scale = Vector2(5.696146, 1.0899209)
 texture = ExtResource("5_6d12h")
 
 [node name="Arvores01" type="Node2D" parent="background"]
+light_mask = 2
 
 [node name="Arvore15" type="Sprite2D" parent="background/Arvores01"]
 position = Vector2(-3929, 228)
@@ -314,6 +327,7 @@ rotation = 0.08726645
 texture = ExtResource("4_exy77")
 
 [node name="Fundonevoa2" type="Sprite2D" parent="background"]
+light_mask = 2
 position = Vector2(-3333, 712)
 scale = Vector2(5.702569, 0.7756917)
 texture = ExtResource("6_meyap")

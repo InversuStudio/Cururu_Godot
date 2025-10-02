@@ -229,10 +229,10 @@ metadata/_custom_type_script = "uid://bhexx6mj1xv3q"
 physics_interpolation_mode = 1
 position = Vector2(12998, -7675)
 process_callback = 0
-limit_left = 4994
-limit_top = -3644
-limit_right = 12797
-limit_bottom = -1459
+limit_left = 12038
+limit_top = -8311
+limit_right = 16815
+limit_bottom = -7135
 editor_draw_limits = true
 
 [node name="PhantomCameraHost" type="Node" parent="Camera2D2"]
@@ -249,7 +249,7 @@ vel = 12.0
 vel_aerea = 10.0
 tempo_dash = 0.18
 
-[node name="PointLight2D2" type="PointLight2D" parent="Cururu"]
+[node name="PointLight2D3" type="PointLight2D" parent="Cururu"]
 position = Vector2(-28.149544, -83.40631)
 range_item_cull_mask = 2
 shadow_enabled = true
