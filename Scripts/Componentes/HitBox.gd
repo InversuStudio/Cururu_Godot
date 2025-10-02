@@ -19,6 +19,7 @@ func _on_area_entered(area: Area2D) -> void:
 	if area is HurtBox: # Se a colisão for uma HurtBox
 		if area == ignore: return
 		hit.emit()
+		Console._Print("HITBOX AEEEEEEEEE")
 		area.RecebeDano(dano, global_position)
 		# Toca som
 		if sfx:

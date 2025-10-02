@@ -1,13 +1,14 @@
-[gd_scene load_steps=11 format=3 uid="uid://dct0yu1s5isad"]
+[gd_scene load_steps=12 format=3 uid="uid://dct0yu1s5isad"]
 
+[ext_resource type="Script" uid="uid://dbg0osum7dedd" path="res://Scripts/Boss/BolaDeFogo.gd" id="1_qng7f"]
 [ext_resource type="Texture2D" uid="uid://7onsawy03clf" path="res://Sprites/Inimigos/Boitata/Ataque1/Fogo/boitata_89.png" id="1_ysqyo"]
-[ext_resource type="Script" uid="uid://32imhtwu4l7" path="res://Scripts/Componentes/HitBox.gd" id="2_35pqn"]
 [ext_resource type="Texture2D" uid="uid://363pc3kisej3" path="res://Sprites/Inimigos/Boitata/Ataque1/Fogo/boitata_91.png" id="2_qng7f"]
 [ext_resource type="Texture2D" uid="uid://0n53nlbb4pjo" path="res://Sprites/Inimigos/Boitata/Ataque1/Fogo/boitata_93.png" id="3_u6gje"]
 [ext_resource type="Texture2D" uid="uid://dluq1p6xvq6tu" path="res://Sprites/Inimigos/Boitata/Ataque1/Fogo/boitata_95.png" id="4_iwi73"]
 [ext_resource type="Texture2D" uid="uid://cfmgg0u3q40yc" path="res://Sprites/Inimigos/Boitata/Ataque1/Fogo/boitata_97.png" id="5_jby16"]
 [ext_resource type="Texture2D" uid="uid://dpjbug6loxp6r" path="res://Sprites/Inimigos/Boitata/Ataque1/Fogo/boitata_99.png" id="6_8h3ej"]
 [ext_resource type="Texture2D" uid="uid://cqdlu83b65t5l" path="res://Sprites/Inimigos/Boitata/Ataque1/Fogo/boitata_101.png" id="7_xe7ot"]
+[ext_resource type="PackedScene" uid="uid://pc4mgv2nv8af" path="res://Objetos/Funcionalidade/CompHitBox.tscn" id="9_qng7f"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_u0rk8"]
 animations = [{
@@ -39,20 +40,31 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_e7y2f"]
-radius = 228.0
-height = 1036.0
+radius = 128.0
+height = 554.0
 
 [node name="BolaDeFogo" type="Node2D"]
+script = ExtResource("1_qng7f")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(0.5, 0.5)
 sprite_frames = SubResource("SpriteFrames_u0rk8")
-frame_progress = 0.39842063
+autoplay = "default"
+frame = 2
+frame_progress = 0.16689995
 
-[node name="HitBox" type="Area2D" parent="."]
-script = ExtResource("2_35pqn")
-dano = 2
-metadata/_custom_type_script = "uid://32imhtwu4l7"
+[node name="HitBox" parent="." instance=ExtResource("9_qng7f")]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HitBox"]
+position = Vector2(11, 68)
 rotation = 1.5707964
 shape = SubResource("CapsuleShape2D_e7y2f")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 5.0
+one_shot = true
+autostart = true
+
+[connection signal="body_entered" from="HitBox" to="." method="_on_hit_box_body_entered"]
+[connection signal="hit" from="HitBox" to="." method="_on_hit_box_hit"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

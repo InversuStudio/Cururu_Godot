@@ -8,7 +8,7 @@ extends Area2D
 ## Duração do knockback, em segundos
 @export var tempo_knockback : float = 0.0
 ## Cooldown para receber dano novamente
-@export var cooldown_dano: float = 0.2
+@export var cooldown_dano: float = 0.0
 ## Som de acerto
 @export var hit_sfx : AudioStream = null
 ## Recebe o node pai
@@ -17,9 +17,15 @@ extends Area2D
 signal hurt
 signal counter
 
+var col:CollisionShape2D = null
+
 func _ready() -> void:
 	if hit_sfx: %SFX.stream = hit_sfx
-	%Timer.wait_time = cooldown_dano
+	if cooldown_dano > 0.0:
+		%Timer.wait_time = cooldown_dano
+	for c:Node in get_children():
+		if c is CollisionShape2D:
+			col = c
 
 # FUNÇÃO DE RECEBER DANO
 func RecebeDano(dano:int, pos_target:Vector2):
@@ -41,12 +47,15 @@ func RecebeDano(dano:int, pos_target:Vector2):
 			var c:float = ((2.0 * distancia_knockback) / pow(tempo_knockback, 2)) * 128
 			counter.emit(c, dir)
 	call_deferred("AchaHit")
-	# Desabilita colisão
-	set_deferred("monitorable", false)
+	if cooldown_dano > 0.0:
+		#set_deferred("monitorable", false)
+		#set_deferred("monitoring", false)
+		# Desabilita colisão
+		col.set_deferred("disabled", true)
+		# Inicia cooldown
+		%Timer.start()
 	# Toca som de dano
 	if hit_sfx: %SFX.play()
-	# Inicia cooldown
-	%Timer.start()
 
 func AchaHit() -> void:
 	var areas:Array[Area2D] = get_overlapping_areas()
@@ -57,4 +66,6 @@ func AchaHit() -> void:
 	hurt.emit(hitbox)
 
 func _on_timer_timeout() -> void:
-	set_deferred("monitorable", true)
+	col.set_deferred("disabled", false)
+	#set_deferred("monitorable", true)
+	#set_deferred("monitoring", false)

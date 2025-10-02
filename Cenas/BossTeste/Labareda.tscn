@@ -19,6 +19,17 @@ animations = [{
 "texture": ExtResource("1_tqvmf")
 }, {
 "duration": 1.0,
+"texture": ExtResource("10_d12gu")
+}],
+"loop": true,
+"name": &"Carga",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_tqvmf")
+}, {
+"duration": 1.0,
 "texture": ExtResource("2_tdbse")
 }, {
 "duration": 1.0,
@@ -46,7 +57,7 @@ animations = [{
 "texture": ExtResource("10_d12gu")
 }],
 "loop": true,
-"name": &"default",
+"name": &"Jato",
 "speed": 10.0
 }]
 
@@ -59,7 +70,7 @@ height = 754.0
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, -468)
 sprite_frames = SubResource("SpriteFrames_u0rk8")
-frame_progress = 0.58240986
+animation = &"Carga"
 
 [node name="HitBox" type="Area2D" parent="."]
 position = Vector2(0, -342)

@@ -1,21 +1,30 @@
 extends State
 
-@export var state_CospeFogo: State
+## State de Cuspir Fogo
+@export var state_cospe_fogo: State = null
+## State de Pilar de Fogo
+@export var state_pilar_fogo: State = null
+## State de Vulnerável
+@export var state_nocaute: State = null
+
 var prosseguir: bool = false
 
 func Enter() -> void:
-	#%Sprite.play("Idle")
-	%TimerIdle.start()
 	Console._Print("Idle aqui")
-
-func _on_timer_vulneravel_timeout() -> void:
-	prosseguir = true
-	pass # Replace with function body.
+	%Anim.play("Idle")
+	%TimerIdle.start()
+	if parent.num_vul >= parent.num_ate_vulneravel:
+		get_parent().Muda_State(state_nocaute)
+		parent.num_vul = 0
+		%TimerIdle.stop()
 
 func FixedUpdate(_delta : float) -> State:
 	if prosseguir:
-		return state_CospeFogo
+		return state_cospe_fogo
 	return null
 	
+func _on_timer_idle_timeout() -> void:
+	prosseguir = true
+
 func Exit() -> void:
 	prosseguir = false

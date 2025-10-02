@@ -3,11 +3,9 @@ extends State
 @export var idle_state:State = null
 var prosseguir:bool = false
 
-const bola_fogo:PackedScene = preload("res://Cenas/BossTeste/BolaDeFogo.tscn")
-
 func Enter() -> void:
-	Console._Print("Cospe Fogo aqui")
-	%Anim.play("CospeFogo")
+	Console._Print("Pilar Fogo aqui")
+	%Anim.play("Pilar")
 	parent.num_vul += 1
 	Console._Print(parent.num_vul)
 
@@ -18,9 +16,8 @@ func Update(_delta : float) -> State:
 
 # Função chamada no AnimationPlayer
 func CospeFogo() -> void:
-	var b:Node2D = bola_fogo.instantiate()
-	add_child(b)
-	b.global_position = %PosTiro.global_position
+	# Cospe todos os fogos
+	pass
 
 func _on_anim_animation_finished(anim_name: StringName) -> void:
 	if anim_name == "CospeFogo":

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cc2y5nv2flevl"
-path="res://.godot/imported/boitata_129.png-44040f467652ac489b1ca9fab967681d.ctex"
+uid="uid://crb6wx1e181xi"
+path="res://.godot/imported/boitata_105.png-5fd346ddfefa76281bf3f4d0ed74dfe1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Inimigos/Boitata/Corpo/boitata_129.png"
-dest_files=["res://.godot/imported/boitata_129.png-44040f467652ac489b1ca9fab967681d.ctex"]
+source_file="res://Sprites/Inimigos/Boitata/Nocaute/boitata_105.png"
+dest_files=["res://.godot/imported/boitata_105.png-5fd346ddfefa76281bf3f4d0ed74dfe1.ctex"]
 
 [params]
 

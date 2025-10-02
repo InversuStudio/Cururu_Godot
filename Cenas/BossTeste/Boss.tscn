@@ -1,8 +1,10 @@
-[gd_scene load_steps=75 format=3 uid="uid://b7m7lb1s11mbw"]
+[gd_scene load_steps=94 format=3 uid="uid://b7m7lb1s11mbw"]
 
 [ext_resource type="Script" uid="uid://bekibpja60hxm" path="res://Scripts/Boss/boss.gd" id="1_s15tt"]
 [ext_resource type="Texture2D" uid="uid://cxo6j4mj6u5rs" path="res://Sprites/Inimigos/Boitata/TesteTeste/BOITATA_BOLA_DE_FOGO/boitata_81.png" id="2_1jvks"]
+[ext_resource type="Script" uid="uid://hsdutxxttrp3" path="res://Scripts/Componentes/Vida.gd" id="2_16hqa"]
 [ext_resource type="Texture2D" uid="uid://buabttqbkwc4l" path="res://Sprites/Inimigos/Boitata/TesteTeste/BOITATA_BOLA_DE_FOGO/boitata_83.png" id="3_0ddi0"]
+[ext_resource type="PackedScene" uid="uid://va5pjd6vuuo2" path="res://Objetos/Funcionalidade/CompHurtBox.tscn" id="3_fwdqd"]
 [ext_resource type="Texture2D" uid="uid://cravlk51dtwdr" path="res://Sprites/Inimigos/Boitata/TesteTeste/BOITATA_BOLA_DE_FOGO/boitata_85.png" id="4_16hqa"]
 [ext_resource type="Texture2D" uid="uid://dynsfhyfk68qo" path="res://Sprites/Inimigos/Boitata/TesteTeste/BOITATA_BOLA_DE_FOGO/boitata_87.png" id="5_fwdqd"]
 [ext_resource type="Texture2D" uid="uid://d0n68cv3sbsd1" path="res://Sprites/Inimigos/Boitata/TesteTeste/BOITATA_BOLA_DE_FOGO/boitata_89.png" id="6_iqxfe"]
@@ -33,28 +35,30 @@
 [ext_resource type="Texture2D" uid="uid://bmbj7inphyio8" path="res://Sprites/Inimigos/Boitata/TesteTeste/BOITATA_IDLE/boitata_145.png" id="31_5irpk"]
 [ext_resource type="Texture2D" uid="uid://b6wchnr835cwa" path="res://Sprites/Inimigos/Boitata/TesteTeste/BOITATA_IDLE/boitata_147.png" id="32_3cfl8"]
 [ext_resource type="Texture2D" uid="uid://dwodbcebpi7lg" path="res://Sprites/Inimigos/Boitata/TesteTeste/BOITATA_IDLE/boitata_149.png" id="33_bf3fi"]
-[ext_resource type="Texture2D" uid="uid://cmfs0og71tly5" path="res://Sprites/Inimigos/Boitata/TesteTeste/BOITATA_NOCAUTE/boitata_97.png" id="34_kb2t2"]
-[ext_resource type="Texture2D" uid="uid://vbeai555nva0" path="res://Sprites/Inimigos/Boitata/TesteTeste/BOITATA_NOCAUTE/boitata_99.png" id="35_71r63"]
-[ext_resource type="Texture2D" uid="uid://daxgbq2h4u6oc" path="res://Sprites/Inimigos/Boitata/TesteTeste/BOITATA_NOCAUTE/boitata_101.png" id="36_tic1h"]
-[ext_resource type="Texture2D" uid="uid://bj14fahgh3h07" path="res://Sprites/Inimigos/Boitata/TesteTeste/BOITATA_NOCAUTE/boitata_103.png" id="37_q1i38"]
-[ext_resource type="Texture2D" uid="uid://cb2junpu8iaaw" path="res://Sprites/Inimigos/Boitata/TesteTeste/BOITATA_NOCAUTE/boitata_105.png" id="38_gebvg"]
-[ext_resource type="Texture2D" uid="uid://blbopej1mv1s1" path="res://Sprites/Inimigos/Boitata/TesteTeste/BOITATA_NOCAUTE/boitata_107.png" id="39_2onqu"]
-[ext_resource type="Texture2D" uid="uid://dowds0x1lda55" path="res://Sprites/Inimigos/Boitata/TesteTeste/BOITATA_NOCAUTE/boitata_109.png" id="40_475ov"]
-[ext_resource type="Texture2D" uid="uid://bufo33hf2v0ga" path="res://Sprites/Inimigos/Boitata/TesteTeste/BOITATA_NOCAUTE/boitata_111.png" id="41_q8716"]
-[ext_resource type="Texture2D" uid="uid://eemalnl4x2oh" path="res://Sprites/Inimigos/Boitata/TesteTeste/BOITATA_NOCAUTE/boitata_113.png" id="42_iwjnr"]
-[ext_resource type="Texture2D" uid="uid://bhryyyelnu7v6" path="res://Sprites/Inimigos/Boitata/TesteTeste/BOITATA_NOCAUTE/boitata_115.png" id="43_fhomc"]
-[ext_resource type="Texture2D" uid="uid://dgm0feaqxpmoj" path="res://Sprites/Inimigos/Boitata/TesteTeste/BOITATA_NOCAUTE/boitata_117.png" id="44_3l7sv"]
-[ext_resource type="Texture2D" uid="uid://umpnuxh85pyg" path="res://Sprites/Inimigos/Boitata/TesteTeste/BOITATA_NOCAUTE/boitata_119.png" id="45_efqca"]
-[ext_resource type="Texture2D" uid="uid://cdw83rr0apt7a" path="res://Sprites/Inimigos/Boitata/TesteTeste/BOITATA_NOCAUTE/boitata_121.png" id="46_n6ujt"]
+[ext_resource type="Texture2D" uid="uid://dvw7yu1nemajp" path="res://Sprites/Inimigos/Boitata/Nocaute/boitata_95.png" id="42_6hkog"]
+[ext_resource type="Texture2D" uid="uid://cqwljki7ur24f" path="res://Sprites/Inimigos/Boitata/Nocaute/boitata_97.png" id="43_fi4f6"]
+[ext_resource type="Texture2D" uid="uid://d1r158588e0cj" path="res://Sprites/Inimigos/Boitata/Nocaute/boitata_99.png" id="44_iy7ck"]
+[ext_resource type="Texture2D" uid="uid://cyhn8e8dyk26s" path="res://Sprites/Inimigos/Boitata/Nocaute/boitata_101.png" id="45_hsjt7"]
+[ext_resource type="Texture2D" uid="uid://btjpqmk58tll3" path="res://Sprites/Inimigos/Boitata/Nocaute/boitata_103.png" id="46_lll36"]
+[ext_resource type="Texture2D" uid="uid://crb6wx1e181xi" path="res://Sprites/Inimigos/Boitata/Nocaute/boitata_105.png" id="47_4tqxs"]
 [ext_resource type="Texture2D" uid="uid://cek2l1yvpwpl" path="res://Sprites/Inimigos/Boitata/TesteTeste/BOITATA_GRITA_FOGO/boitata_49.png" id="47_huafx"]
 [ext_resource type="Texture2D" uid="uid://br4kxtwjfgwqh" path="res://Sprites/Inimigos/Boitata/TesteTeste/BOITATA_GRITA_FOGO/boitata_51.png" id="48_h0fin"]
+[ext_resource type="Texture2D" uid="uid://kwtriesnj0xq" path="res://Sprites/Inimigos/Boitata/Nocaute/boitata_107.png" id="48_xvx5y"]
 [ext_resource type="Texture2D" uid="uid://6n0ubfsrcx8g" path="res://Sprites/Inimigos/Boitata/TesteTeste/BOITATA_GRITA_FOGO/boitata_53.png" id="49_e3enr"]
+[ext_resource type="Texture2D" uid="uid://dh6oacfodrl8o" path="res://Sprites/Inimigos/Boitata/Nocaute/boitata_109.png" id="49_xq2h5"]
+[ext_resource type="Texture2D" uid="uid://dse2vphkvs5ko" path="res://Sprites/Inimigos/Boitata/Nocaute/boitata_111.png" id="50_v0ih0"]
 [ext_resource type="Texture2D" uid="uid://dbt5250xfa2f7" path="res://Sprites/Inimigos/Boitata/TesteTeste/BOITATA_GRITA_FOGO/boitata_55.png" id="50_y5ilg"]
+[ext_resource type="Texture2D" uid="uid://cq5xb6ru07dyd" path="res://Sprites/Inimigos/Boitata/Nocaute/boitata_113.png" id="51_i41or"]
 [ext_resource type="Texture2D" uid="uid://cxg4pbfqwah6e" path="res://Sprites/Inimigos/Boitata/TesteTeste/BOITATA_GRITA_FOGO/boitata_57.png" id="51_tift1"]
+[ext_resource type="Texture2D" uid="uid://c781ch4cr3msl" path="res://Sprites/Inimigos/Boitata/Nocaute/boitata_115.png" id="52_1mvtp"]
 [ext_resource type="Texture2D" uid="uid://rpgkug1vkwm5" path="res://Sprites/Inimigos/Boitata/TesteTeste/BOITATA_GRITA_FOGO/boitata_59.png" id="52_x6621"]
 [ext_resource type="Texture2D" uid="uid://cpo1k33da4vpt" path="res://Sprites/Inimigos/Boitata/TesteTeste/BOITATA_GRITA_FOGO/boitata_61.png" id="53_aensq"]
+[ext_resource type="Texture2D" uid="uid://cflav4p1oi7yf" path="res://Sprites/Inimigos/Boitata/Nocaute/boitata_117.png" id="53_qhv3i"]
 [ext_resource type="Texture2D" uid="uid://6qns3er86scv" path="res://Sprites/Inimigos/Boitata/TesteTeste/BOITATA_GRITA_FOGO/boitata_63.png" id="54_e4ef7"]
+[ext_resource type="Texture2D" uid="uid://b7kdshueux5oq" path="res://Sprites/Inimigos/Boitata/Nocaute/boitata_119.png" id="54_q1nmn"]
 [ext_resource type="Texture2D" uid="uid://r8a1fr4f1seq" path="res://Sprites/Inimigos/Boitata/TesteTeste/BOITATA_GRITA_FOGO/boitata_65.png" id="55_osj2x"]
+[ext_resource type="Texture2D" uid="uid://c7mmrv85a8fq0" path="res://Sprites/Inimigos/Boitata/Nocaute/boitata_121.png" id="55_vsrrx"]
+[ext_resource type="Texture2D" uid="uid://bvb6kowht8pcv" path="res://Sprites/Inimigos/Boitata/Nocaute/boitata_123.png" id="56_hbr26"]
 [ext_resource type="Texture2D" uid="uid://btogqmq0j0bpt" path="res://Sprites/Inimigos/Boitata/TesteTeste/BOITATA_GRITA_FOGO/boitata_67.png" id="56_umvt4"]
 [ext_resource type="Texture2D" uid="uid://13ang232fa8x" path="res://Sprites/Inimigos/Boitata/TesteTeste/BOITATA_GRITA_FOGO/boitata_69.png" id="57_tr0xw"]
 [ext_resource type="Texture2D" uid="uid://ctjlobpmaaojx" path="res://Sprites/Inimigos/Boitata/TesteTeste/BOITATA_GRITA_FOGO/boitata_71.png" id="58_y76ig"]
@@ -72,7 +76,14 @@
 [ext_resource type="Texture2D" uid="uid://dtxf023pwemmm" path="res://Sprites/Inimigos/Boitata/TesteTeste/BOITATA_LEVANTA/boitata_15.png" id="68_2gaj7"]
 [ext_resource type="Texture2D" uid="uid://drn1yoa6b11a" path="res://Sprites/Inimigos/Boitata/TesteTeste/BOITATA_LEVANTA/boitata_17.png" id="69_whjwt"]
 [ext_resource type="Texture2D" uid="uid://b85cwt12qtxxg" path="res://Sprites/Inimigos/Boitata/TesteTeste/BOITATA_LEVANTA/boitata_19.png" id="70_udcvh"]
+[ext_resource type="Script" uid="uid://cfu466euekcdn" path="res://Scripts/Boss/Start.gd" id="72_0ddi0"]
 [ext_resource type="Script" uid="uid://rlmx3hnbiu12" path="res://Scripts/Boss/cospe_fogo.gd" id="75_16hqa"]
+[ext_resource type="Script" uid="uid://dmxvedpbqkt7c" path="res://Scripts/Boss/Nocaute.gd" id="77_iqxfe"]
+[ext_resource type="Script" uid="uid://c041l8mwrkgsy" path="res://Scripts/Boss/PilarFogo.gd" id="85_fi4f6"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_fwdqd"]
+radius = 171.0
+height = 780.0
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_nkv4g"]
 animations = [{
@@ -101,9 +112,17 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("9_uoyl7")
 }],
-"loop": true,
+"loop": false,
 "name": &"CospeFogo",
 "speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": null
+}],
+"loop": false,
+"name": &"Escondido",
+"speed": 5.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -148,9 +167,9 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("23_i41or")
 }],
-"loop": true,
+"loop": false,
 "name": &"GritoEntrada",
-"speed": 5.0
+"speed": 10.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -189,46 +208,63 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("34_kb2t2")
+"texture": ExtResource("50_v0ih0")
 }, {
 "duration": 1.0,
-"texture": ExtResource("35_71r63")
+"texture": ExtResource("51_i41or")
 }, {
 "duration": 1.0,
-"texture": ExtResource("36_tic1h")
+"texture": ExtResource("52_1mvtp")
 }, {
 "duration": 1.0,
-"texture": ExtResource("37_q1i38")
+"texture": ExtResource("53_qhv3i")
 }, {
 "duration": 1.0,
-"texture": ExtResource("38_gebvg")
+"texture": ExtResource("54_q1nmn")
 }, {
 "duration": 1.0,
-"texture": ExtResource("39_2onqu")
+"texture": ExtResource("55_vsrrx")
 }, {
 "duration": 1.0,
-"texture": ExtResource("40_475ov")
+"texture": ExtResource("56_hbr26")
 }, {
 "duration": 1.0,
-"texture": ExtResource("41_q8716")
-}, {
-"duration": 1.0,
-"texture": ExtResource("42_iwjnr")
-}, {
-"duration": 1.0,
-"texture": ExtResource("43_fhomc")
-}, {
-"duration": 1.0,
-"texture": ExtResource("44_3l7sv")
-}, {
-"duration": 1.0,
-"texture": ExtResource("45_efqca")
-}, {
-"duration": 1.0,
-"texture": ExtResource("46_n6ujt")
+"texture": null
 }],
-"loop": true,
-"name": &"Nocaute",
+"loop": false,
+"name": &"NocauteEnd",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("42_6hkog")
+}, {
+"duration": 1.0,
+"texture": ExtResource("43_fi4f6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("44_iy7ck")
+}, {
+"duration": 1.0,
+"texture": ExtResource("45_hsjt7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("46_lll36")
+}, {
+"duration": 1.0,
+"texture": ExtResource("47_4tqxs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("48_xvx5y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("49_xq2h5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("50_v0ih0")
+}],
+"loop": false,
+"name": &"NocauteStart",
 "speed": 10.0
 }, {
 "frames": [{
@@ -274,12 +310,12 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("60_ut5xs")
 }],
-"loop": true,
+"loop": false,
 "name": &"PilarDeFogo",
 "speed": 10.0
 }, {
 "frames": [],
-"loop": true,
+"loop": false,
 "name": &"Purificado",
 "speed": 10.0
 }, {
@@ -313,45 +349,424 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": ExtResource("70_udcvh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_1mvtp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_qhv3i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_q1nmn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_vsrrx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_hbr26")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_ycj6j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_r12sw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_5irpk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_3cfl8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_bf3fi")
 }],
-"loop": true,
+"loop": false,
 "name": &"Surgimento",
 "speed": 10.0
 }]
 
+[sub_resource type="Animation" id="Animation_16hqa"]
+resource_name = "CospeFogo"
+length = 0.8
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"CospeFogo"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.10000001, 0.20000002, 0.3, 0.40000004, 0.5, 0.6, 0.70000005),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 6, 7]
+}
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("StateMachine/CospeFogo")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.5),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"CospeFogo"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_ojojp"]
+resource_name = "Grito"
+length = 1.4
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"GritoEntrada"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.10000001, 0.20000002, 0.3, 0.40000004, 0.5, 0.6, 0.70000005, 0.8000001, 0.90000004, 1, 1.1, 1.2, 1.3000001),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+}
+
+[sub_resource type="Animation" id="Animation_0ddi0"]
+resource_name = "Idle"
+length = 0.8
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"Idle"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.10000001, 0.20000002, 0.3, 0.40000004, 0.5, 0.6, 0.70000005),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [1, 2, 3, 5, 6, 7, 8, 9]
+}
+
+[sub_resource type="Animation" id="Animation_0w5f0"]
+resource_name = "NocauteEnd"
+length = 0.8
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"NocauteEnd"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.10000001, 0.20000002, 0.3, 0.40000004, 0.5, 0.6, 0.70000005),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 6, 7]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("HurtBox:monitorable")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.4),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_mjx0v"]
+resource_name = "NocauteStart"
+length = 0.9
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"NocauteStart"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.10000001, 0.20000002, 0.3, 0.40000004, 0.5, 0.6, 0.70000005, 0.8000001),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 6, 7, 8]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("HurtBox:monitorable")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.5),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_fwdqd"]
+resource_name = "Pilar"
+length = 1.4
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"PilarDeFogo"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.10000001, 0.20000002, 0.3, 0.40000004, 0.5, 0.6, 0.70000005, 0.8000001, 0.90000004, 1, 1.1, 1.2, 1.3000001),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+}
+
+[sub_resource type="Animation" id="Animation_iqxfe"]
+resource_name = "Purificado"
+
+[sub_resource type="Animation" id="Animation_uoyl7"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+
+[sub_resource type="Animation" id="Animation_sgy8v"]
+resource_name = "Surge"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"Surgimento"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.10000001, 0.20000002, 0.3, 0.40000004, 0.5, 0.6, 0.70000005, 0.8000001, 0.90000004, 1, 1.1, 1.2, 1.3000001, 1.4000001, 1.5, 1.6000001, 1.7000002, 1.8000001, 1.9000001),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_mjx0v"]
+_data = {
+&"CospeFogo": SubResource("Animation_16hqa"),
+&"Grito": SubResource("Animation_ojojp"),
+&"Idle": SubResource("Animation_0ddi0"),
+&"NocauteEnd": SubResource("Animation_0w5f0"),
+&"NocauteStart": SubResource("Animation_mjx0v"),
+&"Pilar": SubResource("Animation_fwdqd"),
+&"Purificado": SubResource("Animation_iqxfe"),
+&"RESET": SubResource("Animation_uoyl7"),
+&"Surge": SubResource("Animation_sgy8v")
+}
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_uoyl7"]
+bg_color = Color(0.73709744, 0, 0.21232891, 1)
+
 [node name="Boss" type="Node2D"]
 script = ExtResource("1_s15tt")
+
+[node name="Vida" type="Node" parent="."]
+unique_name_in_owner = true
+script = ExtResource("2_16hqa")
+vida_max = 15
+metadata/_custom_type_script = "uid://hsdutxxttrp3"
 
 [node name="TimerIdle" type="Timer" parent="."]
 unique_name_in_owner = true
 wait_time = 3.0
 one_shot = true
 
+[node name="TimerNocaute" type="Timer" parent="."]
+unique_name_in_owner = true
+wait_time = 10.0
+one_shot = true
+
+[node name="HurtBox" parent="." node_paths=PackedStringArray("comp_vida") instance=ExtResource("3_fwdqd")]
+unique_name_in_owner = true
+monitorable = false
+comp_vida = NodePath("../Vida")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HurtBox"]
+position = Vector2(481, -368)
+rotation = 1.5707964
+shape = SubResource("CapsuleShape2D_fwdqd")
+debug_color = Color(0.9968892, 0, 0.18689972, 0.41960785)
+
+[node name="PosTiro" type="Marker2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(517, -714)
+gizmo_extents = 45.0
+
 [node name="Sprite" type="AnimatedSprite2D" parent="."]
 unique_name_in_owner = true
+position = Vector2(0, -838)
+scale = Vector2(1.5, 1.5)
 sprite_frames = SubResource("SpriteFrames_nkv4g")
-animation = &"PilarDeFogo"
-frame_progress = 0.8835012
+animation = &"CospeFogo"
+autoplay = "Escondido"
+frame = 1
+
+[node name="Anim" type="AnimationPlayer" parent="."]
+unique_name_in_owner = true
+libraries = {
+&"": SubResource("AnimationLibrary_mjx0v")
+}
 
 [node name="StateMachine" type="Node" parent="." node_paths=PackedStringArray("start_state")]
 script = ExtResource("61_01cui")
-start_state = NodePath("Idle")
+start_state = NodePath("Start")
 
-[node name="Idle" type="Node" parent="StateMachine" node_paths=PackedStringArray("state_CospeFogo")]
+[node name="Start" type="Node" parent="StateMachine" node_paths=PackedStringArray("state_idle")]
+script = ExtResource("72_0ddi0")
+state_idle = NodePath("../Idle")
+
+[node name="Idle" type="Node" parent="StateMachine" node_paths=PackedStringArray("state_cospe_fogo", "state_pilar_fogo", "state_nocaute")]
 script = ExtResource("62_g25rt")
-state_CospeFogo = NodePath("../CospeFogo")
+state_cospe_fogo = NodePath("../CospeFogo")
+state_pilar_fogo = NodePath("../PilarFogo")
+state_nocaute = NodePath("../Nocaute")
 
-[node name="CospeFogo" type="Node" parent="StateMachine"]
+[node name="CospeFogo" type="Node" parent="StateMachine" node_paths=PackedStringArray("idle_state")]
 script = ExtResource("75_16hqa")
+idle_state = NodePath("../Idle")
 
-[node name="Labareda" type="Node" parent="StateMachine"]
-
-[node name="Surgimento" type="Node" parent="StateMachine"]
-
-[node name="Grito" type="Node" parent="StateMachine"]
+[node name="PilarFogo" type="Node" parent="StateMachine" node_paths=PackedStringArray("idle_state")]
+script = ExtResource("85_fi4f6")
+idle_state = NodePath("../Idle")
 
 [node name="Purificado" type="Node" parent="StateMachine"]
 
-[node name="Nocaute" type="Node" parent="StateMachine"]
+[node name="Nocaute" type="Node" parent="StateMachine" node_paths=PackedStringArray("state_idle")]
+script = ExtResource("77_iqxfe")
+state_idle = NodePath("../Idle")
 
-[connection signal="timeout" from="TimerIdle" to="StateMachine/Idle" method="_on_timer_vulneravel_timeout"]
+[node name="UI_BOSS" type="CanvasLayer" parent="."]
+
+[node name="Control" type="Control" parent="UI_BOSS"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="UI_BOSS/Control"]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -100.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="BarraVida" type="ProgressBar" parent="UI_BOSS/Control/MarginContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+theme_override_styles/fill = SubResource("StyleBoxFlat_uoyl7")
+max_value = 15.0
+value = 8.0
+show_percentage = false
+
+[connection signal="timeout" from="TimerIdle" to="StateMachine/Idle" method="_on_timer_idle_timeout"]
+[connection signal="timeout" from="TimerNocaute" to="StateMachine/Nocaute" method="_on_timer_nocaute_timeout"]
+[connection signal="animation_finished" from="Anim" to="StateMachine/Start" method="_on_anim_animation_finished"]
+[connection signal="animation_finished" from="Anim" to="StateMachine/CospeFogo" method="_on_anim_animation_finished"]
+[connection signal="animation_finished" from="Anim" to="StateMachine/Nocaute" method="_on_anim_animation_finished"]

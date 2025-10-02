@@ -965,6 +965,7 @@ metadata/_custom_type_script = "uid://hsdutxxttrp3"
 comp_vida = NodePath("../../Vida")
 distancia_knockback = 1.2
 tempo_knockback = 1.0
+cooldown_dano = 2.0
 hit_sfx = ExtResource("48_c8qv2")
 parent = NodePath("../..")
 
