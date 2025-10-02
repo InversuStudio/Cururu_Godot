@@ -203,7 +203,6 @@ scale = Vector2(0.959163, 0.959163)
 vel = 12.0
 vel_aerea = 10.0
 tempo_dash = 0.18
-distancia_knockback = 0.9
 
 [node name="PointLight2D3" type="PointLight2D" parent="Cururu"]
 position = Vector2(-28.149544, -83.40631)
@@ -215,8 +214,8 @@ texture_scale = 1.5
 
 [node name="TransicaoFase2" parent="." instance=ExtResource("6_4gyiy")]
 position = Vector2(7684, -296)
-destino = 19
-posicao = Vector2(2616, 1285)
+destino = 17
+posicao = Vector2(982, -637)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TransicaoFase2"]
 position = Vector2(-22, -250.5)
@@ -237,7 +236,7 @@ tile_map_data = PackedByteArray("AAApAPL/AAABAAMAAAAqAPL/AAABAAMAAAApAPP/AAABAAM
 tile_set = SubResource("TileSet_1ctew")
 
 [node name="Node2D" type="Node2D" parent="."]
-position = Vector2(874, -4068)
+position = Vector2(7480, -358)
 
 [node name="UIGAME" type="CanvasLayer" parent="."]
 

@@ -1,4 +1,4 @@
-[gd_scene load_steps=36 format=4 uid="uid://c4rls1pfwei2e"]
+[gd_scene load_steps=38 format=4 uid="uid://c4rls1pfwei2e"]
 
 [ext_resource type="Texture2D" uid="uid://vnot8xnxb4hf" path="res://Sprites/Inimigos/Boitata/boitata_19.png" id="1_drh7j"]
 [ext_resource type="Texture2D" uid="uid://c374cwih425cq" path="res://Sprites/Cenário/Tilemaps/Base.png" id="1_uhas7"]
@@ -23,9 +23,11 @@
 [ext_resource type="Texture2D" uid="uid://dox3jsfss2k4a" path="res://Sprites/Inimigos/Boitata/Grito/boitata_39.png" id="12_gnpt0"]
 [ext_resource type="Texture2D" uid="uid://uq6dbjep5wva" path="res://Sprites/Cenário/Mata_Atlantica/Foreground/frontfolha.png" id="13_3r0k0"]
 [ext_resource type="Texture2D" uid="uid://cjl88xeknofui" path="res://Sprites/Cenário/Mata_Atlantica/Chao/grama_reto.png" id="13_3r8ne"]
+[ext_resource type="Texture2D" uid="uid://r14467l80hth" path="res://Sprites/Inimigos/Boitata/Ataque1/boitata_89.png" id="13_781hd"]
 [ext_resource type="Texture2D" uid="uid://cj4rj4oj20ogb" path="res://Sprites/Cenário/Mata_Atlantica/Chao/chap_interno.png" id="13_rcpf6"]
 [ext_resource type="Texture2D" uid="uid://0n53nlbb4pjo" path="res://Sprites/Inimigos/Boitata/Ataque1/Fogo/boitata_93.png" id="14_781hd"]
 [ext_resource type="Texture2D" uid="uid://d4ft4p7v0p2n7" path="res://Sprites/Inimigos/Boitata/Ataque2/Pilar_Fogo/fogo_pilar03.png" id="15_o3pe4"]
+[ext_resource type="Texture2D" uid="uid://dnvw4miyu364e" path="res://Sprites/Inimigos/Boitata/Nocaute/boitata_109.png" id="16_3hgqw"]
 [ext_resource type="PackedScene" uid="uid://bs5i45df7rwnf" path="res://UI/HUD.tscn" id="16_eaxwb"]
 [ext_resource type="Script" uid="uid://cviskiwh21kxe" path="res://Scripts/Componentes/Fade.gd" id="17_drh7j"]
 [ext_resource type="Texture2D" uid="uid://c8bkav2g3wyeu" path="res://Sprites/Cenário/Mata_Atlantica/Chao/moita2.png" id="22_4rfcs"]
@@ -297,7 +299,6 @@ metadata/_edit_use_anchors_ = true
 position = Vector2(-4185, -11283)
 
 [node name="Boitata19" type="Sprite2D" parent="Background"]
-visible = false
 position = Vector2(-931.9999, 579.9998)
 scale = Vector2(0.9200457, 0.9123077)
 texture = ExtResource("1_drh7j")
@@ -309,6 +310,7 @@ texture = ExtResource("2_j2e36")
 flip_h = true
 
 [node name="Boitata01" type="Sprite2D" parent="Background"]
+visible = false
 position = Vector2(-619, 59)
 texture = ExtResource("11_c6gyn")
 
@@ -317,6 +319,12 @@ visible = false
 position = Vector2(-829.9998, 169.00003)
 scale = Vector2(0.94166666, 0.94166666)
 texture = ExtResource("12_gnpt0")
+
+[node name="Boitata89" type="Sprite2D" parent="Background"]
+visible = false
+position = Vector2(-854.0001, 18.000076)
+scale = Vector2(0.78083324, 0.78083324)
+texture = ExtResource("13_781hd")
 
 [node name="Boitata93" type="Sprite2D" parent="Background"]
 visible = false
@@ -338,6 +346,11 @@ texture = ExtResource("15_o3pe4")
 visible = false
 position = Vector2(407, 583)
 texture = ExtResource("15_o3pe4")
+
+[node name="Boitata109" type="Sprite2D" parent="Background"]
+position = Vector2(-714.0005, -234)
+scale = Vector2(0.9713333, 0.9713333)
+texture = ExtResource("16_3hgqw")
 
 [node name="Cururu" parent="." instance=ExtResource("5_yius8")]
 z_index = 0
