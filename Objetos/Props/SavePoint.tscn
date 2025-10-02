@@ -56,7 +56,6 @@ script = ExtResource("1_hntd5")
 script = ExtResource("1_hntd5")
 
 [node name="Texto" type="RichTextLabel" parent="."]
-unique_name_in_owner = true
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5

@@ -57,7 +57,6 @@ color_ramp = SubResource("Gradient_qxje0")
 color_initial_ramp = SubResource("Gradient_beg2k")
 
 [node name="Texto" type="RichTextLabel" parent="."]
-unique_name_in_owner = true
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5

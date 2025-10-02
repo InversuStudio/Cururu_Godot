@@ -1,7 +1,9 @@
 extends InteractObject
 
+@onready var texto: RichTextLabel = $"../Texto"
+
 func _ready() -> void:
-	%Texto.hide()
+	texto.hide()
 
 func Interact(player:CharacterBody2D) -> void:
 	player.vida.RecebeCura(GameData.vida_max)
@@ -9,6 +11,6 @@ func Interact(player:CharacterBody2D) -> void:
 
 func Extra(dentro:bool = true) -> void:
 	if dentro:
-		%Texto.show()
+		texto.show()
 	else:
-		%Texto.hide()
+		texto.hide()
