@@ -1,4 +1,4 @@
-[gd_scene load_steps=33 format=4 uid="uid://stdugviqxu01"]
+[gd_scene load_steps=33 format=4 uid="uid://pia326ptqws0"]
 
 [ext_resource type="Texture2D" uid="uid://l6b625ae8udc" path="res://Sprites/Cenário/Mata_Atlantica/Background/BACK.png" id="1_sjad5"]
 [ext_resource type="Texture2D" uid="uid://cov3k8uja4wwj" path="res://Sprites/Cenário/zSem_Uso/PAU_BRASIL.png" id="2_oi0r6"]
@@ -51,20 +51,16 @@ size = Vector2(4244, 2037)
 script = ExtResource("15_4l1mt")
 duration = 0.4
 transition = 1
-ease = 2
 
 [sub_resource type="Resource" id="Resource_id35g"]
 script = ExtResource("15_4l1mt")
 duration = 0.4
 transition = 1
-ease = 2
 metadata/_custom_type_script = "uid://8umksf8e80fw"
 
 [sub_resource type="Resource" id="Resource_g237d"]
 script = ExtResource("15_4l1mt")
 duration = 0.0
-transition = 0
-ease = 2
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lqome"]
 size = Vector2(168, 158)
@@ -149,7 +145,6 @@ tile_set = SubResource("TileSet_l7pwf")
 position = Vector2(-2655, -514)
 destino = 1
 posicao = Vector2(300, 0)
-virado_a_esquerda = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TransicaoFase"]
 position = Vector2(-17, -184.5)
@@ -204,11 +199,6 @@ position = Vector2(5394, -387)
 
 [node name="Player" parent="." instance=ExtResource("10_3ebqc")]
 position = Vector2(-1006, -315)
-vel = 9.0
-vel_aerea = 7.5
-tempo_pulo = 0.4
-tempo_cair = 0.37
-tempo_coyote = 0.15
 tempo_dash = 0.15
 
 [node name="InimigoTeste" parent="." instance=ExtResource("11_0vg4r")]
@@ -221,10 +211,10 @@ position = Vector2(-832, -193)
 physics_interpolation_mode = 1
 position = Vector2(-1006, -469)
 process_callback = 0
-limit_left = -2759
-limit_top = -1966
-limit_right = 1485
-limit_bottom = 71
+limit_left = -6528
+limit_top = -12054
+limit_right = -390
+limit_bottom = -9744
 editor_draw_limits = true
 
 [node name="PhantomCameraHost" type="Node" parent="MainCamera"]

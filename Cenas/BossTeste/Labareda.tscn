@@ -1,0 +1,72 @@
+[gd_scene load_steps=14 format=3 uid="uid://dppj6i0ifoocp"]
+
+[ext_resource type="Texture2D" uid="uid://fakskg5rd5mq" path="res://Sprites/Inimigos/Boitata/Ataque2/Pilar_Fogo/fogo_pilar01.png" id="1_tqvmf"]
+[ext_resource type="Script" uid="uid://32imhtwu4l7" path="res://Scripts/Componentes/HitBox.gd" id="2_fnsdr"]
+[ext_resource type="Texture2D" uid="uid://d4ft4p7v0p2n7" path="res://Sprites/Inimigos/Boitata/Ataque2/Pilar_Fogo/fogo_pilar03.png" id="2_tdbse"]
+[ext_resource type="Texture2D" uid="uid://dg2e8jw0ikr5l" path="res://Sprites/Inimigos/Boitata/Ataque2/Pilar_Fogo/fogo_pilar05.png" id="3_petnf"]
+[ext_resource type="Texture2D" uid="uid://51sctqbttdam" path="res://Sprites/Inimigos/Boitata/Ataque2/Pilar_Fogo/fogo_pilar07.png" id="4_twefq"]
+[ext_resource type="Texture2D" uid="uid://bt864isqeoqkt" path="res://Sprites/Inimigos/Boitata/Ataque2/Pilar_Fogo/fogo_pilar09.png" id="5_y4c4x"]
+[ext_resource type="Texture2D" uid="uid://dr4usyu7elhwg" path="res://Sprites/Inimigos/Boitata/Ataque2/Pilar_Fogo/fogo_pilar11.png" id="6_bewqd"]
+[ext_resource type="Texture2D" uid="uid://bmwbnq7ol8wv8" path="res://Sprites/Inimigos/Boitata/Ataque2/Pilar_Fogo/fogo_pilar13.png" id="7_aapsr"]
+[ext_resource type="Texture2D" uid="uid://cplyclegxquhd" path="res://Sprites/Inimigos/Boitata/Ataque2/Pilar_Fogo/fogo_pilar15.png" id="8_griib"]
+[ext_resource type="Texture2D" uid="uid://bspf3gaq681gl" path="res://Sprites/Inimigos/Boitata/Ataque2/Pilar_Fogo/fogo_pilar17.png" id="9_0ry6m"]
+[ext_resource type="Texture2D" uid="uid://ch1na8t4hj27y" path="res://Sprites/Inimigos/Boitata/Ataque2/Pilar_Fogo/fogo_pilar19.png" id="10_d12gu"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_u0rk8"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_tqvmf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_tdbse")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_petnf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_twefq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_y4c4x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_bewqd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_aapsr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_griib")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_0ry6m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_d12gu")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_e7y2f"]
+radius = 100.0
+height = 754.0
+
+[node name="Labareda" type="Node2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -468)
+sprite_frames = SubResource("SpriteFrames_u0rk8")
+frame_progress = 0.58240986
+
+[node name="HitBox" type="Area2D" parent="."]
+position = Vector2(0, -342)
+script = ExtResource("2_fnsdr")
+dano = 2
+metadata/_custom_type_script = "uid://32imhtwu4l7"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HitBox"]
+position = Vector2(-3, -31)
+shape = SubResource("CapsuleShape2D_e7y2f")

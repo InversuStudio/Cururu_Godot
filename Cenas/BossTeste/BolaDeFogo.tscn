@@ -1,0 +1,58 @@
+[gd_scene load_steps=11 format=3 uid="uid://dct0yu1s5isad"]
+
+[ext_resource type="Texture2D" uid="uid://7onsawy03clf" path="res://Sprites/Inimigos/Boitata/Ataque1/Fogo/boitata_89.png" id="1_ysqyo"]
+[ext_resource type="Script" uid="uid://32imhtwu4l7" path="res://Scripts/Componentes/HitBox.gd" id="2_35pqn"]
+[ext_resource type="Texture2D" uid="uid://363pc3kisej3" path="res://Sprites/Inimigos/Boitata/Ataque1/Fogo/boitata_91.png" id="2_qng7f"]
+[ext_resource type="Texture2D" uid="uid://0n53nlbb4pjo" path="res://Sprites/Inimigos/Boitata/Ataque1/Fogo/boitata_93.png" id="3_u6gje"]
+[ext_resource type="Texture2D" uid="uid://dluq1p6xvq6tu" path="res://Sprites/Inimigos/Boitata/Ataque1/Fogo/boitata_95.png" id="4_iwi73"]
+[ext_resource type="Texture2D" uid="uid://cfmgg0u3q40yc" path="res://Sprites/Inimigos/Boitata/Ataque1/Fogo/boitata_97.png" id="5_jby16"]
+[ext_resource type="Texture2D" uid="uid://dpjbug6loxp6r" path="res://Sprites/Inimigos/Boitata/Ataque1/Fogo/boitata_99.png" id="6_8h3ej"]
+[ext_resource type="Texture2D" uid="uid://cqdlu83b65t5l" path="res://Sprites/Inimigos/Boitata/Ataque1/Fogo/boitata_101.png" id="7_xe7ot"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_u0rk8"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_ysqyo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_qng7f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_u6gje")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_iwi73")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_jby16")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_8h3ej")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_xe7ot")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_e7y2f"]
+radius = 228.0
+height = 1036.0
+
+[node name="BolaDeFogo" type="Node2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_u0rk8")
+frame_progress = 0.39842063
+
+[node name="HitBox" type="Area2D" parent="."]
+script = ExtResource("2_35pqn")
+dano = 2
+metadata/_custom_type_script = "uid://32imhtwu4l7"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HitBox"]
+rotation = 1.5707964
+shape = SubResource("CapsuleShape2D_e7y2f")
