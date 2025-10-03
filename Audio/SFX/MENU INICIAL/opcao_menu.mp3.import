@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://darc4qh4f3nmm"
+path="res://.godot/imported/opcao_menu.mp3-a762ab37e24bad6da05d905f7599abff.mp3str"
+
+[deps]
+
+source_file="res://Audio/SFX/MENU INICIAL/opcao_menu.mp3"
+dest_files=["res://.godot/imported/opcao_menu.mp3-a762ab37e24bad6da05d905f7599abff.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

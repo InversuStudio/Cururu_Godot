@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cjorej6h7gw75"
+path="res://.godot/imported/menu_musica.mp3-098ad4118d29f22fe6c71e0b7aca9714.mp3str"
+
+[deps]
+
+source_file="res://Audio/SFX/MENU INICIAL/menu_musica.mp3"
+dest_files=["res://.godot/imported/menu_musica.mp3-098ad4118d29f22fe6c71e0b7aca9714.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
