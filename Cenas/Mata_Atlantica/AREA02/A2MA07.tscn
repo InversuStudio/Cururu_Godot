@@ -20,10 +20,13 @@
 [ext_resource type="Texture2D" uid="uid://cjl88xeknofui" path="res://Sprites/Cenário/Mata_Atlantica/Chao/grama_reto.png" id="13_3r8ne"]
 [ext_resource type="Texture2D" uid="uid://cj4rj4oj20ogb" path="res://Sprites/Cenário/Mata_Atlantica/Chao/chap_interno.png" id="13_rcpf6"]
 [ext_resource type="PackedScene" uid="uid://bs5i45df7rwnf" path="res://UI/HUD.tscn" id="16_eaxwb"]
-[ext_resource type="Script" uid="uid://cviskiwh21kxe" path="res://Scripts/Componentes/Fade.gd" id="17_drh7j"]
 [ext_resource type="Texture2D" uid="uid://c8bkav2g3wyeu" path="res://Sprites/Cenário/Mata_Atlantica/Chao/moita2.png" id="22_4rfcs"]
 [ext_resource type="PackedScene" uid="uid://b7m7lb1s11mbw" path="res://Cenas/BossTeste/Boss.tscn" id="24_o607x"]
+[ext_resource type="PackedScene" uid="uid://phfxidwhdpy7" path="res://Objetos/Funcionalidade/CompFade.tscn" id="24_xyjrg"]
 [ext_resource type="Texture2D" uid="uid://do8rbrag0vomq" path="res://Sprites/Cenário/Mata_Atlantica/Background/SOMBRA.png" id="30_qw0ja"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uhas7"]
+size = Vector2(6138, 2310)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3r0k0"]
 texture = ExtResource("1_uhas7")
@@ -162,9 +165,6 @@ tile_size = Vector2i(128, 128)
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_3r0k0")
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_uhas7"]
-size = Vector2(6138, 2310)
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yhkqu"]
 size = Vector2(70, 399)
 
@@ -175,7 +175,12 @@ duration = 0.0
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_o607x"]
 size = Vector2(348, 525)
 
-[node name="A2ma07" type="Node2D"]
+[node name="MA_2-7" type="Node2D"]
+
+[node name="LimiteCamera" type="CollisionShape2D" parent="."]
+position = Vector2(-3459, -10899)
+shape = SubResource("RectangleShape2D_uhas7")
+debug_color = Color(1, 1, 1, 0)
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
 z_index = 1
@@ -184,7 +189,7 @@ tile_map_data = PackedByteArray("AADL/6T/AAAAAAMAAADM/6T/AAAAAAMAAADR/7P/AAAAAAI
 tile_set = SubResource("TileSet_rcpf6")
 
 [node name="ArvFundo" type="Parallax2D" parent="."]
-scroll_scale = Vector2(0.4, 1)
+scroll_scale = Vector2(0.6, 1)
 
 [node name="Arvore2" type="Sprite2D" parent="ArvFundo"]
 position = Vector2(-5581, -10784)
@@ -819,18 +824,13 @@ texture = ExtResource("4_gnpt0")
 position = Vector2(-4597, -10055)
 scale = Vector2(12.7727585, 2.2816699)
 
-[node name="LimiteCamera" type="CollisionShape2D" parent="."]
-position = Vector2(-3459, -10899)
-shape = SubResource("RectangleShape2D_uhas7")
-debug_color = Color(1, 1, 1, 0)
-
-[node name="TransicaoFase2" parent="." instance=ExtResource("9_iyc38")]
+[node name="2-5" parent="." instance=ExtResource("9_iyc38")]
 position = Vector2(-404, -10318.001)
 scale = Vector2(0.919994, 0.919994)
 destino = 20
 posicao = Vector2(874, -4068)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="TransicaoFase2"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="2-5"]
 position = Vector2(-22, -250.5)
 shape = SubResource("RectangleShape2D_yhkqu")
 
@@ -872,28 +872,11 @@ process_physics_priority = 300
 script = ExtResource("4_kt8lh")
 metadata/_custom_type_script = "uid://bd046eokvcnu2"
 
-[node name="UIGAME" type="CanvasLayer" parent="."]
-
-[node name="HUD" parent="UIGAME" instance=ExtResource("16_eaxwb")]
-offset_left = -6.0
-offset_top = -2.0
-offset_right = -6.0
-offset_bottom = -2.0
-
-[node name="Fade" type="ColorRect" parent="UIGAME"]
-anchors_preset = -1
-anchor_right = 0.262
-anchor_bottom = 0.168
-offset_right = 0.959961
-offset_bottom = -0.440018
-color = Color(1, 1, 1, 0)
-script = ExtResource("17_drh7j")
-metadata/_custom_type_script = "uid://cviskiwh21kxe"
-metadata/_edit_use_anchors_ = true
-
-[node name="Boss" parent="." node_paths=PackedStringArray("area_check_player") instance=ExtResource("24_o607x")]
+[node name="Boss" parent="." node_paths=PackedStringArray("area_check_player", "pos_pilares") instance=ExtResource("24_o607x")]
 position = Vector2(-5546, -9964)
 area_check_player = NodePath("CheckPlayer")
+pos_pilares = [NodePath("PosPilar1"), NodePath("PosPilar2"), NodePath("PosPilar3"), NodePath("PosPilar4"), NodePath("PosPilar5"), NodePath("PosPilar6")]
+num_ate_vulneravel = 3
 
 [node name="CheckPlayer" type="Area2D" parent="Boss"]
 position = Vector2(685, -430)
@@ -903,3 +886,37 @@ collision_mask = 2
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Boss/CheckPlayer"]
 position = Vector2(0, -252.5)
 shape = SubResource("RectangleShape2D_o607x")
+
+[node name="PosPilar1" type="Marker2D" parent="Boss"]
+position = Vector2(665.7998, -426)
+gizmo_extents = 143.8
+
+[node name="PosPilar2" type="Marker2D" parent="Boss"]
+position = Vector2(952.5996, -426)
+gizmo_extents = 143.8
+
+[node name="PosPilar3" type="Marker2D" parent="Boss"]
+position = Vector2(1241.5996, -426)
+gizmo_extents = 143.8
+
+[node name="PosPilar4" type="Marker2D" parent="Boss"]
+position = Vector2(1527.5996, -426)
+gizmo_extents = 143.8
+
+[node name="PosPilar5" type="Marker2D" parent="Boss"]
+position = Vector2(1843.5996, -426)
+gizmo_extents = 143.8
+
+[node name="PosPilar6" type="Marker2D" parent="Boss"]
+position = Vector2(2145.5996, -426)
+gizmo_extents = 143.8
+
+[node name="UIGAME" type="CanvasLayer" parent="."]
+
+[node name="HUD" parent="UIGAME" instance=ExtResource("16_eaxwb")]
+offset_left = -6.0
+offset_top = -2.0
+offset_right = -6.0
+offset_bottom = -2.0
+
+[node name="Fade" parent="UIGAME" instance=ExtResource("24_xyjrg")]

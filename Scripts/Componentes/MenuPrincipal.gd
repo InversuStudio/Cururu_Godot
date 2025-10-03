@@ -1,7 +1,7 @@
 extends Control
 
 func _on_main_pressed() -> void:
-	Mundos.CarregaFase(Mundos.NomeFase.Mata_Atlantica_TUTORIAL_TMA01)
+	Mundos.CarregaFase(Mundos.NomeFase.TUTORIAL_1)
 
 func _on_fase_teste_pressed() -> void:
 	if GameData.Load():

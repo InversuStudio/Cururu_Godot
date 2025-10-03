@@ -13,7 +13,10 @@ var num_vul:int = 0
 
 var tween:Tween = null
 
+var morreu:bool = false
+
 func _ready() -> void:
+	Console._Print(pos_pilares.size())
 	%Vida.connect("alterou_vida", TomouDano)
 	%HurtBox.monitorable = false
 	%BarraVida.max_value = %Vida.vida_max
@@ -38,5 +41,9 @@ func TomouDano(vida_atual:int, _vida_antiga:int) -> void:
 	tween.tween_property(%BarraVida, "value", vida_atual, .15)
 	Console._Print(vida_atual)
 
-#func Morte() -> void:
-	#pass
+func Morte() -> void:
+	%TimerNocaute.stop()
+	%TimerIdle.stop()
+	%BarraVida.hide()
+	%Anim.play("Surge", -1, -1.0, true)
+	morreu = true

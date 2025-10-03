@@ -11,7 +11,7 @@ func Enter() -> void:
 	prossegue = false
 
 func Update(_delta : float) -> State:
-	if prossegue:
+	if prossegue and !parent.morreu:
 		return state_idle
 	return null
 
@@ -20,6 +20,7 @@ func _on_timer_nocaute_timeout() -> void:
 
 func Exit() -> void:
 	prossegue = false
+	%TimerNocaute.stop()
 
 func _on_anim_animation_finished(anim_name: StringName) -> void:
 	if anim_name == "NocauteEnd":

@@ -965,7 +965,7 @@ metadata/_custom_type_script = "uid://hsdutxxttrp3"
 comp_vida = NodePath("../../Vida")
 distancia_knockback = 1.2
 tempo_knockback = 1.0
-cooldown_dano = 2.0
+cooldown_dano = 3.0
 hit_sfx = ExtResource("48_c8qv2")
 parent = NodePath("../..")
 
@@ -1058,7 +1058,7 @@ one_shot = true
 [node name="StateMachine" type="Node" parent="." node_paths=PackedStringArray("start_state")]
 unique_name_in_owner = true
 script = ExtResource("49_1ribx")
-start_state = NodePath("Fall")
+start_state = NodePath("Chao")
 
 [node name="Chao" type="Node" parent="StateMachine" node_paths=PackedStringArray("pulo_state", "fall_state", "dash_state", "melee_state", "special_state")]
 script = ExtResource("50_3s0sn")
@@ -1103,7 +1103,7 @@ script = ExtResource("56_7uoqt")
 chao_state = NodePath("../Chao")
 fall_state = NodePath("../Fall")
 
-[node name="PointLight2D2" type="PointLight2D" parent="."]
+[node name="Luz" type="PointLight2D" parent="."]
 position = Vector2(-28.149544, -83.40631)
 range_item_cull_mask = 2
 shadow_enabled = true

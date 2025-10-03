@@ -1,8 +1,7 @@
-[gd_scene load_steps=17 format=4 uid="uid://vvj50hvchkhj"]
+[gd_scene load_steps=16 format=4 uid="uid://vvj50hvchkhj"]
 
 [ext_resource type="PackedScene" uid="uid://1apfpwlqocxn" path="res://Objetos/Funcionalidade/TransicaoFase.tscn" id="1_5f3ns"]
 [ext_resource type="Texture2D" uid="uid://c374cwih425cq" path="res://Sprites/Cenário/Tilemaps/Base.png" id="2_axx3v"]
-[ext_resource type="Texture2D" uid="uid://b73nkcosr250e" path="res://Sprites/VFX/Iluminação/LightCururu.png" id="3_2l5rc"]
 [ext_resource type="PackedScene" uid="uid://nohq28uk7lfk" path="res://Objetos/Entidades/Player.tscn" id="3_fsywm"]
 [ext_resource type="Script" uid="uid://bhexx6mj1xv3q" path="res://addons/phantom_camera/scripts/phantom_camera/phantom_camera_2d.gd" id="4_u10of"]
 [ext_resource type="Script" uid="uid://8umksf8e80fw" path="res://addons/phantom_camera/scripts/resources/tween_resource.gd" id="5_awfgj"]
@@ -190,14 +189,6 @@ scale = Vector2(0.919994, 0.919994)
 vel = 12.0
 vel_aerea = 10.0
 tempo_dash = 0.18
-
-[node name="PointLight2D3" type="PointLight2D" parent="Cururu"]
-position = Vector2(-28.149544, -83.40631)
-range_item_cull_mask = 2
-shadow_enabled = true
-shadow_color = Color(0, 0, 0, 0.7764706)
-texture = ExtResource("3_2l5rc")
-texture_scale = 1.5
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
 position = Vector2(-2, 0)

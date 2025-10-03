@@ -146,7 +146,7 @@ sources/0 = SubResource("TileSetAtlasSource_32tfj")
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_87p3x"]
 size = Vector2(70, 410)
 
-[node name="A1ma03" type="Node2D"]
+[node name="MA_1-3" type="Node2D"]
 
 [node name="Player" parent="." instance=ExtResource("1_65boa")]
 position = Vector2(-931, -4477)

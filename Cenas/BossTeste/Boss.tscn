@@ -591,6 +591,20 @@ tracks/1/keys = {
 "update": 1,
 "values": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
 }
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("StateMachine/PilarFogo")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.5),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"CriaPilar"
+}]
+}
 
 [sub_resource type="Animation" id="Animation_iqxfe"]
 resource_name = "Purificado"
@@ -694,7 +708,7 @@ unique_name_in_owner = true
 position = Vector2(0, -838)
 scale = Vector2(1.5, 1.5)
 sprite_frames = SubResource("SpriteFrames_nkv4g")
-animation = &"CospeFogo"
+animation = &"PilarDeFogo"
 autoplay = "Escondido"
 frame = 1
 
@@ -721,10 +735,12 @@ state_nocaute = NodePath("../Nocaute")
 [node name="CospeFogo" type="Node" parent="StateMachine" node_paths=PackedStringArray("idle_state")]
 script = ExtResource("75_16hqa")
 idle_state = NodePath("../Idle")
+tempo_idle = 3.0
 
 [node name="PilarFogo" type="Node" parent="StateMachine" node_paths=PackedStringArray("idle_state")]
 script = ExtResource("85_fi4f6")
 idle_state = NodePath("../Idle")
+tempo_idle = 6.0
 
 [node name="Purificado" type="Node" parent="StateMachine"]
 
@@ -769,4 +785,5 @@ show_percentage = false
 [connection signal="timeout" from="TimerNocaute" to="StateMachine/Nocaute" method="_on_timer_nocaute_timeout"]
 [connection signal="animation_finished" from="Anim" to="StateMachine/Start" method="_on_anim_animation_finished"]
 [connection signal="animation_finished" from="Anim" to="StateMachine/CospeFogo" method="_on_anim_animation_finished"]
+[connection signal="animation_finished" from="Anim" to="StateMachine/PilarFogo" method="_on_anim_animation_finished"]
 [connection signal="animation_finished" from="Anim" to="StateMachine/Nocaute" method="_on_anim_animation_finished"]

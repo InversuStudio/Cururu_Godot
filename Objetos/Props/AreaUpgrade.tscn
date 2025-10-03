@@ -1,8 +1,9 @@
-[gd_scene load_steps=9 format=3 uid="uid://d3cks8kri2olw"]
+[gd_scene load_steps=10 format=3 uid="uid://d3cks8kri2olw"]
 
 [ext_resource type="Script" uid="uid://dd7svcu8l7fxu" path="res://Scripts/Componentes/Interacao.gd" id="1_6186v"]
 [ext_resource type="Script" uid="uid://dv2hce0uiqes7" path="res://Scripts/Componentes/AreaUpgrade.gd" id="2_hgbl4"]
 [ext_resource type="Script" uid="uid://b2ls33ys55oyt" path="res://Scripts/Componentes/OtimizadorSprite.gd" id="3_hgbl4"]
+[ext_resource type="Texture2D" uid="uid://cpkvjrojwvd2b" path="res://Sprites/Cenário/Objetos/Savepoint/pedestal_lig.png" id="3_jyd7d"]
 [ext_resource type="Texture2D" uid="uid://0agjwkmg3gef" path="res://Sprites/VFX/Iluminação/luz azul.png" id="3_qxje0"]
 [ext_resource type="Texture2D" uid="uid://brkgsnwq1lnov" path="res://Sprites/Cenário/Mata_Atlantica/Interativos/pedestal_pedra_recorte.png" id="5_beg2k"]
 
@@ -26,18 +27,23 @@ metadata/_custom_type_script = "uid://dd7svcu8l7fxu"
 position = Vector2(0, -110)
 shape = SubResource("RectangleShape2D_qxje0")
 
-[node name="OtimizadorSprite" type="VisibleOnScreenEnabler2D" parent="."]
-position = Vector2(0, -110)
-scale = Vector2(8.9, 11)
-script = ExtResource("3_hgbl4")
-metadata/_custom_type_script = "uid://b2ls33ys55oyt"
-
 [node name="Script" type="Node" parent="."]
 script = ExtResource("2_hgbl4")
 
-[node name="CPUParticles2D" type="CPUParticles2D" parent="."]
-position = Vector2(-3, -282)
-scale = Vector2(0.17777778, 0.17777778)
+[node name="Base" type="Sprite2D" parent="."]
+position = Vector2(0, -137.00002)
+scale = Vector2(0.30371094, 0.30371094)
+texture = ExtResource("3_jyd7d")
+
+[node name="Poder" type="Sprite2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(0, -263)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("5_beg2k")
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="Poder"]
+position = Vector2(-10, -63.333374)
+scale = Vector2(0.5925926, 0.5925926)
 amount = 10
 texture = ExtResource("3_qxje0")
 lifetime = 0.5
@@ -50,22 +56,24 @@ scale_amount_min = 0.2
 color_ramp = SubResource("Gradient_qxje0")
 color_initial_ramp = SubResource("Gradient_beg2k")
 
-[node name="Poder" type="Sprite2D" parent="."]
-position = Vector2(0, -263)
-scale = Vector2(0.3, 0.3)
-texture = ExtResource("5_beg2k")
-
 [node name="Texto" type="RichTextLabel" parent="."]
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
 offset_left = -196.5
-offset_top = -286.0
+offset_top = -362.0
 offset_right = 196.5
-offset_bottom = -227.0
+offset_bottom = -303.0
 grow_horizontal = 2
 theme_override_font_sizes/normal_font_size = 40
 bbcode_enabled = true
 text = "ABSORVER"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="OtimizadorSprite" type="VisibleOnScreenEnabler2D" parent="."]
+position = Vector2(0, -110)
+scale = Vector2(8.9, 11)
+rect = Rect2(-16.067415, -16.727272, 32.13483, 27.272726)
+script = ExtResource("3_hgbl4")
+metadata/_custom_type_script = "uid://b2ls33ys55oyt"

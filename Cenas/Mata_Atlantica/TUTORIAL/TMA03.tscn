@@ -1,4 +1,4 @@
-[gd_scene load_steps=40 format=4 uid="uid://nqosq2wj0auk"]
+[gd_scene load_steps=39 format=4 uid="uid://nqosq2wj0auk"]
 
 [ext_resource type="Texture2D" uid="uid://cqu5scrrmr5n5" path="res://Sprites/Cenário/Mata_Atlantica/Background/FUNDOCEU.png" id="1_4e4qg"]
 [ext_resource type="Texture2D" uid="uid://c374cwih425cq" path="res://Sprites/Cenário/Tilemaps/Base.png" id="1_vftmf"]
@@ -15,7 +15,6 @@
 [ext_resource type="Texture2D" uid="uid://rwmi1ggde5dy" path="res://Sprites/VFX/Iluminação/PORTAL.png" id="12_flheb"]
 [ext_resource type="PackedScene" uid="uid://cy10kv6jimfwh" path="res://Objetos/Funcionalidade/CompDestroiPlataforma.tscn" id="13_gcn7v"]
 [ext_resource type="Texture2D" uid="uid://jecy4bfqqqxu" path="res://Sprites/Cenário/Mata_Atlantica/Teto/Moita teste.png" id="17_wfqej"]
-[ext_resource type="Texture2D" uid="uid://b73nkcosr250e" path="res://Sprites/VFX/Iluminação/LightCururu.png" id="18_op0pn"]
 [ext_resource type="Texture2D" uid="uid://cj4rj4oj20ogb" path="res://Sprites/Cenário/Mata_Atlantica/Chao/chap_interno.png" id="20_l7gx4"]
 [ext_resource type="Texture2D" uid="uid://uq6dbjep5wva" path="res://Sprites/Cenário/Mata_Atlantica/Foreground/frontfolha.png" id="23_3qqkp"]
 [ext_resource type="Texture2D" uid="uid://c2yapafbd3cnf" path="res://Sprites/Cenário/Mata_Atlantica/Foreground/cipó.png" id="24_xxaxg"]
@@ -24,12 +23,12 @@
 [ext_resource type="Texture2D" uid="uid://cw2yeg7ynw0kl" path="res://Sprites/Cenário/Mata_Atlantica/Chao/chap_externo.png" id="27_4e4qg"]
 [ext_resource type="Script" uid="uid://8umksf8e80fw" path="res://addons/phantom_camera/scripts/resources/tween_resource.gd" id="27_l7gx4"]
 [ext_resource type="PackedScene" uid="uid://bnm668fws2641" path="res://Objetos/Props/Armadilha.tscn" id="28_l7gx4"]
+[ext_resource type="PackedScene" uid="uid://phfxidwhdpy7" path="res://Objetos/Funcionalidade/CompFade.tscn" id="28_qclta"]
 [ext_resource type="Texture2D" uid="uid://cjl88xeknofui" path="res://Sprites/Cenário/Mata_Atlantica/Chao/grama_reto.png" id="28_rnx0k"]
 [ext_resource type="PackedScene" uid="uid://nohq28uk7lfk" path="res://Objetos/Entidades/Player.tscn" id="28_yftf5"]
 [ext_resource type="Texture2D" uid="uid://dphhlbwaebgco" path="res://Sprites/Cenário/Mata_Atlantica/Background/composição.png" id="29_qclta"]
 [ext_resource type="PackedScene" uid="uid://bs5i45df7rwnf" path="res://UI/HUD.tscn" id="29_rnx0k"]
 [ext_resource type="Texture2D" uid="uid://36i4t28uavm" path="res://Sprites/Cenário/Mata_Atlantica/Interativos/plataforma.png" id="30_op0pn"]
-[ext_resource type="Script" uid="uid://cviskiwh21kxe" path="res://Scripts/Componentes/Fade.gd" id="30_qclta"]
 [ext_resource type="PackedScene" uid="uid://bei1s8te3cwko" path="res://Sprites/Cenário/Mata_Atlantica/Interativos/plataforma.tscn" id="30_rnx0k"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_l7gx4"]
@@ -188,9 +187,9 @@ size = Vector2(458, 83)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qclta"]
 size = Vector2(459, 28)
 
-[node name="Tma03" type="Node2D"]
+[node name="Tutorial3" type="Node2D"]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="LimiteCamera" type="CollisionShape2D" parent="."]
 position = Vector2(-13570.5, -2181)
 shape = SubResource("RectangleShape2D_l7gx4")
 
@@ -660,15 +659,6 @@ scale = Vector2(0.919994, 0.919994)
 vel = 12.0
 vel_aerea = 10.0
 tempo_dash = 0.18
-
-[node name="PointLight2D3" type="PointLight2D" parent="Cururu"]
-position = Vector2(-28.149544, -83.40631)
-energy = 0.3
-range_item_cull_mask = 2
-shadow_enabled = true
-shadow_color = Color(0, 0, 0, 0.7764706)
-texture = ExtResource("18_op0pn")
-texture_scale = 0.5
 
 [node name="Chaofloresta" type="Sprite2D" parent="."]
 position = Vector2(-8443.3, -248.496)
@@ -1728,7 +1718,7 @@ zoom = Vector2(0.8, 0.8)
 tween_resource = SubResource("Resource_rnx0k")
 follow_offset = Vector2(0, -80)
 draw_limits = true
-limit_target = NodePath("../CollisionShape2D")
+limit_target = NodePath("../LimiteCamera")
 metadata/_custom_type_script = "uid://bhexx6mj1xv3q"
 
 [node name="UIGAME" type="CanvasLayer" parent="."]
@@ -1739,16 +1729,7 @@ offset_top = -2.0
 offset_right = -6.0
 offset_bottom = -2.0
 
-[node name="Fade" type="ColorRect" parent="UIGAME"]
-anchors_preset = -1
-anchor_right = 0.262
-anchor_bottom = 0.168
-offset_right = 0.959961
-offset_bottom = -0.440018
-color = Color(1, 1, 1, 0)
-script = ExtResource("30_qclta")
-metadata/_custom_type_script = "uid://cviskiwh21kxe"
-metadata/_edit_use_anchors_ = true
+[node name="Fade" parent="UIGAME" instance=ExtResource("28_qclta")]
 
 [node name="PlataformaSome2" type="StaticBody2D" parent="."]
 position = Vector2(-13594, -3514)

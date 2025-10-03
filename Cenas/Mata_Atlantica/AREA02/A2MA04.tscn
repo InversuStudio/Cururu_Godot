@@ -170,7 +170,6 @@ scale = Vector2(0.959163, 0.959163)
 vel = 12.0
 vel_aerea = 10.0
 tempo_dash = 0.18
-distancia_knockback = 0.9
 
 [node name="PointLight2D3" type="PointLight2D" parent="Cururu"]
 position = Vector2(-28.149544, -83.40631)

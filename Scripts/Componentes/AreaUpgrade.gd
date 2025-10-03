@@ -5,17 +5,19 @@ extends InteractObject
 
 func _ready() -> void:
 	if GameData.upgrade_num >= upgrade + 1:
-		get_parent().queue_free()
+		%Poder.hide()
 	texto.hide()
 
 func Interact(_player:CharacterBody2D) -> void:
-	print("UPGRADE: ", upgrade)
-	GameData.upgrade_num = upgrade + 1
-	GameData.Save()
-	get_parent().queue_free()
+	if GameData.upgrade_num < upgrade + 1:
+		print("UPGRADE: ", upgrade)
+		GameData.upgrade_num = upgrade + 1
+		GameData.Save()
+		%Poder.hide()
 
 func Extra(dentro:bool) -> void:
-	if dentro:
-		texto.show()
-	else:
-		texto.hide()
+	if GameData.upgrade_num < upgrade + 1:
+		if dentro:
+			texto.show()
+		else:
+			texto.hide()

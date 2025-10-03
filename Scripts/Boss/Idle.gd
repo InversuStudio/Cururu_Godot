@@ -20,7 +20,9 @@ func Enter() -> void:
 
 func FixedUpdate(_delta : float) -> State:
 	if prosseguir:
-		return state_cospe_fogo
+		if randi_range(0,1) == 1:
+			return state_cospe_fogo
+		return state_pilar_fogo
 	return null
 	
 func _on_timer_idle_timeout() -> void:

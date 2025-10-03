@@ -15,7 +15,7 @@ func Update(_delta : float) -> State:
 	return null
 
 func _on_anim_animation_finished(anim_name: StringName) -> void:
-	if anim_name == "Surge":
+	if anim_name == "Surge" and get_parent().current_state == self:
 		%Anim.play("Grito")
 		%BarraVida.show()
 		if parent.state_machine.current_state == self:

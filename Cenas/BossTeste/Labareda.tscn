@@ -1,7 +1,7 @@
-[gd_scene load_steps=14 format=3 uid="uid://dppj6i0ifoocp"]
+[gd_scene load_steps=15 format=3 uid="uid://dppj6i0ifoocp"]
 
+[ext_resource type="Script" uid="uid://bacf3raoqf4ns" path="res://Scripts/Boss/Pilar.gd" id="1_tdbse"]
 [ext_resource type="Texture2D" uid="uid://fakskg5rd5mq" path="res://Sprites/Inimigos/Boitata/Ataque2/Pilar_Fogo/fogo_pilar01.png" id="1_tqvmf"]
-[ext_resource type="Script" uid="uid://32imhtwu4l7" path="res://Scripts/Componentes/HitBox.gd" id="2_fnsdr"]
 [ext_resource type="Texture2D" uid="uid://d4ft4p7v0p2n7" path="res://Sprites/Inimigos/Boitata/Ataque2/Pilar_Fogo/fogo_pilar03.png" id="2_tdbse"]
 [ext_resource type="Texture2D" uid="uid://dg2e8jw0ikr5l" path="res://Sprites/Inimigos/Boitata/Ataque2/Pilar_Fogo/fogo_pilar05.png" id="3_petnf"]
 [ext_resource type="Texture2D" uid="uid://51sctqbttdam" path="res://Sprites/Inimigos/Boitata/Ataque2/Pilar_Fogo/fogo_pilar07.png" id="4_twefq"]
@@ -11,6 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://cplyclegxquhd" path="res://Sprites/Inimigos/Boitata/Ataque2/Pilar_Fogo/fogo_pilar15.png" id="8_griib"]
 [ext_resource type="Texture2D" uid="uid://bspf3gaq681gl" path="res://Sprites/Inimigos/Boitata/Ataque2/Pilar_Fogo/fogo_pilar17.png" id="9_0ry6m"]
 [ext_resource type="Texture2D" uid="uid://ch1na8t4hj27y" path="res://Sprites/Inimigos/Boitata/Ataque2/Pilar_Fogo/fogo_pilar19.png" id="10_d12gu"]
+[ext_resource type="PackedScene" uid="uid://pc4mgv2nv8af" path="res://Objetos/Funcionalidade/CompHitBox.tscn" id="11_tqvmf"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_u0rk8"]
 animations = [{
@@ -65,19 +66,24 @@ animations = [{
 radius = 100.0
 height = 754.0
 
-[node name="Labareda" type="Node2D"]
+[node name="PilarFogo" type="Node2D"]
+script = ExtResource("1_tdbse")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+[node name="Sprite" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, -468)
 sprite_frames = SubResource("SpriteFrames_u0rk8")
-animation = &"Carga"
+animation = &"Jato"
+autoplay = "Carga"
 
-[node name="HitBox" type="Area2D" parent="."]
-position = Vector2(0, -342)
-script = ExtResource("2_fnsdr")
-dano = 2
-metadata/_custom_type_script = "uid://32imhtwu4l7"
+[node name="HitBox" parent="." instance=ExtResource("11_tqvmf")]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HitBox"]
-position = Vector2(-3, -31)
+position = Vector2(-3, -373)
 shape = SubResource("CapsuleShape2D_e7y2f")
+disabled = true
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.8
+one_shot = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
