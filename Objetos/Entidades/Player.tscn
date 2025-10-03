@@ -388,10 +388,10 @@ radius = 51.0
 height = 112.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_xx3r0"]
-radius = 101.005
+radius = 112.0
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_wq158"]
-radius = 84.0
+radius = 88.999985
 height = 278.0
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_1dbdn"]
@@ -947,8 +947,9 @@ unique_name_in_owner = true
 position = Vector2(-16, -120)
 scale = Vector2(0.375651, 0.375651)
 sprite_frames = SubResource("SpriteFrames_ser7u")
-animation = &"Idle"
-frame_progress = 0.7985848
+animation = &"Melee1"
+frame = 4
+frame_progress = 0.14478517
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-17, -81)
@@ -990,7 +991,7 @@ ignore = NodePath("../../HurtContainer/HurtBox")
 sfx = ExtResource("48_c8qv2")
 
 [node name="ColMel1" type="CollisionShape2D" parent="HitContainer/Melee1"]
-position = Vector2(45, -94)
+position = Vector2(83, -94)
 shape = SubResource("CircleShape2D_xx3r0")
 disabled = true
 debug_color = Color(0.69455, 0.495447, 0, 0.42)
@@ -1002,7 +1003,7 @@ ignore = NodePath("../../HurtContainer/HurtBox")
 sfx = ExtResource("48_c8qv2")
 
 [node name="ColMel2" type="CollisionShape2D" parent="HitContainer/Melee2"]
-position = Vector2(51, -73)
+position = Vector2(77, -85)
 rotation = -1.57079
 shape = SubResource("CapsuleShape2D_wq158")
 disabled = true
@@ -1104,12 +1105,14 @@ chao_state = NodePath("../Chao")
 fall_state = NodePath("../Fall")
 
 [node name="Luz" type="PointLight2D" parent="."]
+visible = false
 position = Vector2(-28.149544, -83.40631)
+energy = 0.5
 range_item_cull_mask = 2
 shadow_enabled = true
 shadow_color = Color(0, 0, 0, 0.7764706)
 texture = ExtResource("87_0w8y8")
-texture_scale = 1.5
+texture_scale = 0.3
 
 [connection signal="counter" from="HurtContainer/HurtBox" to="StateMachine/Dano" method="_on_hurt_box_counter"]
 [connection signal="animation_finished" from="Anim" to="StateMachine/Chao" method="_on_anim_animation_finished"]
