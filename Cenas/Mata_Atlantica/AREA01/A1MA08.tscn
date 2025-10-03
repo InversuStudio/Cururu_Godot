@@ -262,8 +262,8 @@ scale = Vector2(1, 1.6633877)
 texture = ExtResource("1_f0sik")
 
 [node name="Fundonevoa" type="Sprite2D" parent="CollisionShape2D/ARV02"]
-position = Vector2(57.50052, 374.49988)
-scale = Vector2(6.0345855, 1.6823124)
+position = Vector2(-18.5, -646.00024)
+scale = Vector2(6.0345855, 2.713933)
 texture = ExtResource("3_mwnxc")
 
 [node name="ARV01" type="Node2D" parent="CollisionShape2D"]
