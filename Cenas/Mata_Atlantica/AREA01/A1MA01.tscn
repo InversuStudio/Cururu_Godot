@@ -524,7 +524,7 @@ flip_h = true
 position = Vector2(-5009, 1025)
 
 [node name="NPC-Basico" parent="." instance=ExtResource("20_1ewfi")]
-position = Vector2(1244, 917)
+position = Vector2(1244, 891.00006)
 
 [node name="Cururu" parent="." instance=ExtResource("1_v83m2")]
 z_index = 0
@@ -843,7 +843,7 @@ position = Vector2(-8665, -605)
 texture = ExtResource("6_wnjnd")
 
 [node name="Frontfolha" type="Sprite2D" parent="Teto/Sombra"]
-position = Vector2(-5877, -251)
+position = Vector2(-5842, -216)
 rotation = 3.14159
 texture = ExtResource("7_5ka01")
 
@@ -973,7 +973,7 @@ rotation = 3.14159
 texture = ExtResource("7_5ka01")
 
 [node name="Frontfolha3" type="Sprite2D" parent="Teto/Sombra"]
-position = Vector2(-6134, -588)
+position = Vector2(-6164, -522)
 rotation = 3.14159
 texture = ExtResource("7_5ka01")
 
@@ -983,7 +983,7 @@ rotation = 3.14159
 texture = ExtResource("7_5ka01")
 
 [node name="Frontfolha5" type="Sprite2D" parent="Teto/Sombra"]
-position = Vector2(-6886, -816)
+position = Vector2(-6810, -705)
 rotation = 3.14159
 texture = ExtResource("7_5ka01")
 
@@ -1029,7 +1029,7 @@ position = Vector2(-7778, -79)
 texture = ExtResource("8_5kxqo")
 
 [node name="GramaReto16" type="Sprite2D" parent="Chão/Reto"]
-position = Vector2(-8813, -78)
+position = Vector2(-8813, -85)
 texture = ExtResource("8_5kxqo")
 
 [node name="GramaReto3" type="Sprite2D" parent="Chão/Reto"]

@@ -1,16 +1,17 @@
 [gd_scene load_steps=7 format=3 uid="uid://bxixu84ahcyba"]
 
-[ext_resource type="Texture2D" uid="uid://c3tl3oddronfh" path="res://icon.svg" id="1_o0bb2"]
+[ext_resource type="Texture2D" uid="uid://uxhlpik4jue" path="res://Sprites/NPCS/Saci/saci03.png" id="1_yvqea"]
 [ext_resource type="Script" uid="uid://bt5du2sk1ba4i" path="res://Scripts/NPCs/NPC.gd" id="2_yvqea"]
 [ext_resource type="Resource" uid="uid://cnhau31dn3hpf" path="res://Dialogos/Teste.dialogue" id="3_11b2v"]
 [ext_resource type="Script" uid="uid://dd7svcu8l7fxu" path="res://Scripts/Componentes/Interacao.gd" id="4_tsuxo"]
 [ext_resource type="Script" uid="uid://b2ls33ys55oyt" path="res://Scripts/Componentes/OtimizadorSprite.gd" id="5_yvqea"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lqome"]
-size = Vector2(266, 158)
+size = Vector2(712.47833, 623.2616)
 
 [node name="NPC-Basico" type="Sprite2D" node_paths=PackedStringArray("interacao")]
-texture = ExtResource("1_o0bb2")
+scale = Vector2(0.4348958, 0.43489587)
+texture = ExtResource("1_yvqea")
 script = ExtResource("2_yvqea")
 arquivo_dialogo = ExtResource("3_11b2v")
 interacao = NodePath("Interacao")
@@ -22,11 +23,13 @@ script = ExtResource("4_tsuxo")
 metadata/_custom_type_script = "uid://dd7svcu8l7fxu"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Interacao"]
-position = Vector2(0, 15)
+position = Vector2(-18.39521, 13.292308)
 shape = SubResource("RectangleShape2D_lqome")
 
 [node name="OtimizadorSprite" type="VisibleOnScreenEnabler2D" parent="."]
+position = Vector2(-212.67693, -236.3077)
 scale = Vector2(6.4, 6.4)
+rect = Rect2(-7.384613, -10, 80.30769, 97.69231)
 script = ExtResource("5_yvqea")
 metadata/_custom_type_script = "uid://b2ls33ys55oyt"
 
@@ -35,12 +38,12 @@ unique_name_in_owner = true
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -234.0
-offset_top = -169.0
-offset_right = 106.0
-offset_bottom = -97.0
+offset_left = -606.6605
+offset_top = -395.49698
+offset_right = -158.07791
+offset_bottom = -300.50302
 grow_horizontal = 2
-theme_override_font_sizes/normal_font_size = 40
+theme_override_font_sizes/normal_font_size = 60
 text = "CONVERSAR"
 horizontal_alignment = 1
 vertical_alignment = 1

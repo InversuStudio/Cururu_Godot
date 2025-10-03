@@ -1,13 +1,10 @@
 ~ start
-Godotsson: Fala, meu consagrado!
-Godotsson: Eu sou um [wave][b][color=green][NPC][/color][/b][/wave]
-Godotsson: Maneiro, né?
-- SIM
-	Godotsson: Tamo junto
-- NÃO
-	Godotsson: Sério?
-	- Nem kkkkkkkkkkk
-		Godotsson: Aaaaa tu me pegou
-	- Papo reto
-		Godotsson: Morre, então
+Saci: E a mano Cururu, como vai essa força?
+Saci: Fiquei sabendo que a Mata ta tomada de corrupção. Pelo que entendi o protetor da [wave][b][color=red][Mata Atlântica][/color][/b][/wave] ta possuido por algum mal antigo.
+Saci: Vejo que a Vitória já te passou o Cajado lunar. Preparado para curar a Região?
+- Sempre pronto!
+	Saci: Fechado, siga o caminho a diante e libere seu poder. 
+- Ainda não.
+	Saci: Sério? Bom, então aconselho a se preparar o quanto antes.
+	Saci: Nos vemos por ai.
 => END
