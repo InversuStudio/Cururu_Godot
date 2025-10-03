@@ -1,9 +1,10 @@
-[gd_scene load_steps=27 format=4 uid="uid://dyxt6ow8l0up5"]
+[gd_scene load_steps=33 format=4 uid="uid://dyxt6ow8l0up5"]
 
 [ext_resource type="Texture2D" uid="uid://cqu5scrrmr5n5" path="res://Sprites/Cenário/Mata_Atlantica/Background/FUNDOCEU.png" id="1_cpcvs"]
 [ext_resource type="Texture2D" uid="uid://k22xru6heyh3" path="res://Sprites/Cenário/Mata_Atlantica/Background/arvore.png" id="1_f0sik"]
 [ext_resource type="Texture2D" uid="uid://c374cwih425cq" path="res://Sprites/Cenário/Tilemaps/Base.png" id="1_rn8bk"]
 [ext_resource type="PackedScene" uid="uid://d3cks8kri2olw" path="res://Objetos/Props/AreaUpgrade.tscn" id="2_d6eef"]
+[ext_resource type="Texture2D" uid="uid://dog2ml3xbyho2" path="res://Sprites/Cenário/Mata_Atlantica/Background/arvore2.png" id="2_i5tqr"]
 [ext_resource type="Texture2D" uid="uid://dmh8fodubelsr" path="res://Sprites/Cenário/Mata_Atlantica/Background/FUNDONEVOA.png" id="3_mwnxc"]
 [ext_resource type="Texture2D" uid="uid://ctar30vsktrrb" path="res://Sprites/Cenário/Mata_Atlantica/Background/FUNDONEVOA2.png" id="4_gdqac"]
 [ext_resource type="PackedScene" uid="uid://1apfpwlqocxn" path="res://Objetos/Funcionalidade/TransicaoFase.tscn" id="6_c5tg8"]
@@ -19,8 +20,13 @@
 [ext_resource type="Script" uid="uid://cviskiwh21kxe" path="res://Scripts/Componentes/Fade.gd" id="12_d743e"]
 [ext_resource type="Texture2D" uid="uid://cw2yeg7ynw0kl" path="res://Sprites/Cenário/Mata_Atlantica/Chao/chap_externo.png" id="13_ammsr"]
 [ext_resource type="Texture2D" uid="uid://dphhlbwaebgco" path="res://Sprites/Cenário/Mata_Atlantica/Background/composição.png" id="14_mwnxc"]
+[ext_resource type="Texture2D" uid="uid://cpkvjrojwvd2b" path="res://Sprites/Cenário/Objetos/Savepoint/pedestal_lig.png" id="15_bx6hf"]
 [ext_resource type="Texture2D" uid="uid://cj4rj4oj20ogb" path="res://Sprites/Cenário/Mata_Atlantica/Chao/chap_interno.png" id="15_gc8i2"]
 [ext_resource type="Texture2D" uid="uid://cjl88xeknofui" path="res://Sprites/Cenário/Mata_Atlantica/Chao/grama_reto.png" id="17_ui1e1"]
+[ext_resource type="Texture2D" uid="uid://jecy4bfqqqxu" path="res://Sprites/Cenário/Mata_Atlantica/Teto/Moita teste.png" id="23_esn82"]
+[ext_resource type="Texture2D" uid="uid://uq6dbjep5wva" path="res://Sprites/Cenário/Mata_Atlantica/Foreground/frontfolha.png" id="24_esn82"]
+[ext_resource type="PackedScene" uid="uid://bu62qgilsxetf" path="res://Objetos/Entidades/Escorpiao.tscn" id="26_8yk11"]
+[ext_resource type="PackedScene" uid="uid://bjvnm0aydr0vd" path="res://Objetos/Entidades/Morcego.tscn" id="27_r33ly"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8acf8"]
 size = Vector2(12301, 3900)
@@ -182,6 +188,41 @@ texture = ExtResource("1_cpcvs")
 
 [node name="ARV03" type="Node2D" parent="CollisionShape2D"]
 
+[node name="Arvore2" type="Sprite2D" parent="CollisionShape2D/ARV03"]
+position = Vector2(-5461.5005, 11.999512)
+rotation = 0.08726645
+scale = Vector2(1, 1.7944369)
+texture = ExtResource("2_i5tqr")
+
+[node name="Arvore3" type="Sprite2D" parent="CollisionShape2D/ARV03"]
+position = Vector2(-3187.4995, 11.999512)
+rotation = 0.08726645
+scale = Vector2(1, 1.7944369)
+texture = ExtResource("2_i5tqr")
+
+[node name="Arvore4" type="Sprite2D" parent="CollisionShape2D/ARV03"]
+position = Vector2(-662.5, 218)
+rotation = 0.08726645
+scale = Vector2(1, 1.7944369)
+texture = ExtResource("2_i5tqr")
+
+[node name="Arvore6" type="Sprite2D" parent="CollisionShape2D/ARV03"]
+position = Vector2(2997.5, 218)
+rotation = 0.08726645
+scale = Vector2(1, 1.7944369)
+texture = ExtResource("2_i5tqr")
+
+[node name="Arvore7" type="Sprite2D" parent="CollisionShape2D/ARV03"]
+position = Vector2(4974.5, 299)
+scale = Vector2(1, 1.7944369)
+texture = ExtResource("2_i5tqr")
+
+[node name="Arvore5" type="Sprite2D" parent="CollisionShape2D/ARV03"]
+position = Vector2(412.5, 191)
+rotation = 0.08726645
+scale = Vector2(1, 1.7944369)
+texture = ExtResource("2_i5tqr")
+
 [node name="ARV02" type="Node2D" parent="CollisionShape2D"]
 
 [node name="Arvore" type="Sprite2D" parent="CollisionShape2D/ARV02"]
@@ -190,9 +231,39 @@ rotation = -0.08726645
 scale = Vector2(1, 1.6633877)
 texture = ExtResource("1_f0sik")
 
+[node name="Arvore4" type="Sprite2D" parent="CollisionShape2D/ARV02"]
+position = Vector2(1038.4995, 30)
+rotation = -0.08726645
+scale = Vector2(1, 1.6633877)
+texture = ExtResource("1_f0sik")
+
+[node name="Arvore6" type="Sprite2D" parent="CollisionShape2D/ARV02"]
+position = Vector2(2231.5, 30)
+rotation = -0.08726645
+scale = Vector2(1, 1.6633877)
+texture = ExtResource("1_f0sik")
+
+[node name="Arvore3" type="Sprite2D" parent="CollisionShape2D/ARV02"]
+position = Vector2(-1701.5002, 199.99998)
+rotation = 0.08726646
+scale = Vector2(1, 1.6633877)
+texture = ExtResource("1_f0sik")
+
+[node name="Arvore5" type="Sprite2D" parent="CollisionShape2D/ARV02"]
+position = Vector2(3752.4993, 527.99994)
+rotation = 0.08726646
+scale = Vector2(1, 1.6633877)
+texture = ExtResource("1_f0sik")
+
+[node name="Arvore2" type="Sprite2D" parent="CollisionShape2D/ARV02"]
+position = Vector2(-2658.5, 199.99998)
+rotation = -0.08726645
+scale = Vector2(1, 1.6633877)
+texture = ExtResource("1_f0sik")
+
 [node name="Fundonevoa" type="Sprite2D" parent="CollisionShape2D/ARV02"]
-position = Vector2(57.50052, 250)
-scale = Vector2(6.0345855, 1.805336)
+position = Vector2(57.50052, 374.49988)
+scale = Vector2(6.0345855, 1.6823124)
 texture = ExtResource("3_mwnxc")
 
 [node name="ARV01" type="Node2D" parent="CollisionShape2D"]
@@ -204,6 +275,16 @@ texture = ExtResource("1_f0sik")
 
 [node name="Arvore3" type="Sprite2D" parent="CollisionShape2D/ARV01"]
 position = Vector2(-1053.5, 30)
+scale = Vector2(1, 1.6633877)
+texture = ExtResource("1_f0sik")
+
+[node name="Arvore8" type="Sprite2D" parent="CollisionShape2D/ARV01"]
+position = Vector2(-32.5, -60)
+scale = Vector2(1, 1.6633877)
+texture = ExtResource("1_f0sik")
+
+[node name="Arvore7" type="Sprite2D" parent="CollisionShape2D/ARV01"]
+position = Vector2(2577.5, 30)
 scale = Vector2(1, 1.6633877)
 texture = ExtResource("1_f0sik")
 
@@ -282,6 +363,12 @@ process_priority = 300
 process_physics_priority = 300
 script = ExtResource("11_ammsr")
 metadata/_custom_type_script = "uid://bd046eokvcnu2"
+
+[node name="PedestalLig" type="Sprite2D" parent="."]
+visibility_layer = 3
+position = Vector2(-119.00001, -8071)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("15_bx6hf")
 
 [node name="Cururu" parent="." instance=ExtResource("8_c5tg8")]
 z_index = 0
@@ -814,6 +901,20 @@ scale = Vector2(0.8, 0.8)
 texture = ExtResource("17_ui1e1")
 flip_v = true
 
+[node name="GramaReto56" type="Sprite2D" parent="Cenario/Chao"]
+position = Vector2(-4354, -1777.9998)
+rotation = 1.5707964
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("17_ui1e1")
+flip_v = true
+
+[node name="GramaReto57" type="Sprite2D" parent="Cenario/Chao"]
+position = Vector2(-3458, -1116.9998)
+rotation = 1.5707964
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("17_ui1e1")
+flip_v = true
+
 [node name="GramaReto27" type="Sprite2D" parent="Cenario/Chao"]
 position = Vector2(-8628.4, -473.39978)
 scale = Vector2(0.8, 0.8)
@@ -978,4 +1079,694 @@ metadata/_custom_type_script = "uid://cviskiwh21kxe"
 metadata/_edit_use_anchors_ = true
 
 [node name="AreaUpgrade" parent="." instance=ExtResource("2_d6eef")]
-position = Vector2(-119, -7944)
+position = Vector2(-119, -7939)
+
+[node name="MoitaTeste" type="Sprite2D" parent="."]
+position = Vector2(-3686, -9508)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("23_esn82")
+
+[node name="MoitaTeste3" type="Sprite2D" parent="."]
+position = Vector2(-3203, -9463)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("23_esn82")
+
+[node name="MoitaTeste5" type="Sprite2D" parent="."]
+position = Vector2(-2626, -9397)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("23_esn82")
+
+[node name="MoitaTeste8" type="Sprite2D" parent="."]
+position = Vector2(-2243, -9394)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("23_esn82")
+
+[node name="MoitaTeste9" type="Sprite2D" parent="."]
+position = Vector2(-1925, -9411)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("23_esn82")
+
+[node name="MoitaTeste2" type="Sprite2D" parent="."]
+position = Vector2(-3444, -9429)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("23_esn82")
+
+[node name="MoitaTeste4" type="Sprite2D" parent="."]
+position = Vector2(-2881, -9481)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("23_esn82")
+
+[node name="MoitaTeste6" type="Sprite2D" parent="."]
+position = Vector2(-2439, -9471)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("23_esn82")
+
+[node name="MoitaTeste7" type="Sprite2D" parent="."]
+position = Vector2(-2129, -9478)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("23_esn82")
+
+[node name="MoitaTeste17" type="Sprite2D" parent="."]
+position = Vector2(1261, -9450)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("23_esn82")
+
+[node name="MoitaTeste24" type="Sprite2D" parent="."]
+position = Vector2(710, -9492)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("23_esn82")
+
+[node name="MoitaTeste18" type="Sprite2D" parent="."]
+position = Vector2(1788.5996, -9432.8)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("23_esn82")
+
+[node name="MoitaTeste19" type="Sprite2D" parent="."]
+position = Vector2(2270, -9429.8)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("23_esn82")
+
+[node name="MoitaTeste25" type="Sprite2D" parent="."]
+position = Vector2(2718, -9456.001)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("23_esn82")
+
+[node name="MoitaTeste20" type="Sprite2D" parent="."]
+position = Vector2(971, -9408.001)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("23_esn82")
+
+[node name="MoitaTeste29" type="Sprite2D" parent="."]
+position = Vector2(1099, -9525)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("23_esn82")
+
+[node name="MoitaTeste21" type="Sprite2D" parent="."]
+position = Vector2(1533.5996, -9516.8)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("23_esn82")
+
+[node name="MoitaTeste22" type="Sprite2D" parent="."]
+position = Vector2(2063, -9506.8)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("23_esn82")
+
+[node name="MoitaTeste30" type="Sprite2D" parent="."]
+position = Vector2(5219.5996, -8193.8)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("23_esn82")
+
+[node name="MoitaTeste31" type="Sprite2D" parent="."]
+position = Vector2(4668.5996, -8235.8)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("23_esn82")
+
+[node name="MoitaTeste32" type="Sprite2D" parent="."]
+position = Vector2(5747.199, -8176.5996)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("23_esn82")
+
+[node name="MoitaTeste33" type="Sprite2D" parent="."]
+position = Vector2(6228.5996, -8173.5996)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("23_esn82")
+
+[node name="MoitaTeste34" type="Sprite2D" parent="."]
+position = Vector2(4929.5996, -8151.801)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("23_esn82")
+
+[node name="MoitaTeste35" type="Sprite2D" parent="."]
+position = Vector2(5057.5996, -8268.8)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("23_esn82")
+
+[node name="MoitaTeste36" type="Sprite2D" parent="."]
+position = Vector2(5492.199, -8260.6)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("23_esn82")
+
+[node name="MoitaTeste37" type="Sprite2D" parent="."]
+position = Vector2(6021.5996, -8250.6)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("23_esn82")
+
+[node name="MoitaTeste38" type="Sprite2D" parent="."]
+position = Vector2(7277.5996, -7813.8)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("23_esn82")
+
+[node name="MoitaTeste39" type="Sprite2D" parent="."]
+position = Vector2(6726.5996, -7855.8)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("23_esn82")
+
+[node name="MoitaTeste40" type="Sprite2D" parent="."]
+position = Vector2(7805.199, -7796.5996)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("23_esn82")
+
+[node name="MoitaTeste42" type="Sprite2D" parent="."]
+position = Vector2(6987.5996, -7771.801)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("23_esn82")
+
+[node name="MoitaTeste43" type="Sprite2D" parent="."]
+position = Vector2(7115.5996, -7888.8)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("23_esn82")
+
+[node name="MoitaTeste44" type="Sprite2D" parent="."]
+position = Vector2(7550.199, -7880.5996)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("23_esn82")
+
+[node name="MoitaTeste45" type="Sprite2D" parent="."]
+position = Vector2(8079.5996, -7870.5996)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("23_esn82")
+
+[node name="MoitaTeste41" type="Sprite2D" parent="."]
+position = Vector2(5633.6, -7145.8)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("23_esn82")
+
+[node name="MoitaTeste46" type="Sprite2D" parent="."]
+position = Vector2(5082.6, -7187.8)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("23_esn82")
+
+[node name="MoitaTeste47" type="Sprite2D" parent="."]
+position = Vector2(6161.1997, -7128.5996)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("23_esn82")
+
+[node name="MoitaTeste48" type="Sprite2D" parent="."]
+position = Vector2(5343.6, -7103.801)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("23_esn82")
+
+[node name="MoitaTeste49" type="Sprite2D" parent="."]
+position = Vector2(5471.6, -7220.8)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("23_esn82")
+
+[node name="MoitaTeste50" type="Sprite2D" parent="."]
+position = Vector2(5906.1997, -7212.5996)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("23_esn82")
+
+[node name="MoitaTeste51" type="Sprite2D" parent="."]
+position = Vector2(6435.6, -7202.5996)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("23_esn82")
+
+[node name="MoitaTeste52" type="Sprite2D" parent="."]
+position = Vector2(3758.6, -7347.8)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("23_esn82")
+
+[node name="MoitaTeste53" type="Sprite2D" parent="."]
+position = Vector2(3207.6, -7389.8)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("23_esn82")
+
+[node name="MoitaTeste54" type="Sprite2D" parent="."]
+position = Vector2(4286.1997, -7330.5996)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("23_esn82")
+
+[node name="MoitaTeste55" type="Sprite2D" parent="."]
+position = Vector2(3468.6, -7305.801)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("23_esn82")
+
+[node name="MoitaTeste56" type="Sprite2D" parent="."]
+position = Vector2(3596.6, -7422.8)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("23_esn82")
+
+[node name="MoitaTeste57" type="Sprite2D" parent="."]
+position = Vector2(4031.1997, -7414.5996)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("23_esn82")
+
+[node name="MoitaTeste58" type="Sprite2D" parent="."]
+position = Vector2(4560.6, -7404.5996)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("23_esn82")
+
+[node name="MoitaTeste59" type="Sprite2D" parent="."]
+position = Vector2(790.60034, -7280.8)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("23_esn82")
+
+[node name="MoitaTeste60" type="Sprite2D" parent="."]
+position = Vector2(239.60034, -7322.8)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("23_esn82")
+
+[node name="MoitaTeste61" type="Sprite2D" parent="."]
+position = Vector2(1318.2, -7263.5996)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("23_esn82")
+
+[node name="MoitaTeste68" type="Sprite2D" parent="."]
+position = Vector2(1750, -7291)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("23_esn82")
+
+[node name="MoitaTeste70" type="Sprite2D" parent="."]
+position = Vector2(2230, -7260)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("23_esn82")
+
+[node name="MoitaTeste71" type="Sprite2D" parent="."]
+position = Vector2(2416, -7108)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("23_esn82")
+
+[node name="MoitaTeste62" type="Sprite2D" parent="."]
+position = Vector2(500.60034, -7238.801)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("23_esn82")
+
+[node name="MoitaTeste63" type="Sprite2D" parent="."]
+position = Vector2(628.60034, -7355.8)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("23_esn82")
+
+[node name="MoitaTeste64" type="Sprite2D" parent="."]
+position = Vector2(1063.2, -7347.5996)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("23_esn82")
+
+[node name="MoitaTeste65" type="Sprite2D" parent="."]
+position = Vector2(1592.6003, -7337.5996)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("23_esn82")
+
+[node name="MoitaTeste69" type="Sprite2D" parent="."]
+position = Vector2(2052, -7355)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("23_esn82")
+
+[node name="MoitaTeste23" type="Sprite2D" parent="."]
+position = Vector2(2570, -9513.8)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("23_esn82")
+
+[node name="MoitaTeste26" type="Sprite2D" parent="."]
+position = Vector2(3128, -9491.001)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("23_esn82")
+
+[node name="MoitaTeste10" type="Sprite2D" parent="."]
+position = Vector2(-1784, -9506)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("23_esn82")
+
+[node name="MoitaTeste11" type="Sprite2D" parent="."]
+position = Vector2(-1359.3999, -8484.8)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("23_esn82")
+
+[node name="MoitaTeste12" type="Sprite2D" parent="."]
+position = Vector2(-1199, -8496.001)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("23_esn82")
+
+[node name="MoitaTeste13" type="Sprite2D" parent="."]
+position = Vector2(-674.00006, -8731.599)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("23_esn82")
+
+[node name="MoitaTeste14" type="Sprite2D" parent="."]
+position = Vector2(-443, -8742.8)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("23_esn82")
+
+[node name="MoitaTeste15" type="Sprite2D" parent="."]
+position = Vector2(108.599976, -9122.599)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("23_esn82")
+
+[node name="MoitaTeste16" type="Sprite2D" parent="."]
+position = Vector2(339.60004, -9133.8)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("23_esn82")
+
+[node name="MoitaTeste27" type="Sprite2D" parent="."]
+position = Vector2(3783.5996, -8839.599)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("23_esn82")
+
+[node name="MoitaTeste28" type="Sprite2D" parent="."]
+position = Vector2(4014.5999, -8850.8)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("23_esn82")
+
+[node name="MoitaTeste78" type="Sprite2D" parent="."]
+position = Vector2(4420, -8797.001)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("23_esn82")
+
+[node name="MoitaTeste66" type="Sprite2D" parent="."]
+position = Vector2(2574, -7193)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("23_esn82")
+
+[node name="MoitaTeste67" type="Sprite2D" parent="."]
+position = Vector2(2745, -7090)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("23_esn82")
+
+[node name="MoitaTeste72" type="Sprite2D" parent="."]
+position = Vector2(-635.39966, -7071.8)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("23_esn82")
+
+[node name="MoitaTeste73" type="Sprite2D" parent="."]
+position = Vector2(-367, -7111)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("23_esn82")
+
+[node name="MoitaTeste74" type="Sprite2D" parent="."]
+position = Vector2(-29.00003, -7225)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("23_esn82")
+
+[node name="MoitaTeste75" type="Sprite2D" parent="."]
+position = Vector2(-1357.3999, -6802.8)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("23_esn82")
+
+[node name="MoitaTeste76" type="Sprite2D" parent="."]
+position = Vector2(-1199.3999, -6887.8)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("23_esn82")
+
+[node name="MoitaTeste77" type="Sprite2D" parent="."]
+position = Vector2(-973, -6999)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("23_esn82")
+
+[node name="Frontfolha" type="Sprite2D" parent="."]
+position = Vector2(-3567, -5930)
+texture = ExtResource("24_esn82")
+
+[node name="Frontfolha2" type="Sprite2D" parent="."]
+position = Vector2(-1624, -5942)
+texture = ExtResource("24_esn82")
+
+[node name="Frontfolha3" type="Sprite2D" parent="."]
+position = Vector2(-51, -6085)
+texture = ExtResource("24_esn82")
+
+[node name="Frontfolha4" type="Sprite2D" parent="."]
+position = Vector2(3024, -6216)
+texture = ExtResource("24_esn82")
+
+[node name="Frontfolha5" type="Sprite2D" parent="."]
+position = Vector2(5312, -6526)
+texture = ExtResource("24_esn82")
+
+[node name="Frontfolha6" type="Sprite2D" parent="."]
+position = Vector2(2642, -7873)
+texture = ExtResource("24_esn82")
+
+[node name="Frontfolha7" type="Sprite2D" parent="."]
+position = Vector2(1283, -7909)
+texture = ExtResource("24_esn82")
+
+[node name="Frontfolha8" type="Sprite2D" parent="."]
+position = Vector2(-970, -7849)
+texture = ExtResource("24_esn82")
+
+[node name="Frontfolha9" type="Sprite2D" parent="."]
+position = Vector2(-1201, -8499)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("24_esn82")
+flip_v = true
+
+[node name="Frontfolha21" type="Sprite2D" parent="."]
+position = Vector2(-4032.9998, -9488)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("24_esn82")
+flip_v = true
+
+[node name="Frontfolha22" type="Sprite2D" parent="."]
+position = Vector2(-3346.9998, -9549)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("24_esn82")
+flip_v = true
+
+[node name="Frontfolha23" type="Sprite2D" parent="."]
+position = Vector2(-2708.0002, -9549)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("24_esn82")
+flip_v = true
+
+[node name="Frontfolha24" type="Sprite2D" parent="."]
+position = Vector2(-2015, -9495)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("24_esn82")
+flip_v = true
+
+[node name="Frontfolha25" type="Sprite2D" parent="."]
+position = Vector2(-1362, -9502)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("24_esn82")
+flip_v = true
+
+[node name="Frontfolha10" type="Sprite2D" parent="."]
+position = Vector2(-760, -8697)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("24_esn82")
+flip_v = true
+
+[node name="Frontfolha26" type="Sprite2D" parent="."]
+position = Vector2(-1362, -6860)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("24_esn82")
+flip_v = true
+
+[node name="Frontfolha35" type="Sprite2D" parent="."]
+position = Vector2(2672, -7162)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("24_esn82")
+flip_h = true
+flip_v = true
+
+[node name="Frontfolha27" type="Sprite2D" parent="."]
+position = Vector2(-1277, -6930)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("24_esn82")
+flip_v = true
+
+[node name="Frontfolha28" type="Sprite2D" parent="."]
+position = Vector2(-976, -7003)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("24_esn82")
+flip_v = true
+
+[node name="Frontfolha29" type="Sprite2D" parent="."]
+position = Vector2(-679, -7126)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("24_esn82")
+flip_v = true
+
+[node name="Frontfolha30" type="Sprite2D" parent="."]
+position = Vector2(-186.00003, -7263)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("24_esn82")
+flip_v = true
+
+[node name="Frontfolha31" type="Sprite2D" parent="."]
+position = Vector2(372.9999, -7348)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("24_esn82")
+flip_v = true
+
+[node name="Frontfolha32" type="Sprite2D" parent="."]
+position = Vector2(1021, -7402)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("24_esn82")
+flip_v = true
+
+[node name="Frontfolha33" type="Sprite2D" parent="."]
+position = Vector2(1729, -7345)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("24_esn82")
+flip_v = true
+
+[node name="Frontfolha34" type="Sprite2D" parent="."]
+position = Vector2(2414, -7334)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("24_esn82")
+flip_v = true
+
+[node name="Frontfolha36" type="Sprite2D" parent="."]
+position = Vector2(2472, -7184)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("24_esn82")
+flip_v = true
+
+[node name="Frontfolha37" type="Sprite2D" parent="."]
+position = Vector2(3103, -7453)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("24_esn82")
+flip_v = true
+
+[node name="Frontfolha38" type="Sprite2D" parent="."]
+position = Vector2(3800, -7422)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("24_esn82")
+flip_v = true
+
+[node name="Frontfolha39" type="Sprite2D" parent="."]
+position = Vector2(4434, -7409)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("24_esn82")
+flip_v = true
+
+[node name="Frontfolha40" type="Sprite2D" parent="."]
+position = Vector2(5146, -7221)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("24_esn82")
+flip_v = true
+
+[node name="Frontfolha41" type="Sprite2D" parent="."]
+position = Vector2(5813, -7197)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("24_esn82")
+flip_v = true
+
+[node name="Frontfolha42" type="Sprite2D" parent="."]
+position = Vector2(6325, -7208)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("24_esn82")
+flip_v = true
+
+[node name="Frontfolha11" type="Sprite2D" parent="."]
+position = Vector2(-563, -8758)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("24_esn82")
+flip_v = true
+
+[node name="Frontfolha12" type="Sprite2D" parent="."]
+position = Vector2(-411, -9087)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("24_esn82")
+flip_v = true
+
+[node name="Frontfolha13" type="Sprite2D" parent="."]
+position = Vector2(215, -9131)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("24_esn82")
+flip_h = true
+flip_v = true
+
+[node name="Frontfolha14" type="Sprite2D" parent="."]
+position = Vector2(424, -9480)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("24_esn82")
+flip_h = true
+flip_v = true
+
+[node name="Frontfolha15" type="Sprite2D" parent="."]
+position = Vector2(1119, -9590)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("24_esn82")
+flip_h = true
+flip_v = true
+
+[node name="Frontfolha16" type="Sprite2D" parent="."]
+position = Vector2(1947, -9571)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("24_esn82")
+flip_h = true
+flip_v = true
+
+[node name="Frontfolha17" type="Sprite2D" parent="."]
+position = Vector2(2767, -9522)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("24_esn82")
+flip_h = true
+flip_v = true
+
+[node name="Frontfolha18" type="Sprite2D" parent="."]
+position = Vector2(3414, -9497)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("24_esn82")
+flip_h = true
+flip_v = true
+
+[node name="Frontfolha19" type="Sprite2D" parent="."]
+position = Vector2(3899, -8845)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("24_esn82")
+flip_h = true
+flip_v = true
+
+[node name="Frontfolha43" type="Sprite2D" parent="."]
+position = Vector2(4818, -8271)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("24_esn82")
+flip_h = true
+flip_v = true
+
+[node name="Frontfolha44" type="Sprite2D" parent="."]
+position = Vector2(5503, -8312)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("24_esn82")
+flip_h = true
+flip_v = true
+
+[node name="Frontfolha45" type="Sprite2D" parent="."]
+position = Vector2(6260, -8307)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("24_esn82")
+flip_h = true
+flip_v = true
+
+[node name="Frontfolha46" type="Sprite2D" parent="."]
+position = Vector2(6772, -8137)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("24_esn82")
+flip_h = true
+flip_v = true
+
+[node name="Frontfolha47" type="Sprite2D" parent="."]
+position = Vector2(6909, -7870)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("24_esn82")
+flip_h = true
+flip_v = true
+
+[node name="Frontfolha48" type="Sprite2D" parent="."]
+position = Vector2(7507, -7926)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("24_esn82")
+flip_h = true
+flip_v = true
+
+[node name="Frontfolha49" type="Sprite2D" parent="."]
+position = Vector2(8154, -7952)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("24_esn82")
+flip_h = true
+flip_v = true
+
+[node name="Frontfolha20" type="Sprite2D" parent="."]
+position = Vector2(4555, -8832)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("24_esn82")
+flip_h = true
+flip_v = true
+
+[node name="Escorpiao" parent="." instance=ExtResource("26_8yk11")]
+position = Vector2(479, -6543)
+
+[node name="Morcego" parent="." instance=ExtResource("27_r33ly")]
+position = Vector2(1896, -6916)

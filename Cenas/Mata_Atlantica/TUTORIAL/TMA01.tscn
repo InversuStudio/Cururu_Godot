@@ -1,4 +1,4 @@
-[gd_scene load_steps=35 format=4 uid="uid://dfuswe0wcsy33"]
+[gd_scene load_steps=36 format=4 uid="uid://dfuswe0wcsy33"]
 
 [ext_resource type="Texture2D" uid="uid://c374cwih425cq" path="res://Sprites/Cenário/Tilemaps/Base.png" id="1_axyo6"]
 [ext_resource type="PackedScene" uid="uid://cqyub70sv0ofp" path="res://Objetos/Props/SavePoint.tscn" id="1_kqyhf"]
@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://nohq28uk7lfk" path="res://Objetos/Entidades/Player.tscn" id="6_rp2yr"]
 [ext_resource type="Texture2D" uid="uid://dmh8fodubelsr" path="res://Sprites/Cenário/Mata_Atlantica/Background/FUNDONEVOA.png" id="7_7dakl"]
 [ext_resource type="PackedScene" uid="uid://1apfpwlqocxn" path="res://Objetos/Funcionalidade/TransicaoFase.tscn" id="8_kqyhf"]
+[ext_resource type="Texture2D" uid="uid://rbtvfm4m7ft" path="res://Sprites/VFX/Iluminação/SOMBRA2.png" id="8_l3w8l"]
 [ext_resource type="Texture2D" uid="uid://ctar30vsktrrb" path="res://Sprites/Cenário/Mata_Atlantica/Background/FUNDONEVOA2.png" id="8_ym8ms"]
 [ext_resource type="Texture2D" uid="uid://rwmi1ggde5dy" path="res://Sprites/VFX/Iluminação/PORTAL.png" id="9_ogbcg"]
 [ext_resource type="Script" uid="uid://bd046eokvcnu2" path="res://addons/phantom_camera/scripts/phantom_camera_host/phantom_camera_host.gd" id="9_t4xlf"]
@@ -288,6 +289,24 @@ position = Vector2(-3571.4292, -49.839844)
 rotation = 0.087266445
 texture = ExtResource("6_fgbk1")
 
+[node name="Moita5" type="Sprite2D" parent="Background"]
+position = Vector2(-33885, -3349)
+texture = ExtResource("24_l3w8l")
+
+[node name="Sombra5" type="Sprite2D" parent="Background"]
+position = Vector2(-33899, -3352.5)
+scale = Vector2(1.7592592, 0.7920354)
+texture = ExtResource("8_l3w8l")
+
+[node name="Moita6" type="Sprite2D" parent="Background"]
+position = Vector2(-32052, -3390)
+texture = ExtResource("24_l3w8l")
+
+[node name="Sombra6" type="Sprite2D" parent="Background"]
+position = Vector2(-32066, -3393.5)
+scale = Vector2(1.7592592, 0.7920354)
+texture = ExtResource("8_l3w8l")
+
 [node name="Fundonevoa" type="Sprite2D" parent="Background"]
 light_mask = 2
 position = Vector2(-34833, -3479.9995)
@@ -343,6 +362,42 @@ light_mask = 2
 position = Vector2(-34831, -3477)
 scale = Vector2(4.7015815, 0.7756917)
 texture = ExtResource("8_ym8ms")
+
+[node name="Moita2" type="Sprite2D" parent="Background"]
+position = Vector2(-36954, -3328)
+texture = ExtResource("24_l3w8l")
+
+[node name="Sombra2" type="Sprite2D" parent="Background"]
+position = Vector2(-36968, -3331.5)
+scale = Vector2(1.7592592, 0.7920354)
+texture = ExtResource("8_l3w8l")
+
+[node name="Moita3" type="Sprite2D" parent="Background"]
+position = Vector2(-36531, -3328)
+texture = ExtResource("24_l3w8l")
+
+[node name="Sombra3" type="Sprite2D" parent="Background"]
+position = Vector2(-36545, -3331.5)
+scale = Vector2(1.7592592, 0.7920354)
+texture = ExtResource("8_l3w8l")
+
+[node name="Moita4" type="Sprite2D" parent="Background"]
+position = Vector2(-34880, -3367)
+texture = ExtResource("24_l3w8l")
+
+[node name="Sombra4" type="Sprite2D" parent="Background"]
+position = Vector2(-34894, -3370.5)
+scale = Vector2(1.7592592, 0.7920354)
+texture = ExtResource("8_l3w8l")
+
+[node name="Moita7" type="Sprite2D" parent="Background"]
+position = Vector2(-30890, -3347)
+texture = ExtResource("24_l3w8l")
+
+[node name="Sombra7" type="Sprite2D" parent="Background"]
+position = Vector2(-30904, -3350.5)
+scale = Vector2(1.7592592, 0.7920354)
+texture = ExtResource("8_l3w8l")
 
 [node name="SavePoint" parent="." instance=ExtResource("1_kqyhf")]
 position = Vector2(-38140, -3322)
