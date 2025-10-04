@@ -15,5 +15,4 @@ scale = Vector2(0.99999994, 0.99999994)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2(13, -35.5)
 shape = SubResource("RectangleShape2D_hnyem")
-one_way_collision = true
 debug_color = Color(0, 0.6, 0.69803923, 0)
