@@ -1,16 +1,15 @@
-[gd_scene load_steps=12 format=3 uid="uid://cdhelg6sloxbj"]
+[gd_scene load_steps=11 format=3 uid="uid://cdhelg6sloxbj"]
 
 [ext_resource type="Script" uid="uid://b0ou3eu3i1sxg" path="res://Scripts/Componentes/PortaTemp.gd" id="1_rixxk"]
-[ext_resource type="Texture2D" uid="uid://c3tl3oddronfh" path="res://icon.svg" id="2_41i4q"]
 [ext_resource type="PackedScene" uid="uid://va5pjd6vuuo2" path="res://Objetos/Funcionalidade/CompHurtBox.tscn" id="3_7ptwx"]
 [ext_resource type="Texture2D" uid="uid://bgdktvv3wdxl5" path="res://Sprites/Cenário/Objetos/Portas/MIASMA.png" id="3_h4g8d"]
-[ext_resource type="AudioStream" uid="uid://dhgsnus0fna7q" path="res://Audio/SFX/SOM TESTE.mp3" id="4_41i4q"]
+[ext_resource type="AudioStream" uid="uid://c8tt33f71nk6f" path="res://Audio/SFX/AMBIENTE/Som_portaabrindo.ogg" id="6_h4g8d"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_41i4q"]
-size = Vector2(203, 384)
+size = Vector2(203, 511)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rixxk"]
-size = Vector2(227, 384)
+size = Vector2(227, 511)
 
 [sub_resource type="Animation" id="Animation_41i4q"]
 resource_name = "Abre"
@@ -69,13 +68,6 @@ _data = {
 script = ExtResource("1_rixxk")
 
 [node name="Porta" type="Node2D" parent="."]
-position = Vector2(0, -430)
-
-[node name="Sprite2D" type="Sprite2D" parent="Porta"]
-visible = false
-self_modulate = Color(0.0475577, 0.0475576, 0.0475576, 1)
-scale = Vector2(0.75, 3)
-texture = ExtResource("2_41i4q")
 
 [node name="Miasma" type="Sprite2D" parent="Porta"]
 position = Vector2(1, -62)
@@ -83,10 +75,9 @@ texture = ExtResource("3_h4g8d")
 
 [node name="HurtBox" parent="Porta" instance=ExtResource("3_7ptwx")]
 unique_name_in_owner = true
-hit_sfx = ExtResource("4_41i4q")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Porta/HurtBox"]
-position = Vector2(5.5, 0)
+position = Vector2(5.5, -63.5)
 shape = SubResource("RectangleShape2D_41i4q")
 debug_color = Color(0.99137133, 0, 0.27243033, 0.41960785)
 
@@ -94,7 +85,7 @@ debug_color = Color(0.99137133, 0, 0.27243033, 0.41960785)
 collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Porta/Colisao"]
-position = Vector2(4.5, 0)
+position = Vector2(4.5, -63.5)
 shape = SubResource("RectangleShape2D_rixxk")
 
 [node name="Timer" type="Timer" parent="."]
@@ -108,5 +99,9 @@ libraries = {
 &"": SubResource("AnimationLibrary_41i4q")
 }
 autoplay = "Idle"
+
+[node name="SFX" type="AudioStreamPlayer" parent="."]
+unique_name_in_owner = true
+stream = ExtResource("6_h4g8d")
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

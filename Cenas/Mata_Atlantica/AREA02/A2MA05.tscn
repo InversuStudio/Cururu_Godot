@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=4 uid="uid://dvg6r2gfvcnfb"]
+[gd_scene load_steps=32 format=4 uid="uid://dvg6r2gfvcnfb"]
 
 [ext_resource type="Texture2D" uid="uid://cqu5scrrmr5n5" path="res://Sprites/Cenário/Mata_Atlantica/Background/FUNDOCEU.png" id="1_2x3ls"]
 [ext_resource type="Script" uid="uid://bhexx6mj1xv3q" path="res://addons/phantom_camera/scripts/phantom_camera/phantom_camera_2d.gd" id="1_3mtbg"]
@@ -24,6 +24,8 @@
 [ext_resource type="Texture2D" uid="uid://ciulkfu83ohwu" path="res://Sprites/Cenário/Mata_Atlantica/Foreground/04.png" id="21_favji"]
 [ext_resource type="Texture2D" uid="uid://c2yapafbd3cnf" path="res://Sprites/Cenário/Mata_Atlantica/Foreground/cipó.png" id="24_6t3gw"]
 [ext_resource type="PackedScene" uid="uid://phfxidwhdpy7" path="res://Objetos/Funcionalidade/CompFade.tscn" id="24_favji"]
+[ext_resource type="Script" uid="uid://dd16yu704x6wt" path="res://Scripts/Componentes/BGM_Player.gd" id="25_1vw3w"]
+[ext_resource type="AudioStream" uid="uid://c7qftchbhu6xc" path="res://Audio/SFX/AMBIENTE/Musica_Jogo.mp3" id="26_patjh"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g1p7l"]
 size = Vector2(7029, 5113)
@@ -3717,9 +3719,6 @@ position = Vector2(2399, -2928)
 z_index = 0
 position = Vector2(7246.9995, -358.99994)
 scale = Vector2(0.959163, 0.959163)
-vel = 12.0
-vel_aerea = 10.0
-tempo_dash = 0.18
 
 [node name="Transicoes" type="Node2D" parent="."]
 
@@ -3779,3 +3778,9 @@ offset_right = -6.0
 offset_bottom = -2.0
 
 [node name="Fade" parent="UIGAME" instance=ExtResource("24_favji")]
+
+[node name="BGM_Player" type="Node" parent="."]
+script = ExtResource("25_1vw3w")
+musica = ExtResource("26_patjh")
+volume = -0.5
+metadata/_custom_type_script = "uid://dd16yu704x6wt"

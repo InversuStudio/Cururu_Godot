@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://cqyub70sv0ofp"]
+[gd_scene load_steps=10 format=3 uid="uid://cqyub70sv0ofp"]
 
 [ext_resource type="Script" uid="uid://dvol8qmgk0lx8" path="res://Scripts/Componentes/SavePoint.gd" id="1_hntd5"]
 [ext_resource type="Script" uid="uid://dd7svcu8l7fxu" path="res://Scripts/Componentes/Interacao.gd" id="1_xf6ij"]
@@ -6,6 +6,7 @@
 [ext_resource type="Script" uid="uid://b2ls33ys55oyt" path="res://Scripts/Componentes/OtimizadorSprite.gd" id="4_3f5lj"]
 [ext_resource type="Texture2D" uid="uid://bqe80obttjb82" path="res://Sprites/Cenário/Objetos/Savepoint/save_meio_termo.png" id="4_j20lk"]
 [ext_resource type="Texture2D" uid="uid://byyty8fw4cjjd" path="res://Sprites/Cenário/Objetos/Savepoint/save_ativado.png" id="5_41v7y"]
+[ext_resource type="AudioStream" uid="uid://egsk7ec7xtpd" path="res://Audio/SFX/AMBIENTE/som_save.wav" id="7_41v7y"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hntd5"]
 size = Vector2(315, 376.5)
@@ -72,3 +73,8 @@ bbcode_enabled = true
 text = "DESCANÇAR"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="SFX" type="AudioStreamPlayer" parent="."]
+unique_name_in_owner = true
+stream = ExtResource("7_41v7y")
+volume_db = 1.0

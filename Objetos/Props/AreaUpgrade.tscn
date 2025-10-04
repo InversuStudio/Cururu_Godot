@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://d3cks8kri2olw"]
+[gd_scene load_steps=11 format=3 uid="uid://d3cks8kri2olw"]
 
 [ext_resource type="Script" uid="uid://dd7svcu8l7fxu" path="res://Scripts/Componentes/Interacao.gd" id="1_6186v"]
 [ext_resource type="Script" uid="uid://dv2hce0uiqes7" path="res://Scripts/Componentes/AreaUpgrade.gd" id="2_hgbl4"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://cpkvjrojwvd2b" path="res://Sprites/Cenário/Objetos/Savepoint/pedestal_lig.png" id="3_jyd7d"]
 [ext_resource type="Texture2D" uid="uid://0agjwkmg3gef" path="res://Sprites/VFX/Iluminação/luz azul.png" id="3_qxje0"]
 [ext_resource type="Texture2D" uid="uid://brkgsnwq1lnov" path="res://Sprites/Cenário/Mata_Atlantica/Interativos/pedestal_pedra_recorte.png" id="5_beg2k"]
+[ext_resource type="AudioStream" uid="uid://b3q8f2bgu746y" path="res://Audio/SFX/AMBIENTE/som_upgrade.wav" id="7_rm14k"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qxje0"]
 size = Vector2(84, 220)
@@ -77,3 +78,8 @@ scale = Vector2(8.9, 11)
 rect = Rect2(-16.067415, -16.727272, 32.13483, 27.272726)
 script = ExtResource("3_hgbl4")
 metadata/_custom_type_script = "uid://b2ls33ys55oyt"
+
+[node name="SFX" type="AudioStreamPlayer" parent="."]
+unique_name_in_owner = true
+stream = ExtResource("7_rm14k")
+volume_db = 1.0

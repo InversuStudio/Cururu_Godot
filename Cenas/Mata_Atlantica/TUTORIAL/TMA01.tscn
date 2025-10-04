@@ -1,4 +1,4 @@
-[gd_scene load_steps=35 format=4 uid="uid://dfuswe0wcsy33"]
+[gd_scene load_steps=37 format=4 uid="uid://dfuswe0wcsy33"]
 
 [ext_resource type="Texture2D" uid="uid://c374cwih425cq" path="res://Sprites/Cenário/Tilemaps/Base.png" id="1_axyo6"]
 [ext_resource type="PackedScene" uid="uid://cqyub70sv0ofp" path="res://Objetos/Props/SavePoint.tscn" id="1_kqyhf"]
@@ -27,11 +27,13 @@
 [ext_resource type="Texture2D" uid="uid://b0pui1q2vj5g0" path="res://Sprites/Cenário/zSem_Uso/PAU_BRASIL02.png" id="29_0v3sa"]
 [ext_resource type="Texture2D" uid="uid://b3be1u52efn3y" path="res://Sprites/Cenário/Mata_Atlantica/Foreground/06.png" id="29_nika8"]
 [ext_resource type="Texture2D" uid="uid://5m4b2cn86u3t" path="res://Sprites/Cenário/Mata_Atlantica/Foreground/03.png" id="30_5nff6"]
+[ext_resource type="Script" uid="uid://dd16yu704x6wt" path="res://Scripts/Componentes/BGM_Player.gd" id="30_fgbk1"]
+[ext_resource type="AudioStream" uid="uid://c7qftchbhu6xc" path="res://Audio/SFX/AMBIENTE/Musica_Jogo.mp3" id="31_7dakl"]
 [ext_resource type="Texture2D" uid="uid://xjqchtcfdjkn" path="res://Sprites/Cenário/Mata_Atlantica/Foreground/01.png" id="31_ku32q"]
 [ext_resource type="Texture2D" uid="uid://b2pop4ke31d1x" path="res://Sprites/Cenário/Mata_Atlantica/Foreground/02.png" id="32_dglwx"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kwvnc"]
-size = Vector2(9340, 2173)
+size = Vector2(9056, 2173)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0f8ab"]
 texture = ExtResource("1_axyo6")
@@ -180,7 +182,7 @@ duration = 0.0
 [node name="Tutorial_1" type="Node2D"]
 
 [node name="LimiteCamera" type="CollisionShape2D" parent="."]
-position = Vector2(4646.9995, -1921.5)
+position = Vector2(4789, -1921.5)
 shape = SubResource("RectangleShape2D_kwvnc")
 debug_color = Color(0, 0.6, 0.69803923, 0)
 
@@ -872,9 +874,6 @@ position = Vector2(1258.9995, -1164)
 [node name="Cururu" parent="." instance=ExtResource("6_rp2yr")]
 position = Vector2(1653.0032, -1171.9996)
 scale = Vector2(0.959163, 0.959163)
-vel = 12.0
-vel_aerea = 10.0
-tempo_dash = 0.18
 
 [node name="Tutorial2" parent="." instance=ExtResource("8_kqyhf")]
 position = Vector2(9240, -1595)
@@ -893,7 +892,7 @@ physics_interpolation_mode = 1
 position = Vector2(1653.0032, -1510)
 zoom = Vector2(0.8, 0.8)
 process_callback = 0
-limit_left = -23
+limit_left = 261
 limit_top = -3008
 limit_right = 9317
 limit_bottom = -835
@@ -928,3 +927,8 @@ offset_right = -6.0
 offset_bottom = -2.0
 
 [node name="Fade" parent="UIGAME" instance=ExtResource("28_l3w8l")]
+
+[node name="BGM_Player" type="Node" parent="."]
+script = ExtResource("30_fgbk1")
+musica = ExtResource("31_7dakl")
+metadata/_custom_type_script = "uid://dd16yu704x6wt"

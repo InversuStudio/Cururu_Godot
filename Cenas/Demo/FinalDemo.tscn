@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=3 uid="uid://d0dte5wfi7d0m"]
+
+[ext_resource type="Texture2D" uid="uid://cwk87j7k2tx4b" path="res://Sprites/UI/FinalDemo/TELA_FINAL.png" id="1_a8qag"]
+[ext_resource type="Script" uid="uid://bybbf6dpcoelr" path="res://Scripts/Demo/FinalDemo.gd" id="1_bw0r5"]
+[ext_resource type="PackedScene" uid="uid://phfxidwhdpy7" path="res://Objetos/Funcionalidade/CompFade.tscn" id="3_c1xam"]
+[ext_resource type="Script" uid="uid://dd16yu704x6wt" path="res://Scripts/Componentes/BGM_Player.gd" id="4_ued6h"]
+
+[node name="FinalDemo" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_bw0r5")
+
+[node name="Background" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_a8qag")
+
+[node name="Fade" parent="." instance=ExtResource("3_c1xam")]
+layout_mode = 1
+
+[node name="BGM_Player" type="Node" parent="."]
+script = ExtResource("4_ued6h")
+metadata/_custom_type_script = "uid://dd16yu704x6wt"

@@ -137,4 +137,5 @@ func Morte() -> void:
 	GameData.vida_atual = vida.vida_max
 	GameData.magia_atual = magia_max
 	if GameData.Load() == false:
-		Mundos.CarregaFase(GameData.fase)
+		Mundos.CarregaFase(Mundos.NomeFase.TUTORIAL_1)
+		GameData.moedas = 0

@@ -8,6 +8,7 @@ func _ready() -> void:
 func Interact(player:CharacterBody2D) -> void:
 	player.vida.RecebeCura(GameData.vida_max)
 	GameData.Save()
+	%SFX.play()
 
 func Extra(dentro:bool = true) -> void:
 	if dentro:

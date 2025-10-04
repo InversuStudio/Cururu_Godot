@@ -152,9 +152,6 @@ size = Vector2(70, 410)
 z_index = 0
 position = Vector2(1630.9998, -2988.0005)
 scale = Vector2(0.959163, 0.959163)
-vel = 12.0
-vel_aerea = 10.0
-tempo_dash = 0.18
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
 position = Vector2(-2, 0)

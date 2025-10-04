@@ -18,11 +18,13 @@ func _on_timer_timeout() -> void:
 
 func Disable() -> void:
 	%Anim.play("Abre")
+	%SFX.play()
 	%HurtBox.set_deferred("monitoring", false)
 	%HurtBox.set_deferred("monitorable", false)
 	%Timer.start()
 
 func Enable() -> void:
 	%Anim.play("Fecha")
+	%SFX.play()
 	%HurtBox.set_deferred("monitoring", true)
 	%HurtBox.set_deferred("monitorable", true)

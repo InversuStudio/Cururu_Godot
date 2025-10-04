@@ -165,9 +165,6 @@ tile_set = SubResource("TileSet_qmcwu")
 [node name="Player" parent="." instance=ExtResource("2_2tgjk")]
 position = Vector2(808, -345.9999)
 scale = Vector2(0.959163, 0.959163)
-vel = 12.0
-vel_aerea = 10.0
-tempo_dash = 0.15
 
 [node name="PhantomCamera2D" type="Node2D" parent="." node_paths=PackedStringArray("follow_target")]
 top_level = true

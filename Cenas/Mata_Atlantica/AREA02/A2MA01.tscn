@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=4 uid="uid://ba8igbg8v441c"]
+[gd_scene load_steps=34 format=4 uid="uid://ba8igbg8v441c"]
 
 [ext_resource type="Texture2D" uid="uid://cqu5scrrmr5n5" path="res://Sprites/Cenário/Mata_Atlantica/Background/FUNDOCEU.png" id="1_hnubh"]
 [ext_resource type="Texture2D" uid="uid://c374cwih425cq" path="res://Sprites/Cenário/Tilemaps/Base.png" id="1_umcgc"]
@@ -26,6 +26,8 @@
 [ext_resource type="PackedScene" uid="uid://bjvnm0aydr0vd" path="res://Objetos/Entidades/Morcego.tscn" id="26_ctjy6"]
 [ext_resource type="PackedScene" uid="uid://bu62qgilsxetf" path="res://Objetos/Entidades/Escorpiao.tscn" id="27_aw4uh"]
 [ext_resource type="PackedScene" uid="uid://phfxidwhdpy7" path="res://Objetos/Funcionalidade/CompFade.tscn" id="27_ctjy6"]
+[ext_resource type="Script" uid="uid://dd16yu704x6wt" path="res://Scripts/Componentes/BGM_Player.gd" id="27_hdfdg"]
+[ext_resource type="AudioStream" uid="uid://c7qftchbhu6xc" path="res://Audio/SFX/AMBIENTE/Musica_Jogo.mp3" id="28_75oum"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_52kex"]
 size = Vector2(4894, 3468)
@@ -1201,9 +1203,6 @@ position = Vector2(6863, -705)
 z_index = 0
 position = Vector2(5067, -180.00003)
 scale = Vector2(0.919994, 0.919994)
-vel = 12.0
-vel_aerea = 10.0
-tempo_dash = 0.18
 
 [node name="TransicoesFase" type="Node2D" parent="."]
 position = Vector2(-4670, 1574)
@@ -1266,3 +1265,9 @@ metadata/_custom_type_script = "uid://bd046eokvcnu2"
 metadata/_edit_use_anchors_ = true
 
 [node name="Fade" parent="UIGAME" instance=ExtResource("27_ctjy6")]
+
+[node name="BGM_Player" type="Node" parent="."]
+script = ExtResource("27_hdfdg")
+musica = ExtResource("28_75oum")
+volume = -0.5
+metadata/_custom_type_script = "uid://dd16yu704x6wt"

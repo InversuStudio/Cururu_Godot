@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://dppj6i0ifoocp"]
+[gd_scene load_steps=16 format=3 uid="uid://dppj6i0ifoocp"]
 
 [ext_resource type="Script" uid="uid://bacf3raoqf4ns" path="res://Scripts/Boss/Pilar.gd" id="1_tdbse"]
 [ext_resource type="Texture2D" uid="uid://fakskg5rd5mq" path="res://Sprites/Inimigos/Boitata/Ataque2/Pilar_Fogo/fogo_pilar01.png" id="1_tqvmf"]
@@ -12,6 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://bspf3gaq681gl" path="res://Sprites/Inimigos/Boitata/Ataque2/Pilar_Fogo/fogo_pilar17.png" id="9_0ry6m"]
 [ext_resource type="Texture2D" uid="uid://ch1na8t4hj27y" path="res://Sprites/Inimigos/Boitata/Ataque2/Pilar_Fogo/fogo_pilar19.png" id="10_d12gu"]
 [ext_resource type="PackedScene" uid="uid://pc4mgv2nv8af" path="res://Objetos/Funcionalidade/CompHitBox.tscn" id="11_tqvmf"]
+[ext_resource type="AudioStream" uid="uid://bcatsesjwy8f4" path="res://Audio/SFX/BOITATA/Pilar_Fogo.mp3" id="13_petnf"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_u0rk8"]
 animations = [{
@@ -85,5 +86,9 @@ disabled = true
 [node name="Timer" type="Timer" parent="."]
 wait_time = 0.8
 one_shot = true
+
+[node name="SFX" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("13_petnf")
+autoplay = true
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

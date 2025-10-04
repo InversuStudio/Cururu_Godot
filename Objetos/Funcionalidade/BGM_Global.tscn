@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://bnfrq7iom2tfr"]
+
+[ext_resource type="Script" uid="uid://duccqdglv82tj" path="res://Scripts/Globais/BGM.gd" id="1_704en"]
+
+[node name="BGM_Global" type="AudioStreamPlayer"]
+script = ExtResource("1_704en")

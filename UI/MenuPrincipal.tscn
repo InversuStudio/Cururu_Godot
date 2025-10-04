@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://drlbsodypev3g"]
+[gd_scene load_steps=7 format=3 uid="uid://drlbsodypev3g"]
 
 [ext_resource type="Script" uid="uid://jrl1634sm6lb" path="res://Scripts/Componentes/MenuPrincipal.gd" id="1_sgs44"]
 [ext_resource type="AudioStream" uid="uid://cjorej6h7gw75" path="res://Audio/SFX/MENU INICIAL/menu_musica.mp3" id="2_3fsnc"]
 [ext_resource type="Texture2D" uid="uid://ciudp1bvjo4s5" path="res://Sprites/UI/Telainicial/01.png" id="2_hkuru"]
 [ext_resource type="AudioStream" uid="uid://w484n11fqypl" path="res://Audio/SFX/MENU INICIAL/selecao_menu.mp3" id="4_6y4ar"]
 [ext_resource type="PackedScene" uid="uid://phfxidwhdpy7" path="res://Objetos/Funcionalidade/CompFade.tscn" id="4_o3eph"]
+[ext_resource type="Script" uid="uid://dd16yu704x6wt" path="res://Scripts/Componentes/BGM_Player.gd" id="5_e3fqx"]
 
 [node name="MenuPrincipal" type="Control"]
 layout_mode = 3
@@ -57,15 +58,16 @@ size_flags_horizontal = 3
 theme_override_font_sizes/font_size = 40
 text = "Sair"
 
-[node name="BGM" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("2_3fsnc")
-autoplay = true
-
 [node name="BtnSFX" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("4_6y4ar")
 
 [node name="Fade" parent="." instance=ExtResource("4_o3eph")]
 layout_mode = 1
+
+[node name="BGM_Player" type="Node" parent="."]
+script = ExtResource("5_e3fqx")
+musica = ExtResource("2_3fsnc")
+metadata/_custom_type_script = "uid://dd16yu704x6wt"
 
 [connection signal="pressed" from="HBoxContainer/NovoJogo" to="." method="_on_main_pressed"]
 [connection signal="pressed" from="HBoxContainer/Continuar" to="." method="_on_fase_teste_pressed"]

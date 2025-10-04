@@ -29,8 +29,8 @@ func Enter() -> void:
 	%Anim.play(combo_anim[combo_num])
 	var next_combo = combo_num + 1
 	combo_num = next_combo if next_combo <= combo_limit else 0
-	%SFX.stream = sfx
-	%SFX.play()
+	%SFX_Ataque.stream = sfx
+	%SFX_Ataque.play()
 
 func Exit() -> void:
 	terminou = false

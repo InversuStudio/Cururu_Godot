@@ -1,4 +1,4 @@
-[gd_scene load_steps=35 format=4 uid="uid://51mlmfn0h0h"]
+[gd_scene load_steps=37 format=4 uid="uid://51mlmfn0h0h"]
 
 [ext_resource type="Texture2D" uid="uid://cqu5scrrmr5n5" path="res://Sprites/Cenário/Mata_Atlantica/Background/FUNDOCEU.png" id="1_k6tng"]
 [ext_resource type="Texture2D" uid="uid://c374cwih425cq" path="res://Sprites/Cenário/Tilemaps/Base.png" id="1_m6iqj"]
@@ -28,6 +28,8 @@
 [ext_resource type="Texture2D" uid="uid://rwmi1ggde5dy" path="res://Sprites/VFX/Iluminação/PORTAL.png" id="18_2gijv"]
 [ext_resource type="PackedScene" uid="uid://bs5i45df7rwnf" path="res://UI/HUD.tscn" id="18_p37rg"]
 [ext_resource type="PackedScene" uid="uid://phfxidwhdpy7" path="res://Objetos/Funcionalidade/CompFade.tscn" id="28_atocc"]
+[ext_resource type="Script" uid="uid://dd16yu704x6wt" path="res://Scripts/Componentes/BGM_Player.gd" id="29_fo7ry"]
+[ext_resource type="AudioStream" uid="uid://c7qftchbhu6xc" path="res://Audio/SFX/AMBIENTE/Musica_Jogo.mp3" id="30_6d1b1"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_64vq5"]
 size = Vector2(13689, 3160)
@@ -525,9 +527,6 @@ position = Vector2(7094, -1216)
 z_index = 0
 position = Vector2(-29489, -3331)
 scale = Vector2(0.959163, 0.959163)
-vel = 12.0
-vel_aerea = 10.0
-tempo_dash = 0.18
 
 [node name="Camera2D" type="Camera2D" parent="."]
 physics_interpolation_mode = 1
@@ -1417,3 +1416,9 @@ offset_right = -6.0
 offset_bottom = -2.0
 
 [node name="Fade" parent="UIGAME" instance=ExtResource("28_atocc")]
+
+[node name="BGM_Player" type="Node" parent="."]
+script = ExtResource("29_fo7ry")
+musica = ExtResource("30_6d1b1")
+volume = -0.5
+metadata/_custom_type_script = "uid://dd16yu704x6wt"

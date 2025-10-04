@@ -7,10 +7,16 @@ func _process(delta: float) -> void:
 
 func _on_hit_box_hit() -> void:
 	Console._Print("PAPAPAPAPAPAP")
-	queue_free()
+	Desabilita()
 
 func _on_hit_box_body_entered(_body: Node2D) -> void:
-	queue_free()
+	Desabilita()
 
 func _on_timer_timeout() -> void:
 	queue_free()
+
+func Desabilita() -> void:
+	$SFX_End.play()
+	$Sprite.hide()
+	%Col.set_deferred("disabled", true)
+	

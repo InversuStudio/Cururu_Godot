@@ -14,8 +14,8 @@ func Enter() -> void:
 	GameData.magia_atual -= 3
 	# Toca animação, de acordo com input direcional
 	%Anim.play("Special")
-	%SFX.stream = sfx
-	%SFX.play()
+	%SFX_Ataque.stream = sfx
+	%SFX_Ataque.play()
 
 func Exit() -> void:
 	terminou = false

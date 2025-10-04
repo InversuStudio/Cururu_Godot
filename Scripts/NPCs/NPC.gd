@@ -14,8 +14,9 @@ func _ready() -> void:
 func Interact(player:CharacterBody2D) -> void:
 	%Texto.hide()
 	interacao.pode_interagir = false
-	player.pode_mover = false
 	player.input_move = 0.0
+	player.velocity.x = 0.0
+	player.pode_mover = false
 	var b = balao.instantiate()
 	get_tree().current_scene.add_child(b)
 	b.start(arquivo_dialogo, dialogue_start)

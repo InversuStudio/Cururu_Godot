@@ -6,6 +6,8 @@ extends Node2D
 @export var pos_pilares: Array[Node2D] = []
 ## Número de ataques até ficar vulnerável
 @export var num_ate_vulneravel: int = 2
+## Música Boss
+@export var musica_luta:AudioStream = null
 # Número ataques que se passaram
 var num_vul:int = 0
 # Componente StateMachine
@@ -34,7 +36,6 @@ func _physics_process(delta: float) -> void:
 	state_machine.FixedUpdate(delta)
 
 func TomouDano(vida_atual:int, _vida_antiga:int) -> void:
-	#%BarraVida.value = vida_atual
 	if tween:
 		tween.kill()
 	tween = create_tween()
@@ -42,8 +43,11 @@ func TomouDano(vida_atual:int, _vida_antiga:int) -> void:
 	Console._Print(vida_atual)
 
 func Morte() -> void:
+	%HurtBox.queue_free()
 	%TimerNocaute.stop()
 	%TimerIdle.stop()
 	%BarraVida.hide()
 	%Anim.play("Surge", -1, -1.0, true)
 	morreu = true
+	#BGM.TocaMusica()
+	Mundos.CarregaFase(Mundos.NomeFase.FinalDemo)

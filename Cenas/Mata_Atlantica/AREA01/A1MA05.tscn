@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=4 uid="uid://f3vm0towv6q"]
+[gd_scene load_steps=33 format=4 uid="uid://f3vm0towv6q"]
 
 [ext_resource type="Texture2D" uid="uid://cqu5scrrmr5n5" path="res://Sprites/Cenário/Mata_Atlantica/Background/FUNDOCEU.png" id="1_0fgjc"]
 [ext_resource type="Script" uid="uid://bhexx6mj1xv3q" path="res://addons/phantom_camera/scripts/phantom_camera/phantom_camera_2d.gd" id="1_1kcgc"]
@@ -24,7 +24,9 @@
 [ext_resource type="Texture2D" uid="uid://cjl88xeknofui" path="res://Sprites/Cenário/Mata_Atlantica/Chao/grama_reto.png" id="20_gkjbw"]
 [ext_resource type="Texture2D" uid="uid://jecy4bfqqqxu" path="res://Sprites/Cenário/Mata_Atlantica/Teto/Moita teste.png" id="23_6h0de"]
 [ext_resource type="Texture2D" uid="uid://uq6dbjep5wva" path="res://Sprites/Cenário/Mata_Atlantica/Foreground/frontfolha.png" id="24_fovgr"]
+[ext_resource type="Script" uid="uid://dd16yu704x6wt" path="res://Scripts/Componentes/BGM_Player.gd" id="26_31oht"]
 [ext_resource type="PackedScene" uid="uid://bu62qgilsxetf" path="res://Objetos/Entidades/Escorpiao.tscn" id="27_2wc60"]
+[ext_resource type="AudioStream" uid="uid://c7qftchbhu6xc" path="res://Audio/SFX/AMBIENTE/Musica_Jogo.mp3" id="27_xooja"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dxpl7"]
 size = Vector2(7803, 2185)
@@ -1054,9 +1056,6 @@ position = Vector2(5813.0005, -648.00024)
 z_index = 0
 position = Vector2(222, -659.0003)
 scale = Vector2(0.959163, 0.959163)
-vel = 12.0
-vel_aerea = 10.0
-tempo_dash = 0.18
 
 [node name="PhantomCamera2D" type="Node2D" parent="." node_paths=PackedStringArray("follow_target")]
 top_level = true
@@ -1098,3 +1097,9 @@ offset_bottom = -2.0
 metadata/_edit_use_anchors_ = true
 
 [node name="Fade" parent="UIGAME" instance=ExtResource("16_cw0a5")]
+
+[node name="BGM_Player" type="Node" parent="."]
+script = ExtResource("26_31oht")
+musica = ExtResource("27_xooja")
+volume = -0.5
+metadata/_custom_type_script = "uid://dd16yu704x6wt"

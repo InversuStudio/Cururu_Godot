@@ -1,8 +1,7 @@
-[gd_scene load_steps=15 format=4 uid="uid://ctta1hdr8ocdq"]
+[gd_scene load_steps=14 format=4 uid="uid://ctta1hdr8ocdq"]
 
 [ext_resource type="PackedScene" uid="uid://nohq28uk7lfk" path="res://Objetos/Entidades/Player.tscn" id="1_usrra"]
 [ext_resource type="Texture2D" uid="uid://c374cwih425cq" path="res://Sprites/Cenário/Tilemaps/Base.png" id="2_qebi2"]
-[ext_resource type="Texture2D" uid="uid://b73nkcosr250e" path="res://Sprites/VFX/Iluminação/LightCururu.png" id="2_we3sk"]
 [ext_resource type="Script" uid="uid://bhexx6mj1xv3q" path="res://addons/phantom_camera/scripts/phantom_camera/phantom_camera_2d.gd" id="4_4dku8"]
 [ext_resource type="Script" uid="uid://8umksf8e80fw" path="res://addons/phantom_camera/scripts/resources/tween_resource.gd" id="5_lseys"]
 [ext_resource type="Script" uid="uid://bd046eokvcnu2" path="res://addons/phantom_camera/scripts/phantom_camera_host/phantom_camera_host.gd" id="6_hqvp8"]
@@ -157,7 +156,7 @@ duration = 0.0
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bt7f3"]
 size = Vector2(70, 399)
 
-[node name="A2ma03" type="Node2D"]
+[node name="MA_2-4" type="Node2D"]
 
 [node name="Camarea" type="CollisionShape2D" parent="."]
 position = Vector2(4097, -1590.5)
@@ -167,17 +166,6 @@ shape = SubResource("RectangleShape2D_brlxw")
 z_index = 0
 position = Vector2(5533.9995, -1791.9999)
 scale = Vector2(0.959163, 0.959163)
-vel = 12.0
-vel_aerea = 10.0
-tempo_dash = 0.18
-
-[node name="PointLight2D3" type="PointLight2D" parent="Cururu"]
-position = Vector2(-28.149544, -83.40631)
-range_item_cull_mask = 2
-shadow_enabled = true
-shadow_color = Color(0, 0, 0, 0.7764706)
-texture = ExtResource("2_we3sk")
-texture_scale = 1.5
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
 position = Vector2(-2, 0)

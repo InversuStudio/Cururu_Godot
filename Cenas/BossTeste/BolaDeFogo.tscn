@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://dct0yu1s5isad"]
+[gd_scene load_steps=14 format=3 uid="uid://dct0yu1s5isad"]
 
 [ext_resource type="Script" uid="uid://dbg0osum7dedd" path="res://Scripts/Boss/BolaDeFogo.gd" id="1_qng7f"]
 [ext_resource type="Texture2D" uid="uid://7onsawy03clf" path="res://Sprites/Inimigos/Boitata/Ataque1/Fogo/boitata_89.png" id="1_ysqyo"]
@@ -9,6 +9,8 @@
 [ext_resource type="Texture2D" uid="uid://dpjbug6loxp6r" path="res://Sprites/Inimigos/Boitata/Ataque1/Fogo/boitata_99.png" id="6_8h3ej"]
 [ext_resource type="Texture2D" uid="uid://cqdlu83b65t5l" path="res://Sprites/Inimigos/Boitata/Ataque1/Fogo/boitata_101.png" id="7_xe7ot"]
 [ext_resource type="PackedScene" uid="uid://pc4mgv2nv8af" path="res://Objetos/Funcionalidade/CompHitBox.tscn" id="9_qng7f"]
+[ext_resource type="AudioStream" uid="uid://bsgfpgh6g7f4o" path="res://Audio/SFX/BOITATA/Bola_fogo.mp3" id="10_u6gje"]
+[ext_resource type="AudioStream" uid="uid://cji7jh2imtp5t" path="res://Audio/SFX/BOITATA/Caindo_chão.mp3" id="11_iwi73"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_u0rk8"]
 animations = [{
@@ -47,7 +49,7 @@ height = 286.0
 script = ExtResource("1_qng7f")
 speed = Vector2(2.5, 0.2)
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+[node name="Sprite" type="AnimatedSprite2D" parent="."]
 scale = Vector2(0.25, 0.25)
 sprite_frames = SubResource("SpriteFrames_u0rk8")
 autoplay = "default"
@@ -56,7 +58,8 @@ frame_progress = 0.16689995
 
 [node name="HitBox" parent="." instance=ExtResource("9_qng7f")]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="HitBox"]
+[node name="Col" type="CollisionShape2D" parent="HitBox"]
+unique_name_in_owner = true
 position = Vector2(2, 33)
 rotation = 1.5707964
 shape = SubResource("CapsuleShape2D_e7y2f")
@@ -65,6 +68,14 @@ shape = SubResource("CapsuleShape2D_e7y2f")
 wait_time = 5.0
 one_shot = true
 autostart = true
+
+[node name="SFX" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("10_u6gje")
+autoplay = true
+
+[node name="SFX_End" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("11_iwi73")
+autoplay = true
 
 [connection signal="body_entered" from="HitBox" to="." method="_on_hit_box_body_entered"]
 [connection signal="hit" from="HitBox" to="." method="_on_hit_box_hit"]

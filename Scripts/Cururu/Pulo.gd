@@ -16,6 +16,7 @@ func Enter() -> void:
 	Console._State(name)
 	parent.velocity.y = -parent.jump_force # Aplica pulo
 	%Anim.play("Jump") # Animação de pulo
+	%SFX_Pulo.play()
 
 func Update(_delta: float) -> State:
 	# INPUT MELEE

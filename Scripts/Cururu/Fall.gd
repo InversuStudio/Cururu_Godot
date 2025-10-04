@@ -44,8 +44,6 @@ func FixedUpdate(delta: float) -> State:
 	parent.velocity.y += parent.fall_gravity * delta
 	
 	# Aplica movimento
-	#var dir = parent.input_move * parent.air_speed
-	#parent.velocity.x = move_toward(parent.velocity.x, dir, parent.accel * delta)
 	var dir = parent.input_move
 	if dir != 0.0:
 		parent.velocity.x += parent.accel * dir * delta
@@ -83,3 +81,6 @@ func _on_jump_lag_timeout() -> void:
 func _on_anim_animation_finished(anim_name: StringName) -> void:
 	if anim_name == "Fall_Start":
 		%Anim.play("Fall_Loop")
+
+func Exit() -> void:
+	parent.is_coyote = false

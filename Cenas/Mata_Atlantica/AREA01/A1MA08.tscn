@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=4 uid="uid://dyxt6ow8l0up5"]
+[gd_scene load_steps=33 format=4 uid="uid://dyxt6ow8l0up5"]
 
 [ext_resource type="Texture2D" uid="uid://cqu5scrrmr5n5" path="res://Sprites/Cenário/Mata_Atlantica/Background/FUNDOCEU.png" id="1_cpcvs"]
 [ext_resource type="Texture2D" uid="uid://k22xru6heyh3" path="res://Sprites/Cenário/Mata_Atlantica/Background/arvore.png" id="1_f0sik"]
@@ -24,6 +24,8 @@
 [ext_resource type="Texture2D" uid="uid://jecy4bfqqqxu" path="res://Sprites/Cenário/Mata_Atlantica/Teto/Moita teste.png" id="23_esn82"]
 [ext_resource type="Texture2D" uid="uid://uq6dbjep5wva" path="res://Sprites/Cenário/Mata_Atlantica/Foreground/frontfolha.png" id="24_esn82"]
 [ext_resource type="PackedScene" uid="uid://bu62qgilsxetf" path="res://Objetos/Entidades/Escorpiao.tscn" id="26_8yk11"]
+[ext_resource type="Script" uid="uid://dd16yu704x6wt" path="res://Scripts/Componentes/BGM_Player.gd" id="26_r33ly"]
+[ext_resource type="AudioStream" uid="uid://c7qftchbhu6xc" path="res://Audio/SFX/AMBIENTE/Musica_Jogo.mp3" id="27_5qn7w"]
 [ext_resource type="PackedScene" uid="uid://bjvnm0aydr0vd" path="res://Objetos/Entidades/Morcego.tscn" id="27_r33ly"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8acf8"]
@@ -1313,6 +1315,7 @@ position = Vector2(-8865, -706)
 position = Vector2(-7954, -510)
 
 [node name="Moitas" type="Node2D" parent="."]
+z_index = 1
 
 [node name="MoitaTeste" type="Sprite2D" parent="Moitas"]
 position = Vector2(-3686, -9508)
@@ -1716,9 +1719,6 @@ position = Vector2(1896, -6916)
 z_index = 0
 position = Vector2(7555, -7421.0005)
 scale = Vector2(0.919994, 0.919994)
-vel = 12.0
-vel_aerea = 10.0
-tempo_dash = 0.18
 
 [node name="1-7" parent="." instance=ExtResource("6_c5tg8")]
 position = Vector2(8036, -7363)
@@ -1769,3 +1769,9 @@ offset_bottom = -2.0
 metadata/_edit_use_anchors_ = true
 
 [node name="Fade" parent="UIGAME" instance=ExtResource("22_8yk11")]
+
+[node name="BGM_Player" type="Node" parent="."]
+script = ExtResource("26_r33ly")
+musica = ExtResource("27_5qn7w")
+volume = -0.5
+metadata/_custom_type_script = "uid://dd16yu704x6wt"

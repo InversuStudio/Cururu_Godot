@@ -10,10 +10,12 @@ func _ready() -> void:
 
 func Interact(_player:CharacterBody2D) -> void:
 	if GameData.upgrade_num < upgrade + 1:
+		texto.hide()
 		print("UPGRADE: ", upgrade)
 		GameData.upgrade_num = upgrade + 1
 		GameData.Save()
 		%Poder.hide()
+		%SFX.play()
 
 func Extra(dentro:bool) -> void:
 	if GameData.upgrade_num < upgrade + 1:

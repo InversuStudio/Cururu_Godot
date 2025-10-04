@@ -26,6 +26,7 @@ var arquivo_fase: Array = [
 	preload("res://Cenas/Mata_Atlantica/AREA02/A2MA06.tscn"),
 	preload("res://Cenas/Mata_Atlantica/AREA02/A2MA07.tscn"),
 	preload("res://Cenas/Mata_Atlantica/AREA03/MA_04.tscn"),
+	preload("res://Cenas/Demo/FinalDemo.tscn"),
 ]
 
 # Enumerador de fases, deve seguir a mesma ordem que a lista
@@ -54,6 +55,7 @@ enum NomeFase {
 	Mata_Atlantica_2_6,
 	Mata_Atlantica_2_7,
 	Mata_Atlantica_MA_04,
+	FinalDemo,
 }
 
 # Registra fase atual

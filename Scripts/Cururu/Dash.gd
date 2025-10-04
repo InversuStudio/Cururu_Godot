@@ -16,6 +16,7 @@ func Enter() -> void:
 	parent.pode_dash = false
 	acabou = false
 	parent.velocity.y = 0.0
+	%SFX_Dash.play()
 
 func Exit() -> void:
 	acabou = true
