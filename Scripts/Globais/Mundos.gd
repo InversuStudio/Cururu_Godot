@@ -89,3 +89,10 @@ func SpawnMoeda(pos:Vector2) -> void:
 	var coin : Node2D = moeda.instantiate()
 	get_tree().current_scene.call_deferred("add_child", coin)
 	coin.global_position = pos
+
+func FechaJogo() -> void:
+	var fade: Fade = get_tree().get_first_node_in_group("Fade")
+	if fade: # Se houver, inicia animação de FADE OUT
+		fade.FadeOut()
+		await fade.terminou
+	get_tree().quit()

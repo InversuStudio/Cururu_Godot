@@ -65,9 +65,8 @@ func Save() -> void:
 # FUNÇÃO PARA CARREGAR SAVE
 func Load() -> bool:
 	# Checa se o arquivo de save existe
-	var err = config.load(OS.get_executable_path().get_base_dir()+"/savedata.cfg")
-	# Se existir, lê os dados
-	if err == OK:
+	if ChecaData():
+		# Se existir, lê os dados
 		fase = config.get_value("save", "fase")
 		posicao = config.get_value("save", "posicao")
 		direcao = config.get_value("save", "direcao")
@@ -80,5 +79,11 @@ func Load() -> bool:
 		if magia_max > 0:
 			magia_atual = magia_max
 		return true
-		
+	return false
+
+# FUNÇÃO QUE CHECA SE SAVE EXISTE
+func ChecaData() -> bool:
+	var err = config.load(OS.get_executable_path().get_base_dir()+"/savedata.cfg")
+	if err == OK:
+		return true
 	return false

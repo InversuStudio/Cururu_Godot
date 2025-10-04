@@ -77,6 +77,7 @@ collision_mask = 2
 shape = SubResource("CircleShape2D_j5mvf")
 
 [node name="HurtBox" parent="." node_paths=PackedStringArray("comp_vida", "parent") instance=ExtResource("5_87fsy")]
+unique_name_in_owner = true
 collision_layer = 8
 comp_vida = NodePath("../Vida")
 distancia_knockback = 0.5
@@ -91,7 +92,6 @@ shape = SubResource("CircleShape2D_87fsy")
 debug_color = Color(0.99999, 0, 0.0935918, 0.42)
 
 [node name="HitBox" parent="." node_paths=PackedStringArray("ignore") instance=ExtResource("7_khkaq")]
-unique_name_in_owner = true
 screenshake = 0.5
 ignore = NodePath("../HurtBox")
 sfx = SubResource("Resource_87fsy")
@@ -104,11 +104,16 @@ debug_color = Color(0.807155, 0.414602, 3.85046e-07, 0.42)
 
 [node name="SpawnMoeda" type="Marker2D" parent="."]
 unique_name_in_owner = true
-position = Vector2(2.2727273, 54.54545)
+position = Vector2(2.2727273, -18.181818)
 
 [node name="Timer" type="Timer" parent="."]
 autostart = true
 
+[node name="TimerDano" type="Timer" parent="."]
+unique_name_in_owner = true
+one_shot = true
+
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="timeout" from="TimerDano" to="." method="_on_timer_dano_timeout"]

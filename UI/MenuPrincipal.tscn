@@ -1,7 +1,10 @@
-[gd_scene load_steps=3 format=3 uid="uid://drlbsodypev3g"]
+[gd_scene load_steps=6 format=3 uid="uid://drlbsodypev3g"]
 
 [ext_resource type="Script" uid="uid://jrl1634sm6lb" path="res://Scripts/Componentes/MenuPrincipal.gd" id="1_sgs44"]
-[ext_resource type="AudioStream" uid="uid://dv6q0jrk04ivc" path="res://Audio/SFX/AUDIO_CURURU.wav" id="2_7y7xk"]
+[ext_resource type="AudioStream" uid="uid://cjorej6h7gw75" path="res://Audio/SFX/MENU INICIAL/menu_musica.mp3" id="2_3fsnc"]
+[ext_resource type="Texture2D" uid="uid://ciudp1bvjo4s5" path="res://Sprites/UI/Telainicial/01.png" id="2_hkuru"]
+[ext_resource type="AudioStream" uid="uid://w484n11fqypl" path="res://Audio/SFX/MENU INICIAL/selecao_menu.mp3" id="4_6y4ar"]
+[ext_resource type="PackedScene" uid="uid://phfxidwhdpy7" path="res://Objetos/Funcionalidade/CompFade.tscn" id="4_o3eph"]
 
 [node name="MenuPrincipal" type="Control"]
 layout_mode = 3
@@ -12,59 +15,58 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_sgs44")
 
-[node name="ColorRect" type="ColorRect" parent="."]
+[node name="Background" type="TextureRect" parent="."]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0.278431, 0.415686, 0.580392, 1)
+texture = ExtResource("2_hkuru")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="."]
+[node name="HBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
+anchors_preset = 4
 anchor_top = 0.5
-anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -20.0
-offset_top = -20.0
-offset_right = 20.0
-offset_bottom = 20.0
-grow_horizontal = 2
+offset_left = 276.0
+offset_top = -18.0
+offset_right = 626.0
+offset_bottom = 211.0
 grow_vertical = 2
+theme_override_constants/separation = 20
 
-[node name="Label" type="Label" parent="VBoxContainer"]
-layout_mode = 2
-theme_override_font_sizes/font_size = 120
-text = "CURURU: 
-Whispers of the 
-Enchanted Foresst"
-horizontal_alignment = 1
-
-[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
-layout_mode = 2
-
-[node name="Main" type="Button" parent="VBoxContainer/HBoxContainer"]
+[node name="NovoJogo" type="Button" parent="HBoxContainer"]
+custom_minimum_size = Vector2(350, 100)
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_font_sizes/font_size = 40
-text = "Novo"
+text = "Novo Jogo"
 
-[node name="VSeparator" type="VSeparator" parent="VBoxContainer/HBoxContainer"]
-layout_mode = 2
-theme_override_constants/separation = 128
-
-[node name="FaseTeste" type="Button" parent="VBoxContainer/HBoxContainer"]
+[node name="Continuar" type="Button" parent="HBoxContainer"]
+custom_minimum_size = Vector2(350, 100)
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_font_sizes/font_size = 40
-text = "Continue"
+text = "Continuar"
 
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("2_7y7xk")
+[node name="Sair" type="Button" parent="HBoxContainer"]
+custom_minimum_size = Vector2(350, 100)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 40
+text = "Sair"
+
+[node name="BGM" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_3fsnc")
 autoplay = true
 
-[connection signal="pressed" from="VBoxContainer/HBoxContainer/Main" to="." method="_on_main_pressed"]
-[connection signal="pressed" from="VBoxContainer/HBoxContainer/FaseTeste" to="." method="_on_fase_teste_pressed"]
+[node name="BtnSFX" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_6y4ar")
+
+[node name="Fade" parent="." instance=ExtResource("4_o3eph")]
+layout_mode = 1
+
+[connection signal="pressed" from="HBoxContainer/NovoJogo" to="." method="_on_main_pressed"]
+[connection signal="pressed" from="HBoxContainer/Continuar" to="." method="_on_fase_teste_pressed"]
+[connection signal="pressed" from="HBoxContainer/Sair" to="." method="_on_sair_pressed"]
