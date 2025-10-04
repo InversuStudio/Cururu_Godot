@@ -1,11 +1,20 @@
 extends Control
 
+var data:String = ""
+
 func _ready() -> void:
-	if !GameData.ChecaData():
+	data = GameData.ChecaData()
+	if data == "":
 		$HBoxContainer/Continuar.disabled = true
 	#$HBoxContainer/NovoJogo.focus_mode
 
 func _on_main_pressed() -> void:
+	# Deleta Save
+	if data != "":
+		var file_dir:String = OS.get_executable_path().get_base_dir()+"/savedata.cfg"
+		DirAccess.remove_absolute(file_dir)
+	# Reseta dados do jogo
+	GameData.ResetData()
 	$BtnSFX.play()
 	Mundos.CarregaFase(Mundos.NomeFase.TUTORIAL_1)
 

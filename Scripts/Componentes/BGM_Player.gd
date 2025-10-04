@@ -7,5 +7,4 @@ extends Node
 @export var volume:float = 0.0
 
 func _ready() -> void:
-	_loop_musica(musica)
 	BGM.TocaMusica(musica, volume)

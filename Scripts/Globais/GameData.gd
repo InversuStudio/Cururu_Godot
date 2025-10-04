@@ -65,7 +65,7 @@ func Save() -> void:
 # FUNÇÃO PARA CARREGAR SAVE
 func Load() -> bool:
 	# Checa se o arquivo de save existe
-	if ChecaData():
+	if ChecaData() != "":
 		# Se existir, lê os dados
 		fase = config.get_value("save", "fase")
 		posicao = config.get_value("save", "posicao")
@@ -82,8 +82,18 @@ func Load() -> bool:
 	return false
 
 # FUNÇÃO QUE CHECA SE SAVE EXISTE
-func ChecaData() -> bool:
-	var err = config.load(OS.get_executable_path().get_base_dir()+"/savedata.cfg")
+func ChecaData() -> String:
+	var file_dir:String = OS.get_executable_path().get_base_dir()+"/savedata.cfg"
+	var err:Error = config.load(file_dir)
 	if err == OK:
-		return true
-	return false
+		return file_dir
+	return ""
+
+func ResetData() -> void:
+	#posicao = Vector2.ZERO
+	#vida_atual = vida_max
+	#magia_atual = magia_max
+	moedas = 0
+	direcao = false
+	veio_de_baixo = false
+	upgrade_num = 0
