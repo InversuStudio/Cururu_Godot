@@ -64,7 +64,7 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_e7y2f"]
-radius = 86.0
+radius = 68.0
 height = 754.0
 
 [node name="PilarFogo" type="Node2D"]

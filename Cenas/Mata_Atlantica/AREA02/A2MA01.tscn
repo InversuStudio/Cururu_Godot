@@ -254,8 +254,7 @@ texture = ExtResource("4_dqfr6")
 flip_h = true
 
 [node name="Composição5" type="Sprite2D" parent="ArvoresMeio"]
-position = Vector2(736.5, -475.5)
-rotation = 0.5235988
+position = Vector2(802.5, -482.5)
 scale = Vector2(0.7, 0.7)
 texture = ExtResource("4_dqfr6")
 flip_h = true
@@ -293,13 +292,12 @@ scale = Vector2(0.7, 0.7)
 texture = ExtResource("5_csesn")
 
 [node name="Composição3" type="Sprite2D" parent="ArvoresFrente"]
-position = Vector2(-837.5, -646.4999)
+position = Vector2(-788.75, -657.4999)
 scale = Vector2(0.7, 0.7)
 texture = ExtResource("5_csesn")
 
 [node name="Composição6" type="Sprite2D" parent="ArvoresFrente"]
-position = Vector2(1480.5, -117.5)
-rotation = 0.5235988
+position = Vector2(1571.5, -142.5)
 scale = Vector2(0.7, 0.7)
 texture = ExtResource("4_dqfr6")
 flip_h = true
@@ -337,7 +335,7 @@ position = Vector2(875, 58)
 position = Vector2(101, 308.00003)
 
 [node name="Plataforma4" parent="Plataformas" instance=ExtResource("13_w4lji")]
-position = Vector2(155, -786)
+position = Vector2(203.75, -797)
 
 [node name="Grama" type="Node2D" parent="."]
 z_index = 2
@@ -1185,10 +1183,10 @@ position = Vector2(5901, -1155)
 position = Vector2(-4670, 1574)
 
 [node name="Morcego" parent="Entidades" instance=ExtResource("26_ctjy6")]
-position = Vector2(4401, -1223)
+position = Vector2(4218.0005, -1095.0001)
 
 [node name="Morcego2" parent="Entidades" instance=ExtResource("26_ctjy6")]
-position = Vector2(5652, -2266)
+position = Vector2(5749, -2978)
 
 [node name="Morcego3" parent="Entidades" instance=ExtResource("26_ctjy6")]
 position = Vector2(7563, -2522)

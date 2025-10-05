@@ -952,27 +952,27 @@ position = Vector2(220, -252.5)
 shape = SubResource("RectangleShape2D_o607x")
 
 [node name="PosPilar1" type="Marker2D" parent="Boss"]
-position = Vector2(665.7998, -316.2002)
+position = Vector2(516.7998, -316.2002)
 gizmo_extents = 143.8
 
 [node name="PosPilar2" type="Marker2D" parent="Boss"]
-position = Vector2(952.5996, -316.2002)
+position = Vector2(874, -316.2002)
 gizmo_extents = 143.8
 
 [node name="PosPilar3" type="Marker2D" parent="Boss"]
-position = Vector2(1241.5996, -316.2002)
+position = Vector2(1219.5996, -316.2002)
 gizmo_extents = 143.8
 
 [node name="PosPilar4" type="Marker2D" parent="Boss"]
-position = Vector2(1527.5996, -316.2002)
+position = Vector2(1540.5999, -316.2002)
 gizmo_extents = 143.8
 
 [node name="PosPilar5" type="Marker2D" parent="Boss"]
-position = Vector2(1843.5996, -316.2002)
+position = Vector2(1880.5999, -316.2002)
 gizmo_extents = 143.8
 
 [node name="PosPilar6" type="Marker2D" parent="Boss"]
-position = Vector2(2145.5996, -316.2002)
+position = Vector2(2234.7998, -316.2002)
 gizmo_extents = 143.8
 
 [node name="UIGAME" type="CanvasLayer" parent="."]
