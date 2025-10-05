@@ -11,6 +11,7 @@ texture = ExtResource("1_hnyem")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 scale = Vector2(0.99999994, 0.99999994)
+constant_angular_velocity = 0.008726646
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2(13, -35.5)

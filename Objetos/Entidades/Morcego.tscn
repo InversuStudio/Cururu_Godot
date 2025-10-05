@@ -8,8 +8,8 @@
 [ext_resource type="AudioStream" uid="uid://b3mmkipqf30jd" path="res://Audio/SFX/INIMIGOS/HIT_INIMIGO.wav" id="6_87fsy"]
 [ext_resource type="PackedScene" uid="uid://pc4mgv2nv8af" path="res://Objetos/Funcionalidade/CompHitBox.tscn" id="7_khkaq"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_ntg74"]
-size = Vector2(223, 83)
+[sub_resource type="CircleShape2D" id="CircleShape2D_63e5l"]
+radius = 129.31953
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_tkh53"]
 animations = [{
@@ -32,7 +32,7 @@ animations = [{
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_j5mvf"]
-radius = 664.782
+radius = 592.0466
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_87fsy"]
 radius = 139.97775
@@ -41,18 +41,18 @@ radius = 139.97775
 metadata/__load_path__ = "res://Audio/SFX/INIMIGOS/HIT_INIMIGO.wav"
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ujy2f"]
-radius = 146.59088
-height = 293.18176
+radius = 125.0
+height = 250.0
 
 [node name="Morcego" type="CharacterBody2D"]
-scale = Vector2(0.88, 0.88)
+scale = Vector2(0.75999916, 0.75999916)
 collision_layer = 2
 safe_margin = 2.0
 script = ExtResource("1_j5mvf")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(2.5, -41.5)
-shape = SubResource("RectangleShape2D_ntg74")
+shape = SubResource("CircleShape2D_63e5l")
 
 [node name="Sprite" type="AnimatedSprite2D" parent="."]
 unique_name_in_owner = true
@@ -78,7 +78,7 @@ shape = SubResource("CircleShape2D_j5mvf")
 unique_name_in_owner = true
 collision_layer = 8
 comp_vida = NodePath("../Vida")
-distancia_knockback = 0.5
+distancia_knockback = 0.25
 tempo_knockback = 0.2
 hit_sfx = ExtResource("6_87fsy")
 parent = NodePath("..")

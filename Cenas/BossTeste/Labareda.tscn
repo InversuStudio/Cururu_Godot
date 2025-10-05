@@ -29,6 +29,9 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": ExtResource("10_d12gu")
+}, {
+"duration": 1.0,
 "texture": ExtResource("1_tqvmf")
 }, {
 "duration": 1.0,
@@ -54,9 +57,6 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": ExtResource("9_0ry6m")
-}, {
-"duration": 1.0,
-"texture": ExtResource("10_d12gu")
 }],
 "loop": true,
 "name": &"Jato",
@@ -64,17 +64,21 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_e7y2f"]
-radius = 100.0
+radius = 86.0
 height = 754.0
 
 [node name="PilarFogo" type="Node2D"]
 script = ExtResource("1_tdbse")
+tempo_carga = 0.8
+tempo_ativo = 1.5
 
 [node name="Sprite" type="AnimatedSprite2D" parent="."]
-position = Vector2(0, -468)
+position = Vector2(0, -422)
 sprite_frames = SubResource("SpriteFrames_u0rk8")
 animation = &"Jato"
 autoplay = "Carga"
+frame = 5
+frame_progress = 0.3637483
 
 [node name="HitBox" parent="." instance=ExtResource("11_tqvmf")]
 
@@ -84,7 +88,7 @@ shape = SubResource("CapsuleShape2D_e7y2f")
 disabled = true
 
 [node name="Timer" type="Timer" parent="."]
-wait_time = 0.8
+wait_time = 0.65
 one_shot = true
 
 [node name="SFX" type="AudioStreamPlayer2D" parent="."]

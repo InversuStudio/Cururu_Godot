@@ -253,12 +253,6 @@ position = Vector2(1797.9996, -1548.6001)
 scale = Vector2(0.8, 0.8)
 texture = ExtResource("3_is666")
 
-[node name="Composição3" type="Sprite2D" parent="ArvoresFrente"]
-light_mask = 2
-position = Vector2(1770.9996, -2257.6)
-scale = Vector2(0.8, 0.8)
-texture = ExtResource("3_is666")
-
 [node name="Composição6" type="Sprite2D" parent="ArvoresFrente"]
 light_mask = 2
 position = Vector2(2783.001, -1806)
@@ -279,6 +273,12 @@ flip_h = true
 position = Vector2(2172, -2367.3481)
 scale = Vector2(1.095122, 1.9815935)
 texture = ExtResource("2_x0nvn")
+
+[node name="Composição3" type="Sprite2D" parent="ArvoresFrente"]
+light_mask = 2
+position = Vector2(1770.9996, -2257.6)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("3_is666")
 
 [node name="Composição5" type="Sprite2D" parent="ArvoresFrente"]
 position = Vector2(2484, -2485)
@@ -876,7 +876,7 @@ position = Vector2(1922.8457, -1672.6002)
 position = Vector2(1190.8457, -2047)
 
 [node name="Plataforma3" parent="Plataformas" instance=ExtResource("20_11k6r")]
-position = Vector2(1908.8457, -2399.6)
+position = Vector2(1917.0001, -2431.0002)
 
 [node name="Plataforma4" parent="Plataformas" instance=ExtResource("20_11k6r")]
 position = Vector2(2685.8457, -1984)
