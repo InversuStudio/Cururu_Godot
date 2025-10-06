@@ -1186,7 +1186,7 @@ position = Vector2(-4670, 1574)
 position = Vector2(4218.0005, -1095.0001)
 
 [node name="Morcego2" parent="Entidades" instance=ExtResource("26_ctjy6")]
-position = Vector2(5749, -2978)
+position = Vector2(4303.0005, -2857)
 
 [node name="Morcego3" parent="Entidades" instance=ExtResource("26_ctjy6")]
 position = Vector2(7563, -2522)

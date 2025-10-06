@@ -1,4 +1,4 @@
-[gd_scene load_steps=99 format=3 uid="uid://b7m7lb1s11mbw"]
+[gd_scene load_steps=98 format=3 uid="uid://b7m7lb1s11mbw"]
 
 [ext_resource type="Script" uid="uid://bekibpja60hxm" path="res://Scripts/Boss/boss.gd" id="1_s15tt"]
 [ext_resource type="Texture2D" uid="uid://cxo6j4mj6u5rs" path="res://Sprites/Inimigos/Boitata/TesteTeste/BOITATA_BOLA_DE_FOGO/boitata_81.png" id="2_1jvks"]
@@ -89,9 +89,6 @@
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_fwdqd"]
 radius = 171.0
 height = 780.0
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_6hkog"]
-radius = 135.71294
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_nkv4g"]
 animations = [{
@@ -728,11 +725,6 @@ position = Vector2(481, -550)
 rotation = 1.5707964
 shape = SubResource("CapsuleShape2D_fwdqd")
 debug_color = Color(0.9968892, 0, 0.18689972, 0.41960785)
-
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="HurtBox"]
-position = Vector2(220, -886)
-shape = SubResource("CircleShape2D_6hkog")
-debug_color = Color(0.92156863, 0, 0.25882354, 0.41960785)
 
 [node name="PosTiro" type="Marker2D" parent="."]
 unique_name_in_owner = true

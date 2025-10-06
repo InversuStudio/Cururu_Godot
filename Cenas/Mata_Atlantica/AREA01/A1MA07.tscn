@@ -882,13 +882,13 @@ position = Vector2(1917.0001, -2431.0002)
 position = Vector2(2685.8457, -1984)
 
 [node name="Plataforma5" parent="Plataformas" instance=ExtResource("20_11k6r")]
-position = Vector2(2616.8457, -2637)
+position = Vector2(2685, -2637)
 
 [node name="Plataforma6" parent="Plataformas" instance=ExtResource("20_11k6r")]
 position = Vector2(1790.8457, -3047)
 
 [node name="Plataforma7" parent="Plataformas" instance=ExtResource("20_11k6r")]
-position = Vector2(2548.8457, -3402)
+position = Vector2(2575.0002, -3402)
 
 [node name="Entidades" type="Node2D" parent="."]
 
@@ -898,14 +898,11 @@ position = Vector2(1435, -1293)
 [node name="Escorpiao2" parent="Entidades" instance=ExtResource("26_h1ugi")]
 position = Vector2(2089, -278)
 
-[node name="Morcego" parent="Entidades" instance=ExtResource("27_k72yp")]
-position = Vector2(3113, -2479)
-
 [node name="Morcego2" parent="Entidades" instance=ExtResource("27_k72yp")]
-position = Vector2(1421, -2723.9995)
+position = Vector2(1244, -2547.0002)
 
 [node name="Morcego3" parent="Entidades" instance=ExtResource("27_k72yp")]
-position = Vector2(2235, -3961)
+position = Vector2(1964, -4205)
 
 [node name="Cururu" parent="Entidades" instance=ExtResource("5_v3esx")]
 z_index = 0

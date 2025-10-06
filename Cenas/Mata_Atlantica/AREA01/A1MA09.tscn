@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=4 uid="uid://c2wxcq8h71dqe"]
+[gd_scene load_steps=33 format=4 uid="uid://c2wxcq8h71dqe"]
 
 [ext_resource type="Texture2D" uid="uid://cqu5scrrmr5n5" path="res://Sprites/Cenário/Mata_Atlantica/Background/FUNDOCEU.png" id="1_7lg54"]
 [ext_resource type="Texture2D" uid="uid://c374cwih425cq" path="res://Sprites/Cenário/Tilemaps/Base.png" id="1_lvkdv"]
@@ -24,6 +24,7 @@
 [ext_resource type="PackedScene" uid="uid://bu62qgilsxetf" path="res://Objetos/Entidades/Escorpiao.tscn" id="23_fpvhh"]
 [ext_resource type="PackedScene" uid="uid://phfxidwhdpy7" path="res://Objetos/Funcionalidade/CompFade.tscn" id="23_n5d52"]
 [ext_resource type="AudioStream" uid="uid://c7qftchbhu6xc" path="res://Audio/SFX/AMBIENTE/Musica_Jogo.mp3" id="24_4ft46"]
+[ext_resource type="PackedScene" uid="uid://cdhelg6sloxbj" path="res://Objetos/Props/PortaTemp.tscn" id="25_8nsrb"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_x8u7e"]
 size = Vector2(4777, 1176)
@@ -740,9 +741,6 @@ texture = ExtResource("5_fpvhh")
 
 [node name="Entidades" type="Node2D" parent="."]
 
-[node name="Escorpiao" parent="Entidades" instance=ExtResource("23_fpvhh")]
-position = Vector2(1379.999, -769)
-
 [node name="Escorpiao2" parent="Entidades" instance=ExtResource("23_fpvhh")]
 position = Vector2(3270.999, -503)
 
@@ -815,3 +813,6 @@ script = ExtResource("23_8nsrb")
 musica = ExtResource("24_4ft46")
 volume = -0.5
 metadata/_custom_type_script = "uid://dd16yu704x6wt"
+
+[node name="PortaTemp" parent="." instance=ExtResource("25_8nsrb")]
+position = Vector2(1603, -940)

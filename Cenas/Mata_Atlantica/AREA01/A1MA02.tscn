@@ -308,12 +308,12 @@ scale = Vector2(1.8102765, 1.576581)
 texture = ExtResource("6_441k1")
 
 [node name="Moita17" type="Sprite2D" parent="LimiteCamera/background"]
-position = Vector2(461.25, 3142)
+position = Vector2(244.25, 3184)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("7_dyi4w")
 
 [node name="Sombra12" type="Sprite2D" parent="LimiteCamera/background"]
-position = Vector2(467.25, 3166)
+position = Vector2(250.25, 3208)
 scale = Vector2(0.90625, 0.55309737)
 texture = ExtResource("8_78wer")
 
@@ -350,12 +350,6 @@ flip_h = true
 position = Vector2(-3499, -6033)
 scale = Vector2(0.7, 0.7)
 texture = ExtResource("8_dyi4w")
-
-[node name="Composição3" type="Sprite2D" parent="LimiteCamera/background/Arvores01"]
-position = Vector2(-3432.0002, -6819.0005)
-scale = Vector2(0.7, 0.7)
-texture = ExtResource("8_dyi4w")
-flip_h = true
 
 [node name="Fundonevoa2" type="Sprite2D" parent="LimiteCamera/background/Arvores01"]
 position = Vector2(-3334, -2182.5)
@@ -1154,7 +1148,7 @@ position = Vector2(1826, -7674)
 scale = Vector2(2, 2)
 
 [node name="Plataforma3" parent="Cenario/Props" instance=ExtResource("17_jpeib")]
-position = Vector2(2992, -8624)
+position = Vector2(2934, -8648)
 scale = Vector2(2, 2)
 
 [node name="Espinhos" type="Node2D" parent="Cenario/Props"]
@@ -1519,16 +1513,13 @@ flip_h = true
 position = Vector2(-2, 0)
 
 [node name="Morcego" parent="Entidades" instance=ExtResource("9_fhpg3")]
-position = Vector2(2923, -1366)
+position = Vector2(2917.0002, -1262)
 
 [node name="Morcego2" parent="Entidades" instance=ExtResource("9_fhpg3")]
 position = Vector2(3189, -3325.9998)
 
-[node name="Morcego4" parent="Entidades" instance=ExtResource("9_fhpg3")]
-position = Vector2(4516, -4973)
-
 [node name="Morcego5" parent="Entidades" instance=ExtResource("9_fhpg3")]
-position = Vector2(3260.9998, -5497)
+position = Vector2(3994.0002, -5326.0005)
 
 [node name="Escorpiao" parent="Entidades" instance=ExtResource("10_tj4kc")]
 position = Vector2(3587, -1811)
