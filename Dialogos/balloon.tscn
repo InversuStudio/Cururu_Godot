@@ -64,15 +64,17 @@ MarginContainer/constants/margin_top = 15
 PanelContainer/styles/panel = SubResource("StyleBoxFlat_qkmqt")
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6n6n8"]
-bg_color = Color(0.161599, 0.279345, 0.374651, 1)
-border_width_left = 4
-border_width_top = 4
-border_width_right = 4
-border_width_bottom = 4
-corner_radius_top_left = 50
-corner_radius_top_right = 50
-corner_radius_bottom_right = 50
-corner_radius_bottom_left = 50
+bg_color = Color(0, 0, 0, 0.8627451)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+corner_detail = 10
+expand_margin_left = 25.0
+expand_margin_top = 15.0
+expand_margin_right = 25.0
+expand_margin_bottom = 15.0
+shadow_size = 15
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_f5qgn"]
 bg_color = Color(0.0998727, 0.185782, 0.25441, 1)
@@ -114,12 +116,14 @@ theme = SubResource("Theme_qq3yp")
 layout_mode = 1
 anchors_preset = 10
 anchor_right = 1.0
-offset_top = 741.0
-offset_bottom = 1055.0
+offset_left = 120.0
+offset_top = 41.0
+offset_right = -120.0
+offset_bottom = 384.0
 grow_horizontal = 2
 
 [node name="PanelContainer" type="PanelContainer" parent="Balloon/MarginContainer"]
-self_modulate = Color(0, 0, 0, 0.88235295)
+self_modulate = Color(0.7137255, 0.7176471, 0.7294118, 1)
 clip_children = 2
 layout_mode = 2
 mouse_filter = 1
@@ -136,26 +140,28 @@ unique_name_in_owner = true
 layout_mode = 2
 mouse_filter = 1
 theme_override_colors/selection_color = Color(0.101960786, 0.9607843, 1, 0.8)
-theme_override_font_sizes/normal_font_size = 60
+theme_override_font_sizes/normal_font_size = 100
 theme_override_font_sizes/bold_font_size = 60
 theme_override_font_sizes/bold_italics_font_size = 60
 theme_override_font_sizes/italics_font_size = 60
 theme_override_font_sizes/mono_font_size = 60
 bbcode_enabled = true
 text = "Character"
-fit_content = true
 scroll_active = false
+horizontal_alignment = 1
 
 [node name="DialogueLabel" parent="Balloon/MarginContainer/PanelContainer/MarginContainer/VBoxContainer" instance=ExtResource("2_a8ve6")]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_vertical = 3
-theme_override_font_sizes/normal_font_size = 40
+theme_override_font_sizes/normal_font_size = 50
 theme_override_font_sizes/bold_font_size = 40
 theme_override_font_sizes/bold_italics_font_size = 40
 theme_override_font_sizes/italics_font_size = 40
 theme_override_font_sizes/mono_font_size = 40
 text = "Dialogue..."
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="ResponsesMenu" type="VBoxContainer" parent="Balloon" node_paths=PackedStringArray("response_template")]
 unique_name_in_owner = true

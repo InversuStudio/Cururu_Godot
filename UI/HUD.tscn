@@ -165,21 +165,25 @@ layout_mode = 1
 anchors_preset = 4
 anchor_top = 0.5
 anchor_bottom = 0.5
-offset_left = 19.0
-offset_top = -217.0
-offset_right = 516.0
-offset_bottom = 217.0
+offset_left = -2.0
+offset_top = -538.0
+offset_right = 625.0
+offset_bottom = 541.0
 grow_vertical = 2
 
 [node name="Titulo" type="RichTextLabel" parent="Pause"]
 layout_mode = 1
-anchors_preset = 10
+anchors_preset = 14
+anchor_top = 0.5
 anchor_right = 1.0
-offset_top = 19.0
-offset_bottom = 90.0
+anchor_bottom = 0.5
+offset_top = -240.5
+offset_bottom = -157.0
 grow_horizontal = 2
-theme_override_font_sizes/normal_font_size = 44
+grow_vertical = 2
+theme_override_font_sizes/normal_font_size = 60
 text = "MENU"
+tab_size = 8
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -188,8 +192,13 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = 3.0
+offset_top = 320.0
+offset_right = -207.99997
+offset_bottom = -462.0
 grow_horizontal = 2
 grow_vertical = 2
+scale = Vector2(1.5, 1.5)
 theme_override_constants/margin_left = 85
 theme_override_constants/margin_top = 10
 theme_override_constants/margin_right = 85
@@ -197,7 +206,7 @@ theme_override_constants/margin_bottom = 10
 
 [node name="Conteudo" type="VBoxContainer" parent="Pause/MarginContainer"]
 layout_mode = 2
-theme_override_constants/separation = 24
+theme_override_constants/separation = 12
 alignment = 1
 
 [node name="HSeparator" type="HSeparator" parent="Pause/MarginContainer/Conteudo"]
