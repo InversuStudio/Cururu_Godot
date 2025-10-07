@@ -13,6 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://d2u8nh7g7k2f7" path="res://Sprites/NPCS/Saci/saci13.png" id="9_etfm2"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_rmtcg"]
+resource_local_to_scene = true
 animations = [{
 "frames": [{
 "duration": 1.0,
@@ -75,7 +76,10 @@ interacao = NodePath("Interacao")
 position = Vector2(6.8982077, 0)
 sprite_frames = SubResource("SpriteFrames_rmtcg")
 animation = &"idle"
-frame_progress = 0.87632465
+frame_progress = 0.3714622
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+root_node = NodePath("../AnimatedSprite2D")
 
 [node name="Interacao" type="Area2D" parent="."]
 collision_layer = 0
