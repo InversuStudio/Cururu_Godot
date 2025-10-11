@@ -35,3 +35,4 @@ func Saiu(body: Node2D) -> void:
 		print("FORA INTERACT")
 		dentro = false
 		objeto_interacao.Extra(false)
+		

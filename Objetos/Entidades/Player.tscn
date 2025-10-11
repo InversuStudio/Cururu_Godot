@@ -147,7 +147,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"Dash_Loop",
-"speed": 5.0
+"speed": 8.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -164,7 +164,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"Dash_Start",
-"speed": 5.0
+"speed": 8.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -390,11 +390,11 @@ radius = 51.0
 height = 112.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_xx3r0"]
-radius = 112.0
+radius = 126.14278
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_wq158"]
-radius = 88.999985
-height = 278.0
+radius = 100.00001
+height = 250.0
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_1dbdn"]
 radius = 57.0
@@ -927,31 +927,40 @@ _data = {
 z_index = 1
 collision_layer = 2
 script = ExtResource("1_gwpdq")
-vel = 10.0
-vel_aerea = 9.0
+vel = 9.0
+vel_aerea = 6.5
 acel_time = 0.1
 decel_time = 0.1
 altura_pulo = 4.6
 tempo_pulo = 0.4
-tempo_cair = 0.37
-tempo_coyote = 0.15
+tempo_cair = 0.5
+tempo_coyote = 0.1
 lag_pulo = 0.1
-tempo_dash = 0.2
-distancia_dash = 4.5
+tempo_dash = 0.15
+distancia_dash = 2.5
 cooldown_dash = 0.2
 vida = NodePath("Vida")
 state_machine = NodePath("StateMachine")
 hitbox_container = NodePath("HitContainer")
 hurtbox_container = NodePath("HurtContainer")
 
+[node name="Luz" type="PointLight2D" parent="."]
+position = Vector2(-28.149544, -83.40631)
+scale = Vector2(4, 4)
+energy = 0.5
+range_item_cull_mask = 2
+shadow_enabled = true
+shadow_color = Color(0, 0, 0, 0.7764706)
+texture = ExtResource("87_0w8y8")
+texture_scale = 0.3
+
 [node name="Cururu" type="AnimatedSprite2D" parent="."]
 unique_name_in_owner = true
 position = Vector2(-16, -120)
 scale = Vector2(0.375651, 0.375651)
 sprite_frames = SubResource("SpriteFrames_ser7u")
-animation = &"Melee1"
-frame = 4
-frame_progress = 0.14478517
+animation = &"Dano"
+frame_progress = 0.4130073
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-17, -81)
@@ -966,9 +975,9 @@ metadata/_custom_type_script = "uid://hsdutxxttrp3"
 
 [node name="HurtBox" parent="HurtContainer" node_paths=PackedStringArray("comp_vida", "parent") instance=ExtResource("46_wjcvp")]
 comp_vida = NodePath("../../Vida")
-distancia_knockback = 1.2
-tempo_knockback = 1.0
-cooldown_dano = 3.0
+distancia_knockback = 2.0
+tempo_knockback = 0.5
+cooldown_dano = 10.0
 hit_sfx = ExtResource("77_d7mdf")
 parent = NodePath("../..")
 
@@ -989,10 +998,11 @@ position = Vector2(-2, 0)
 [node name="Melee1" parent="HitContainer" node_paths=PackedStringArray("ignore") instance=ExtResource("47_grb16")]
 position = Vector2(33, -15)
 collision_mask = 12
+screenshake = 0.3
 ignore = NodePath("../../HurtContainer/HurtBox")
 
 [node name="ColMel1" type="CollisionShape2D" parent="HitContainer/Melee1"]
-position = Vector2(83, -94)
+position = Vector2(46, -83)
 shape = SubResource("CircleShape2D_xx3r0")
 disabled = true
 debug_color = Color(0.69455, 0.495447, 0, 0.42)
@@ -1000,10 +1010,11 @@ debug_color = Color(0.69455, 0.495447, 0, 0.42)
 [node name="Melee2" parent="HitContainer" node_paths=PackedStringArray("ignore") instance=ExtResource("47_grb16")]
 position = Vector2(12, 0)
 collision_mask = 12
+screenshake = 0.3
 ignore = NodePath("../../HurtContainer/HurtBox")
 
 [node name="ColMel2" type="CollisionShape2D" parent="HitContainer/Melee2"]
-position = Vector2(77, -85)
+position = Vector2(63, -79)
 rotation = -1.57079
 shape = SubResource("CapsuleShape2D_wq158")
 disabled = true
@@ -1113,16 +1124,6 @@ fall_state = NodePath("../Fall")
 script = ExtResource("56_7uoqt")
 chao_state = NodePath("../Chao")
 fall_state = NodePath("../Fall")
-
-[node name="Luz" type="PointLight2D" parent="."]
-position = Vector2(-28.149544, -83.40631)
-scale = Vector2(4, 4)
-energy = 0.5
-range_item_cull_mask = 2
-shadow_enabled = true
-shadow_color = Color(0, 0, 0, 0.7764706)
-texture = ExtResource("87_0w8y8")
-texture_scale = 0.3
 
 [connection signal="counter" from="HurtContainer/HurtBox" to="StateMachine/Dano" method="_on_hurt_box_counter"]
 [connection signal="animation_finished" from="Anim" to="StateMachine/Chao" method="_on_anim_animation_finished"]

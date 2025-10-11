@@ -1,10 +1,6 @@
 ~ start
-Saci: E a mano Cururu, como vai essa força?
-Saci: Fiquei sabendo que a Mata ta tomada de corrupção. Pelo que entendi o protetor da [wave][b][color=red][Mata Atlântica][/color][/b][/wave] ta possuido por algum mal antigo.
-Saci: Vejo que a Vitória já te passou o Cajado lunar. Preparado para curar a Região?
-- Sempre pronto!
-	Saci: Fechado, siga o caminho a diante e libere seu poder. 
-- Ainda não.
-	Saci: Sério? Bom, então aconselho a se preparar o quanto antes.
-	Saci: Nos vemos por ai.
+SACI[br] E a mano Cururu, como vai essa força?
+SACI[br] Fiquei sabendo que a Mata ta tomada de Miasma. Pelo que entendi o protetor dessa região ta muito normal.
+SACI[br] Vejo que a Naiá já te entregou o Cajado lunar.
+SACI[br] Agora siga o caminho a diante e reuna o poder perdido das águas para a purificar a Mata.
 => END

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://8tc3pgq3fdi8"
-path="res://.godot/imported/UIHUD-MAGIABK[.png-dca092f2e29d79445d9c1817927509d1.ctex"
+uid="uid://cl1vcib5wycma"
+path="res://.godot/imported/ICON.png-2377a058e92534cbec8a317359550ea8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/UI/HUD/UIHUD-MAGIABK[.png"
-dest_files=["res://.godot/imported/UIHUD-MAGIABK[.png-dca092f2e29d79445d9c1817927509d1.ctex"]
+source_file="res://Sprites/VFX/Iluminação/ICON.png"
+dest_files=["res://.godot/imported/ICON.png-2377a058e92534cbec8a317359550ea8.ctex"]
 
 [params]
 

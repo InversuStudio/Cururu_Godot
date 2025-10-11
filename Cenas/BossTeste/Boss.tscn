@@ -706,7 +706,7 @@ metadata/_custom_type_script = "uid://hsdutxxttrp3"
 
 [node name="TimerIdle" type="Timer" parent="."]
 unique_name_in_owner = true
-wait_time = 3.0
+wait_time = 1.5
 one_shot = true
 
 [node name="TimerNocaute" type="Timer" parent="."]
@@ -767,12 +767,12 @@ state_nocaute = NodePath("../Nocaute")
 [node name="CospeFogo" type="Node" parent="StateMachine" node_paths=PackedStringArray("idle_state")]
 script = ExtResource("75_16hqa")
 idle_state = NodePath("../Idle")
-tempo_idle = 3.0
+tempo_idle = 1.5
 
 [node name="PilarFogo" type="Node" parent="StateMachine" node_paths=PackedStringArray("idle_state")]
 script = ExtResource("85_fi4f6")
 idle_state = NodePath("../Idle")
-tempo_idle = 6.0
+tempo_idle = 3.0
 
 [node name="Purificado" type="Node" parent="StateMachine"]
 
@@ -811,7 +811,8 @@ fill_mode = 6
 texture_under = ExtResource("84_6hkog")
 texture_progress = ExtResource("85_iy7ck")
 texture_progress_offset = Vector2(76.985, 137.11)
-tint_progress = Color(1, 0.33343515, 0.4434628, 1)
+tint_over = Color(0.3647059, 1, 1, 0)
+tint_progress = Color(2.4626093, 0.7787058, 0.8307853, 1)
 
 [connection signal="timeout" from="TimerIdle" to="StateMachine/Idle" method="_on_timer_idle_timeout"]
 [connection signal="timeout" from="TimerNocaute" to="StateMachine/Nocaute" method="_on_timer_nocaute_timeout"]

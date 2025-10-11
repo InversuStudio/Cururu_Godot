@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://drlbsodypev3g"]
+[gd_scene load_steps=8 format=3 uid="uid://drlbsodypev3g"]
 
 [ext_resource type="Script" uid="uid://jrl1634sm6lb" path="res://Scripts/Componentes/MenuPrincipal.gd" id="1_sgs44"]
 [ext_resource type="AudioStream" uid="uid://cjorej6h7gw75" path="res://Audio/SFX/MENU INICIAL/menu_musica.mp3" id="2_3fsnc"]
@@ -6,6 +6,8 @@
 [ext_resource type="AudioStream" uid="uid://w484n11fqypl" path="res://Audio/SFX/MENU INICIAL/selecao_menu.mp3" id="4_6y4ar"]
 [ext_resource type="PackedScene" uid="uid://phfxidwhdpy7" path="res://Objetos/Funcionalidade/CompFade.tscn" id="4_o3eph"]
 [ext_resource type="Script" uid="uid://dd16yu704x6wt" path="res://Scripts/Componentes/BGM_Player.gd" id="5_e3fqx"]
+
+[sub_resource type="ButtonGroup" id="ButtonGroup_e3fqx"]
 
 [node name="MenuPrincipal" type="Control"]
 layout_mode = 3
@@ -42,6 +44,8 @@ custom_minimum_size = Vector2(350, 100)
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_font_sizes/font_size = 40
+keep_pressed_outside = true
+button_group = SubResource("ButtonGroup_e3fqx")
 text = "Novo Jogo"
 
 [node name="Continuar" type="Button" parent="HBoxContainer"]

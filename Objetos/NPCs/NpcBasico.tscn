@@ -1,20 +1,85 @@
-[gd_scene load_steps=7 format=3 uid="uid://bxixu84ahcyba"]
+[gd_scene load_steps=14 format=3 uid="uid://bxixu84ahcyba"]
 
 [ext_resource type="Texture2D" uid="uid://uxhlpik4jue" path="res://Sprites/NPCS/Saci/saci03.png" id="1_yvqea"]
 [ext_resource type="Script" uid="uid://bt5du2sk1ba4i" path="res://Scripts/NPCs/NPC.gd" id="2_yvqea"]
+[ext_resource type="Texture2D" uid="uid://bodj2vgif6qp5" path="res://Sprites/NPCS/Saci/saci01.png" id="3_3fd6d"]
 [ext_resource type="Resource" uid="uid://cnhau31dn3hpf" path="res://Dialogos/Teste.dialogue" id="3_11b2v"]
 [ext_resource type="Script" uid="uid://dd7svcu8l7fxu" path="res://Scripts/Componentes/Interacao.gd" id="4_tsuxo"]
+[ext_resource type="Texture2D" uid="uid://61lbm47kannr" path="res://Sprites/NPCS/Saci/saci05.png" id="5_nd31a"]
 [ext_resource type="Script" uid="uid://b2ls33ys55oyt" path="res://Scripts/Componentes/OtimizadorSprite.gd" id="5_yvqea"]
+[ext_resource type="Texture2D" uid="uid://bn1u6nja3y3t1" path="res://Sprites/NPCS/Saci/saci07.png" id="6_xx1m8"]
+[ext_resource type="Texture2D" uid="uid://clfrhtnjk3viy" path="res://Sprites/NPCS/Saci/saci09.png" id="7_7i8ei"]
+[ext_resource type="Texture2D" uid="uid://cchrj6diua8rb" path="res://Sprites/NPCS/Saci/saci11.png" id="8_883ny"]
+[ext_resource type="Texture2D" uid="uid://d2u8nh7g7k2f7" path="res://Sprites/NPCS/Saci/saci13.png" id="9_etfm2"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_rmtcg"]
+resource_local_to_scene = true
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_3fd6d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("1_yvqea")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_nd31a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_xx1m8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_7i8ei")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_883ny")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_etfm2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_3fd6d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("1_yvqea")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_nd31a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_xx1m8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_7i8ei")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_883ny")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_etfm2")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 10.0
+}]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lqome"]
 size = Vector2(712.47833, 623.2616)
 
 [node name="NPC-Basico" type="Sprite2D" node_paths=PackedStringArray("interacao")]
 scale = Vector2(0.4348958, 0.43489587)
-texture = ExtResource("1_yvqea")
 script = ExtResource("2_yvqea")
 arquivo_dialogo = ExtResource("3_11b2v")
 interacao = NodePath("Interacao")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(6.8982077, 0)
+sprite_frames = SubResource("SpriteFrames_rmtcg")
+animation = &"idle"
+frame_progress = 0.3714622
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+root_node = NodePath("../AnimatedSprite2D")
 
 [node name="Interacao" type="Area2D" parent="."]
 collision_layer = 0
@@ -38,9 +103,9 @@ unique_name_in_owner = true
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -606.6605
+offset_left = -221.24255
 offset_top = -395.49698
-offset_right = -158.07791
+offset_right = 227.34006
 offset_bottom = -300.50302
 grow_horizontal = 2
 theme_override_font_sizes/normal_font_size = 60

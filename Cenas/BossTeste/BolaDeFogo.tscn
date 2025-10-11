@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://dct0yu1s5isad"]
+[gd_scene load_steps=12 format=3 uid="uid://dct0yu1s5isad"]
 
 [ext_resource type="Script" uid="uid://dbg0osum7dedd" path="res://Scripts/Boss/BolaDeFogo.gd" id="1_qng7f"]
 [ext_resource type="Texture2D" uid="uid://7onsawy03clf" path="res://Sprites/Inimigos/Boitata/Ataque1/Fogo/boitata_89.png" id="1_ysqyo"]
@@ -6,8 +6,6 @@
 [ext_resource type="Texture2D" uid="uid://0n53nlbb4pjo" path="res://Sprites/Inimigos/Boitata/Ataque1/Fogo/boitata_93.png" id="3_u6gje"]
 [ext_resource type="Texture2D" uid="uid://dluq1p6xvq6tu" path="res://Sprites/Inimigos/Boitata/Ataque1/Fogo/boitata_95.png" id="4_iwi73"]
 [ext_resource type="Texture2D" uid="uid://cfmgg0u3q40yc" path="res://Sprites/Inimigos/Boitata/Ataque1/Fogo/boitata_97.png" id="5_jby16"]
-[ext_resource type="Texture2D" uid="uid://dpjbug6loxp6r" path="res://Sprites/Inimigos/Boitata/Ataque1/Fogo/boitata_99.png" id="6_8h3ej"]
-[ext_resource type="Texture2D" uid="uid://cqdlu83b65t5l" path="res://Sprites/Inimigos/Boitata/Ataque1/Fogo/boitata_101.png" id="7_xe7ot"]
 [ext_resource type="PackedScene" uid="uid://pc4mgv2nv8af" path="res://Objetos/Funcionalidade/CompHitBox.tscn" id="9_qng7f"]
 [ext_resource type="AudioStream" uid="uid://bsgfpgh6g7f4o" path="res://Audio/SFX/BOITATA/Bola_fogo.mp3" id="10_u6gje"]
 [ext_resource type="AudioStream" uid="uid://cji7jh2imtp5t" path="res://Audio/SFX/BOITATA/Caindo_chão.mp3" id="11_iwi73"]
@@ -31,10 +29,16 @@ animations = [{
 "texture": ExtResource("5_jby16")
 }, {
 "duration": 1.0,
-"texture": ExtResource("6_8h3ej")
+"texture": ExtResource("2_qng7f")
 }, {
 "duration": 1.0,
-"texture": ExtResource("7_xe7ot")
+"texture": ExtResource("3_u6gje")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_iwi73")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_jby16")
 }],
 "loop": true,
 "name": &"default",
@@ -42,25 +46,27 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_e7y2f"]
-radius = 57.0
+radius = 73.0
 height = 286.0
 
 [node name="BolaDeFogo" type="Node2D"]
 script = ExtResource("1_qng7f")
-speed = Vector2(2.5, 0.2)
+speed = Vector2(1.5, 0.1)
 
 [node name="Sprite" type="AnimatedSprite2D" parent="."]
+position = Vector2(0.125, 77.375)
 scale = Vector2(0.25, 0.25)
 sprite_frames = SubResource("SpriteFrames_u0rk8")
 autoplay = "default"
-frame = 2
-frame_progress = 0.16689995
+frame_progress = 0.7381279
 
 [node name="HitBox" parent="." instance=ExtResource("9_qng7f")]
+position = Vector2(0.125, 77.375)
+linear_damp = 1.0
 
 [node name="Col" type="CollisionShape2D" parent="HitBox"]
 unique_name_in_owner = true
-position = Vector2(2, 33)
+position = Vector2(2, 14)
 rotation = 1.5707964
 shape = SubResource("CapsuleShape2D_e7y2f")
 

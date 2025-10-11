@@ -9,7 +9,7 @@
 size = Vector2(203, 511)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rixxk"]
-size = Vector2(227, 511)
+size = Vector2(243, 511)
 
 [sub_resource type="Animation" id="Animation_41i4q"]
 resource_name = "Abre"
@@ -75,6 +75,7 @@ texture = ExtResource("3_h4g8d")
 
 [node name="HurtBox" parent="Porta" instance=ExtResource("3_7ptwx")]
 unique_name_in_owner = true
+distancia_knockback = 1.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Porta/HurtBox"]
 position = Vector2(5.5, -63.5)
@@ -85,7 +86,7 @@ debug_color = Color(0.99137133, 0, 0.27243033, 0.41960785)
 collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Porta/Colisao"]
-position = Vector2(4.5, -63.5)
+position = Vector2(2, -63.5)
 shape = SubResource("RectangleShape2D_rixxk")
 
 [node name="Timer" type="Timer" parent="."]
