@@ -1,4 +1,4 @@
-[gd_scene load_steps=34 format=4 uid="uid://ba8igbg8v441c"]
+[gd_scene load_steps=35 format=4 uid="uid://ba8igbg8v441c"]
 
 [ext_resource type="Texture2D" uid="uid://cqu5scrrmr5n5" path="res://Sprites/Cenário/Mata_Atlantica/Background/FUNDOCEU.png" id="1_hnubh"]
 [ext_resource type="Texture2D" uid="uid://c374cwih425cq" path="res://Sprites/Cenário/Tilemaps/Base.png" id="1_umcgc"]
@@ -28,6 +28,7 @@
 [ext_resource type="PackedScene" uid="uid://phfxidwhdpy7" path="res://Objetos/Funcionalidade/CompFade.tscn" id="27_ctjy6"]
 [ext_resource type="Script" uid="uid://dd16yu704x6wt" path="res://Scripts/Componentes/BGM_Player.gd" id="27_hdfdg"]
 [ext_resource type="AudioStream" uid="uid://c7qftchbhu6xc" path="res://Audio/SFX/AMBIENTE/Musica_Jogo.mp3" id="28_75oum"]
+[ext_resource type="PackedScene" uid="uid://cqyub70sv0ofp" path="res://Objetos/Props/SavePoint.tscn" id="29_hdfdg"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_52kex"]
 size = Vector2(4894, 3468)
@@ -334,7 +335,7 @@ position = Vector2(1519, -629)
 position = Vector2(875, 58)
 
 [node name="Plataforma5" parent="Plataformas" instance=ExtResource("13_w4lji")]
-position = Vector2(93, 368)
+position = Vector2(14.000008, 368)
 
 [node name="Plataforma4" parent="Plataformas" instance=ExtResource("13_w4lji")]
 position = Vector2(124, -786)
@@ -1185,16 +1186,13 @@ position = Vector2(5901, -1155)
 position = Vector2(-4670, 1574)
 
 [node name="Morcego" parent="Entidades" instance=ExtResource("26_ctjy6")]
-position = Vector2(4401, -1223)
+position = Vector2(3901, -753)
 
 [node name="Morcego2" parent="Entidades" instance=ExtResource("26_ctjy6")]
 position = Vector2(5652, -2266)
 
 [node name="Morcego3" parent="Entidades" instance=ExtResource("26_ctjy6")]
 position = Vector2(7563, -2522)
-
-[node name="Escorpiao" parent="Entidades" instance=ExtResource("27_aw4uh")]
-position = Vector2(3486, -1855)
 
 [node name="Escorpiao2" parent="Entidades" instance=ExtResource("27_aw4uh")]
 position = Vector2(6863, -705)
@@ -1271,3 +1269,6 @@ script = ExtResource("27_hdfdg")
 musica = ExtResource("28_75oum")
 volume = -0.5
 metadata/_custom_type_script = "uid://dd16yu704x6wt"
+
+[node name="SavePoint" parent="." instance=ExtResource("29_hdfdg")]
+position = Vector2(-707, -249)

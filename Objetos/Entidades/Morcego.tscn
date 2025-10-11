@@ -8,8 +8,8 @@
 [ext_resource type="AudioStream" uid="uid://b3mmkipqf30jd" path="res://Audio/SFX/INIMIGOS/HIT_INIMIGO.wav" id="6_87fsy"]
 [ext_resource type="PackedScene" uid="uid://pc4mgv2nv8af" path="res://Objetos/Funcionalidade/CompHitBox.tscn" id="7_khkaq"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_ntg74"]
-size = Vector2(223, 83)
+[sub_resource type="CircleShape2D" id="CircleShape2D_63e5l"]
+radius = 139.38911
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_tkh53"]
 animations = [{
@@ -52,7 +52,7 @@ script = ExtResource("1_j5mvf")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(2.5, -41.5)
-shape = SubResource("RectangleShape2D_ntg74")
+shape = SubResource("CircleShape2D_63e5l")
 
 [node name="Sprite" type="AnimatedSprite2D" parent="."]
 unique_name_in_owner = true

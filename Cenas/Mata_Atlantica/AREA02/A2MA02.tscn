@@ -426,9 +426,6 @@ metadata/_custom_type_script = "uid://bd046eokvcnu2"
 [node name="Entidades" type="Node2D" parent="."]
 position = Vector2(982, -637)
 
-[node name="Escorpiao" parent="Entidades" instance=ExtResource("9_lj4g0")]
-position = Vector2(3075, -921)
-
 [node name="Morcego" parent="Entidades" instance=ExtResource("10_jb1wv")]
 position = Vector2(1463, -1703)
 
