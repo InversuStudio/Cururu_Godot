@@ -59,6 +59,7 @@ folder_colors={
 "res://Sprites/": "yellow",
 "res://Sprites/Cenário/zSem_Uso/": "gray",
 "res://Sprites/zTeste_Parellax/": "gray",
+"res://Teste_Script/": "teal",
 "res://UI/": "red"
 }
 
