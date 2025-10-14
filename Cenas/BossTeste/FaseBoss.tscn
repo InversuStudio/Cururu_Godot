@@ -1,4 +1,4 @@
-[gd_scene load_steps=33 format=4 uid="uid://pia326ptqws0"]
+[gd_scene load_steps=32 format=4 uid="uid://pia326ptqws0"]
 
 [ext_resource type="Texture2D" uid="uid://l6b625ae8udc" path="res://Sprites/Cenário/Mata_Atlantica/Background/BACK.png" id="1_sjad5"]
 [ext_resource type="Texture2D" uid="uid://cov3k8uja4wwj" path="res://Sprites/Cenário/zSem_Uso/PAU_BRASIL.png" id="2_oi0r6"]
@@ -16,7 +16,6 @@
 [ext_resource type="Script" uid="uid://bhexx6mj1xv3q" path="res://addons/phantom_camera/scripts/phantom_camera/phantom_camera_2d.gd" id="14_jx43u"]
 [ext_resource type="Script" uid="uid://8umksf8e80fw" path="res://addons/phantom_camera/scripts/resources/tween_resource.gd" id="15_4l1mt"]
 [ext_resource type="PackedScene" uid="uid://bs5i45df7rwnf" path="res://UI/HUD.tscn" id="16_cw7w3"]
-[ext_resource type="PackedScene" uid="uid://phfxidwhdpy7" path="res://Objetos/Funcionalidade/CompFade.tscn" id="17_36i6f"]
 [ext_resource type="Texture2D" uid="uid://c3tl3oddronfh" path="res://icon.svg" id="18_xrny1"]
 [ext_resource type="Script" uid="uid://bt5du2sk1ba4i" path="res://Scripts/NPCs/NPC.gd" id="19_qf0e5"]
 [ext_resource type="Resource" uid="uid://cnhau31dn3hpf" path="res://Dialogos/Teste.dialogue" id="20_ts8ms"]
@@ -199,7 +198,6 @@ position = Vector2(5394, -387)
 
 [node name="Player" parent="." instance=ExtResource("10_3ebqc")]
 position = Vector2(-1006, -315)
-tempo_dash = 0.15
 
 [node name="InimigoTeste" parent="." instance=ExtResource("11_0vg4r")]
 position = Vector2(-270, 0)
@@ -211,10 +209,10 @@ position = Vector2(-832, -193)
 physics_interpolation_mode = 1
 position = Vector2(-1006, -469)
 process_callback = 0
-limit_left = -6528
-limit_top = -12054
-limit_right = -390
-limit_bottom = -9744
+limit_left = -2759
+limit_top = -1966
+limit_right = 1485
+limit_bottom = 71
 editor_draw_limits = true
 
 [node name="PhantomCameraHost" type="Node" parent="MainCamera"]
@@ -266,8 +264,6 @@ metadata/_custom_type_script = "uid://bhexx6mj1xv3q"
 [node name="Interface" type="CanvasLayer" parent="."]
 
 [node name="HUD" parent="Interface" instance=ExtResource("16_cw7w3")]
-
-[node name="Fade" parent="Interface" instance=ExtResource("17_36i6f")]
 
 [node name="NPC" type="Sprite2D" parent="." node_paths=PackedStringArray("interacao")]
 position = Vector2(5064, -480)

@@ -960,7 +960,6 @@ position = Vector2(-16, -120)
 scale = Vector2(0.375651, 0.375651)
 sprite_frames = SubResource("SpriteFrames_ser7u")
 animation = &"Dano"
-frame_progress = 0.4130073
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-17, -81)
@@ -998,7 +997,6 @@ position = Vector2(-2, 0)
 [node name="Melee1" parent="HitContainer" node_paths=PackedStringArray("ignore") instance=ExtResource("47_grb16")]
 position = Vector2(33, -15)
 collision_mask = 12
-screenshake = 0.3
 ignore = NodePath("../../HurtContainer/HurtBox")
 
 [node name="ColMel1" type="CollisionShape2D" parent="HitContainer/Melee1"]
@@ -1010,7 +1008,6 @@ debug_color = Color(0.69455, 0.495447, 0, 0.42)
 [node name="Melee2" parent="HitContainer" node_paths=PackedStringArray("ignore") instance=ExtResource("47_grb16")]
 position = Vector2(12, 0)
 collision_mask = 12
-screenshake = 0.3
 ignore = NodePath("../../HurtContainer/HurtBox")
 
 [node name="ColMel2" type="CollisionShape2D" parent="HitContainer/Melee2"]
@@ -1028,6 +1025,7 @@ ignore = NodePath("../../HurtContainer/HurtBox")
 position = Vector2(218, -78)
 rotation = 1.57079
 shape = SubResource("CapsuleShape2D_1dbdn")
+disabled = true
 
 [node name="PosTiroMagia" type="Marker2D" parent="HitContainer"]
 unique_name_in_owner = true
@@ -1059,6 +1057,7 @@ autoplay = "Idle"
 
 [node name="Coyote" type="Timer" parent="Timers"]
 unique_name_in_owner = true
+one_shot = true
 
 [node name="JumpLag" type="Timer" parent="Timers"]
 unique_name_in_owner = true

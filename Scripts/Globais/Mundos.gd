@@ -65,10 +65,12 @@ var fase_atual : NomeFase
 func CarregaFase(lugar:NomeFase, detalhado:bool = false,
 	pos:Vector2=Vector2.ZERO, virado:bool=false) -> void:
 	# Encontra componente de FADE na cena ativa
-	var fade: Fade = get_tree().get_first_node_in_group("Fade")
-	if fade: # Se houver, inicia animação de FADE OUT
-		fade.FadeOut()
-		await fade.terminou
+	#var fade = get_tree().get_first_node_in_group("Fade")
+	#if fade: # Se houver, inicia animação de FADE OUT
+		#fade.FadeOut()
+	Fade.FadeOut()
+	await Fade.terminou
+	Fade.FadeIn()
 	# Espera passar frame de física, para não dar erro durante gameplay
 	await get_tree().physics_frame
 	# Muda a cena
@@ -93,8 +95,10 @@ func SpawnMoeda(pos:Vector2) -> void:
 	coin.global_position = pos
 
 func FechaJogo() -> void:
-	var fade: Fade = get_tree().get_first_node_in_group("Fade")
-	if fade: # Se houver, inicia animação de FADE OUT
-		fade.FadeOut()
-		await fade.terminou
+	#var fade = get_tree().get_first_node_in_group("Fade")
+	#if fade: # Se houver, inicia animação de FADE OUT
+		#fade.FadeOut()
+		#await fade.terminou
+	Fade.FadeOut()
+	await Fade.terminou
 	get_tree().quit()

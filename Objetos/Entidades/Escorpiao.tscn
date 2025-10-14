@@ -8,7 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://va5pjd6vuuo2" path="res://Objetos/Funcionalidade/CompHurtBox.tscn" id="6_ppnp4"]
 [ext_resource type="PackedScene" uid="uid://pc4mgv2nv8af" path="res://Objetos/Funcionalidade/CompHitBox.tscn" id="7_2oopb"]
 [ext_resource type="AudioStream" uid="uid://b3mmkipqf30jd" path="res://Audio/SFX/INIMIGOS/HIT_INIMIGO.wav" id="7_mvbia"]
-[ext_resource type="Script" uid="uid://b2ls33ys55oyt" path="res://Scripts/Componentes/OtimizadorSprite.gd" id="9_cusa3"]
+[ext_resource type="PackedScene" uid="uid://ffqi6t0ahbmk" path="res://Objetos/Funcionalidade/OtimizadorSprite.tscn" id="9_mvbia"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ntg74"]
 size = Vector2(180, 106)
@@ -87,7 +87,6 @@ debug_color = Color(1, 0, 0.0941176, 0.419608)
 
 [node name="HitBox" parent="." node_paths=PackedStringArray("ignore") instance=ExtResource("7_2oopb")]
 unique_name_in_owner = true
-screenshake = 0.2
 ignore = NodePath("../HurtBox")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="HitBox"]
@@ -124,10 +123,6 @@ position = Vector2(-120, -24)
 unique_name_in_owner = true
 position = Vector2(0, -43)
 
-[node name="OtimizadorSprite" type="VisibleOnScreenEnabler2D" parent="."]
-position = Vector2(5.5, -90.5)
-scale = Vector2(12.25, 10.45)
-rect = Rect2(-11.959184, -10.5741625, 23.020409, 21.81818)
-script = ExtResource("9_cusa3")
+[node name="OtimizadorSprite" parent="." instance=ExtResource("9_mvbia")]
+rect = Rect2(-126.47068, -202.94131, 252.94136, 216.17662)
 follow = true
-metadata/_custom_type_script = "uid://b2ls33ys55oyt"

@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://67ddt0ghyjwf" path="res://Scripts/Componentes/Moeda.gd" id="1_c1as6"]
 [ext_resource type="AudioStream" uid="uid://d27segrop0yia" path="res://Audio/SFX/AMBIENTE/som_moeda.wav" id="2_0w4hx"]
 [ext_resource type="Texture2D" uid="uid://bm1qhgu20wgaa" path="res://Sprites/Cenário/Objetos/Semente.png" id="2_soojx"]
-[ext_resource type="Script" uid="uid://b2ls33ys55oyt" path="res://Scripts/Componentes/OtimizadorSprite.gd" id="4_0w4hx"]
+[ext_resource type="PackedScene" uid="uid://ffqi6t0ahbmk" path="res://Objetos/Funcionalidade/OtimizadorSprite.tscn" id="4_0w4hx"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_jisbj"]
 radius = 32.0156
@@ -20,7 +20,5 @@ shape = SubResource("CircleShape2D_jisbj")
 scale = Vector2(1.4374999, 1.4374999)
 texture = ExtResource("2_soojx")
 
-[node name="OtimizadorSprite" type="VisibleOnScreenEnabler2D" parent="."]
-rect = Rect2(-33, -33, 66, 66)
-script = ExtResource("4_0w4hx")
-metadata/_custom_type_script = "uid://b2ls33ys55oyt"
+[node name="OtimizadorSprite" parent="." instance=ExtResource("4_0w4hx")]
+rect = Rect2(-30, -31, 60, 66)

@@ -1,10 +1,9 @@
-[gd_scene load_steps=9 format=4 uid="uid://cubw3i1ch5jq1"]
+[gd_scene load_steps=8 format=4 uid="uid://cubw3i1ch5jq1"]
 
 [ext_resource type="PackedScene" uid="uid://nohq28uk7lfk" path="res://Objetos/Entidades/Player.tscn" id="1_65boa"]
 [ext_resource type="Texture2D" uid="uid://c374cwih425cq" path="res://Sprites/Cenário/Tilemaps/Base.png" id="1_xvyko"]
 [ext_resource type="PackedScene" uid="uid://1apfpwlqocxn" path="res://Objetos/Funcionalidade/TransicaoFase.tscn" id="3_bcoor"]
 [ext_resource type="PackedScene" uid="uid://bs5i45df7rwnf" path="res://UI/HUD.tscn" id="4_1koh5"]
-[ext_resource type="Script" uid="uid://cviskiwh21kxe" path="res://Scripts/Componentes/Fade.gd" id="5_mfo0i"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_32tfj"]
 texture = ExtResource("1_xvyko")
@@ -175,15 +174,4 @@ offset_left = -6.0
 offset_top = -2.0
 offset_right = -6.0
 offset_bottom = -2.0
-metadata/_edit_use_anchors_ = true
-
-[node name="Fade" type="ColorRect" parent="UIGAME"]
-anchors_preset = -1
-anchor_right = 0.262
-anchor_bottom = 0.168
-offset_right = 0.959961
-offset_bottom = -0.440018
-color = Color(1, 1, 1, 0)
-script = ExtResource("5_mfo0i")
-metadata/_custom_type_script = "uid://cviskiwh21kxe"
 metadata/_edit_use_anchors_ = true

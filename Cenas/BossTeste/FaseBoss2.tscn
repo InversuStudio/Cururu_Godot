@@ -1,9 +1,8 @@
-[gd_scene load_steps=20 format=4 uid="uid://dyqhjbx5o2goh"]
+[gd_scene load_steps=19 format=4 uid="uid://dyqhjbx5o2goh"]
 
 [ext_resource type="Texture2D" uid="uid://c374cwih425cq" path="res://Sprites/Cenário/Tilemaps/Base.png" id="1_sk4ri"]
 [ext_resource type="PackedScene" uid="uid://nohq28uk7lfk" path="res://Objetos/Entidades/Player.tscn" id="2_3q6su"]
 [ext_resource type="PackedScene" uid="uid://bs5i45df7rwnf" path="res://UI/HUD.tscn" id="3_wcr03"]
-[ext_resource type="PackedScene" uid="uid://phfxidwhdpy7" path="res://Objetos/Funcionalidade/CompFade.tscn" id="4_wwuxt"]
 [ext_resource type="PackedScene" uid="uid://dbp8j3rqvdpna" path="res://Objetos/Funcionalidade/CompSecret.tscn" id="5_qyxr7"]
 [ext_resource type="PackedScene" uid="uid://1apfpwlqocxn" path="res://Objetos/Funcionalidade/TransicaoFase.tscn" id="6_ffthw"]
 [ext_resource type="PackedScene" uid="uid://b0hyovdafhkyk" path="res://Objetos/Funcionalidade/TransicaoCamera.tscn" id="7_dp74u"]
@@ -61,8 +60,6 @@ tile_set = SubResource("TileSet_l7pwf")
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="HUD" parent="CanvasLayer" instance=ExtResource("3_wcr03")]
-
-[node name="Fade" parent="CanvasLayer" instance=ExtResource("4_wwuxt")]
 
 [node name="AreaSecreta" parent="." node_paths=PackedStringArray("area_escondida") instance=ExtResource("5_qyxr7")]
 position = Vector2(-2952, 0)
@@ -135,10 +132,10 @@ debug_color = Color(0, 0.6, 0.701961, 0)
 physics_interpolation_mode = 1
 position = Vector2(-408, -454)
 process_callback = 0
-limit_left = -6528
-limit_top = -12054
-limit_right = -390
-limit_bottom = -9744
+limit_left = -2854
+limit_top = -1157
+limit_right = 552
+limit_bottom = 86
 editor_draw_limits = true
 
 [node name="PhantomCameraHost" type="Node" parent="MainCamera"]

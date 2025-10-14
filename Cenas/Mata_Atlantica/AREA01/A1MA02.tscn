@@ -1,10 +1,9 @@
-[gd_scene load_steps=38 format=4 uid="uid://djvuyfef1wujd"]
+[gd_scene load_steps=37 format=4 uid="uid://djvuyfef1wujd"]
 
 [ext_resource type="PackedScene" uid="uid://1apfpwlqocxn" path="res://Objetos/Funcionalidade/TransicaoFase.tscn" id="1_2ybff"]
 [ext_resource type="Script" uid="uid://bhexx6mj1xv3q" path="res://addons/phantom_camera/scripts/phantom_camera/phantom_camera_2d.gd" id="1_g5wd4"]
 [ext_resource type="PackedScene" uid="uid://bnm668fws2641" path="res://Objetos/Props/Armadilha.tscn" id="1_ja78a"]
 [ext_resource type="Texture2D" uid="uid://c374cwih425cq" path="res://Sprites/Cenário/Tilemaps/Base.png" id="1_k4aup"]
-[ext_resource type="PackedScene" uid="uid://phfxidwhdpy7" path="res://Objetos/Funcionalidade/CompFade.tscn" id="2_dyi4w"]
 [ext_resource type="Script" uid="uid://8umksf8e80fw" path="res://addons/phantom_camera/scripts/resources/tween_resource.gd" id="2_yt3qm"]
 [ext_resource type="PackedScene" uid="uid://nohq28uk7lfk" path="res://Objetos/Entidades/Player.tscn" id="3_dr2ls"]
 [ext_resource type="Script" uid="uid://bd046eokvcnu2" path="res://addons/phantom_camera/scripts/phantom_camera_host/phantom_camera_host.gd" id="3_tej34"]
@@ -1530,8 +1529,6 @@ offset_top = -2.0
 offset_right = -6.0
 offset_bottom = -2.0
 metadata/_edit_use_anchors_ = true
-
-[node name="Fade" parent="UIGAME" instance=ExtResource("2_dyi4w")]
 
 [node name="BGM_Player" type="Node" parent="."]
 script = ExtResource("30_78wer")

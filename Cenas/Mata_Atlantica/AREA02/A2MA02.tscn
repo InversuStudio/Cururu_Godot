@@ -1,4 +1,4 @@
-[gd_scene load_steps=34 format=4 uid="uid://chmrn5p1wbo0m"]
+[gd_scene load_steps=33 format=4 uid="uid://chmrn5p1wbo0m"]
 
 [ext_resource type="Texture2D" uid="uid://cqu5scrrmr5n5" path="res://Sprites/Cenário/Mata_Atlantica/Background/FUNDOCEU.png" id="1_dk80r"]
 [ext_resource type="Texture2D" uid="uid://c374cwih425cq" path="res://Sprites/Cenário/Tilemaps/Base.png" id="1_swhqk"]
@@ -20,7 +20,6 @@
 [ext_resource type="Texture2D" uid="uid://cj4rj4oj20ogb" path="res://Sprites/Cenário/Mata_Atlantica/Chao/chap_interno.png" id="11_bkuxo"]
 [ext_resource type="Texture2D" uid="uid://cw2yeg7ynw0kl" path="res://Sprites/Cenário/Mata_Atlantica/Chao/chap_externo.png" id="12_noowx"]
 [ext_resource type="PackedScene" uid="uid://bei1s8te3cwko" path="res://Sprites/Cenário/Mata_Atlantica/Interativos/plataforma.tscn" id="13_h3gev"]
-[ext_resource type="PackedScene" uid="uid://phfxidwhdpy7" path="res://Objetos/Funcionalidade/CompFade.tscn" id="15_lj4g0"]
 [ext_resource type="Texture2D" uid="uid://jecy4bfqqqxu" path="res://Sprites/Cenário/Mata_Atlantica/Teto/Moita teste.png" id="21_vgqnr"]
 [ext_resource type="Texture2D" uid="uid://uq6dbjep5wva" path="res://Sprites/Cenário/Mata_Atlantica/Foreground/frontfolha.png" id="22_omrxv"]
 [ext_resource type="Texture2D" uid="uid://ciulkfu83ohwu" path="res://Sprites/Cenário/Mata_Atlantica/Foreground/04.png" id="23_b78wb"]
@@ -1080,8 +1079,6 @@ offset_top = -2.0
 offset_right = -6.0
 offset_bottom = -2.0
 metadata/_edit_use_anchors_ = true
-
-[node name="Fade" parent="UIGAME" instance=ExtResource("15_lj4g0")]
 
 [node name="BGM_Player" type="Node" parent="."]
 script = ExtResource("26_jb1wv")

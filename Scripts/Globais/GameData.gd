@@ -91,8 +91,8 @@ func ChecaData() -> String:
 
 func ResetData() -> void:
 	#posicao = Vector2.ZERO
-	#vida_atual = vida_max
-	#magia_atual = magia_max
+	if vida_max != 0: vida_atual = vida_max
+	if magia_max != 0: magia_atual = magia_max
 	moedas = 0
 	direcao = false
 	veio_de_baixo = false

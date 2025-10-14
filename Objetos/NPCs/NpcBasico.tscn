@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://bxixu84ahcyba"]
+[gd_scene load_steps=13 format=3 uid="uid://bxixu84ahcyba"]
 
 [ext_resource type="Texture2D" uid="uid://uxhlpik4jue" path="res://Sprites/NPCS/Saci/saci03.png" id="1_yvqea"]
 [ext_resource type="Script" uid="uid://bt5du2sk1ba4i" path="res://Scripts/NPCs/NPC.gd" id="2_yvqea"]
@@ -6,7 +6,6 @@
 [ext_resource type="Resource" uid="uid://cnhau31dn3hpf" path="res://Dialogos/Teste.dialogue" id="3_11b2v"]
 [ext_resource type="Script" uid="uid://dd7svcu8l7fxu" path="res://Scripts/Componentes/Interacao.gd" id="4_tsuxo"]
 [ext_resource type="Texture2D" uid="uid://61lbm47kannr" path="res://Sprites/NPCS/Saci/saci05.png" id="5_nd31a"]
-[ext_resource type="Script" uid="uid://b2ls33ys55oyt" path="res://Scripts/Componentes/OtimizadorSprite.gd" id="5_yvqea"]
 [ext_resource type="Texture2D" uid="uid://bn1u6nja3y3t1" path="res://Sprites/NPCS/Saci/saci07.png" id="6_xx1m8"]
 [ext_resource type="Texture2D" uid="uid://clfrhtnjk3viy" path="res://Sprites/NPCS/Saci/saci09.png" id="7_7i8ei"]
 [ext_resource type="Texture2D" uid="uid://cchrj6diua8rb" path="res://Sprites/NPCS/Saci/saci11.png" id="8_883ny"]
@@ -90,13 +89,6 @@ metadata/_custom_type_script = "uid://dd7svcu8l7fxu"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Interacao"]
 position = Vector2(-18.39521, 13.292308)
 shape = SubResource("RectangleShape2D_lqome")
-
-[node name="OtimizadorSprite" type="VisibleOnScreenEnabler2D" parent="."]
-position = Vector2(-212.67693, -236.3077)
-scale = Vector2(6.4, 6.4)
-rect = Rect2(-7.384613, -10, 80.30769, 97.69231)
-script = ExtResource("5_yvqea")
-metadata/_custom_type_script = "uid://b2ls33ys55oyt"
 
 [node name="Texto" type="RichTextLabel" parent="."]
 unique_name_in_owner = true

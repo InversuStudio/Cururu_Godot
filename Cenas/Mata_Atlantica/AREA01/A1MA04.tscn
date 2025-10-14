@@ -1,9 +1,8 @@
-[gd_scene load_steps=9 format=4 uid="uid://cwvi3pve0viqq"]
+[gd_scene load_steps=8 format=4 uid="uid://cwvi3pve0viqq"]
 
 [ext_resource type="Texture2D" uid="uid://c374cwih425cq" path="res://Sprites/Cenário/Tilemaps/Base.png" id="1_mkak3"]
 [ext_resource type="PackedScene" uid="uid://1apfpwlqocxn" path="res://Objetos/Funcionalidade/TransicaoFase.tscn" id="2_botoi"]
 [ext_resource type="PackedScene" uid="uid://bs5i45df7rwnf" path="res://UI/HUD.tscn" id="3_n3gbe"]
-[ext_resource type="PackedScene" uid="uid://phfxidwhdpy7" path="res://Objetos/Funcionalidade/CompFade.tscn" id="5_0brbr"]
 [ext_resource type="PackedScene" uid="uid://nohq28uk7lfk" path="res://Objetos/Entidades/Player.tscn" id="5_gvt1b"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_botoi"]
@@ -178,5 +177,3 @@ offset_top = -2.0
 offset_right = -6.0
 offset_bottom = -2.0
 metadata/_edit_use_anchors_ = true
-
-[node name="Fade" parent="UIGAME" instance=ExtResource("5_0brbr")]

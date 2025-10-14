@@ -29,6 +29,7 @@ PhantomCameraManager="*res://addons/phantom_camera/scripts/managers/phantom_came
 DialogueManager="*res://addons/dialogue_manager/dialogue_manager.gd"
 Console="*res://Scripts/Globais/Console.gd"
 BGM="*res://Objetos/Funcionalidade/BGM_Global.tscn"
+Fade="*res://Objetos/Funcionalidade/CompFade.tscn"
 
 [dialogue_manager]
 
@@ -70,6 +71,7 @@ Fade=""
 HUD=""
 Special=""
 Console=""
+Respawn=""
 
 [input]
 

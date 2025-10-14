@@ -2,5 +2,5 @@
 
 [ext_resource type="Script" uid="uid://b2ls33ys55oyt" path="res://Scripts/Componentes/OtimizadorSprite.gd" id="1_wtr41"]
 
-[node name="OtimizadorSprite" type="VisibleOnScreenEnabler2D"]
+[node name="OtimizadorSprite" type="VisibleOnScreenNotifier2D"]
 script = ExtResource("1_wtr41")

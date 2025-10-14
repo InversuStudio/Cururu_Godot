@@ -56,7 +56,11 @@ _data = {
 &"RESET": SubResource("Animation_aeedw")
 }
 
-[node name="Fade" type="ColorRect" groups=["Fade"]]
+[node name="Fade" type="CanvasLayer"]
+layer = 10
+script = ExtResource("1_aeedw")
+
+[node name="Color" type="ColorRect" parent="."]
 process_mode = 3
 self_modulate = Color(1, 1, 1, 0)
 z_index = 7
@@ -67,10 +71,10 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 color = Color(0, 0, 0, 1)
-script = ExtResource("1_aeedw")
 
 [node name="Anim" type="AnimationPlayer" parent="."]
 unique_name_in_owner = true
+root_node = NodePath("../Color")
 libraries = {
 &"": SubResource("AnimationLibrary_0e6u7")
 }

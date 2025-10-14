@@ -1,10 +1,9 @@
-[gd_scene load_steps=15 format=4 uid="uid://4yb5yrq3t0xp"]
+[gd_scene load_steps=14 format=4 uid="uid://4yb5yrq3t0xp"]
 
 [ext_resource type="Texture2D" uid="uid://c374cwih425cq" path="res://Sprites/Cenário/Tilemaps/Base.png" id="1_ixyi4"]
 [ext_resource type="Texture2D" uid="uid://1apwecbfyc5d" path="res://Sprites/Cenário/Sertão/Chão/40 Sem Título2_20251009143723.png" id="2_oubjo"]
 [ext_resource type="PackedScene" uid="uid://nohq28uk7lfk" path="res://Objetos/Entidades/Player.tscn" id="5_y3o0g"]
 [ext_resource type="PackedScene" uid="uid://bs5i45df7rwnf" path="res://UI/HUD.tscn" id="6_88kjv"]
-[ext_resource type="PackedScene" uid="uid://phfxidwhdpy7" path="res://Objetos/Funcionalidade/CompFade.tscn" id="7_4mh8b"]
 [ext_resource type="Script" uid="uid://bd046eokvcnu2" path="res://addons/phantom_camera/scripts/phantom_camera_host/phantom_camera_host.gd" id="8_23pwv"]
 [ext_resource type="Texture2D" uid="uid://ds6jml661ja5l" path="res://Sprites/Cenário/Sertão/Chão/40 Sem Título3_20251009200905.png" id="9_23pwv"]
 [ext_resource type="Script" uid="uid://bhexx6mj1xv3q" path="res://addons/phantom_camera/scripts/phantom_camera/phantom_camera_2d.gd" id="9_y3o0g"]
@@ -240,8 +239,6 @@ offset_top = -2.0
 offset_right = -6.0
 offset_bottom = -2.0
 metadata/_edit_use_anchors_ = true
-
-[node name="Fade" parent="UIGAME" instance=ExtResource("7_4mh8b")]
 
 [node name="Camera2D" type="Camera2D" parent="."]
 physics_interpolation_mode = 1

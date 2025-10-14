@@ -1,8 +1,7 @@
-[gd_scene load_steps=35 format=4 uid="uid://exty4suocudj"]
+[gd_scene load_steps=34 format=4 uid="uid://exty4suocudj"]
 
 [ext_resource type="PackedScene" uid="uid://nohq28uk7lfk" path="res://Objetos/Entidades/Player.tscn" id="1_v83m2"]
 [ext_resource type="Texture2D" uid="uid://c374cwih425cq" path="res://Sprites/Cenário/Tilemaps/Base.png" id="2_lthbn"]
-[ext_resource type="PackedScene" uid="uid://phfxidwhdpy7" path="res://Objetos/Funcionalidade/CompFade.tscn" id="2_meyap"]
 [ext_resource type="Texture2D" uid="uid://cqu5scrrmr5n5" path="res://Sprites/Cenário/Mata_Atlantica/Background/FUNDOCEU.png" id="3_2ysx0"]
 [ext_resource type="Texture2D" uid="uid://rwmi1ggde5dy" path="res://Sprites/VFX/Iluminação/PORTAL.png" id="4_1ewfi"]
 [ext_resource type="Texture2D" uid="uid://dog2ml3xbyho2" path="res://Sprites/Cenário/Mata_Atlantica/Background/arvore2.png" id="4_6d12h"]
@@ -1170,8 +1169,6 @@ metadata/_custom_type_script = "uid://bd046eokvcnu2"
 
 [node name="HUD" parent="UIGAME" instance=ExtResource("17_68j53")]
 metadata/_edit_use_anchors_ = true
-
-[node name="Fade" parent="UIGAME" instance=ExtResource("2_meyap")]
 
 [node name="BGM_Player" type="Node" parent="."]
 script = ExtResource("27_nh2iu")

@@ -3,9 +3,9 @@
 [ext_resource type="Script" uid="uid://dvol8qmgk0lx8" path="res://Scripts/Componentes/SavePoint.gd" id="1_hntd5"]
 [ext_resource type="Script" uid="uid://dd7svcu8l7fxu" path="res://Scripts/Componentes/Interacao.gd" id="1_xf6ij"]
 [ext_resource type="Texture2D" uid="uid://bf0q4vuc2s0md" path="res://Sprites/Cenário/Objetos/Savepoint/apagado.png" id="2_3f5lj"]
-[ext_resource type="Script" uid="uid://b2ls33ys55oyt" path="res://Scripts/Componentes/OtimizadorSprite.gd" id="4_3f5lj"]
 [ext_resource type="Texture2D" uid="uid://bqe80obttjb82" path="res://Sprites/Cenário/Objetos/Savepoint/save_meio_termo.png" id="4_j20lk"]
 [ext_resource type="Texture2D" uid="uid://byyty8fw4cjjd" path="res://Sprites/Cenário/Objetos/Savepoint/save_ativado.png" id="5_41v7y"]
+[ext_resource type="PackedScene" uid="uid://ffqi6t0ahbmk" path="res://Objetos/Funcionalidade/OtimizadorSprite.tscn" id="7_7viry"]
 [ext_resource type="AudioStream" uid="uid://egsk7ec7xtpd" path="res://Audio/SFX/AMBIENTE/som_save.wav" id="7_41v7y"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hntd5"]
@@ -40,12 +40,6 @@ metadata/_custom_type_script = "uid://dd7svcu8l7fxu"
 position = Vector2(6.5, -185.75)
 shape = SubResource("RectangleShape2D_hntd5")
 
-[node name="OtimizadorSprite" type="VisibleOnScreenEnabler2D" parent="."]
-position = Vector2(4.99999, -212.5)
-scale = Vector2(19.5, 21.35)
-script = ExtResource("4_3f5lj")
-metadata/_custom_type_script = "uid://b2ls33ys55oyt"
-
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(54, -217)
 sprite_frames = SubResource("SpriteFrames_7viry")
@@ -78,3 +72,6 @@ vertical_alignment = 1
 unique_name_in_owner = true
 stream = ExtResource("7_41v7y")
 volume_db = 1.0
+
+[node name="OtimizadorSprite" parent="." instance=ExtResource("7_7viry")]
+rect = Rect2(-195, -440, 399, 450)

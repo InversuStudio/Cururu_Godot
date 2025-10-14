@@ -12,16 +12,15 @@
 [ext_resource type="Script" uid="uid://bhexx6mj1xv3q" path="res://addons/phantom_camera/scripts/phantom_camera/phantom_camera_2d.gd" id="9_2ryh1"]
 [ext_resource type="PackedScene" uid="uid://bs5i45df7rwnf" path="res://UI/HUD.tscn" id="9_y1wlx"]
 [ext_resource type="Script" uid="uid://8umksf8e80fw" path="res://addons/phantom_camera/scripts/resources/tween_resource.gd" id="10_0ho33"]
-[ext_resource type="PackedScene" uid="uid://phfxidwhdpy7" path="res://Objetos/Funcionalidade/CompFade.tscn" id="10_bajew"]
 [ext_resource type="PackedScene" uid="uid://1apfpwlqocxn" path="res://Objetos/Funcionalidade/TransicaoFase.tscn" id="10_wqlrc"]
 [ext_resource type="PackedScene" uid="uid://d3cks8kri2olw" path="res://Objetos/Props/AreaUpgrade.tscn" id="12_77bok"]
 [ext_resource type="Script" uid="uid://bd046eokvcnu2" path="res://addons/phantom_camera/scripts/phantom_camera_host/phantom_camera_host.gd" id="13_56qbx"]
 [ext_resource type="PackedScene" uid="uid://b0hyovdafhkyk" path="res://Objetos/Funcionalidade/TransicaoCamera.tscn" id="17_id35g"]
-[ext_resource type="Script" uid="uid://b2ls33ys55oyt" path="res://Scripts/Componentes/OtimizadorSprite.gd" id="18_0he43"]
 [ext_resource type="PackedScene" uid="uid://bxixu84ahcyba" path="res://Objetos/NPCs/NpcBasico.tscn" id="18_bp4ag"]
 [ext_resource type="Texture2D" uid="uid://c3tl3oddronfh" path="res://icon.svg" id="21_lqome"]
 [ext_resource type="PackedScene" uid="uid://cdhelg6sloxbj" path="res://Objetos/Props/PortaTemp.tscn" id="23_u25g5"]
 [ext_resource type="PackedScene" uid="uid://cy10kv6jimfwh" path="res://Objetos/Funcionalidade/CompDestroiPlataforma.tscn" id="23_y7vak"]
+[ext_resource type="PackedScene" uid="uid://bnm668fws2641" path="res://Objetos/Props/Armadilha.tscn" id="24_tkd1t"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_77bok"]
 texture = ExtResource("1_52y5a")
@@ -73,6 +72,9 @@ size = Vector2(360, 62)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_u25g5"]
 size = Vector2(353, 22)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wxyel"]
+size = Vector2(62, 1025)
 
 [node name="FaseTeste" type="Node2D"]
 
@@ -131,11 +133,6 @@ position = Vector2(0, -1)
 tile_map_data = PackedByteArray("AADm//n/AAABAAAAAADm//r/AAABAAAAAADm//v/AAABAAAAAADn//n/AAABAAAAAADn//r/AAABAAAAAADn//v/AAABAAAAAADo//n/AAABAAAAAADo//r/AAABAAAAAADo//v/AAABAAAAAADp//n/AAABAAAAAADp//r/AAABAAAAAADp//v/AAABAAAAAADq//n/AAABAAAAAADq//r/AAABAAAAAADq//v/AAABAAAAAADj//n/AAABAAAAAADj//r/AAABAAAAAADj//v/AAABAAAAAADk//n/AAABAAAAAADk//r/AAABAAAAAADk//v/AAABAAAAAADl//n/AAABAAAAAADl//r/AAABAAAAAADl//v/AAABAAAAAAA=")
 tile_set = SubResource("TileSet_l7pwf")
 
-[node name="OtimizadorSprite" type="VisibleOnScreenEnabler2D" parent="Tilemap/Escondido"]
-position = Vector2(-1891, -609)
-script = ExtResource("18_0he43")
-metadata/_custom_type_script = "uid://b2ls33ys55oyt"
-
 [node name="Transicoes" type="Node" parent="."]
 
 [node name="Main-Salao" parent="Transicoes" node_paths=PackedStringArray("de_camera_x", "para_camera_y") instance=ExtResource("17_id35g")]
@@ -147,12 +144,6 @@ para_camera_y = NodePath("../../Cameras/AreaAberta")
 position = Vector2(-8, -186)
 shape = SubResource("RectangleShape2D_id35g")
 
-[node name="OtimizadorSprite" type="VisibleOnScreenEnabler2D" parent="Transicoes/Main-Salao"]
-position = Vector2(-23.5, 0)
-scale = Vector2(3.35, 1)
-script = ExtResource("18_0he43")
-metadata/_custom_type_script = "uid://b2ls33ys55oyt"
-
 [node name="Salao-Main" parent="Transicoes" node_paths=PackedStringArray("de_camera_x", "para_camera_y") instance=ExtResource("17_id35g")]
 position = Vector2(1437, -646)
 de_camera_x = NodePath("../../Cameras/AreaAberta")
@@ -161,12 +152,6 @@ para_camera_y = NodePath("../../Cameras/AreaPrincipal")
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Transicoes/Salao-Main"]
 position = Vector2(-8, -186)
 shape = SubResource("RectangleShape2D_id35g")
-
-[node name="OtimizadorSprite" type="VisibleOnScreenEnabler2D" parent="Transicoes/Salao-Main"]
-position = Vector2(34.5, 0)
-scale = Vector2(2.45, 1)
-script = ExtResource("18_0he43")
-metadata/_custom_type_script = "uid://b2ls33ys55oyt"
 
 [node name="Salao-Canto" parent="Transicoes" node_paths=PackedStringArray("de_camera_x", "para_camera_y") instance=ExtResource("17_id35g")]
 position = Vector2(4599, -388)
@@ -187,10 +172,6 @@ para_camera_y = NodePath("../../Cameras/AreaAberta")
 position = Vector2(-8, -186)
 shape = SubResource("RectangleShape2D_id35g")
 
-[node name="OtimizadorSprite" type="VisibleOnScreenEnabler2D" parent="Transicoes/Canto-Salao"]
-script = ExtResource("18_0he43")
-metadata/_custom_type_script = "uid://b2ls33ys55oyt"
-
 [node name="MeioSalao" parent="Transicoes" node_paths=PackedStringArray("de_camera_x", "para_camera_y") instance=ExtResource("17_id35g")]
 position = Vector2(2957, -388)
 de_camera_x = NodePath("../../Cameras/AreaPrincipal")
@@ -209,10 +190,6 @@ posicao = Vector2(300, 0)
 position = Vector2(-23, -189)
 shape = SubResource("RectangleShape2D_77bok")
 
-[node name="OtimizadorSprite" type="VisibleOnScreenEnabler2D" parent="Transicoes/TransicaoFase"]
-script = ExtResource("18_0he43")
-metadata/_custom_type_script = "uid://b2ls33ys55oyt"
-
 [node name="TransicaoFase2" parent="Transicoes" instance=ExtResource("10_wqlrc")]
 position = Vector2(-497, -1570)
 vertical = true
@@ -222,10 +199,6 @@ posicao = Vector2(13, 71)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Transicoes/TransicaoFase2"]
 position = Vector2(-16.5, -246)
 shape = SubResource("RectangleShape2D_bajew")
-
-[node name="OtimizadorSprite" type="VisibleOnScreenEnabler2D" parent="Transicoes/TransicaoFase2"]
-script = ExtResource("18_0he43")
-metadata/_custom_type_script = "uid://b2ls33ys55oyt"
 
 [node name="Props" type="Node" parent="."]
 
@@ -257,7 +230,7 @@ debug_color = Color(0, 0.6, 0.701961, 0)
 
 [node name="AreaPrincipal" type="Node2D" parent="Cameras" node_paths=PackedStringArray("follow_target")]
 top_level = true
-position = Vector2(-1018, -469)
+position = Vector2(-146, -534)
 script = ExtResource("9_2ryh1")
 priority = 1
 follow_mode = 2
@@ -288,14 +261,12 @@ metadata/_custom_type_script = "uid://bhexx6mj1xv3q"
 
 [node name="HUD" parent="Interface" instance=ExtResource("9_y1wlx")]
 
-[node name="Fade" parent="Interface" instance=ExtResource("10_bajew")]
-
 [node name="NPC Basico" parent="." instance=ExtResource("18_bp4ag")]
-position = Vector2(5014, -481)
+position = Vector2(4959, -525)
 
 [node name="MainCamera" type="Camera2D" parent="."]
 physics_interpolation_mode = 1
-position = Vector2(-1018, -469)
+position = Vector2(-146, -534)
 process_callback = 0
 limit_left = -2759
 limit_top = -1966
@@ -351,5 +322,27 @@ position = Vector2(-94, -19)
 [node name="InimigoTeste2" parent="." instance=ExtResource("7_2vimk")]
 position = Vector2(-618, -19)
 
+[node name="Armadilha" parent="." node_paths=PackedStringArray("spawn_points") instance=ExtResource("24_tkd1t")]
+position = Vector2(-1435, 106)
+spawn_points = [NodePath("Respawn1"), NodePath("Respawn2")]
+
+[node name="Respawn1" type="Area2D" parent="Armadilha"]
+position = Vector2(213, -376)
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Armadilha/Respawn1"]
+position = Vector2(0, -497)
+shape = SubResource("RectangleShape2D_wxyel")
+
+[node name="Respawn2" type="Area2D" parent="Armadilha"]
+position = Vector2(-168, -505)
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Armadilha/Respawn2"]
+position = Vector2(0, -497)
+shape = SubResource("RectangleShape2D_wxyel")
+
 [node name="Player" parent="." instance=ExtResource("3_2vimk")]
-position = Vector2(-1018, -42)
+position = Vector2(-146, -434)

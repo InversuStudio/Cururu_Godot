@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=4 uid="uid://ctta1hdr8ocdq"]
+[gd_scene load_steps=13 format=4 uid="uid://ctta1hdr8ocdq"]
 
 [ext_resource type="PackedScene" uid="uid://nohq28uk7lfk" path="res://Objetos/Entidades/Player.tscn" id="1_usrra"]
 [ext_resource type="Texture2D" uid="uid://c374cwih425cq" path="res://Sprites/Cenário/Tilemaps/Base.png" id="2_qebi2"]
@@ -7,7 +7,6 @@
 [ext_resource type="Script" uid="uid://bd046eokvcnu2" path="res://addons/phantom_camera/scripts/phantom_camera_host/phantom_camera_host.gd" id="6_hqvp8"]
 [ext_resource type="PackedScene" uid="uid://1apfpwlqocxn" path="res://Objetos/Funcionalidade/TransicaoFase.tscn" id="7_w1p45"]
 [ext_resource type="PackedScene" uid="uid://bs5i45df7rwnf" path="res://UI/HUD.tscn" id="8_lseys"]
-[ext_resource type="Script" uid="uid://cviskiwh21kxe" path="res://Scripts/Componentes/Fade.gd" id="9_hqvp8"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_brlxw"]
 size = Vector2(3322, 6241)
@@ -230,14 +229,3 @@ offset_left = -6.0
 offset_top = -2.0
 offset_right = -6.0
 offset_bottom = -2.0
-
-[node name="Fade" type="ColorRect" parent="UIGAME"]
-anchors_preset = -1
-anchor_right = 0.262
-anchor_bottom = 0.168
-offset_right = 0.959961
-offset_bottom = -0.440018
-color = Color(1, 1, 1, 0)
-script = ExtResource("9_hqvp8")
-metadata/_custom_type_script = "uid://cviskiwh21kxe"
-metadata/_edit_use_anchors_ = true

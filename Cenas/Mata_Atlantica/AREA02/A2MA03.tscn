@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=4 uid="uid://vvj50hvchkhj"]
+[gd_scene load_steps=15 format=4 uid="uid://vvj50hvchkhj"]
 
 [ext_resource type="PackedScene" uid="uid://1apfpwlqocxn" path="res://Objetos/Funcionalidade/TransicaoFase.tscn" id="1_5f3ns"]
 [ext_resource type="Texture2D" uid="uid://c374cwih425cq" path="res://Sprites/Cenário/Tilemaps/Base.png" id="2_axx3v"]
@@ -9,7 +9,6 @@
 [ext_resource type="PackedScene" uid="uid://bu62qgilsxetf" path="res://Objetos/Entidades/Escorpiao.tscn" id="7_awfgj"]
 [ext_resource type="PackedScene" uid="uid://bjvnm0aydr0vd" path="res://Objetos/Entidades/Morcego.tscn" id="8_5f3ns"]
 [ext_resource type="PackedScene" uid="uid://bs5i45df7rwnf" path="res://UI/HUD.tscn" id="10_ynw3k"]
-[ext_resource type="Script" uid="uid://cviskiwh21kxe" path="res://Scripts/Componentes/Fade.gd" id="11_wggdn"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_adag1"]
 size = Vector2(7035.5, 3181)
@@ -250,14 +249,3 @@ offset_left = -6.0
 offset_top = -2.0
 offset_right = -6.0
 offset_bottom = -2.0
-
-[node name="Fade" type="ColorRect" parent="UIGAME"]
-anchors_preset = -1
-anchor_right = 0.262
-anchor_bottom = 0.168
-offset_right = 0.959961
-offset_bottom = -0.440018
-color = Color(1, 1, 1, 0)
-script = ExtResource("11_wggdn")
-metadata/_custom_type_script = "uid://cviskiwh21kxe"
-metadata/_edit_use_anchors_ = true

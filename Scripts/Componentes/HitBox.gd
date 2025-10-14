@@ -3,8 +3,6 @@ extends Area2D
 
 ## Dano aplicado a uma HurtBox
 @export var dano: int = 1
-## Força de vibração da tela
-@export var screenshake : float = 0.0
 ## Hurtbox a ser ignorada
 @export var ignore : HurtBox = null
 ## Efeito sonoro
@@ -23,8 +21,6 @@ func _on_area_entered(area: Area2D) -> void:
 		# Toca som
 		if sfx:
 			$SFX.play()
-		# Se screenshake for maior que 0, aplicar vibração na tela
-		if screenshake > 0: aplica_shake()
 	
 # FUNÇÃO DE APLICAR SCREEN SHAKE
 func aplica_shake():

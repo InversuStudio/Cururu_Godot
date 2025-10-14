@@ -1,9 +1,8 @@
-[gd_scene load_steps=12 format=4 uid="uid://b5am6yc3iwy8e"]
+[gd_scene load_steps=11 format=4 uid="uid://b5am6yc3iwy8e"]
 
 [ext_resource type="Texture2D" uid="uid://c374cwih425cq" path="res://Sprites/Cenário/Tilemaps/Base.png" id="1_7yx4j"]
 [ext_resource type="PackedScene" uid="uid://nohq28uk7lfk" path="res://Objetos/Entidades/Player.tscn" id="2_2tgjk"]
 [ext_resource type="PackedScene" uid="uid://bs5i45df7rwnf" path="res://UI/HUD.tscn" id="3_ogowb"]
-[ext_resource type="PackedScene" uid="uid://phfxidwhdpy7" path="res://Objetos/Funcionalidade/CompFade.tscn" id="4_qmcwu"]
 [ext_resource type="Script" uid="uid://bhexx6mj1xv3q" path="res://addons/phantom_camera/scripts/phantom_camera/phantom_camera_2d.gd" id="5_jgbtl"]
 [ext_resource type="Script" uid="uid://8umksf8e80fw" path="res://addons/phantom_camera/scripts/resources/tween_resource.gd" id="6_g87lo"]
 [ext_resource type="Script" uid="uid://bd046eokvcnu2" path="res://addons/phantom_camera/scripts/phantom_camera_host/phantom_camera_host.gd" id="7_2hqmh"]
@@ -200,5 +199,3 @@ metadata/_custom_type_script = "uid://bd046eokvcnu2"
 [node name="Interface" type="CanvasLayer" parent="."]
 
 [node name="HUD" parent="Interface" instance=ExtResource("3_ogowb")]
-
-[node name="Fade" parent="Interface" instance=ExtResource("4_qmcwu")]
