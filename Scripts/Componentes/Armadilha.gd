@@ -7,7 +7,7 @@ extends Node2D
 var ponto:Vector2
 
 func _ready() -> void:
-	if spawn_points.size() > 0:
+	if spawn_points[0] != null and spawn_points[1] != null:
 		for sp:Area2D in spawn_points:
 			sp.body_entered.connect(func(body:Node2D):
 				if body.is_in_group("Player"):
