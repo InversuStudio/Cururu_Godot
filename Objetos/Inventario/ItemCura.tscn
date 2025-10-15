@@ -14,3 +14,4 @@ script_logica = NodePath("Logica")
 
 [node name="Logica" type="Node" parent="."]
 script = ExtResource("3_tfem3")
+valor_cura = 2
