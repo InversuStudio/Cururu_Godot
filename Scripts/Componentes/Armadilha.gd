@@ -9,6 +9,8 @@ var ponto:Vector2
 func _ready() -> void:
 	if spawn_points[0] != null and spawn_points[1] != null:
 		for sp:Area2D in spawn_points:
+			sp.collision_layer = 0
+			sp.collision_mask = 2
 			sp.body_entered.connect(func(body:Node2D):
 				if body.is_in_group("Player"):
 					ponto = sp.global_position)

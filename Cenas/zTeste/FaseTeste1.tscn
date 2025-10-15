@@ -73,8 +73,8 @@ size = Vector2(360, 62)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_u25g5"]
 size = Vector2(353, 22)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_wxyel"]
-size = Vector2(62, 1025)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tu5lb"]
+size = Vector2(92, 1026)
 
 [node name="FaseTeste" type="Node2D"]
 
@@ -234,7 +234,7 @@ position = Vector2(-146, -534)
 script = ExtResource("9_2ryh1")
 priority = 1
 follow_mode = 2
-follow_target = NodePath("../../Player")
+follow_target = NodePath("../../Entidades/Player")
 tween_resource = SubResource("Resource_0ho33")
 tween_on_load = false
 follow_offset = Vector2(0, -100)
@@ -316,33 +316,31 @@ delay = 1.5
 position = Vector2(-0.5, -33)
 shape = SubResource("RectangleShape2D_u25g5")
 
-[node name="InimigoTeste" parent="." instance=ExtResource("7_2vimk")]
+[node name="Entidades" type="Node2D" parent="."]
+
+[node name="Player" parent="Entidades" instance=ExtResource("3_2vimk")]
+position = Vector2(-146, -434)
+
+[node name="InimigoTeste" parent="Entidades" instance=ExtResource("7_2vimk")]
 position = Vector2(-94, -19)
 
-[node name="InimigoTeste2" parent="." instance=ExtResource("7_2vimk")]
+[node name="InimigoTeste2" parent="Entidades" instance=ExtResource("7_2vimk")]
 position = Vector2(-618, -19)
 
 [node name="Armadilha" parent="." node_paths=PackedStringArray("spawn_points") instance=ExtResource("24_tkd1t")]
 position = Vector2(-1435, 106)
-spawn_points = [NodePath("Respawn1"), NodePath("Respawn2")]
+spawn_points = [NodePath("Area2D"), NodePath("Area2D2")]
 
-[node name="Respawn1" type="Area2D" parent="Armadilha"]
-position = Vector2(213, -376)
-collision_layer = 0
-collision_mask = 2
+[node name="Area2D" type="Area2D" parent="Armadilha"]
+position = Vector2(-166, -500)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Armadilha/Respawn1"]
-position = Vector2(0, -497)
-shape = SubResource("RectangleShape2D_wxyel")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Armadilha/Area2D"]
+position = Vector2(0, -441.5)
+shape = SubResource("RectangleShape2D_tu5lb")
 
-[node name="Respawn2" type="Area2D" parent="Armadilha"]
-position = Vector2(-168, -505)
-collision_layer = 0
-collision_mask = 2
+[node name="Area2D2" type="Area2D" parent="Armadilha"]
+position = Vector2(220, -373)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Armadilha/Respawn2"]
-position = Vector2(0, -497)
-shape = SubResource("RectangleShape2D_wxyel")
-
-[node name="Player" parent="." instance=ExtResource("3_2vimk")]
-position = Vector2(-146, -434)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Armadilha/Area2D2"]
+position = Vector2(0, -503)
+shape = SubResource("RectangleShape2D_tu5lb")
