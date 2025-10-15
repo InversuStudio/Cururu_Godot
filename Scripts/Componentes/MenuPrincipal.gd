@@ -7,6 +7,8 @@ func _ready() -> void:
 	if data == "":
 		$HBoxContainer/Continuar.disabled = true
 	#$HBoxContainer/NovoJogo.focus_mode
+	$HBoxContainer/NovoJogo.grab_focus()
+	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 
 func _on_main_pressed() -> void:
 	# Deleta Save

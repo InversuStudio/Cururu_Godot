@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://drbbywyl2uanh"]
+
+[ext_resource type="Texture2D" uid="uid://c3tl3oddronfh" path="res://icon.svg" id="1_4l3ed"]
+[ext_resource type="Script" uid="uid://bbpp58wkqoall" path="res://Scripts/Inventario/BaseItemInventario.gd" id="2_ngm12"]
+
+[node name="ItemInventario" type="TextureButton"]
+custom_minimum_size = Vector2(200, 200)
+texture_normal = ExtResource("1_4l3ed")
+ignore_texture_size = true
+stretch_mode = 0
+script = ExtResource("2_ngm12")

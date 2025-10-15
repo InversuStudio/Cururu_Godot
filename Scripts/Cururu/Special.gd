@@ -31,12 +31,15 @@ func Update(_delta:float) -> State:
 	return null
 
 func FixedUpdate(delta:float) -> State:
+	if Input.is_action_just_released("pulo"):
+		parent.velocity.y = 0.0
 	# Aplica gravidade de queda
-	if !parent.is_on_floor():
-		parent.velocity.y += parent.fall_gravity * delta
-		#parent.velocity.x = move_toward(parent.velocity.x, 0, parent.air_speed * delta)
-	else:
+	if parent.is_on_floor():
 		parent.velocity.x = move_toward(parent.velocity.x, 0, parent.decel * delta)
+	elif parent.velocity.y >= 0:
+		parent.velocity.y += parent.fall_gravity * delta
+	else:
+		parent.velocity.y += parent.jump_gravity * delta
 	return null
 
 func _on_anim_animation_finished(anim_name: StringName) -> void:

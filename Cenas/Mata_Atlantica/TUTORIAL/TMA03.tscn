@@ -1,4 +1,4 @@
-[gd_scene load_steps=40 format=4 uid="uid://nqosq2wj0auk"]
+[gd_scene load_steps=39 format=4 uid="uid://nqosq2wj0auk"]
 
 [ext_resource type="Texture2D" uid="uid://cqu5scrrmr5n5" path="res://Sprites/Cenário/Mata_Atlantica/Background/FUNDOCEU.png" id="1_4e4qg"]
 [ext_resource type="Texture2D" uid="uid://c374cwih425cq" path="res://Sprites/Cenário/Tilemaps/Base.png" id="1_vftmf"]
@@ -9,7 +9,6 @@
 [ext_resource type="Texture2D" uid="uid://ctar30vsktrrb" path="res://Sprites/Cenário/Mata_Atlantica/Background/FUNDONEVOA2.png" id="6_rnx0k"]
 [ext_resource type="Texture2D" uid="uid://rbtvfm4m7ft" path="res://Sprites/VFX/Iluminação/SOMBRA2.png" id="7_op0pn"]
 [ext_resource type="Texture2D" uid="uid://dyv700lptbkyq" path="res://Sprites/Cenário/Mata_Atlantica/Background/composição2.png" id="8_l7gx4"]
-[ext_resource type="Script" uid="uid://b2ls33ys55oyt" path="res://Scripts/Componentes/OtimizadorSprite.gd" id="9_ygs8d"]
 [ext_resource type="Texture2D" uid="uid://ggamtf0lg07" path="res://Sprites/Cenário/zSem_Uso/cipó01.png" id="10_pjocn"]
 [ext_resource type="PackedScene" uid="uid://1apfpwlqocxn" path="res://Objetos/Funcionalidade/TransicaoFase.tscn" id="11_gwkgh"]
 [ext_resource type="Texture2D" uid="uid://rwmi1ggde5dy" path="res://Sprites/VFX/Iluminação/PORTAL.png" id="12_flheb"]
@@ -537,15 +536,6 @@ texture = ExtResource("6_qclta")
 position = Vector2(-4299.3315, -3147.259)
 scale = Vector2(0.9788342, 0.9396906)
 texture = ExtResource("7_op0pn")
-
-[node name="OtimizadorSprite" type="VisibleOnScreenEnabler2D" parent="Background"]
-visible = false
-light_mask = 2
-position = Vector2(112.726074, 135.08054)
-scale = Vector2(114.31099, 91.24398)
-rect = Rect2(-43.163353, -48.66116, 53.163353, 58.66116)
-script = ExtResource("9_ygs8d")
-metadata/_custom_type_script = "uid://b2ls33ys55oyt"
 
 [node name="TransicaoFase2" parent="." instance=ExtResource("11_gwkgh")]
 position = Vector2(-8002, -278)
@@ -1724,12 +1714,6 @@ position = Vector2(-13594, -3514)
 
 [node name="Plataforma3" parent="PlataformaSome2" instance=ExtResource("30_rnx0k")]
 position = Vector2(12, 43)
-
-[node name="Sprite2D" type="Sprite2D" parent="PlataformaSome2"]
-visible = false
-position = Vector2(0.49995422, 35.50001)
-scale = Vector2(1.2515218, 1.2530867)
-texture = ExtResource("30_op0pn")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PlataformaSome2"]
 position = Vector2(16, 11.5)

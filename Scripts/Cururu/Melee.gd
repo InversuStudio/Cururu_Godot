@@ -44,10 +44,14 @@ func Update(_delta:float) -> State:
 	return null
 
 func FixedUpdate(delta:float) -> State:
+	if Input.is_action_just_released("pulo"):
+		parent.velocity.y = 0.0
 	if parent.is_on_floor():
 		parent.velocity.x = move_toward(parent.velocity.x, 0.0, parent.decel * delta)
-	# Aplica gravidade de queda
-	parent.velocity.y += parent.fall_gravity * delta
+	elif parent.velocity.y >= 0:
+		parent.velocity.y += parent.fall_gravity * delta
+	else:
+		parent.velocity.y += parent.jump_gravity * delta
 	return null
 
 # Inicia timer para resetar combo, dentro do AnimationPlayer

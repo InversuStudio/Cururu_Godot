@@ -8,6 +8,8 @@ var coracoes:Array = []
 const sprite_cheio:Texture2D = preload("res://Sprites/UI/HUD/UIHUD-VIDACHEIA.png")
 const sprite_vazio:Texture2D = preload("res://Sprites/UI/HUD/UIHUD-VIDAVAZIZ.png")
 
+@onready var inv: GridContainer = %Inv
+
 func _input(_event: InputEvent) -> void:
 	var cena:Node = get_tree().current_scene
 	if Input.is_action_just_pressed("pause"):
@@ -19,6 +21,8 @@ func _input(_event: InputEvent) -> void:
 			%Pause.hide()
 
 func _ready() -> void:
+	%Pause.connect("visibility_changed", func():
+		if %Pause.visible: %Retornar.grab_focus())
 	%Pause.hide()
 	var player:CharacterBody2D = get_tree().get_first_node_in_group("Player")
 	# Se achar Player na cena...

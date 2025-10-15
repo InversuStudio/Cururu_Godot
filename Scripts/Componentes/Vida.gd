@@ -19,7 +19,7 @@ func _ready() -> void:
 			vida_atual = GameData.vida_atual
 
 # FUNÇÃO PARA DIMINUIR VIDA
-func RecebeDano(dano:int) -> void:
+func RecebeDano(dano:int = 1) -> void:
 	var vida_antiga:int = vida_atual
 	vida_atual -= dano
 	vida_atual = clampi(vida_atual, 0, vida_max)
@@ -29,7 +29,7 @@ func RecebeDano(dano:int) -> void:
 		Morre()
 
 # FUNÇÃO PARA AUMENTAR VIDA
-func RecebeCura(cura:int) -> void:
+func RecebeCura(cura:int = 1) -> void:
 	var vida_antiga:int = vida_atual
 	vida_atual += cura
 	vida_atual = clampi(vida_atual, 0, vida_max)
