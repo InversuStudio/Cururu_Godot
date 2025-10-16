@@ -1,0 +1,48 @@
+[gd_scene load_steps=8 format=3 uid="uid://c7fydvoibqcaj"]
+
+[ext_resource type="Script" uid="uid://davjnwfncyj66" path="res://Scripts/Componentes/Armadilha.gd" id="1_r0vgv"]
+[ext_resource type="Texture2D" uid="uid://bh73582qpwdem" path="res://Sprites/VFX/MIASMA.png" id="2_r0vgv"]
+[ext_resource type="PackedScene" uid="uid://pc4mgv2nv8af" path="res://Objetos/Funcionalidade/CompHitBox.tscn" id="3_nv8r6"]
+[ext_resource type="AudioStream" uid="uid://w484n11fqypl" path="res://Audio/SFX/MENU INICIAL/selecao_menu.mp3" id="4_r0vgv"]
+[ext_resource type="Script" uid="uid://b2ls33ys55oyt" path="res://Scripts/Componentes/OtimizadorSprite.gd" id="5_l5qm8"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_tkh53"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_r0vgv")
+}],
+"loop": true,
+"name": &"default",
+"speed": 8.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6f5ax"]
+size = Vector2(541.9968, 1034.0001)
+
+[node name="Armadilha" type="Node2D"]
+script = ExtResource("1_r0vgv")
+
+[node name="Sprite" type="AnimatedSprite2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(9.99999, -38.0813)
+scale = Vector2(2.3022223, 2.4568536)
+sprite_frames = SubResource("SpriteFrames_tkh53")
+autoplay = "default"
+
+[node name="HitBox" parent="." instance=ExtResource("3_nv8r6")]
+unique_name_in_owner = true
+sfx = ExtResource("4_r0vgv")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="HitBox"]
+position = Vector2(7, -35)
+rotation = -1.57079
+shape = SubResource("RectangleShape2D_6f5ax")
+debug_color = Color(0.807155, 0.414602, 3.85046e-07, 0.42)
+
+[node name="OtimizadorSprite" type="VisibleOnScreenNotifier2D" parent="."]
+rect = Rect2(-516, -309, 1044, 545)
+script = ExtResource("5_l5qm8")
+metadata/_custom_type_script = "uid://b2ls33ys55oyt"
+
+[connection signal="hit" from="HitBox" to="." method="_on_hit_box_hit"]

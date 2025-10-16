@@ -1,14 +1,17 @@
-[gd_scene load_steps=11 format=4 uid="uid://b5am6yc3iwy8e"]
+[gd_scene load_steps=15 format=4 uid="uid://b5am6yc3iwy8e"]
 
 [ext_resource type="Texture2D" uid="uid://c374cwih425cq" path="res://Sprites/Cenário/Tilemaps/Base.png" id="1_7yx4j"]
+[ext_resource type="PackedScene" uid="uid://cqyub70sv0ofp" path="res://Objetos/Props/SavePoint.tscn" id="2_2hqmh"]
 [ext_resource type="PackedScene" uid="uid://nohq28uk7lfk" path="res://Objetos/Entidades/Player.tscn" id="2_2tgjk"]
 [ext_resource type="PackedScene" uid="uid://bs5i45df7rwnf" path="res://UI/HUD.tscn" id="3_ogowb"]
 [ext_resource type="Script" uid="uid://bhexx6mj1xv3q" path="res://addons/phantom_camera/scripts/phantom_camera/phantom_camera_2d.gd" id="5_jgbtl"]
 [ext_resource type="Script" uid="uid://8umksf8e80fw" path="res://addons/phantom_camera/scripts/resources/tween_resource.gd" id="6_g87lo"]
 [ext_resource type="Script" uid="uid://bd046eokvcnu2" path="res://addons/phantom_camera/scripts/phantom_camera_host/phantom_camera_host.gd" id="7_2hqmh"]
+[ext_resource type="PackedScene" uid="uid://bnm668fws2641" path="res://Objetos/Props/Armadilha.tscn" id="7_jgbtl"]
+[ext_resource type="PackedScene" uid="uid://bei1s8te3cwko" path="res://Sprites/Cenário/Mata_Atlantica/Interativos/plataforma.tscn" id="8_g87lo"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jgbtl"]
-size = Vector2(2602, 1735)
+size = Vector2(10347, 1735)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ogowb"]
 texture = ExtResource("1_7yx4j")
@@ -147,23 +150,408 @@ tile_size = Vector2i(128, 128)
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_ogowb")
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g87lo"]
+size = Vector2(113.5, 1032)
+
 [sub_resource type="Resource" id="Resource_1m0sm"]
 script = ExtResource("6_g87lo")
 
 [node name="MA_2-6" type="Node2D"]
 
 [node name="LimiteCamera" type="CollisionShape2D" parent="."]
-position = Vector2(1345, -1023.5)
+position = Vector2(5217.5, -1023.5)
 shape = SubResource("RectangleShape2D_jgbtl")
 debug_color = Color(0, 0.6, 0.69803923, 0)
 
+[node name="Armadilha" parent="." node_paths=PackedStringArray("spawn_points") instance=ExtResource("7_jgbtl")]
+position = Vector2(2242, -399)
+scale = Vector2(0.6, 0.6)
+spawn_points = [NodePath("../REspawn"), NodePath("../REspawn2")]
+
+[node name="Armadilha36" parent="." node_paths=PackedStringArray("spawn_points") instance=ExtResource("7_jgbtl")]
+position = Vector2(2210, -514)
+scale = Vector2(0.6, 0.6)
+spawn_points = [NodePath("../REspawn"), NodePath("../REspawn2")]
+
+[node name="Armadilha2" parent="." node_paths=PackedStringArray("spawn_points") instance=ExtResource("7_jgbtl")]
+position = Vector2(2356, -284)
+scale = Vector2(0.6, 0.6)
+spawn_points = [NodePath("../REspawn"), NodePath("../REspawn2")]
+
+[node name="Armadilha34" parent="." node_paths=PackedStringArray("spawn_points") instance=ExtResource("7_jgbtl")]
+position = Vector2(2482, -222.00002)
+scale = Vector2(0.6, 0.6)
+spawn_points = [NodePath("../REspawn"), NodePath("../REspawn2")]
+
+[node name="Armadilha3" parent="." node_paths=PackedStringArray("spawn_points") instance=ExtResource("7_jgbtl")]
+position = Vector2(2883, -924)
+scale = Vector2(0.6, 0.6)
+spawn_points = [NodePath("../REspawn"), NodePath("../REspawn2")]
+
+[node name="Armadilha26" parent="." node_paths=PackedStringArray("spawn_points") instance=ExtResource("7_jgbtl")]
+position = Vector2(2895, -1009)
+scale = Vector2(0.6, 0.6)
+spawn_points = [NodePath("../REspawn"), NodePath("../REspawn2")]
+
+[node name="Armadilha27" parent="." node_paths=PackedStringArray("spawn_points") instance=ExtResource("7_jgbtl")]
+position = Vector2(2982, -1018)
+scale = Vector2(0.6, 0.6)
+spawn_points = [NodePath("../REspawn"), NodePath("../REspawn2")]
+
+[node name="Armadilha28" parent="." node_paths=PackedStringArray("spawn_points") instance=ExtResource("7_jgbtl")]
+position = Vector2(2966, -942)
+scale = Vector2(0.6, 0.6)
+spawn_points = [NodePath("../REspawn"), NodePath("../REspawn2")]
+
+[node name="Armadilha55" parent="." node_paths=PackedStringArray("spawn_points") instance=ExtResource("7_jgbtl")]
+position = Vector2(3005, -610.00006)
+scale = Vector2(0.6, 0.6)
+spawn_points = [NodePath("../REspawn"), NodePath("../REspawn2")]
+
+[node name="Armadilha24" parent="." node_paths=PackedStringArray("spawn_points") instance=ExtResource("7_jgbtl")]
+position = Vector2(2964, -795)
+scale = Vector2(0.6, 0.6)
+spawn_points = [NodePath("../REspawn"), NodePath("../REspawn2")]
+
+[node name="Armadilha56" parent="." node_paths=PackedStringArray("spawn_points") instance=ExtResource("7_jgbtl")]
+position = Vector2(3058, -411.00006)
+scale = Vector2(0.6, 0.6)
+spawn_points = [NodePath("../REspawn"), NodePath("../REspawn2")]
+
+[node name="Armadilha29" parent="." node_paths=PackedStringArray("spawn_points") instance=ExtResource("7_jgbtl")]
+position = Vector2(2852, -781)
+scale = Vector2(0.6, 0.6)
+spawn_points = [NodePath("../REspawn"), NodePath("../REspawn2")]
+
+[node name="Armadilha30" parent="." node_paths=PackedStringArray("spawn_points") instance=ExtResource("7_jgbtl")]
+position = Vector2(2841, -607)
+scale = Vector2(0.6, 0.6)
+spawn_points = [NodePath("../REspawn"), NodePath("../REspawn2")]
+
+[node name="Armadilha31" parent="." node_paths=PackedStringArray("spawn_points") instance=ExtResource("7_jgbtl")]
+position = Vector2(2905, -538)
+scale = Vector2(0.6, 0.6)
+spawn_points = [NodePath("../REspawn"), NodePath("../REspawn2")]
+
+[node name="Armadilha32" parent="." node_paths=PackedStringArray("spawn_points") instance=ExtResource("7_jgbtl")]
+position = Vector2(2841, -359)
+scale = Vector2(0.6, 0.6)
+spawn_points = [NodePath("../REspawn"), NodePath("../REspawn2")]
+
+[node name="Armadilha33" parent="." node_paths=PackedStringArray("spawn_points") instance=ExtResource("7_jgbtl")]
+position = Vector2(2722, -197)
+scale = Vector2(0.6, 0.6)
+spawn_points = [NodePath("../REspawn"), NodePath("../REspawn2")]
+
+[node name="Armadilha35" parent="." node_paths=PackedStringArray("spawn_points") instance=ExtResource("7_jgbtl")]
+position = Vector2(2571, -188)
+scale = Vector2(0.6, 0.6)
+spawn_points = [NodePath("../REspawn"), NodePath("../REspawn2")]
+
+[node name="Armadilha23" parent="." node_paths=PackedStringArray("spawn_points") instance=ExtResource("7_jgbtl")]
+position = Vector2(2897, -1627)
+scale = Vector2(0.6, 0.6)
+spawn_points = [NodePath("../REspawn"), NodePath("../REspawn2")]
+
+[node name="Armadilha37" parent="." node_paths=PackedStringArray("spawn_points") instance=ExtResource("7_jgbtl")]
+position = Vector2(3033, -1645)
+scale = Vector2(0.6, 0.6)
+spawn_points = [NodePath("../REspawn"), NodePath("../REspawn2")]
+
+[node name="Armadilha38" parent="." node_paths=PackedStringArray("spawn_points") instance=ExtResource("7_jgbtl")]
+position = Vector2(2891, -1750)
+scale = Vector2(0.6, 0.6)
+spawn_points = [NodePath("../REspawn"), NodePath("../REspawn2")]
+
+[node name="Armadilha45" parent="." node_paths=PackedStringArray("spawn_points") instance=ExtResource("7_jgbtl")]
+position = Vector2(2717, -1821)
+scale = Vector2(0.6, 0.6)
+spawn_points = [NodePath("../REspawn"), NodePath("../REspawn2")]
+
+[node name="Armadilha46" parent="." node_paths=PackedStringArray("spawn_points") instance=ExtResource("7_jgbtl")]
+position = Vector2(3236, -1804.0001)
+scale = Vector2(0.6, 0.6)
+spawn_points = [NodePath("../REspawn"), NodePath("../REspawn2")]
+
+[node name="Armadilha39" parent="." node_paths=PackedStringArray("spawn_points") instance=ExtResource("7_jgbtl")]
+position = Vector2(3042, -1807)
+scale = Vector2(0.6, 0.6)
+spawn_points = [NodePath("../REspawn"), NodePath("../REspawn2")]
+
+[node name="Armadilha4" parent="." node_paths=PackedStringArray("spawn_points") instance=ExtResource("7_jgbtl")]
+position = Vector2(3090, -268)
+scale = Vector2(0.6, 0.6)
+spawn_points = [NodePath("../REspawn"), NodePath("../REspawn2")]
+
+[node name="Armadilha5" parent="." node_paths=PackedStringArray("spawn_points") instance=ExtResource("7_jgbtl")]
+position = Vector2(3505, -251)
+scale = Vector2(0.6, 0.6)
+spawn_points = [NodePath("../REspawn"), NodePath("../REspawn2")]
+
+[node name="Armadilha6" parent="." node_paths=PackedStringArray("spawn_points") instance=ExtResource("7_jgbtl")]
+position = Vector2(3905, -251)
+scale = Vector2(0.6, 0.6)
+spawn_points = [NodePath("../REspawn"), NodePath("../REspawn2")]
+
+[node name="Armadilha7" parent="." node_paths=PackedStringArray("spawn_points") instance=ExtResource("7_jgbtl")]
+position = Vector2(4245, -251)
+scale = Vector2(0.6, 0.6)
+spawn_points = [NodePath("../REspawn"), NodePath("../REspawn2")]
+
+[node name="Armadilha8" parent="." node_paths=PackedStringArray("spawn_points") instance=ExtResource("7_jgbtl")]
+position = Vector2(4608, -251)
+scale = Vector2(0.6, 0.6)
+spawn_points = [NodePath("../REspawn"), NodePath("../REspawn2")]
+
+[node name="Armadilha9" parent="." node_paths=PackedStringArray("spawn_points") instance=ExtResource("7_jgbtl")]
+position = Vector2(5008, -251)
+scale = Vector2(0.6, 0.6)
+spawn_points = [NodePath("../REspawn"), NodePath("../REspawn2")]
+
+[node name="Armadilha10" parent="." node_paths=PackedStringArray("spawn_points") instance=ExtResource("7_jgbtl")]
+position = Vector2(5371, -251)
+scale = Vector2(0.6, 0.6)
+spawn_points = [NodePath("../REspawn"), NodePath("../REspawn2")]
+
+[node name="Armadilha13" parent="." node_paths=PackedStringArray("spawn_points") instance=ExtResource("7_jgbtl")]
+position = Vector2(5777, -339)
+scale = Vector2(0.6, 0.6)
+spawn_points = [NodePath("../REspawn"), NodePath("../REspawn2")]
+
+[node name="Armadilha14" parent="." node_paths=PackedStringArray("spawn_points") instance=ExtResource("7_jgbtl")]
+position = Vector2(6106, -290)
+scale = Vector2(0.6, 0.6)
+spawn_points = [NodePath("../REspawn"), NodePath("../REspawn2")]
+
+[node name="Armadilha15" parent="." node_paths=PackedStringArray("spawn_points") instance=ExtResource("7_jgbtl")]
+position = Vector2(6435, -272)
+scale = Vector2(0.6, 0.6)
+spawn_points = [NodePath("../REspawn"), NodePath("../REspawn2")]
+
+[node name="Armadilha16" parent="." node_paths=PackedStringArray("spawn_points") instance=ExtResource("7_jgbtl")]
+position = Vector2(6756, -382)
+scale = Vector2(0.6, 0.6)
+spawn_points = [NodePath("../REspawn"), NodePath("../REspawn2")]
+
+[node name="Armadilha57" parent="." node_paths=PackedStringArray("spawn_points") instance=ExtResource("7_jgbtl")]
+position = Vector2(6848, -359)
+scale = Vector2(0.6, 0.6)
+spawn_points = [NodePath("../REspawn"), NodePath("../REspawn2")]
+
+[node name="Armadilha18" parent="." node_paths=PackedStringArray("spawn_points") instance=ExtResource("7_jgbtl")]
+position = Vector2(6751.0005, -1107)
+scale = Vector2(0.6, 0.6)
+spawn_points = [NodePath("../REspawn"), NodePath("../REspawn2")]
+
+[node name="Armadilha60" parent="." node_paths=PackedStringArray("spawn_points") instance=ExtResource("7_jgbtl")]
+position = Vector2(6880, -1218)
+scale = Vector2(0.6, 0.6)
+spawn_points = [NodePath("../REspawn"), NodePath("../REspawn2")]
+
+[node name="Armadilha62" parent="." node_paths=PackedStringArray("spawn_points") instance=ExtResource("7_jgbtl")]
+position = Vector2(6836, -1378)
+scale = Vector2(0.6, 0.6)
+spawn_points = [NodePath("../REspawn"), NodePath("../REspawn2")]
+
+[node name="Armadilha68" parent="." node_paths=PackedStringArray("spawn_points") instance=ExtResource("7_jgbtl")]
+position = Vector2(6877, -1648)
+scale = Vector2(0.6, 0.6)
+spawn_points = [NodePath("../REspawn"), NodePath("../REspawn2")]
+
+[node name="Armadilha70" parent="." node_paths=PackedStringArray("spawn_points") instance=ExtResource("7_jgbtl")]
+position = Vector2(7229, -1839)
+scale = Vector2(0.6, 0.6)
+spawn_points = [NodePath("../REspawn"), NodePath("../REspawn2")]
+
+[node name="Armadilha67" parent="." node_paths=PackedStringArray("spawn_points") instance=ExtResource("7_jgbtl")]
+position = Vector2(6827, -1563)
+scale = Vector2(0.6, 0.6)
+spawn_points = [NodePath("../REspawn"), NodePath("../REspawn2")]
+
+[node name="Armadilha69" parent="." node_paths=PackedStringArray("spawn_points") instance=ExtResource("7_jgbtl")]
+position = Vector2(7053, -1795.0001)
+scale = Vector2(0.6, 0.6)
+spawn_points = [NodePath("../REspawn"), NodePath("../REspawn2")]
+
+[node name="Armadilha58" parent="." node_paths=PackedStringArray("spawn_points") instance=ExtResource("7_jgbtl")]
+position = Vector2(6822, -1099)
+scale = Vector2(0.6, 0.6)
+spawn_points = [NodePath("../REspawn"), NodePath("../REspawn2")]
+
+[node name="Armadilha59" parent="." node_paths=PackedStringArray("spawn_points") instance=ExtResource("7_jgbtl")]
+position = Vector2(6734.0005, -1199)
+scale = Vector2(0.6, 0.6)
+spawn_points = [NodePath("../REspawn"), NodePath("../REspawn2")]
+
+[node name="Armadilha61" parent="." node_paths=PackedStringArray("spawn_points") instance=ExtResource("7_jgbtl")]
+position = Vector2(6719, -1355)
+scale = Vector2(0.6, 0.6)
+spawn_points = [NodePath("../REspawn"), NodePath("../REspawn2")]
+
+[node name="Armadilha63" parent="." node_paths=PackedStringArray("spawn_points") instance=ExtResource("7_jgbtl")]
+position = Vector2(6735, -1500)
+scale = Vector2(0.6, 0.6)
+spawn_points = [NodePath("../REspawn"), NodePath("../REspawn2")]
+
+[node name="Armadilha64" parent="." node_paths=PackedStringArray("spawn_points") instance=ExtResource("7_jgbtl")]
+position = Vector2(6666.0005, -1673)
+scale = Vector2(0.6, 0.6)
+spawn_points = [NodePath("../REspawn"), NodePath("../REspawn2")]
+
+[node name="Armadilha66" parent="." node_paths=PackedStringArray("spawn_points") instance=ExtResource("7_jgbtl")]
+position = Vector2(6333.0005, -1839)
+scale = Vector2(0.6, 0.6)
+spawn_points = [NodePath("../REspawn"), NodePath("../REspawn2")]
+
+[node name="Armadilha65" parent="." node_paths=PackedStringArray("spawn_points") instance=ExtResource("7_jgbtl")]
+position = Vector2(6497.0005, -1755)
+scale = Vector2(0.6, 0.6)
+spawn_points = [NodePath("../REspawn"), NodePath("../REspawn2")]
+
+[node name="Armadilha17" parent="." node_paths=PackedStringArray("spawn_points") instance=ExtResource("7_jgbtl")]
+position = Vector2(6970.0005, -185)
+scale = Vector2(0.6, 0.6)
+spawn_points = [NodePath("../REspawn"), NodePath("../REspawn2")]
+
+[node name="Armadilha19" parent="." node_paths=PackedStringArray("spawn_points") instance=ExtResource("7_jgbtl")]
+position = Vector2(7294, -142)
+scale = Vector2(0.6, 0.6)
+spawn_points = [NodePath("../REspawn"), NodePath("../REspawn2")]
+
+[node name="Armadilha20" parent="." node_paths=PackedStringArray("spawn_points") instance=ExtResource("7_jgbtl")]
+position = Vector2(7655, -142)
+scale = Vector2(0.6, 0.6)
+spawn_points = [NodePath("../REspawn"), NodePath("../REspawn2")]
+
+[node name="Armadilha21" parent="." node_paths=PackedStringArray("spawn_points") instance=ExtResource("7_jgbtl")]
+position = Vector2(8016, -142)
+scale = Vector2(0.6, 0.6)
+spawn_points = [NodePath("../REspawn"), NodePath("../REspawn2")]
+
+[node name="Armadilha22" parent="." node_paths=PackedStringArray("spawn_points") instance=ExtResource("7_jgbtl")]
+position = Vector2(8322, -142)
+scale = Vector2(0.6, 0.6)
+spawn_points = [NodePath("../REspawn"), NodePath("../REspawn2")]
+
+[node name="Armadilha11" parent="." node_paths=PackedStringArray("spawn_points") instance=ExtResource("7_jgbtl")]
+position = Vector2(5450, -940)
+scale = Vector2(0.6, 0.6)
+spawn_points = [NodePath("../REspawn"), NodePath("../REspawn2")]
+
+[node name="Armadilha47" parent="." node_paths=PackedStringArray("spawn_points") instance=ExtResource("7_jgbtl")]
+position = Vector2(5564, -914)
+scale = Vector2(0.6, 0.6)
+spawn_points = [NodePath("../REspawn"), NodePath("../REspawn2")]
+
+[node name="Armadilha49" parent="." node_paths=PackedStringArray("spawn_points") instance=ExtResource("7_jgbtl")]
+position = Vector2(5578, -763)
+scale = Vector2(0.6, 0.6)
+spawn_points = [NodePath("../REspawn"), NodePath("../REspawn2")]
+
+[node name="Armadilha48" parent="." node_paths=PackedStringArray("spawn_points") instance=ExtResource("7_jgbtl")]
+position = Vector2(5424, -798)
+scale = Vector2(0.6, 0.6)
+spawn_points = [NodePath("../REspawn"), NodePath("../REspawn2")]
+
+[node name="Armadilha25" parent="." node_paths=PackedStringArray("spawn_points") instance=ExtResource("7_jgbtl")]
+position = Vector2(5587, -577)
+scale = Vector2(0.6, 0.6)
+spawn_points = [NodePath("../REspawn"), NodePath("../REspawn2")]
+
+[node name="Armadilha51" parent="." node_paths=PackedStringArray("spawn_points") instance=ExtResource("7_jgbtl")]
+position = Vector2(5658, -456)
+scale = Vector2(0.6, 0.6)
+spawn_points = [NodePath("../REspawn"), NodePath("../REspawn2")]
+
+[node name="Armadilha52" parent="." node_paths=PackedStringArray("spawn_points") instance=ExtResource("7_jgbtl")]
+position = Vector2(5932, -259.00003)
+scale = Vector2(0.6, 0.6)
+spawn_points = [NodePath("../REspawn"), NodePath("../REspawn2")]
+
+[node name="Armadilha53" parent="." node_paths=PackedStringArray("spawn_points") instance=ExtResource("7_jgbtl")]
+position = Vector2(6273, -225)
+scale = Vector2(0.6, 0.6)
+spawn_points = [NodePath("../REspawn"), NodePath("../REspawn2")]
+
+[node name="Armadilha54" parent="." node_paths=PackedStringArray("spawn_points") instance=ExtResource("7_jgbtl")]
+position = Vector2(6614, -236.00002)
+scale = Vector2(0.6, 0.6)
+spawn_points = [NodePath("../REspawn"), NodePath("../REspawn2")]
+
+[node name="Armadilha50" parent="." node_paths=PackedStringArray("spawn_points") instance=ExtResource("7_jgbtl")]
+position = Vector2(5371, -580)
+scale = Vector2(0.6, 0.6)
+spawn_points = [NodePath("../REspawn"), NodePath("../REspawn2")]
+
+[node name="Armadilha12" parent="." node_paths=PackedStringArray("spawn_points") instance=ExtResource("7_jgbtl")]
+position = Vector2(5473, -1584)
+scale = Vector2(0.6, 0.6)
+spawn_points = [NodePath("../REspawn"), NodePath("../REspawn2")]
+
+[node name="Armadilha40" parent="." node_paths=PackedStringArray("spawn_points") instance=ExtResource("7_jgbtl")]
+position = Vector2(5593, -1607.0001)
+scale = Vector2(0.6, 0.6)
+spawn_points = [NodePath("../REspawn"), NodePath("../REspawn2")]
+
+[node name="Armadilha41" parent="." node_paths=PackedStringArray("spawn_points") instance=ExtResource("7_jgbtl")]
+position = Vector2(5584, -1735)
+scale = Vector2(0.6, 0.6)
+spawn_points = [NodePath("../REspawn"), NodePath("../REspawn2")]
+
+[node name="Armadilha42" parent="." node_paths=PackedStringArray("spawn_points") instance=ExtResource("7_jgbtl")]
+position = Vector2(5390, -1724)
+scale = Vector2(0.6, 0.6)
+spawn_points = [NodePath("../REspawn"), NodePath("../REspawn2")]
+
+[node name="Armadilha43" parent="." node_paths=PackedStringArray("spawn_points") instance=ExtResource("7_jgbtl")]
+position = Vector2(5210, -1832)
+scale = Vector2(0.6, 0.6)
+spawn_points = [NodePath("../REspawn"), NodePath("../REspawn2")]
+
+[node name="Armadilha44" parent="." node_paths=PackedStringArray("spawn_points") instance=ExtResource("7_jgbtl")]
+position = Vector2(5746, -1821)
+scale = Vector2(0.6, 0.6)
+spawn_points = [NodePath("../REspawn"), NodePath("../REspawn2")]
+
+[node name="SavePoint" parent="." instance=ExtResource("2_2hqmh")]
+position = Vector2(1215, -265)
+
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
-tile_map_data = PackedByteArray("AAAAAPD/AAAAAAMAAAAAAPH/AAAAAAMAAAAAAPL/AAAFAAMAAAAAAPP/AAAGAAMAAAAAAPz/AAAEAAMAAAAAAP3/AAAEAAMAAAAAAP7/AAAEAAMAAAAAAP//AAAEAAMAAAABAPD/AAAAAAMAAAABAPH/AAAAAAMAAAABAPL/AAAFAAMAAAABAPP/AAAGAAMAAAABAPz/AAAEAAMAAAABAP3/AAAEAAMAAAABAP7/AAAEAAMAAAABAP//AAAEAAMAAAACAPD/AAAAAAMAAAACAPH/AAAAAAMAAAACAPL/AAAFAAMAAAACAPP/AAAGAAMAAAACAP7/AAAEAAMAAAACAP//AAAEAAMAAAADAPD/AAAAAAMAAAADAPH/AAAAAAMAAAADAPL/AAAFAAMAAAADAPP/AAAGAAMAAAADAP7/AAAEAAMAAAADAP//AAAEAAMAAAAEAPD/AAAAAAMAAAAEAPH/AAAAAAMAAAAEAPL/AAAFAAMAAAAEAPP/AAAGAAMAAAAEAP7/AAAEAAMAAAAEAP//AAAEAAMAAAAFAPD/AAAAAAMAAAAFAPH/AAAAAAMAAAAFAPL/AAAFAAMAAAAFAPP/AAAGAAMAAAAFAP7/AAAEAAMAAAAFAP//AAAEAAMAAAAGAPD/AAAAAAMAAAAGAPH/AAAAAAMAAAAGAPL/AAAFAAMAAAAGAPP/AAAGAAMAAAAGAP7/AAAEAAMAAAAGAP//AAAEAAMAAAAHAPD/AAAAAAMAAAAHAPH/AAAAAAMAAAAHAPL/AAAFAAMAAAAHAPP/AAAGAAMAAAAHAPn/AAAGAAMAAAAHAP7/AAAEAAMAAAAHAP//AAAEAAMAAAAIAPD/AAAAAAMAAAAIAPH/AAAAAAMAAAAIAPL/AAAFAAMAAAAIAPP/AAAGAAMAAAAIAPn/AAAGAAMAAAAIAP7/AAAEAAMAAAAIAP//AAAEAAMAAAAJAPD/AAAAAAMAAAAJAPH/AAAAAAMAAAAJAPL/AAAFAAMAAAAJAPP/AAAGAAMAAAAJAPn/AAAGAAMAAAAJAP7/AAAEAAMAAAAJAP//AAAEAAMAAAAKAPD/AAAAAAMAAAAKAPH/AAAAAAMAAAAKAPL/AAAFAAMAAAAKAPP/AAAGAAMAAAAKAP7/AAAEAAMAAAAKAP//AAAEAAMAAAALAPD/AAAEAAMAAAALAPH/AAAEAAMAAAALAPL/AAAEAAMAAAALAPP/AAAEAAMAAAALAPz/AAAEAAMAAAALAP3/AAAEAAMAAAALAP7/AAAEAAMAAAALAP//AAAEAAMAAAAMAPD/AAAEAAMAAAAMAPH/AAAEAAMAAAAMAPL/AAAEAAMAAAAMAPP/AAAEAAMAAAAMAPz/AAAEAAMAAAAMAP3/AAAEAAMAAAAMAP7/AAAEAAMAAAAMAP//AAAEAAMAAAANAPD/AAAEAAMAAAANAPH/AAAEAAMAAAANAP7/AAAEAAMAAAANAP//AAAEAAMAAAAOAPD/AAAEAAMAAAAOAPH/AAAEAAMAAAAOAPn/AAAEAAMAAAAOAP7/AAAEAAMAAAAOAP//AAAEAAMAAAAPAPD/AAAEAAMAAAAPAPH/AAAEAAMAAAAPAPn/AAAEAAMAAAAPAP7/AAAEAAMAAAAPAP//AAAEAAMAAAAQAPD/AAAEAAMAAAAQAPH/AAAEAAMAAAAQAPn/AAAEAAMAAAAQAP7/AAAEAAMAAAAQAP//AAAEAAMAAAARAPD/AAAEAAMAAAARAPH/AAAEAAMAAAARAPb/AAAEAAMAAAARAPn/AAAEAAMAAAARAP7/AAAEAAMAAAARAP//AAAEAAMAAAASAPD/AAAEAAMAAAASAPH/AAAEAAMAAAASAPb/AAAEAAMAAAASAP7/AAAEAAMAAAASAP//AAAEAAMAAAATAPD/AAAEAAMAAAATAPH/AAAEAAMAAAATAPb/AAAEAAMAAAATAP7/AAAEAAMAAAATAP//AAAEAAMAAAAUAPD/AAAEAAMAAAAUAPH/AAAEAAMAAAAUAPL/AAAEAAMAAAAUAPP/AAAEAAMAAAAUAPT/AAAEAAMAAAAUAPX/AAAEAAMAAAAUAPb/AAAEAAMAAAAUAPf/AAAEAAMAAAAUAPj/AAAEAAMAAAAUAPn/AAAEAAMAAAAUAPr/AAAEAAMAAAAUAPv/AAAEAAMAAAAUAPz/AAAEAAMAAAAUAP3/AAAEAAMAAAAUAP7/AAAEAAMAAAAUAP//AAAEAAMAAAAVAPD/AAAEAAMAAAAVAPH/AAAEAAMAAAAVAPL/AAAEAAMAAAAVAPP/AAAEAAMAAAAVAPT/AAAEAAMAAAAVAPX/AAAEAAMAAAAVAPb/AAAEAAMAAAAVAPf/AAAEAAMAAAAVAPj/AAAEAAMAAAAVAPn/AAAEAAMAAAAVAPr/AAAEAAMAAAAVAPv/AAAEAAMAAAAVAPz/AAAEAAMAAAAVAP3/AAAEAAMAAAAVAP7/AAAEAAMAAAAVAP//AAAEAAMAAAA=")
+tile_map_data = PackedByteArray("AAAAAPD/AAAAAAMAAAAAAPH/AAAAAAMAAAAAAPL/AAAFAAMAAAAAAPP/AAAGAAMAAAAAAPz/AAAEAAMAAAAAAP3/AAAEAAMAAAAAAP7/AAAEAAMAAAAAAP//AAAEAAMAAAABAPD/AAAAAAMAAAABAPH/AAAAAAMAAAABAPL/AAAFAAMAAAABAPP/AAAGAAMAAAABAPz/AAAEAAMAAAABAP3/AAAEAAMAAAABAP7/AAAEAAMAAAABAP//AAAEAAMAAAACAPD/AAAAAAMAAAACAPH/AAAAAAMAAAACAPL/AAAFAAMAAAACAPP/AAAGAAMAAAACAP7/AAAEAAMAAAACAP//AAAEAAMAAAADAPD/AAAAAAMAAAADAPH/AAAAAAMAAAADAPL/AAAFAAMAAAADAPP/AAAGAAMAAAADAP7/AAAEAAMAAAADAP//AAAEAAMAAAAEAPD/AAAAAAMAAAAEAPH/AAAAAAMAAAAEAPL/AAAFAAMAAAAEAPP/AAAGAAMAAAAFAPD/AAAAAAMAAAAFAPH/AAAAAAMAAAAFAPL/AAAFAAMAAAAFAPP/AAAGAAMAAAAGAPD/AAAAAAMAAAAGAPH/AAAAAAMAAAAGAPL/AAAFAAMAAAAGAPP/AAAGAAMAAAAGAP7/AAAEAAMAAAAGAP//AAAEAAMAAAAHAPD/AAAAAAMAAAAHAPH/AAAAAAMAAAAHAPL/AAAFAAMAAAAHAPP/AAAGAAMAAAAHAP7/AAAEAAMAAAAHAP//AAAEAAMAAAAIAPD/AAAAAAMAAAAIAPH/AAAAAAMAAAAIAPL/AAAFAAMAAAAIAPP/AAAGAAMAAAAIAP7/AAAEAAMAAAAIAP//AAAEAAMAAAAJAPD/AAAAAAMAAAAJAPH/AAAAAAMAAAAJAPL/AAAFAAMAAAAJAPP/AAAGAAMAAAAJAP7/AAAEAAMAAAAJAP//AAAEAAMAAAAKAPD/AAAAAAMAAAAKAPH/AAAAAAMAAAAKAPL/AAAFAAMAAAAKAPP/AAAGAAMAAAAKAP7/AAAEAAMAAAAKAP//AAAEAAMAAAALAPD/AAAEAAMAAAALAPH/AAAEAAMAAAALAPL/AAAEAAMAAAALAPP/AAAEAAMAAAALAP7/AAAEAAMAAAALAP//AAAEAAMAAAAMAPD/AAAEAAMAAAAMAPH/AAAEAAMAAAAMAPL/AAAEAAMAAAAMAPP/AAAEAAMAAAAMAP7/AAAEAAMAAAAMAP//AAAEAAMAAAANAPD/AAAEAAMAAAANAPH/AAAEAAMAAAANAP7/AAAEAAMAAAANAP//AAAEAAMAAAAOAPD/AAAEAAMAAAAOAPH/AAAEAAMAAAAOAP7/AAAEAAMAAAAOAP//AAAEAAMAAAAPAPD/AAAEAAMAAAAPAPH/AAAEAAMAAAAPAP7/AAAEAAMAAAAPAP//AAAEAAMAAAAQAPD/AAAEAAMAAAAQAPH/AAAEAAMAAAAQAP7/AAAEAAMAAAAQAP//AAAEAAMAAAARAPD/AAAEAAMAAAARAPH/AAAEAAMAAAARAP7/AAAEAAMAAAARAP//AAAEAAMAAAASAPD/AAAEAAMAAAASAPH/AAAEAAMAAAASAP7/AAAEAAMAAAASAP//AAAEAAMAAAATAPD/AAAEAAMAAAATAPH/AAAEAAMAAAATAP7/AAAEAAMAAAATAP//AAAEAAMAAAAUAPD/AAAEAAMAAAAUAPH/AAAEAAMAAAAUAP7/AAAEAAMAAAAUAP//AAAEAAMAAAAVAPD/AAAEAAMAAAAVAPH/AAAEAAMAAAAVAP7/AAAEAAMAAAAVAP//AAAEAAMAAAAWAP7/AAAAAAMAAAAWAP//AAAAAAMAAAAXAP7/AAAAAAMAAAAXAP//AAAAAAMAAAAYAP7/AAAAAAMAAAAYAP//AAAAAAMAAAAZAP7/AAAAAAMAAAAZAP//AAAAAAMAAAAaAP7/AAAAAAMAAAAaAP//AAAAAAMAAAAbAP7/AAAAAAMAAAAbAP//AAAAAAMAAAAcAP7/AAAAAAMAAAAcAP//AAAAAAMAAAAdAP7/AAAAAAMAAAAdAP//AAAAAAMAAAAeAP7/AAAAAAMAAAAeAP//AAAAAAMAAAAfAP7/AAAAAAMAAAAfAP//AAAAAAMAAAAgAP7/AAAAAAMAAAAgAP//AAAAAAMAAAAhAP7/AAAAAAMAAAAhAP//AAAAAAMAAAAiAP7/AAAAAAMAAAAiAP//AAAAAAMAAAAjAP7/AAAAAAMAAAAjAP//AAAAAAMAAAAkAP7/AAAAAAMAAAAkAP//AAAAAAMAAAAlAP7/AAAAAAMAAAAlAP//AAAAAAMAAAAmAP7/AAAAAAMAAAAmAP//AAAAAAMAAAAnAP7/AAAAAAMAAAAnAP//AAAAAAMA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AAAAAPb/AAAAAAMAAAAAAPf/AAAAAAMAAAAAAPj/AAAAAAMAAAAAAPn/AAAAAAMAAAAAAPr/AAAAAAMAAAAAAPv/AAAAAAMAAAABAPT/AAAAAAMAAAABAPX/AAAAAAMAAAABAPb/AAAAAAMAAAABAPf/AAAAAAMAAAABAPj/AAAAAAMAAAABAPn/AAAAAAMAAAABAPr/AAAAAAMAAAABAPv/AAAAAAMAAABEAPD/AAAAAAMAAABEAPH/AAAAAAMAAABFAPD/AAAAAAMAAABFAPH/AAAAAAMAAABGAPD/AAAAAAMAAABGAPH/AAAAAAMAAABHAPD/AAAAAAMAAABHAPH/AAAAAAMAAABIAPD/AAAAAAMAAABIAPH/AAAAAAMAAABJAPD/AAAAAAMAAABJAPH/AAAAAAMAAABKAPD/AAAAAAMAAABKAPH/AAAAAAMAAABLAPD/AAAAAAMAAABLAPH/AAAAAAMAAABMAPD/AAAAAAMAAABMAPH/AAAAAAMAAABNAPD/AAAAAAMAAABNAPH/AAAAAAMAAABEAP7/AAAAAAMAAABEAP//AAAAAAMAAABFAP7/AAAAAAMAAABFAP//AAAAAAMAAABGAP7/AAAAAAMAAABGAP//AAAAAAMAAABHAP7/AAAAAAMAAABHAP//AAAAAAMAAABIAP7/AAAAAAMAAABIAP//AAAAAAMAAABJAP7/AAAAAAMAAABJAP//AAAAAAMAAABKAP7/AAAAAAMAAABKAP//AAAAAAMAAABLAP7/AAAAAAMAAABLAP//AAAAAAMAAABOAP7/AAAAAAMAAABOAP//AAAAAAMAAABPAP7/AAAAAAMAAABPAP//AAAAAAMAAABQAP7/AAAAAAMAAABQAP//AAAAAAMAAABRAP7/AAAAAAMAAABRAP//AAAAAAMAAABSAP7/AAAAAAMAAABSAP//AAAAAAMAAABRAPD/AAAAAAMAAABRAPH/AAAAAAMAAABRAPL/AAAAAAMAAABRAPP/AAAAAAMAAABRAPT/AAAAAAMAAABRAPX/AAAAAAMAAABRAPb/AAAAAAMAAABRAPf/AAAAAAMAAABRAPj/AAAAAAMAAABRAPn/AAAAAAMAAABRAPr/AAAAAAMAAABRAPv/AAAAAAMAAABRAPz/AAAAAAMAAABRAP3/AAAAAAMAAABSAPD/AAAAAAMAAABSAPH/AAAAAAMAAABSAPL/AAAAAAMAAABSAPP/AAAAAAMAAABSAPT/AAAAAAMAAABSAPX/AAAAAAMAAABSAPb/AAAAAAMAAABSAPf/AAAAAAMAAABSAPj/AAAAAAMAAABSAPn/AAAAAAMAAABSAPr/AAAAAAMAAABSAPv/AAAAAAMAAABSAPz/AAAAAAMAAABSAP3/AAAAAAMAAABOAPD/AAAAAAMAAABOAPH/AAAAAAMAAABPAPD/AAAAAAMAAABPAPH/AAAAAAMAAABQAPD/AAAAAAMAAABQAPH/AAAAAAMAAABEAPn/AAAAAAMAAABEAPr/AAAAAAMAAABEAPv/AAAAAAMAAABEAPz/AAAAAAMAAABEAP3/AAAAAAMAAABFAPn/AAAAAAMAAABFAPr/AAAAAAMAAABFAPv/AAAAAAMAAABFAPz/AAAAAAMAAABFAP3/AAAAAAMAAABGAPn/AAAAAAMAAABGAPr/AAAAAAMAAABGAPv/AAAAAAMAAABGAPz/AAAAAAMAAABGAP3/AAAAAAMAAABHAPn/AAAAAAMAAABHAPr/AAAAAAMAAABHAPv/AAAAAAMAAABHAPz/AAAAAAMAAABHAP3/AAAAAAMAAABIAPn/AAAAAAMAAABIAPr/AAAAAAMAAABIAPv/AAAAAAMAAABIAPz/AAAAAAMAAABIAP3/AAAAAAMAAABCAPn/AAAAAAMAAABCAPr/AAAAAAMAAABCAPv/AAAAAAMAAABCAPz/AAAAAAMAAABCAP3/AAAAAAMAAABDAPn/AAAAAAMAAABDAPr/AAAAAAMAAABDAPv/AAAAAAMAAABDAPz/AAAAAAMAAABDAP3/AAAAAAMAAAAMAPz/AAAAAAMAAAAMAP3/AAAAAAMAAAANAPz/AAAAAAMAAAANAP3/AAAAAAMAAAAOAPz/AAAAAAMAAAAOAP3/AAAAAAMAAAAPAPz/AAAAAAMAAAAPAP3/AAAAAAMAAAAWAPn/AAAAAAMAAAAWAPr/AAAAAAMAAAAWAPv/AAAAAAMAAAAWAPz/AAAAAAMAAAAWAP3/AAAAAAMAAAAXAPn/AAAAAAMAAAAXAPr/AAAAAAMAAAAXAPv/AAAAAAMAAAAXAPz/AAAAAAMAAAAXAP3/AAAAAAMAAAAQAPv/AAAAAAMAAAAQAPz/AAAAAAMAAAAQAP3/AAAAAAMAAAARAPv/AAAAAAMAAAARAPz/AAAAAAMAAAARAP3/AAAAAAMAAAAPAPv/AAAAAAMAAAAPAPr/AAAAAAMAAAAQAPr/AAAAAAMAAAARAPr/AAAAAAMAAAAWAPf/AAAAAAMAAAAWAPj/AAAAAAMAAAAXAPf/AAAAAAMAAAAXAPj/AAAAAAMAAAAqAPj/AAAAAAMAAAAqAPn/AAAAAAMAAAAqAPr/AAAAAAMAAAAqAPv/AAAAAAMAAAAqAPz/AAAAAAMAAAAqAP3/AAAAAAMAAAArAPj/AAAAAAMAAAArAPn/AAAAAAMAAAArAPr/AAAAAAMAAAArAPv/AAAAAAMAAAArAPz/AAAAAAMAAAArAP3/AAAAAAMAAAA0APL/AAAAAAMAAAA0APP/AAAAAAMAAAA0APT/AAAAAAMAAAA0APX/AAAAAAMAAAA0APb/AAAAAAMAAAA0APf/AAAAAAMAAAA1APL/AAAAAAMAAAA1APP/AAAAAAMAAAA1APT/AAAAAAMAAAA1APX/AAAAAAMAAAA1APb/AAAAAAMAAAA1APf/AAAAAAMAAAA0APz/AAAAAAMAAAA0AP3/AAAAAAMAAAA1APz/AAAAAAMAAAA1AP3/AAAAAAMAAAA=")
 tile_set = SubResource("TileSet_qmcwu")
+
+[node name="REspawn" type="Area2D" parent="."]
+position = Vector2(2246, -777)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="REspawn"]
+position = Vector2(-0.25, -503)
+shape = SubResource("RectangleShape2D_g87lo")
+
+[node name="REspawn2" type="Area2D" parent="."]
+position = Vector2(8507, -909)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="REspawn2"]
+position = Vector2(-0.25, -503)
+shape = SubResource("RectangleShape2D_g87lo")
 
 [node name="Player" parent="." instance=ExtResource("2_2tgjk")]
 position = Vector2(808, -345.9999)
 scale = Vector2(0.959163, 0.959163)
+
+[node name="Plataforma" parent="." instance=ExtResource("8_g87lo")]
+position = Vector2(3511, -689.00006)
+
+[node name="Plataforma2" parent="." instance=ExtResource("8_g87lo")]
+position = Vector2(4784, -819.00006)
+
+[node name="Plataforma3" parent="." instance=ExtResource("8_g87lo")]
+position = Vector2(6062, -1086)
+
+[node name="Plataforma4" parent="." instance=ExtResource("8_g87lo")]
+position = Vector2(7347, -543.00006)
+
+[node name="Plataforma5" parent="." instance=ExtResource("8_g87lo")]
+position = Vector2(8022, -823)
 
 [node name="PhantomCamera2D" type="Node2D" parent="." node_paths=PackedStringArray("follow_target")]
 top_level = true
@@ -186,7 +574,7 @@ zoom = Vector2(0.8, 0.8)
 process_callback = 0
 limit_left = 44
 limit_top = -1891
-limit_right = 2646
+limit_right = 10391
 limit_bottom = -156
 editor_draw_limits = true
 
