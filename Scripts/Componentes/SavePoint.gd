@@ -7,13 +7,13 @@ func _ready() -> void:
 
 func Interact(player:CharacterBody2D) -> void:
 	player.vida.RecebeCura(GameData.vida_max)
-	GameData.Save()
 	%SFX.play()
 	var hud:Control = get_tree().get_first_node_in_group("HUD")
 	if hud:
 		for item:ItemInventario in hud.inv.get_children():
 			if item.script_logica.has_method("HabilitaBotao"):
 				item.script_logica.HabilitaBotao()
+	GameData.Save()
 
 func Extra(dentro:bool = true) -> void:
 	if dentro:

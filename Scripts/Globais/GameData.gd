@@ -54,6 +54,7 @@ func Save() -> void:
 		config.set_value("save", "direcao", direcao)
 		config.set_value("save", "moedas", moedas)
 		config.set_value("save", "upgrades", upgrade_num)
+		config.set_value("save", "inventario", Inventario.inventario)
 		# Salva arquivo
 		config.save(OS.get_executable_path().get_base_dir()+"/savedata.cfg")
 		var hud:Control = get_tree().get_first_node_in_group("HUD")
@@ -72,6 +73,7 @@ func Load() -> bool:
 		direcao = config.get_value("save", "direcao")
 		moedas = config.get_value("save", "moedas")
 		upgrade_num = config.get_value("save", "upgrades")
+		Inventario.inventario = config.get_value("save", "inventario")
 		# Carrega o jogo, com os dados certos
 		Mundos.CarregaFase(fase, true, posicao, direcao)
 		if vida_max > 0:
@@ -97,3 +99,4 @@ func ResetData() -> void:
 	direcao = false
 	veio_de_baixo = false
 	upgrade_num = 0
+	Inventario.Reset()

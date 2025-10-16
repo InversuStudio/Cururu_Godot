@@ -21,8 +21,18 @@ func _input(_event: InputEvent) -> void:
 			%Pause.hide()
 
 func _ready() -> void:
+	# INSTANCIA ITENS DO INVENTÁRIO
+	var item_id:int = 0
+	for i:Array in Inventario.inventario:
+		var item:ItemInventario = i[0].instantiate()
+		item.id_inventario = item_id
+		item_id += 1
+		item.disabled = i[1]
+		%Inv.add_child(item)
+	# ATIVA FOCO NO BOTÃO AO ABRIR MENU PAUSE
 	%Pause.connect("visibility_changed", func():
 		if %Pause.visible: %Retornar.grab_focus())
+	# ESCONDE MENU PAUSE AO INICIAR
 	%Pause.hide()
 	var player:CharacterBody2D = get_tree().get_first_node_in_group("Player")
 	# Se achar Player na cena...
