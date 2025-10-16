@@ -1,10 +1,15 @@
-[gd_scene load_steps=13 format=3 uid="uid://bs5i45df7rwnf"]
+[gd_scene load_steps=18 format=3 uid="uid://bs5i45df7rwnf"]
 
 [ext_resource type="Script" uid="uid://dg1wm8v16vrwl" path="res://Scripts/Componentes/UI.gd" id="1_yixhe"]
 [ext_resource type="Texture2D" uid="uid://dbohcm7v5pvg4" path="res://Sprites/UI/HUD/UIHUD-MAGIA.png" id="2_f2wx0"]
 [ext_resource type="Texture2D" uid="uid://0vn3u6huw3ie" path="res://Sprites/UI/HUD/UIHUDCASH.png" id="4_uk570"]
 [ext_resource type="Texture2D" uid="uid://8tc3pgq3fdi8" path="res://Sprites/UI/HUD/UIHUD-MAGIABK.png" id="5_2ptjp"]
 [ext_resource type="PackedScene" uid="uid://cqd7yaq2bpugn" path="res://Objetos/Inventario/ItemCura.tscn" id="5_f2wx0"]
+[ext_resource type="Texture2D" uid="uid://yaybofi31dle" path="res://Sprites/UI/Pause/Consumiveis/AÇAI_NORMAL.png" id="6_md4fy"]
+[ext_resource type="Texture2D" uid="uid://dgidvgwu85fta" path="res://Sprites/UI/Pause/Consumiveis/AÇAI_SELECT.png" id="7_7i7fj"]
+[ext_resource type="Texture2D" uid="uid://da6lmorct7r01" path="res://Sprites/UI/Pause/Consumiveis/DESELECT.png" id="8_rbci0"]
+[ext_resource type="Texture2D" uid="uid://bwauy6mjn22y2" path="res://Sprites/UI/Pause/Consumiveis/GUARA_NORMAL.png" id="9_rbci0"]
+[ext_resource type="Texture2D" uid="uid://hrl23oqojeqm" path="res://Sprites/UI/Pause/Consumiveis/GUARA_SELECT.png" id="10_am7sw"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4n7mi"]
 
@@ -237,7 +242,7 @@ custom_minimum_size = Vector2(0, 80)
 layout_mode = 2
 mouse_behavior_recursive = 2
 theme_override_font_sizes/font_size = 30
-text = "SAIR"
+text = "RETORNAR MENU"
 
 [node name="Inventario" type="MarginContainer" parent="Pause/Conteudo"]
 layout_mode = 2
@@ -284,9 +289,15 @@ columns = 5
 
 [node name="ItemCura" parent="Pause/Conteudo/Inventario/VBoxContainer/LimitInvent/MarginContainer/Inv" instance=ExtResource("5_f2wx0")]
 layout_mode = 2
+sprite_normal = ExtResource("6_md4fy")
+sprite_select = ExtResource("7_7i7fj")
+sprite_disable = ExtResource("8_rbci0")
 
 [node name="ItemCura2" parent="Pause/Conteudo/Inventario/VBoxContainer/LimitInvent/MarginContainer/Inv" instance=ExtResource("5_f2wx0")]
 layout_mode = 2
+sprite_normal = ExtResource("9_rbci0")
+sprite_select = ExtResource("10_am7sw")
+sprite_disable = ExtResource("8_rbci0")
 
 [connection signal="pressed" from="Pause/Conteudo/Menu/Conteudo/Retornar" to="." method="_on_retornar_pressed"]
 [connection signal="pressed" from="Pause/Conteudo/Menu/Conteudo/Sair" to="." method="_on_sair_pressed"]
