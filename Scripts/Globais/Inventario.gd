@@ -10,6 +10,8 @@ var inventario:Array[Array] = [
 ]
 
 func AddItem(item:String, desabilitado:bool = false) -> void:
+	if inventario.size() >= 15:
+		Console._Print("[color=orange][b]INVENTÁRIO CHEIO[/b][/color]")
 	inventario.append([lista_itens[item], desabilitado])
 
 func HabilitaItem(id_item:int, disabled:bool = false) -> void:
