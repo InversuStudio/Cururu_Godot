@@ -2,9 +2,9 @@
 
 [ext_resource type="Texture2D" uid="uid://br3x4ee50wnxp" path="res://Sprites/Cenário/zSem_Uso/TesteCenario/cipó02.png" id="1_g7kmt"]
 [ext_resource type="Script" uid="uid://davjnwfncyj66" path="res://Scripts/Componentes/Armadilha.gd" id="1_jlm20"]
+[ext_resource type="AudioStream" uid="uid://d0lumxscgbgin" path="res://Audio/SFX/INIMIGOS/inimigo_dead.mp3" id="4_4o1mp"]
 [ext_resource type="Script" uid="uid://b2ls33ys55oyt" path="res://Scripts/Componentes/OtimizadorSprite.gd" id="5_4o1mp"]
 [ext_resource type="PackedScene" uid="uid://pc4mgv2nv8af" path="res://Objetos/Funcionalidade/CompHitBox.tscn" id="7_267nb"]
-[ext_resource type="AudioStream" uid="uid://dhgsnus0fna7q" path="res://Audio/SFX/SOM TESTE.mp3" id="8_d1fui"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_tkh53"]
 animations = [{
@@ -33,7 +33,7 @@ autoplay = "default"
 
 [node name="HitBox" parent="." instance=ExtResource("7_267nb")]
 unique_name_in_owner = true
-sfx = ExtResource("8_d1fui")
+sfx = ExtResource("4_4o1mp")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="HitBox"]
 position = Vector2(7, -35)

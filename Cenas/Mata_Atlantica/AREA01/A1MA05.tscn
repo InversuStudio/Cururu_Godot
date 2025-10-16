@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=4 uid="uid://f3vm0towv6q"]
+[gd_scene load_steps=34 format=4 uid="uid://f3vm0towv6q"]
 
 [ext_resource type="Texture2D" uid="uid://cqu5scrrmr5n5" path="res://Sprites/Cenário/Mata_Atlantica/Background/FUNDOCEU.png" id="1_0fgjc"]
 [ext_resource type="Script" uid="uid://bhexx6mj1xv3q" path="res://addons/phantom_camera/scripts/phantom_camera/phantom_camera_2d.gd" id="1_1kcgc"]
@@ -167,6 +167,12 @@ tile_size = Vector2i(128, 128)
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_c5msh")
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cw0a5"]
+size = Vector2(70, 668)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_31oht"]
+size = Vector2(63, 395)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tensi"]
 size = Vector2(70, 410)
 
@@ -189,8 +195,8 @@ texture = ExtResource("1_0fgjc")
 
 [node name="FundoNevoa" type="Sprite2D" parent="."]
 z_index = -2
-position = Vector2(3929.2505, -767.6985)
-scale = Vector2(3.8574603, 1.0566219)
+position = Vector2(3911.5002, -767.6985)
+scale = Vector2(3.8750002, 1.0566219)
 texture = ExtResource("4_w1mwb")
 
 [node name="FundoNevoa2" type="Sprite2D" parent="."]
@@ -289,66 +295,116 @@ scale = Vector2(0.6, 0.6)
 texture = ExtResource("4_056vy")
 flip_h = true
 
-[node name="Props" type="Node2D" parent="."]
+[node name="Armadilhas" type="Node2D" parent="."]
 position = Vector2(1099, -335.99976)
 
-[node name="Armadilhas" type="Node2D" parent="Props"]
+[node name="Respawn1" type="Area2D" parent="Armadilhas"]
+position = Vector2(-20, -335.00024)
 
-[node name="Armadilha2" parent="Props/Armadilhas" instance=ExtResource("4_fld4m")]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Armadilhas/Respawn1"]
+position = Vector2(3, -208)
+shape = SubResource("RectangleShape2D_cw0a5")
 
-[node name="Armadilha4" parent="Props/Armadilhas" instance=ExtResource("4_fld4m")]
+[node name="Respawn3" type="Area2D" parent="Armadilhas"]
+position = Vector2(2299, -583.00024)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Armadilhas/Respawn3"]
+position = Vector2(3, -316)
+shape = SubResource("RectangleShape2D_cw0a5")
+
+[node name="Respawn4" type="Area2D" parent="Armadilhas"]
+position = Vector2(4322, -321.00024)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Armadilhas/Respawn4"]
+position = Vector2(3, -208)
+shape = SubResource("RectangleShape2D_cw0a5")
+
+[node name="Respawn2" type="Area2D" parent="Armadilhas"]
+position = Vector2(1477, -581.00024)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Armadilhas/Respawn2"]
+position = Vector2(9.5, -187.5)
+shape = SubResource("RectangleShape2D_31oht")
+
+[node name="PARTE1" type="Node2D" parent="Armadilhas"]
+
+[node name="Armadilha2" parent="Armadilhas/PARTE1" node_paths=PackedStringArray("spawn_points") instance=ExtResource("4_fld4m")]
+position = Vector2(78, -6.000244)
+spawn_points = [NodePath("../../Respawn1"), NodePath("../../Respawn2")]
+
+[node name="Armadilha4" parent="Armadilhas/PARTE1" node_paths=PackedStringArray("spawn_points") instance=ExtResource("4_fld4m")]
 position = Vector2(585, 10)
+spawn_points = [NodePath("../../Respawn2"), NodePath("../../Respawn1")]
 
-[node name="Armadilha8" parent="Props/Armadilhas" instance=ExtResource("4_fld4m")]
+[node name="Armadilha8" parent="Armadilhas/PARTE1" node_paths=PackedStringArray("spawn_points") instance=ExtResource("4_fld4m")]
 position = Vector2(1557, 47)
+spawn_points = [NodePath("../../Respawn2"), NodePath("../../Respawn1")]
 
-[node name="Armadilha7" parent="Props/Armadilhas" instance=ExtResource("4_fld4m")]
+[node name="Armadilha7" parent="Armadilhas/PARTE1" node_paths=PackedStringArray("spawn_points") instance=ExtResource("4_fld4m")]
 position = Vector2(1418, -10)
+spawn_points = [NodePath("../../Respawn2"), NodePath("../../Respawn1")]
 
-[node name="Armadilha3" parent="Props/Armadilhas" instance=ExtResource("4_fld4m")]
-position = Vector2(272, 19)
+[node name="Armadilha3" parent="Armadilhas/PARTE1" node_paths=PackedStringArray("spawn_points") instance=ExtResource("4_fld4m")]
+position = Vector2(297, 139.99976)
+spawn_points = [NodePath("../../Respawn2"), NodePath("../../Respawn1")]
 
-[node name="Armadilha6" parent="Props/Armadilhas" instance=ExtResource("4_fld4m")]
+[node name="Armadilha6" parent="Armadilhas/PARTE1" node_paths=PackedStringArray("spawn_points") instance=ExtResource("4_fld4m")]
 position = Vector2(1172, 41)
+spawn_points = [NodePath("../../Respawn2"), NodePath("../../Respawn1")]
 
-[node name="Armadilha5" parent="Props/Armadilhas" instance=ExtResource("4_fld4m")]
+[node name="Armadilha5" parent="Armadilhas/PARTE1" node_paths=PackedStringArray("spawn_points") instance=ExtResource("4_fld4m")]
 position = Vector2(897, 14)
+spawn_points = [NodePath("../../Respawn2"), NodePath("../../Respawn1")]
 
-[node name="Armadilha9" parent="Props/Armadilhas" instance=ExtResource("4_fld4m")]
+[node name="Armadilha9" parent="Armadilhas/PARTE1" node_paths=PackedStringArray("spawn_points") instance=ExtResource("4_fld4m")]
 position = Vector2(1634, -225)
+spawn_points = [NodePath("../../Respawn2"), NodePath("../../Respawn1")]
 
-[node name="Armadilha10" parent="Props/Armadilhas" instance=ExtResource("4_fld4m")]
+[node name="PARTE2" type="Node2D" parent="Armadilhas"]
+
+[node name="Armadilha10" parent="Armadilhas/PARTE2" node_paths=PackedStringArray("spawn_points") instance=ExtResource("4_fld4m")]
 position = Vector2(2194, -268)
+spawn_points = [NodePath("../../Respawn3"), NodePath("../../Respawn4")]
 
-[node name="Armadilha11" parent="Props/Armadilhas" instance=ExtResource("4_fld4m")]
+[node name="Armadilha11" parent="Armadilhas/PARTE2" node_paths=PackedStringArray("spawn_points") instance=ExtResource("4_fld4m")]
 position = Vector2(2485, 121)
+spawn_points = [NodePath("../../Respawn3"), NodePath("../../Respawn4")]
 
-[node name="Armadilha12" parent="Props/Armadilhas" instance=ExtResource("4_fld4m")]
+[node name="Armadilha12" parent="Armadilhas/PARTE2" node_paths=PackedStringArray("spawn_points") instance=ExtResource("4_fld4m")]
 position = Vector2(3825, 117)
+spawn_points = [NodePath("../../Respawn3"), NodePath("../../Respawn4")]
 
-[node name="Armadilha13" parent="Props/Armadilhas" instance=ExtResource("4_fld4m")]
+[node name="Armadilha13" parent="Armadilhas/PARTE2" node_paths=PackedStringArray("spawn_points") instance=ExtResource("4_fld4m")]
 position = Vector2(3388, 69)
+spawn_points = [NodePath("../../Respawn3"), NodePath("../../Respawn4")]
 
-[node name="Armadilha14" parent="Props/Armadilhas" instance=ExtResource("4_fld4m")]
+[node name="Armadilha14" parent="Armadilhas/PARTE2" node_paths=PackedStringArray("spawn_points") instance=ExtResource("4_fld4m")]
 position = Vector2(2273, -55)
+spawn_points = [NodePath("../../Respawn3"), NodePath("../../Respawn4")]
 
-[node name="Armadilha15" parent="Props/Armadilhas" instance=ExtResource("4_fld4m")]
+[node name="Armadilha15" parent="Armadilhas/PARTE2" node_paths=PackedStringArray("spawn_points") instance=ExtResource("4_fld4m")]
 position = Vector2(3068, 79)
+spawn_points = [NodePath("../../Respawn3"), NodePath("../../Respawn4")]
 
-[node name="Armadilha16" parent="Props/Armadilhas" instance=ExtResource("4_fld4m")]
+[node name="Armadilha16" parent="Armadilhas/PARTE2" node_paths=PackedStringArray("spawn_points") instance=ExtResource("4_fld4m")]
 position = Vector2(2756, 130)
+spawn_points = [NodePath("../../Respawn3"), NodePath("../../Respawn4")]
 
-[node name="Armadilha17" parent="Props/Armadilhas" instance=ExtResource("4_fld4m")]
+[node name="Armadilha17" parent="Armadilhas/PARTE2" node_paths=PackedStringArray("spawn_points") instance=ExtResource("4_fld4m")]
 position = Vector2(3643, 124)
+spawn_points = [NodePath("../../Respawn3"), NodePath("../../Respawn4")]
 
-[node name="Armadilha18" parent="Props/Armadilhas" instance=ExtResource("4_fld4m")]
+[node name="Armadilha18" parent="Armadilhas/PARTE2" node_paths=PackedStringArray("spawn_points") instance=ExtResource("4_fld4m")]
 position = Vector2(4173, 32)
+spawn_points = [NodePath("../../Respawn3"), NodePath("../../Respawn4")]
 
-[node name="Armadilha19" parent="Props/Armadilhas" instance=ExtResource("4_fld4m")]
+[node name="Armadilha19" parent="Armadilhas/PARTE2" node_paths=PackedStringArray("spawn_points") instance=ExtResource("4_fld4m")]
 position = Vector2(5022, 66)
+spawn_points = [NodePath("../../Respawn3"), NodePath("../../Respawn4")]
 
-[node name="Armadilha22" parent="Props/Armadilhas" instance=ExtResource("4_fld4m")]
+[node name="Armadilha22" parent="Armadilhas/PARTE2" node_paths=PackedStringArray("spawn_points") instance=ExtResource("4_fld4m")]
 position = Vector2(4741, 115)
+spawn_points = [NodePath("../../Respawn3"), NodePath("../../Respawn4")]
 
 [node name="Cenario" type="Node2D" parent="."]
 z_index = 1
@@ -441,7 +497,7 @@ texture = ExtResource("19_8juyj")
 flip_h = true
 
 [node name="ChapExterno12" type="Sprite2D" parent="Cenario/Chao"]
-position = Vector2(7395, -401)
+position = Vector2(7396, -393.00024)
 texture = ExtResource("19_8juyj")
 flip_h = true
 
@@ -678,7 +734,7 @@ scale = Vector2(0.5, 0.5)
 texture = ExtResource("23_6h0de")
 
 [node name="MoitaTeste36" type="Sprite2D" parent="Cenario/Teto"]
-position = Vector2(5846.75, -687)
+position = Vector2(5864, -664.00024)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("23_6h0de")
 
@@ -703,12 +759,12 @@ scale = Vector2(0.5, 0.5)
 texture = ExtResource("23_6h0de")
 
 [node name="MoitaTeste42" type="Sprite2D" parent="Cenario/Teto"]
-position = Vector2(6782, -678)
+position = Vector2(6786, -666.00024)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("23_6h0de")
 
 [node name="MoitaTeste41" type="Sprite2D" parent="Cenario/Teto"]
-position = Vector2(6646, -706.5)
+position = Vector2(6639, -689.00024)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("23_6h0de")
 
@@ -953,7 +1009,7 @@ flip_v = true
 
 [node name="Moitas" type="Node2D" parent="Cenario"]
 z_index = -1
-position = Vector2(924, 311)
+position = Vector2(803, 287.99976)
 
 [node name="Moita15" type="Sprite2D" parent="Cenario/Moitas"]
 position = Vector2(-757.30225, -324.6001)
@@ -1023,10 +1079,11 @@ destino = 8
 posicao = Vector2(5324, -4502)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TransicaoFase/1-2"]
+position = Vector2(11, 3)
 shape = SubResource("RectangleShape2D_tensi")
 
 [node name="Portal" type="Sprite2D" parent="TransicaoFase/1-2"]
-position = Vector2(95, 24)
+position = Vector2(96, 22)
 scale = Vector2(1, 1.7656246)
 texture = ExtResource("12_y6ja2")
 
@@ -1054,7 +1111,7 @@ position = Vector2(5813.0005, -648.00024)
 
 [node name="Cururu" parent="Entidades" instance=ExtResource("2_l4p3j")]
 z_index = 0
-position = Vector2(222, -659.0003)
+position = Vector2(635.00006, -652)
 scale = Vector2(0.959163, 0.959163)
 
 [node name="PhantomCamera2D" type="Node2D" parent="." node_paths=PackedStringArray("follow_target")]
