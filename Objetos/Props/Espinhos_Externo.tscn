@@ -1,0 +1,51 @@
+[gd_scene load_steps=8 format=3 uid="uid://l1l8x741umo7"]
+
+[ext_resource type="Script" uid="uid://davjnwfncyj66" path="res://Scripts/Componentes/Armadilha.gd" id="1_ou87o"]
+[ext_resource type="Texture2D" uid="uid://chyapam240nee" path="res://Sprites/Cenário/Mata_Atlantica/Interativos/ESPINHOS_EXTERNO.png" id="2_iwuw0"]
+[ext_resource type="PackedScene" uid="uid://pc4mgv2nv8af" path="res://Objetos/Funcionalidade/CompHitBox.tscn" id="3_iwuw0"]
+[ext_resource type="AudioStream" uid="uid://d0lumxscgbgin" path="res://Audio/SFX/INIMIGOS/inimigo_dead.mp3" id="4_mdh3x"]
+[ext_resource type="Script" uid="uid://b2ls33ys55oyt" path="res://Scripts/Componentes/OtimizadorSprite.gd" id="5_pb7qa"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_tkh53"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_iwuw0")
+}],
+"loop": true,
+"name": &"default",
+"speed": 8.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_pb7qa"]
+radius = 157.2233
+height = 434.84058
+
+[node name="Armadilha" type="Node2D"]
+script = ExtResource("1_ou87o")
+
+[node name="Sprite" type="AnimatedSprite2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(-11.000002, -168)
+scale = Vector2(0.9531251, 0.9531252)
+sprite_frames = SubResource("SpriteFrames_tkh53")
+autoplay = "default"
+frame_progress = 0.9601439
+
+[node name="HitBox" parent="." instance=ExtResource("3_iwuw0")]
+unique_name_in_owner = true
+sfx = ExtResource("4_mdh3x")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HitBox"]
+position = Vector2(-4.999996, -163)
+rotation = -2.5621433
+shape = SubResource("CapsuleShape2D_pb7qa")
+debug_color = Color(0.7937795, 0.42591533, 0.04459911, 0.41960785)
+
+[node name="OtimizadorSprite" type="VisibleOnScreenNotifier2D" parent="."]
+position = Vector2(3, -28)
+rect = Rect2(-216, -350, 429, 396)
+script = ExtResource("5_pb7qa")
+metadata/_custom_type_script = "uid://b2ls33ys55oyt"
+
+[connection signal="hit" from="HitBox" to="." method="_on_hit_box_hit"]

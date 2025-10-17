@@ -5,7 +5,6 @@
 [ext_resource type="Texture2D" uid="uid://dog2ml3xbyho2" path="res://Sprites/Cenário/Mata_Atlantica/Background/arvore2.png" id="2_6xeqa"]
 [ext_resource type="Script" uid="uid://bd046eokvcnu2" path="res://addons/phantom_camera/scripts/phantom_camera_host/phantom_camera_host.gd" id="2_45xcm"]
 [ext_resource type="Texture2D" uid="uid://k22xru6heyh3" path="res://Sprites/Cenário/Mata_Atlantica/Background/arvore.png" id="3_22t2k"]
-[ext_resource type="PackedScene" uid="uid://bnm668fws2641" path="res://Objetos/Props/Armadilha.tscn" id="3_indba"]
 [ext_resource type="Texture2D" uid="uid://dmh8fodubelsr" path="res://Sprites/Cenário/Mata_Atlantica/Background/FUNDONEVOA.png" id="4_2gijv"]
 [ext_resource type="Texture2D" uid="uid://cj4rj4oj20ogb" path="res://Sprites/Cenário/Mata_Atlantica/Chao/chap_interno.png" id="4_ngv34"]
 [ext_resource type="PackedScene" uid="uid://nohq28uk7lfk" path="res://Objetos/Entidades/Player.tscn" id="4_rnfct"]
@@ -22,6 +21,7 @@
 [ext_resource type="Texture2D" uid="uid://dyv700lptbkyq" path="res://Sprites/Cenário/Mata_Atlantica/Background/composição2.png" id="7_22t2k"]
 [ext_resource type="Texture2D" uid="uid://uq6dbjep5wva" path="res://Sprites/Cenário/Mata_Atlantica/Foreground/frontfolha.png" id="8_646f2"]
 [ext_resource type="Texture2D" uid="uid://c2yapafbd3cnf" path="res://Sprites/Cenário/Mata_Atlantica/Foreground/cipó.png" id="10_646f2"]
+[ext_resource type="PackedScene" uid="uid://dgfcdht1gifdp" path="res://Objetos/Props/Espinhos.tscn" id="11_fo7ry"]
 [ext_resource type="PackedScene" uid="uid://bei1s8te3cwko" path="res://Sprites/Cenário/Mata_Atlantica/Interativos/plataforma.tscn" id="14_p37rg"]
 [ext_resource type="Script" uid="uid://bhexx6mj1xv3q" path="res://addons/phantom_camera/scripts/phantom_camera/phantom_camera_2d.gd" id="14_wd030"]
 [ext_resource type="Script" uid="uid://8umksf8e80fw" path="res://addons/phantom_camera/scripts/resources/tween_resource.gd" id="15_indba"]
@@ -276,8 +276,8 @@ texture = ExtResource("3_22t2k")
 
 [node name="Fundonevoa" type="Sprite2D" parent="Background2"]
 light_mask = 2
-position = Vector2(-33639, -3603.0002)
-scale = Vector2(6.7737155, 1.59585)
+position = Vector2(-33530, -3508)
+scale = Vector2(6.798914, 1.59585)
 texture = ExtResource("4_2gijv")
 
 [node name="Arvores01" type="Node2D" parent="Background2"]
@@ -483,61 +483,37 @@ texture = ExtResource("6_fo7ry")
 [node name="Background" type="Node2D" parent="Background2"]
 position = Vector2(-10634, -142)
 
-[node name="Armadilha2" parent="." node_paths=PackedStringArray("spawn_points") instance=ExtResource("3_indba")]
-position = Vector2(-26872, -3099)
+[node name="Armadilha" parent="." node_paths=PackedStringArray("spawn_points") instance=ExtResource("11_fo7ry")]
+position = Vector2(-26820, -3068)
 spawn_points = [NodePath("../Area2D"), NodePath("../Area2D2")]
 
-[node name="Armadilha6" parent="." node_paths=PackedStringArray("spawn_points") instance=ExtResource("3_indba")]
-position = Vector2(-25879, -3012)
+[node name="Armadilha2" parent="." node_paths=PackedStringArray("spawn_points") instance=ExtResource("11_fo7ry")]
+position = Vector2(-26426, -3068)
 spawn_points = [NodePath("../Area2D"), NodePath("../Area2D2")]
 
-[node name="Armadilha4" parent="." node_paths=PackedStringArray("spawn_points") instance=ExtResource("3_indba")]
-position = Vector2(-26330, -2975)
+[node name="Armadilha3" parent="." node_paths=PackedStringArray("spawn_points") instance=ExtResource("11_fo7ry")]
+position = Vector2(-26021, -3068)
 spawn_points = [NodePath("../Area2D"), NodePath("../Area2D2")]
 
-[node name="Armadilha3" parent="." node_paths=PackedStringArray("spawn_points") instance=ExtResource("3_indba")]
-position = Vector2(-26592, -3003)
-spawn_points = [NodePath("../Area2D"), NodePath("../Area2D2")]
+[node name="Armadilha4" parent="." node_paths=PackedStringArray("spawn_points") instance=ExtResource("11_fo7ry")]
+position = Vector2(-19395, -2794)
+spawn_points = [NodePath("../Area2D3"), NodePath("../Area2D4"), NodePath("../Area2D5")]
 
-[node name="Armadilha5" parent="." node_paths=PackedStringArray("spawn_points") instance=ExtResource("3_indba")]
-position = Vector2(-26114, -2952)
-spawn_points = [NodePath("../Area2D"), NodePath("../Area2D2")]
+[node name="Armadilha6" parent="." node_paths=PackedStringArray("spawn_points") instance=ExtResource("11_fo7ry")]
+position = Vector2(-18602, -2788)
+spawn_points = [NodePath("../Area2D3"), NodePath("../Area2D4"), NodePath("../Area2D5")]
 
-[node name="Armadilha" parent="." node_paths=PackedStringArray("spawn_points") instance=ExtResource("3_indba")]
-position = Vector2(-27088, -3223)
-spawn_points = [NodePath("../Area2D"), NodePath("../Area2D2")]
+[node name="Armadilha8" parent="." node_paths=PackedStringArray("spawn_points") instance=ExtResource("11_fo7ry")]
+position = Vector2(-17791, -2797)
+spawn_points = [NodePath("../Area2D3"), NodePath("../Area2D4"), NodePath("../Area2D5")]
 
-[node name="Armadilha7" parent="." node_paths=PackedStringArray("spawn_points") instance=ExtResource("3_indba")]
-position = Vector2(-19580, -2735)
-spawn_points = [NodePath("../Area2D3"), NodePath("../Area2D4")]
+[node name="Armadilha5" parent="." node_paths=PackedStringArray("spawn_points") instance=ExtResource("11_fo7ry")]
+position = Vector2(-18996, -2763)
+spawn_points = [NodePath("../Area2D3"), NodePath("../Area2D4"), NodePath("../Area2D5")]
 
-[node name="Armadilha8" parent="." node_paths=PackedStringArray("spawn_points") instance=ExtResource("3_indba")]
-position = Vector2(-19250, -2743)
-spawn_points = [NodePath("../Area2D3"), NodePath("../Area2D4")]
-
-[node name="Armadilha9" parent="." node_paths=PackedStringArray("spawn_points") instance=ExtResource("3_indba")]
-position = Vector2(-19016, -2689)
-spawn_points = [NodePath("../Area2D3"), NodePath("../Area2D4")]
-
-[node name="Armadilha11" parent="." node_paths=PackedStringArray("spawn_points") instance=ExtResource("3_indba")]
-position = Vector2(-18465, -2710)
-spawn_points = [NodePath("../Area2D3"), NodePath("../Area2D4")]
-
-[node name="Armadilha12" parent="." node_paths=PackedStringArray("spawn_points") instance=ExtResource("3_indba")]
-position = Vector2(-18148, -2743)
-spawn_points = [NodePath("../Area2D3"), NodePath("../Area2D4")]
-
-[node name="Armadilha14" parent="." node_paths=PackedStringArray("spawn_points") instance=ExtResource("3_indba")]
-position = Vector2(-17617, -2801)
-spawn_points = [NodePath("../Area2D3"), NodePath("../Area2D4")]
-
-[node name="Armadilha10" parent="." node_paths=PackedStringArray("spawn_points") instance=ExtResource("3_indba")]
-position = Vector2(-18703, -2768)
-spawn_points = [NodePath("../Area2D3"), NodePath("../Area2D4")]
-
-[node name="Armadilha13" parent="." node_paths=PackedStringArray("spawn_points") instance=ExtResource("3_indba")]
-position = Vector2(-17909, -2689)
-spawn_points = [NodePath("../Area2D3"), NodePath("../Area2D4")]
+[node name="Armadilha7" parent="." node_paths=PackedStringArray("spawn_points") instance=ExtResource("11_fo7ry")]
+position = Vector2(-18191, -2777)
+spawn_points = [NodePath("../Area2D3"), NodePath("../Area2D4"), NodePath("../Area2D5")]
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
 position = Vector2(-2, 0)
@@ -1480,6 +1456,13 @@ shape = SubResource("RectangleShape2D_nj6rs")
 position = Vector2(-17591, -4079)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D4"]
+position = Vector2(0, -532)
+shape = SubResource("RectangleShape2D_nj6rs")
+
+[node name="Area2D5" type="Area2D" parent="."]
+position = Vector2(-19675, -3090)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D5"]
 position = Vector2(0, -532)
 shape = SubResource("RectangleShape2D_nj6rs")
 

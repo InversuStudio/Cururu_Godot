@@ -1,4 +1,4 @@
-[gd_scene load_steps=36 format=4 uid="uid://c4rls1pfwei2e"]
+[gd_scene load_steps=37 format=4 uid="uid://c4rls1pfwei2e"]
 
 [ext_resource type="Texture2D" uid="uid://c374cwih425cq" path="res://Sprites/Cenário/Tilemaps/Base.png" id="1_uhas7"]
 [ext_resource type="Texture2D" uid="uid://cqu5scrrmr5n5" path="res://Sprites/Cenário/Mata_Atlantica/Background/FUNDOCEU.png" id="1_xyjrg"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://dog2ml3xbyho2" path="res://Sprites/Cenário/Mata_Atlantica/Background/arvore2.png" id="2_eoclm"]
 [ext_resource type="Script" uid="uid://8umksf8e80fw" path="res://addons/phantom_camera/scripts/resources/tween_resource.gd" id="3_8qltl"]
 [ext_resource type="Texture2D" uid="uid://dmh8fodubelsr" path="res://Sprites/Cenário/Mata_Atlantica/Background/FUNDONEVOA.png" id="3_eoclm"]
+[ext_resource type="Texture2D" uid="uid://dyv700lptbkyq" path="res://Sprites/Cenário/Mata_Atlantica/Background/composição2.png" id="4_eoclm"]
 [ext_resource type="Texture2D" uid="uid://ctar30vsktrrb" path="res://Sprites/Cenário/Mata_Atlantica/Background/FUNDONEVOA2.png" id="4_gnpt0"]
 [ext_resource type="Script" uid="uid://bd046eokvcnu2" path="res://addons/phantom_camera/scripts/phantom_camera_host/phantom_camera_host.gd" id="4_kt8lh"]
 [ext_resource type="PackedScene" uid="uid://nohq28uk7lfk" path="res://Objetos/Entidades/Player.tscn" id="5_yius8"]
@@ -167,6 +168,12 @@ tile_size = Vector2i(128, 128)
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_3r0k0")
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gnpt0"]
+size = Vector2(458, 83)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_781hd"]
+size = Vector2(459, 28)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yhkqu"]
 size = Vector2(70, 399)
 
@@ -176,12 +183,6 @@ size = Vector2(66, 525)
 [sub_resource type="Resource" id="Resource_eaxwb"]
 script = ExtResource("3_8qltl")
 duration = 0.0
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_gnpt0"]
-size = Vector2(458, 83)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_781hd"]
-size = Vector2(459, 28)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xyjrg"]
 size = Vector2(40.65988, 1082)
@@ -232,11 +233,6 @@ scroll_scale = Vector2(0.9, 1)
 position = Vector2(-6232, -10864)
 texture = ExtResource("2_c6gyn")
 
-[node name="Arvore3" type="Sprite2D" parent="ArvFrente"]
-position = Vector2(-2103, -10947)
-rotation = -0.087266445
-texture = ExtResource("2_c6gyn")
-
 [node name="Arvore2" type="Sprite2D" parent="ArvFrente"]
 position = Vector2(-4192, -10887)
 rotation = 0.087266445
@@ -249,6 +245,35 @@ texture = ExtResource("2_c6gyn")
 
 [node name="Cenario" type="Node2D" parent="."]
 position = Vector2(-1761.4286, -10515.429)
+
+[node name="Arvore3" type="Sprite2D" parent="Cenario"]
+position = Vector2(-224.57141, -320.5713)
+rotation = -0.08726644
+texture = ExtResource("2_c6gyn")
+
+[node name="PlataformaSome2" type="StaticBody2D" parent="Cenario"]
+position = Vector2(-627.5714, -187.57129)
+
+[node name="Composição2" type="Sprite2D" parent="Cenario/PlataformaSome2"]
+position = Vector2(138.99976, 162)
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("4_eoclm")
+flip_h = true
+
+[node name="Plataforma3" parent="Cenario/PlataformaSome2" instance=ExtResource("24_c6gyn")]
+position = Vector2(12, 43)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Cenario/PlataformaSome2"]
+position = Vector2(16, 11.5)
+shape = SubResource("RectangleShape2D_gnpt0")
+one_way_collision = true
+
+[node name="DestroiPlataforma" parent="Cenario/PlataformaSome2" instance=ExtResource("25_eoclm")]
+delay = 1.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Cenario/PlataformaSome2/DestroiPlataforma"]
+position = Vector2(16.5, -36)
+shape = SubResource("RectangleShape2D_781hd")
 
 [node name="Fundoceu" type="Sprite2D" parent="Cenario"]
 z_index = -2
@@ -1032,24 +1057,6 @@ offset_bottom = -2.0
 script = ExtResource("25_xyjrg")
 volume = null
 metadata/_custom_type_script = "uid://dd16yu704x6wt"
-
-[node name="PlataformaSome2" type="StaticBody2D" parent="."]
-position = Vector2(-2342, -10687)
-
-[node name="Plataforma3" parent="PlataformaSome2" instance=ExtResource("24_c6gyn")]
-position = Vector2(12, 43)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="PlataformaSome2"]
-position = Vector2(16, 11.5)
-shape = SubResource("RectangleShape2D_gnpt0")
-one_way_collision = true
-
-[node name="DestroiPlataforma" parent="PlataformaSome2" instance=ExtResource("25_eoclm")]
-delay = 0.5
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="PlataformaSome2/DestroiPlataforma"]
-position = Vector2(16.5, -36)
-shape = SubResource("RectangleShape2D_781hd")
 
 [node name="Armadilha" parent="." node_paths=PackedStringArray("spawn_points") instance=ExtResource("24_xyjrg")]
 position = Vector2(-2617, -10012)

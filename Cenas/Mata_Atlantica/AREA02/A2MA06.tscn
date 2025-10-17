@@ -1,6 +1,7 @@
-[gd_scene load_steps=15 format=4 uid="uid://b5am6yc3iwy8e"]
+[gd_scene load_steps=16 format=4 uid="uid://b5am6yc3iwy8e"]
 
 [ext_resource type="Texture2D" uid="uid://c374cwih425cq" path="res://Sprites/Cenário/Tilemaps/Base.png" id="1_7yx4j"]
+[ext_resource type="PackedScene" uid="uid://l1l8x741umo7" path="res://Objetos/Props/Espinhos_Externo.tscn" id="2_1m0sm"]
 [ext_resource type="PackedScene" uid="uid://cqyub70sv0ofp" path="res://Objetos/Props/SavePoint.tscn" id="2_2hqmh"]
 [ext_resource type="PackedScene" uid="uid://nohq28uk7lfk" path="res://Objetos/Entidades/Player.tscn" id="2_2tgjk"]
 [ext_resource type="PackedScene" uid="uid://bs5i45df7rwnf" path="res://UI/HUD.tscn" id="3_ogowb"]
@@ -11,7 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://bei1s8te3cwko" path="res://Sprites/Cenário/Mata_Atlantica/Interativos/plataforma.tscn" id="8_g87lo"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jgbtl"]
-size = Vector2(10347, 1735)
+size = Vector2(10347, 1808)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ogowb"]
 texture = ExtResource("1_7yx4j")
@@ -159,7 +160,7 @@ script = ExtResource("6_g87lo")
 [node name="MA_2-6" type="Node2D"]
 
 [node name="LimiteCamera" type="CollisionShape2D" parent="."]
-position = Vector2(5217.5, -1023.5)
+position = Vector2(5217.5, -1027)
 shape = SubResource("RectangleShape2D_jgbtl")
 debug_color = Color(0, 0.6, 0.69803923, 0)
 
@@ -185,16 +186,6 @@ spawn_points = [NodePath("../REspawn"), NodePath("../REspawn2")]
 
 [node name="Armadilha3" parent="." node_paths=PackedStringArray("spawn_points") instance=ExtResource("7_jgbtl")]
 position = Vector2(2883, -924)
-scale = Vector2(0.6, 0.6)
-spawn_points = [NodePath("../REspawn"), NodePath("../REspawn2")]
-
-[node name="Armadilha26" parent="." node_paths=PackedStringArray("spawn_points") instance=ExtResource("7_jgbtl")]
-position = Vector2(2895, -1009)
-scale = Vector2(0.6, 0.6)
-spawn_points = [NodePath("../REspawn"), NodePath("../REspawn2")]
-
-[node name="Armadilha27" parent="." node_paths=PackedStringArray("spawn_points") instance=ExtResource("7_jgbtl")]
-position = Vector2(2982, -1018)
 scale = Vector2(0.6, 0.6)
 spawn_points = [NodePath("../REspawn"), NodePath("../REspawn2")]
 
@@ -513,6 +504,13 @@ position = Vector2(5746, -1821)
 scale = Vector2(0.6, 0.6)
 spawn_points = [NodePath("../REspawn"), NodePath("../REspawn2")]
 
+[node name="Armadilha26" parent="." instance=ExtResource("2_1m0sm")]
+position = Vector2(2889, -933)
+
+[node name="Armadilha27" parent="." instance=ExtResource("2_1m0sm")]
+position = Vector2(2797, -1105)
+rotation = 1.5707964
+
 [node name="SavePoint" parent="." instance=ExtResource("2_2hqmh")]
 position = Vector2(1215, -265)
 
@@ -555,7 +553,7 @@ position = Vector2(8022, -823)
 
 [node name="PhantomCamera2D" type="Node2D" parent="." node_paths=PackedStringArray("follow_target")]
 top_level = true
-position = Vector2(1244, -831)
+position = Vector2(1244, -798)
 script = ExtResource("5_jgbtl")
 follow_mode = 2
 follow_target = NodePath("../Player")
@@ -569,13 +567,13 @@ metadata/_custom_type_script = "uid://bhexx6mj1xv3q"
 
 [node name="Camera" type="Camera2D" parent="."]
 physics_interpolation_mode = 1
-position = Vector2(1244, -831)
+position = Vector2(1244, -798)
 zoom = Vector2(0.8, 0.8)
 process_callback = 0
 limit_left = 44
-limit_top = -1891
+limit_top = -1931
 limit_right = 10391
-limit_bottom = -156
+limit_bottom = -123
 editor_draw_limits = true
 
 [node name="PhantomCameraHost" type="Node" parent="Camera"]
