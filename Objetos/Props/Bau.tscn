@@ -1,0 +1,51 @@
+[gd_scene load_steps=8 format=3 uid="uid://gxfjc3yeulc4"]
+
+[ext_resource type="Script" uid="uid://drxk6hwuv2e3i" path="res://Scripts/Componentes/Bau.gd" id="1_kkov8"]
+[ext_resource type="Texture2D" uid="uid://b23uvpo1t5txg" path="res://Sprites/Cenário/Objetos/Bau/BAU2.png" id="2_4vmwf"]
+[ext_resource type="PackedScene" uid="uid://va5pjd6vuuo2" path="res://Objetos/Funcionalidade/CompHurtBox.tscn" id="2_eu1eo"]
+[ext_resource type="Texture2D" uid="uid://bubffpix746dw" path="res://Sprites/Cenário/Objetos/Bau/BAU.png" id="3_gy4pj"]
+[ext_resource type="AudioStream" uid="uid://b3mmkipqf30jd" path="res://Audio/SFX/INIMIGOS/HIT_INIMIGO.wav" id="5_gy4pj"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_5tjap"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_4vmwf")
+}],
+"loop": true,
+"name": &"Abre",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_gy4pj")
+}],
+"loop": true,
+"name": &"Normal",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4vmwf"]
+size = Vector2(238, 140)
+
+[node name="Bau" type="Node2D"]
+script = ExtResource("1_kkov8")
+
+[node name="Sprite" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -115)
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_5tjap")
+animation = &"Normal"
+autoplay = "Normal"
+
+[node name="HurtBox" parent="." instance=ExtResource("2_eu1eo")]
+hit_sfx = ExtResource("5_gy4pj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HurtBox"]
+position = Vector2(0, -71)
+shape = SubResource("RectangleShape2D_4vmwf")
+
+[node name="PosItem" type="Marker2D" parent="."]
+position = Vector2(0, -164)
+
+[connection signal="hurt" from="HurtBox" to="." method="_on_hurt_box_hurt"]

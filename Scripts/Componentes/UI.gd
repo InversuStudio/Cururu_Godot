@@ -21,6 +21,7 @@ func _input(_event: InputEvent) -> void:
 			%Pause.hide()
 
 func _ready() -> void:
+	Inventario.inventario_atualizado.connect(AtualizaInventario)
 	# INSTANCIA ITENS DO INVENTÁRIO
 	var item_id:int = 0
 	for i:Array in Inventario.inventario:
@@ -102,3 +103,22 @@ func _on_retornar_pressed() -> void:
 
 func _on_sair_pressed() -> void:
 	Mundos.CarregaFase(Mundos.NomeFase.MenuPrincipal)
+
+func AtualizaInventario(acao:String, id:int) -> void:
+	match acao:
+		"add":
+			var item:Control = Inventario.lista_itens[id].instantiate()
+			%Inv.add_child(item)
+		"del":
+			%Inv.remove_child(%Inv.get_child(id))
+			var new_id:int = 0
+			for i:ItemInventario in %Inv.get_children():
+				i.id_inventario = new_id
+				new_id += 1
+			if %Inv.get_child_count() > 0:
+				if %Inv.get_child(id - 1):
+					%Inv.get_child(id - 1).grab_focus()
+				elif %Inv.get_child(id + 1):
+					%Inv.get_child(id + 1).grab_focus()
+			else: %Retornar.grab_focus()
+		

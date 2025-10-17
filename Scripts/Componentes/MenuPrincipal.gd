@@ -6,7 +6,6 @@ func _ready() -> void:
 	data = GameData.ChecaData()
 	if data == "":
 		$HBoxContainer/Continuar.disabled = true
-	#$HBoxContainer/NovoJogo.focus_mode
 	$HBoxContainer/NovoJogo.grab_focus()
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 

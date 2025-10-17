@@ -6,8 +6,10 @@ extends ScriptItemInventario
 func Logica() -> void:
 	var vida:Vida = get_tree().get_first_node_in_group("Player").vida
 	vida.RecebeCura(valor_cura)
-	parent.disabled = true
-	Inventario.HabilitaItem(parent.id_inventario, true)
+	Inventario.RemoveItem(parent.id_inventario)
+	
+	#parent.disabled = true
+	#Inventario.HabilitaItem(parent.id_inventario, true)
 	#Inventario.inventario[parent.id_inventario][1] = true
 
 func HabilitaBotao() -> void:
