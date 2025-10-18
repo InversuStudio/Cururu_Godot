@@ -20,7 +20,7 @@
 [ext_resource type="Texture2D" uid="uid://cw2yeg7ynw0kl" path="res://Sprites/Cenário/Mata_Atlantica/Chao/chap_externo.png" id="12_noowx"]
 [ext_resource type="PackedScene" uid="uid://bei1s8te3cwko" path="res://Sprites/Cenário/Mata_Atlantica/Interativos/plataforma.tscn" id="13_h3gev"]
 [ext_resource type="PackedScene" uid="uid://smwewolvvw6l" path="res://Objetos/Entidades/Escorpiao_Rei.tscn" id="14_jb1wv"]
-[ext_resource type="PackedScene" uid="uid://gxfjc3yeulc4" path="res://Objetos/Props/Bau_acai.tscn" id="15_vgqnr"]
+[ext_resource type="PackedScene" uid="uid://drx7unaxgouar" path="res://Objetos/Props/Bau_guara.tscn" id="16_yk7fv"]
 [ext_resource type="Texture2D" uid="uid://rbtvfm4m7ft" path="res://Sprites/VFX/Iluminação/SOMBRA2.png" id="19_yk7fv"]
 [ext_resource type="Texture2D" uid="uid://b6f4rmw8i4g77" path="res://Sprites/Inimigos/Boitata/Corpo/PropCorpoBoitata.png" id="20_sjxar"]
 [ext_resource type="Texture2D" uid="uid://jecy4bfqqqxu" path="res://Sprites/Cenário/Mata_Atlantica/Teto/Moita teste.png" id="21_vgqnr"]
@@ -451,10 +451,10 @@ position = Vector2(2196.0005, -56)
 scale = Vector2(0.919994, 0.919994)
 
 [node name="Escorpiao" parent="Entidades" instance=ExtResource("14_jb1wv")]
-position = Vector2(1183, -2352)
+position = Vector2(1179, -2307)
 
-[node name="Bau" parent="Entidades" instance=ExtResource("15_vgqnr")]
-position = Vector2(241, -2305)
+[node name="Bau2" parent="Entidades" instance=ExtResource("16_yk7fv")]
+position = Vector2(248, -2303)
 
 [node name="Cenario" type="Node2D" parent="."]
 position = Vector2(4736, -1726)

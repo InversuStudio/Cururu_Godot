@@ -33,7 +33,7 @@ size = Vector2(198, 133.5)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4vmwf"]
 size = Vector2(238, 140)
 
-[node name="Bau" type="Node2D"]
+[node name="Bau_combo" type="Node2D"]
 script = ExtResource("1_kkov8")
 
 [node name="PosItem" type="Marker2D" parent="."]
