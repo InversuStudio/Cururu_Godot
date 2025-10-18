@@ -957,8 +957,8 @@ scale = Vector2(0.8470643, 0.8470644)
 texture = ExtResource("12_o607x")
 
 [node name="Fundonevoa2" type="Sprite2D" parent="Cenario"]
-position = Vector2(-1817.0717, -108.57129)
-scale = Vector2(3.1645257, 0.7786564)
+position = Vector2(-1808.5713, -108.57129)
+scale = Vector2(3.1729255, 0.7786564)
 texture = ExtResource("4_gnpt0")
 
 [node name="2-5" parent="." instance=ExtResource("9_iyc38")]
@@ -968,7 +968,7 @@ destino = 20
 posicao = Vector2(874, -4068)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="2-5"]
-position = Vector2(-22, -250.5)
+position = Vector2(-20.652308, -254.34895)
 shape = SubResource("RectangleShape2D_yhkqu")
 
 [node name="Boss" parent="." node_paths=PackedStringArray("area_check_player", "pos_pilares") instance=ExtResource("24_o607x")]

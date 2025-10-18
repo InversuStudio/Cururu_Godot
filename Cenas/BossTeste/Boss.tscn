@@ -1,4 +1,4 @@
-[gd_scene load_steps=98 format=3 uid="uid://b7m7lb1s11mbw"]
+[gd_scene load_steps=91 format=3 uid="uid://b7m7lb1s11mbw"]
 
 [ext_resource type="Script" uid="uid://bekibpja60hxm" path="res://Scripts/Boss/boss.gd" id="1_s15tt"]
 [ext_resource type="Texture2D" uid="uid://cxo6j4mj6u5rs" path="res://Sprites/Inimigos/Boitata/TesteTeste/BOITATA_BOLA_DE_FOGO/boitata_81.png" id="2_1jvks"]
@@ -13,10 +13,6 @@
 [ext_resource type="Texture2D" uid="uid://4530pdkq4kpn" path="res://Sprites/Inimigos/Boitata/TesteTeste/BOITATA_BOLA_DE_FOGO/boitata_91.png" id="7_mjx0v"]
 [ext_resource type="Texture2D" uid="uid://bo3b7eooi14o5" path="res://Sprites/Inimigos/Boitata/TesteTeste/BOITATA_BOLA_DE_FOGO/boitata_93.png" id="8_0w5f0"]
 [ext_resource type="Texture2D" uid="uid://bllts43colh7q" path="res://Sprites/Inimigos/Boitata/TesteTeste/BOITATA_BOLA_DE_FOGO/boitata_95.png" id="9_uoyl7"]
-[ext_resource type="Texture2D" uid="uid://c0i34p7sjqdse" path="res://Sprites/Inimigos/Boitata/TesteTeste/BOITATA_GRITO_ENTRADA/boitata_21.png" id="10_sgy8v"]
-[ext_resource type="Texture2D" uid="uid://ccom62sk3g14m" path="res://Sprites/Inimigos/Boitata/TesteTeste/BOITATA_GRITO_ENTRADA/boitata_23.png" id="11_ojojp"]
-[ext_resource type="Texture2D" uid="uid://03s7uy80r0qg" path="res://Sprites/Inimigos/Boitata/TesteTeste/BOITATA_GRITO_ENTRADA/boitata_25.png" id="12_b2ig3"]
-[ext_resource type="Texture2D" uid="uid://dhu2v8j1bxdlp" path="res://Sprites/Inimigos/Boitata/TesteTeste/BOITATA_GRITO_ENTRADA/boitata_27.png" id="13_lo6ol"]
 [ext_resource type="Texture2D" uid="uid://gpay5pxo08ov" path="res://Sprites/Inimigos/Boitata/TesteTeste/BOITATA_GRITO_ENTRADA/boitata_29.png" id="14_6hkog"]
 [ext_resource type="Texture2D" uid="uid://dt45iy0xfhpec" path="res://Sprites/Inimigos/Boitata/TesteTeste/BOITATA_GRITO_ENTRADA/boitata_31.png" id="15_fi4f6"]
 [ext_resource type="Texture2D" uid="uid://i2v875jxv5kp" path="res://Sprites/Inimigos/Boitata/TesteTeste/BOITATA_GRITO_ENTRADA/boitata_33.png" id="16_iy7ck"]
@@ -75,9 +71,6 @@
 [ext_resource type="Texture2D" uid="uid://bxmjqqvthh617" path="res://Sprites/Inimigos/Boitata/TesteTeste/BOITATA_LEVANTA/boitata_09.png" id="65_d4lcm"]
 [ext_resource type="Texture2D" uid="uid://dvxcgooe7ym0v" path="res://Sprites/Inimigos/Boitata/TesteTeste/BOITATA_LEVANTA/boitata_11.png" id="66_djwlo"]
 [ext_resource type="Texture2D" uid="uid://b2ctbcwijg1yb" path="res://Sprites/Inimigos/Boitata/TesteTeste/BOITATA_LEVANTA/boitata_13.png" id="67_0jjh8"]
-[ext_resource type="Texture2D" uid="uid://dtxf023pwemmm" path="res://Sprites/Inimigos/Boitata/TesteTeste/BOITATA_LEVANTA/boitata_15.png" id="68_2gaj7"]
-[ext_resource type="Texture2D" uid="uid://drn1yoa6b11a" path="res://Sprites/Inimigos/Boitata/TesteTeste/BOITATA_LEVANTA/boitata_17.png" id="69_whjwt"]
-[ext_resource type="Texture2D" uid="uid://b85cwt12qtxxg" path="res://Sprites/Inimigos/Boitata/TesteTeste/BOITATA_LEVANTA/boitata_19.png" id="70_udcvh"]
 [ext_resource type="Script" uid="uid://cfu466euekcdn" path="res://Scripts/Boss/Start.gd" id="72_0ddi0"]
 [ext_resource type="Script" uid="uid://rlmx3hnbiu12" path="res://Scripts/Boss/cospe_fogo.gd" id="75_16hqa"]
 [ext_resource type="AudioStream" uid="uid://b5wrm1fctq78" path="res://Audio/SFX/BOITATA/rugido_boitata.ogg" id="75_sgy8v"]
@@ -130,18 +123,6 @@ animations = [{
 "speed": 5.0
 }, {
 "frames": [{
-"duration": 1.0,
-"texture": ExtResource("10_sgy8v")
-}, {
-"duration": 1.0,
-"texture": ExtResource("11_ojojp")
-}, {
-"duration": 1.0,
-"texture": ExtResource("12_b2ig3")
-}, {
-"duration": 1.0,
-"texture": ExtResource("13_lo6ol")
-}, {
 "duration": 1.0,
 "texture": ExtResource("14_6hkog")
 }, {
@@ -345,45 +326,6 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": ExtResource("67_0jjh8")
-}, {
-"duration": 1.0,
-"texture": ExtResource("68_2gaj7")
-}, {
-"duration": 1.0,
-"texture": ExtResource("69_whjwt")
-}, {
-"duration": 1.0,
-"texture": ExtResource("70_udcvh")
-}, {
-"duration": 1.0,
-"texture": ExtResource("24_1mvtp")
-}, {
-"duration": 1.0,
-"texture": ExtResource("25_qhv3i")
-}, {
-"duration": 1.0,
-"texture": ExtResource("26_q1nmn")
-}, {
-"duration": 1.0,
-"texture": ExtResource("27_vsrrx")
-}, {
-"duration": 1.0,
-"texture": ExtResource("28_hbr26")
-}, {
-"duration": 1.0,
-"texture": ExtResource("29_ycj6j")
-}, {
-"duration": 1.0,
-"texture": ExtResource("30_r12sw")
-}, {
-"duration": 1.0,
-"texture": ExtResource("31_5irpk")
-}, {
-"duration": 1.0,
-"texture": ExtResource("32_3cfl8")
-}, {
-"duration": 1.0,
-"texture": ExtResource("33_bf3fi")
 }],
 "loop": false,
 "name": &"Surgimento",
@@ -434,7 +376,7 @@ tracks/2/keys = {
 
 [sub_resource type="Animation" id="Animation_ojojp"]
 resource_name = "Grito"
-length = 1.4
+length = 0.915
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -454,10 +396,10 @@ tracks/1/path = NodePath("Sprite:frame")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.10000001, 0.20000002, 0.3, 0.40000004, 0.5, 0.6, 0.70000005, 0.8000001, 0.90000004, 1, 1.1, 1.2, 1.3000001),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"times": PackedFloat32Array(0, 0.10000001, 0.20000002, 0.3, 0.40000004, 0.5, 0.6, 0.70000005, 0.8000001, 0.90000004),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
 "update": 1,
-"values": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+"values": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
 }
 tracks/2/type = "value"
 tracks/2/imported = false
@@ -655,7 +597,7 @@ tracks/0/keys = {
 
 [sub_resource type="Animation" id="Animation_sgy8v"]
 resource_name = "Surge"
-length = 2.0
+length = 0.68
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -675,10 +617,10 @@ tracks/1/path = NodePath("Sprite:frame")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.10000001, 0.20000002, 0.3, 0.40000004, 0.5, 0.6, 0.70000005, 0.8000001, 0.90000004, 1, 1.1, 1.2, 1.3000001, 1.4000001, 1.5, 1.6000001, 1.7000002, 1.8000001, 1.9000001),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"times": PackedFloat32Array(0, 0.10000001, 0.20000002, 0.3, 0.40000004, 0.5, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
 "update": 1,
-"values": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19]
+"values": [0, 1, 2, 3, 4, 5, 6]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_mjx0v"]
@@ -735,7 +677,7 @@ unique_name_in_owner = true
 position = Vector2(0, -1020)
 scale = Vector2(1.5, 1.5)
 sprite_frames = SubResource("SpriteFrames_nkv4g")
-animation = &"CospeFogo"
+animation = &"PilarDeFogo"
 autoplay = "Escondido"
 frame = 1
 
