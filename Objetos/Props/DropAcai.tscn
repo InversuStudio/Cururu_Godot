@@ -1,19 +1,21 @@
 [gd_scene load_steps=4 format=3 uid="uid://dny88hy3w52nm"]
 
-[ext_resource type="Script" uid="uid://du13c3vr4mc5k" path="res://Scripts/Componentes/DropItem.gd" id="1_s8rfg"]
-[ext_resource type="Texture2D" uid="uid://c3tl3oddronfh" path="res://icon.svg" id="2_b2lei"]
+[ext_resource type="Script" uid="uid://du13c3vr4mc5k" path="res://Scripts/Componentes/DropItem.gd" id="1_qvwd5"]
+[ext_resource type="Texture2D" uid="uid://bdipo31btb3h4" path="res://Sprites/Cenário/Objetos/AÇAI.png" id="2_qvwd5"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_s361a"]
+radius = 47.67599
 
-[node name="DropItemCura" type="Area2D"]
+[node name="DropAcai" type="Area2D"]
 collision_layer = 0
 collision_mask = 2
-script = ExtResource("1_s8rfg")
+script = ExtResource("1_qvwd5")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_s361a")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("2_b2lei")
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("2_qvwd5")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

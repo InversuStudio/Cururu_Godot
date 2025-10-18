@@ -1,4 +1,4 @@
-[gd_scene load_steps=38 format=4 uid="uid://driflyxauqbxs"]
+[gd_scene load_steps=39 format=4 uid="uid://driflyxauqbxs"]
 
 [ext_resource type="Texture2D" uid="uid://c374cwih425cq" path="res://Sprites/Cenário/Tilemaps/Base.png" id="1_52y5a"]
 [ext_resource type="Texture2D" uid="uid://cov3k8uja4wwj" path="res://Sprites/Cenário/zSem_Uso/PAU_BRASIL.png" id="2_bp4ag"]
@@ -20,8 +20,9 @@
 [ext_resource type="Texture2D" uid="uid://c3tl3oddronfh" path="res://icon.svg" id="21_lqome"]
 [ext_resource type="PackedScene" uid="uid://gxfjc3yeulc4" path="res://Objetos/Props/Bau.tscn" id="22_b4qhl"]
 [ext_resource type="PackedScene" uid="uid://cdhelg6sloxbj" path="res://Objetos/Props/PortaTemp.tscn" id="23_u25g5"]
-[ext_resource type="PackedScene" uid="uid://dny88hy3w52nm" path="res://Objetos/Props/DropItemCura.tscn" id="23_wxyel"]
+[ext_resource type="PackedScene" uid="uid://dny88hy3w52nm" path="res://Objetos/Props/DropAcai.tscn" id="23_wxyel"]
 [ext_resource type="PackedScene" uid="uid://cy10kv6jimfwh" path="res://Objetos/Funcionalidade/CompDestroiPlataforma.tscn" id="23_y7vak"]
+[ext_resource type="PackedScene" uid="uid://u48tpl3f3l20" path="res://Objetos/Props/DropGuarana.tscn" id="24_tdc64"]
 [ext_resource type="PackedScene" uid="uid://bnm668fws2641" path="res://Objetos/Props/Armadilha.tscn" id="24_tkd1t"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_77bok"]
@@ -349,4 +350,4 @@ shape = SubResource("RectangleShape2D_tu5lb")
 
 [node name="Bau" parent="." instance=ExtResource("22_b4qhl")]
 position = Vector2(-737, -1410)
-drop_item = Array[PackedScene]([ExtResource("23_wxyel")])
+drop_item = Array[PackedScene]([ExtResource("23_wxyel"), ExtResource("24_tdc64")])

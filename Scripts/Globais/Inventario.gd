@@ -1,18 +1,19 @@
 extends Node
 
 enum Itens {
-	ItemCura,
+	Acai,
+	Guarana,
 }
 
 const lista_itens:Array[PackedScene] = [
-	#"item_cura" : 
-	preload("res://Objetos/Inventario/ItemCura.tscn"),
+	preload("res://Objetos/Inventario/Acai.tscn"),
+	preload("res://Objetos/Inventario/Guarana.tscn"),
 ]
 
 signal inventario_atualizado
 var inventario:Array[Array] = [
 	[lista_itens[0], false],
-	[lista_itens[0], false],
+	[lista_itens[1], false],
 ]
 
 func AddItem(item:int, desabilitado:bool = false) -> void:

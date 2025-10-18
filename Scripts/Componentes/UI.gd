@@ -107,10 +107,12 @@ func _on_sair_pressed() -> void:
 func AtualizaInventario(acao:String, id:int) -> void:
 	match acao:
 		"add":
-			var item:Control = Inventario.lista_itens[id].instantiate()
+			var item:ItemInventario = Inventario.lista_itens[id].instantiate()
+			item.id_inventario = %Inv.get_child_count()
 			%Inv.add_child(item)
 		"del":
 			%Inv.remove_child(%Inv.get_child(id))
+			print(%Inv.get_children())
 			var new_id:int = 0
 			for i:ItemInventario in %Inv.get_children():
 				i.id_inventario = new_id
