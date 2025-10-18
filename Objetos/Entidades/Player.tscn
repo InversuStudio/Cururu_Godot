@@ -397,8 +397,8 @@ radius = 100.00001
 height = 250.0
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_1dbdn"]
-radius = 57.0
-height = 296.0
+radius = 107.0
+height = 274.0
 
 [sub_resource type="Animation" id="Animation_aofpm"]
 resource_name = "Dano"
@@ -959,7 +959,8 @@ unique_name_in_owner = true
 position = Vector2(-16, -120)
 scale = Vector2(0.375651, 0.375651)
 sprite_frames = SubResource("SpriteFrames_ser7u")
-animation = &"Dano"
+animation = &"Magia"
+frame_progress = 0.70597595
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-17, -81)
@@ -1022,7 +1023,7 @@ dano = 2
 ignore = NodePath("../../HurtContainer/HurtBox")
 
 [node name="ColSpecial" type="CollisionShape2D" parent="HitContainer/Special"]
-position = Vector2(218, -78)
+position = Vector2(156, -105)
 rotation = 1.57079
 shape = SubResource("CapsuleShape2D_1dbdn")
 disabled = true

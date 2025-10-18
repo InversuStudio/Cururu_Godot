@@ -1,0 +1,82 @@
+[gd_scene load_steps=12 format=3 uid="uid://1fdx2ie24dh8"]
+
+[ext_resource type="Script" uid="uid://drxk6hwuv2e3i" path="res://Scripts/Componentes/Bau.gd" id="1_fb2wb"]
+[ext_resource type="PackedScene" uid="uid://u48tpl3f3l20" path="res://Objetos/Props/DropGuarana.tscn" id="2_jilo0"]
+[ext_resource type="PackedScene" uid="uid://dny88hy3w52nm" path="res://Objetos/Props/DropAcai.tscn" id="3_jilo0"]
+[ext_resource type="Texture2D" uid="uid://b23uvpo1t5txg" path="res://Sprites/Cenário/Objetos/Bau/BAU2.png" id="3_jxggi"]
+[ext_resource type="Texture2D" uid="uid://bubffpix746dw" path="res://Sprites/Cenário/Objetos/Bau/BAU.png" id="4_bbpst"]
+[ext_resource type="PackedScene" uid="uid://dye4iyc8e4ryy" path="res://Objetos/Funcionalidade/CompVida.tscn" id="5_o1d7l"]
+[ext_resource type="PackedScene" uid="uid://va5pjd6vuuo2" path="res://Objetos/Funcionalidade/CompHurtBox.tscn" id="6_ntpo0"]
+[ext_resource type="AudioStream" uid="uid://b3mmkipqf30jd" path="res://Audio/SFX/INIMIGOS/HIT_INIMIGO.wav" id="7_jes4o"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_5tjap"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_jxggi")
+}],
+"loop": true,
+"name": &"Abre",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_bbpst")
+}],
+"loop": true,
+"name": &"Normal",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dpba2"]
+size = Vector2(198, 133.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4vmwf"]
+size = Vector2(238, 140)
+
+[node name="Bau" type="Node2D"]
+script = ExtResource("1_fb2wb")
+
+[node name="PosItem" type="Marker2D" parent="."]
+position = Vector2(0, -164)
+
+[node name="DropGuarana" parent="PosItem" instance=ExtResource("2_jilo0")]
+position = Vector2(57, 128)
+
+[node name="DropGuarana2" parent="PosItem" instance=ExtResource("2_jilo0")]
+position = Vector2(-47, 128)
+
+[node name="DropAcai" parent="PosItem" instance=ExtResource("3_jilo0")]
+position = Vector2(2, 130)
+
+[node name="Sprite" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -115)
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_5tjap")
+animation = &"Normal"
+autoplay = "Normal"
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Sprite"]
+position = Vector2(0, 230)
+scale = Vector2(2, 2)
+input_pickable = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite/StaticBody2D"]
+position = Vector2(1, -70.25)
+shape = SubResource("RectangleShape2D_dpba2")
+
+[node name="Vida" parent="Sprite" instance=ExtResource("5_o1d7l")]
+vida_max = 3
+
+[node name="HurtBox" parent="Sprite" node_paths=PackedStringArray("comp_vida") instance=ExtResource("6_ntpo0")]
+position = Vector2(0, 230)
+scale = Vector2(2, 2)
+comp_vida = NodePath("../Vida")
+hit_sfx = ExtResource("7_jes4o")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite/HurtBox"]
+position = Vector2(0, -71)
+shape = SubResource("RectangleShape2D_4vmwf")
+debug_color = Color(0.7753908, 0.38766962, 0.5591627, 0.41960785)
+
+[connection signal="hurt" from="Sprite/HurtBox" to="." method="_on_hurt_box_hurt"]

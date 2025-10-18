@@ -10,13 +10,13 @@
 [ext_resource type="Script" uid="uid://bd046eokvcnu2" path="res://addons/phantom_camera/scripts/phantom_camera_host/phantom_camera_host.gd" id="3_qamvx"]
 [ext_resource type="Texture2D" uid="uid://k22xru6heyh3" path="res://Sprites/Cenário/Mata_Atlantica/Background/arvore.png" id="3_y6ja2"]
 [ext_resource type="Texture2D" uid="uid://dphhlbwaebgco" path="res://Sprites/Cenário/Mata_Atlantica/Background/composição.png" id="4_056vy"]
-[ext_resource type="PackedScene" uid="uid://bnm668fws2641" path="res://Objetos/Props/Armadilha.tscn" id="4_fld4m"]
 [ext_resource type="Texture2D" uid="uid://dmh8fodubelsr" path="res://Sprites/Cenário/Mata_Atlantica/Background/FUNDONEVOA.png" id="4_w1mwb"]
 [ext_resource type="PackedScene" uid="uid://bs5i45df7rwnf" path="res://UI/HUD.tscn" id="5_7afhp"]
 [ext_resource type="Texture2D" uid="uid://ctar30vsktrrb" path="res://Sprites/Cenário/Mata_Atlantica/Background/FUNDONEVOA2.png" id="5_8juyj"]
 [ext_resource type="Texture2D" uid="uid://c8bkav2g3wyeu" path="res://Sprites/Cenário/Mata_Atlantica/Chao/moita2.png" id="5_cw0a5"]
 [ext_resource type="Texture2D" uid="uid://rbtvfm4m7ft" path="res://Sprites/VFX/Iluminação/SOMBRA2.png" id="6_31oht"]
 [ext_resource type="PackedScene" uid="uid://bei1s8te3cwko" path="res://Sprites/Cenário/Mata_Atlantica/Interativos/plataforma.tscn" id="7_vexem"]
+[ext_resource type="PackedScene" uid="uid://dgfcdht1gifdp" path="res://Objetos/Props/Espinhos.tscn" id="8_cw0a5"]
 [ext_resource type="Texture2D" uid="uid://rwmi1ggde5dy" path="res://Sprites/VFX/Iluminação/PORTAL.png" id="12_y6ja2"]
 [ext_resource type="Texture2D" uid="uid://cw2yeg7ynw0kl" path="res://Sprites/Cenário/Mata_Atlantica/Chao/chap_externo.png" id="19_8juyj"]
 [ext_resource type="Texture2D" uid="uid://cj4rj4oj20ogb" path="res://Sprites/Cenário/Mata_Atlantica/Chao/chap_interno.png" id="20_6h0de"]
@@ -328,82 +328,42 @@ shape = SubResource("RectangleShape2D_31oht")
 
 [node name="PARTE1" type="Node2D" parent="Armadilhas"]
 
-[node name="Armadilha2" parent="Armadilhas/PARTE1" node_paths=PackedStringArray("spawn_points") instance=ExtResource("4_fld4m")]
-position = Vector2(78, -6.000244)
+[node name="Armadilha" parent="Armadilhas/PARTE1" node_paths=PackedStringArray("spawn_points") instance=ExtResource("8_cw0a5")]
+position = Vector2(200, 72.999756)
 spawn_points = [NodePath("../../Respawn1"), NodePath("../../Respawn2")]
 
-[node name="Armadilha4" parent="Armadilhas/PARTE1" node_paths=PackedStringArray("spawn_points") instance=ExtResource("4_fld4m")]
-position = Vector2(585, 10)
-spawn_points = [NodePath("../../Respawn2"), NodePath("../../Respawn1")]
+[node name="Armadilha2" parent="Armadilhas/PARTE1" node_paths=PackedStringArray("spawn_points") instance=ExtResource("8_cw0a5")]
+position = Vector2(616, 72.999756)
+spawn_points = [NodePath("../../Respawn1"), NodePath("../../Respawn2")]
 
-[node name="Armadilha8" parent="Armadilhas/PARTE1" node_paths=PackedStringArray("spawn_points") instance=ExtResource("4_fld4m")]
-position = Vector2(1557, 47)
-spawn_points = [NodePath("../../Respawn2"), NodePath("../../Respawn1")]
+[node name="Armadilha3" parent="Armadilhas/PARTE1" node_paths=PackedStringArray("spawn_points") instance=ExtResource("8_cw0a5")]
+position = Vector2(1030, 72.999756)
+spawn_points = [NodePath("../../Respawn1"), NodePath("../../Respawn2")]
 
-[node name="Armadilha7" parent="Armadilhas/PARTE1" node_paths=PackedStringArray("spawn_points") instance=ExtResource("4_fld4m")]
-position = Vector2(1418, -10)
-spawn_points = [NodePath("../../Respawn2"), NodePath("../../Respawn1")]
-
-[node name="Armadilha3" parent="Armadilhas/PARTE1" node_paths=PackedStringArray("spawn_points") instance=ExtResource("4_fld4m")]
-position = Vector2(297, 139.99976)
-spawn_points = [NodePath("../../Respawn2"), NodePath("../../Respawn1")]
-
-[node name="Armadilha6" parent="Armadilhas/PARTE1" node_paths=PackedStringArray("spawn_points") instance=ExtResource("4_fld4m")]
-position = Vector2(1172, 41)
-spawn_points = [NodePath("../../Respawn2"), NodePath("../../Respawn1")]
-
-[node name="Armadilha5" parent="Armadilhas/PARTE1" node_paths=PackedStringArray("spawn_points") instance=ExtResource("4_fld4m")]
-position = Vector2(897, 14)
-spawn_points = [NodePath("../../Respawn2"), NodePath("../../Respawn1")]
-
-[node name="Armadilha9" parent="Armadilhas/PARTE1" node_paths=PackedStringArray("spawn_points") instance=ExtResource("4_fld4m")]
-position = Vector2(1634, -225)
-spawn_points = [NodePath("../../Respawn2"), NodePath("../../Respawn1")]
+[node name="Armadilha4" parent="Armadilhas/PARTE1" node_paths=PackedStringArray("spawn_points") instance=ExtResource("8_cw0a5")]
+position = Vector2(1433, 72.999756)
+spawn_points = [NodePath("../../Respawn1"), NodePath("../../Respawn2")]
 
 [node name="PARTE2" type="Node2D" parent="Armadilhas"]
 
-[node name="Armadilha10" parent="Armadilhas/PARTE2" node_paths=PackedStringArray("spawn_points") instance=ExtResource("4_fld4m")]
-position = Vector2(2194, -268)
+[node name="Armadilha5" parent="Armadilhas/PARTE2" node_paths=PackedStringArray("spawn_points") instance=ExtResource("8_cw0a5")]
+position = Vector2(2494, 72.999756)
 spawn_points = [NodePath("../../Respawn3"), NodePath("../../Respawn4")]
 
-[node name="Armadilha11" parent="Armadilhas/PARTE2" node_paths=PackedStringArray("spawn_points") instance=ExtResource("4_fld4m")]
-position = Vector2(2485, 121)
+[node name="Armadilha6" parent="Armadilhas/PARTE2" node_paths=PackedStringArray("spawn_points") instance=ExtResource("8_cw0a5")]
+position = Vector2(2910, 72.999756)
 spawn_points = [NodePath("../../Respawn3"), NodePath("../../Respawn4")]
 
-[node name="Armadilha12" parent="Armadilhas/PARTE2" node_paths=PackedStringArray("spawn_points") instance=ExtResource("4_fld4m")]
-position = Vector2(3825, 117)
+[node name="Armadilha7" parent="Armadilhas/PARTE2" node_paths=PackedStringArray("spawn_points") instance=ExtResource("8_cw0a5")]
+position = Vector2(3324, 72.999756)
 spawn_points = [NodePath("../../Respawn3"), NodePath("../../Respawn4")]
 
-[node name="Armadilha13" parent="Armadilhas/PARTE2" node_paths=PackedStringArray("spawn_points") instance=ExtResource("4_fld4m")]
-position = Vector2(3388, 69)
+[node name="Armadilha8" parent="Armadilhas/PARTE2" node_paths=PackedStringArray("spawn_points") instance=ExtResource("8_cw0a5")]
+position = Vector2(3727, 72.999756)
 spawn_points = [NodePath("../../Respawn3"), NodePath("../../Respawn4")]
 
-[node name="Armadilha14" parent="Armadilhas/PARTE2" node_paths=PackedStringArray("spawn_points") instance=ExtResource("4_fld4m")]
-position = Vector2(2273, -55)
-spawn_points = [NodePath("../../Respawn3"), NodePath("../../Respawn4")]
-
-[node name="Armadilha15" parent="Armadilhas/PARTE2" node_paths=PackedStringArray("spawn_points") instance=ExtResource("4_fld4m")]
-position = Vector2(3068, 79)
-spawn_points = [NodePath("../../Respawn3"), NodePath("../../Respawn4")]
-
-[node name="Armadilha16" parent="Armadilhas/PARTE2" node_paths=PackedStringArray("spawn_points") instance=ExtResource("4_fld4m")]
-position = Vector2(2756, 130)
-spawn_points = [NodePath("../../Respawn3"), NodePath("../../Respawn4")]
-
-[node name="Armadilha17" parent="Armadilhas/PARTE2" node_paths=PackedStringArray("spawn_points") instance=ExtResource("4_fld4m")]
-position = Vector2(3643, 124)
-spawn_points = [NodePath("../../Respawn3"), NodePath("../../Respawn4")]
-
-[node name="Armadilha18" parent="Armadilhas/PARTE2" node_paths=PackedStringArray("spawn_points") instance=ExtResource("4_fld4m")]
-position = Vector2(4173, 32)
-spawn_points = [NodePath("../../Respawn3"), NodePath("../../Respawn4")]
-
-[node name="Armadilha19" parent="Armadilhas/PARTE2" node_paths=PackedStringArray("spawn_points") instance=ExtResource("4_fld4m")]
-position = Vector2(5022, 66)
-spawn_points = [NodePath("../../Respawn3"), NodePath("../../Respawn4")]
-
-[node name="Armadilha22" parent="Armadilhas/PARTE2" node_paths=PackedStringArray("spawn_points") instance=ExtResource("4_fld4m")]
-position = Vector2(4741, 115)
+[node name="Armadilha9" parent="Armadilhas/PARTE2" node_paths=PackedStringArray("spawn_points") instance=ExtResource("8_cw0a5")]
+position = Vector2(4136, 72.999756)
 spawn_points = [NodePath("../../Respawn3"), NodePath("../../Respawn4")]
 
 [node name="Cenario" type="Node2D" parent="."]

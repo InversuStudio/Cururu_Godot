@@ -898,10 +898,13 @@ position = Vector2(1435, -1293)
 position = Vector2(2089, -278)
 
 [node name="Morcego2" parent="Entidades" instance=ExtResource("27_k72yp")]
-position = Vector2(1334, -2501.9998)
+position = Vector2(1509, -2239.9998)
+
+[node name="Morcego4" parent="Entidades" instance=ExtResource("27_k72yp")]
+position = Vector2(3184, -2455)
 
 [node name="Morcego3" parent="Entidades" instance=ExtResource("27_k72yp")]
-position = Vector2(2982, -4163)
+position = Vector2(1831.9998, -4277)
 
 [node name="Cururu" parent="Entidades" instance=ExtResource("5_v3esx")]
 z_index = 0

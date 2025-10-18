@@ -1,0 +1,142 @@
+[gd_scene load_steps=15 format=3 uid="uid://smwewolvvw6l"]
+
+[ext_resource type="Script" uid="uid://bxwx72gohremh" path="res://Scripts/Inimigos/Larva.gd" id="1_vgqag"]
+[ext_resource type="Texture2D" uid="uid://b0g3aehy8v827" path="res://Sprites/Inimigos/Escorpiao/scorpion_FRAME01.png" id="2_hg8ht"]
+[ext_resource type="Texture2D" uid="uid://cl6s3a1na1sf7" path="res://Sprites/Inimigos/Escorpiao/scorpion_FRAME02.png" id="3_e8asp"]
+[ext_resource type="Texture2D" uid="uid://cq8g6bvidl78b" path="res://Sprites/Inimigos/Escorpiao/scorpion_FRAME03.png" id="4_sh4a1"]
+[ext_resource type="Script" uid="uid://hsdutxxttrp3" path="res://Scripts/Componentes/Vida.gd" id="5_hcf47"]
+[ext_resource type="PackedScene" uid="uid://va5pjd6vuuo2" path="res://Objetos/Funcionalidade/CompHurtBox.tscn" id="6_rcu2w"]
+[ext_resource type="AudioStream" uid="uid://b3mmkipqf30jd" path="res://Audio/SFX/INIMIGOS/HIT_INIMIGO.wav" id="7_l87yx"]
+[ext_resource type="PackedScene" uid="uid://pc4mgv2nv8af" path="res://Objetos/Funcionalidade/CompHitBox.tscn" id="8_dtm3y"]
+[ext_resource type="PackedScene" uid="uid://ffqi6t0ahbmk" path="res://Objetos/Funcionalidade/OtimizadorSprite.tscn" id="9_ihru7"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ntg74"]
+size = Vector2(178.28961, 106.579025)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_tkh53"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_hg8ht")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_e8asp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_sh4a1")
+}],
+"loop": true,
+"name": &"default",
+"speed": 8.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_gx8x6"]
+radius = 59.00001
+height = 177.94754
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_buqx5"]
+radius = 39.445328
+height = 161.57413
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ujy2f"]
+radius = 56.631668
+height = 143.42117
+
+[node name="Escorpiao" type="CharacterBody2D"]
+scale = Vector2(0.67999953, 0.67999953)
+collision_layer = 2
+script = ExtResource("1_vgqag")
+velocidade = 1.6
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-9.55883, -117.64714)
+scale = Vector2(2.2352939, 2.2352939)
+shape = SubResource("RectangleShape2D_ntg74")
+
+[node name="Sprite" type="AnimatedSprite2D" parent="."]
+unique_name_in_owner = true
+self_modulate = Color(5.038518, 3.1649258, 0, 1)
+position = Vector2(2, -197.05896)
+scale = Vector2(1.1962308, 1.1962308)
+sprite_frames = SubResource("SpriteFrames_tkh53")
+autoplay = "default"
+
+[node name="Vida" type="Node" parent="."]
+script = ExtResource("5_hcf47")
+vida_max = 8
+metadata/_custom_type_script = "uid://hsdutxxttrp3"
+
+[node name="HurtBox" parent="." node_paths=PackedStringArray("comp_vida", "parent") instance=ExtResource("6_rcu2w")]
+unique_name_in_owner = true
+scale = Vector2(2.2352936, 2.2352936)
+collision_layer = 8
+comp_vida = NodePath("../Vida")
+distancia_knockback = 0.27
+tempo_knockback = 0.2
+hit_sfx = ExtResource("7_l87yx")
+parent = NodePath("..")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="HurtBox"]
+position = Vector2(-33.710567, -46)
+rotation = -1.57079
+shape = SubResource("CapsuleShape2D_gx8x6")
+debug_color = Color(0.99999, 0, 0.0935918, 0.42)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HurtBox"]
+position = Vector2(73.68428, -117.76326)
+rotation = -0.692349
+scale = Vector2(1.1625607, 1.1445471)
+shape = SubResource("CapsuleShape2D_buqx5")
+debug_color = Color(1, 0, 0.0941176, 0.419608)
+
+[node name="HitBox" parent="." node_paths=PackedStringArray("ignore") instance=ExtResource("8_dtm3y")]
+unique_name_in_owner = true
+scale = Vector2(2.2352936, 2.2352936)
+dano = 2
+ignore = NodePath("../HurtBox")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="HitBox"]
+position = Vector2(-37.500034, -46)
+rotation = -1.57079
+shape = SubResource("CapsuleShape2D_ujy2f")
+debug_color = Color(0.807155, 0.414602, 3.85046e-07, 0.42)
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="HitBox"]
+position = Vector2(73.68428, -117.76326)
+rotation = -0.692349
+scale = Vector2(1.1625607, 1.1445471)
+shape = SubResource("CapsuleShape2D_buqx5")
+debug_color = Color(0.807843, 0.415686, 0, 0.419608)
+
+[node name="RayDireita" type="RayCast2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(286.7649, -60)
+scale = Vector2(2.2352936, 2.2352936)
+target_position = Vector2(20, 0)
+
+[node name="RayVazioDireita" type="RayCast2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(286.7649, -24)
+scale = Vector2(2.2352936, 2.2352936)
+
+[node name="RayEsquerda" type="RayCast2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(-270.58844, -60)
+scale = Vector2(2.2352936, 2.2352936)
+target_position = Vector2(-20, 0)
+
+[node name="RayVazioEsquerda" type="RayCast2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(-270.58844, -24)
+scale = Vector2(2.2352936, 2.2352936)
+
+[node name="SpawnMoeda" type="Marker2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(0, -43)
+scale = Vector2(2.2352936, 2.2352936)
+
+[node name="OtimizadorSprite" parent="." instance=ExtResource("9_ihru7")]
+position = Vector2(1.4705893, 36.764732)
+scale = Vector2(2.2352936, 2.2352936)
+rect = Rect2(-126.47068, -202.94131, 252.94136, 216.17662)
+follow = true

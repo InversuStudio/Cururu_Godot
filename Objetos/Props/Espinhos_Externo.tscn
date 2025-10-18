@@ -18,8 +18,8 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_pb7qa"]
-radius = 157.2233
-height = 434.84058
+radius = 182.0
+height = 668.0
 
 [node name="Armadilha" type="Node2D"]
 script = ExtResource("1_ou87o")
@@ -32,19 +32,25 @@ sprite_frames = SubResource("SpriteFrames_tkh53")
 autoplay = "default"
 frame_progress = 0.9601439
 
+[node name="EspinhosExterno" type="Sprite2D" parent="."]
+position = Vector2(234, -167)
+scale = Vector2(0.96484375, 0.96484375)
+texture = ExtResource("2_iwuw0")
+flip_h = true
+
 [node name="HitBox" parent="." instance=ExtResource("3_iwuw0")]
 unique_name_in_owner = true
 sfx = ExtResource("4_mdh3x")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HitBox"]
-position = Vector2(-4.999996, -163)
-rotation = -2.5621433
+position = Vector2(112, -166)
+rotation = 1.5707964
 shape = SubResource("CapsuleShape2D_pb7qa")
 debug_color = Color(0.7937795, 0.42591533, 0.04459911, 0.41960785)
 
 [node name="OtimizadorSprite" type="VisibleOnScreenNotifier2D" parent="."]
 position = Vector2(3, -28)
-rect = Rect2(-216, -350, 429, 396)
+rect = Rect2(-203, -331, 659, 369)
 script = ExtResource("5_pb7qa")
 metadata/_custom_type_script = "uid://b2ls33ys55oyt"
 
