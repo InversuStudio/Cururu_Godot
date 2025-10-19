@@ -1630,7 +1630,7 @@ scale = Vector2(0.8, 0.8)
 texture = ExtResource("23_esn82")
 
 [node name="MoitaTeste60" type="Sprite2D" parent="Moitas"]
-position = Vector2(239.60034, -7322.8)
+position = Vector2(242, -7228)
 scale = Vector2(0.8, 0.8)
 texture = ExtResource("23_esn82")
 
@@ -1760,7 +1760,7 @@ scale = Vector2(0.8, 0.8)
 texture = ExtResource("23_esn82")
 
 [node name="MoitaTeste74" type="Sprite2D" parent="Moitas"]
-position = Vector2(-29.00003, -7170)
+position = Vector2(-46, -7123)
 scale = Vector2(0.8, 0.8)
 texture = ExtResource("23_esn82")
 

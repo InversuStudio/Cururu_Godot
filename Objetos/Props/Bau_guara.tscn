@@ -28,10 +28,10 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dpba2"]
-size = Vector2(198, 133.5)
+size = Vector2(213, 139)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4vmwf"]
-size = Vector2(238, 140)
+size = Vector2(215, 140)
 
 [node name="Bau" type="Node2D"]
 script = ExtResource("1_sh1i2")
@@ -55,7 +55,7 @@ scale = Vector2(2, 2)
 input_pickable = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite/StaticBody2D"]
-position = Vector2(1, -70.25)
+position = Vector2(1.5, -70.5)
 shape = SubResource("RectangleShape2D_dpba2")
 
 [node name="Vida" parent="Sprite" instance=ExtResource("5_im6w2")]
@@ -68,7 +68,7 @@ comp_vida = NodePath("../Vida")
 hit_sfx = ExtResource("7_cqnga")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite/HurtBox"]
-position = Vector2(0, -71)
+position = Vector2(1.5, -71)
 shape = SubResource("RectangleShape2D_4vmwf")
 debug_color = Color(0.7753908, 0.38766962, 0.5591627, 0.41960785)
 

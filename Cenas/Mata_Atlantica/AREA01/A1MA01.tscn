@@ -1,4 +1,4 @@
-[gd_scene load_steps=34 format=4 uid="uid://exty4suocudj"]
+[gd_scene load_steps=33 format=4 uid="uid://exty4suocudj"]
 
 [ext_resource type="PackedScene" uid="uid://nohq28uk7lfk" path="res://Objetos/Entidades/Player.tscn" id="1_v83m2"]
 [ext_resource type="Texture2D" uid="uid://c374cwih425cq" path="res://Sprites/Cenário/Tilemaps/Base.png" id="2_lthbn"]
@@ -6,7 +6,6 @@
 [ext_resource type="Texture2D" uid="uid://rwmi1ggde5dy" path="res://Sprites/VFX/Iluminação/PORTAL.png" id="4_1ewfi"]
 [ext_resource type="Texture2D" uid="uid://dog2ml3xbyho2" path="res://Sprites/Cenário/Mata_Atlantica/Background/arvore2.png" id="4_6d12h"]
 [ext_resource type="Texture2D" uid="uid://k22xru6heyh3" path="res://Sprites/Cenário/Mata_Atlantica/Background/arvore.png" id="4_exy77"]
-[ext_resource type="Texture2D" uid="uid://ggamtf0lg07" path="res://Sprites/Cenário/zSem_Uso/cipó01.png" id="4_vqpay"]
 [ext_resource type="Texture2D" uid="uid://dmh8fodubelsr" path="res://Sprites/Cenário/Mata_Atlantica/Background/FUNDONEVOA.png" id="5_6d12h"]
 [ext_resource type="PackedScene" uid="uid://cqyub70sv0ofp" path="res://Objetos/Props/SavePoint.tscn" id="5_65x72"]
 [ext_resource type="Texture2D" uid="uid://ctar30vsktrrb" path="res://Sprites/Cenário/Mata_Atlantica/Background/FUNDONEVOA2.png" id="6_meyap"]
@@ -428,50 +427,6 @@ texture = ExtResource("9_nh2iu")
 
 [node name="Cipovisual" type="Node2D" parent="background"]
 position = Vector2(-4085, 2207)
-
-[node name="Cipó01" type="Sprite2D" parent="background/Cipovisual"]
-position = Vector2(-2393, -2858)
-texture = ExtResource("4_vqpay")
-
-[node name="Cipó02" type="Sprite2D" parent="background/Cipovisual"]
-position = Vector2(-2082, -2585)
-rotation = 1.5708
-texture = ExtResource("4_vqpay")
-
-[node name="Cipó05" type="Sprite2D" parent="background/Cipovisual"]
-position = Vector2(745, -2629)
-rotation = 1.5708
-texture = ExtResource("4_vqpay")
-
-[node name="Cipó08" type="Sprite2D" parent="background/Cipovisual"]
-position = Vector2(4264, -3104)
-rotation = 1.5708
-texture = ExtResource("4_vqpay")
-
-[node name="Cipó03" type="Sprite2D" parent="background/Cipovisual"]
-position = Vector2(-1843, -2349)
-texture = ExtResource("4_vqpay")
-
-[node name="Cipó04" type="Sprite2D" parent="background/Cipovisual"]
-position = Vector2(347, -2527)
-texture = ExtResource("4_vqpay")
-
-[node name="Cipó06" type="Sprite2D" parent="background/Cipovisual"]
-position = Vector2(1213, -2978)
-texture = ExtResource("4_vqpay")
-
-[node name="Cipó09" type="Sprite2D" parent="background/Cipovisual"]
-position = Vector2(4804, -3121)
-texture = ExtResource("4_vqpay")
-
-[node name="Cipó07" type="Sprite2D" parent="background/Cipovisual"]
-position = Vector2(3631, -3229)
-texture = ExtResource("4_vqpay")
-
-[node name="Cipó Espinho" type="Node2D" parent="background"]
-
-[node name="arbustochao" type="Node2D" parent="background"]
-position = Vector2(-7019, 929)
 
 [node name="Transicoes" type="Node2D" parent="."]
 
