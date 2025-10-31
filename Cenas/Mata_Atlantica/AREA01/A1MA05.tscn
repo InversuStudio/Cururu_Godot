@@ -327,6 +327,7 @@ position = Vector2(9.5, -187.5)
 shape = SubResource("RectangleShape2D_31oht")
 
 [node name="PARTE1" type="Node2D" parent="Armadilhas"]
+position = Vector2(0, 45.999756)
 
 [node name="Armadilha" parent="Armadilhas/PARTE1" node_paths=PackedStringArray("spawn_points") instance=ExtResource("8_cw0a5")]
 position = Vector2(200, 72.999756)
@@ -345,6 +346,7 @@ position = Vector2(1433, 72.999756)
 spawn_points = [NodePath("../../Respawn1"), NodePath("../../Respawn2")]
 
 [node name="PARTE2" type="Node2D" parent="Armadilhas"]
+position = Vector2(0, 37.999756)
 
 [node name="Armadilha5" parent="Armadilhas/PARTE2" node_paths=PackedStringArray("spawn_points") instance=ExtResource("8_cw0a5")]
 position = Vector2(2494, 72.999756)

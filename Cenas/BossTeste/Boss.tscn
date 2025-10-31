@@ -708,12 +708,12 @@ state_nocaute = NodePath("../Nocaute")
 [node name="CospeFogo" type="Node" parent="StateMachine" node_paths=PackedStringArray("idle_state")]
 script = ExtResource("75_16hqa")
 idle_state = NodePath("../Idle")
-tempo_idle = 1.5
+tempo_idle = 0.6
 
 [node name="PilarFogo" type="Node" parent="StateMachine" node_paths=PackedStringArray("idle_state")]
 script = ExtResource("85_fi4f6")
 idle_state = NodePath("../Idle")
-tempo_idle = 3.0
+tempo_idle = 2.0
 
 [node name="Purificado" type="Node" parent="StateMachine"]
 
@@ -739,9 +739,10 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -799.0
-offset_top = -194.0
-offset_right = 1199.0
+offset_left = -784.0
+offset_top = -227.0
+offset_right = 1214.0
+offset_bottom = -14.5
 grow_horizontal = 2
 grow_vertical = 0
 scale = Vector2(0.8, 0.8)
@@ -749,11 +750,15 @@ max_value = 15.0
 step = 0.1
 value = 15.0
 fill_mode = 6
-texture_under = ExtResource("84_6hkog")
 texture_progress = ExtResource("85_iy7ck")
 texture_progress_offset = Vector2(76.985, 137.11)
 tint_over = Color(0.3647059, 1, 1, 0)
-tint_progress = Color(2.4626093, 0.7787058, 0.8307853, 1)
+tint_progress = Color(0.6270837, 0, 0.048433684, 1)
+
+[node name="UiBoitata" type="Sprite2D" parent="UI_BOSS/Control/BarraVida"]
+position = Vector2(979.9999, 168.74988)
+scale = Vector2(1.0106664, 0.91370535)
+texture = ExtResource("84_6hkog")
 
 [connection signal="timeout" from="TimerIdle" to="StateMachine/Idle" method="_on_timer_idle_timeout"]
 [connection signal="timeout" from="TimerNocaute" to="StateMachine/Nocaute" method="_on_timer_nocaute_timeout"]

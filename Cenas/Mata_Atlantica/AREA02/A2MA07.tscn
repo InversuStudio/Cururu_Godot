@@ -1,4 +1,4 @@
-[gd_scene load_steps=37 format=4 uid="uid://c4rls1pfwei2e"]
+[gd_scene load_steps=38 format=4 uid="uid://c4rls1pfwei2e"]
 
 [ext_resource type="Texture2D" uid="uid://c374cwih425cq" path="res://Sprites/Cenário/Tilemaps/Base.png" id="1_uhas7"]
 [ext_resource type="Texture2D" uid="uid://cqu5scrrmr5n5" path="res://Sprites/Cenário/Mata_Atlantica/Background/FUNDOCEU.png" id="1_xyjrg"]
@@ -11,6 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://ctar30vsktrrb" path="res://Sprites/Cenário/Mata_Atlantica/Background/FUNDONEVOA2.png" id="4_gnpt0"]
 [ext_resource type="Script" uid="uid://bd046eokvcnu2" path="res://addons/phantom_camera/scripts/phantom_camera_host/phantom_camera_host.gd" id="4_kt8lh"]
 [ext_resource type="PackedScene" uid="uid://nohq28uk7lfk" path="res://Objetos/Entidades/Player.tscn" id="5_yius8"]
+[ext_resource type="Texture2D" uid="uid://drcemrcpb3ydc" path="res://Sprites/Cenário/Mata_Atlantica/Chao/moita_chao2.png" id="9_gnpt0"]
 [ext_resource type="PackedScene" uid="uid://1apfpwlqocxn" path="res://Objetos/Funcionalidade/TransicaoFase.tscn" id="9_iyc38"]
 [ext_resource type="Texture2D" uid="uid://jecy4bfqqqxu" path="res://Sprites/Cenário/Mata_Atlantica/Teto/Moita teste.png" id="10_ymck4"]
 [ext_resource type="Texture2D" uid="uid://cw2yeg7ynw0kl" path="res://Sprites/Cenário/Mata_Atlantica/Chao/chap_externo.png" id="11_s8tgr"]
@@ -221,6 +222,12 @@ rotation = 0.08726645
 scale = Vector2(0.7609155, 0.7609155)
 texture = ExtResource("2_eoclm")
 
+[node name="Arvore6" type="Sprite2D" parent="ArvFundo"]
+position = Vector2(-2429, -10628.999)
+rotation = -0.08726646
+scale = Vector2(0.7609155, 0.7609155)
+texture = ExtResource("2_eoclm")
+
 [node name="Arvore5" type="Sprite2D" parent="ArvFundo"]
 position = Vector2(-1620.2905, -10767)
 scale = Vector2(0.7609155, 0.7609155)
@@ -231,6 +238,10 @@ scroll_scale = Vector2(0.9, 1)
 
 [node name="Arvore" type="Sprite2D" parent="ArvFrente"]
 position = Vector2(-6232, -10864)
+texture = ExtResource("2_c6gyn")
+
+[node name="Arvore3" type="Sprite2D" parent="ArvFrente"]
+position = Vector2(-5146, -10864)
 texture = ExtResource("2_c6gyn")
 
 [node name="Arvore2" type="Sprite2D" parent="ArvFrente"]
@@ -249,6 +260,10 @@ position = Vector2(-1761.4286, -10515.429)
 [node name="Arvore3" type="Sprite2D" parent="Cenario"]
 position = Vector2(-224.57141, -320.5713)
 rotation = -0.08726644
+texture = ExtResource("2_c6gyn")
+
+[node name="Arvore4" type="Sprite2D" parent="Cenario"]
+position = Vector2(-1665.5714, -291.5713)
 texture = ExtResource("2_c6gyn")
 
 [node name="PlataformaSome2" type="StaticBody2D" parent="Cenario"]
@@ -287,8 +302,17 @@ position = Vector2(-1806.5714, -11.442383)
 scale = Vector2(3.1709483, 1.1517813)
 texture = ExtResource("3_eoclm")
 
+[node name="MoitaChao3" type="Sprite2D" parent="Cenario"]
+position = Vector2(-1869.5714, 100.42871)
+texture = ExtResource("9_gnpt0")
+
 [node name="Chao" type="Node2D" parent="Cenario"]
 z_index = 1
+
+[node name="MoitaChao2" type="Sprite2D" parent="Cenario/Chao"]
+z_index = -1
+position = Vector2(-2614.5713, 100.42871)
+texture = ExtResource("9_gnpt0")
 
 [node name="ChapExterno" type="Sprite2D" parent="Cenario/Chao"]
 position = Vector2(-1705.5714, 292.4287)
@@ -960,6 +984,26 @@ texture = ExtResource("12_o607x")
 position = Vector2(-1808.5713, -108.57129)
 scale = Vector2(3.1729255, 0.7786564)
 texture = ExtResource("4_gnpt0")
+
+[node name="MoitaChao2" type="Sprite2D" parent="Cenario"]
+z_index = -1
+position = Vector2(-2318.5713, 107.42871)
+texture = ExtResource("9_gnpt0")
+
+[node name="MoitaChao4" type="Sprite2D" parent="Cenario"]
+z_index = 1
+position = Vector2(-2528.5713, 527.4287)
+texture = ExtResource("9_gnpt0")
+
+[node name="MoitaChao5" type="Sprite2D" parent="Cenario"]
+z_index = 1
+position = Vector2(-3039.5713, 462.4287)
+texture = ExtResource("9_gnpt0")
+
+[node name="MoitaChao6" type="Sprite2D" parent="Cenario"]
+z_index = 1
+position = Vector2(-1854.5713, 597.4287)
+texture = ExtResource("9_gnpt0")
 
 [node name="2-5" parent="." instance=ExtResource("9_iyc38")]
 position = Vector2(-404, -10318.001)

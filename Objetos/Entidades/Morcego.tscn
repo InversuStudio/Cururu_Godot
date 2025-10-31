@@ -1,8 +1,10 @@
-[gd_scene load_steps=14 format=3 uid="uid://bjvnm0aydr0vd"]
+[gd_scene load_steps=16 format=3 uid="uid://bjvnm0aydr0vd"]
 
 [ext_resource type="Script" uid="uid://byqf6bdnsd3m8" path="res://Scripts/Inimigos/Morcego.gd" id="1_j5mvf"]
 [ext_resource type="Texture2D" uid="uid://bicsa1wljjplt" path="res://Sprites/Inimigos/Morcego/iminigo_voador_FRAME01.png" id="2_87fsy"]
 [ext_resource type="Texture2D" uid="uid://cjslyc2lwn221" path="res://Sprites/Inimigos/Morcego/iminigo_voador_FRAME02.png" id="3_j5mvf"]
+[ext_resource type="Texture2D" uid="uid://cqpj18rvwia1g" path="res://Sprites/Inimigos/Morcego/iminigo_voador_FRAME03.png" id="4_63e5l"]
+[ext_resource type="Texture2D" uid="uid://dihnt3vmwd3dp" path="res://Sprites/Inimigos/Morcego/iminigo_voador_FRAME04.png" id="5_5qklw"]
 [ext_resource type="PackedScene" uid="uid://va5pjd6vuuo2" path="res://Objetos/Funcionalidade/CompHurtBox.tscn" id="5_87fsy"]
 [ext_resource type="Script" uid="uid://hsdutxxttrp3" path="res://Scripts/Componentes/Vida.gd" id="5_ohlaa"]
 [ext_resource type="AudioStream" uid="uid://b3mmkipqf30jd" path="res://Audio/SFX/INIMIGOS/HIT_INIMIGO.wav" id="6_87fsy"]
@@ -21,10 +23,10 @@ animations = [{
 "texture": ExtResource("3_j5mvf")
 }, {
 "duration": 1.0,
-"texture": ExtResource("2_87fsy")
+"texture": ExtResource("4_63e5l")
 }, {
 "duration": 1.0,
-"texture": ExtResource("3_j5mvf")
+"texture": ExtResource("5_5qklw")
 }],
 "loop": true,
 "name": &"default",
@@ -35,20 +37,22 @@ animations = [{
 radius = 664.782
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_87fsy"]
-radius = 139.97775
+radius = 136.6731
 
 [sub_resource type="Resource" id="Resource_87fsy"]
 metadata/__load_path__ = "res://Audio/SFX/INIMIGOS/HIT_INIMIGO.wav"
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ujy2f"]
-radius = 133.86351
-height = 267.72702
+radius = 120.196754
+height = 240.39351
 
 [node name="Morcego" type="CharacterBody2D"]
 scale = Vector2(0.88, 0.88)
 collision_layer = 2
+motion_mode = 1
 safe_margin = 2.0
 script = ExtResource("1_j5mvf")
+speed = 1.2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0.22733307, 0.2273407)
@@ -62,7 +66,8 @@ position = Vector2(-4.3181305, 0.22733307)
 scale = Vector2(0.3648795, 0.3648795)
 sprite_frames = SubResource("SpriteFrames_tkh53")
 autoplay = "default"
-frame_progress = 0.537473
+frame_progress = 0.28055105
+speed_scale = 1.2
 
 [node name="Vida" type="Node" parent="."]
 script = ExtResource("5_ohlaa")
@@ -82,7 +87,7 @@ position = Vector2(0.22733307, 28.636433)
 scale = Vector2(0.6818189, 0.6818189)
 collision_layer = 8
 comp_vida = NodePath("../Vida")
-distancia_knockback = 0.5
+distancia_knockback = 0.3
 tempo_knockback = 0.2
 hit_sfx = ExtResource("6_87fsy")
 parent = NodePath("..")

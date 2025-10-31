@@ -484,15 +484,15 @@ texture = ExtResource("6_fo7ry")
 position = Vector2(-10634, -142)
 
 [node name="Armadilha" parent="." node_paths=PackedStringArray("spawn_points") instance=ExtResource("11_fo7ry")]
-position = Vector2(-26820, -3068)
+position = Vector2(-27147, -3083)
 spawn_points = [NodePath("../Area2D"), NodePath("../Area2D2")]
 
 [node name="Armadilha2" parent="." node_paths=PackedStringArray("spawn_points") instance=ExtResource("11_fo7ry")]
-position = Vector2(-26426, -3068)
+position = Vector2(-26481, -3033)
 spawn_points = [NodePath("../Area2D"), NodePath("../Area2D2")]
 
 [node name="Armadilha3" parent="." node_paths=PackedStringArray("spawn_points") instance=ExtResource("11_fo7ry")]
-position = Vector2(-26021, -3068)
+position = Vector2(-25752, -3044)
 spawn_points = [NodePath("../Area2D"), NodePath("../Area2D2")]
 
 [node name="Armadilha4" parent="." node_paths=PackedStringArray("spawn_points") instance=ExtResource("11_fo7ry")]

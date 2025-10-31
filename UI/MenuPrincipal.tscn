@@ -59,6 +59,7 @@ text = "Sair"
 
 [node name="BtnSFX" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("4_6y4ar")
+volume_db = -15.0
 
 [node name="BGM_Player" type="Node" parent="."]
 script = ExtResource("5_e3fqx")

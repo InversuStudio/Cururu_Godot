@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=3 uid="uid://l1l8x741umo7"]
 
 [ext_resource type="Script" uid="uid://davjnwfncyj66" path="res://Scripts/Componentes/Armadilha.gd" id="1_ou87o"]
-[ext_resource type="Texture2D" uid="uid://chyapam240nee" path="res://Sprites/Cenário/Mata_Atlantica/Interativos/ESPINHOS_EXTERNO.png" id="2_iwuw0"]
+[ext_resource type="Texture2D" uid="uid://cjoew37wldhfy" path="res://Sprites/Cenário/Mata_Atlantica/Interativos/ESPINHOS_EXTERNO.png" id="2_iwuw0"]
 [ext_resource type="PackedScene" uid="uid://pc4mgv2nv8af" path="res://Objetos/Funcionalidade/CompHitBox.tscn" id="3_iwuw0"]
 [ext_resource type="AudioStream" uid="uid://d0lumxscgbgin" path="res://Audio/SFX/INIMIGOS/inimigo_dead.mp3" id="4_mdh3x"]
 [ext_resource type="Script" uid="uid://b2ls33ys55oyt" path="res://Scripts/Componentes/OtimizadorSprite.gd" id="5_pb7qa"]
@@ -26,15 +26,17 @@ script = ExtResource("1_ou87o")
 
 [node name="Sprite" type="AnimatedSprite2D" parent="."]
 unique_name_in_owner = true
-position = Vector2(-11.000002, -168)
-scale = Vector2(0.9531251, 0.9531252)
+position = Vector2(-41.999996, -143.82106)
+rotation = -0.7853982
+scale = Vector2(0.770856, 0.7708561)
 sprite_frames = SubResource("SpriteFrames_tkh53")
 autoplay = "default"
 frame_progress = 0.9601439
 
 [node name="EspinhosExterno" type="Sprite2D" parent="."]
-position = Vector2(234, -167)
-scale = Vector2(0.96484375, 0.96484375)
+position = Vector2(274.81885, -146.58157)
+rotation = 0.7853982
+scale = Vector2(0.7877663, 0.7877663)
 texture = ExtResource("2_iwuw0")
 flip_h = true
 

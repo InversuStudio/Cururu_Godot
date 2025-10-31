@@ -6,7 +6,7 @@
 [ext_resource type="AudioStream" uid="uid://c8tt33f71nk6f" path="res://Audio/SFX/AMBIENTE/Som_portaabrindo.ogg" id="6_h4g8d"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_41i4q"]
-size = Vector2(203, 511)
+size = Vector2(177, 511)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rixxk"]
 size = Vector2(243, 511)
@@ -70,7 +70,8 @@ script = ExtResource("1_rixxk")
 [node name="Porta" type="Node2D" parent="."]
 
 [node name="Miasma" type="Sprite2D" parent="Porta"]
-position = Vector2(1, -62)
+position = Vector2(93.00001, 34.054783)
+scale = Vector2(0.7837078, 0.7787574)
 texture = ExtResource("3_h4g8d")
 
 [node name="HurtBox" parent="Porta" instance=ExtResource("3_7ptwx")]
@@ -83,6 +84,7 @@ shape = SubResource("RectangleShape2D_41i4q")
 debug_color = Color(0.99137133, 0, 0.27243033, 0.41960785)
 
 [node name="Colisao" type="StaticBody2D" parent="Porta"]
+visible = false
 collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Porta/Colisao"]

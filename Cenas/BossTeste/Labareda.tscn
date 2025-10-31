@@ -81,8 +81,8 @@ height = 576.0
 
 [node name="PilarFogo" type="Node2D"]
 script = ExtResource("1_tdbse")
-tempo_carga = 0.8
-tempo_ativo = 1.5
+tempo_carga = 0.5
+tempo_ativo = 1.2
 
 [node name="Sprite" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, -422)

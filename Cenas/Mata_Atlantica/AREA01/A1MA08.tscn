@@ -1221,6 +1221,12 @@ scale = Vector2(0.8, 0.8)
 texture = ExtResource("24_esn82")
 flip_v = true
 
+[node name="Frontfolha50" type="Sprite2D" parent="Cenario/Foreground"]
+position = Vector2(-4898, 105.999985)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("24_esn82")
+flip_v = true
+
 [node name="Frontfolha38" type="Sprite2D" parent="Cenario/Foreground"]
 position = Vector2(-4035, 2)
 scale = Vector2(0.8, 0.8)
@@ -1234,7 +1240,13 @@ texture = ExtResource("24_esn82")
 flip_v = true
 
 [node name="Frontfolha40" type="Sprite2D" parent="Cenario/Foreground"]
-position = Vector2(-2689, 203)
+position = Vector2(-2631, 203)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("24_esn82")
+flip_v = true
+
+[node name="Frontfolha51" type="Sprite2D" parent="Cenario/Foreground"]
+position = Vector2(-2840, 40.000015)
 scale = Vector2(0.8, 0.8)
 texture = ExtResource("24_esn82")
 flip_v = true
@@ -1375,13 +1387,13 @@ z_index = -2
 position = Vector2(-9072, 944)
 
 [node name="PortaTemp2" parent="Cenario/Props" instance=ExtResource("8_krmto")]
-position = Vector2(-7728, 705)
+position = Vector2(-7784, 705)
 
 [node name="PortaTemp3" parent="Cenario/Props" instance=ExtResource("8_krmto")]
-position = Vector2(-5024.2, 705)
+position = Vector2(-5090, 705)
 
 [node name="PortaTemp4" parent="Cenario/Props" instance=ExtResource("8_krmto")]
-position = Vector2(-8865, -706)
+position = Vector2(-8936, -706)
 
 [node name="AreaUpgrade" parent="Cenario/Props" instance=ExtResource("2_d6eef")]
 position = Vector2(-7954, -510)
@@ -1620,7 +1632,7 @@ scale = Vector2(0.8, 0.8)
 texture = ExtResource("23_esn82")
 
 [node name="MoitaTeste58" type="Sprite2D" parent="Moitas"]
-position = Vector2(4560.6, -7404.5996)
+position = Vector2(4581, -7413)
 scale = Vector2(0.8, 0.8)
 texture = ExtResource("23_esn82")
 
@@ -1744,8 +1756,18 @@ position = Vector2(2574, -7193)
 scale = Vector2(0.8, 0.8)
 texture = ExtResource("23_esn82")
 
+[node name="MoitaTeste80" type="Sprite2D" parent="Moitas"]
+position = Vector2(2574, -7193)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("23_esn82")
+
 [node name="MoitaTeste67" type="Sprite2D" parent="Moitas"]
 position = Vector2(2745, -7090)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("23_esn82")
+
+[node name="MoitaTeste79" type="Sprite2D" parent="Moitas"]
+position = Vector2(2908, -7248)
 scale = Vector2(0.8, 0.8)
 texture = ExtResource("23_esn82")
 
