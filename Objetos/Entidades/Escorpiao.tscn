@@ -64,7 +64,7 @@ script = ExtResource("5_jbocm")
 vida_max = 3
 metadata/_custom_type_script = "uid://hsdutxxttrp3"
 
-[node name="HurtBox" parent="." node_paths=PackedStringArray("comp_vida", "parent") instance=ExtResource("6_ppnp4")]
+[node name="HurtBox" parent="." node_paths=PackedStringArray("comp_vida", "parent", "sprite") instance=ExtResource("6_ppnp4")]
 unique_name_in_owner = true
 collision_layer = 8
 comp_vida = NodePath("../Vida")
@@ -72,6 +72,7 @@ distancia_knockback = 0.25
 tempo_knockback = 0.2
 hit_sfx = ExtResource("7_mvbia")
 parent = NodePath("..")
+sprite = NodePath("../Sprite")
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="HurtBox"]
 position = Vector2(-31, -46)

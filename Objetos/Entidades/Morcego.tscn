@@ -81,7 +81,7 @@ collision_mask = 2
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 shape = SubResource("CircleShape2D_j5mvf")
 
-[node name="HurtBox" parent="." node_paths=PackedStringArray("comp_vida", "parent") instance=ExtResource("5_87fsy")]
+[node name="HurtBox" parent="." node_paths=PackedStringArray("comp_vida", "parent", "sprite") instance=ExtResource("5_87fsy")]
 unique_name_in_owner = true
 position = Vector2(0.22733307, 28.636433)
 scale = Vector2(0.6818189, 0.6818189)
@@ -91,6 +91,7 @@ distancia_knockback = 0.3
 tempo_knockback = 0.2
 hit_sfx = ExtResource("6_87fsy")
 parent = NodePath("..")
+sprite = NodePath("../Sprite")
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="HurtBox"]
 position = Vector2(1, -42)

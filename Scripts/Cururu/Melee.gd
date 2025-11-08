@@ -3,6 +3,10 @@ extends State
 @export var chao_state: State = null
 @export var fall_state: State = null
 
+@export_group("Pushback")
+@export var distancia_push:float = 0.0
+@export var tempo_push:float = .2
+
 # Armazena número do ataque
 var combo_num: int = 0
 # Lista de animações
@@ -18,7 +22,7 @@ func _ready() -> void:
 	await get_tree().process_frame
 	for c:Node2D in parent.hitbox_container.get_children():
 		if c is HitBox:
-			c.connect("hit", RecuperaMagia.bind(c))
+			c.connect("hit", Hit.bind(c))
 
 # COMPORTAMENTO AO ENTRAR NO STATE
 func Enter() -> void:
@@ -44,14 +48,28 @@ func Update(_delta:float) -> State:
 	return null
 
 func FixedUpdate(delta:float) -> State:
+	# Gravidade
+	if !parent.is_on_floor():
+		if parent.velocity.y >= 0:
+			parent.velocity.y += parent.fall_gravity * delta
+		else:
+			parent.velocity.y += parent.jump_gravity * delta
+	
+	# Solução lógica pulo curto
 	if Input.is_action_just_released("pulo"):
 		parent.velocity.y = 0.0
-	if parent.is_on_floor():
-		parent.velocity.x = move_toward(parent.velocity.x, 0.0, parent.decel * delta)
-	elif parent.velocity.y >= 0:
-		parent.velocity.y += parent.fall_gravity * delta
+	
+	# Movimentação
+	var dir = parent.input_move
+	if dir != 0.0:
+		parent.velocity.x += parent.accel * dir * delta
+		var target_speed:float = parent.speed if parent.is_on_floor(
+			) else parent.air_speed
+		if abs(parent.velocity.x) > target_speed:
+			parent.velocity.x = target_speed * dir
 	else:
-		parent.velocity.y += parent.jump_gravity * delta
+		parent.velocity.x = move_toward(parent.velocity.x, dir, parent.decel * delta)
+	
 	return null
 
 # Inicia timer para resetar combo, dentro do AnimationPlayer
@@ -63,7 +81,7 @@ func Reset_Ataque() -> void:
 func _on_melee_timeout() -> void:
 	combo_num = 0
 
-func RecuperaMagia(hit:HitBox) -> void:
-	print("HIT")
+func Hit(pos_target:Vector2, hit:HitBox) -> void:
+	hit.CalcPushback(distancia_push, tempo_push, pos_target)
 	if !hit.is_in_group("Special"):
 		GameData.magia_atual += 1

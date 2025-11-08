@@ -973,13 +973,14 @@ metadata/_custom_type_script = "uid://hsdutxxttrp3"
 
 [node name="HurtContainer" type="Node2D" parent="."]
 
-[node name="HurtBox" parent="HurtContainer" node_paths=PackedStringArray("comp_vida", "parent") instance=ExtResource("46_wjcvp")]
+[node name="HurtBox" parent="HurtContainer" node_paths=PackedStringArray("comp_vida", "parent", "sprite") instance=ExtResource("46_wjcvp")]
 comp_vida = NodePath("../../Vida")
 distancia_knockback = 2.0
 tempo_knockback = 0.5
 cooldown_dano = 10.0
 hit_sfx = ExtResource("77_d7mdf")
 parent = NodePath("../..")
+sprite = NodePath("../../Cururu")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HurtContainer/HurtBox"]
 position = Vector2(-16, -130)
@@ -995,10 +996,11 @@ debug_color = Color(0.92912, 0, 0.16329, 0.42)
 [node name="HitContainer" type="Node2D" parent="."]
 position = Vector2(-2, 0)
 
-[node name="Melee1" parent="HitContainer" node_paths=PackedStringArray("ignore") instance=ExtResource("47_grb16")]
+[node name="Melee1" parent="HitContainer" node_paths=PackedStringArray("ignore", "parent") instance=ExtResource("47_grb16")]
 position = Vector2(33, -15)
 collision_mask = 12
 ignore = NodePath("../../HurtContainer/HurtBox")
+parent = NodePath("../..")
 
 [node name="ColMel1" type="CollisionShape2D" parent="HitContainer/Melee1"]
 position = Vector2(46, -83)
@@ -1006,10 +1008,11 @@ shape = SubResource("CircleShape2D_xx3r0")
 disabled = true
 debug_color = Color(0.69455, 0.495447, 0, 0.42)
 
-[node name="Melee2" parent="HitContainer" node_paths=PackedStringArray("ignore") instance=ExtResource("47_grb16")]
+[node name="Melee2" parent="HitContainer" node_paths=PackedStringArray("ignore", "parent") instance=ExtResource("47_grb16")]
 position = Vector2(12, 0)
 collision_mask = 12
 ignore = NodePath("../../HurtContainer/HurtBox")
+parent = NodePath("../..")
 
 [node name="ColMel2" type="CollisionShape2D" parent="HitContainer/Melee2"]
 position = Vector2(63, -79)
@@ -1017,10 +1020,11 @@ rotation = -1.57079
 shape = SubResource("CapsuleShape2D_wq158")
 disabled = true
 
-[node name="Special" parent="HitContainer" node_paths=PackedStringArray("ignore") groups=["Special"] instance=ExtResource("47_grb16")]
+[node name="Special" parent="HitContainer" node_paths=PackedStringArray("ignore", "parent") groups=["Special"] instance=ExtResource("47_grb16")]
 collision_mask = 12
 dano = 2
 ignore = NodePath("../../HurtContainer/HurtBox")
+parent = NodePath("../..")
 
 [node name="ColSpecial" type="CollisionShape2D" parent="HitContainer/Special"]
 position = Vector2(156, -105)
@@ -1119,6 +1123,7 @@ chao_state = NodePath("../Chao")
 script = ExtResource("55_7uoqt")
 chao_state = NodePath("../Chao")
 fall_state = NodePath("../Fall")
+distancia_push = 1.0
 
 [node name="Special" type="Node" parent="StateMachine" node_paths=PackedStringArray("chao_state", "fall_state")]
 script = ExtResource("56_7uoqt")
