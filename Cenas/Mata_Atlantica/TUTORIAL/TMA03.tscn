@@ -33,7 +33,7 @@
 [ext_resource type="PackedScene" uid="uid://bei1s8te3cwko" path="res://Sprites/Cenário/Mata_Atlantica/Interativos/plataforma.tscn" id="30_rnx0k"]
 [ext_resource type="Script" uid="uid://dd16yu704x6wt" path="res://Scripts/Componentes/BGM_Player.gd" id="31_op0pn"]
 [ext_resource type="AudioStream" uid="uid://c7qftchbhu6xc" path="res://Audio/SFX/AMBIENTE/Musica_Jogo.mp3" id="32_54dor"]
-[ext_resource type="PackedScene" uid="uid://gxfjc3yeulc4" path="res://Objetos/Props/Bau_acai.tscn" id="33_54dor"]
+[ext_resource type="PackedScene" uid="uid://1fdx2ie24dh8" path="res://Objetos/Props/Bau.tscn" id="33_54dor"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_l7gx4"]
 size = Vector2(10701, 6336)

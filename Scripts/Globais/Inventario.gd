@@ -11,10 +11,7 @@ const lista_itens:Array[PackedScene] = [
 ]
 
 signal inventario_atualizado
-var inventario:Array[Array] = [
-	[lista_itens[0], false],
-	[lista_itens[1], false],
-]
+var inventario:Array[Array] = []
 
 func AddItem(item:int, desabilitado:bool = false) -> void:
 	if inventario.size() >= 15:
@@ -32,5 +29,5 @@ func RemoveItem(id:int) -> void:
 func Reset() -> void:
 	inventario = [
 	[lista_itens[0], false],
-	[lista_itens[0], false],
+	[lista_itens[1], false],
 ]

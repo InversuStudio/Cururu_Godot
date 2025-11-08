@@ -11,7 +11,7 @@
 [ext_resource type="Script" uid="uid://bd046eokvcnu2" path="res://addons/phantom_camera/scripts/phantom_camera_host/phantom_camera_host.gd" id="7_2hqmh"]
 [ext_resource type="PackedScene" uid="uid://bei1s8te3cwko" path="res://Sprites/Cenário/Mata_Atlantica/Interativos/plataforma.tscn" id="8_g87lo"]
 [ext_resource type="Texture2D" uid="uid://cjl88xeknofui" path="res://Sprites/Cenário/Mata_Atlantica/Chao/grama_reto.png" id="12_2b1x1"]
-[ext_resource type="PackedScene" uid="uid://1fdx2ie24dh8" path="res://Objetos/Props/Bau_combo.tscn" id="12_nj3sm"]
+[ext_resource type="PackedScene" uid="uid://1fdx2ie24dh8" path="res://Objetos/Props/Bau.tscn" id="12_nj3sm"]
 [ext_resource type="Texture2D" uid="uid://cw2yeg7ynw0kl" path="res://Sprites/Cenário/Mata_Atlantica/Chao/chap_externo.png" id="13_11u8x"]
 [ext_resource type="Texture2D" uid="uid://cj4rj4oj20ogb" path="res://Sprites/Cenário/Mata_Atlantica/Chao/chap_interno.png" id="14_tkmkl"]
 

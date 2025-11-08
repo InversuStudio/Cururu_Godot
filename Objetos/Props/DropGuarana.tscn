@@ -1,23 +1,32 @@
-[gd_scene load_steps=4 format=3 uid="uid://u48tpl3f3l20"]
+[gd_scene load_steps=5 format=3 uid="uid://u48tpl3f3l20"]
 
 [ext_resource type="Script" uid="uid://du13c3vr4mc5k" path="res://Scripts/Componentes/DropItem.gd" id="1_fhqsw"]
 [ext_resource type="Texture2D" uid="uid://dk4wua1wjthnt" path="res://Sprites/Cenário/Objetos/GUARA.png" id="2_fhqsw"]
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_fhqsw"]
+radius = 37.53254
+
 [sub_resource type="CircleShape2D" id="CircleShape2D_s361a"]
 radius = 40.792156
 
-[node name="DropGuarana" type="Area2D"]
+[node name="DropGuarana" type="CharacterBody2D"]
 collision_layer = 0
-collision_mask = 2
 script = ExtResource("1_fhqsw")
 tipo_item = 1
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-scale = Vector2(0.64, 0.64)
-shape = SubResource("CircleShape2D_s361a")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 scale = Vector2(0.192, 0.192)
 texture = ExtResource("2_fhqsw")
 
-[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(2, 0)
+scale = Vector2(0.64, 0.64)
+shape = SubResource("CircleShape2D_fhqsw")
+
+[node name="AreaGet" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AreaGet"]
+scale = Vector2(0.64, 0.64)
+shape = SubResource("CircleShape2D_s361a")

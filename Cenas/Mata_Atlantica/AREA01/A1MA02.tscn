@@ -31,7 +31,7 @@
 [ext_resource type="Texture2D" uid="uid://c2yapafbd3cnf" path="res://Sprites/Cenário/Mata_Atlantica/Foreground/cipó.png" id="28_441k1"]
 [ext_resource type="Script" uid="uid://dd16yu704x6wt" path="res://Scripts/Componentes/BGM_Player.gd" id="30_78wer"]
 [ext_resource type="AudioStream" uid="uid://c7qftchbhu6xc" path="res://Audio/SFX/AMBIENTE/Musica_Jogo.mp3" id="31_byk7f"]
-[ext_resource type="PackedScene" uid="uid://drx7unaxgouar" path="res://Objetos/Props/Bau_guara.tscn" id="32_byk7f"]
+[ext_resource type="PackedScene" uid="uid://1fdx2ie24dh8" path="res://Objetos/Props/Bau.tscn" id="32_byk7f"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0syxa"]
 size = Vector2(3705, 6665)

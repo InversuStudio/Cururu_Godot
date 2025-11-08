@@ -11,9 +11,9 @@ extends Area2D
 @export var cooldown_dano: float = 0.0
 ## Som de acerto
 @export var hit_sfx : AudioStream = null
-## Recebe o node pai
+## Recebe o node pai. Usado para knockback
 @export var parent: Node2D = null
-## Recebe o sprite do pai
+## Recebe o sprite do pai. Usado para efeito de hit flash
 @export var sprite: Node2D = null
 
 var hit_shader: Shader = preload("res://Scripts/Shaders/HitFlash.gdshader")
@@ -57,12 +57,9 @@ func RecebeDano(dano:int, pos_target:Vector2):
 	if hit_sfx: %SFX.play()
 	# VFX dano
 	if sprite:
-		#var coisa:ShaderMaterial = sprite.material
 		material_sprite.set_shader_parameter("valor", 1.0)
 		await get_tree().create_timer(.2).timeout
 		material_sprite.set_shader_parameter("valor", 0.0)
-		#sprite.material.shader.valor = 1.0# set_instance_shader_parameter("valor", 1.0)
-		#sprite.material.set_instance_shader_parameter("valor", 0.0)
 
 func AchaHit() -> void:
 	var areas:Array[Area2D] = get_overlapping_areas()

@@ -21,7 +21,7 @@
 [ext_resource type="Texture2D" uid="uid://cw2yeg7ynw0kl" path="res://Sprites/Cenário/Mata_Atlantica/Chao/chap_externo.png" id="11_dmd0r"]
 [ext_resource type="PackedScene" uid="uid://smwewolvvw6l" path="res://Objetos/Entidades/Escorpiao_Rei.tscn" id="19_1vw3w"]
 [ext_resource type="Texture2D" uid="uid://jecy4bfqqqxu" path="res://Sprites/Cenário/Mata_Atlantica/Teto/Moita teste.png" id="19_ygqbx"]
-[ext_resource type="PackedScene" uid="uid://1fdx2ie24dh8" path="res://Objetos/Props/Bau_combo.tscn" id="20_patjh"]
+[ext_resource type="PackedScene" uid="uid://1fdx2ie24dh8" path="res://Objetos/Props/Bau.tscn" id="20_patjh"]
 [ext_resource type="Texture2D" uid="uid://uq6dbjep5wva" path="res://Sprites/Cenário/Mata_Atlantica/Foreground/frontfolha.png" id="20_sux2v"]
 [ext_resource type="Texture2D" uid="uid://ciulkfu83ohwu" path="res://Sprites/Cenário/Mata_Atlantica/Foreground/04.png" id="21_favji"]
 [ext_resource type="Texture2D" uid="uid://c2yapafbd3cnf" path="res://Sprites/Cenário/Mata_Atlantica/Foreground/cipó.png" id="24_6t3gw"]
