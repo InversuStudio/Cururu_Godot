@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://dghxpclnjwg5k"]
+[gd_scene load_steps=5 format=3 uid="uid://dghxpclnjwg5k"]
 
 [ext_resource type="Script" uid="uid://bw12gct11cmhg" path="res://Scripts/Componentes/PecaCoracao.gd" id="1_51aa3"]
 [ext_resource type="Texture2D" uid="uid://c3tl3oddronfh" path="res://icon.svg" id="1_w2yaj"]
+[ext_resource type="AudioStream" uid="uid://d27segrop0yia" path="res://Audio/SFX/AMBIENTE/som_moeda.wav" id="2_j0ok1"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_51aa3"]
 radius = 83.02409
@@ -10,11 +11,15 @@ radius = 83.02409
 collision_layer = 0
 collision_mask = 2
 script = ExtResource("1_51aa3")
+sfx = ExtResource("2_j0ok1")
+nome_tela = "Pedaço de Coração"
+descricao_tela = "Colete 3 para aumentar sua vida máxima"
+imagem_tela = ExtResource("1_w2yaj")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_51aa3")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="Imagem" type="Sprite2D" parent="."]
 self_modulate = Color(0.94350773, 0.54755646, 0, 1)
 texture = ExtResource("1_w2yaj")
 

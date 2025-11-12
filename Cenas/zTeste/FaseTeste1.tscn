@@ -232,6 +232,10 @@ position = Vector2(-832, -210)
 [node name="UpgradeMissil" parent="Props" instance=ExtResource("12_77bok")]
 position = Vector2(2947, -378)
 
+[node name="Script" parent="Props/UpgradeMissil" index="1"]
+nome_tela = "Golpe Mágico"
+descricao_tela = "Golpe mágico capaz de purificar miasma"
+
 [node name="PortaTemp" parent="Props" instance=ExtResource("23_u25g5")]
 position = Vector2(4448, -576)
 
@@ -398,3 +402,22 @@ use_parent_material = true
 position = Vector2(493, -68)
 scale = Vector2(0.675, 0.675)
 texture = ExtResource("26_fjg5v")
+
+[node name="Sprite2D3" type="Sprite2D" parent="Arbusto"]
+self_modulate = Color(1, 1, 1, 0.59607846)
+z_index = 10
+use_parent_material = true
+position = Vector2(-2492, 440.00003)
+scale = Vector2(2.9444182, 2.9444182)
+texture = ExtResource("26_fjg5v")
+
+[node name="Sprite2D4" type="Sprite2D" parent="Arbusto"]
+self_modulate = Color(1, 1, 1, 0.83137256)
+z_index = 10
+use_parent_material = true
+position = Vector2(-2012.0002, -675.00006)
+rotation = -3.1415927
+scale = Vector2(1.5016018, 1.5016018)
+texture = ExtResource("26_fjg5v")
+
+[editable path="Props/UpgradeMissil"]

@@ -39,7 +39,7 @@ var magia_atual: float = 0.5:
 		update_magia.emit()
 
 var upgrade_num: int = 0
-enum upgrades {
+enum Upgrades {
 	MissilAgua,
 }
 
@@ -71,11 +71,11 @@ func Save() -> void:
 		config.set_value("save", "peca_coracao", peca_coracao)
 		# Salva arquivo
 		config.save(OS.get_executable_path().get_base_dir()+"/savedata.cfg")
-		var hud:Control = get_tree().get_first_node_in_group("HUD")
-		if hud: hud.AvisoSave()
+		# Lança aviso de save
+		if Mundos.hud: Mundos.hud.AvisoSave()
 		print("Jogo salvo")
 	else:
-		print("Erro ao salvar")
+		printerr("Erro ao salvar")
 
 # FUNÇÃO PARA CARREGAR SAVE
 func Load() -> bool:

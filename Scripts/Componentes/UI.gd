@@ -8,9 +8,13 @@ var coracoes:Array = []
 const sprite_cheio:Texture2D = preload("res://Sprites/UI/HUD/UIHUD-VIDACHEIA.png")
 const sprite_vazio:Texture2D = preload("res://Sprites/UI/HUD/UIHUD-VIDAVAZIZ.png")
 
+@onready var cena:Node = get_tree().current_scene
+var tela_item_on:bool = false
+
+signal tela_item
+
 # INPUT PAUSE
 func _input(_event: InputEvent) -> void:
-	var cena:Node = get_tree().current_scene
 	if Input.is_action_just_pressed("pause"):
 		if cena.process_mode == PROCESS_MODE_INHERIT:
 			%Pause.show()
@@ -18,6 +22,13 @@ func _input(_event: InputEvent) -> void:
 		else:
 			cena.process_mode = Node.PROCESS_MODE_INHERIT
 			%Pause.hide()
+	
+	if Input.is_action_just_pressed("ui_accept") and tela_item_on:
+		%Anim.play("PegaItemOff")
+		await %Anim.animation_finished
+		tela_item_on = false
+		cena.process_mode = Node.PROCESS_MODE_INHERIT
+		tela_item.emit()
 
 func _ready() -> void:
 	# Espera jogo carregar
@@ -29,6 +40,8 @@ func _ready() -> void:
 		
 	# ESCONDE MENU PAUSE AO INICIAR JOGO
 	%Pause.hide()
+	%AvisoItem.modulate.a = 0.0
+	%AvisoSave.self_modulate.a = 0.0
 	
 	# Se achar Player na cena...
 	if Mundos.player:
@@ -99,6 +112,15 @@ func UpdateMagia() -> void:
 
 func AvisoSave() -> void:
 	%Anim.play("JogoSalvo")
+
+func AvisoItem(nome:String, desc:String, img:Texture2D) -> void:
+	cena.set_deferred("process_mode", Node.PROCESS_MODE_DISABLED)
+	%NomeItem.text = nome
+	%DescItem.text = desc
+	%ImgItem.texture = img
+	%Anim.play("PegaItemOn")
+	await %Anim.animation_finished
+	tela_item_on = true
 
 func _on_retornar_pressed() -> void:
 	get_tree().current_scene.process_mode = Node.PROCESS_MODE_INHERIT
