@@ -36,12 +36,21 @@ func _ready() -> void:
 	
 	# ATIVA FOCO NO BOTÃO AO ABRIR MENU PAUSE
 	%Pause.connect("visibility_changed", func():
-		if %Pause.visible: %Retornar.grab_focus())
+		if %Pause.visible:
+			if %Inv.get_child_count() > 0:
+				%Inv.get_child(0).grab_focus()
+			else:
+				%Retornar.grab_focus())
+	%Retornar.connect("focus_entered", func():
+		MostraItem("","",0))
 		
 	# ESCONDE MENU PAUSE AO INICIAR JOGO
 	%Pause.hide()
 	%AvisoItem.modulate.a = 0.0
 	%AvisoSave.self_modulate.a = 0.0
+	%NomeInv.text = ""
+	%DescInv.text = ""
+	%AvisoItem.show()
 	
 	# Se achar Player na cena...
 	if Mundos.player:
@@ -115,12 +124,24 @@ func AvisoSave() -> void:
 
 func AvisoItem(nome:String, desc:String, img:Texture2D) -> void:
 	cena.set_deferred("process_mode", Node.PROCESS_MODE_DISABLED)
-	%NomeItem.text = nome
-	%DescItem.text = desc
-	%ImgItem.texture = img
+	%NomeItemAviso.text = nome
+	%DescItemAviso.text = desc
+	%ImgItemAviso.texture = img
 	%Anim.play("PegaItemOn")
 	await %Anim.animation_finished
 	tela_item_on = true
+
+func MostraItem(nome:String, desc:String, cura:int = 0) -> void:
+	%NomeInv.text = nome
+	%DescInv.text = desc
+	for c:Control in %NumCura.get_children():
+		c.queue_free()
+	for c:int in cura:
+		var img:TextureRect = TextureRect.new()
+		img.texture = sprite_cheio
+		img.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
+		img.custom_minimum_size.x = 50.0
+		%NumCura.add_child(img)
 
 func _on_retornar_pressed() -> void:
 	get_tree().current_scene.process_mode = Node.PROCESS_MODE_INHERIT

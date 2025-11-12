@@ -1302,6 +1302,7 @@ shape = SubResource("CapsuleShape2D_wq158")
 disabled = true
 
 [node name="MeleeUp" parent="HitContainer" node_paths=PackedStringArray("ignore", "parent") instance=ExtResource("47_grb16")]
+collision_mask = 12
 ignore = NodePath("../../HurtContainer/HurtBox")
 parent = NodePath("../..")
 
@@ -1312,6 +1313,7 @@ shape = SubResource("CapsuleShape2D_ny8nr")
 disabled = true
 
 [node name="MeleeDown" parent="HitContainer" node_paths=PackedStringArray("ignore", "parent") instance=ExtResource("47_grb16")]
+collision_mask = 12
 ignore = NodePath("../../HurtContainer/HurtBox")
 parent = NodePath("../..")
 

@@ -12,7 +12,6 @@ radius = 47.67599
 [node name="DropAcai" type="CharacterBody2D"]
 collision_layer = 0
 script = ExtResource("1_qvwd5")
-tipo_item = "Acai"
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 scale = Vector2(0.192, 0.192)

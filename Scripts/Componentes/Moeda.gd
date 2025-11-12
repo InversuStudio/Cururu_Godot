@@ -1,7 +1,7 @@
 extends Area2D
 
 ## Valor a ser somado a quantia total
-@export var valor_moeda: int = randi_range(1, 8)
+@export var valor_moeda: int = 1
 ## Efeito sonoro aoser coletado
 @export var sfx: AudioStream = null
 

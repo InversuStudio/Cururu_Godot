@@ -10,10 +10,11 @@ custom_minimum_size = Vector2(200, 200)
 ignore_texture_size = true
 stretch_mode = 0
 script = ExtResource("1_1mtks")
+nome_item = 1
+desc_item = "Aquele que fazem Guaraviton"
 sprite_normal = ExtResource("2_yf5b2")
 sprite_select = ExtResource("3_rffg7")
 script_logica = NodePath("Script")
-nome_item = "Guarana"
 
 [node name="Script" type="Node" parent="."]
 script = ExtResource("4_rffg7")

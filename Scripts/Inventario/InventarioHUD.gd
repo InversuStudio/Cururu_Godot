@@ -1,6 +1,5 @@
 extends GridContainer
 
-# Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	# Conecta sinais do inventário
 	Inventario.add_item.connect(AddItem)
@@ -14,7 +13,6 @@ func _ready() -> void:
 		item.id_inventario = item_id
 		item_id += 1
 		add_child(item)
-		item.name = item.nome_item
 
 # FUNÇÃO DE ADICIONAR ITEM
 func AddItem(item:String, novo_item:bool) -> void:
@@ -29,7 +27,7 @@ func AddItem(item:String, novo_item:bool) -> void:
 		# ...encontra o item no inventário...
 		var itm:ItemInventario = null
 		for c:ItemInventario in get_children():
-			if c.nome_item == item:
+			if item == Inventario.ItensString[c.nome_item]:
 				itm = c
 				break
 		# ...e sobe seu número.
