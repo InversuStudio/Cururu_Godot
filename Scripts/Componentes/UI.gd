@@ -21,18 +21,24 @@ func _input(_event: InputEvent) -> void:
 			%Pause.hide()
 
 func _ready() -> void:
-	Inventario.inventario_atualizado.connect(AtualizaInventario)
+	#Inventario.inventario_atualizado.connect(AtualizaInventario)
+	Inventario.add_item.connect(AddItem)
+	Inventario.del_item.connect(DelItem)
 	# INSTANCIA ITENS DO INVENTÁRIO
 	var item_id:int = 0
 	for i:Array in Inventario.inventario:
-		var item:ItemInventario = i[0].instantiate()
+		var item:ItemInventario = Inventario.lista_itens[i[0]].instantiate()#i[0].instantiate()
+		item.num_item = i[1]
+		item.UpdateNumItem()
 		item.id_inventario = item_id
 		item_id += 1
-		item.disabled = i[1]
 		%Inv.add_child(item)
+		item.name = item.nome_item
+		
 	# ATIVA FOCO NO BOTÃO AO ABRIR MENU PAUSE
 	%Pause.connect("visibility_changed", func():
 		if %Pause.visible: %Retornar.grab_focus())
+		
 	# ESCONDE MENU PAUSE AO INICIAR
 	%Pause.hide()
 	var player:CharacterBody2D = get_tree().get_first_node_in_group("Player")
@@ -47,17 +53,22 @@ func _ready() -> void:
 			coracao.texture = sprite_cheio
 			%BarraHeart.add_child(coracao)
 		coracoes = %BarraHeart.get_children()
+		
 		# Inicializa valores da barra de magia
 		%BarraMagia.max_value = GameData.magia_max
 		%BarraMagia.value = GameData.magia_atual
+		
 		# Inicializa valores da barra de vida
 		if GameData.vida_atual > 0:
 			UpdateVida(GameData.vida_atual, 0)
+			
 		# Conecta sinais de dano, cura e morte
 		player.vida.connect("alterou_vida", UpdateVida)
 		GameData.connect("update_magia", UpdateMagia)
+		
 		# Conecta UpdateMoeda ao sinal de mudança na quintidade de moedas
 		GameData.connect("update_moeda", UpdateMoeda)
+		
 		# Se ainda não leu o arquivo de save...
 		if GameData.leu_data == false:
 			# ...e houver arquivo de save...
@@ -65,6 +76,7 @@ func _ready() -> void:
 			# ...atualiza contador de moedas com o número salvo
 				GameData.moedas = GameData.config.get_value("save", "moedas")
 				GameData.leu_data = true
+				
 		# Atualiza contador pela primeira vez
 		UpdateMoeda()
 
@@ -103,6 +115,39 @@ func _on_retornar_pressed() -> void:
 
 func _on_sair_pressed() -> void:
 	Mundos.CarregaFase(Mundos.NomeFase.MenuPrincipal)
+
+func AddItem(item:String, novo_item:bool) -> void:
+	print(item)
+	if novo_item:
+		var itm:ItemInventario = Inventario.lista_itens[item].instantiate()
+		itm.id_inventario = %Inv.get_child_count()
+		%Inv.add_child(itm)
+	else:
+		var itm:ItemInventario = null
+		for c:ItemInventario in %Inv.get_children():
+			if c.nome_item == item:
+				itm = c
+				break
+		if itm:
+			itm.num_item += 1
+			itm.UpdateNumItem()
+
+func DelItem(id:int) -> void:
+	var c:ItemInventario = %Inv.get_child(id)
+	c.num_item -= 1
+	if c.num_item > 0: return
+	
+	%Inv.remove_child(%Inv.get_child(id))
+	var new_id:int = 0
+	for i:ItemInventario in %Inv.get_children():
+		i.id_inventario = new_id
+		new_id += 1
+	if %Inv.get_child_count() > 0:
+		if %Inv.get_child(id - 1):
+			%Inv.get_child(id - 1).grab_focus()
+		elif %Inv.get_child(id + 1):
+			%Inv.get_child(id + 1).grab_focus()
+	else: %Retornar.grab_focus()
 
 func AtualizaInventario(acao:String, id:int) -> void:
 	match acao:

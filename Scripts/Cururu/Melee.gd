@@ -30,9 +30,14 @@ func Enter() -> void:
 	Console._State(name)
 	%MeleeTime.stop() # Reseta timer para mudar de combo
 	# Toca animação em ordem, loopando lista
-	%Anim.play(combo_anim[combo_num])
-	var next_combo = combo_num + 1
-	combo_num = next_combo if next_combo <= combo_limit else 0
+	if !parent.is_on_floor() and Input.is_action_pressed("baixo"):
+		%Anim.play("Melee_Down")
+	elif Input.is_action_pressed("cima"):
+		%Anim.play("Melee_Up")
+	else:
+		%Anim.play(combo_anim[combo_num])
+		var next_combo = combo_num + 1
+		combo_num = next_combo if next_combo <= combo_limit else 0
 	%SFX_Ataque.stream = sfx
 	%SFX_Ataque.play()
 

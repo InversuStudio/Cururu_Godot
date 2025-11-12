@@ -1,4 +1,4 @@
-[gd_scene load_steps=39 format=4 uid="uid://driflyxauqbxs"]
+[gd_scene load_steps=42 format=4 uid="uid://driflyxauqbxs"]
 
 [ext_resource type="Texture2D" uid="uid://c374cwih425cq" path="res://Sprites/Cenário/Tilemaps/Base.png" id="1_52y5a"]
 [ext_resource type="Texture2D" uid="uid://cov3k8uja4wwj" path="res://Sprites/Cenário/zSem_Uso/PAU_BRASIL.png" id="2_bp4ag"]
@@ -24,6 +24,8 @@
 [ext_resource type="PackedScene" uid="uid://cy10kv6jimfwh" path="res://Objetos/Funcionalidade/CompDestroiPlataforma.tscn" id="23_y7vak"]
 [ext_resource type="PackedScene" uid="uid://u48tpl3f3l20" path="res://Objetos/Props/DropGuarana.tscn" id="24_tdc64"]
 [ext_resource type="PackedScene" uid="uid://bnm668fws2641" path="res://Objetos/Props/Armadilha.tscn" id="24_tkd1t"]
+[ext_resource type="Shader" uid="uid://da2wxasx6evg0" path="res://Scripts/Shaders/Grama.gdshader" id="25_vdl7m"]
+[ext_resource type="Texture2D" uid="uid://c8bkav2g3wyeu" path="res://Sprites/Cenário/Mata_Atlantica/Chao/moita2.png" id="26_fjg5v"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_77bok"]
 texture = ExtResource("1_52y5a")
@@ -78,6 +80,18 @@ size = Vector2(353, 22)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tu5lb"]
 size = Vector2(92, 1026)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_vdl7m"]
+shader = ExtResource("25_vdl7m")
+shader_parameter/speed = 1.0
+shader_parameter/minStrength = 0.10000000475
+shader_parameter/maxStrength = 0.2000000095
+shader_parameter/strengthScale = 100.0
+shader_parameter/interval = 3.5
+shader_parameter/detail = 1.0
+shader_parameter/distortion = 0.0
+shader_parameter/heightOffset = 0.0
+shader_parameter/offset = 0.0
 
 [node name="FaseTeste" type="Node2D"]
 
@@ -215,13 +229,18 @@ position = Vector2(5431, -386)
 position = Vector2(-832, -210)
 
 [node name="UpgradeMissil" parent="Props" instance=ExtResource("12_77bok")]
-position = Vector2(2947, -389)
+position = Vector2(2947, -378)
 
 [node name="PortaTemp" parent="Props" instance=ExtResource("23_u25g5")]
 position = Vector2(4448, -576)
 
 [node name="Bau" parent="Props" instance=ExtResource("22_b4qhl")]
 position = Vector2(576, -639)
+drop_item = Array[PackedScene]([ExtResource("23_wxyel"), ExtResource("24_tdc64")])
+multi_drop = true
+
+[node name="Bau2" parent="Props" instance=ExtResource("22_b4qhl")]
+position = Vector2(1079, -639)
 drop_item = Array[PackedScene]([ExtResource("23_wxyel"), ExtResource("24_tdc64")])
 multi_drop = true
 
@@ -352,3 +371,19 @@ position = Vector2(220, -373)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Armadilha/Area2D2"]
 position = Vector2(0, -503)
 shape = SubResource("RectangleShape2D_tu5lb")
+
+[node name="Arbusto" type="Node2D" parent="."]
+material = SubResource("ShaderMaterial_vdl7m")
+position = Vector2(2949, -394)
+
+[node name="Sprite2D" type="Sprite2D" parent="Arbusto"]
+use_parent_material = true
+position = Vector2(-432, -64)
+scale = Vector2(0.675, 0.675)
+texture = ExtResource("26_fjg5v")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Arbusto"]
+use_parent_material = true
+position = Vector2(493, -68)
+scale = Vector2(0.675, 0.675)
+texture = ExtResource("26_fjg5v")

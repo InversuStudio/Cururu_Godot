@@ -15,7 +15,7 @@ func _ready() -> void:
 				if body.is_in_group("Player"):
 					ponto = sp.global_position)
 	
-func _on_hit_box_hit() -> void:
+func _on_hit_box_hit(_p:Vector2) -> void:
 	if spawn_points[0] != null and spawn_points[1] != null:
 		Fade.FadeOut()
 		await Fade.terminou

@@ -1,7 +1,8 @@
 extends CharacterBody2D
 
 ## Item a ser adicionado ao inventário
-@export var tipo_item: Inventario.Itens
+#@export var tipo_item: Inventario.Itens
+@export var tipo_item: String = ""
 ## Impulso aplicado ao spawnar item, em m/s
 @export var impulso: Vector2 = Vector2(1.0, 1.0)
 ## Tempo até desacelerar após impulso
@@ -24,5 +25,6 @@ func _physics_process(delta: float) -> void:
 
 func _on_body_entered(body: Node2D) -> void:
 	if body.is_in_group("Player"):
+		#Inventario.AddItem(tipo_item)
 		Inventario.AddItem(tipo_item)
 		queue_free()

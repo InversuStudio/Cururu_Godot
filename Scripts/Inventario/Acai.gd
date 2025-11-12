@@ -5,6 +5,9 @@ extends ScriptItemInventario
 
 func _ready() -> void:
 	pai.connect("pressed", func(): Logica())
+	Inventario.add_item.connect(func(_s:String, _i:int):
+		get_parent().UpdateNumItem()
+		print("UPDATE!!!"))
 
 func Logica() -> void:
 	var vida:Vida = get_tree().get_first_node_in_group("Player").vida

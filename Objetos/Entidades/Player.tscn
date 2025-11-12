@@ -1,4 +1,4 @@
-[gd_scene load_steps=111 format=3 uid="uid://nohq28uk7lfk"]
+[gd_scene load_steps=121 format=3 uid="uid://nohq28uk7lfk"]
 
 [ext_resource type="Script" uid="uid://cfu4ciwll8jcj" path="res://Scripts/Cururu/Cururu.gd" id="1_gwpdq"]
 [ext_resource type="Texture2D" uid="uid://6tjgxsgaflxb" path="res://Sprites/Cururu/Dano/03.png" id="2_0hf88"]
@@ -85,6 +85,7 @@
 [ext_resource type="Texture2D" uid="uid://cl48ho610vpku" path="res://Sprites/Cururu/Melee/08.png" id="59_s2eek"]
 [ext_resource type="Texture2D" uid="uid://6dnbonxcb2gu" path="res://Sprites/Cururu/Run/05.png" id="60_ga1ek"]
 [ext_resource type="Texture2D" uid="uid://dpot1mm6audq2" path="res://Sprites/Cururu/Run/06.png" id="61_jpq87"]
+[ext_resource type="Texture2D" uid="uid://c3tl3oddronfh" path="res://icon.svg" id="65_ny8nr"]
 [ext_resource type="AudioStream" uid="uid://0svi6tafdid8" path="res://Audio/SFX/CURURU/DANO_PROTAGONISTA.wav" id="77_d7mdf"]
 [ext_resource type="AudioStream" uid="uid://clarwee0wchnk" path="res://Audio/SFX/CURURU/jump_cururu.mp3" id="80_ny8nr"]
 [ext_resource type="AudioStream" uid="uid://cuyap2xmus3rf" path="res://Audio/SFX/CURURU/dash_cururu.mp3" id="81_2t31h"]
@@ -268,38 +269,6 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("45_1dbdn")
-}, {
-"duration": 1.0,
-"texture": ExtResource("46_0w8y8")
-}, {
-"duration": 1.0,
-"texture": ExtResource("47_d7mdf")
-}, {
-"duration": 1.0,
-"texture": ExtResource("48_w1841")
-}, {
-"duration": 1.0,
-"texture": ExtResource("49_ny8nr")
-}, {
-"duration": 1.0,
-"texture": ExtResource("50_2t31h")
-}, {
-"duration": 1.0,
-"texture": ExtResource("51_s2eek")
-}, {
-"duration": 1.0,
-"texture": ExtResource("52_vpyrf")
-}, {
-"duration": 1.0,
-"texture": ExtResource("53_7spwe")
-}],
-"loop": true,
-"name": &"Magia",
-"speed": 12.0
-}, {
-"frames": [{
-"duration": 1.0,
 "texture": ExtResource("53_1dbdn")
 }, {
 "duration": 1.0,
@@ -340,6 +309,22 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": ExtResource("65_ny8nr")
+}],
+"loop": true,
+"name": &"Melee_Down",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("65_ny8nr")
+}],
+"loop": true,
+"name": &"Melee_Up",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": ExtResource("45_kbhwl")
 }, {
 "duration": 1.0,
@@ -375,6 +360,54 @@ animations = [{
 "loop": true,
 "name": &"Run",
 "speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("45_1dbdn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("46_0w8y8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("47_d7mdf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("48_w1841")
+}, {
+"duration": 1.0,
+"texture": ExtResource("49_ny8nr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("50_2t31h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("51_s2eek")
+}, {
+"duration": 1.0,
+"texture": ExtResource("52_vpyrf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("53_7spwe")
+}],
+"loop": true,
+"name": &"Special",
+"speed": 12.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("65_ny8nr")
+}],
+"loop": true,
+"name": &"Special_Down",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("65_ny8nr")
+}],
+"loop": true,
+"name": &"Special_Up",
+"speed": 5.0
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_qakxq"]
@@ -396,9 +429,25 @@ radius = 126.14278
 radius = 100.00001
 height = 250.0
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ny8nr"]
+radius = 76.0
+height = 308.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_2t31h"]
+radius = 74.0
+height = 308.0
+
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_1dbdn"]
 radius = 107.0
 height = 274.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_s2eek"]
+radius = 107.0
+height = 316.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_vpyrf"]
+radius = 107.0
+height = 316.0
 
 [sub_resource type="Animation" id="Animation_aofpm"]
 resource_name = "Dano"
@@ -622,42 +671,6 @@ tracks/1/keys = {
 "update": 1,
 "values": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 }
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("HitContainer/Melee1/ColMel1:disabled")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [true]
-}
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("HitContainer/Melee2/ColMel2:disabled")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [true]
-}
-tracks/4/type = "value"
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/path = NodePath("HitContainer/Special/ColSpecial:disabled")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [true]
-}
 
 [sub_resource type="Animation" id="Animation_8v2dh"]
 resource_name = "Jump"
@@ -823,6 +836,189 @@ tracks/3/keys = {
 "values": [0, 1, 2, 3]
 }
 
+[sub_resource type="Animation" id="Animation_s2eek"]
+resource_name = "Melee_Down"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Cururu:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"Melee_Down"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Cururu:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("HitContainer/MeleeDown/ColMelDown:disabled")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/3/type = "method"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("StateMachine/Melee")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.3),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"Reset_Ataque"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_2t31h"]
+resource_name = "Melee_Up"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Cururu:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"Melee_Up"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Cururu:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("HitContainer/MeleeUp/ColMelUp:disabled")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/3/type = "method"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("StateMachine/Melee")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.3),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"Reset_Ataque"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_ny8nr"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("HitContainer/MeleeUp/ColMelUp:disabled")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("HitContainer/MeleeDown/ColMelDown:disabled")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Cururu:animation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"Special"]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Cururu:frame")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("HitContainer/SpecialUp/ColSpecialUp:disabled")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("HitContainer/SpecialDown/ColSpecialDown:disabled")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
 [sub_resource type="Animation" id="Animation_prtj7"]
 resource_name = "Run"
 length = 1.1
@@ -858,6 +1054,60 @@ length = 0.7
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
+tracks/0/path = NodePath("HitContainer/Special/ColSpecial:disabled")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.2, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("StateMachine/Special")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"OffsetSprite"
+}]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Cururu:animation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"Special"]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Cururu:frame")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.083333336, 0.16666667, 0.25000003, 0.33333334, 0.4166667, 0.50000006, 0.5833334, 0.6666667),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 6, 7, 8]
+}
+
+[sub_resource type="Animation" id="Animation_7spwe"]
+resource_name = "Special_Down"
+length = 0.7
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
 tracks/0/path = NodePath("Cururu:animation")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
@@ -865,7 +1115,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [&"Magia"]
+"values": [&"Special_Down"]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -874,36 +1124,62 @@ tracks/1/path = NodePath("Cururu:frame")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [1, 2, 3, 4, 5, 6, 7]
+"values": [0]
 }
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("HitContainer/Special/ColSpecial:disabled")
+tracks/2/path = NodePath("HitContainer/SpecialDown/ColSpecialDown:disabled")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(0.2, 0.5),
+"times": PackedFloat32Array(0, 0.7),
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
 "values": [false, true]
 }
-tracks/3/type = "method"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("StateMachine/Special")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
+
+[sub_resource type="Animation" id="Animation_vpyrf"]
+resource_name = "Special_Up"
+length = 0.7
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Cururu:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
-"values": [{
-"args": [],
-"method": &"OffsetSprite"
-}]
+"update": 1,
+"values": [&"Special_Up"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Cururu:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("HitContainer/SpecialUp/ColSpecialUp:disabled")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.7),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_g0l4m"]
@@ -919,8 +1195,13 @@ _data = {
 &"Land": SubResource("Animation_wq158"),
 &"Melee1": SubResource("Animation_7ba70"),
 &"Melee2": SubResource("Animation_yd0lm"),
+&"Melee_Down": SubResource("Animation_s2eek"),
+&"Melee_Up": SubResource("Animation_2t31h"),
+&"RESET": SubResource("Animation_ny8nr"),
 &"Run": SubResource("Animation_prtj7"),
-&"Special": SubResource("Animation_7uoqt")
+&"Special": SubResource("Animation_7uoqt"),
+&"Special_Down": SubResource("Animation_7spwe"),
+&"Special_Up": SubResource("Animation_vpyrf")
 }
 
 [node name="Player" type="CharacterBody2D" node_paths=PackedStringArray("vida", "state_machine", "hitbox_container", "hurtbox_container") groups=["Player"]]
@@ -959,8 +1240,8 @@ unique_name_in_owner = true
 position = Vector2(-16, -120)
 scale = Vector2(0.375651, 0.375651)
 sprite_frames = SubResource("SpriteFrames_ser7u")
-animation = &"Magia"
-frame_progress = 0.70597595
+animation = &"Special"
+frame = 1
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-17, -81)
@@ -1020,6 +1301,26 @@ rotation = -1.57079
 shape = SubResource("CapsuleShape2D_wq158")
 disabled = true
 
+[node name="MeleeUp" parent="HitContainer" node_paths=PackedStringArray("ignore", "parent") instance=ExtResource("47_grb16")]
+ignore = NodePath("../../HurtContainer/HurtBox")
+parent = NodePath("../..")
+
+[node name="ColMelUp" type="CollisionShape2D" parent="HitContainer/MeleeUp"]
+position = Vector2(-9, -272)
+rotation = -1.5707964
+shape = SubResource("CapsuleShape2D_ny8nr")
+disabled = true
+
+[node name="MeleeDown" parent="HitContainer" node_paths=PackedStringArray("ignore", "parent") instance=ExtResource("47_grb16")]
+ignore = NodePath("../../HurtContainer/HurtBox")
+parent = NodePath("../..")
+
+[node name="ColMelDown" type="CollisionShape2D" parent="HitContainer/MeleeDown"]
+position = Vector2(-8, 81)
+rotation = -1.5707964
+shape = SubResource("CapsuleShape2D_2t31h")
+disabled = true
+
 [node name="Special" parent="HitContainer" node_paths=PackedStringArray("ignore", "parent") groups=["Special"] instance=ExtResource("47_grb16")]
 collision_mask = 12
 dano = 2
@@ -1032,24 +1333,32 @@ rotation = 1.57079
 shape = SubResource("CapsuleShape2D_1dbdn")
 disabled = true
 
+[node name="SpecialUp" parent="HitContainer" node_paths=PackedStringArray("ignore", "parent") groups=["Special"] instance=ExtResource("47_grb16")]
+collision_mask = 12
+dano = 2
+ignore = NodePath("../../HurtContainer/HurtBox")
+parent = NodePath("../..")
+
+[node name="ColSpecialUp" type="CollisionShape2D" parent="HitContainer/SpecialUp"]
+position = Vector2(-8, -354)
+shape = SubResource("CapsuleShape2D_s2eek")
+disabled = true
+
+[node name="SpecialDown" parent="HitContainer" node_paths=PackedStringArray("ignore", "parent") groups=["Special"] instance=ExtResource("47_grb16")]
+collision_mask = 12
+dano = 2
+ignore = NodePath("../../HurtContainer/HurtBox")
+parent = NodePath("../..")
+
+[node name="ColSpecialDown" type="CollisionShape2D" parent="HitContainer/SpecialDown"]
+position = Vector2(-7, 173)
+rotation = 3.1415927
+shape = SubResource("CapsuleShape2D_vpyrf")
+disabled = true
+
 [node name="PosTiroMagia" type="Marker2D" parent="HitContainer"]
 unique_name_in_owner = true
 position = Vector2(135, -92)
-
-[node name="SFX_Pulo" type="AudioStreamPlayer" parent="."]
-unique_name_in_owner = true
-stream = ExtResource("80_ny8nr")
-max_polyphony = 100
-
-[node name="SFX_Dash" type="AudioStreamPlayer" parent="."]
-unique_name_in_owner = true
-stream = ExtResource("81_2t31h")
-max_polyphony = 100
-
-[node name="SFX_Ataque" type="AudioStreamPlayer" parent="."]
-unique_name_in_owner = true
-stream = ExtResource("81_2t31h")
-max_polyphony = 100
 
 [node name="Anim" type="AnimationPlayer" parent="."]
 unique_name_in_owner = true
@@ -1057,6 +1366,23 @@ libraries = {
 &"": SubResource("AnimationLibrary_g0l4m")
 }
 autoplay = "Idle"
+
+[node name="SFX" type="Node" parent="."]
+
+[node name="SFX_Pulo" type="AudioStreamPlayer" parent="SFX"]
+unique_name_in_owner = true
+stream = ExtResource("80_ny8nr")
+max_polyphony = 100
+
+[node name="SFX_Dash" type="AudioStreamPlayer" parent="SFX"]
+unique_name_in_owner = true
+stream = ExtResource("81_2t31h")
+max_polyphony = 100
+
+[node name="SFX_Ataque" type="AudioStreamPlayer" parent="SFX"]
+unique_name_in_owner = true
+stream = ExtResource("81_2t31h")
+max_polyphony = 100
 
 [node name="Timers" type="Node" parent="."]
 

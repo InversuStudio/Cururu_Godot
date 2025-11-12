@@ -15,7 +15,3 @@ func Logica() -> void:
 	if vida:
 		vida.RecebeCura(valor_cura)
 		Inventario.RemoveItem(pai.id_inventario)
-
-#func HabilitaBotao() -> void:
-	#parent.disabled = false
-	#Inventario.HabilitaItem(parent.id_inventario, false)

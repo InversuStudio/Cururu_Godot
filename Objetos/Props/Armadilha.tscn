@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=3 uid="uid://bnm668fws2641"]
 
 [ext_resource type="Script" uid="uid://davjnwfncyj66" path="res://Scripts/Componentes/Armadilha.gd" id="1_jlm20"]
-[ext_resource type="Texture2D" uid="uid://bbrrkirt4gvet" path="res://Sprites/Cenário/Mata_Atlantica/Interativos/cipó02.PNG" id="2_4o1mp"]
+[ext_resource type="Texture2D" uid="uid://bbrrkirt4gvet" path="res://Sprites/Cenário/Mata_Atlantica/Interativos/cipó02.png" id="2_4o1mp"]
 [ext_resource type="AudioStream" uid="uid://d0lumxscgbgin" path="res://Audio/SFX/INIMIGOS/inimigo_dead.mp3" id="4_4o1mp"]
 [ext_resource type="Script" uid="uid://b2ls33ys55oyt" path="res://Scripts/Componentes/OtimizadorSprite.gd" id="5_4o1mp"]
 [ext_resource type="PackedScene" uid="uid://pc4mgv2nv8af" path="res://Objetos/Funcionalidade/CompHitBox.tscn" id="7_267nb"]

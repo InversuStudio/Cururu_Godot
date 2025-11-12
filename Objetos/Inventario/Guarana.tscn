@@ -13,7 +13,26 @@ script = ExtResource("1_1mtks")
 sprite_normal = ExtResource("2_yf5b2")
 sprite_select = ExtResource("3_rffg7")
 script_logica = NodePath("Script")
+nome_item = "Guarana"
 
 [node name="Script" type="Node" parent="."]
 script = ExtResource("4_rffg7")
 valor_cura = 3
+
+[node name="NumItem" type="Label" parent="."]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -68.0
+offset_top = -55.0
+offset_right = -11.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_font_sizes/font_size = 40
+text = "1"
+horizontal_alignment = 2
+vertical_alignment = 1

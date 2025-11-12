@@ -13,14 +13,20 @@ func Enter() -> void:
 	Console._State(name)
 	GameData.magia_atual -= 3
 	# Toca animação, de acordo com input direcional
-	%Anim.play("Special")
+	if !parent.is_on_floor() and Input.is_action_pressed("baixo"):
+		%Anim.play("Special_Down")
+	elif Input.is_action_pressed("cima"):
+		%Anim.play("Special_Up")
+	else:
+		%Anim.play("Special")
 	%SFX_Ataque.stream = sfx
 	%SFX_Ataque.play()
 
 func Exit() -> void:
 	terminou = false
 	await get_tree().physics_frame
-	parent.sprite.offset.x = 0.0
+	if parent.sprite.offset.x != 0.0:
+		parent.sprite.offset.x = 0.0
 
 func Update(_delta:float) -> State:
 	if terminou == true:
@@ -43,7 +49,8 @@ func FixedUpdate(delta:float) -> State:
 	return null
 
 func _on_anim_animation_finished(anim_name: StringName) -> void:
-	if anim_name == "Special":
+	if (anim_name == "Special" or anim_name == "Special_Up"
+		or anim_name == "Special_Down"):
 		terminou = true
 
 func OffsetSprite() -> void:
