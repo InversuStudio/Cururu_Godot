@@ -1,6 +1,7 @@
 extends Node2D
 
-## Itens a serem dropados pelo baú
+## Itens a serem dropados pelo baú[br]
+## [b]São as cenas com o prefixo Drop
 @export var drop_item: Array[PackedScene] = []
 ## Se for verdadeiro, o baú irá dropar todos os itens da lista de drop.[br]
 ## Caso contrário, irá dropar um item aleatório da lista[br]

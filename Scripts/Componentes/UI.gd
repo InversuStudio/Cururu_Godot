@@ -8,8 +8,7 @@ var coracoes:Array = []
 const sprite_cheio:Texture2D = preload("res://Sprites/UI/HUD/UIHUD-VIDACHEIA.png")
 const sprite_vazio:Texture2D = preload("res://Sprites/UI/HUD/UIHUD-VIDAVAZIZ.png")
 
-@onready var inv: GridContainer = %Inv
-
+# INPUT PAUSE
 func _input(_event: InputEvent) -> void:
 	var cena:Node = get_tree().current_scene
 	if Input.is_action_just_pressed("pause"):
@@ -21,50 +20,34 @@ func _input(_event: InputEvent) -> void:
 			%Pause.hide()
 
 func _ready() -> void:
-	#Inventario.inventario_atualizado.connect(AtualizaInventario)
-	Inventario.add_item.connect(AddItem)
-	Inventario.del_item.connect(DelItem)
-	# INSTANCIA ITENS DO INVENTÁRIO
-	var item_id:int = 0
-	for i:Array in Inventario.inventario:
-		var item:ItemInventario = Inventario.lista_itens[i[0]].instantiate()#i[0].instantiate()
-		item.num_item = i[1]
-		item.UpdateNumItem()
-		item.id_inventario = item_id
-		item_id += 1
-		%Inv.add_child(item)
-		item.name = item.nome_item
-		
+	# Espera jogo carregar
+	await get_tree().process_frame
+	
 	# ATIVA FOCO NO BOTÃO AO ABRIR MENU PAUSE
 	%Pause.connect("visibility_changed", func():
 		if %Pause.visible: %Retornar.grab_focus())
 		
-	# ESCONDE MENU PAUSE AO INICIAR
+	# ESCONDE MENU PAUSE AO INICIAR JOGO
 	%Pause.hide()
-	var player:CharacterBody2D = get_tree().get_first_node_in_group("Player")
+	
 	# Se achar Player na cena...
-	if player:
-		# Espera frame para carregar tudo
-		await get_tree().process_frame
+	if Mundos.player:
 		# Adiciona corações na barra de vida
-		for n in GameData.vida_max:
-			var coracao: TextureRect = TextureRect.new()
-			coracao.custom_minimum_size = Vector2(50.0, 50.0)
-			coracao.texture = sprite_cheio
-			%BarraHeart.add_child(coracao)
-		coracoes = %BarraHeart.get_children()
+		for n:int in GameData.vida_max:
+			AdicionaCoracao()
 		
 		# Inicializa valores da barra de magia
 		%BarraMagia.max_value = GameData.magia_max
 		%BarraMagia.value = GameData.magia_atual
 		
 		# Inicializa valores da barra de vida
-		if GameData.vida_atual > 0:
+		if GameData.vida_atual > 0 and GameData.vida_atual < GameData.vida_max:
 			UpdateVida(GameData.vida_atual, 0)
 			
 		# Conecta sinais de dano, cura e morte
-		player.vida.connect("alterou_vida", UpdateVida)
+		Mundos.player.vida.connect("alterou_vida", UpdateVida)
 		GameData.connect("update_magia", UpdateMagia)
+		GameData.connect("update_vida", AdicionaCoracao)
 		
 		# Conecta UpdateMoeda ao sinal de mudança na quintidade de moedas
 		GameData.connect("update_moeda", UpdateMoeda)
@@ -88,11 +71,19 @@ func UpdateMoeda() -> void:
 
 # Função para alterar valor da barra de vida
 func UpdateVida(vida_nova:int, _vida_antiga:int) -> void:
+	await get_tree().physics_frame
 	Console._Print("[color=green]VIDA: %s[/color]" % [GameData.vida_atual])
 	for c:TextureRect in coracoes:
 		c.texture = sprite_cheio if c.get_index() + 1 <= vida_nova else sprite_vazio
 	if vida_nova <= 0:
 		PlayerMorreu()
+
+func AdicionaCoracao() -> void:
+	var coracao:TextureRect = TextureRect.new()
+	coracao.custom_minimum_size = Vector2(50.0, 50.0)
+	coracao.texture = sprite_cheio
+	%BarraHeart.add_child(coracao)
+	coracoes.append(coracao) # = %BarraHeart.get_children()
 
 # Função para sinalizar que player morreu
 func PlayerMorreu() -> void:
@@ -115,57 +106,3 @@ func _on_retornar_pressed() -> void:
 
 func _on_sair_pressed() -> void:
 	Mundos.CarregaFase(Mundos.NomeFase.MenuPrincipal)
-
-func AddItem(item:String, novo_item:bool) -> void:
-	print(item)
-	if novo_item:
-		var itm:ItemInventario = Inventario.lista_itens[item].instantiate()
-		itm.id_inventario = %Inv.get_child_count()
-		%Inv.add_child(itm)
-	else:
-		var itm:ItemInventario = null
-		for c:ItemInventario in %Inv.get_children():
-			if c.nome_item == item:
-				itm = c
-				break
-		if itm:
-			itm.num_item += 1
-			itm.UpdateNumItem()
-
-func DelItem(id:int) -> void:
-	var c:ItemInventario = %Inv.get_child(id)
-	c.num_item -= 1
-	if c.num_item > 0: return
-	
-	%Inv.remove_child(%Inv.get_child(id))
-	var new_id:int = 0
-	for i:ItemInventario in %Inv.get_children():
-		i.id_inventario = new_id
-		new_id += 1
-	if %Inv.get_child_count() > 0:
-		if %Inv.get_child(id - 1):
-			%Inv.get_child(id - 1).grab_focus()
-		elif %Inv.get_child(id + 1):
-			%Inv.get_child(id + 1).grab_focus()
-	else: %Retornar.grab_focus()
-
-func AtualizaInventario(acao:String, id:int) -> void:
-	match acao:
-		"add":
-			var item:ItemInventario = Inventario.lista_itens[id].instantiate()
-			item.id_inventario = %Inv.get_child_count()
-			%Inv.add_child(item)
-		"del":
-			%Inv.remove_child(%Inv.get_child(id))
-			print(%Inv.get_children())
-			var new_id:int = 0
-			for i:ItemInventario in %Inv.get_children():
-				i.id_inventario = new_id
-				new_id += 1
-			if %Inv.get_child_count() > 0:
-				if %Inv.get_child(id - 1):
-					%Inv.get_child(id - 1).grab_focus()
-				elif %Inv.get_child(id + 1):
-					%Inv.get_child(id + 1).grab_focus()
-			else: %Retornar.grab_focus()
-		

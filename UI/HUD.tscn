@@ -1,9 +1,10 @@
-[gd_scene load_steps=12 format=3 uid="uid://bs5i45df7rwnf"]
+[gd_scene load_steps=13 format=3 uid="uid://bs5i45df7rwnf"]
 
 [ext_resource type="Script" uid="uid://dg1wm8v16vrwl" path="res://Scripts/Componentes/UI.gd" id="1_yixhe"]
 [ext_resource type="Texture2D" uid="uid://dbohcm7v5pvg4" path="res://Sprites/UI/HUD/UIHUD-MAGIA.png" id="2_f2wx0"]
 [ext_resource type="Texture2D" uid="uid://0vn3u6huw3ie" path="res://Sprites/UI/HUD/UIHUDCASH.png" id="4_uk570"]
 [ext_resource type="Texture2D" uid="uid://8tc3pgq3fdi8" path="res://Sprites/UI/HUD/UIHUD-MAGIABK.png" id="5_2ptjp"]
+[ext_resource type="Script" uid="uid://bclpkwuvn4e0r" path="res://Scripts/Inventario/InventarioHUD.gd" id="5_f2wx0"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4n7mi"]
 
@@ -280,6 +281,7 @@ layout_mode = 2
 theme_override_constants/h_separation = 20
 theme_override_constants/v_separation = 20
 columns = 5
+script = ExtResource("5_f2wx0")
 
 [connection signal="pressed" from="Pause/Conteudo/Menu/Conteudo/Retornar" to="." method="_on_retornar_pressed"]
 [connection signal="pressed" from="Pause/Conteudo/Menu/Conteudo/Sair" to="." method="_on_sair_pressed"]

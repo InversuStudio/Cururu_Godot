@@ -19,5 +19,5 @@ func _on_hit_box_hit(_p:Vector2) -> void:
 	if spawn_points[0] != null and spawn_points[1] != null:
 		Fade.FadeOut()
 		await Fade.terminou
-		get_tree().get_first_node_in_group("Player").global_position = ponto
+		Mundos.player.global_position = ponto
 		Fade.FadeIn()

@@ -7,12 +7,12 @@ var dir: Vector2
 
 var _hunting: bool = false
 
-var player: CharacterBody2D
+#var player: CharacterBody2D
 
 var tomou_dano:bool = false
 
 func _ready() -> void:
-	player = get_tree().get_first_node_in_group("Player")
+	#player = get_tree().get_first_node_in_group("Player")
 	%HurtBox.hurt.connect(RecebeuDano)
 
 func _process(delta) -> void:
@@ -22,7 +22,7 @@ func _process(delta) -> void:
 
 func move(delta) -> void:
 	if _hunting:
-		velocity = global_position.direction_to(player.global_position) * speed * 128
+		velocity = global_position.direction_to(Mundos.player.global_position) * speed * 128
 	elif !_hunting:
 		velocity += dir * speed * delta
 	

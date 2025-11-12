@@ -1,4 +1,4 @@
-[gd_scene load_steps=42 format=4 uid="uid://driflyxauqbxs"]
+[gd_scene load_steps=43 format=4 uid="uid://driflyxauqbxs"]
 
 [ext_resource type="Texture2D" uid="uid://c374cwih425cq" path="res://Sprites/Cenário/Tilemaps/Base.png" id="1_52y5a"]
 [ext_resource type="Texture2D" uid="uid://cov3k8uja4wwj" path="res://Sprites/Cenário/zSem_Uso/PAU_BRASIL.png" id="2_bp4ag"]
@@ -15,6 +15,7 @@
 [ext_resource type="PackedScene" uid="uid://1apfpwlqocxn" path="res://Objetos/Funcionalidade/TransicaoFase.tscn" id="10_wqlrc"]
 [ext_resource type="PackedScene" uid="uid://d3cks8kri2olw" path="res://Objetos/Props/AreaUpgrade.tscn" id="12_77bok"]
 [ext_resource type="Script" uid="uid://bd046eokvcnu2" path="res://addons/phantom_camera/scripts/phantom_camera_host/phantom_camera_host.gd" id="13_56qbx"]
+[ext_resource type="PackedScene" uid="uid://dghxpclnjwg5k" path="res://Objetos/Props/PecaCoracao.tscn" id="15_fjg5v"]
 [ext_resource type="PackedScene" uid="uid://b0hyovdafhkyk" path="res://Objetos/Funcionalidade/TransicaoCamera.tscn" id="17_id35g"]
 [ext_resource type="PackedScene" uid="uid://bxixu84ahcyba" path="res://Objetos/NPCs/NpcBasico.tscn" id="18_bp4ag"]
 [ext_resource type="Texture2D" uid="uid://c3tl3oddronfh" path="res://icon.svg" id="21_lqome"]
@@ -237,12 +238,22 @@ position = Vector2(4448, -576)
 [node name="Bau" parent="Props" instance=ExtResource("22_b4qhl")]
 position = Vector2(576, -639)
 drop_item = Array[PackedScene]([ExtResource("23_wxyel"), ExtResource("24_tdc64")])
-multi_drop = true
 
 [node name="Bau2" parent="Props" instance=ExtResource("22_b4qhl")]
 position = Vector2(1079, -639)
 drop_item = Array[PackedScene]([ExtResource("23_wxyel"), ExtResource("24_tdc64")])
 multi_drop = true
+
+[node name="PecaCoracao" parent="Props" instance=ExtResource("15_fjg5v")]
+position = Vector2(1830, -460)
+
+[node name="PecaCoracao2" parent="Props" instance=ExtResource("15_fjg5v")]
+position = Vector2(2056, -460)
+id = 1
+
+[node name="PecaCoracao3" parent="Props" instance=ExtResource("15_fjg5v")]
+position = Vector2(2274, -460)
+id = 2
 
 [node name="LimitCamera" type="StaticBody2D" parent="."]
 collision_layer = 0

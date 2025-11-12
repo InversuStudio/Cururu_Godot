@@ -12,17 +12,23 @@ var posicao: Vector2 = Vector2(0, 0)
 var direcao: bool = false
 # Armazena se player foi para outra área vindo de baixo
 var veio_de_baixo:bool = false
-# Sinal lançado quando o contador de moedas é alterado
-signal update_moeda
+
 # Armazena o total de moedas coletadas
+signal update_moeda
 var moedas: int = 0:
 	set(valor):
 		moedas = valor
 		# Quando o valor é alterado, é emitido update_moedas
 		update_moeda.emit()
+		
 # Armazena informações de vida do player
-var vida_max: int = 0
+signal update_vida
+var vida_max: int = 0:
+	set(valor):
+		vida_max = valor
+		update_vida.emit()
 var vida_atual: int = 0
+
 # Armazena informações da magia do player
 signal update_magia
 var magia_max: int = 0
@@ -37,24 +43,32 @@ enum upgrades {
 	MissilAgua,
 }
 
+var peca_coracao:int = 0:
+	set(valor):
+		peca_coracao = valor
+		if valor >= 3:
+			peca_coracao = 0
+			vida_max += 1
+
 # Instância de controle do arquivo de save
 var config: ConfigFile = ConfigFile.new()
 
 # FUNÇÃO PARA SALVAR JOGO
 func Save() -> void:
-	var player: CharacterBody2D = get_tree().get_first_node_in_group("Player")
-	if player:
+	if Mundos.player:
 		# Atualiza dados
 		fase = Mundos.fase_atual
-		posicao = player.global_position
-		direcao = player.sprite.flip_h
+		posicao = Mundos.player.global_position
+		direcao = Mundos.player.sprite.flip_h
 		# Joga dados no arquivo
 		config.set_value("save", "fase", fase)
 		config.set_value("save", "posicao", posicao)
 		config.set_value("save", "direcao", direcao)
+		config.set_value("save", "vida_max", vida_max)
 		config.set_value("save", "moedas", moedas)
 		config.set_value("save", "upgrades", upgrade_num)
 		config.set_value("save", "inventario", Inventario.inventario)
+		config.set_value("save", "peca_coracao", peca_coracao)
 		# Salva arquivo
 		config.save(OS.get_executable_path().get_base_dir()+"/savedata.cfg")
 		var hud:Control = get_tree().get_first_node_in_group("HUD")
@@ -71,9 +85,11 @@ func Load() -> bool:
 		fase = config.get_value("save", "fase")
 		posicao = config.get_value("save", "posicao")
 		direcao = config.get_value("save", "direcao")
+		vida_max = config.get_value("save", "vida_max")
 		moedas = config.get_value("save", "moedas")
 		upgrade_num = config.get_value("save", "upgrades")
 		Inventario.inventario = config.get_value("save", "inventario")
+		peca_coracao = config.get_value("save", "peca_coracao")
 		# Carrega o jogo, com os dados certos
 		Mundos.CarregaFase(fase, true, posicao, direcao)
 		if vida_max > 0:

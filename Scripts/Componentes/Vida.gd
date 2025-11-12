@@ -11,7 +11,14 @@ signal alterou_vida
 func _ready() -> void:
 	vida_atual = vida_max
 	if get_parent().is_in_group("Player"):
-		GameData.vida_max = vida_max
+		GameData.update_vida.connect(func():
+			vida_max = GameData.vida_max
+			RecebeCura())
+		#GameData.vida_max = vida_max
+		if GameData.vida_max == 0:
+			GameData.vida_max = vida_max
+		else:
+			vida_max = GameData.vida_max
 		# Inicia vida_atual no início do jogo
 		if GameData.vida_atual == 0:
 			GameData.vida_atual = vida_max
