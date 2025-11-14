@@ -11,7 +11,7 @@ extends Area2D
 @export var parent: Node2D = null
 
 signal hit
-signal pushback
+#signal pushback
 
 func _ready() -> void:
 	if sfx: $SFX.stream = sfx
@@ -40,5 +40,5 @@ func CalcPushback(dist:float, time:float, pos_target:Vector2) -> void:
 		# Aplica velocidade
 		parent.velocity = result_vel
 		# Calcula força oposta (desaceleração)
-		var c:float = ((2.0 * dist) / pow(time, 2)) * 128
-		pushback.emit(c, dir)
+		#var c:float = ((2.0 * dist) / pow(time, 2)) * 128
+		#pushback.emit(c, dir)

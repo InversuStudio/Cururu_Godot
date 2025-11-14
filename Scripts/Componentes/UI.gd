@@ -1,4 +1,4 @@
-extends Control
+class_name HUD extends Control
 
 # Recebe se o player morreu
 var player_morreu: bool = false
@@ -13,9 +13,12 @@ var tela_item_on:bool = false
 
 signal tela_item
 
+@export var inventario_itens:Control = null
+@export var inventario_amuletos:Control = null
+
 # INPUT PAUSE
 func _input(_event: InputEvent) -> void:
-	if Input.is_action_just_pressed("pause"):
+	if Input.is_action_just_pressed("start"):
 		if cena.process_mode == PROCESS_MODE_INHERIT:
 			%Pause.show()
 			cena.process_mode = Node.PROCESS_MODE_DISABLED
@@ -29,28 +32,39 @@ func _input(_event: InputEvent) -> void:
 		tela_item_on = false
 		cena.process_mode = Node.PROCESS_MODE_INHERIT
 		tela_item.emit()
+	
+	if Input.is_action_just_pressed("ui_cancel") and %Pause.visible:
+		Mundos.CarregaFase(Mundos.NomeFase.MenuPrincipal)
+	
+	if Input.is_action_just_pressed("bumper_direito"):
+		if Mundos.hud_ativo + 1 <= %ContainerAbas.get_child_count() - 1:
+			Mundos.hud_ativo += 1
+			MudaAba()
+	
+	if Input.is_action_just_pressed("bumper_esquerdo"):
+		if Mundos.hud_ativo - 1 >= 0:
+			Mundos.hud_ativo -= 1
+			MudaAba()
+
+func MudaAba() -> void:
+	for c:Control in %ContainerMenus.get_children():
+		if c.get_index() == Mundos.hud_ativo:
+			c.show()
+			%ContainerAbas.get_child(Mundos.hud_ativo).button_pressed = true
+		else: c.hide()
 
 func _ready() -> void:
 	# Espera jogo carregar
 	await get_tree().process_frame
-	
-	# ATIVA FOCO NO BOTÃO AO ABRIR MENU PAUSE
-	%Pause.connect("visibility_changed", func():
-		if %Pause.visible:
-			if %Inv.get_child_count() > 0:
-				%Inv.get_child(0).grab_focus()
-			else:
-				%Retornar.grab_focus())
-	%Retornar.connect("focus_entered", func():
-		MostraItem("","",0))
 		
 	# ESCONDE MENU PAUSE AO INICIAR JOGO
 	%Pause.hide()
 	%AvisoItem.modulate.a = 0.0
 	%AvisoSave.self_modulate.a = 0.0
-	%NomeInv.text = ""
-	%DescInv.text = ""
 	%AvisoItem.show()
+	
+	# Mostra aba certa do HUD
+	MudaAba()
 	
 	# Se achar Player na cena...
 	if Mundos.player:
@@ -131,21 +145,12 @@ func AvisoItem(nome:String, desc:String, img:Texture2D) -> void:
 	await %Anim.animation_finished
 	tela_item_on = true
 
+# MOSTRA ITEM DO INVENTÁRIO
 func MostraItem(nome:String, desc:String, cura:int = 0) -> void:
-	%NomeInv.text = nome
-	%DescInv.text = desc
-	for c:Control in %NumCura.get_children():
-		c.queue_free()
-	for c:int in cura:
-		var img:TextureRect = TextureRect.new()
-		img.texture = sprite_cheio
-		img.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
-		img.custom_minimum_size.x = 50.0
-		%NumCura.add_child(img)
+	inventario_itens.MostraItem(nome, desc, cura, sprite_cheio)
 
-func _on_retornar_pressed() -> void:
-	get_tree().current_scene.process_mode = Node.PROCESS_MODE_INHERIT
-	%Pause.hide()
+func MostraAmuleto(nome:String, desc:String) -> void:
+	inventario_amuletos.MostraAmuleto(nome, desc)
 
 func _on_sair_pressed() -> void:
 	Mundos.CarregaFase(Mundos.NomeFase.MenuPrincipal)

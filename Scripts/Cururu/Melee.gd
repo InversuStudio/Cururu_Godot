@@ -3,8 +3,10 @@ extends State
 @export var chao_state: State = null
 @export var fall_state: State = null
 
+@export var hitboxes:Array[HitBox] = []
+
 @export_group("Pushback")
-@export var distancia_push:float = 0.0
+@export var distancia_push:float = 1.0
 @export var tempo_push:float = .2
 
 # Armazena número do ataque
@@ -20,9 +22,9 @@ const sfx:AudioStream = preload("res://Audio/SFX/Ataque_Basico.wav")
 
 func _ready() -> void:
 	await get_tree().process_frame
-	for c:Node2D in parent.hitbox_container.get_children():
-		if c is HitBox:
-			c.connect("hit", Hit.bind(c))
+	for c:HitBox in hitboxes: #in parent.hitbox_container.get_children():
+		#if c is HitBox:
+		c.connect("hit", Hit.bind(c))
 
 # COMPORTAMENTO AO ENTRAR NO STATE
 func Enter() -> void:
@@ -31,11 +33,11 @@ func Enter() -> void:
 	%MeleeTime.stop() # Reseta timer para mudar de combo
 	# Toca animação em ordem, loopando lista
 	if !parent.is_on_floor() and Input.is_action_pressed("baixo"):
-		%Anim.play("Melee_Down")
+		%Anim.play("Melee_Down", -1, GameData.ataque_anim_speed)
 	elif Input.is_action_pressed("cima"):
-		%Anim.play("Melee_Up")
+		%Anim.play("Melee_Up", -1, GameData.ataque_anim_speed)
 	else:
-		%Anim.play(combo_anim[combo_num])
+		%Anim.play(combo_anim[combo_num], -1, GameData.ataque_anim_speed)
 		var next_combo = combo_num + 1
 		combo_num = next_combo if next_combo <= combo_limit else 0
 	%SFX_Ataque.stream = sfx

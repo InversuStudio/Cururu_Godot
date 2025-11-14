@@ -50,6 +50,8 @@ var peca_coracao:int = 0:
 			peca_coracao = 0
 			vida_max += 1
 
+var ataque_anim_speed:float = 1.0
+
 # Instância de controle do arquivo de save
 var config: ConfigFile = ConfigFile.new()
 
@@ -68,6 +70,7 @@ func Save() -> void:
 		config.set_value("save", "moedas", moedas)
 		config.set_value("save", "upgrades", upgrade_num)
 		config.set_value("save", "inventario", Inventario.inventario)
+		config.set_value("save", "amuletos", Inventario.amuletos)
 		config.set_value("save", "peca_coracao", peca_coracao)
 		# Salva arquivo
 		config.save(OS.get_executable_path().get_base_dir()+"/savedata.cfg")
@@ -89,6 +92,7 @@ func Load() -> bool:
 		moedas = config.get_value("save", "moedas")
 		upgrade_num = config.get_value("save", "upgrades")
 		Inventario.inventario = config.get_value("save", "inventario")
+		Inventario.amuletos = config.get_value("save", "amuletos")
 		peca_coracao = config.get_value("save", "peca_coracao")
 		# Carrega o jogo, com os dados certos
 		Mundos.CarregaFase(fase, true, posicao, direcao)

@@ -1,0 +1,43 @@
+[gd_scene load_steps=6 format=3 uid="uid://bpxfhd2uvgkm7"]
+
+[ext_resource type="Texture2D" uid="uid://c3tl3oddronfh" path="res://icon.svg" id="1_e1vo3"]
+[ext_resource type="Script" uid="uid://ca5pbjmacb3t3" path="res://Scripts/Inventario/BaseAmuleto.gd" id="2_44xrj"]
+[ext_resource type="Texture2D" uid="uid://b4y3bbsuyjaly" path="res://Sprites/UI/Pause/Consumiveis/SELECTED.png" id="3_44xrj"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_e1vo3"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_44xrj"]
+bg_color = Color(0.34655392, 0.7017016, 0, 1)
+
+[node name="Amuleto" type="TextureButton"]
+custom_minimum_size = Vector2(200, 200)
+texture_normal = ExtResource("1_e1vo3")
+ignore_texture_size = true
+stretch_mode = 0
+script = ExtResource("2_44xrj")
+nome_display = "Ataque Veloz"
+desc_item = "Lhe permite golpear com mais velocidade"
+sprite_normal = ExtResource("1_e1vo3")
+sprite_select = ExtResource("3_44xrj")
+
+[node name="Ativo" type="Button" parent="."]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -58.0
+offset_top = -58.0
+offset_right = -8.0
+offset_bottom = -8.0
+grow_horizontal = 0
+grow_vertical = 0
+focus_mode = 0
+focus_behavior_recursive = 1
+theme_override_styles/normal = SubResource("StyleBoxEmpty_e1vo3")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_44xrj")
+toggle_mode = true
+button_mask = 0

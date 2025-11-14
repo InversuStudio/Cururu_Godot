@@ -3,6 +3,12 @@ extends State
 @export var chao_state: State = null
 @export var fall_state: State = null
 
+@export var hitboxes:Array[HitBox] = []
+
+@export_group("Pushback")
+@export var distancia_push:float = 1.0
+@export var tempo_push:float = .2
+
 var terminou: bool = false
 
 const sfx:AudioStream = preload("res://Audio/SFX/Ataque_Especial.wav")
@@ -27,6 +33,9 @@ func Exit() -> void:
 	await get_tree().physics_frame
 	if parent.sprite.offset.x != 0.0:
 		parent.sprite.offset.x = 0.0
+	for c:HitBox in hitboxes: #in parent.hitbox_container.get_children():
+		#if c is HitBox:
+		c.connect("hit", Hit.bind(c))
 
 func Update(_delta:float) -> State:
 	if terminou == true:
@@ -57,6 +66,11 @@ func OffsetSprite() -> void:
 	if parent.sprite.flip_h:
 		parent.sprite.offset.x = -470.0
 	else: parent.sprite.offset.x = 470.0
+
+func Hit(pos_target:Vector2, hit:HitBox) -> void:
+	hit.CalcPushback(distancia_push, tempo_push, pos_target)
+	if !hit.is_in_group("Special"):
+		GameData.magia_atual += 1
 
 #func UsaMagia() -> void:
 	#var p: Node2D = projetil.instantiate()

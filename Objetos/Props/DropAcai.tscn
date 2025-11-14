@@ -4,22 +4,21 @@
 [ext_resource type="Texture2D" uid="uid://bdipo31btb3h4" path="res://Sprites/Cenário/Objetos/AÇAI.png" id="2_qvwd5"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_qvwd5"]
-radius = 37.53254
+radius = 44.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_s361a"]
-radius = 47.67599
+radius = 62.03225
 
 [node name="DropAcai" type="CharacterBody2D"]
 collision_layer = 0
 script = ExtResource("1_qvwd5")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(0.192, 0.192)
+scale = Vector2(0.35, 0.35)
 texture = ExtResource("2_qvwd5")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(4, 6)
-scale = Vector2(0.64, 0.64)
+position = Vector2(7, 12)
 shape = SubResource("CircleShape2D_qvwd5")
 
 [node name="AreaGet" type="Area2D" parent="."]
@@ -27,5 +26,5 @@ collision_layer = 0
 collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AreaGet"]
-scale = Vector2(0.64, 0.64)
+position = Vector2(4, 0)
 shape = SubResource("CircleShape2D_s361a")

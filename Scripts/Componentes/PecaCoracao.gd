@@ -18,8 +18,6 @@ func _on_body_entered(body: Node2D) -> void:
 	if body.is_in_group("Player"):
 		Mundos.pecas_coracao[id] = true
 		GameData.peca_coracao += 1
-		# Esconde sprite
-		$Imagem.hide()
 		# Lança aviso
 		Mundos.hud.AvisoItem(nome_tela, descricao_tela, imagem_tela)
 		# Deleta

@@ -1447,16 +1447,17 @@ script = ExtResource("54_jgcph")
 fall_state = NodePath("../Fall")
 chao_state = NodePath("../Chao")
 
-[node name="Melee" type="Node" parent="StateMachine" node_paths=PackedStringArray("chao_state", "fall_state")]
+[node name="Melee" type="Node" parent="StateMachine" node_paths=PackedStringArray("chao_state", "fall_state", "hitboxes")]
 script = ExtResource("55_7uoqt")
 chao_state = NodePath("../Chao")
 fall_state = NodePath("../Fall")
-distancia_push = 1.0
+hitboxes = [NodePath("../../HitContainer/Melee1"), NodePath("../../HitContainer/Melee2"), NodePath("../../HitContainer/MeleeUp"), NodePath("../../HitContainer/MeleeDown")]
 
-[node name="Special" type="Node" parent="StateMachine" node_paths=PackedStringArray("chao_state", "fall_state")]
+[node name="Special" type="Node" parent="StateMachine" node_paths=PackedStringArray("chao_state", "fall_state", "hitboxes")]
 script = ExtResource("56_7uoqt")
 chao_state = NodePath("../Chao")
 fall_state = NodePath("../Fall")
+hitboxes = [NodePath("../../HitContainer/Special"), NodePath("../../HitContainer/SpecialUp"), NodePath("../../HitContainer/SpecialDown")]
 
 [connection signal="counter" from="HurtContainer/HurtBox" to="StateMachine/Dano" method="_on_hurt_box_counter"]
 [connection signal="animation_finished" from="Anim" to="StateMachine/Chao" method="_on_anim_animation_finished"]

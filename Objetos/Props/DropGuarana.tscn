@@ -4,10 +4,10 @@
 [ext_resource type="Texture2D" uid="uid://dk4wua1wjthnt" path="res://Sprites/Cenário/Objetos/GUARA.png" id="2_fhqsw"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_fhqsw"]
-radius = 37.53254
+radius = 55.081757
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_s361a"]
-radius = 40.792156
+radius = 70.0
 
 [node name="DropGuarana" type="CharacterBody2D"]
 collision_layer = 0
@@ -15,12 +15,11 @@ script = ExtResource("1_fhqsw")
 tipo_item = 1
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(0.192, 0.192)
+scale = Vector2(0.35, 0.35)
 texture = ExtResource("2_fhqsw")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(2, 0)
-scale = Vector2(0.64, 0.64)
+position = Vector2(8, 0)
 shape = SubResource("CircleShape2D_fhqsw")
 
 [node name="AreaGet" type="Area2D" parent="."]
@@ -28,5 +27,5 @@ collision_layer = 0
 collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AreaGet"]
-scale = Vector2(0.64, 0.64)
+position = Vector2(5, 0)
 shape = SubResource("CircleShape2D_s361a")

@@ -1,22 +1,25 @@
 extends CharacterBody2D
 #https://youtu.be/SkDCubKXj10?si=f10kJkj5mRmFEE2D
 #Só movimento feito, ainda é necessário rever outras ideias
+# Podexá, cumpadi -G
 
 @export var speed: float = 2
-var dir: Vector2
+var dir: Vector2 = Vector2.ZERO # Sempre adiciono um valor padrão, porque computadores.
 
 var _hunting: bool = false
 
-#var player: CharacterBody2D
+var trava_move:bool = false
 
-var tomou_dano:bool = false
+@export_group("Pushback")
+@export var distancia_push:float = 1.0
+@export var tempo_push:float = .2
 
 func _ready() -> void:
-	#player = get_tree().get_first_node_in_group("Player")
 	%HurtBox.hurt.connect(RecebeuDano)
+	%HitBox.hit.connect(Pushback)
 
 func _process(delta) -> void:
-	if !tomou_dano:
+	if !trava_move:
 		move(delta)
 	move_and_slide()
 
@@ -27,6 +30,7 @@ func move(delta) -> void:
 		velocity += dir * speed * delta
 	
 	#Flipagem mais bonita existente
+	# Sempre fico feliz quando uso -G
 	%Sprite.flip_h = false if velocity.x < 0 else true
 
 func _on_timer_timeout():
@@ -51,8 +55,13 @@ func _on_area_2d_body_exited(body: Node2D) -> void:
 
 func RecebeuDano(_h:Array[HitBox]) -> void:
 	Console._Print("MORCEGO AIAIAI")
-	tomou_dano = true
+	trava_move = true
 	%TimerDano.start(.2)
 
 func _on_timer_dano_timeout() -> void:
-	tomou_dano = false
+	trava_move = false
+
+func Pushback(pos:Vector2) -> void:
+	trava_move = true
+	%HurtBox.CalcKnockback(distancia_push, tempo_push, pos)
+	%TimerDano.start()
