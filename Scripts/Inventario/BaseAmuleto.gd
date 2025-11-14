@@ -24,7 +24,7 @@ func _ready() -> void:
 	if sprite_select: texture_focused = sprite_select
 	
 	focus_entered.connect(func():
-		Mundos.hud.MostraAmuleto(
+		HUD.MostraAmuleto(
 			nome_display, desc_item))
 	
 	Inventario.set_amuleto.connect(func():

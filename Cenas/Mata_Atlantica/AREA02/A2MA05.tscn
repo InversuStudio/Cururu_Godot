@@ -1,4 +1,4 @@
-[gd_scene load_steps=33 format=4 uid="uid://dvg6r2gfvcnfb"]
+[gd_scene load_steps=32 format=4 uid="uid://dvg6r2gfvcnfb"]
 
 [ext_resource type="Texture2D" uid="uid://cqu5scrrmr5n5" path="res://Sprites/Cenário/Mata_Atlantica/Background/FUNDOCEU.png" id="1_2x3ls"]
 [ext_resource type="Script" uid="uid://bhexx6mj1xv3q" path="res://addons/phantom_camera/scripts/phantom_camera/phantom_camera_2d.gd" id="1_3mtbg"]
@@ -15,7 +15,6 @@
 [ext_resource type="Texture2D" uid="uid://ctar30vsktrrb" path="res://Sprites/Cenário/Mata_Atlantica/Background/FUNDONEVOA2.png" id="6_favji"]
 [ext_resource type="PackedScene" uid="uid://cqyub70sv0ofp" path="res://Objetos/Props/SavePoint.tscn" id="7_g1p7l"]
 [ext_resource type="Texture2D" uid="uid://cjl88xeknofui" path="res://Sprites/Cenário/Mata_Atlantica/Chao/grama_reto.png" id="9_0hgqb"]
-[ext_resource type="PackedScene" uid="uid://bs5i45df7rwnf" path="res://UI/HUD.tscn" id="9_2g3vy"]
 [ext_resource type="Texture2D" uid="uid://cj4rj4oj20ogb" path="res://Sprites/Cenário/Mata_Atlantica/Chao/chap_interno.png" id="10_38a5t"]
 [ext_resource type="PackedScene" uid="uid://bu62qgilsxetf" path="res://Objetos/Entidades/Escorpiao.tscn" id="11_6t3gw"]
 [ext_resource type="Texture2D" uid="uid://cw2yeg7ynw0kl" path="res://Sprites/Cenário/Mata_Atlantica/Chao/chap_externo.png" id="11_dmd0r"]
@@ -3827,14 +3826,6 @@ process_priority = 300
 process_physics_priority = 300
 script = ExtResource("3_4gyiy")
 metadata/_custom_type_script = "uid://bd046eokvcnu2"
-
-[node name="UIGAME" type="CanvasLayer" parent="."]
-
-[node name="HUD" parent="UIGAME" instance=ExtResource("9_2g3vy")]
-offset_left = -6.0
-offset_top = -2.0
-offset_right = -6.0
-offset_bottom = -2.0
 
 [node name="BGM_Player" type="Node" parent="."]
 script = ExtResource("25_1vw3w")

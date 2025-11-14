@@ -79,3 +79,7 @@ func DelItem(id:int) -> void:
 			%Inv.get_child(id - 1).grab_focus()
 		elif %Inv.get_child(id + 1):
 			%Inv.get_child(id + 1).grab_focus()
+
+#func LoadInv() -> void:
+	#for a:Array in Inventario.inventario:
+		#AddItem()

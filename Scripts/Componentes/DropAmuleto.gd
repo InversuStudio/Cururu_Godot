@@ -33,5 +33,5 @@ func _physics_process(delta: float) -> void:
 func _on_body_entered(body: Node2D) -> void:
 	if body.is_in_group("Player"):
 		Inventario.AddAmuleto(Inventario.AmuletosString[tipo_item])
-		Mundos.hud.AvisoItem(nome_tela, descricao_tela, imagem_tela)
+		HUD.AvisoItem(nome_tela, descricao_tela, imagem_tela)
 		queue_free()

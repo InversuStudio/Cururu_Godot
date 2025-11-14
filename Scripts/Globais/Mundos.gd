@@ -75,8 +75,8 @@ enum PecasCoracao {
 # Registra fase atual
 var fase_atual : NomeFase
 @onready var player:CharacterBody2D = get_tree().get_first_node_in_group("Player")
-@onready var hud:Control = get_tree().get_first_node_in_group("HUD")
-var hud_ativo:int = 0
+
+signal fase_mudou
 
 # Função para carregar nova fase
 func CarregaFase(lugar:NomeFase, detalhado:bool = false,
@@ -98,8 +98,10 @@ func CarregaFase(lugar:NomeFase, detalhado:bool = false,
 	if player and detalhado == true:
 		player.global_position = pos
 		player.sprite.flip_h = virado
+		
 	# Registra novo HUD na cena
-	hud = get_tree().get_first_node_in_group("HUD")
+	HUD.IniciaHUD()
+	fase_mudou.emit()
 
 # Função para recarregar fase ativa
 func Reload() -> void:

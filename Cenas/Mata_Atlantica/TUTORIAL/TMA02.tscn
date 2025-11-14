@@ -1,4 +1,4 @@
-[gd_scene load_steps=38 format=4 uid="uid://51mlmfn0h0h"]
+[gd_scene load_steps=37 format=4 uid="uid://51mlmfn0h0h"]
 
 [ext_resource type="Texture2D" uid="uid://cqu5scrrmr5n5" path="res://Sprites/Cenário/Mata_Atlantica/Background/FUNDOCEU.png" id="1_k6tng"]
 [ext_resource type="Texture2D" uid="uid://c374cwih425cq" path="res://Sprites/Cenário/Tilemaps/Base.png" id="1_m6iqj"]
@@ -26,7 +26,6 @@
 [ext_resource type="Script" uid="uid://bhexx6mj1xv3q" path="res://addons/phantom_camera/scripts/phantom_camera/phantom_camera_2d.gd" id="14_wd030"]
 [ext_resource type="Script" uid="uid://8umksf8e80fw" path="res://addons/phantom_camera/scripts/resources/tween_resource.gd" id="15_indba"]
 [ext_resource type="Texture2D" uid="uid://rwmi1ggde5dy" path="res://Sprites/VFX/Iluminação/PORTAL.png" id="18_2gijv"]
-[ext_resource type="PackedScene" uid="uid://bs5i45df7rwnf" path="res://UI/HUD.tscn" id="18_p37rg"]
 [ext_resource type="Texture2D" uid="uid://drcemrcpb3ydc" path="res://Sprites/Cenário/Mata_Atlantica/Chao/moita_chao2.png" id="25_fo7ry"]
 [ext_resource type="Script" uid="uid://dd16yu704x6wt" path="res://Scripts/Componentes/BGM_Player.gd" id="29_fo7ry"]
 [ext_resource type="AudioStream" uid="uid://c7qftchbhu6xc" path="res://Audio/SFX/AMBIENTE/Musica_Jogo.mp3" id="30_6d1b1"]
@@ -1457,14 +1456,6 @@ flip_h = true
 position = Vector2(-17931, -4763)
 texture = ExtResource("10_646f2")
 flip_h = true
-
-[node name="UIGAME" type="CanvasLayer" parent="."]
-
-[node name="HUD" parent="UIGAME" instance=ExtResource("18_p37rg")]
-offset_left = -6.0
-offset_top = -2.0
-offset_right = -6.0
-offset_bottom = -2.0
 
 [node name="BGM_Player" type="Node" parent="."]
 script = ExtResource("29_fo7ry")

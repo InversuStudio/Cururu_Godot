@@ -71,11 +71,11 @@ func Save() -> void:
 		config.set_value("save", "upgrades", upgrade_num)
 		config.set_value("save", "inventario", Inventario.inventario)
 		config.set_value("save", "amuletos", Inventario.amuletos)
-		config.set_value("save", "peca_coracao", peca_coracao)
+		config.set_value("save", "peca_coracao", Mundos.pecas_coracao)
 		# Salva arquivo
 		config.save(OS.get_executable_path().get_base_dir()+"/savedata.cfg")
 		# Lança aviso de save
-		if Mundos.hud: Mundos.hud.AvisoSave()
+		HUD.AvisoSave()
 		print("Jogo salvo")
 	else:
 		printerr("Erro ao salvar")
@@ -91,9 +91,13 @@ func Load() -> bool:
 		vida_max = config.get_value("save", "vida_max")
 		moedas = config.get_value("save", "moedas")
 		upgrade_num = config.get_value("save", "upgrades")
-		Inventario.inventario = config.get_value("save", "inventario")
-		Inventario.amuletos = config.get_value("save", "amuletos")
-		peca_coracao = config.get_value("save", "peca_coracao")
+		var inv:Array = config.get_value("save", "inventario")
+		for i:Array in inv:
+			Inventario.AddItem(i[0], i[1])
+		var am:Array = config.get_value("save", "amuletos")
+		for a:Array in am:
+			Inventario.AddAmuleto(a[0], a[1])
+		Mundos.pecas_coracao = config.get_value("save", "peca_coracao")
 		# Carrega o jogo, com os dados certos
 		Mundos.CarregaFase(fase, true, posicao, direcao)
 		if vida_max > 0:
@@ -110,13 +114,21 @@ func ChecaData() -> String:
 	if err == OK:
 		return file_dir
 	return ""
-
+	
+const player:PackedScene = preload("res://Objetos/Entidades/Player.tscn")
 func ResetData() -> void:
-	#posicao = Vector2.ZERO
-	if vida_max != 0: vida_atual = vida_max
-	if magia_max != 0: magia_atual = magia_max
+	var p:CharacterBody2D = player.instantiate()
+	vida_max = p.vida.vida_max
+	vida_atual = vida_max
+	magia_max = p.magia_max
+	magia_atual = magia_max
+	p.queue_free()
+	#if vida_max != 0: vida_atual = vida_max
+	#if magia_max != 0: magia_atual = magia_max
 	moedas = 0
 	direcao = false
 	veio_de_baixo = false
 	upgrade_num = 0
+	for peca:bool in peca_coracao:
+		peca_coracao = false
 	Inventario.Reset()

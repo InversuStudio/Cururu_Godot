@@ -1,9 +1,8 @@
-class_name HUD extends Control
+extends CanvasLayer
 
 # Recebe se o player morreu
 var player_morreu: bool = false
-
-var coracoes:Array = []
+#var coracoes:Array = []
 
 const sprite_cheio:Texture2D = preload("res://Sprites/UI/HUD/UIHUD-VIDACHEIA.png")
 const sprite_vazio:Texture2D = preload("res://Sprites/UI/HUD/UIHUD-VIDAVAZIZ.png")
@@ -15,9 +14,13 @@ signal tela_item
 @export var inventario_itens:Control = null
 @export var inventario_amuletos:Control = null
 
+var hud_ativo:int = 0
+var configurado:bool = false
+
 # INPUT PAUSE
 func _input(_event: InputEvent) -> void:
 	if Input.is_action_just_pressed("start"):
+		if Mundos.player == null or tela_item_on: return
 		if !get_tree().paused:
 			%Pause.show()
 			get_tree().paused = true
@@ -36,67 +39,63 @@ func _input(_event: InputEvent) -> void:
 		Mundos.CarregaFase(Mundos.NomeFase.MenuPrincipal)
 	
 	if Input.is_action_just_pressed("bumper_direito"):
-		if Mundos.hud_ativo + 1 <= %ContainerAbas.get_child_count() - 1:
-			Mundos.hud_ativo += 1
+		if hud_ativo + 1 <= %ContainerAbas.get_child_count() - 1:
+			hud_ativo += 1
 			MudaAba()
 	
 	if Input.is_action_just_pressed("bumper_esquerdo"):
-		if Mundos.hud_ativo - 1 >= 0:
-			Mundos.hud_ativo -= 1
+		if hud_ativo - 1 >= 0:
+			hud_ativo -= 1
 			MudaAba()
+
+func _ready() -> void:
+	# Conecta sinais de mudança de valor
+	GameData.connect("update_magia", UpdateMagia)
+	#GameData.connect("update_vida", AdicionaCoracao)
+	GameData.connect("update_moeda", UpdateMoeda)
+	Mundos.connect("fase_mudou", MostraHUD)
+	# Organiza visibilidade das abas
+	MudaAba()
+	MostraHUD()
+	
+	# Lógica para evitar bugs durante testes
+	await get_tree().physics_frame
+	if Mundos.player and GameData.vida_max > 0:
+		IniciaHUD()
 
 func MudaAba() -> void:
 	for c:Control in %ContainerMenus.get_children():
-		if c.get_index() == Mundos.hud_ativo:
+		if c.get_index() == hud_ativo:
 			c.show()
-			%ContainerAbas.get_child(Mundos.hud_ativo).button_pressed = true
+			%ContainerAbas.get_child(hud_ativo).button_pressed = true
 		else: c.hide()
 
-func _ready() -> void:
-	# Espera jogo carregar
-	await get_tree().process_frame
-		
-	# ESCONDE MENU PAUSE AO INICIAR JOGO
+func MostraHUD() -> void:
 	%Pause.hide()
 	%AvisoItem.modulate.a = 0.0
 	%AvisoSave.self_modulate.a = 0.0
 	%AvisoItem.show()
-	
-	# Mostra aba certa do HUD
-	MudaAba()
-	
+	if Mundos.player: %Corpo.show()
+	else: %Corpo.hide()
+
+# FUNÇÃO PARA ATUALIZAR O HUD PELA PRIMEIRA VEZ
+func IniciaHUD() -> void:
 	# Se achar Player na cena...
 	if Mundos.player:
-		# Adiciona corações na barra de vida
-		for n:int in GameData.vida_max:
-			AdicionaCoracao()
-		
-		# Inicializa valores da barra de magia
-		%BarraMagia.max_value = GameData.magia_max
-		%BarraMagia.value = GameData.magia_atual
-		
-		# Inicializa valores da barra de vida
-		if GameData.vida_atual > 0 and GameData.vida_atual < GameData.vida_max:
-			UpdateVida(GameData.vida_atual, 0)
-			
-		# Conecta sinais de dano, cura e morte
+		# Conecta sinal de dano, cura e morte
 		Mundos.player.vida.connect("alterou_vida", UpdateVida)
-		GameData.connect("update_magia", UpdateMagia)
-		GameData.connect("update_vida", AdicionaCoracao)
-		
-		# Conecta UpdateMoeda ao sinal de mudança na quintidade de moedas
-		GameData.connect("update_moeda", UpdateMoeda)
-		
-		# Se ainda não leu o arquivo de save...
-		if GameData.leu_data == false:
-			# ...e houver arquivo de save...
-			if GameData.config.has_section_key("save", "moedas"):
-			# ...atualiza contador de moedas com o número salvo
-				GameData.moedas = GameData.config.get_value("save", "moedas")
-				GameData.leu_data = true
-				
-		# Atualiza contador pela primeira vez
-		UpdateMoeda()
+		Mundos.player.vida.connect("alterou_vida_max", AdicionaCoracao)
+		# Se ainda não estiver configurado
+		if configurado == false:
+			# Adiciona corações na barra de vida
+			for n:int in GameData.vida_max:
+				AdicionaCoracao()
+			# Inicializa valores
+			%BarraMagia.max_value = GameData.magia_max
+			%BarraMagia.value = GameData.magia_atual
+			UpdateMoeda()
+			# Marca como configurado
+			configurado = true
 
 # Função para atualizar contador de moedas
 func UpdateMoeda() -> void:
@@ -108,26 +107,22 @@ func UpdateMoeda() -> void:
 func UpdateVida(vida_nova:int, _vida_antiga:int) -> void:
 	await get_tree().physics_frame
 	Console._Print("[color=green]VIDA: %s[/color]" % [GameData.vida_atual])
-	for c:TextureRect in coracoes:
+	for c:TextureRect in %BarraHeart.get_children():#coracoes:
 		c.texture = sprite_cheio if c.get_index() + 1 <= vida_nova else sprite_vazio
 	if vida_nova <= 0:
-		PlayerMorreu()
+		player_morreu = true
 
 func AdicionaCoracao() -> void:
+	print("AYYY MI CORAZÓN")
 	var coracao:TextureRect = TextureRect.new()
 	coracao.custom_minimum_size = Vector2(50.0, 50.0)
 	coracao.texture = sprite_cheio
 	%BarraHeart.add_child(coracao)
-	coracoes.append(coracao) # = %BarraHeart.get_children()
-
-# Função para sinalizar que player morreu
-func PlayerMorreu() -> void:
-	player_morreu = true
+	#coracoes.append(coracao)
 	
 func UpdateMagia() -> void:
 	if !player_morreu:
 		Console._Print("[color=cyan]MAGIA: %s[/color]" % [GameData.magia_atual])
-		#%BarraMagia.value = GameData.magia_atual
 		var tween:Tween = get_tree().create_tween()
 		tween.tween_property(%BarraMagia,"value",GameData.magia_atual,.3).set_trans(
 			Tween.TRANS_CUBIC)
@@ -137,7 +132,6 @@ func AvisoSave() -> void:
 
 func AvisoItem(nome:String, desc:String, img:Texture2D) -> void:
 	get_tree().paused = true
-	#cena.set_deferred("process_mode", Node.PROCESS_MODE_DISABLED)
 	%NomeItemAviso.text = nome
 	%DescItemAviso.text = desc
 	%ImgItemAviso.texture = img
@@ -151,6 +145,3 @@ func MostraItem(nome:String, desc:String, cura:int = 0) -> void:
 
 func MostraAmuleto(nome:String, desc:String) -> void:
 	inventario_amuletos.MostraAmuleto(nome, desc)
-
-func _on_sair_pressed() -> void:
-	Mundos.CarregaFase(Mundos.NomeFase.MenuPrincipal)

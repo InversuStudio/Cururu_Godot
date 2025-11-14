@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=4 uid="uid://dyxt6ow8l0up5"]
+[gd_scene load_steps=31 format=4 uid="uid://dyxt6ow8l0up5"]
 
 [ext_resource type="Texture2D" uid="uid://cqu5scrrmr5n5" path="res://Sprites/Cenário/Mata_Atlantica/Background/FUNDOCEU.png" id="1_cpcvs"]
 [ext_resource type="Texture2D" uid="uid://k22xru6heyh3" path="res://Sprites/Cenário/Mata_Atlantica/Background/arvore.png" id="1_f0sik"]
@@ -15,7 +15,6 @@
 [ext_resource type="Script" uid="uid://bhexx6mj1xv3q" path="res://addons/phantom_camera/scripts/phantom_camera/phantom_camera_2d.gd" id="9_8acf8"]
 [ext_resource type="Script" uid="uid://8umksf8e80fw" path="res://addons/phantom_camera/scripts/resources/tween_resource.gd" id="10_xyfmp"]
 [ext_resource type="Script" uid="uid://bd046eokvcnu2" path="res://addons/phantom_camera/scripts/phantom_camera_host/phantom_camera_host.gd" id="11_ammsr"]
-[ext_resource type="PackedScene" uid="uid://bs5i45df7rwnf" path="res://UI/HUD.tscn" id="11_f0sik"]
 [ext_resource type="Texture2D" uid="uid://cw2yeg7ynw0kl" path="res://Sprites/Cenário/Mata_Atlantica/Chao/chap_externo.png" id="13_ammsr"]
 [ext_resource type="Texture2D" uid="uid://dphhlbwaebgco" path="res://Sprites/Cenário/Mata_Atlantica/Background/composição.png" id="14_mwnxc"]
 [ext_resource type="Texture2D" uid="uid://cj4rj4oj20ogb" path="res://Sprites/Cenário/Mata_Atlantica/Chao/chap_interno.png" id="15_gc8i2"]
@@ -1852,15 +1851,6 @@ process_priority = 300
 process_physics_priority = 300
 script = ExtResource("11_ammsr")
 metadata/_custom_type_script = "uid://bd046eokvcnu2"
-
-[node name="UIGAME" type="CanvasLayer" parent="."]
-
-[node name="HUD" parent="UIGAME" instance=ExtResource("11_f0sik")]
-offset_left = -6.0
-offset_top = -2.0
-offset_right = -6.0
-offset_bottom = -2.0
-metadata/_edit_use_anchors_ = true
 
 [node name="BGM_Player" type="Node" parent="."]
 script = ExtResource("26_r33ly")

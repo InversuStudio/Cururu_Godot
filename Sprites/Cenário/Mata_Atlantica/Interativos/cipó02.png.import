@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bbrrkirt4gvet"
-path="res://.godot/imported/cipó02.PNG-5946aa2c44f2a0e77f91f2754c02be30.ctex"
+path="res://.godot/imported/cipó02.png-ebe237ebc0d174ebcc0cc5d6d4064217.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Cenário/Mata_Atlantica/Interativos/cipó02.PNG"
-dest_files=["res://.godot/imported/cipó02.PNG-5946aa2c44f2a0e77f91f2754c02be30.ctex"]
+source_file="res://Sprites/Cenário/Mata_Atlantica/Interativos/cipó02.png"
+dest_files=["res://.godot/imported/cipó02.png-ebe237ebc0d174ebcc0cc5d6d4064217.ctex"]
 
 [params]
 

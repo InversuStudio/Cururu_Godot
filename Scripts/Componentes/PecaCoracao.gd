@@ -11,15 +11,18 @@ extends Area2D
 @export var imagem_tela:Texture2D = null
 
 func _ready() -> void:
+	await get_tree().physics_frame
+	print(Mundos.pecas_coracao)
 	if Mundos.pecas_coracao[id] == true:
 		queue_free()
 
 func _on_body_entered(body: Node2D) -> void:
 	if body.is_in_group("Player"):
 		Mundos.pecas_coracao[id] = true
+		print(Mundos.pecas_coracao)
 		GameData.peca_coracao += 1
 		# Lança aviso
-		Mundos.hud.AvisoItem(nome_tela, descricao_tela, imagem_tela)
+		HUD.AvisoItem(nome_tela, descricao_tela, imagem_tela)
 		# Deleta
 		queue_free()
 

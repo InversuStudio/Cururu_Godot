@@ -1,4 +1,4 @@
-[gd_scene load_steps=44 format=4 uid="uid://driflyxauqbxs"]
+[gd_scene load_steps=43 format=4 uid="uid://driflyxauqbxs"]
 
 [ext_resource type="Texture2D" uid="uid://c374cwih425cq" path="res://Sprites/Cenário/Tilemaps/Base.png" id="1_52y5a"]
 [ext_resource type="Texture2D" uid="uid://cov3k8uja4wwj" path="res://Sprites/Cenário/zSem_Uso/PAU_BRASIL.png" id="2_bp4ag"]
@@ -10,7 +10,6 @@
 [ext_resource type="PackedScene" uid="uid://bu62qgilsxetf" path="res://Objetos/Entidades/Escorpiao.tscn" id="7_2vimk"]
 [ext_resource type="PackedScene" uid="uid://bktu336s6ruri" path="res://Objetos/Props/Moeda.tscn" id="8_fo4t4"]
 [ext_resource type="Script" uid="uid://bhexx6mj1xv3q" path="res://addons/phantom_camera/scripts/phantom_camera/phantom_camera_2d.gd" id="9_2ryh1"]
-[ext_resource type="PackedScene" uid="uid://bs5i45df7rwnf" path="res://UI/HUD.tscn" id="9_y1wlx"]
 [ext_resource type="Script" uid="uid://8umksf8e80fw" path="res://addons/phantom_camera/scripts/resources/tween_resource.gd" id="10_0ho33"]
 [ext_resource type="PackedScene" uid="uid://1apfpwlqocxn" path="res://Objetos/Funcionalidade/TransicaoFase.tscn" id="10_wqlrc"]
 [ext_resource type="PackedScene" uid="uid://d3cks8kri2olw" path="res://Objetos/Props/AreaUpgrade.tscn" id="12_77bok"]
@@ -263,6 +262,10 @@ id = 2
 [node name="DropAmVelAtaque" parent="Props" instance=ExtResource("16_der3i")]
 position = Vector2(3699, -463)
 
+[node name="DropAmVelAtaque2" parent="Props" instance=ExtResource("16_der3i")]
+position = Vector2(3907, -463)
+tipo_item = 1
+
 [node name="LimitCamera" type="StaticBody2D" parent="."]
 collision_layer = 0
 collision_mask = 0
@@ -302,10 +305,6 @@ zoom = Vector2(1.53, 1.53)
 tween_resource = SubResource("Resource_g237d")
 draw_limits = true
 metadata/_custom_type_script = "uid://bhexx6mj1xv3q"
-
-[node name="Interface" type="CanvasLayer" parent="."]
-
-[node name="HUD" parent="Interface" instance=ExtResource("9_y1wlx")]
 
 [node name="NPC Basico" parent="." instance=ExtResource("18_bp4ag")]
 position = Vector2(4959, -525)

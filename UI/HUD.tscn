@@ -1,6 +1,6 @@
 [gd_scene load_steps=21 format=3 uid="uid://bs5i45df7rwnf"]
 
-[ext_resource type="Script" uid="uid://dg1wm8v16vrwl" path="res://Scripts/Componentes/UI.gd" id="1_yixhe"]
+[ext_resource type="Script" uid="uid://dg1wm8v16vrwl" path="res://Scripts/Componentes/HUD.gd" id="1_yixhe"]
 [ext_resource type="Texture2D" uid="uid://dbohcm7v5pvg4" path="res://Sprites/UI/HUD/UIHUD-MAGIA.png" id="2_f2wx0"]
 [ext_resource type="Texture2D" uid="uid://0vn3u6huw3ie" path="res://Sprites/UI/HUD/UIHUDCASH.png" id="4_uk570"]
 [ext_resource type="Texture2D" uid="uid://8tc3pgq3fdi8" path="res://Sprites/UI/HUD/UIHUD-MAGIABK.png" id="5_2ptjp"]
@@ -138,8 +138,14 @@ _data = {
 &"RESET": SubResource("Animation_uk570")
 }
 
-[node name="HUD" type="Control" node_paths=PackedStringArray("inventario_itens", "inventario_amuletos") groups=["HUD"]]
+[node name="HUD" type="CanvasLayer" node_paths=PackedStringArray("inventario_itens", "inventario_amuletos")]
 process_mode = 3
+script = ExtResource("1_yixhe")
+inventario_itens = NodePath("Corpo/Pause/BG/ContainerMenus/Inventario")
+inventario_amuletos = NodePath("Corpo/Pause/BG/ContainerMenus/Amuletos")
+
+[node name="Corpo" type="Control" parent="."]
+unique_name_in_owner = true
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -147,11 +153,8 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
-script = ExtResource("1_yixhe")
-inventario_itens = NodePath("Pause/BG/ContainerMenus/Inventario")
-inventario_amuletos = NodePath("Pause/BG/ContainerMenus/Amuletos")
 
-[node name="Main" type="TextureRect" parent="."]
+[node name="Main" type="TextureRect" parent="Corpo"]
 layout_mode = 1
 offset_left = 20.0
 offset_top = 24.143318
@@ -161,7 +164,7 @@ scale = Vector2(0.5119974, 0.5119974)
 texture = ExtResource("2_f2wx0")
 expand_mode = 1
 
-[node name="MaskMagia" type="TextureRect" parent="Main"]
+[node name="MaskMagia" type="TextureRect" parent="Corpo/Main"]
 clip_children = 2
 z_index = -1
 layout_mode = 0
@@ -172,7 +175,7 @@ offset_bottom = 236.0
 texture = ExtResource("5_2ptjp")
 expand_mode = 1
 
-[node name="BarraMagia" type="ProgressBar" parent="Main/MaskMagia"]
+[node name="BarraMagia" type="ProgressBar" parent="Corpo/Main/MaskMagia"]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(150, 150)
 layout_mode = 1
@@ -188,7 +191,7 @@ value = 4.0
 fill_mode = 3
 show_percentage = false
 
-[node name="BarraHeart" type="HBoxContainer" parent="Main"]
+[node name="BarraHeart" type="HBoxContainer" parent="Corpo/Main"]
 unique_name_in_owner = true
 layout_mode = 1
 offset_left = 326.17352
@@ -197,7 +200,7 @@ offset_right = 835.9984
 offset_bottom = 203.96196
 scale = Vector2(0.85, 0.85)
 
-[node name="Moedas" type="TextureRect" parent="."]
+[node name="Moedas" type="TextureRect" parent="Corpo"]
 layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
@@ -210,7 +213,7 @@ grow_horizontal = 0
 texture = ExtResource("4_uk570")
 expand_mode = 1
 
-[node name="CounterMoeda" type="Label" parent="Moedas"]
+[node name="CounterMoeda" type="Label" parent="Corpo/Moedas"]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(160, 0)
 layout_mode = 1
@@ -231,7 +234,7 @@ label_settings = SubResource("LabelSettings_yixhe")
 horizontal_alignment = 2
 vertical_alignment = 1
 
-[node name="AvisoSave" type="RichTextLabel" parent="."]
+[node name="AvisoSave" type="RichTextLabel" parent="Corpo"]
 unique_name_in_owner = true
 self_modulate = Color(1, 1, 1, 0)
 layout_mode = 1
@@ -251,7 +254,7 @@ theme_override_font_sizes/normal_font_size = 40
 text = "Salvando..."
 horizontal_alignment = 2
 
-[node name="Pause" type="Panel" parent="."]
+[node name="Pause" type="Panel" parent="Corpo"]
 unique_name_in_owner = true
 z_index = -2
 layout_mode = 1
@@ -261,7 +264,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="BG" type="Panel" parent="Pause"]
+[node name="BG" type="Panel" parent="Corpo/Pause"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -276,7 +279,7 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_gppie")
 
-[node name="ContainerMenus" type="MarginContainer" parent="Pause/BG"]
+[node name="ContainerMenus" type="MarginContainer" parent="Corpo/Pause/BG"]
 unique_name_in_owner = true
 layout_mode = 1
 anchors_preset = 15
@@ -289,16 +292,16 @@ theme_override_constants/margin_top = 50
 theme_override_constants/margin_right = 50
 theme_override_constants/margin_bottom = 50
 
-[node name="Inventario" parent="Pause/BG/ContainerMenus" instance=ExtResource("5_f2wx0")]
+[node name="Inventario" parent="Corpo/Pause/BG/ContainerMenus" instance=ExtResource("5_f2wx0")]
 layout_mode = 2
 
-[node name="Amuletos" parent="Pause/BG/ContainerMenus" instance=ExtResource("6_gppie")]
+[node name="Amuletos" parent="Corpo/Pause/BG/ContainerMenus" instance=ExtResource("6_gppie")]
 layout_mode = 2
 
-[node name="Opcoes" type="Control" parent="Pause/BG/ContainerMenus"]
+[node name="Opcoes" type="Control" parent="Corpo/Pause/BG/ContainerMenus"]
 layout_mode = 2
 
-[node name="Comandos" type="PanelContainer" parent="Pause/BG"]
+[node name="Comandos" type="PanelContainer" parent="Corpo/Pause/BG"]
 visible = false
 layout_mode = 1
 anchors_preset = 3
@@ -314,16 +317,16 @@ grow_horizontal = 0
 grow_vertical = 0
 theme_override_styles/panel = SubResource("StyleBoxFlat_2ptjp")
 
-[node name="HBoxContainer" type="HBoxContainer" parent="Pause/BG/Comandos"]
+[node name="HBoxContainer" type="HBoxContainer" parent="Corpo/Pause/BG/Comandos"]
 layout_mode = 2
 alignment = 1
 
-[node name="Select" type="HBoxContainer" parent="Pause/BG/Comandos/HBoxContainer"]
+[node name="Select" type="HBoxContainer" parent="Corpo/Pause/BG/Comandos/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 1.3
 
-[node name="RichTextLabel" type="RichTextLabel" parent="Pause/BG/Comandos/HBoxContainer/Select"]
+[node name="RichTextLabel" type="RichTextLabel" parent="Corpo/Pause/BG/Comandos/HBoxContainer/Select"]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_font_sizes/normal_font_size = 24
@@ -331,11 +334,11 @@ text = "A - Selecionar"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Voltar" type="HBoxContainer" parent="Pause/BG/Comandos/HBoxContainer"]
+[node name="Voltar" type="HBoxContainer" parent="Corpo/Pause/BG/Comandos/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="RichTextLabel" type="RichTextLabel" parent="Pause/BG/Comandos/HBoxContainer/Voltar"]
+[node name="RichTextLabel" type="RichTextLabel" parent="Corpo/Pause/BG/Comandos/HBoxContainer/Voltar"]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_font_sizes/normal_font_size = 24
@@ -343,11 +346,11 @@ text = "= - Voltar"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Sair" type="HBoxContainer" parent="Pause/BG/Comandos/HBoxContainer"]
+[node name="Sair" type="HBoxContainer" parent="Corpo/Pause/BG/Comandos/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="RichTextLabel" type="RichTextLabel" parent="Pause/BG/Comandos/HBoxContainer/Sair"]
+[node name="RichTextLabel" type="RichTextLabel" parent="Corpo/Pause/BG/Comandos/HBoxContainer/Sair"]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_font_sizes/normal_font_size = 24
@@ -355,7 +358,7 @@ text = "B - Sair"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Abas" type="PanelContainer" parent="Pause/BG"]
+[node name="Abas" type="PanelContainer" parent="Corpo/Pause/BG"]
 clip_children = 1
 layout_mode = 1
 anchors_preset = 5
@@ -368,13 +371,13 @@ offset_bottom = 46.0
 grow_horizontal = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_2ptjp")
 
-[node name="ContainerAbas" type="HBoxContainer" parent="Pause/BG/Abas"]
+[node name="ContainerAbas" type="HBoxContainer" parent="Corpo/Pause/BG/Abas"]
 unique_name_in_owner = true
 layout_mode = 2
 theme_override_constants/separation = 0
 alignment = 1
 
-[node name="Itens" type="Button" parent="Pause/BG/Abas/ContainerAbas"]
+[node name="Itens" type="Button" parent="Corpo/Pause/BG/Abas/ContainerAbas"]
 layout_mode = 2
 size_flags_horizontal = 3
 focus_mode = 0
@@ -386,7 +389,7 @@ toggle_mode = true
 button_group = SubResource("ButtonGroup_f2wx0")
 text = "Inventário"
 
-[node name="Amuletos" type="Button" parent="Pause/BG/Abas/ContainerAbas"]
+[node name="Amuletos" type="Button" parent="Corpo/Pause/BG/Abas/ContainerAbas"]
 layout_mode = 2
 size_flags_horizontal = 3
 focus_mode = 0
@@ -398,7 +401,7 @@ toggle_mode = true
 button_group = SubResource("ButtonGroup_f2wx0")
 text = "Amuletos"
 
-[node name="Opcoes" type="Button" parent="Pause/BG/Abas/ContainerAbas"]
+[node name="Opcoes" type="Button" parent="Corpo/Pause/BG/Abas/ContainerAbas"]
 layout_mode = 2
 size_flags_horizontal = 3
 focus_mode = 0
@@ -410,7 +413,7 @@ toggle_mode = true
 button_group = SubResource("ButtonGroup_f2wx0")
 text = "Opções"
 
-[node name="AvisoItem" type="PanelContainer" parent="."]
+[node name="AvisoItem" type="PanelContainer" parent="Corpo"]
 unique_name_in_owner = true
 visible = false
 layout_mode = 1
@@ -427,11 +430,11 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_f2wx0")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="AvisoItem"]
+[node name="VBoxContainer" type="VBoxContainer" parent="Corpo/AvisoItem"]
 layout_mode = 2
 alignment = 1
 
-[node name="NomeItemAviso" type="RichTextLabel" parent="AvisoItem/VBoxContainer"]
+[node name="NomeItemAviso" type="RichTextLabel" parent="Corpo/AvisoItem/VBoxContainer"]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_vertical = 3
@@ -440,14 +443,14 @@ text = "Nome Item"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="ImgItemAviso" type="TextureRect" parent="AvisoItem/VBoxContainer"]
+[node name="ImgItemAviso" type="TextureRect" parent="Corpo/AvisoItem/VBoxContainer"]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(256, 256)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 3
 
-[node name="DescItemAviso" type="RichTextLabel" parent="AvisoItem/VBoxContainer"]
+[node name="DescItemAviso" type="RichTextLabel" parent="Corpo/AvisoItem/VBoxContainer"]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_vertical = 3
@@ -456,7 +459,7 @@ text = "Descrição Item"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Anim" type="AnimationPlayer" parent="."]
+[node name="Anim" type="AnimationPlayer" parent="Corpo"]
 unique_name_in_owner = true
 libraries = {
 &"": SubResource("AnimationLibrary_f2wx0")

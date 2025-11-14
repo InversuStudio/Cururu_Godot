@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=4 uid="uid://ctta1hdr8ocdq"]
+[gd_scene load_steps=12 format=4 uid="uid://ctta1hdr8ocdq"]
 
 [ext_resource type="PackedScene" uid="uid://nohq28uk7lfk" path="res://Objetos/Entidades/Player.tscn" id="1_usrra"]
 [ext_resource type="Texture2D" uid="uid://c374cwih425cq" path="res://Sprites/Cenário/Tilemaps/Base.png" id="2_qebi2"]
@@ -6,7 +6,6 @@
 [ext_resource type="Script" uid="uid://8umksf8e80fw" path="res://addons/phantom_camera/scripts/resources/tween_resource.gd" id="5_lseys"]
 [ext_resource type="Script" uid="uid://bd046eokvcnu2" path="res://addons/phantom_camera/scripts/phantom_camera_host/phantom_camera_host.gd" id="6_hqvp8"]
 [ext_resource type="PackedScene" uid="uid://1apfpwlqocxn" path="res://Objetos/Funcionalidade/TransicaoFase.tscn" id="7_w1p45"]
-[ext_resource type="PackedScene" uid="uid://bs5i45df7rwnf" path="res://UI/HUD.tscn" id="8_lseys"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_brlxw"]
 size = Vector2(3322, 6241)
@@ -221,11 +220,3 @@ shape = SubResource("RectangleShape2D_bt7f3")
 
 [node name="Node2D" type="Node2D" parent="."]
 position = Vector2(2616, 1285)
-
-[node name="UIGAME" type="CanvasLayer" parent="."]
-
-[node name="HUD" parent="UIGAME" instance=ExtResource("8_lseys")]
-offset_left = -6.0
-offset_top = -2.0
-offset_right = -6.0
-offset_bottom = -2.0

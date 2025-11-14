@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=4 uid="uid://vvj50hvchkhj"]
+[gd_scene load_steps=14 format=4 uid="uid://vvj50hvchkhj"]
 
 [ext_resource type="PackedScene" uid="uid://1apfpwlqocxn" path="res://Objetos/Funcionalidade/TransicaoFase.tscn" id="1_5f3ns"]
 [ext_resource type="Texture2D" uid="uid://c374cwih425cq" path="res://Sprites/Cenário/Tilemaps/Base.png" id="2_axx3v"]
@@ -8,7 +8,6 @@
 [ext_resource type="Script" uid="uid://bd046eokvcnu2" path="res://addons/phantom_camera/scripts/phantom_camera_host/phantom_camera_host.gd" id="6_5f3ns"]
 [ext_resource type="PackedScene" uid="uid://bu62qgilsxetf" path="res://Objetos/Entidades/Escorpiao.tscn" id="7_awfgj"]
 [ext_resource type="PackedScene" uid="uid://bjvnm0aydr0vd" path="res://Objetos/Entidades/Morcego.tscn" id="8_5f3ns"]
-[ext_resource type="PackedScene" uid="uid://bs5i45df7rwnf" path="res://UI/HUD.tscn" id="10_ynw3k"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_adag1"]
 size = Vector2(7035.5, 3181)
@@ -241,11 +240,3 @@ position = Vector2(1317, -2128)
 
 [node name="Node2D" type="Node2D" parent="."]
 position = Vector2(435, -1796)
-
-[node name="UIGAME" type="CanvasLayer" parent="."]
-
-[node name="HUD" parent="UIGAME" instance=ExtResource("10_ynw3k")]
-offset_left = -6.0
-offset_top = -2.0
-offset_right = -6.0
-offset_bottom = -2.0

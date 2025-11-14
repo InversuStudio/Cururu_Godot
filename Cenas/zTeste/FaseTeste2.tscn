@@ -1,8 +1,7 @@
-[gd_scene load_steps=20 format=4 uid="uid://jgubb6mfikfv"]
+[gd_scene load_steps=19 format=4 uid="uid://jgubb6mfikfv"]
 
 [ext_resource type="Texture2D" uid="uid://c374cwih425cq" path="res://Sprites/Cenário/Tilemaps/Base.png" id="1_qgc5v"]
 [ext_resource type="PackedScene" uid="uid://nohq28uk7lfk" path="res://Objetos/Entidades/Player.tscn" id="2_01inf"]
-[ext_resource type="PackedScene" uid="uid://bs5i45df7rwnf" path="res://UI/HUD.tscn" id="3_kppoi"]
 [ext_resource type="PackedScene" uid="uid://dbp8j3rqvdpna" path="res://Objetos/Funcionalidade/CompSecret.tscn" id="5_f7bsu"]
 [ext_resource type="PackedScene" uid="uid://1apfpwlqocxn" path="res://Objetos/Funcionalidade/TransicaoFase.tscn" id="6_sf0m0"]
 [ext_resource type="PackedScene" uid="uid://b0hyovdafhkyk" path="res://Objetos/Funcionalidade/TransicaoCamera.tscn" id="7_pgu41"]
@@ -57,10 +56,6 @@ tile_map_data = PackedByteArray("AADh//r/AAABAAAAAADh//v/AAABAAAAAADh//z/AAABAAA
 tile_set = SubResource("TileSet_l7pwf")
 
 [node name="Player" parent="." instance=ExtResource("2_01inf")]
-
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
-
-[node name="HUD" parent="CanvasLayer" instance=ExtResource("3_kppoi")]
 
 [node name="AreaSecreta" parent="." node_paths=PackedStringArray("area_escondida") instance=ExtResource("5_f7bsu")]
 position = Vector2(-2952, 0)

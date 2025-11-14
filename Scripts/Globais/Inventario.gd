@@ -70,11 +70,11 @@ func RemoveItem(id:int) -> void:
 	del_item.emit(id)
 	
 
-func AddAmuleto(amuleto:String) -> void:
+func AddAmuleto(amuleto:String, ativo:bool = true) -> void:
 	for a:Array in amuletos:
 		if a.has(amuleto): return
 	
-	amuletos.append([amuleto, true])
+	amuletos.append([amuleto, ativo])
 	add_amuleto.emit(amuleto)
 
 func SetAmuleto(amuleto:String) -> bool:

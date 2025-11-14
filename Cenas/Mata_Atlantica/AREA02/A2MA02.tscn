@@ -1,4 +1,4 @@
-[gd_scene load_steps=36 format=4 uid="uid://chmrn5p1wbo0m"]
+[gd_scene load_steps=35 format=4 uid="uid://chmrn5p1wbo0m"]
 
 [ext_resource type="Texture2D" uid="uid://cqu5scrrmr5n5" path="res://Sprites/Cenário/Mata_Atlantica/Background/FUNDOCEU.png" id="1_dk80r"]
 [ext_resource type="Texture2D" uid="uid://c374cwih425cq" path="res://Sprites/Cenário/Tilemaps/Base.png" id="1_swhqk"]
@@ -9,7 +9,6 @@
 [ext_resource type="Texture2D" uid="uid://dphhlbwaebgco" path="res://Sprites/Cenário/Mata_Atlantica/Background/composição.png" id="5_b78wb"]
 [ext_resource type="PackedScene" uid="uid://1apfpwlqocxn" path="res://Objetos/Funcionalidade/TransicaoFase.tscn" id="5_fwuoy"]
 [ext_resource type="Texture2D" uid="uid://dmh8fodubelsr" path="res://Sprites/Cenário/Mata_Atlantica/Background/FUNDONEVOA.png" id="6_lj4g0"]
-[ext_resource type="PackedScene" uid="uid://bs5i45df7rwnf" path="res://UI/HUD.tscn" id="6_nrtn1"]
 [ext_resource type="Texture2D" uid="uid://ctar30vsktrrb" path="res://Sprites/Cenário/Mata_Atlantica/Background/FUNDONEVOA2.png" id="7_jb1wv"]
 [ext_resource type="Script" uid="uid://bhexx6mj1xv3q" path="res://addons/phantom_camera/scripts/phantom_camera/phantom_camera_2d.gd" id="8_bkuxo"]
 [ext_resource type="Script" uid="uid://8umksf8e80fw" path="res://addons/phantom_camera/scripts/resources/tween_resource.gd" id="9_noowx"]
@@ -1086,15 +1085,6 @@ posicao = Vector2(7480, -358)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Transicoes/1-5"]
 shape = SubResource("RectangleShape2D_n0g4c")
-
-[node name="UIGAME" type="CanvasLayer" parent="."]
-
-[node name="HUD" parent="UIGAME" instance=ExtResource("6_nrtn1")]
-offset_left = -6.0
-offset_top = -2.0
-offset_right = -6.0
-offset_bottom = -2.0
-metadata/_edit_use_anchors_ = true
 
 [node name="BGM_Player" type="Node" parent="."]
 script = ExtResource("26_jb1wv")

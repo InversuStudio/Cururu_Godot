@@ -27,7 +27,7 @@ func _ready() -> void:
 	if sprite_normal: texture_normal = sprite_normal
 	if sprite_select: texture_focused = sprite_select
 	focus_entered.connect(func():
-		Mundos.hud.MostraItem(nome_display,
+		HUD.MostraItem(nome_display,
 		desc_item, script_logica.valor_cura))
 
 func UpdateNumItem() -> void:

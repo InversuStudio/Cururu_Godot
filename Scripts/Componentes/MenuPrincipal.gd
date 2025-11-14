@@ -3,11 +3,12 @@ extends Control
 var data:String = ""
 
 func _ready() -> void:
+	await get_tree().physics_frame
 	data = GameData.ChecaData()
 	if data == "":
-		$HBoxContainer/Continuar.disabled = true
-	$HBoxContainer/NovoJogo.grab_focus()
-	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+		%Continuar.disabled = true
+	#Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+	%NovoJogo.grab_focus()
 
 func _on_main_pressed() -> void:
 	# Deleta Save

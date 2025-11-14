@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=4 uid="uid://pia326ptqws0"]
+[gd_scene load_steps=31 format=4 uid="uid://pia326ptqws0"]
 
 [ext_resource type="Texture2D" uid="uid://l6b625ae8udc" path="res://Sprites/Cenário/Mata_Atlantica/Background/BACK.png" id="1_sjad5"]
 [ext_resource type="Texture2D" uid="uid://cov3k8uja4wwj" path="res://Sprites/Cenário/zSem_Uso/PAU_BRASIL.png" id="2_oi0r6"]
@@ -15,7 +15,6 @@
 [ext_resource type="Script" uid="uid://bd046eokvcnu2" path="res://addons/phantom_camera/scripts/phantom_camera_host/phantom_camera_host.gd" id="13_15bf1"]
 [ext_resource type="Script" uid="uid://bhexx6mj1xv3q" path="res://addons/phantom_camera/scripts/phantom_camera/phantom_camera_2d.gd" id="14_jx43u"]
 [ext_resource type="Script" uid="uid://8umksf8e80fw" path="res://addons/phantom_camera/scripts/resources/tween_resource.gd" id="15_4l1mt"]
-[ext_resource type="PackedScene" uid="uid://bs5i45df7rwnf" path="res://UI/HUD.tscn" id="16_cw7w3"]
 [ext_resource type="Texture2D" uid="uid://c3tl3oddronfh" path="res://icon.svg" id="18_xrny1"]
 [ext_resource type="Script" uid="uid://bt5du2sk1ba4i" path="res://Scripts/NPCs/NPC.gd" id="19_qf0e5"]
 [ext_resource type="Resource" uid="uid://cnhau31dn3hpf" path="res://Dialogos/Teste.dialogue" id="20_ts8ms"]
@@ -260,10 +259,6 @@ zoom = Vector2(1.53, 1.53)
 tween_resource = SubResource("Resource_g237d")
 draw_limits = true
 metadata/_custom_type_script = "uid://bhexx6mj1xv3q"
-
-[node name="Interface" type="CanvasLayer" parent="."]
-
-[node name="HUD" parent="Interface" instance=ExtResource("16_cw7w3")]
 
 [node name="NPC" type="Sprite2D" parent="." node_paths=PackedStringArray("interacao")]
 position = Vector2(5064, -480)
