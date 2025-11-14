@@ -13,6 +13,10 @@ var terminou: bool = false
 
 const sfx:AudioStream = preload("res://Audio/SFX/Ataque_Especial.wav")
 
+func _ready() -> void:
+	for c:HitBox in hitboxes:
+		c.connect("hit", Hit.bind(c))
+
 # COMPORTAMENTO AO ENTRAR NO STATE
 func Enter() -> void:
 	print("MAGIA")
@@ -33,9 +37,6 @@ func Exit() -> void:
 	await get_tree().physics_frame
 	if parent.sprite.offset.x != 0.0:
 		parent.sprite.offset.x = 0.0
-	for c:HitBox in hitboxes: #in parent.hitbox_container.get_children():
-		#if c is HitBox:
-		c.connect("hit", Hit.bind(c))
 
 func Update(_delta:float) -> State:
 	if terminou == true:
@@ -71,11 +72,3 @@ func Hit(pos_target:Vector2, hit:HitBox) -> void:
 	hit.CalcPushback(distancia_push, tempo_push, pos_target)
 	if !hit.is_in_group("Special"):
 		GameData.magia_atual += 1
-
-#func UsaMagia() -> void:
-	#var p: Node2D = projetil.instantiate()
-	#p.global_position = %PosTiroMagia.global_position
-	#parent.get_parent().add_child(p)
-	#if parent.hitbox_container.scale.x == -1:
-		#p.sprite.flip_h = true
-		#p.velocidade.x *= -1

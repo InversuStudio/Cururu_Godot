@@ -50,3 +50,4 @@ script = ExtResource("4_w3x0u")
 
 [node name="Timer" type="Timer" parent="."]
 unique_name_in_owner = true
+process_mode = 1

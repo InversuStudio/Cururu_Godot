@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://duccqdglv82tj" path="res://Scripts/Globais/BGM.gd" id="1_704en"]
 
 [node name="BGM_Global" type="AudioStreamPlayer"]
+process_mode = 3
 volume_db = -25.0
 pitch_scale = 0.9
 script = ExtResource("1_704en")

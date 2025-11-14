@@ -8,7 +8,6 @@ var coracoes:Array = []
 const sprite_cheio:Texture2D = preload("res://Sprites/UI/HUD/UIHUD-VIDACHEIA.png")
 const sprite_vazio:Texture2D = preload("res://Sprites/UI/HUD/UIHUD-VIDAVAZIZ.png")
 
-@onready var cena:Node = get_tree().current_scene
 var tela_item_on:bool = false
 
 signal tela_item
@@ -19,18 +18,18 @@ signal tela_item
 # INPUT PAUSE
 func _input(_event: InputEvent) -> void:
 	if Input.is_action_just_pressed("start"):
-		if cena.process_mode == PROCESS_MODE_INHERIT:
+		if !get_tree().paused:
 			%Pause.show()
-			cena.process_mode = Node.PROCESS_MODE_DISABLED
+			get_tree().paused = true
 		else:
-			cena.process_mode = Node.PROCESS_MODE_INHERIT
 			%Pause.hide()
+			get_tree().paused = false
 	
 	if Input.is_action_just_pressed("ui_accept") and tela_item_on:
 		%Anim.play("PegaItemOff")
 		await %Anim.animation_finished
 		tela_item_on = false
-		cena.process_mode = Node.PROCESS_MODE_INHERIT
+		get_tree().paused = false
 		tela_item.emit()
 	
 	if Input.is_action_just_pressed("ui_cancel") and %Pause.visible:
@@ -137,7 +136,8 @@ func AvisoSave() -> void:
 	%Anim.play("JogoSalvo")
 
 func AvisoItem(nome:String, desc:String, img:Texture2D) -> void:
-	cena.set_deferred("process_mode", Node.PROCESS_MODE_DISABLED)
+	get_tree().paused = true
+	#cena.set_deferred("process_mode", Node.PROCESS_MODE_DISABLED)
 	%NomeItemAviso.text = nome
 	%DescItemAviso.text = desc
 	%ImgItemAviso.texture = img
