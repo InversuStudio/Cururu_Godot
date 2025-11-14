@@ -3,6 +3,7 @@ extends State
 @export var chao_state: State = null
 @export var fall_state: State = null
 
+@export var sfx:AudioStream = null
 @export var hitboxes:Array[HitBox] = []
 
 @export_group("Pushback")
@@ -18,12 +19,10 @@ var combo_anim: Array[String] = [
 @onready var combo_limit: int = combo_anim.size() - 1
 var terminou: bool = false
 
-const sfx:AudioStream = preload("res://Audio/SFX/Ataque_Basico.wav")
 
 func _ready() -> void:
 	await get_tree().process_frame
-	for c:HitBox in hitboxes: #in parent.hitbox_container.get_children():
-		#if c is HitBox:
+	for c:HitBox in hitboxes:
 		c.connect("hit", Hit.bind(c))
 
 # COMPORTAMENTO AO ENTRAR NO STATE

@@ -1,4 +1,4 @@
-[gd_scene load_steps=121 format=3 uid="uid://nohq28uk7lfk"]
+[gd_scene load_steps=122 format=3 uid="uid://nohq28uk7lfk"]
 
 [ext_resource type="Script" uid="uid://cfu4ciwll8jcj" path="res://Scripts/Cururu/Cururu.gd" id="1_gwpdq"]
 [ext_resource type="Texture2D" uid="uid://6tjgxsgaflxb" path="res://Sprites/Cururu/Dano/03.png" id="2_0hf88"]
@@ -90,6 +90,7 @@
 [ext_resource type="AudioStream" uid="uid://clarwee0wchnk" path="res://Audio/SFX/CURURU/jump_cururu.mp3" id="80_ny8nr"]
 [ext_resource type="AudioStream" uid="uid://cuyap2xmus3rf" path="res://Audio/SFX/CURURU/dash_cururu.mp3" id="81_2t31h"]
 [ext_resource type="Texture2D" uid="uid://b73nkcosr250e" path="res://Sprites/VFX/Iluminação/LightCururu.png" id="87_0w8y8"]
+[ext_resource type="AudioStream" uid="uid://d4ghkqb2kyw1m" path="res://Audio/SFX/Ataque_Basico.wav" id="90_2t31h"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_ser7u"]
 animations = [{
@@ -1451,6 +1452,7 @@ chao_state = NodePath("../Chao")
 script = ExtResource("55_7uoqt")
 chao_state = NodePath("../Chao")
 fall_state = NodePath("../Fall")
+sfx = ExtResource("90_2t31h")
 hitboxes = [NodePath("../../HitContainer/Melee1"), NodePath("../../HitContainer/Melee2"), NodePath("../../HitContainer/MeleeUp"), NodePath("../../HitContainer/MeleeDown")]
 
 [node name="Special" type="Node" parent="StateMachine" node_paths=PackedStringArray("chao_state", "fall_state", "hitboxes")]

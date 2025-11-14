@@ -87,6 +87,7 @@ func CarregaFase(lugar:NomeFase, detalhado:bool = false,
 	# Espera o frame de física terminar e muda a cena
 	await get_tree().physics_frame
 	get_tree().change_scene_to_file(arquivo_fase[lugar])
+	get_tree().paused = false
 	fase_atual = lugar
 	# Espera um frame de física, para o jogo carregar
 	await get_tree().physics_frame

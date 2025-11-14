@@ -14,6 +14,7 @@ corner_radius_bottom_right = 50
 corner_radius_bottom_left = 50
 
 [node name="Amuletos" type="VBoxContainer"]
+process_mode = 2
 script = ExtResource("1_k4mju")
 
 [node name="Titulo" type="RichTextLabel" parent="."]
