@@ -8,8 +8,6 @@ func _ready() -> void:
 	if Inventario.amuletos[pai.id_inventario][1] == true:
 		%Timer.start(tempo_ate_recuperar)
 	
-	%Timer.start(tempo_ate_recuperar)
-	
 func Logica() -> void:
 	var result:bool = Inventario.SetAmuleto(Inventario.AmuletosString[pai.item])
 	print(result)

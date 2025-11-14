@@ -94,7 +94,7 @@ func Reset() -> void:
 		["RecMagia", true]
 	]
 
-#func _input(_event: InputEvent) -> void:
-	#if Input.is_physical_key_pressed(KEY_KP_0):
-		#AddAmuleto("RecMagia")
-		#AddAmuleto("VelAtaque")
+func _input(_event: InputEvent) -> void:
+	if Input.is_physical_key_pressed(KEY_KP_0):
+		AddAmuleto("RecMagia")
+		AddAmuleto("VelAtaque")
