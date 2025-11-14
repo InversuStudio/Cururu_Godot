@@ -868,10 +868,11 @@ texture = ExtResource("9_ogbcg")
 flip_h = true
 
 [node name="SavePoint" parent="." instance=ExtResource("1_kqyhf")]
-position = Vector2(1258.9995, -1164)
+position = Vector2(1193, -1173)
 
 [node name="Cururu" parent="." instance=ExtResource("6_rp2yr")]
-position = Vector2(1653.0032, -1171.9996)
+z_index = 2
+position = Vector2(1151, -1173)
 scale = Vector2(0.959163, 0.959163)
 
 [node name="Tutorial2" parent="." instance=ExtResource("8_kqyhf")]
@@ -888,7 +889,7 @@ shape = SubResource("RectangleShape2D_td0al")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 physics_interpolation_mode = 1
-position = Vector2(1653.0032, -1510)
+position = Vector2(1461, -1510)
 zoom = Vector2(0.8, 0.8)
 process_callback = 0
 limit_left = 261
@@ -905,7 +906,7 @@ metadata/_custom_type_script = "uid://bd046eokvcnu2"
 
 [node name="PhantomCamera2D" type="Node2D" parent="." node_paths=PackedStringArray("follow_target")]
 top_level = true
-position = Vector2(1653.0032, -1510)
+position = Vector2(1461, -1510)
 script = ExtResource("10_kqyhf")
 priority = 1
 follow_mode = 2

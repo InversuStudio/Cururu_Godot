@@ -451,11 +451,11 @@ position = Vector2(-2841.5713, -1142.5713)
 texture = ExtResource("10_ymck4")
 
 [node name="MoitaTeste5" type="Sprite2D" parent="Cenario/Teto"]
-position = Vector2(-3053.5713, -1126.5713)
+position = Vector2(-3014.5713, -1098.5713)
 texture = ExtResource("10_ymck4")
 
 [node name="MoitaTeste6" type="Sprite2D" parent="Cenario/Teto"]
-position = Vector2(-3251.5713, -1178.5713)
+position = Vector2(-3239.5713, -1125.5713)
 texture = ExtResource("10_ymck4")
 
 [node name="MoitaTeste7" type="Sprite2D" parent="Cenario/Teto"]

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bbrrkirt4gvet"
-path="res://.godot/imported/cipó02.PNG-5946aa2c44f2a0e77f91f2754c02be30.ctex"
+uid="uid://cr1xou4lxgo2n"
+path="res://.godot/imported/SOMBRA.png-e517618a7457cbd7a54e89e94ec60a20.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Cenário/Mata_Atlantica/Interativos/cipó02.PNG"
-dest_files=["res://.godot/imported/cipó02.PNG-5946aa2c44f2a0e77f91f2754c02be30.ctex"]
+source_file="res://Sprites/Cenário/Sertão/Background/SOMBRA.png"
+dest_files=["res://.godot/imported/SOMBRA.png-e517618a7457cbd7a54e89e94ec60a20.ctex"]
 
 [params]
 

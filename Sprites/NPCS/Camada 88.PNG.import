@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bbrrkirt4gvet"
-path="res://.godot/imported/cipó02.PNG-5946aa2c44f2a0e77f91f2754c02be30.ctex"
+uid="uid://bjiauga7scnwt"
+path="res://.godot/imported/Camada 88.PNG-e62074b6d9ee4ab339297191352700bc.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Cenário/Mata_Atlantica/Interativos/cipó02.PNG"
-dest_files=["res://.godot/imported/cipó02.PNG-5946aa2c44f2a0e77f91f2754c02be30.ctex"]
+source_file="res://Sprites/NPCS/Camada 88.PNG"
+dest_files=["res://.godot/imported/Camada 88.PNG-e62074b6d9ee4ab339297191352700bc.ctex"]
 
 [params]
 

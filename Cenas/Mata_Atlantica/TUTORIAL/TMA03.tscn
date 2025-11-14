@@ -1,4 +1,4 @@
-[gd_scene load_steps=44 format=4 uid="uid://nqosq2wj0auk"]
+[gd_scene load_steps=46 format=4 uid="uid://nqosq2wj0auk"]
 
 [ext_resource type="Texture2D" uid="uid://cqu5scrrmr5n5" path="res://Sprites/Cenário/Mata_Atlantica/Background/FUNDOCEU.png" id="1_4e4qg"]
 [ext_resource type="Texture2D" uid="uid://c374cwih425cq" path="res://Sprites/Cenário/Tilemaps/Base.png" id="1_vftmf"]
@@ -14,6 +14,8 @@
 [ext_resource type="Texture2D" uid="uid://rwmi1ggde5dy" path="res://Sprites/VFX/Iluminação/PORTAL.png" id="12_flheb"]
 [ext_resource type="PackedScene" uid="uid://cy10kv6jimfwh" path="res://Objetos/Funcionalidade/CompDestroiPlataforma.tscn" id="13_gcn7v"]
 [ext_resource type="PackedScene" uid="uid://dgfcdht1gifdp" path="res://Objetos/Props/Espinhos.tscn" id="14_od6fv"]
+[ext_resource type="PackedScene" uid="uid://bktu336s6ruri" path="res://Objetos/Props/Moeda.tscn" id="16_bu38j"]
+[ext_resource type="PackedScene" uid="uid://bwln6o0dfc1qi" path="res://Objetos/Inventario/Guarana.tscn" id="17_3t44f"]
 [ext_resource type="PackedScene" uid="uid://dy4duxmhynhha" path="res://Objetos/Props/Parede_Secreta.tscn" id="17_54dor"]
 [ext_resource type="Texture2D" uid="uid://jecy4bfqqqxu" path="res://Sprites/Cenário/Mata_Atlantica/Teto/Moita teste.png" id="17_wfqej"]
 [ext_resource type="Texture2D" uid="uid://cj4rj4oj20ogb" path="res://Sprites/Cenário/Mata_Atlantica/Chao/chap_interno.png" id="20_l7gx4"]
@@ -663,6 +665,7 @@ spawn_points = [NodePath("../../Area2D2"), NodePath("../../Area2D3")]
 
 [node name="Bau" parent="." instance=ExtResource("33_54dor")]
 position = Vector2(-15667, -1278)
+drop_item = Array[PackedScene]([ExtResource("16_bu38j"), ExtResource("17_3t44f")])
 
 [node name="Cururu" parent="." instance=ExtResource("28_yftf5")]
 z_index = 0

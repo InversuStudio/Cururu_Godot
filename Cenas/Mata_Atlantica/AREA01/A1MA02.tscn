@@ -1,4 +1,4 @@
-[gd_scene load_steps=39 format=4 uid="uid://djvuyfef1wujd"]
+[gd_scene load_steps=41 format=4 uid="uid://djvuyfef1wujd"]
 
 [ext_resource type="PackedScene" uid="uid://1apfpwlqocxn" path="res://Objetos/Funcionalidade/TransicaoFase.tscn" id="1_2ybff"]
 [ext_resource type="Script" uid="uid://bhexx6mj1xv3q" path="res://addons/phantom_camera/scripts/phantom_camera/phantom_camera_2d.gd" id="1_g5wd4"]
@@ -32,6 +32,8 @@
 [ext_resource type="Script" uid="uid://dd16yu704x6wt" path="res://Scripts/Componentes/BGM_Player.gd" id="30_78wer"]
 [ext_resource type="AudioStream" uid="uid://c7qftchbhu6xc" path="res://Audio/SFX/AMBIENTE/Musica_Jogo.mp3" id="31_byk7f"]
 [ext_resource type="PackedScene" uid="uid://1fdx2ie24dh8" path="res://Objetos/Props/Bau.tscn" id="32_byk7f"]
+[ext_resource type="PackedScene" uid="uid://dny88hy3w52nm" path="res://Objetos/Props/DropAcai.tscn" id="33_3y27v"]
+[ext_resource type="PackedScene" uid="uid://bktu336s6ruri" path="res://Objetos/Props/Moeda.tscn" id="34_0wiyh"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0syxa"]
 size = Vector2(3705, 6665)
@@ -373,7 +375,8 @@ scale = Vector2(0.90625, 0.55309737)
 texture = ExtResource("8_78wer")
 
 [node name="Moita20" type="Sprite2D" parent="LimiteCamera/background"]
-position = Vector2(1091.5, 572.5)
+z_index = 1
+position = Vector2(1082.5, 633.5)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("7_dyi4w")
 
@@ -506,7 +509,6 @@ position = Vector2(4715, -2002)
 texture = ExtResource("12_emg7a")
 
 [node name="ParedeSecreta" parent="." instance=ExtResource("15_78wer")]
-visible = false
 visibility_layer = 7
 z_index = 1
 position = Vector2(4728, -2544)
@@ -1112,6 +1114,7 @@ position = Vector2(5580, -3700)
 texture = ExtResource("15_sm228")
 
 [node name="MoitaTeste6" type="Sprite2D" parent="Cenario/Teto"]
+z_index = 1
 position = Vector2(5556, -5392)
 texture = ExtResource("15_sm228")
 
@@ -1348,7 +1351,7 @@ flip_h = true
 flip_v = true
 
 [node name="Frontfolha3" type="Sprite2D" parent="Cenario/Foreground"]
-position = Vector2(5986, -5472)
+position = Vector2(5946, -5374)
 scale = Vector2(1.4, 1.4)
 texture = ExtResource("27_61gve")
 flip_v = true
@@ -1370,6 +1373,11 @@ position = Vector2(5456, -3742)
 scale = Vector2(1.4, 1.4)
 texture = ExtResource("27_61gve")
 flip_v = true
+
+[node name="Frontfolha17" type="Sprite2D" parent="Cenario/Foreground"]
+position = Vector2(5702, -4112)
+scale = Vector2(1.4, 1.4)
+texture = ExtResource("27_61gve")
 
 [node name="Frontfolha6" type="Sprite2D" parent="Cenario/Foreground"]
 position = Vector2(6486, -552)
@@ -1393,6 +1401,10 @@ texture = ExtResource("28_441k1")
 
 [node name="Cipó3" type="Sprite2D" parent="Cenario/Foreground"]
 position = Vector2(5220, -3540)
+texture = ExtResource("28_441k1")
+
+[node name="Cipó6" type="Sprite2D" parent="Cenario/Foreground"]
+position = Vector2(5712, -5220)
 texture = ExtResource("28_441k1")
 
 [node name="Cipó4" type="Sprite2D" parent="Cenario/Foreground"]
@@ -1575,3 +1587,5 @@ metadata/_custom_type_script = "uid://dd16yu704x6wt"
 
 [node name="Bau" parent="." instance=ExtResource("32_byk7f")]
 position = Vector2(5065, -2056)
+drop_item = Array[PackedScene]([ExtResource("33_3y27v"), ExtResource("34_0wiyh"), ExtResource("34_0wiyh"), ExtResource("34_0wiyh")])
+multi_drop = true

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bbrrkirt4gvet"
-path="res://.godot/imported/cipó02.PNG-5946aa2c44f2a0e77f91f2754c02be30.ctex"
+uid="uid://d320nxc86x7db"
+path="res://.godot/imported/gralha.PNG-ec46ef3db545df75c9cc0c0e0a2777a0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Cenário/Mata_Atlantica/Interativos/cipó02.PNG"
-dest_files=["res://.godot/imported/cipó02.PNG-5946aa2c44f2a0e77f91f2754c02be30.ctex"]
+source_file="res://Sprites/NPCS/gralha.PNG"
+dest_files=["res://.godot/imported/gralha.PNG-ec46ef3db545df75c9cc0c0e0a2777a0.ctex"]
 
 [params]
 
