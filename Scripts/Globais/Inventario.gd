@@ -91,18 +91,9 @@ func SetAmuleto(amuleto:String) -> bool:
 
 func Reset() -> void:
 	HUD.LimpaInv()
-	await HUD.inv_limpo
-	
 	Inventario.AddItem("Acai", 1)
 	Inventario.AddItem("Guarana", 1)
 	Inventario.AddAmuleto("RecMagia")
-	#inventario = [
-	#["Acai", 1],
-	#["Guarana", 1],
-	#]
-	#amuletos = [
-		#["RecMagia", true]
-	#]
 
 func _input(_event: InputEvent) -> void:
 	if Input.is_physical_key_pressed(KEY_KP_0):
