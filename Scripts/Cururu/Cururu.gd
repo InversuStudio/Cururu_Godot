@@ -134,8 +134,6 @@ func VidaMudou(vida_nova, vida_antiga) -> void:
 # COMPORTAMENTO AO MORRER
 func Morte() -> void:
 	print("MORRI")
-	#await get_tree().physics_frame
 	if await GameData.Load() == false:
-		#GameData.moedas = 0
 		GameData.player_morreu = true
 		Mundos.CarregaFase(Mundos.NomeFase.TUTORIAL_1)

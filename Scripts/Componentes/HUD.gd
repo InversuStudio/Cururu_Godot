@@ -79,8 +79,13 @@ func MostraHUD() -> void:
 func IniciaHUD() -> void:
 	# Se achar Player na cena e não estiver configurado...
 	if Mundos.player and configurado == false:
-		# Adiciona corações na barra de vida
-		var i:int = 1
+		# Remove corações antigos
+		var c:int = %BarraHeart.get_child_count() - 1
+		while c >= 0:
+			%BarraHeart.remove_child(%BarraHeart.get_child(c))
+			c -= 1
+		# Adiciona novos corações na barra de vida
+		var i:int = 0
 		for n:int in GameData.vida_max:
 			AdicionaCoracao(i)
 			i += 1
