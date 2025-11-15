@@ -58,6 +58,8 @@ var peca_coracao:int = 0:
 
 var ataque_anim_speed:float = 1.0
 
+var player_morreu:bool = false
+
 # Instância de controle do arquivo de save
 var config: ConfigFile = ConfigFile.new()
 
@@ -101,7 +103,7 @@ func Load() -> bool:
 		await Fade.terminou
 		
 		vida_max = config.get_value("save", "vida_max")
-		moedas = config.get_value("save", "moedas")
+		moedas = config.get_value("save", "moedas", 0)
 		upgrade_num = config.get_value("save", "upgrades")
 		peca_coracao = config.get_value("save", "peca_coracao")
 		Mundos.pecas_coracao = config.get_value("save", "lista_coracao")

@@ -134,20 +134,8 @@ func VidaMudou(vida_nova, vida_antiga) -> void:
 # COMPORTAMENTO AO MORRER
 func Morte() -> void:
 	print("MORRI")
-	#GameData.vida_atual = vida.vida_max
-	#GameData.magia_atual = magia_max
-	# Inicia Fade Out e espera a animação terminar
-	# Espera o frame de física terminar e muda a cena
-	#get_tree().paused = false
-	#if GameData.ChecaData() != "":
-		#GameData.Load()
-	#else:
-		#GameData.ResetData()
-		#Mundos.CarregaFase(Mundos.NomeFase.TUTORIAL_1)
-		
-	#Fade.FadeOut()
-	#await Fade.terminou
-	await get_tree().physics_frame
+	#await get_tree().physics_frame
 	if await GameData.Load() == false:
+		#GameData.moedas = 0
+		GameData.player_morreu = true
 		Mundos.CarregaFase(Mundos.NomeFase.TUTORIAL_1)
-		GameData.moedas = 0

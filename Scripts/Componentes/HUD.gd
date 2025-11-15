@@ -1,8 +1,5 @@
 extends CanvasLayer
 
-# Recebe se o player morreu
-var player_morreu: bool = false
-
 const sprite_cheio:Texture2D = preload("res://Sprites/UI/HUD/UIHUD-VIDACHEIA.png")
 const sprite_vazio:Texture2D = preload("res://Sprites/UI/HUD/UIHUD-VIDAVAZIZ.png")
 
@@ -97,16 +94,13 @@ func IniciaHUD() -> void:
 # Função para atualizar contador de moedas
 func UpdateMoeda() -> void:
 	# Funciona apenas se o player não estiver morto
-	if !player_morreu:
-		%CounterMoeda.text = str(GameData.moedas)
+	%CounterMoeda.text = str(GameData.moedas)
 
 # Função para alterar valor da barra de vida
 func UpdateVida() -> void:
 	Console._Print("[color=green]VIDA: %s[/color]" % [GameData.vida_atual])
 	for c:TextureRect in %BarraHeart.get_children():
 		c.texture = sprite_cheio if c.get_index() + 1 <= GameData.vida_atual else sprite_vazio
-	if GameData.vida_atual <= 0:
-		player_morreu = true
 
 func AdicionaCoracao(old:int) -> void:
 	if GameData.vida_max > old:
@@ -120,11 +114,10 @@ func AdicionaCoracao(old:int) -> void:
 		%BarraHeart.remove_child(child)
 	
 func UpdateMagia() -> void:
-	if !player_morreu:
-		Console._Print("[color=cyan]MAGIA: %s[/color]" % [GameData.magia_atual])
-		var tween:Tween = get_tree().create_tween()
-		tween.tween_property(%BarraMagia,"value",GameData.magia_atual,.3).set_trans(
-			Tween.TRANS_CUBIC)
+	Console._Print("[color=cyan]MAGIA: %s[/color]" % [GameData.magia_atual])
+	var tween:Tween = get_tree().create_tween()
+	tween.tween_property(%BarraMagia,"value",GameData.magia_atual,.3).set_trans(
+		Tween.TRANS_CUBIC)
 
 func AvisoSave() -> void:
 	%Anim.play("JogoSalvo")

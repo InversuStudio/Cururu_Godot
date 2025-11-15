@@ -89,6 +89,9 @@ func CarregaFase(lugar:NomeFase, detalhado:bool = false,
 	get_tree().change_scene_to_file(arquivo_fase[lugar])
 	get_tree().paused = false
 	fase_atual = lugar
+	if GameData.ChecaData() == "" and GameData.player_morreu:
+		GameData.moedas = 0
+		GameData.player_morreu = false
 	# Espera um frame de física, para o jogo carregar
 	await get_tree().physics_frame
 	# Inicia Fade In
