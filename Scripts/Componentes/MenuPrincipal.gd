@@ -22,7 +22,7 @@ func _on_main_pressed() -> void:
 
 func _on_fase_teste_pressed() -> void:
 	$BtnSFX.play()
-	if GameData.Load():
+	if await GameData.Load():
 		print("Jogo carregado")
 		
 func _on_sair_pressed() -> void:

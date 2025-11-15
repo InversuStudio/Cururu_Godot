@@ -7,15 +7,14 @@ var vida_atual : int = 0
 
 # Sinal emite com 2 valores: vida_antiga, vida_atual
 signal alterou_vida
-signal alterou_vida_max
 
 func _ready() -> void:
 	vida_atual = vida_max
 	if get_parent().is_in_group("Player"):
 		# Conecta sinal de aumentar vida_max
-		GameData.update_vida.connect(func():
+		GameData.update_vida_max.connect(func(_o:int):
 			vida_max = GameData.vida_max
-			alterou_vida_max.emit()
+			#alterou_vida_max.emit()
 			RecebeCura())
 		
 		# Se vida_max não foi configurada, pegar valor próprio

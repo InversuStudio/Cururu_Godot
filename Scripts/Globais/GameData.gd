@@ -22,12 +22,18 @@ var moedas: int = 0:
 		update_moeda.emit()
 		
 # Armazena informações de vida do player
-signal update_vida
+signal update_vida_max
 var vida_max: int = 0:
 	set(valor):
+		var old:int = vida_max
 		vida_max = valor
-		update_vida.emit()
-var vida_atual: int = 0
+		update_vida_max.emit(old)
+
+signal update_vida_atual
+var vida_atual: int = 0:
+	set(valor):
+		vida_atual = valor
+		update_vida_atual.emit()
 
 # Armazena informações da magia do player
 signal update_magia
@@ -71,7 +77,8 @@ func Save() -> void:
 		config.set_value("save", "upgrades", upgrade_num)
 		config.set_value("save", "inventario", Inventario.inventario)
 		config.set_value("save", "amuletos", Inventario.amuletos)
-		config.set_value("save", "peca_coracao", Mundos.pecas_coracao)
+		config.set_value("save", "peca_coracao", peca_coracao)
+		config.set_value("save", "lista_coracao", Mundos.pecas_coracao)
 		# Salva arquivo
 		config.save(OS.get_executable_path().get_base_dir()+"/savedata.cfg")
 		# Lança aviso de save
@@ -88,23 +95,34 @@ func Load() -> bool:
 		fase = config.get_value("save", "fase")
 		posicao = config.get_value("save", "posicao")
 		direcao = config.get_value("save", "direcao")
+		
+		# Carrega o jogo, com os dados certos
+		Mundos.CarregaFase(fase, true, posicao, direcao)
+		await Fade.terminou
+		
 		vida_max = config.get_value("save", "vida_max")
 		moedas = config.get_value("save", "moedas")
 		upgrade_num = config.get_value("save", "upgrades")
-		var inv:Array = config.get_value("save", "inventario")
+		peca_coracao = config.get_value("save", "peca_coracao")
+		Mundos.pecas_coracao = config.get_value("save", "lista_coracao")
+		
+		HUD.LimpaInv()
+		
+		var inv:Array[Array] = config.get_value("save", "inventario")
 		for i:Array in inv:
 			Inventario.AddItem(i[0], i[1])
-		var am:Array = config.get_value("save", "amuletos")
+		
+		var am:Array[Array] = config.get_value("save", "amuletos")
 		for a:Array in am:
+			print(a)
 			Inventario.AddAmuleto(a[0], a[1])
-		Mundos.pecas_coracao = config.get_value("save", "peca_coracao")
-		# Carrega o jogo, com os dados certos
-		Mundos.CarregaFase(fase, true, posicao, direcao)
+		
 		if vida_max > 0:
 			vida_atual = vida_max
 		if magia_max > 0:
 			magia_atual = magia_max
 		return true
+	printerr("SAVE NÃO ENCONTRADO")
 	return false
 
 # FUNÇÃO QUE CHECA SE SAVE EXISTE
@@ -116,19 +134,21 @@ func ChecaData() -> String:
 	return ""
 	
 const player:PackedScene = preload("res://Objetos/Entidades/Player.tscn")
+
 func ResetData() -> void:
+	HUD.configurado = false
+	Inventario.Reset()
+	
 	var p:CharacterBody2D = player.instantiate()
 	vida_max = p.vida.vida_max
 	vida_atual = vida_max
 	magia_max = p.magia_max
 	magia_atual = magia_max
 	p.queue_free()
-	#if vida_max != 0: vida_atual = vida_max
-	#if magia_max != 0: magia_atual = magia_max
+	
 	moedas = 0
 	direcao = false
 	veio_de_baixo = false
 	upgrade_num = 0
 	for peca:bool in peca_coracao:
 		peca_coracao = false
-	Inventario.Reset()

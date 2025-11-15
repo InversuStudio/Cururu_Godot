@@ -38,26 +38,23 @@ func MostraItem(nome:String, desc:String, cura:int = 0, sprite:Texture2D = null)
 		img.size_flags_vertical = Control.SIZE_SHRINK_CENTER
 		%NumCura.add_child(img)
 
-# FUNÇÃO DE ADICIONAR ITEM
-func AddItem(item:String, novo_item:bool) -> void:
-	# Se for um item novo que não estava no inventário...
-	if novo_item:
-		# ...o adiciona.
+# FUNÇÃO DE ADICIONAR ITENS
+func AddItem(item:String, num:int) -> void:
+	var item_novo:bool = true
+	var node_itm:ItemInventario = null
+	for itm:ItemInventario in %Inv.get_children():
+		if item == Inventario.ItensString[itm.item]:
+			item_novo = false
+			node_itm = itm
+			break
+	
+	if item_novo:
 		var itm:ItemInventario = Inventario.lista_itens[item].instantiate()
 		itm.id_inventario = %Inv.get_child_count()
+		itm.num_item = num
 		%Inv.add_child(itm)
-	# Se não for novo...
 	else:
-		# ...encontra o item no inventário...
-		var itm:ItemInventario = null
-		for c:ItemInventario in %Inv.get_children():
-			if item == Inventario.ItensString[c.item]:
-				itm = c
-				break
-		# ...e sobe seu número.
-		if itm:
-			itm.num_item += 1
-			itm.UpdateNumItem()
+		node_itm.num_item += num
 
 # FUNÇÃO DE REMOVER ITEM
 func DelItem(id:int) -> void:
@@ -80,6 +77,8 @@ func DelItem(id:int) -> void:
 		elif %Inv.get_child(id + 1):
 			%Inv.get_child(id + 1).grab_focus()
 
-#func LoadInv() -> void:
-	#for a:Array in Inventario.inventario:
-		#AddItem()
+func LimpaInv() -> void:
+	var n:int = %Inv.get_child_count() - 1
+	while n >= 0:
+		%Inv.remove_child(%Inv.get_child(n))
+		n -= 1

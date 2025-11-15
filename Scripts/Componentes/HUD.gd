@@ -2,7 +2,6 @@ extends CanvasLayer
 
 # Recebe se o player morreu
 var player_morreu: bool = false
-#var coracoes:Array = []
 
 const sprite_cheio:Texture2D = preload("res://Sprites/UI/HUD/UIHUD-VIDACHEIA.png")
 const sprite_vazio:Texture2D = preload("res://Sprites/UI/HUD/UIHUD-VIDAVAZIZ.png")
@@ -51,7 +50,8 @@ func _input(_event: InputEvent) -> void:
 func _ready() -> void:
 	# Conecta sinais de mudança de valor
 	GameData.connect("update_magia", UpdateMagia)
-	#GameData.connect("update_vida", AdicionaCoracao)
+	GameData.connect("update_vida_max", AdicionaCoracao)
+	GameData.connect("update_vida_atual", UpdateVida)
 	GameData.connect("update_moeda", UpdateMoeda)
 	Mundos.connect("fase_mudou", MostraHUD)
 	# Organiza visibilidade das abas
@@ -80,22 +80,19 @@ func MostraHUD() -> void:
 
 # FUNÇÃO PARA ATUALIZAR O HUD PELA PRIMEIRA VEZ
 func IniciaHUD() -> void:
-	# Se achar Player na cena...
-	if Mundos.player:
-		# Conecta sinal de dano, cura e morte
-		Mundos.player.vida.connect("alterou_vida", UpdateVida)
-		Mundos.player.vida.connect("alterou_vida_max", AdicionaCoracao)
-		# Se ainda não estiver configurado
-		if configurado == false:
-			# Adiciona corações na barra de vida
-			for n:int in GameData.vida_max:
-				AdicionaCoracao()
-			# Inicializa valores
-			%BarraMagia.max_value = GameData.magia_max
-			%BarraMagia.value = GameData.magia_atual
-			UpdateMoeda()
-			# Marca como configurado
-			configurado = true
+	# Se achar Player na cena e não estiver configurado...
+	if Mundos.player and configurado == false:
+		# Adiciona corações na barra de vida
+		var i:int = 1
+		for n:int in GameData.vida_max:
+			AdicionaCoracao(i)
+			i += 1
+		# Inicializa valores
+		%BarraMagia.max_value = GameData.magia_max
+		%BarraMagia.value = GameData.magia_atual
+		UpdateMoeda()
+		# Marca como configurado
+		configurado = true
 
 # Função para atualizar contador de moedas
 func UpdateMoeda() -> void:
@@ -104,21 +101,23 @@ func UpdateMoeda() -> void:
 		%CounterMoeda.text = str(GameData.moedas)
 
 # Função para alterar valor da barra de vida
-func UpdateVida(vida_nova:int, _vida_antiga:int) -> void:
-	await get_tree().physics_frame
+func UpdateVida() -> void:
 	Console._Print("[color=green]VIDA: %s[/color]" % [GameData.vida_atual])
-	for c:TextureRect in %BarraHeart.get_children():#coracoes:
-		c.texture = sprite_cheio if c.get_index() + 1 <= vida_nova else sprite_vazio
-	if vida_nova <= 0:
+	for c:TextureRect in %BarraHeart.get_children():
+		c.texture = sprite_cheio if c.get_index() + 1 <= GameData.vida_atual else sprite_vazio
+	if GameData.vida_atual <= 0:
 		player_morreu = true
 
-func AdicionaCoracao() -> void:
-	print("AYYY MI CORAZÓN")
-	var coracao:TextureRect = TextureRect.new()
-	coracao.custom_minimum_size = Vector2(50.0, 50.0)
-	coracao.texture = sprite_cheio
-	%BarraHeart.add_child(coracao)
-	#coracoes.append(coracao)
+func AdicionaCoracao(old:int) -> void:
+	if GameData.vida_max > old:
+		var coracao:TextureRect = TextureRect.new()
+		coracao.custom_minimum_size = Vector2(50.0, 50.0)
+		coracao.texture = sprite_cheio
+		%BarraHeart.add_child(coracao)
+		
+	elif GameData.vida_max < old:
+		var child:Node = %BarraHeart.get_child(%BarraHeart.get_child_count() - 1)
+		%BarraHeart.remove_child(child)
 	
 func UpdateMagia() -> void:
 	if !player_morreu:
@@ -143,5 +142,11 @@ func AvisoItem(nome:String, desc:String, img:Texture2D) -> void:
 func MostraItem(nome:String, desc:String, cura:int = 0) -> void:
 	inventario_itens.MostraItem(nome, desc, cura, sprite_cheio)
 
+# MOSTRA AMULETOS DO INVENTÁRIO
 func MostraAmuleto(nome:String, desc:String) -> void:
 	inventario_amuletos.MostraAmuleto(nome, desc)
+
+# DELETA TODOS OS ITENS DA UI INVENTÁRIO
+func LimpaInv() -> void:
+	inventario_itens.LimpaInv()
+	inventario_amuletos.LimpaAm()

@@ -265,6 +265,8 @@ position = Vector2(3699, -463)
 [node name="DropAmVelAtaque2" parent="Props" instance=ExtResource("16_der3i")]
 position = Vector2(3907, -463)
 tipo_item = 1
+nome_tela = "O outro cara"
+descricao_tela = "Não se importa muito com ele"
 
 [node name="LimitCamera" type="StaticBody2D" parent="."]
 collision_layer = 0

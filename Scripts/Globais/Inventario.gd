@@ -47,7 +47,7 @@ func AddItem(item:String, num:int = 1) -> void:
 	if inventario.size() >= 15:
 		Console._Print("[color=orange][b]INVENTÁRIO CHEIO[/b][/color]")
 		return
-		
+	
 	var tem_item:bool = false
 	var itm_id:int = 0
 	for i:Array in inventario:
@@ -55,13 +55,14 @@ func AddItem(item:String, num:int = 1) -> void:
 			tem_item = true
 			break
 		itm_id += 1
-			
-	if tem_item:
-		inventario[itm_id][1] += 1
-		add_item.emit(item, false)
-	else:
+	
+	if tem_item == false:
 		inventario.append([item, num])
-		add_item.emit(item, true)
+
+	else:
+		inventario[itm_id][1] += num
+
+	add_item.emit(item, num)
 
 func RemoveItem(id:int) -> void:
 	inventario[id][1] -= 1
@@ -71,10 +72,13 @@ func RemoveItem(id:int) -> void:
 	
 
 func AddAmuleto(amuleto:String, ativo:bool = true) -> void:
+	var tem:bool = false
 	for a:Array in amuletos:
-		if a.has(amuleto): return
+		if a.has(amuleto): tem = true
 	
-	amuletos.append([amuleto, ativo])
+	if tem == false:
+		amuletos.append([amuleto, ativo])
+		
 	add_amuleto.emit(amuleto)
 
 func SetAmuleto(amuleto:String) -> bool:
@@ -86,15 +90,22 @@ func SetAmuleto(amuleto:String) -> bool:
 	return false
 
 func Reset() -> void:
-	inventario = [
-	["Acai", 1],
-	["Guarana", 1],
-	]
-	amuletos = [
-		["RecMagia", true]
-	]
+	HUD.LimpaInv()
+	await HUD.inv_limpo
+	
+	Inventario.AddItem("Acai", 1)
+	Inventario.AddItem("Guarana", 1)
+	Inventario.AddAmuleto("RecMagia")
+	#inventario = [
+	#["Acai", 1],
+	#["Guarana", 1],
+	#]
+	#amuletos = [
+		#["RecMagia", true]
+	#]
 
 func _input(_event: InputEvent) -> void:
 	if Input.is_physical_key_pressed(KEY_KP_0):
-		AddAmuleto("RecMagia")
+		AddAmuleto("RecMagia", false)
 		AddAmuleto("VelAtaque")
+		AddItem("Acai", 5)

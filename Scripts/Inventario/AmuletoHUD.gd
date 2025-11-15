@@ -29,6 +29,16 @@ func MostraAmuleto(nome:String, desc:String) -> void:
 
 # FUNÇÃO DE ADICIONAR ITEM
 func AddAmuleto(item:String) -> void:
+	for am:Amuleto in %Inv.get_children():
+		if am.item == Inventario.Amuletos[item]:
+			return
+			
 	var itm:Amuleto = Inventario.lista_amuletos[item].instantiate()
 	itm.id_inventario = %Inv.get_child_count()
 	%Inv.add_child(itm)
+
+func LimpaAm() -> void:
+	var n:int = %Inv.get_child_count() - 1
+	while n >= 0:
+		%Inv.remove_child(%Inv.get_child(n))
+		n -= 1

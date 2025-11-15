@@ -10,7 +10,6 @@ func _ready() -> void:
 	
 func Logica() -> void:
 	var result:bool = Inventario.SetAmuleto(Inventario.AmuletosString[pai.item])
-	print(result)
 	if result: %Timer.start()
 	else: %Timer.stop()
 
