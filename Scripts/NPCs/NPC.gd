@@ -3,7 +3,7 @@ extends InteractObject
 @export var arquivo_dialogo: DialogueResource = null
 @export var dialogue_start: String = "start"
 @export var interacao: Interacao = null
-var balao = preload("res://Dialogos/balloon.tscn")
+var balao = preload("res://Dialogos/BalaoFala.tscn")
 var falando:bool = false
 
 func _ready() -> void:
@@ -17,9 +17,7 @@ func Interact(player:CharacterBody2D) -> void:
 	player.input_move = 0.0
 	player.velocity.x = 0.0
 	player.pode_mover = false
-	var b = balao.instantiate()
-	get_tree().current_scene.add_child(b)
-	b.start(arquivo_dialogo, dialogue_start)
+	DialogueManager.show_dialogue_balloon_scene(balao, arquivo_dialogo, dialogue_start)
 
 func PodeInteragir(_res:DialogueResource) -> void:
 	%Texto.show()

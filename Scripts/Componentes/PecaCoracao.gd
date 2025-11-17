@@ -20,7 +20,7 @@ func _on_body_entered(body: Node2D) -> void:
 		Mundos.pecas_coracao[id] = true
 		GameData.peca_coracao += 1
 		# Lança aviso
-		HUD.AvisoItem(nome_tela, descricao_tela, imagem_tela)
+		AvisoItem.Mostra(nome_tela, descricao_tela, imagem_tela)
 		# Deleta
 		queue_free()
 

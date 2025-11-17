@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://bs5i45df7rwnf"]
+[gd_scene load_steps=20 format=3 uid="uid://bs5i45df7rwnf"]
 
 [ext_resource type="Script" uid="uid://dg1wm8v16vrwl" path="res://Scripts/Componentes/HUD.gd" id="1_yixhe"]
 [ext_resource type="Texture2D" uid="uid://dbohcm7v5pvg4" path="res://Sprites/UI/HUD/UIHUD-MAGIA.png" id="2_f2wx0"]
@@ -6,6 +6,8 @@
 [ext_resource type="Texture2D" uid="uid://8tc3pgq3fdi8" path="res://Sprites/UI/HUD/UIHUD-MAGIABK.png" id="5_2ptjp"]
 [ext_resource type="PackedScene" uid="uid://kuarj30f8veq" path="res://UI/Inventario.tscn" id="5_f2wx0"]
 [ext_resource type="PackedScene" uid="uid://ddf8xx25186i" path="res://UI/Amuletos.tscn" id="6_gppie"]
+[ext_resource type="Texture2D" uid="uid://5n8owka562ts" path="res://Sprites/zWIP/CURURU-WIP-1.jpeg" id="7_2ptjp"]
+[ext_resource type="Texture2D" uid="uid://cvcoor8cji7w4" path="res://Sprites/zWIP/CURURU-WIP-2.jpeg" id="7_md4fy"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4n7mi"]
 
@@ -44,17 +46,6 @@ bg_color = Color(0.21960784, 0.4627451, 0.2784314, 1)
 
 [sub_resource type="ButtonGroup" id="ButtonGroup_f2wx0"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_f2wx0"]
-bg_color = Color(0.52615464, 0.6312332, 0.5591119, 1)
-border_width_left = 20
-border_width_top = 20
-border_width_right = 20
-border_width_bottom = 20
-corner_radius_top_left = 50
-corner_radius_top_right = 50
-corner_radius_bottom_right = 50
-corner_radius_bottom_left = 50
-
 [sub_resource type="Animation" id="Animation_4n7mi"]
 resource_name = "JogoSalvo"
 length = 2.0
@@ -71,38 +62,6 @@ tracks/0/keys = {
 "values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
 }
 
-[sub_resource type="Animation" id="Animation_gppie"]
-resource_name = "PegaItemOff"
-length = 0.5
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("AvisoItem:modulate")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.5),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
-}
-
-[sub_resource type="Animation" id="Animation_f2wx0"]
-resource_name = "PegaItemOn"
-length = 0.5
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("AvisoItem:modulate")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.5),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
-}
-
 [sub_resource type="Animation" id="Animation_uk570"]
 length = 0.001
 tracks/0/type = "value"
@@ -117,24 +76,10 @@ tracks/0/keys = {
 "update": 0,
 "values": [Color(1, 1, 1, 0)]
 }
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("AvisoItem:modulate")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(1, 1, 1, 1)]
-}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_f2wx0"]
 _data = {
 &"JogoSalvo": SubResource("Animation_4n7mi"),
-&"PegaItemOff": SubResource("Animation_gppie"),
-&"PegaItemOn": SubResource("Animation_f2wx0"),
 &"RESET": SubResource("Animation_uk570")
 }
 
@@ -298,11 +243,88 @@ layout_mode = 2
 [node name="Amuletos" parent="Corpo/Pause/BG/ContainerMenus" instance=ExtResource("6_gppie")]
 layout_mode = 2
 
-[node name="Opcoes" type="Control" parent="Corpo/Pause/BG/ContainerMenus"]
+[node name="Mapa" type="TextureRect" parent="Corpo/Pause/BG/ContainerMenus"]
+visible = false
 layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("7_2ptjp")
+
+[node name="Opcoes" type="TextureRect" parent="Corpo/Pause/BG/ContainerMenus"]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("7_md4fy")
+
+[node name="Abas" type="PanelContainer" parent="Corpo/Pause/BG"]
+clip_children = 1
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -331.0
+offset_top = -51.0
+offset_right = 331.0
+offset_bottom = 46.0
+grow_horizontal = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_2ptjp")
+
+[node name="ContainerAbas" type="HBoxContainer" parent="Corpo/Pause/BG/Abas"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_constants/separation = 0
+alignment = 1
+
+[node name="Itens" type="Button" parent="Corpo/Pause/BG/Abas/ContainerAbas"]
+layout_mode = 2
+size_flags_horizontal = 3
+focus_mode = 0
+focus_behavior_recursive = 1
+theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = SubResource("StyleBoxFlat_md4fy")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_7i7fj")
+toggle_mode = true
+button_group = SubResource("ButtonGroup_f2wx0")
+text = "Inventário"
+
+[node name="Amuletos" type="Button" parent="Corpo/Pause/BG/Abas/ContainerAbas"]
+layout_mode = 2
+size_flags_horizontal = 3
+focus_mode = 0
+focus_behavior_recursive = 1
+theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = SubResource("StyleBoxFlat_md4fy")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_7i7fj")
+toggle_mode = true
+button_group = SubResource("ButtonGroup_f2wx0")
+text = "Amuletos"
+
+[node name="Mapa" type="Button" parent="Corpo/Pause/BG/Abas/ContainerAbas"]
+layout_mode = 2
+size_flags_horizontal = 3
+focus_mode = 0
+focus_behavior_recursive = 1
+theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = SubResource("StyleBoxFlat_md4fy")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_7i7fj")
+toggle_mode = true
+button_group = SubResource("ButtonGroup_f2wx0")
+text = "Mapa"
+
+[node name="Opcoes" type="Button" parent="Corpo/Pause/BG/Abas/ContainerAbas"]
+layout_mode = 2
+size_flags_horizontal = 3
+focus_mode = 0
+focus_behavior_recursive = 1
+theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = SubResource("StyleBoxFlat_md4fy")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_7i7fj")
+toggle_mode = true
+button_group = SubResource("ButtonGroup_f2wx0")
+text = "Opções"
 
 [node name="Comandos" type="PanelContainer" parent="Corpo/Pause/BG"]
-visible = false
 layout_mode = 1
 anchors_preset = 3
 anchor_left = 1.0
@@ -358,106 +380,21 @@ text = "B - Sair"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Abas" type="PanelContainer" parent="Corpo/Pause/BG"]
-clip_children = 1
-layout_mode = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -277.0
-offset_top = -51.0
-offset_right = 277.0
-offset_bottom = 46.0
-grow_horizontal = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_2ptjp")
-
-[node name="ContainerAbas" type="HBoxContainer" parent="Corpo/Pause/BG/Abas"]
-unique_name_in_owner = true
-layout_mode = 2
-theme_override_constants/separation = 0
-alignment = 1
-
-[node name="Itens" type="Button" parent="Corpo/Pause/BG/Abas/ContainerAbas"]
-layout_mode = 2
-size_flags_horizontal = 3
-focus_mode = 0
-focus_behavior_recursive = 1
-theme_override_font_sizes/font_size = 24
-theme_override_styles/normal = SubResource("StyleBoxFlat_md4fy")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_7i7fj")
-toggle_mode = true
-button_group = SubResource("ButtonGroup_f2wx0")
-text = "Inventário"
-
-[node name="Amuletos" type="Button" parent="Corpo/Pause/BG/Abas/ContainerAbas"]
-layout_mode = 2
-size_flags_horizontal = 3
-focus_mode = 0
-focus_behavior_recursive = 1
-theme_override_font_sizes/font_size = 24
-theme_override_styles/normal = SubResource("StyleBoxFlat_md4fy")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_7i7fj")
-toggle_mode = true
-button_group = SubResource("ButtonGroup_f2wx0")
-text = "Amuletos"
-
-[node name="Opcoes" type="Button" parent="Corpo/Pause/BG/Abas/ContainerAbas"]
-layout_mode = 2
-size_flags_horizontal = 3
-focus_mode = 0
-focus_behavior_recursive = 1
-theme_override_font_sizes/font_size = 24
-theme_override_styles/normal = SubResource("StyleBoxFlat_md4fy")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_7i7fj")
-toggle_mode = true
-button_group = SubResource("ButtonGroup_f2wx0")
-text = "Opções"
-
-[node name="AvisoItem" type="PanelContainer" parent="Corpo"]
+[node name="MapaSmall" type="PanelContainer" parent="Corpo"]
 unique_name_in_owner = true
 visible = false
 layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -545.0
-offset_top = -308.0
-offset_right = 545.0
-offset_bottom = 308.0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_f2wx0")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Corpo/AvisoItem"]
-layout_mode = 2
-alignment = 1
-
-[node name="NomeItemAviso" type="RichTextLabel" parent="Corpo/AvisoItem/VBoxContainer"]
-unique_name_in_owner = true
-layout_mode = 2
-size_flags_vertical = 3
-theme_override_font_sizes/normal_font_size = 52
-text = "Nome Item"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="ImgItemAviso" type="TextureRect" parent="Corpo/AvisoItem/VBoxContainer"]
-unique_name_in_owner = true
-custom_minimum_size = Vector2(256, 256)
+[node name="MapaImg" type="TextureRect" parent="Corpo/MapaSmall"]
 layout_mode = 2
 size_flags_horizontal = 4
-size_flags_vertical = 3
-
-[node name="DescItemAviso" type="RichTextLabel" parent="Corpo/AvisoItem/VBoxContainer"]
-unique_name_in_owner = true
-layout_mode = 2
-size_flags_vertical = 3
-theme_override_font_sizes/normal_font_size = 52
-text = "Descrição Item"
-horizontal_alignment = 1
-vertical_alignment = 1
+size_flags_vertical = 4
+texture = ExtResource("7_2ptjp")
 
 [node name="Anim" type="AnimationPlayer" parent="Corpo"]
 unique_name_in_owner = true

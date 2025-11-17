@@ -1,8 +1,8 @@
 [gd_scene load_steps=12 format=3 uid="uid://36u4axx0kdfy"]
 
-[ext_resource type="Script" uid="uid://c2ijeforn42qo" path="res://Dialogos/balloon.gd" id="1_36de5"]
-[ext_resource type="PackedScene" uid="uid://ckvgyvclnwggo" path="res://addons/dialogue_manager/dialogue_label.tscn" id="2_a8ve6"]
-[ext_resource type="Script" uid="uid://bb52rsfwhkxbn" path="res://addons/dialogue_manager/dialogue_responses_menu.gd" id="3_72ixx"]
+[ext_resource type="Script" uid="uid://c2ijeforn42qo" path="res://Dialogos/balloon.gd" id="1_w6bav"]
+[ext_resource type="PackedScene" uid="uid://ckvgyvclnwggo" path="res://addons/dialogue_manager/dialogue_label.tscn" id="2_ow0pn"]
+[ext_resource type="Script" uid="uid://bb52rsfwhkxbn" path="res://addons/dialogue_manager/dialogue_responses_menu.gd" id="3_ifi3v"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_spyqn"]
 bg_color = Color(0, 0, 0, 1)
@@ -98,9 +98,8 @@ corner_radius_top_right = 50
 corner_radius_bottom_right = 50
 corner_radius_bottom_left = 50
 
-[node name="ExampleBalloon" type="CanvasLayer"]
-layer = 100
-script = ExtResource("1_36de5")
+[node name="BalaoFala" type="CanvasLayer"]
+script = ExtResource("1_w6bav")
 
 [node name="Balloon" type="Control" parent="."]
 unique_name_in_owner = true
@@ -138,9 +137,11 @@ layout_mode = 2
 [node name="CharacterLabel" type="RichTextLabel" parent="Balloon/MarginContainer/PanelContainer/MarginContainer/VBoxContainer"]
 unique_name_in_owner = true
 layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.5
 mouse_filter = 1
 theme_override_colors/selection_color = Color(0.101960786, 0.9607843, 1, 0.8)
-theme_override_font_sizes/normal_font_size = 100
+theme_override_font_sizes/normal_font_size = 60
 theme_override_font_sizes/bold_font_size = 60
 theme_override_font_sizes/bold_italics_font_size = 60
 theme_override_font_sizes/italics_font_size = 60
@@ -150,7 +151,7 @@ text = "Character"
 scroll_active = false
 horizontal_alignment = 1
 
-[node name="DialogueLabel" parent="Balloon/MarginContainer/PanelContainer/MarginContainer/VBoxContainer" instance=ExtResource("2_a8ve6")]
+[node name="DialogueLabel" parent="Balloon/MarginContainer/PanelContainer/MarginContainer/VBoxContainer" instance=ExtResource("2_ow0pn")]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_vertical = 3
@@ -165,24 +166,22 @@ vertical_alignment = 1
 
 [node name="ResponsesMenu" type="VBoxContainer" parent="Balloon" node_paths=PackedStringArray("response_template")]
 unique_name_in_owner = true
-visible = false
 layout_mode = 1
-anchors_preset = 1
-anchor_left = 1.0
-anchor_right = 1.0
-offset_left = -682.0
-offset_top = 213.0
-offset_right = -101.0
-offset_bottom = 283.0
-grow_horizontal = 0
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 256.0
+offset_top = 395.0
+offset_right = 837.0
+offset_bottom = 465.0
+grow_horizontal = 2
 size_flags_vertical = 8
 theme_override_constants/separation = 2
 alignment = 1
-script = ExtResource("3_72ixx")
+script = ExtResource("3_ifi3v")
 response_template = NodePath("ResponseExample")
 
 [node name="ResponseExample" type="Button" parent="Balloon/ResponsesMenu"]
-visible = false
 layout_mode = 2
 theme_override_font_sizes/font_size = 40
 theme_override_styles/normal = SubResource("StyleBoxFlat_f5qgn")

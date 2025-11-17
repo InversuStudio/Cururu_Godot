@@ -3,33 +3,20 @@ extends CanvasLayer
 const sprite_cheio:Texture2D = preload("res://Sprites/UI/HUD/UIHUD-VIDACHEIA.png")
 const sprite_vazio:Texture2D = preload("res://Sprites/UI/HUD/UIHUD-VIDAVAZIZ.png")
 
-var tela_item_on:bool = false
-
-signal tela_item
-
 @export var inventario_itens:Control = null
 @export var inventario_amuletos:Control = null
 
 var hud_ativo:int = 0
 var configurado:bool = false
 
+var full_mapa:bool = false
+var tempo_mapa:float = 0.0
+
 # INPUT PAUSE
 func _input(_event: InputEvent) -> void:
 	if Input.is_action_just_pressed("start"):
-		if Mundos.player == null or tela_item_on: return
-		if !get_tree().paused:
-			%Pause.show()
-			get_tree().paused = true
-		else:
-			%Pause.hide()
-			get_tree().paused = false
-	
-	if Input.is_action_just_pressed("ui_accept") and tela_item_on:
-		%Anim.play("PegaItemOff")
-		await %Anim.animation_finished
-		tela_item_on = false
-		get_tree().paused = false
-		tela_item.emit()
+		if Mundos.player == null or AvisoItem.ativo: return
+		%Pause.visible = true if %Pause.visible == false else false
 	
 	if Input.is_action_just_pressed("ui_cancel") and %Pause.visible:
 		Mundos.CarregaFase(Mundos.NomeFase.MenuPrincipal)
@@ -43,6 +30,29 @@ func _input(_event: InputEvent) -> void:
 		if hud_ativo - 1 >= 0:
 			hud_ativo -= 1
 			MudaAba()
+	
+	if !Inventario.tem_mapa: return
+	if Input.is_action_just_pressed("select"):
+		full_mapa = true
+	
+	if Input.is_action_just_released("select"):
+		if %MapaSmall.visible:
+			%MapaSmall.hide()
+		elif tempo_mapa < 1.0 and not %Pause.visible:
+			%MapaSmall.show()
+		full_mapa = false
+		tempo_mapa = 0.0
+
+func _process(delta: float) -> void:
+	if full_mapa:
+		tempo_mapa += delta
+		if tempo_mapa >= 1:
+			full_mapa = false
+			tempo_mapa = 0.0
+			hud_ativo = 2
+			MudaAba()
+			%MapaSmall.hide()
+			%Pause.show()
 
 func _ready() -> void:
 	# Conecta sinais de mudança de valor
@@ -51,6 +61,8 @@ func _ready() -> void:
 	GameData.connect("update_vida_atual", UpdateVida)
 	GameData.connect("update_moeda", UpdateMoeda)
 	Mundos.connect("fase_mudou", MostraHUD)
+	%Pause.connect("visibility_changed", func():
+		get_tree().paused = true if %Pause.visible else false)
 	# Organiza visibilidade das abas
 	MudaAba()
 	MostraHUD()
@@ -69,9 +81,10 @@ func MudaAba() -> void:
 
 func MostraHUD() -> void:
 	%Pause.hide()
-	%AvisoItem.modulate.a = 0.0
+	#%AvisoItem.modulate.a = 0.0
+	#%AvisoItem.show()
 	%AvisoSave.self_modulate.a = 0.0
-	%AvisoItem.show()
+	%MapaSmall.hide()
 	if Mundos.player: %Corpo.show()
 	else: %Corpo.hide()
 
@@ -126,15 +139,6 @@ func UpdateMagia() -> void:
 
 func AvisoSave() -> void:
 	%Anim.play("JogoSalvo")
-
-func AvisoItem(nome:String, desc:String, img:Texture2D) -> void:
-	get_tree().paused = true
-	%NomeItemAviso.text = nome
-	%DescItemAviso.text = desc
-	%ImgItemAviso.texture = img
-	%Anim.play("PegaItemOn")
-	await %Anim.animation_finished
-	tela_item_on = true
 
 # MOSTRA ITEM DO INVENTÁRIO
 func MostraItem(nome:String, desc:String, cura:int = 0) -> void:

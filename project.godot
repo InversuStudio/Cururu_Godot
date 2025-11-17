@@ -32,10 +32,12 @@ BGM="*res://Objetos/Funcionalidade/BGM_Global.tscn"
 Fade="*res://Objetos/Funcionalidade/CompFade.tscn"
 Inventario="*res://Scripts/Globais/Inventario.gd"
 HUD="*res://UI/HUD.tscn"
+DialogoCMD="*res://Scripts/Globais/DialogoCMD.gd"
+AvisoItem="*res://UI/AvisoItem.tscn"
 
 [dialogue_manager]
 
-runtime/balloon_path="res://Dialogos/balloon.tscn"
+runtime/balloon_path="res://Dialogos/BalaoFala.tscn"
 
 [display]
 
@@ -63,6 +65,7 @@ folder_colors={
 "res://Sprites/": "yellow",
 "res://Sprites/Cenário/zSem_Uso/": "gray",
 "res://Sprites/zTeste_Parellax/": "gray",
+"res://Sprites/zWIP/": "gray",
 "res://Teste_Script/": "teal",
 "res://UI/": "red"
 }

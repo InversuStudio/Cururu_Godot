@@ -309,7 +309,8 @@ draw_limits = true
 metadata/_custom_type_script = "uid://bhexx6mj1xv3q"
 
 [node name="NPC Basico" parent="." instance=ExtResource("18_bp4ag")]
-position = Vector2(4959, -525)
+position = Vector2(4959, -515)
+dialogue_start = "mapa"
 
 [node name="MainCamera" type="Camera2D" parent="."]
 physics_interpolation_mode = 1

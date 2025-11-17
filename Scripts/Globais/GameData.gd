@@ -81,6 +81,7 @@ func Save() -> void:
 		config.set_value("save", "amuletos", Inventario.amuletos)
 		config.set_value("save", "peca_coracao", peca_coracao)
 		config.set_value("save", "lista_coracao", Mundos.pecas_coracao)
+		config.set_value("save", "tem_mapa", Inventario.tem_mapa)
 		# Salva arquivo
 		config.save(OS.get_executable_path().get_base_dir()+"/savedata.cfg")
 		# Lança aviso de save
@@ -118,6 +119,8 @@ func Load() -> bool:
 		for a:Array in am:
 			print(a)
 			Inventario.AddAmuleto(a[0], a[1])
+		
+		Inventario.tem_mapa = config.get_value("save", "tem_mapa")
 		
 		if vida_max > 0:
 			vida_atual = vida_max

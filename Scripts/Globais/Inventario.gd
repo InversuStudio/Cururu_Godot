@@ -43,6 +43,8 @@ signal set_amuleto
 var inventario:Array[Array] = [] # [nome item, quantidade]
 var amuletos:Array[Array] = [] # [nome amuleto, ativado]
 
+var tem_mapa:bool = false
+
 func AddItem(item:String, num:int = 1) -> void:
 	if inventario.size() >= 15:
 		Console._Print("[color=orange][b]INVENTÁRIO CHEIO[/b][/color]")
