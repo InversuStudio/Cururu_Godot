@@ -1,4 +1,4 @@
-[gd_scene load_steps=45 format=4 uid="uid://nqosq2wj0auk"]
+[gd_scene load_steps=46 format=4 uid="uid://nqosq2wj0auk"]
 
 [ext_resource type="Texture2D" uid="uid://cqu5scrrmr5n5" path="res://Sprites/Cenário/Mata_Atlantica/Background/FUNDOCEU.png" id="1_4e4qg"]
 [ext_resource type="Texture2D" uid="uid://c374cwih425cq" path="res://Sprites/Cenário/Tilemaps/Base.png" id="1_vftmf"]
@@ -18,6 +18,7 @@
 [ext_resource type="PackedScene" uid="uid://dy4duxmhynhha" path="res://Objetos/Props/Parede_Secreta.tscn" id="17_54dor"]
 [ext_resource type="PackedScene" uid="uid://u48tpl3f3l20" path="res://Objetos/Props/DropGuarana.tscn" id="17_bu38j"]
 [ext_resource type="Texture2D" uid="uid://jecy4bfqqqxu" path="res://Sprites/Cenário/Mata_Atlantica/Teto/Moita teste.png" id="17_wfqej"]
+[ext_resource type="PackedScene" uid="uid://dny88hy3w52nm" path="res://Objetos/Props/DropAcai.tscn" id="19_3t44f"]
 [ext_resource type="Texture2D" uid="uid://cj4rj4oj20ogb" path="res://Sprites/Cenário/Mata_Atlantica/Chao/chap_interno.png" id="20_l7gx4"]
 [ext_resource type="PackedScene" uid="uid://bu62qgilsxetf" path="res://Objetos/Entidades/Escorpiao.tscn" id="21_54dor"]
 [ext_resource type="Texture2D" uid="uid://uq6dbjep5wva" path="res://Sprites/Cenário/Mata_Atlantica/Foreground/frontfolha.png" id="23_3qqkp"]
@@ -185,15 +186,15 @@ sources/0 = SubResource("TileSetAtlasSource_gptea")
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yftf5"]
 size = Vector2(155, 626)
 
-[sub_resource type="Resource" id="Resource_rnx0k"]
-script = ExtResource("27_l7gx4")
-duration = 0.0
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rnx0k"]
 size = Vector2(458, 83)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qclta"]
 size = Vector2(459, 28)
+
+[sub_resource type="Resource" id="Resource_3t44f"]
+script = ExtResource("27_l7gx4")
+duration = 0.0
 
 [node name="Tutorial3" type="Node2D"]
 
@@ -214,7 +215,7 @@ texture = ExtResource("1_4e4qg")
 
 [node name="Arvore9" type="Sprite2D" parent="Background"]
 light_mask = 2
-position = Vector2(-2277.194, -1558.242)
+position = Vector2(-2407.7585, -1496.2224)
 scale = Vector2(1.2993542, 2.2724464)
 texture = ExtResource("4_yftf5")
 
@@ -345,13 +346,13 @@ texture = ExtResource("4_yftf5")
 
 [node name="Fundonevoa" type="Sprite2D" parent="Background"]
 light_mask = 2
-position = Vector2(-1498.6432, -372.36395)
-scale = Vector2(3.2276583, 1.400239)
+position = Vector2(-1699.3906, -372.36395)
+scale = Vector2(3.0292914, 1.400239)
 texture = ExtResource("5_l7gx4")
 
 [node name="Arvore6" type="Sprite2D" parent="Background"]
 light_mask = 2
-position = Vector2(-1797.3828, -1598.6487)
+position = Vector2(-1913.9774, -1527.2322)
 scale = Vector2(1.2993542, 2.2724464)
 texture = ExtResource("4_yftf5")
 
@@ -380,16 +381,16 @@ position = Vector2(682.8025, -96.083435)
 scale = Vector2(0.5373022, 0.9396904)
 texture = ExtResource("6_qclta")
 
+[node name="Fundonevoa2" type="Sprite2D" parent="Background"]
+light_mask = 2
+position = Vector2(-1676.4902, -1735.8435)
+scale = Vector2(3.0520577, 2.6514692)
+texture = ExtResource("5_l7gx4")
+
 [node name="Sombra8" type="Sprite2D" parent="Background"]
 position = Vector2(676.62463, -91.38495)
 scale = Vector2(0.9788342, 0.9396904)
 texture = ExtResource("7_op0pn")
-
-[node name="Fundonevoa2" type="Sprite2D" parent="Background"]
-light_mask = 2
-position = Vector2(-3666.1047, -3093.6963)
-scale = Vector2(1.0857702, 0.4661311)
-texture = ExtResource("5_l7gx4")
 
 [node name="Arvore1" type="Node2D" parent="Background"]
 light_mask = 2
@@ -565,6 +566,14 @@ position = Vector2(-15946, -313)
 position = Vector2(0.5, -323)
 shape = SubResource("RectangleShape2D_op0pn")
 
+[node name="Composição4" type="Sprite2D" parent="."]
+position = Vector2(-14865.25, -3353)
+scale = Vector2(0.7000001, 0.7000001)
+texture = ExtResource("29_qclta")
+
+[node name="Plataforma2" parent="." instance=ExtResource("30_rnx0k")]
+position = Vector2(-14692.249, -3484)
+
 [node name="Espinhos" type="Node2D" parent="."]
 position = Vector2(-15558, -3270)
 
@@ -664,7 +673,8 @@ spawn_points = [NodePath("../../Area2D2"), NodePath("../../Area2D3")]
 
 [node name="Bau" parent="." instance=ExtResource("33_54dor")]
 position = Vector2(-15667, -1278)
-drop_item = Array[PackedScene]([ExtResource("16_bu38j"), ExtResource("17_bu38j")])
+drop_item = Array[PackedScene]([ExtResource("16_bu38j"), ExtResource("17_bu38j"), ExtResource("19_3t44f"), ExtResource("16_bu38j"), ExtResource("16_bu38j"), ExtResource("16_bu38j"), ExtResource("16_bu38j"), ExtResource("16_bu38j")])
+multi_drop = true
 
 [node name="Cururu" parent="." instance=ExtResource("28_yftf5")]
 z_index = 0
@@ -2065,12 +2075,6 @@ rotation = -3.05433
 scale = Vector2(0.44975197, 0.44975197)
 texture = ExtResource("23_3qqkp")
 
-[node name="Composição4" type="Sprite2D" parent="foreground"]
-position = Vector2(-2549.7712, -3441.3228)
-rotation = 0.0872665
-scale = Vector2(0.7, 0.7)
-texture = ExtResource("29_qclta")
-
 [node name="Plataforma4" type="Sprite2D" parent="foreground"]
 visible = false
 position = Vector2(-874.4951, -3463.1455)
@@ -2080,7 +2084,7 @@ texture = ExtResource("30_op0pn")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 physics_interpolation_mode = 1
-position = Vector2(-17693, -3663)
+position = Vector2(-17693, -3538)
 zoom = Vector2(0.8, 0.8)
 process_callback = 0
 limit_left = -18893
@@ -2095,22 +2099,8 @@ process_physics_priority = 300
 script = ExtResource("25_4e4qg")
 metadata/_custom_type_script = "uid://bd046eokvcnu2"
 
-[node name="PhantomCamera2D" type="Node2D" parent="." node_paths=PackedStringArray("follow_target")]
-top_level = true
-position = Vector2(-17693, -3663)
-script = ExtResource("26_yftf5")
-priority = 1
-follow_mode = 2
-follow_target = NodePath("../Cururu")
-zoom = Vector2(0.8, 0.8)
-tween_resource = SubResource("Resource_rnx0k")
-follow_offset = Vector2(0, -80)
-draw_limits = true
-limit_target = NodePath("../LimiteCamera")
-metadata/_custom_type_script = "uid://bhexx6mj1xv3q"
-
 [node name="PlataformaSome2" type="StaticBody2D" parent="."]
-position = Vector2(-13484, -3514)
+position = Vector2(-13664, -3514)
 
 [node name="Plataforma3" parent="PlataformaSome2" instance=ExtResource("30_rnx0k")]
 position = Vector2(12, 43)
@@ -2126,9 +2116,6 @@ one_way_collision = true
 position = Vector2(16.5, -36)
 shape = SubResource("RectangleShape2D_qclta")
 
-[node name="Plataforma2" parent="." instance=ExtResource("30_rnx0k")]
-position = Vector2(-14653, -3479)
-
 [node name="Plataforma3" parent="." instance=ExtResource("30_rnx0k")]
 position = Vector2(-10918, 254)
 
@@ -2140,3 +2127,23 @@ script = ExtResource("31_op0pn")
 musica = ExtResource("32_54dor")
 volume = -0.5
 metadata/_custom_type_script = "uid://dd16yu704x6wt"
+
+[node name="PhantomCamera2D" type="Node2D" parent="." node_paths=PackedStringArray("follow_target")]
+top_level = true
+position = Vector2(-17693, -3538)
+script = ExtResource("26_yftf5")
+priority = 1
+follow_mode = 5
+follow_target = NodePath("../Cururu")
+zoom = Vector2(0.8, 0.8)
+tween_resource = SubResource("Resource_3t44f")
+follow_offset = Vector2(0, 45)
+follow_damping = true
+follow_damping_value = Vector2(0.12, 0.2)
+rotation_damping_value = 0.0
+dead_zone_width = 0.06
+dead_zone_height = 0.3
+show_viewfinder_in_play = true
+draw_limits = true
+limit_target = NodePath("../LimiteCamera")
+metadata/_custom_type_script = "uid://bhexx6mj1xv3q"
