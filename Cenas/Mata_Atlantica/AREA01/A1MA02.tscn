@@ -1274,7 +1274,7 @@ position = Vector2(1884, -3987)
 position = Vector2(1612, -4009)
 
 [node name="PortaTemp3" parent="Cenario/Props" instance=ExtResource("10_0syxa")]
-position = Vector2(600, -6408)
+position = Vector2(870, -6378)
 scale = Vector2(2, 2)
 
 [node name="Moita15" type="Sprite2D" parent="Cenario/Props"]

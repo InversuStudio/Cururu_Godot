@@ -191,13 +191,14 @@ shape = SubResource("RectangleShape2D_64vq5")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 physics_interpolation_mode = 1
-position = Vector2(-28619, -3274.9998)
+position = Vector2(-28619, -3319.9998)
+ignore_rotation = false
 zoom = Vector2(0.8, 0.8)
 process_callback = 0
 limit_left = -29819
 limit_top = -5320
 limit_right = -16130
-limit_bottom = -2419
+limit_bottom = -2469
 editor_draw_limits = true
 
 [node name="PhantomCameraHost" type="Node" parent="Camera2D"]
@@ -1485,22 +1486,19 @@ position = Vector2(-25772, -3343)
 position = Vector2(1, -574)
 shape = SubResource("RectangleShape2D_nj6rs")
 
-[node name="PhantomCamera2D" type="Node2D" parent="." node_paths=PackedStringArray("follow_target")]
+[node name="PhantomCamera2D2" type="Node2D" parent="." node_paths=PackedStringArray("follow_target")]
 top_level = true
-position = Vector2(-28619, -3274.9998)
+position = Vector2(-28619, -3319.9998)
 script = ExtResource("14_wd030")
 priority = 1
 follow_mode = 5
 follow_target = NodePath("../Cururu")
 zoom = Vector2(0.8, 0.8)
 tween_resource = SubResource("Resource_nj6rs")
-follow_offset = Vector2(0, 45)
-follow_damping = true
-follow_damping_value = Vector2(0.12, 0.2)
-rotation_damping_value = 0.0
+follow_damping_value = Vector2(0.12, 0.1)
 dead_zone_width = 0.06
 dead_zone_height = 0.3
-show_viewfinder_in_play = true
 draw_limits = true
 limit_target = NodePath("../LimiteCamera")
+limit_margin = Vector4i(0, 0, 0, 50)
 metadata/_custom_type_script = "uid://bhexx6mj1xv3q"

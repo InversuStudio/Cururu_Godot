@@ -1094,12 +1094,17 @@ top_level = true
 position = Vector2(-7882, -138.00002)
 script = ExtResource("14_65x72")
 priority = 1
-follow_mode = 2
+follow_mode = 5
 follow_target = NodePath("../Cururu")
 zoom = Vector2(0.8, 0.8)
 tween_resource = SubResource("Resource_1ewfi")
+follow_damping = true
+follow_damping_value = Vector2(0.12, 0.15)
+dead_zone_width = 0.06
+dead_zone_height = 0.3
 draw_limits = true
 limit_target = NodePath("../LimiteCamera")
+limit_margin = Vector4i(0, 0, 0, 50)
 metadata/_custom_type_script = "uid://bhexx6mj1xv3q"
 
 [node name="Camera" type="Camera2D" parent="."]
@@ -1110,7 +1115,7 @@ process_callback = 0
 limit_left = -9082
 limit_top = -1286
 limit_right = 2419
-limit_bottom = 1357
+limit_bottom = 1307
 editor_draw_limits = true
 
 [node name="PhantomCameraHost" type="Node" parent="Camera"]

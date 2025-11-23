@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dk4wua1wjthnt"
-path="res://.godot/imported/GUARA.png-6b4b0336104ca47e487f57892123258e.ctex"
+uid="uid://bgwwis0v04hil"
+path="res://.godot/imported/75 Sem Título_20251122094228.png-b86d1ab76e3ae5fd8e6b5aa22c963fb0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Cenário/Objetos/GUARA.png"
-dest_files=["res://.godot/imported/GUARA.png-6b4b0336104ca47e487f57892123258e.ctex"]
+source_file="res://Sprites/Cenário/Miasma/75 Sem Título_20251122094228.png"
+dest_files=["res://.godot/imported/75 Sem Título_20251122094228.png-b86d1ab76e3ae5fd8e6b5aa22c963fb0.ctex"]
 
 [params]
 

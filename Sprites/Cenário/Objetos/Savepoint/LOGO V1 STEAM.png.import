@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bdipo31btb3h4"
-path="res://.godot/imported/AÇAI.png-b649fe4b83cee9819b85420b8a46efe7.ctex"
+uid="uid://3fndwwvknj3j"
+path="res://.godot/imported/LOGO V1 STEAM.png-eefc1df2c9649a479caa27e599834bcd.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Cenário/Objetos/AÇAI.png"
-dest_files=["res://.godot/imported/AÇAI.png-b649fe4b83cee9819b85420b8a46efe7.ctex"]
+source_file="res://Sprites/Cenário/Objetos/Savepoint/LOGO V1 STEAM.png"
+dest_files=["res://.godot/imported/LOGO V1 STEAM.png-eefc1df2c9649a479caa27e599834bcd.ctex"]
 
 [params]
 

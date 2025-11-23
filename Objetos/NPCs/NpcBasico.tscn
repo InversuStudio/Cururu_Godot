@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://bxixu84ahcyba"]
+[gd_scene load_steps=14 format=3 uid="uid://bxixu84ahcyba"]
 
 [ext_resource type="Texture2D" uid="uid://uxhlpik4jue" path="res://Sprites/NPCS/Saci/saci03.png" id="1_yvqea"]
 [ext_resource type="Script" uid="uid://bt5du2sk1ba4i" path="res://Scripts/NPCs/NPC.gd" id="2_yvqea"]
@@ -10,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://clfrhtnjk3viy" path="res://Sprites/NPCS/Saci/saci09.png" id="7_7i8ei"]
 [ext_resource type="Texture2D" uid="uid://cchrj6diua8rb" path="res://Sprites/NPCS/Saci/saci11.png" id="8_883ny"]
 [ext_resource type="Texture2D" uid="uid://d2u8nh7g7k2f7" path="res://Sprites/NPCS/Saci/saci13.png" id="9_etfm2"]
+[ext_resource type="Texture2D" uid="uid://3fndwwvknj3j" path="res://Sprites/Cenário/Objetos/Savepoint/LOGO V1 STEAM.png" id="11_3fd6d"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_rmtcg"]
 resource_local_to_scene = true
@@ -59,7 +60,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"idle",
-"speed": 10.0
+"speed": 12.0
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lqome"]
@@ -76,8 +77,8 @@ position = Vector2(6.8982077, 0)
 sprite_frames = SubResource("SpriteFrames_rmtcg")
 animation = &"idle"
 autoplay = "idle"
-frame = 4
-frame_progress = 0.70436215
+frame_progress = 0.6539317
+speed_scale = 0.8
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 root_node = NodePath("../AnimatedSprite2D")
@@ -97,12 +98,17 @@ unique_name_in_owner = true
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -221.24255
-offset_top = -395.49698
-offset_right = 227.34006
-offset_bottom = -300.50302
+offset_left = -315.51797
+offset_top = -531.8802
+offset_right = 284.62576
+offset_bottom = -326.51495
 grow_horizontal = 2
-theme_override_font_sizes/normal_font_size = 60
+theme_override_font_sizes/normal_font_size = 90
 text = "CONVERSAR"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="LogoV1Steam" type="Sprite2D" parent="Texto"]
+position = Vector2(315.01794, 115.688644)
+scale = Vector2(0.2987412, 0.29874122)
+texture = ExtResource("11_3fd6d")

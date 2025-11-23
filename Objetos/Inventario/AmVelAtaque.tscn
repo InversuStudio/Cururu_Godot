@@ -1,7 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://dsutk1ipca856"]
+[gd_scene load_steps=8 format=3 uid="uid://dsutk1ipca856"]
 
 [ext_resource type="Texture2D" uid="uid://c3tl3oddronfh" path="res://icon.svg" id="1_eo0xl"]
 [ext_resource type="Script" uid="uid://ca5pbjmacb3t3" path="res://Scripts/Inventario/BaseAmuleto.gd" id="2_xx80a"]
+[ext_resource type="Texture2D" uid="uid://b616yjld4pd51" path="res://Sprites/UI/Amuletos/START WATER.png" id="3_qith4"]
 [ext_resource type="Texture2D" uid="uid://b4y3bbsuyjaly" path="res://Sprites/UI/Pause/Consumiveis/SELECTED.png" id="3_w4off"]
 [ext_resource type="Script" uid="uid://df7q8i1vqmhmm" path="res://Scripts/Inventario/AmVelAtaque.gd" id="4_xx80a"]
 
@@ -16,9 +17,9 @@ texture_normal = ExtResource("1_eo0xl")
 ignore_texture_size = true
 stretch_mode = 0
 script = ExtResource("2_xx80a")
-nome_display = "Ataque Veloz"
-desc_item = "Lhe permite golpear com mais velocidade"
-sprite_normal = ExtResource("1_eo0xl")
+nome_display = "Cabaça do Relâmpago das Águas"
+desc_item = "Um pequeno talismã talhado em madeira de jatobá e preso a uma miniatura de cabaça azulada. Dentro dela, vibra uma gota de Água Lunar eletrificada pelo toque da deusa Vitória-Régia. Quando ativado, o fluxo espiritual acelera pelos braços do Cururu, tornando seus disparos e golpes fluidos e rápidos como uma enxurrada repentina."
+sprite_normal = ExtResource("3_qith4")
 sprite_select = ExtResource("3_w4off")
 script_logica = NodePath("Script")
 

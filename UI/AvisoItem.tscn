@@ -3,11 +3,12 @@
 [ext_resource type="Script" uid="uid://cohtrhiy80jo1" path="res://Scripts/Globais/AvisoItem.gd" id="1_n4c84"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_f2wx0"]
-bg_color = Color(0.52615464, 0.6312332, 0.5591119, 1)
-border_width_left = 20
-border_width_top = 20
-border_width_right = 20
-border_width_bottom = 20
+bg_color = Color(0.20431672, 0.110616, 0, 1)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(0.3372549, 0.1764706, 0.03137255, 1)
 corner_radius_top_left = 50
 corner_radius_top_right = 50
 corner_radius_bottom_right = 50

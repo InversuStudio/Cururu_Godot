@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=4 uid="uid://cwvi3pve0viqq"]
+[gd_scene load_steps=31 format=4 uid="uid://cwvi3pve0viqq"]
 
 [ext_resource type="Texture2D" uid="uid://c374cwih425cq" path="res://Sprites/Cenário/Tilemaps/Base.png" id="1_mkak3"]
 [ext_resource type="Texture2D" uid="uid://cqu5scrrmr5n5" path="res://Sprites/Cenário/Mata_Atlantica/Background/FUNDOCEU.png" id="1_mo78v"]
@@ -11,8 +11,8 @@
 [ext_resource type="PackedScene" uid="uid://nohq28uk7lfk" path="res://Objetos/Entidades/Player.tscn" id="5_gvt1b"]
 [ext_resource type="Script" uid="uid://bhexx6mj1xv3q" path="res://addons/phantom_camera/scripts/phantom_camera/phantom_camera_2d.gd" id="5_nva2y"]
 [ext_resource type="Script" uid="uid://8umksf8e80fw" path="res://addons/phantom_camera/scripts/resources/tween_resource.gd" id="6_gvt1b"]
+[ext_resource type="Texture2D" uid="uid://bg3yumuc4n238" path="res://Sprites/Cenário/Objetos/Upgrade/TOTEM.png" id="6_mhwhk"]
 [ext_resource type="Script" uid="uid://bd046eokvcnu2" path="res://addons/phantom_camera/scripts/phantom_camera_host/phantom_camera_host.gd" id="7_hyhx3"]
-[ext_resource type="PackedScene" uid="uid://1fdx2ie24dh8" path="res://Objetos/Props/Bau.tscn" id="8_gvt1b"]
 [ext_resource type="Texture2D" uid="uid://cjl88xeknofui" path="res://Sprites/Cenário/Mata_Atlantica/Chao/grama_reto.png" id="10_uqj5l"]
 [ext_resource type="Texture2D" uid="uid://cj4rj4oj20ogb" path="res://Sprites/Cenário/Mata_Atlantica/Chao/chap_interno.png" id="11_old6t"]
 [ext_resource type="Texture2D" uid="uid://cw2yeg7ynw0kl" path="res://Sprites/Cenário/Mata_Atlantica/Chao/chap_externo.png" id="12_mcinh"]
@@ -24,6 +24,7 @@
 [ext_resource type="Texture2D" uid="uid://daqvadoaxijjc" path="res://Sprites/Cenário/Mata_Atlantica/Background/copa02.png" id="16_bf5tm"]
 [ext_resource type="Texture2D" uid="uid://cdnyx0mqh22t0" path="res://Sprites/Cenário/Mata_Atlantica/Background/copa03.png" id="17_5bp2d"]
 [ext_resource type="Texture2D" uid="uid://c2yapafbd3cnf" path="res://Sprites/Cenário/Mata_Atlantica/Foreground/cipó.png" id="17_l3md2"]
+[ext_resource type="PackedScene" uid="uid://dghxpclnjwg5k" path="res://Objetos/Props/PecaCoracao.tscn" id="25_bf5tm"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fgbha"]
 size = Vector2(3621, 1573)
@@ -222,6 +223,11 @@ position = Vector2(275.5, -3103)
 scale = Vector2(1.9412055, 1)
 texture = ExtResource("5_bf5tm")
 
+[node name="Totem" type="Sprite2D" parent="."]
+position = Vector2(-765.00006, -2885.0002)
+scale = Vector2(0.8339844, 0.8339844)
+texture = ExtResource("6_mhwhk")
+
 [node name="1-2" parent="." instance=ExtResource("2_botoi")]
 position = Vector2(2159, -2935)
 destino = 8
@@ -236,9 +242,6 @@ position = Vector2(-107, -217)
 scale = Vector2(1, 1.6250002)
 texture = ExtResource("4_hyhx3")
 flip_h = true
-
-[node name="Bau" parent="." instance=ExtResource("8_gvt1b")]
-position = Vector2(-769, -2691)
 
 [node name="Cururu" parent="." instance=ExtResource("5_gvt1b")]
 z_index = 0
@@ -547,3 +550,6 @@ texture = ExtResource("17_l3md2")
 position = Vector2(2135, -3345)
 scale = Vector2(0.8, 0.8)
 texture = ExtResource("17_l3md2")
+
+[node name="PecaCoracao" parent="." instance=ExtResource("25_bf5tm")]
+position = Vector2(-771, -2913)

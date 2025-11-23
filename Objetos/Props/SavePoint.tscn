@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://cqyub70sv0ofp"]
+[gd_scene load_steps=11 format=3 uid="uid://cqyub70sv0ofp"]
 
 [ext_resource type="Script" uid="uid://dvol8qmgk0lx8" path="res://Scripts/Componentes/SavePoint.gd" id="1_hntd5"]
 [ext_resource type="Script" uid="uid://dd7svcu8l7fxu" path="res://Scripts/Componentes/Interacao.gd" id="1_xf6ij"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://byyty8fw4cjjd" path="res://Sprites/Cenário/Objetos/Savepoint/save_ativado.png" id="5_41v7y"]
 [ext_resource type="PackedScene" uid="uid://ffqi6t0ahbmk" path="res://Objetos/Funcionalidade/OtimizadorSprite.tscn" id="7_7viry"]
 [ext_resource type="AudioStream" uid="uid://egsk7ec7xtpd" path="res://Audio/SFX/AMBIENTE/som_save.wav" id="7_41v7y"]
+[ext_resource type="Texture2D" uid="uid://3fndwwvknj3j" path="res://Sprites/Cenário/Objetos/Savepoint/LOGO V1 STEAM.png" id="8_7viry"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hntd5"]
 size = Vector2(315, 376.5)
@@ -22,6 +23,9 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": ExtResource("5_41v7y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_j20lk")
 }],
 "loop": true,
 "name": &"Save",
@@ -44,7 +48,9 @@ shape = SubResource("RectangleShape2D_hntd5")
 position = Vector2(54, -217)
 sprite_frames = SubResource("SpriteFrames_7viry")
 animation = &"Save"
-frame_progress = 0.45612922
+autoplay = "Save"
+frame_progress = 0.12414512
+speed_scale = 0.5
 script = ExtResource("1_hntd5")
 
 [node name="Script" type="Node" parent="."]
@@ -56,17 +62,22 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -187.0
-offset_top = -480.0
-offset_right = 206.0
-offset_bottom = -421.0
+offset_left = -190.0
+offset_top = -585.0
+offset_right = 203.0
+offset_bottom = -432.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_font_sizes/normal_font_size = 40
+theme_override_font_sizes/normal_font_size = 60
 bbcode_enabled = true
 text = "DESCANSAR"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="LogoV1Steam" type="Sprite2D" parent="Texto"]
+position = Vector2(190, 86.00002)
+scale = Vector2(0.2038632, 0.20386322)
+texture = ExtResource("8_7viry")
 
 [node name="SFX" type="AudioStreamPlayer" parent="."]
 unique_name_in_owner = true
@@ -74,4 +85,4 @@ stream = ExtResource("7_41v7y")
 volume_db = 1.0
 
 [node name="OtimizadorSprite" parent="." instance=ExtResource("7_7viry")]
-rect = Rect2(-195, -440, 399, 450)
+rect = Rect2(-195, -428, 399, 438)

@@ -1,17 +1,17 @@
 [gd_scene load_steps=19 format=4 uid="uid://b5am6yc3iwy8e"]
 
 [ext_resource type="Texture2D" uid="uid://c374cwih425cq" path="res://Sprites/Cenário/Tilemaps/Base.png" id="1_7yx4j"]
-[ext_resource type="PackedScene" uid="uid://l1l8x741umo7" path="res://Objetos/Props/Espinhos_Externo.tscn" id="2_1m0sm"]
 [ext_resource type="PackedScene" uid="uid://nohq28uk7lfk" path="res://Objetos/Entidades/Player.tscn" id="2_2tgjk"]
 [ext_resource type="PackedScene" uid="uid://dgfcdht1gifdp" path="res://Objetos/Props/Espinhos.tscn" id="2_3f14n"]
-[ext_resource type="PackedScene" uid="uid://cwiylj5l44l1n" path="res://Objetos/Props/Espinhos_Interno.tscn" id="3_nj3sm"]
+[ext_resource type="PackedScene" uid="uid://bnm668fws2641" path="res://Objetos/Props/Armadilha.tscn" id="2_4scg7"]
 [ext_resource type="Script" uid="uid://bhexx6mj1xv3q" path="res://addons/phantom_camera/scripts/phantom_camera/phantom_camera_2d.gd" id="5_jgbtl"]
 [ext_resource type="Script" uid="uid://8umksf8e80fw" path="res://addons/phantom_camera/scripts/resources/tween_resource.gd" id="6_g87lo"]
 [ext_resource type="Script" uid="uid://bd046eokvcnu2" path="res://addons/phantom_camera/scripts/phantom_camera_host/phantom_camera_host.gd" id="7_2hqmh"]
 [ext_resource type="PackedScene" uid="uid://bei1s8te3cwko" path="res://Sprites/Cenário/Mata_Atlantica/Interativos/plataforma.tscn" id="8_g87lo"]
+[ext_resource type="Texture2D" uid="uid://bg3yumuc4n238" path="res://Sprites/Cenário/Objetos/Upgrade/TOTEM.png" id="10_2b1x1"]
 [ext_resource type="Texture2D" uid="uid://cjl88xeknofui" path="res://Sprites/Cenário/Mata_Atlantica/Chao/grama_reto.png" id="12_2b1x1"]
-[ext_resource type="PackedScene" uid="uid://1fdx2ie24dh8" path="res://Objetos/Props/Bau.tscn" id="12_nj3sm"]
 [ext_resource type="Texture2D" uid="uid://cw2yeg7ynw0kl" path="res://Sprites/Cenário/Mata_Atlantica/Chao/chap_externo.png" id="13_11u8x"]
+[ext_resource type="PackedScene" uid="uid://dghxpclnjwg5k" path="res://Objetos/Props/PecaCoracao.tscn" id="14_11u8x"]
 [ext_resource type="Texture2D" uid="uid://cj4rj4oj20ogb" path="res://Sprites/Cenário/Mata_Atlantica/Chao/chap_interno.png" id="14_tkmkl"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jgbtl"]
@@ -157,13 +157,14 @@ sources/0 = SubResource("TileSetAtlasSource_ogowb")
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g87lo"]
 size = Vector2(113.5, 1032)
 
-[sub_resource type="Resource" id="Resource_1m0sm"]
+[sub_resource type="Resource" id="Resource_4scg7"]
 script = ExtResource("6_g87lo")
+duration = 0.0
 
 [node name="MA_2-6" type="Node2D"]
 
 [node name="LimiteCamera" type="CollisionShape2D" parent="."]
-position = Vector2(5966, -996)
+position = Vector2(6008, -937)
 shape = SubResource("RectangleShape2D_jgbtl")
 debug_color = Color(0, 0.6, 0.69803923, 0)
 
@@ -242,6 +243,11 @@ position = Vector2(8473, -174)
 scale = Vector2(0.8, 0.8)
 spawn_points = [NodePath("../REspawn"), NodePath("../REspawn2")]
 
+[node name="Armadilha36" parent="." node_paths=PackedStringArray("spawn_points") instance=ExtResource("2_3f14n")]
+position = Vector2(8838, -174)
+scale = Vector2(0.8, 0.8)
+spawn_points = [NodePath("../REspawn"), NodePath("../REspawn2")]
+
 [node name="Armadilha17" parent="." node_paths=PackedStringArray("spawn_points") instance=ExtResource("2_3f14n")]
 position = Vector2(5289, -171)
 scale = Vector2(0.8, 0.8)
@@ -254,7 +260,7 @@ scale = Vector2(0.8, 0.8)
 spawn_points = [NodePath("../REspawn"), NodePath("../REspawn2")]
 
 [node name="Armadilha7" parent="." node_paths=PackedStringArray("spawn_points") instance=ExtResource("2_3f14n")]
-position = Vector2(2975, -812)
+position = Vector2(2975, -773)
 rotation = 1.5707964
 scale = Vector2(0.8, 0.8)
 spawn_points = [NodePath("../REspawn"), NodePath("../REspawn2")]
@@ -277,60 +283,34 @@ rotation = 4.712389
 scale = Vector2(0.8, 0.8)
 spawn_points = [NodePath("../REspawn"), NodePath("../REspawn2")]
 
-[node name="Armadilha18" parent="." node_paths=PackedStringArray("spawn_points") instance=ExtResource("3_nj3sm")]
-position = Vector2(5623, -106)
+[node name="Armadilha" parent="." node_paths=PackedStringArray("spawn_points") instance=ExtResource("2_4scg7")]
+position = Vector2(2928, -958.99994)
+scale = Vector2(0.8800012, 0.8800012)
 spawn_points = [NodePath("../REspawn"), NodePath("../REspawn2")]
 
-[node name="Armadilha20" parent="." node_paths=PackedStringArray("spawn_points") instance=ExtResource("3_nj3sm")]
-position = Vector2(6891, -117)
+[node name="Armadilha3" parent="." node_paths=PackedStringArray("spawn_points") instance=ExtResource("2_4scg7")]
+position = Vector2(2928, -1694.9999)
+scale = Vector2(0.8800012, 0.8800012)
 spawn_points = [NodePath("../REspawn"), NodePath("../REspawn2")]
 
-[node name="Armadilha16" parent="." node_paths=PackedStringArray("spawn_points") instance=ExtResource("3_nj3sm")]
-position = Vector2(5531, -293)
-rotation = -1.5707964
+[node name="Armadilha9" parent="." node_paths=PackedStringArray("spawn_points") instance=ExtResource("2_4scg7")]
+position = Vector2(5495, -895.99994)
+scale = Vector2(0.8800012, 0.8800012)
 spawn_points = [NodePath("../REspawn"), NodePath("../REspawn2")]
 
-[node name="Armadilha19" parent="." node_paths=PackedStringArray("spawn_points") instance=ExtResource("3_nj3sm")]
-position = Vector2(6826, -265)
-rotation = -1.5707964
+[node name="Armadilha26" parent="." node_paths=PackedStringArray("spawn_points") instance=ExtResource("2_4scg7")]
+position = Vector2(5495, -1635.9999)
+scale = Vector2(0.8800012, 0.8800012)
 spawn_points = [NodePath("../REspawn"), NodePath("../REspawn2")]
 
-[node name="Armadilha34" parent="." node_paths=PackedStringArray("spawn_points") instance=ExtResource("3_nj3sm")]
-position = Vector2(8949, -265)
-rotation = -1.5707964
+[node name="Armadilha27" parent="." node_paths=PackedStringArray("spawn_points") instance=ExtResource("2_4scg7")]
+position = Vector2(6774.0005, -376.99988)
+scale = Vector2(0.8800012, 0.8800012)
 spawn_points = [NodePath("../REspawn"), NodePath("../REspawn2")]
 
-[node name="Armadilha26" parent="." node_paths=PackedStringArray("spawn_points") instance=ExtResource("2_1m0sm")]
-position = Vector2(2856, -893)
-scale = Vector2(0.8, 0.8)
-spawn_points = [NodePath("../REspawn"), NodePath("../REspawn2")]
-
-[node name="Armadilha28" parent="." node_paths=PackedStringArray("spawn_points") instance=ExtResource("2_1m0sm")]
-position = Vector2(3055, -1759)
-rotation = 3.1415925
-scale = Vector2(0.8, 0.8)
-spawn_points = [NodePath("../REspawn"), NodePath("../REspawn2")]
-
-[node name="Armadilha27" parent="." node_paths=PackedStringArray("spawn_points") instance=ExtResource("2_1m0sm")]
-position = Vector2(5399, -900)
-scale = Vector2(0.8, 0.8)
-spawn_points = [NodePath("../REspawn"), NodePath("../REspawn2")]
-
-[node name="Armadilha29" parent="." node_paths=PackedStringArray("spawn_points") instance=ExtResource("2_1m0sm")]
-position = Vector2(5604, -1766)
-rotation = 3.1415925
-scale = Vector2(0.8, 0.8)
-spawn_points = [NodePath("../REspawn"), NodePath("../REspawn2")]
-
-[node name="Armadilha30" parent="." node_paths=PackedStringArray("spawn_points") instance=ExtResource("2_1m0sm")]
-position = Vector2(6677, -375.00006)
-scale = Vector2(0.8, 0.8)
-spawn_points = [NodePath("../REspawn"), NodePath("../REspawn2")]
-
-[node name="Armadilha31" parent="." node_paths=PackedStringArray("spawn_points") instance=ExtResource("2_1m0sm")]
-position = Vector2(6882, -1241)
-rotation = 3.1415925
-scale = Vector2(0.8, 0.8)
+[node name="Armadilha28" parent="." node_paths=PackedStringArray("spawn_points") instance=ExtResource("2_4scg7")]
+position = Vector2(6774.0005, -1184)
+scale = Vector2(0.8800012, 0.8800012)
 spawn_points = [NodePath("../REspawn"), NodePath("../REspawn2")]
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
@@ -355,6 +335,30 @@ shape = SubResource("RectangleShape2D_g87lo")
 position = Vector2(403.99988, -254)
 scale = Vector2(0.959163, 0.959163)
 
+[node name="ChapExterno11" type="Sprite2D" parent="."]
+position = Vector2(6811.95, -407.0003)
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("13_11u8x")
+flip_v = true
+
+[node name="ChapExterno12" type="Sprite2D" parent="."]
+position = Vector2(6759.95, -408.99982)
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("13_11u8x")
+flip_h = true
+flip_v = true
+
+[node name="ChapExterno13" type="Sprite2D" parent="."]
+position = Vector2(6811.95, -1233.95)
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("13_11u8x")
+
+[node name="ChapExterno14" type="Sprite2D" parent="."]
+position = Vector2(6759.95, -1235.95)
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("13_11u8x")
+flip_h = true
+
 [node name="Plataforma" parent="." instance=ExtResource("8_g87lo")]
 position = Vector2(3511, -689.00006)
 
@@ -370,30 +374,15 @@ position = Vector2(7347, -543.00006)
 [node name="Plataforma5" parent="." instance=ExtResource("8_g87lo")]
 position = Vector2(8327, -823)
 
-[node name="PhantomCamera2D" type="Node2D" parent="." node_paths=PackedStringArray("follow_target")]
-top_level = true
-position = Vector2(1244, -736)
-script = ExtResource("5_jgbtl")
-follow_mode = 2
-follow_target = NodePath("../Player")
-zoom = Vector2(0.8, 0.8)
-tween_resource = SubResource("Resource_1m0sm")
-tween_on_load = false
-follow_offset = Vector2(0, -80)
-draw_limits = true
-limit_target = NodePath("../LimiteCamera")
-metadata/_custom_type_script = "uid://bhexx6mj1xv3q"
-
 [node name="Camera" type="Camera2D" parent="."]
 physics_interpolation_mode = 1
-position = Vector2(1244, -736)
+position = Vector2(1336, -727)
 zoom = Vector2(0.8, 0.8)
 process_callback = 0
-limit_left = 44
-limit_top = -1931
-limit_right = 11888
-limit_bottom = -61
-editor_draw_limits = true
+limit_left = 136
+limit_top = -1822
+limit_right = 11880
+limit_bottom = -52
 
 [node name="PhantomCameraHost" type="Node" parent="Camera"]
 process_priority = 300
@@ -401,8 +390,10 @@ process_physics_priority = 300
 script = ExtResource("7_2hqmh")
 metadata/_custom_type_script = "uid://bd046eokvcnu2"
 
-[node name="Bau" parent="." instance=ExtResource("12_nj3sm")]
-position = Vector2(9587, -895)
+[node name="Totem" type="Sprite2D" parent="."]
+position = Vector2(9469, -1081)
+scale = Vector2(0.8203125, 0.8203125)
+texture = ExtResource("10_2b1x1")
 
 [node name="GramaReto" type="Sprite2D" parent="."]
 position = Vector2(2275, -496.99994)
@@ -416,6 +407,23 @@ rotation = 1.5707964
 scale = Vector2(0.7, 0.7)
 texture = ExtResource("12_2b1x1")
 flip_v = true
+
+[node name="GramaReto5" type="Sprite2D" parent="."]
+position = Vector2(3043, -690)
+rotation = 1.5707964
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("12_2b1x1")
+
+[node name="GramaReto6" type="Sprite2D" parent="."]
+position = Vector2(3043, -530)
+rotation = 1.5707964
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("12_2b1x1")
+
+[node name="GramaReto7" type="Sprite2D" parent="."]
+position = Vector2(9470.001, -864)
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("12_2b1x1")
 
 [node name="GramaReto4" type="Sprite2D" parent="."]
 position = Vector2(2850, -773)
@@ -448,6 +456,41 @@ texture = ExtResource("13_11u8x")
 flip_h = true
 flip_v = true
 
+[node name="ChapExterno5" type="Sprite2D" parent="."]
+position = Vector2(2971.0002, -1752.95)
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("13_11u8x")
+
+[node name="ChapExterno6" type="Sprite2D" parent="."]
+position = Vector2(2919, -1754.95)
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("13_11u8x")
+flip_h = true
+
+[node name="ChapExterno7" type="Sprite2D" parent="."]
+position = Vector2(5532.9497, -926.00024)
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("13_11u8x")
+flip_v = true
+
+[node name="ChapExterno8" type="Sprite2D" parent="."]
+position = Vector2(5480.9497, -927.99976)
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("13_11u8x")
+flip_h = true
+flip_v = true
+
+[node name="ChapExterno9" type="Sprite2D" parent="."]
+position = Vector2(5532.9497, -1752.95)
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("13_11u8x")
+
+[node name="ChapExterno10" type="Sprite2D" parent="."]
+position = Vector2(5480.9497, -1754.95)
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("13_11u8x")
+flip_h = true
+
 [node name="ChapExterno3" type="Sprite2D" parent="."]
 position = Vector2(2023.9998, -670.99994)
 scale = Vector2(0.7, 0.7)
@@ -467,3 +510,31 @@ scale = Vector2(0.7, 0.7)
 texture = ExtResource("14_tkmkl")
 flip_h = true
 flip_v = true
+
+[node name="ChapInterno3" type="Sprite2D" parent="."]
+position = Vector2(3110, -297)
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("14_tkmkl")
+flip_v = true
+
+[node name="PecaCoracao" parent="." instance=ExtResource("14_11u8x")]
+position = Vector2(9466, -1113)
+
+[node name="PhantomCamera2D2" type="Node2D" parent="." node_paths=PackedStringArray("follow_target")]
+top_level = true
+position = Vector2(1336, -727)
+script = ExtResource("5_jgbtl")
+priority = 1
+follow_mode = 5
+follow_target = NodePath("../Player")
+zoom = Vector2(0.8, 0.8)
+tween_resource = SubResource("Resource_4scg7")
+follow_offset = Vector2(0, 45)
+follow_damping = true
+follow_damping_value = Vector2(0.1, 0.2)
+rotation_damping_value = 0.0
+dead_zone_width = 0.06
+dead_zone_height = 0.3
+limit_target = NodePath("../LimiteCamera")
+limit_margin = Vector4i(50, 50, 50, 50)
+metadata/_custom_type_script = "uid://bhexx6mj1xv3q"

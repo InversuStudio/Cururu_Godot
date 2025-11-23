@@ -1,7 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://dvh2mbmjsi2tf"]
+[gd_scene load_steps=8 format=3 uid="uid://dvh2mbmjsi2tf"]
 
 [ext_resource type="Texture2D" uid="uid://c3tl3oddronfh" path="res://icon.svg" id="1_55ki0"]
 [ext_resource type="Script" uid="uid://ca5pbjmacb3t3" path="res://Scripts/Inventario/BaseAmuleto.gd" id="2_w3x0u"]
+[ext_resource type="Texture2D" uid="uid://c7sla3vtxoxqr" path="res://Sprites/UI/Amuletos/START RECOVER.png" id="3_bhjvw"]
 [ext_resource type="Texture2D" uid="uid://b4y3bbsuyjaly" path="res://Sprites/UI/Pause/Consumiveis/SELECTED.png" id="3_bvp63"]
 [ext_resource type="Script" uid="uid://ekmu0iam4og7" path="res://Scripts/Inventario/AmRecMagia.gd" id="4_w3x0u"]
 
@@ -17,9 +18,9 @@ ignore_texture_size = true
 stretch_mode = 0
 script = ExtResource("2_w3x0u")
 item = 1
-nome_display = "Recuperação Mágica"
-desc_item = "Sua magia se repõe ao longo do tempo"
-sprite_normal = ExtResource("1_55ki0")
+nome_display = "Talismã da Seiva Serena"
+desc_item = "Criado a partir de um fragmento de casca de jequitibá e resina purificada, este amuleto pulsa com a calma do coração da floresta. A Seiva Serena nutre a conexão espiritual do Cururu, fortalecendo o canal entre o plano físico e as Águas Lunares. Enquanto equipado, ele sente a energia retornar suavemente, como o gotejar constante das folhas após a chuva."
+sprite_normal = ExtResource("3_bhjvw")
 sprite_select = ExtResource("3_bvp63")
 script_logica = NodePath("Script")
 
@@ -47,6 +48,7 @@ button_mask = 0
 
 [node name="Script" type="Node" parent="."]
 script = ExtResource("4_w3x0u")
+tempo_ate_recuperar = 1.0
 
 [node name="Timer" type="Timer" parent="."]
 unique_name_in_owner = true

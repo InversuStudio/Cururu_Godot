@@ -1,4 +1,4 @@
-[gd_scene load_steps=35 format=4 uid="uid://4yb5yrq3t0xp"]
+[gd_scene load_steps=36 format=4 uid="uid://4yb5yrq3t0xp"]
 
 [ext_resource type="Texture2D" uid="uid://c374cwih425cq" path="res://Sprites/Cenário/Tilemaps/Base.png" id="1_ixyi4"]
 [ext_resource type="Texture2D" uid="uid://b3mykrf6x50au" path="res://Sprites/Cenário/Sertão/Background/BACK.png" id="1_wc2c6"]
@@ -30,6 +30,7 @@
 [ext_resource type="Texture2D" uid="uid://cb2yg8x0h1nix" path="res://Sprites/Cenário/Sertão/Foreground/40 Sem Título4_20251024112157.png" id="26_oaq64"]
 [ext_resource type="Texture2D" uid="uid://bjiauga7scnwt" path="res://Sprites/NPCS/Camada 88.PNG" id="29_wc2c6"]
 [ext_resource type="Texture2D" uid="uid://q3486nj433ie" path="res://Sprites/NPCS/Camada 90.PNG" id="30_hdssx"]
+[ext_resource type="PackedScene" uid="uid://b1ycbf2ta6ces" path="res://Sprites/VFX/Iluminação/fire.tscn" id="31_hdssx"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4mh8b"]
 size = Vector2(15600, 1763)
@@ -878,10 +879,6 @@ scale = Vector2(0.959163, 0.959163)
 [node name="UIGAME" type="CanvasLayer" parent="."]
 
 [node name="HUD" parent="UIGAME" instance=ExtResource("6_88kjv")]
-offset_left = -6.0
-offset_top = -2.0
-offset_right = -6.0
-offset_bottom = -2.0
 metadata/_edit_use_anchors_ = true
 
 [node name="Camera2D" type="Camera2D" parent="."]
@@ -996,3 +993,6 @@ z_index = 3
 position = Vector2(-756.6665, 25)
 texture = ExtResource("30_hdssx")
 flip_h = true
+
+[node name="Node2D" parent="." instance=ExtResource("31_hdssx")]
+position = Vector2(2953, 507)

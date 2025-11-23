@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bm1qhgu20wgaa"
-path="res://.godot/imported/Semente.png-1ce8db1ac70edd4211235e7322710e83.ctex"
+uid="uid://b0aq48lamotn8"
+path="res://.godot/imported/FLOR_LUNAR.png-13a41a10a84f7873781d62f82c610815.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Cenário/Objetos/Semente.png"
-dest_files=["res://.godot/imported/Semente.png-1ce8db1ac70edd4211235e7322710e83.ctex"]
+source_file="res://Sprites/UI/Amuletos/FLOR_LUNAR.png"
+dest_files=["res://.godot/imported/FLOR_LUNAR.png-13a41a10a84f7873781d62f82c610815.ctex"]
 
 [params]
 

@@ -1,4 +1,4 @@
-[gd_scene load_steps=35 format=4 uid="uid://dfuswe0wcsy33"]
+[gd_scene load_steps=36 format=4 uid="uid://dfuswe0wcsy33"]
 
 [ext_resource type="Texture2D" uid="uid://c374cwih425cq" path="res://Sprites/Cenário/Tilemaps/Base.png" id="1_axyo6"]
 [ext_resource type="PackedScene" uid="uid://cqyub70sv0ofp" path="res://Objetos/Props/SavePoint.tscn" id="1_kqyhf"]
@@ -23,9 +23,10 @@
 [ext_resource type="Texture2D" uid="uid://ciulkfu83ohwu" path="res://Sprites/Cenário/Mata_Atlantica/Foreground/04.png" id="27_te2fn"]
 [ext_resource type="Texture2D" uid="uid://cgnnux60eiern" path="res://Sprites/Cenário/Mata_Atlantica/Foreground/05.png" id="28_wstxp"]
 [ext_resource type="Texture2D" uid="uid://b0pui1q2vj5g0" path="res://Sprites/Cenário/zSem_Uso/PAU_BRASIL02.png" id="29_0v3sa"]
-[ext_resource type="Texture2D" uid="uid://b3be1u52efn3y" path="res://Sprites/Cenário/Mata_Atlantica/Foreground/06.png" id="29_nika8"]
 [ext_resource type="Texture2D" uid="uid://5m4b2cn86u3t" path="res://Sprites/Cenário/Mata_Atlantica/Foreground/03.png" id="30_5nff6"]
+[ext_resource type="Texture2D" uid="uid://cgx43fkvk7fk7" path="res://Sprites/Cenário/Miasma/75 Sem Título_20251122094055.png" id="30_7dakl"]
 [ext_resource type="Script" uid="uid://dd16yu704x6wt" path="res://Scripts/Componentes/BGM_Player.gd" id="30_fgbk1"]
+[ext_resource type="Texture2D" uid="uid://cry1d2tvkctu1" path="res://Sprites/Cenário/Miasma/75 Sem Título_20251122093930.png" id="30_l3w8l"]
 [ext_resource type="AudioStream" uid="uid://c7qftchbhu6xc" path="res://Audio/SFX/AMBIENTE/Musica_Jogo.mp3" id="31_7dakl"]
 [ext_resource type="Texture2D" uid="uid://xjqchtcfdjkn" path="res://Sprites/Cenário/Mata_Atlantica/Foreground/01.png" id="31_ku32q"]
 [ext_resource type="Texture2D" uid="uid://b2pop4ke31d1x" path="res://Sprites/Cenário/Mata_Atlantica/Foreground/02.png" id="32_dglwx"]
@@ -173,7 +174,7 @@ sources/0 = SubResource("TileSetAtlasSource_0f8ab")
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_td0al"]
 size = Vector2(234, 902)
 
-[sub_resource type="Resource" id="Resource_0v3sa"]
+[sub_resource type="Resource" id="Resource_l3w8l"]
 script = ExtResource("11_ogbcg")
 duration = 0.0
 
@@ -449,7 +450,7 @@ position = Vector2(-37796, -4192)
 texture = ExtResource("23_0v3sa")
 
 [node name="MoitaTeste9" type="Sprite2D" parent="Cenario/Foreground/Camada 1"]
-position = Vector2(-36387, -4222)
+position = Vector2(-36387, -4176)
 texture = ExtResource("23_0v3sa")
 
 [node name="MoitaTeste26" type="Sprite2D" parent="Cenario/Foreground/Camada 1"]
@@ -755,10 +756,6 @@ texture = ExtResource("27_te2fn")
 position = Vector2(-37441, -3516)
 texture = ExtResource("28_wstxp")
 
-[node name="06" type="Sprite2D" parent="Cenario/Foreground/Cipó"]
-position = Vector2(-32086, -3580)
-texture = ExtResource("29_nika8")
-
 [node name="03" type="Sprite2D" parent="Cenario/Foreground/Cipó"]
 position = Vector2(-30702, -4247)
 scale = Vector2(1.5234375, 1.5234375)
@@ -779,11 +776,7 @@ position = Vector2(-30028, -4011)
 texture = ExtResource("29_0v3sa")
 
 [node name="PauBrasil04" type="Sprite2D" parent="Cenario/Foreground"]
-position = Vector2(-39117, -3942)
-texture = ExtResource("29_0v3sa")
-
-[node name="PauBrasil03" type="Sprite2D" parent="Cenario/Foreground"]
-position = Vector2(-39202, -4126)
+position = Vector2(-39066, -3932)
 texture = ExtResource("29_0v3sa")
 
 [node name="Chão" type="Node2D" parent="Cenario"]
@@ -899,13 +892,13 @@ shape = SubResource("RectangleShape2D_td0al")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 physics_interpolation_mode = 1
-position = Vector2(1382, -1574)
+position = Vector2(1382, -1624)
 zoom = Vector2(0.8, 0.8)
 process_callback = 0
 limit_left = 182
 limit_top = -2903
 limit_right = 9305
-limit_bottom = -899
+limit_bottom = -949
 editor_draw_limits = true
 
 [node name="PhantomCameraHost" type="Node" parent="Camera2D"]
@@ -919,21 +912,30 @@ script = ExtResource("30_fgbk1")
 musica = ExtResource("31_7dakl")
 metadata/_custom_type_script = "uid://dd16yu704x6wt"
 
-[node name="PhantomCamera2D2" type="Node2D" parent="." node_paths=PackedStringArray("follow_target")]
+[node name="75SemTítulo20251122094055" type="Sprite2D" parent="."]
+z_index = 2
+position = Vector2(7518, -1161)
+texture = ExtResource("30_7dakl")
+
+[node name="75SemTítulo20251122093930" type="Sprite2D" parent="."]
+z_index = 2
+position = Vector2(7823, -1157)
+scale = Vector2(1, 1.0111111)
+texture = ExtResource("30_l3w8l")
+
+[node name="PhantomCamera2D" type="Node2D" parent="." node_paths=PackedStringArray("follow_target")]
 top_level = true
-position = Vector2(1382, -1574)
+position = Vector2(1382, -1624)
 script = ExtResource("10_kqyhf")
 priority = 1
 follow_mode = 5
 follow_target = NodePath("../Cururu")
 zoom = Vector2(0.8, 0.8)
-tween_resource = SubResource("Resource_0v3sa")
-follow_offset = Vector2(0, 45)
-follow_damping = true
-follow_damping_value = Vector2(0.12, 0.2)
-rotation_damping_value = 0.0
+tween_resource = SubResource("Resource_l3w8l")
+follow_damping_value = Vector2(0.12, 0.1)
 dead_zone_width = 0.06
 dead_zone_height = 0.3
 draw_limits = true
 limit_target = NodePath("../LimiteCamera")
+limit_margin = Vector4i(0, 0, 0, 50)
 metadata/_custom_type_script = "uid://bhexx6mj1xv3q"

@@ -1,4 +1,4 @@
-[gd_scene load_steps=120 format=3 uid="uid://nohq28uk7lfk"]
+[gd_scene load_steps=119 format=3 uid="uid://nohq28uk7lfk"]
 
 [ext_resource type="Script" uid="uid://cfu4ciwll8jcj" path="res://Scripts/Cururu/Cururu.gd" id="1_gwpdq"]
 [ext_resource type="Texture2D" uid="uid://6tjgxsgaflxb" path="res://Sprites/Cururu/Dano/03.png" id="2_0hf88"]
@@ -407,15 +407,11 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_qakxq"]
-radius = 49.0
+radius = 46.0
 height = 170.0
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_xx3r0"]
-radius = 33.0
-height = 90.0
-
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ga1ek"]
-radius = 51.0
+radius = 42.0
 height = 172.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_xx3r0"]
@@ -1211,7 +1207,7 @@ acel_time = 0.1
 decel_time = 0.1
 altura_pulo = 4.6
 tempo_pulo = 0.4
-tempo_cair = 0.5
+tempo_cair = 0.65
 tempo_coyote = 0.1
 lag_pulo = 0.1
 tempo_dash = 0.15
@@ -1238,10 +1234,11 @@ position = Vector2(-16, -117.00001)
 scale = Vector2(0.375651, 0.375651)
 sprite_frames = SubResource("SpriteFrames_ser7u")
 animation = &"Special"
+frame = 1
 speed_scale = 1.2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-16, -84)
+position = Vector2(-17, -84)
 shape = SubResource("CapsuleShape2D_qakxq")
 
 [node name="Vida" type="Node" parent="."]
@@ -1260,15 +1257,8 @@ hit_sfx = ExtResource("77_d7mdf")
 parent = NodePath("../..")
 sprite = NodePath("../../Cururu")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="HurtContainer/HurtBox"]
-visible = false
-position = Vector2(-16, -130)
-rotation = -1.57079
-shape = SubResource("CapsuleShape2D_xx3r0")
-debug_color = Color(0.92912, 0, 0.16329, 0.42)
-
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="HurtContainer/HurtBox"]
-position = Vector2(-16, -85)
+position = Vector2(-18, -85)
 shape = SubResource("CapsuleShape2D_ga1ek")
 debug_color = Color(0.92912, 0, 0.16329, 0.42)
 
