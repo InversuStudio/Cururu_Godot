@@ -284,11 +284,14 @@ top_level = true
 position = Vector2(-146, -534)
 script = ExtResource("9_2ryh1")
 priority = 1
-follow_mode = 2
+follow_mode = 5
 follow_target = NodePath("../../Entidades/Player")
 tween_resource = SubResource("Resource_0ho33")
 tween_on_load = false
 follow_offset = Vector2(0, -100)
+follow_damping = true
+dead_zone_width = 0.15
+dead_zone_height = 0.25
 draw_limits = true
 limit_target = NodePath("../../LimitCamera/LimiteCamPrincipal")
 

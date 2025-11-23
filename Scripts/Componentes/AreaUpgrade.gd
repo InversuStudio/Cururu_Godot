@@ -22,8 +22,8 @@ func Interact(_player:CharacterBody2D) -> void:
 		texto.hide()
 		GameData.upgrade_num = upgrade + 1
 		%Poder.hide()
-		HUD.AvisoItem(nome_tela, descricao_tela, imagem_tela)
-		await HUD.tela_item
+		AvisoItem.Mostra(nome_tela, descricao_tela, imagem_tela)
+		#await HUD.tela_item
 		GameData.Save()
 
 func Extra(dentro:bool) -> void:
