@@ -1,0 +1,32 @@
+[gd_scene load_steps=5 format=3 uid="uid://b4fpjefuik8mq"]
+
+[ext_resource type="Script" uid="uid://bjl3lkbpnbx3k" path="res://Scripts/Componentes/DropAmuleto.gd" id="1_b3dlu"]
+[ext_resource type="Texture2D" uid="uid://c3tl3oddronfh" path="res://icon.svg" id="2_r8eki"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_qvwd5"]
+radius = 44.102154
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_s361a"]
+radius = 61.03278
+
+[node name="DropAmRecMagia" type="CharacterBody2D"]
+collision_layer = 0
+script = ExtResource("1_b3dlu")
+nome_tela = "Amuleto de Golpe Ágil"
+descricao_tela = "Todos os seus golpes se tornam mais rápidos"
+imagem_tela = ExtResource("2_r8eki")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+self_modulate = Color(0.9861104, 0, 0.35392314, 1)
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("2_r8eki")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_qvwd5")
+
+[node name="AreaGet" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AreaGet"]
+shape = SubResource("CircleShape2D_s361a")
