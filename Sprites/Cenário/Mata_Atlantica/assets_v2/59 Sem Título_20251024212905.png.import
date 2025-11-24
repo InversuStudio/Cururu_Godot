@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ccql65wj55kqf"
-path="res://.godot/imported/arvore.png-cc1c8547ce7c295fcd8274d1102cee60.ctex"
+uid="uid://cpwb8kd6qn21c"
+path="res://.godot/imported/59 Sem Título_20251024212905.png-a18bcb4c4c96fed494af438c4cb49c3c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Cenário/Mata_Atlantica/Background/arvore.png"
-dest_files=["res://.godot/imported/arvore.png-cc1c8547ce7c295fcd8274d1102cee60.ctex"]
+source_file="res://Sprites/Cenário/Mata_Atlantica/assets_v2/59 Sem Título_20251024212905.png"
+dest_files=["res://.godot/imported/59 Sem Título_20251024212905.png-a18bcb4c4c96fed494af438c4cb49c3c.ctex"]
 
 [params]
 

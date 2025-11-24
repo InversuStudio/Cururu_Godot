@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://cqu5scrrmr5n5" path="res://Sprites/Cenário/Mata_Atlantica/Background/FUNDOCEU.png" id="1_2x3ls"]
 [ext_resource type="Script" uid="uid://bhexx6mj1xv3q" path="res://addons/phantom_camera/scripts/phantom_camera/phantom_camera_2d.gd" id="1_3mtbg"]
 [ext_resource type="Texture2D" uid="uid://c374cwih425cq" path="res://Sprites/Cenário/Tilemaps/Base.png" id="1_b1cal"]
-[ext_resource type="Texture2D" uid="uid://k22xru6heyh3" path="res://Sprites/Cenário/Mata_Atlantica/Background/arvore.png" id="2_i4pw7"]
+[ext_resource type="Texture2D" uid="uid://k22xru6heyh3" path="res://Sprites/Cenário/Mata_Atlantica/Background/arvore0.png" id="2_i4pw7"]
 [ext_resource type="PackedScene" uid="uid://nohq28uk7lfk" path="res://Objetos/Entidades/Player.tscn" id="2_oho8c"]
 [ext_resource type="Script" uid="uid://8umksf8e80fw" path="res://addons/phantom_camera/scripts/resources/tween_resource.gd" id="2_qvog4"]
 [ext_resource type="Texture2D" uid="uid://dog2ml3xbyho2" path="res://Sprites/Cenário/Mata_Atlantica/Background/arvore2.png" id="2_ygqbx"]
@@ -172,7 +172,7 @@ sources/0 = SubResource("TileSetAtlasSource_oqv1c")
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_uw7k4"]
 size = Vector2(70, 399)
 
-[sub_resource type="Resource" id="Resource_uw7k4"]
+[sub_resource type="Resource" id="Resource_hx3nd"]
 script = ExtResource("2_qvog4")
 duration = 0.0
 
@@ -3800,27 +3800,15 @@ posicao = Vector2(-592, -10377)
 position = Vector2(-22, -250.5)
 shape = SubResource("RectangleShape2D_uw7k4")
 
-[node name="PhantomCamera2D" type="Node2D" parent="." node_paths=PackedStringArray("follow_target")]
-top_level = true
-position = Vector2(6498, -775)
-script = ExtResource("1_3mtbg")
-follow_mode = 2
-follow_target = NodePath("../Entidades/Cururu")
-zoom = Vector2(0.8, 0.8)
-tween_resource = SubResource("Resource_uw7k4")
-draw_limits = true
-limit_target = NodePath("../LimiteCamera")
-metadata/_custom_type_script = "uid://bhexx6mj1xv3q"
-
 [node name="Camera" type="Camera2D" parent="."]
 physics_interpolation_mode = 1
-position = Vector2(6498, -775)
+position = Vector2(6498, -825)
 zoom = Vector2(0.8, 0.8)
 process_callback = 0
-limit_left = 669
-limit_top = -5213
-limit_right = 7698
-limit_bottom = -100
+limit_left = 182
+limit_top = -2903
+limit_right = 9305
+limit_bottom = -949
 editor_draw_limits = true
 
 [node name="PhantomCameraHost" type="Node" parent="Camera"]
@@ -3839,3 +3827,21 @@ metadata/_custom_type_script = "uid://dd16yu704x6wt"
 position = Vector2(1089, -3163)
 drop_item = Array[PackedScene]([ExtResource("28_yk4cc"), ExtResource("29_dug7p")])
 multi_drop = true
+
+[node name="PhantomCamera2D" type="Node2D" parent="." node_paths=PackedStringArray("follow_target")]
+top_level = true
+position = Vector2(6498, -825)
+script = ExtResource("1_3mtbg")
+priority = 1
+follow_mode = 5
+follow_target = NodePath("../Entidades/Cururu")
+zoom = Vector2(0.8, 0.8)
+tween_resource = SubResource("Resource_hx3nd")
+follow_damping = true
+follow_damping_value = Vector2(0.12, 0.15)
+dead_zone_width = 0.06
+dead_zone_height = 0.3
+draw_limits = true
+limit_target = NodePath("../LimiteCamera")
+limit_margin = Vector4i(0, 0, 0, 50)
+metadata/_custom_type_script = "uid://bhexx6mj1xv3q"

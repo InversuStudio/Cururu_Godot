@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://cqu5scrrmr5n5" path="res://Sprites/Cenário/Mata_Atlantica/Background/FUNDOCEU.png" id="1_mo78v"]
 [ext_resource type="PackedScene" uid="uid://1apfpwlqocxn" path="res://Objetos/Funcionalidade/TransicaoFase.tscn" id="2_botoi"]
 [ext_resource type="Texture2D" uid="uid://dog2ml3xbyho2" path="res://Sprites/Cenário/Mata_Atlantica/Background/arvore2.png" id="2_pluiq"]
-[ext_resource type="Texture2D" uid="uid://k22xru6heyh3" path="res://Sprites/Cenário/Mata_Atlantica/Background/arvore.png" id="3_txxga"]
+[ext_resource type="Texture2D" uid="uid://k22xru6heyh3" path="res://Sprites/Cenário/Mata_Atlantica/Background/arvore0.png" id="3_txxga"]
 [ext_resource type="Texture2D" uid="uid://rwmi1ggde5dy" path="res://Sprites/VFX/Iluminação/PORTAL.png" id="4_hyhx3"]
 [ext_resource type="Texture2D" uid="uid://dmh8fodubelsr" path="res://Sprites/Cenário/Mata_Atlantica/Background/FUNDONEVOA.png" id="4_mhwhk"]
 [ext_resource type="Texture2D" uid="uid://ctar30vsktrrb" path="res://Sprites/Cenário/Mata_Atlantica/Background/FUNDONEVOA2.png" id="5_bf5tm"]
@@ -169,7 +169,7 @@ tile_size = Vector2i(128, 128)
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_botoi")
 
-[sub_resource type="Resource" id="Resource_yiu3a"]
+[sub_resource type="Resource" id="Resource_mhwhk"]
 script = ExtResource("6_gvt1b")
 duration = 0.0
 
@@ -256,18 +256,6 @@ tile_set = SubResource("TileSet_sjpl0")
 [node name="Node2D" type="Node2D" parent="."]
 position = Vector2(1995, -2946)
 
-[node name="PhantomCamera2D" type="Node2D" parent="." node_paths=PackedStringArray("follow_target")]
-top_level = true
-position = Vector2(970, -2947)
-script = ExtResource("5_nva2y")
-follow_mode = 2
-follow_target = NodePath("../Cururu")
-zoom = Vector2(0.8, 0.8)
-tween_resource = SubResource("Resource_yiu3a")
-draw_limits = true
-limit_target = NodePath("../LimiteCamera")
-metadata/_custom_type_script = "uid://bhexx6mj1xv3q"
-
 [node name="Camera" type="Camera2D" parent="."]
 physics_interpolation_mode = 1
 position = Vector2(970, -2947)
@@ -276,7 +264,7 @@ process_callback = 0
 limit_left = -1451
 limit_top = -3780
 limit_right = 2170
-limit_bottom = -2207
+limit_bottom = -2257
 editor_draw_limits = true
 
 [node name="PhantomCameraHost" type="Node" parent="Camera"]
@@ -553,3 +541,21 @@ texture = ExtResource("17_l3md2")
 
 [node name="PecaCoracao" parent="." instance=ExtResource("25_bf5tm")]
 position = Vector2(-771, -2913)
+
+[node name="PhantomCamera2D" type="Node2D" parent="." node_paths=PackedStringArray("follow_target")]
+top_level = true
+position = Vector2(970, -2947)
+script = ExtResource("5_nva2y")
+priority = 1
+follow_mode = 5
+follow_target = NodePath("../Cururu")
+zoom = Vector2(0.8, 0.8)
+tween_resource = SubResource("Resource_mhwhk")
+follow_damping = true
+follow_damping_value = Vector2(0.12, 0.15)
+dead_zone_width = 0.06
+dead_zone_height = 0.3
+draw_limits = true
+limit_target = NodePath("../LimiteCamera")
+limit_margin = Vector4i(0, 0, 0, 50)
+metadata/_custom_type_script = "uid://bhexx6mj1xv3q"

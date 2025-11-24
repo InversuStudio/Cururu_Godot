@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ccql65wj55kqf"
-path="res://.godot/imported/arvore.png-cc1c8547ce7c295fcd8274d1102cee60.ctex"
+uid="uid://d18vqjeq586b1"
+path="res://.godot/imported/pedra_musgo.png-4dc0934380e82d8c3bf07ed5df837bc1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Cenário/Mata_Atlantica/Background/arvore.png"
-dest_files=["res://.godot/imported/arvore.png-cc1c8547ce7c295fcd8274d1102cee60.ctex"]
+source_file="res://Sprites/Cenário/Mata_Atlantica/assets_v2/pedra_musgo.png"
+dest_files=["res://.godot/imported/pedra_musgo.png-4dc0934380e82d8c3bf07ed5df837bc1.ctex"]
 
 [params]
 

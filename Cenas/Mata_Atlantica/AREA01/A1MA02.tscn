@@ -9,7 +9,7 @@
 [ext_resource type="Script" uid="uid://bd046eokvcnu2" path="res://addons/phantom_camera/scripts/phantom_camera_host/phantom_camera_host.gd" id="3_tej34"]
 [ext_resource type="Texture2D" uid="uid://cqu5scrrmr5n5" path="res://Sprites/Cenário/Mata_Atlantica/Background/FUNDOCEU.png" id="3_wtee6"]
 [ext_resource type="Texture2D" uid="uid://dog2ml3xbyho2" path="res://Sprites/Cenário/Mata_Atlantica/Background/arvore2.png" id="4_yf878"]
-[ext_resource type="Texture2D" uid="uid://k22xru6heyh3" path="res://Sprites/Cenário/Mata_Atlantica/Background/arvore.png" id="5_61gve"]
+[ext_resource type="Texture2D" uid="uid://k22xru6heyh3" path="res://Sprites/Cenário/Mata_Atlantica/Background/arvore0.png" id="5_61gve"]
 [ext_resource type="Texture2D" uid="uid://dmh8fodubelsr" path="res://Sprites/Cenário/Mata_Atlantica/Background/FUNDONEVOA.png" id="6_441k1"]
 [ext_resource type="Texture2D" uid="uid://c8bkav2g3wyeu" path="res://Sprites/Cenário/Mata_Atlantica/Chao/moita2.png" id="7_dyi4w"]
 [ext_resource type="Texture2D" uid="uid://dyv700lptbkyq" path="res://Sprites/Cenário/Mata_Atlantica/Background/composição2.png" id="7_v6p7i"]
@@ -174,15 +174,15 @@ tile_size = Vector2i(128, 128)
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_k4aup")
 
-[sub_resource type="Resource" id="Resource_ja78a"]
-script = ExtResource("2_yt3qm")
-duration = 0.0
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dr2ls"]
 size = Vector2(91, 453)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_n8ivf"]
 size = Vector2(70, 486)
+
+[sub_resource type="Resource" id="Resource_3ocar"]
+script = ExtResource("2_yt3qm")
+duration = 0.0
 
 [node name="MA_1-2" type="Node2D"]
 
@@ -1455,28 +1455,15 @@ texture = ExtResource("28_441k1")
 position = Vector2(5328, -11654)
 texture = ExtResource("28_441k1")
 
-[node name="PhantomCamera2D" type="Node2D" parent="Cenario" node_paths=PackedStringArray("follow_target")]
-top_level = true
-position = Vector2(3001, -10)
-scale = Vector2(0.959163, 0.959163)
-script = ExtResource("1_g5wd4")
-follow_mode = 2
-follow_target = NodePath("../../Entidades/Cururu")
-zoom = Vector2(0.8, 0.8)
-tween_resource = SubResource("Resource_ja78a")
-draw_limits = true
-limit_target = NodePath("../../LimiteCamera")
-metadata/_custom_type_script = "uid://bhexx6mj1xv3q"
-
 [node name="Camera" type="Camera2D" parent="Cenario"]
 physics_interpolation_mode = 1
-position = Vector2(3001, -10)
+position = Vector2(3001, -60)
 zoom = Vector2(0.8, 0.8)
 process_callback = 0
 limit_left = 1801
 limit_top = -6000
 limit_right = 5506
-limit_bottom = 665
+limit_bottom = 615
 editor_draw_limits = true
 
 [node name="PhantomCameraHost" type="Node" parent="Cenario/Camera"]
@@ -1579,3 +1566,21 @@ metadata/_custom_type_script = "uid://dd16yu704x6wt"
 position = Vector2(5065, -2056)
 drop_item = Array[PackedScene]([ExtResource("33_3y27v"), ExtResource("34_0wiyh"), ExtResource("34_0wiyh"), ExtResource("34_0wiyh")])
 multi_drop = true
+
+[node name="PhantomCamera2D" type="Node2D" parent="." node_paths=PackedStringArray("follow_target")]
+top_level = true
+position = Vector2(3001, -60)
+script = ExtResource("1_g5wd4")
+priority = 1
+follow_mode = 5
+follow_target = NodePath("../Entidades/Cururu")
+zoom = Vector2(0.8, 0.8)
+tween_resource = SubResource("Resource_3ocar")
+follow_damping = true
+follow_damping_value = Vector2(0.12, 0.15)
+dead_zone_width = 0.06
+dead_zone_height = 0.3
+draw_limits = true
+limit_target = NodePath("../LimiteCamera")
+limit_margin = Vector4i(0, 0, 0, 50)
+metadata/_custom_type_script = "uid://bhexx6mj1xv3q"

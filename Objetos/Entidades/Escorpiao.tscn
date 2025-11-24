@@ -31,16 +31,16 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_gx8x6"]
-radius = 59.00001
-height = 180.0
+radius = 83.41185
+height = 232.58838
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_buqx5"]
-radius = 39.445328
-height = 161.57413
+radius = 33.47705
+height = 151.586
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ujy2f"]
-radius = 55.0
-height = 140.0
+radius = 40.76477
+height = 205.64714
 
 [node name="Escorpiao" type="CharacterBody2D"]
 scale = Vector2(0.67999953, 0.67999953)
@@ -68,14 +68,14 @@ metadata/_custom_type_script = "uid://hsdutxxttrp3"
 unique_name_in_owner = true
 collision_layer = 8
 comp_vida = NodePath("../Vida")
-distancia_knockback = 0.25
+distancia_knockback = 0.3
 tempo_knockback = 0.2
 hit_sfx = ExtResource("7_mvbia")
 parent = NodePath("..")
 sprite = NodePath("../Sprite")
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="HurtBox"]
-position = Vector2(-31, -46)
+position = Vector2(-5.8823586, -69.1177)
 rotation = -1.57079
 shape = SubResource("CapsuleShape2D_gx8x6")
 debug_color = Color(0.99999, 0, 0.0935918, 0.42)
@@ -92,7 +92,7 @@ unique_name_in_owner = true
 ignore = NodePath("../HurtBox")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="HitBox"]
-position = Vector2(-44, -46)
+position = Vector2(-13.235304, -44.11768)
 rotation = -1.57079
 shape = SubResource("CapsuleShape2D_ujy2f")
 debug_color = Color(0.807155, 0.414602, 3.85046e-07, 0.42)

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ccql65wj55kqf"
-path="res://.godot/imported/arvore.png-cc1c8547ce7c295fcd8274d1102cee60.ctex"
+uid="uid://d3n60iijs1dx5"
+path="res://.godot/imported/árvore sexualizada 1.png-a83fdfb34aa97f21dfe5dd73c4481779.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Cenário/Mata_Atlantica/Background/arvore.png"
-dest_files=["res://.godot/imported/arvore.png-cc1c8547ce7c295fcd8274d1102cee60.ctex"]
+source_file="res://Sprites/Cenário/Mata_Atlantica/assets_v2/árvore sexualizada 1.png"
+dest_files=["res://.godot/imported/árvore sexualizada 1.png-a83fdfb34aa97f21dfe5dd73c4481779.ctex"]
 
 [params]
 
