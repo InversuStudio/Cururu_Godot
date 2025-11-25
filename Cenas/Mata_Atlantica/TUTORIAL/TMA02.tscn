@@ -595,9 +595,11 @@ position = Vector2(8136, 268)
 
 [node name="Morcego" parent="Inimigos" instance=ExtResource("6_p37rg")]
 position = Vector2(3770, -974)
+speed = 200.0
 
 [node name="Morcego2" parent="Inimigos" instance=ExtResource("6_p37rg")]
 position = Vector2(7094, -1216)
+speed = 200.0
 
 [node name="Cururu" parent="." instance=ExtResource("4_rnfct")]
 z_index = 0

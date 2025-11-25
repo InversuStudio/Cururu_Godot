@@ -76,11 +76,11 @@ script = ExtResource("5_ohlaa")
 vida_max = 2
 metadata/_custom_type_script = "uid://hsdutxxttrp3"
 
-[node name="Area2D" type="Area2D" parent="."]
+[node name="AreaVisao" type="Area2D" parent="."]
 collision_layer = 0
 collision_mask = 2
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+[node name="AreaColisaoVisao" type="CollisionShape2D" parent="AreaVisao"]
 shape = SubResource("CircleShape2D_j5mvf")
 
 [node name="HurtBox" parent="." node_paths=PackedStringArray("comp_vida", "parent", "sprite") instance=ExtResource("5_87fsy")]
@@ -95,7 +95,7 @@ hit_sfx = ExtResource("6_87fsy")
 parent = NodePath("..")
 sprite = NodePath("../Sprite")
 
-[node name="CollisionShape2D3" type="CollisionShape2D" parent="HurtBox"]
+[node name="AreaColisaoHurtBox" type="CollisionShape2D" parent="HurtBox"]
 position = Vector2(1, -42)
 rotation = -1.57079
 shape = SubResource("CircleShape2D_87fsy")
@@ -109,7 +109,7 @@ ignore = NodePath("../HurtBox")
 sfx = SubResource("Resource_87fsy")
 parent = NodePath("..")
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="HitBox"]
+[node name="AreaColisaoHitBox" type="CollisionShape2D" parent="HitBox"]
 position = Vector2(1.136364, -42.045456)
 rotation = -1.57079
 shape = SubResource("CapsuleShape2D_ujy2f")
@@ -126,7 +126,7 @@ autostart = true
 unique_name_in_owner = true
 one_shot = true
 
-[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
-[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]
+[connection signal="body_entered" from="AreaVisao" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="AreaVisao" to="." method="_on_area_2d_body_exited"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="timeout" from="TimerDano" to="." method="_on_timer_dano_timeout"]
