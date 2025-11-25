@@ -17,6 +17,8 @@ func Enter() -> void:
 	parent.velocity.y = -parent.jump_force # Aplica pulo
 	%Anim.play("Jump") # Animação de pulo
 	%SFX_Pulo.play()
+	if !Input.is_action_pressed("pulo") and parent.pode_mover:
+		parent.velocity.y /= 2.0
 
 func Update(_delta: float) -> State:
 	# INPUT MELEE
@@ -29,6 +31,11 @@ func Update(_delta: float) -> State:
 	# INPUT DASH
 	if Input.is_action_just_pressed("dash") and parent.pode_dash:
 		return dash_state
+	
+	if Input.is_action_just_released("pulo") and parent.pode_mover:
+		parent.velocity.y /= 2.0
+	
+	if parent.velocity.y >= 0.0: return fall_state
 	
 	return null
 
@@ -47,7 +54,6 @@ func FixedUpdate(delta: float) -> State:
 			parent.velocity.x = parent.air_speed * dir
 	else:
 		parent.velocity.x = move_toward(parent.velocity.x, dir, parent.decel * delta)
-	#parent.velocity.x = parent.input_move * parent.air_speed
 	
 	# Espelha o sprite de acordo com o input
 	if parent.input_move > 0:
@@ -61,8 +67,9 @@ func FixedUpdate(delta: float) -> State:
 	if parent.velocity.y >= 0.0:
 		return fall_state
 	# Se soltar botão de pulo, zera velocidade e muda State
-	if Input.is_action_just_released("pulo") and parent.pode_mover:
-		parent.velocity.y = 0.0
-		return fall_state
+	
+		#pode_cair = true
+		#parent.velocity.y = 0.0
+		#return fall_state
 		
 	return null # Não muda o State

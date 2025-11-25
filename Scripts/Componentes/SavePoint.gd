@@ -4,10 +4,12 @@ extends InteractObject
 
 func _ready() -> void:
 	texto.hide()
+	%Anim.animation_finished.connect(func(): %Anim.play("Idle"))
 
 func Interact(player:CharacterBody2D) -> void:
 	player.vida.RecebeCura(GameData.vida_max)
 	%SFX.play()
+	%Anim.play("Save")
 	GameData.Save()
 
 func Extra(dentro:bool = true) -> void:

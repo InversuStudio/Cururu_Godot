@@ -4,14 +4,14 @@ extends Node2D
 
 func _ready() -> void:
 	%HurtBox.connect("hurt", _on_hurt)
-	%Timer.wait_time = tempo_aberta
 	%HurtBox.set_deferred("monitoring", true)
 	%HurtBox.set_deferred("monitorable", true)
 
 func _on_hurt(hitbox:Array[HitBox]) -> void:
-	if hitbox and hitbox[0].is_in_group("Special"):
-		Console._Print("SPECIAL")
-		Disable()
+	for h:HitBox in hitbox:
+		if h.is_in_group("Special"):
+			Console._Print("SPECIAL")
+			Disable()
 
 func _on_timer_timeout() -> void:
 	Enable()
@@ -21,7 +21,7 @@ func Disable() -> void:
 	%SFX.play()
 	%HurtBox.set_deferred("monitoring", false)
 	%HurtBox.set_deferred("monitorable", false)
-	%Timer.start()
+	%Timer.start(tempo_aberta)
 
 func Enable() -> void:
 	%Anim.play("Fecha")

@@ -37,8 +37,11 @@ func Update(_delta: float) -> State:
 	# INPUT DASH
 	if Input.is_action_just_pressed("dash") and parent.pode_dash:
 		return dash_state
+	# Ao pressionar input de Pulo, mudar State
+	if Input.is_action_just_pressed("pulo") and parent.pode_mover:
+		return pulo_state
 	return null # Não muda o State
-
+	
 # COMPORTAMENTO PHYSICS_PROCESS
 func FixedUpdate(delta: float) -> State:
 	# Aplica gravidade bem fraca
@@ -52,14 +55,7 @@ func FixedUpdate(delta: float) -> State:
 				parent.velocity.x = parent.speed * dir
 		else:
 			parent.velocity.x = move_toward(parent.velocity.x, dir, parent.decel * delta)
-		
-	#var dir = parent.input_move * parent.speed
-	#if dir != 0.0:
-		#parent.velocity.x = move_toward(parent.velocity.x, dir, parent.accel * delta)
-	#else:
-		#parent.velocity.x = move_toward(parent.velocity.x, dir, parent.decel * delta)
-	#parent.velocity.x = parent.input_move * parent.speed
-	
+			
 	# Espelha o sprite de acordo com o input
 	if parent.input_move > 0:
 		%Cururu.flip_h = false
@@ -73,10 +69,6 @@ func FixedUpdate(delta: float) -> State:
 		if pode_anim:
 			if parent.input_move: %Anim.play("Run")
 			else: %Anim.play("Idle")
-		
-		# Ao pressionar input de Pulo, mudar State
-		if Input.is_action_just_pressed("pulo") and parent.pode_mover:
-			return pulo_state
 			
 	# Se não estiver no chão, mudar State
 	if not parent.is_on_floor():

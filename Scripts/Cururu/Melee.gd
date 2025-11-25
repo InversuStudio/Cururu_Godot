@@ -63,7 +63,8 @@ func FixedUpdate(delta:float) -> State:
 	
 	# Solução lógica pulo curto
 	if Input.is_action_just_released("pulo"):
-		parent.velocity.y = 0.0
+		parent.velocity.y /= 2.0
+		#parent.velocity.y = 0.0
 	
 	# Movimentação
 	var dir = parent.input_move

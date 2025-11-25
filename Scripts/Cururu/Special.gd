@@ -48,7 +48,8 @@ func Update(_delta:float) -> State:
 
 func FixedUpdate(delta:float) -> State:
 	if Input.is_action_just_released("pulo"):
-		parent.velocity.y = 0.0
+		parent.velocity.y /= 2.0
+		#parent.velocity.y = 0.0
 	# Aplica gravidade de queda
 	if parent.is_on_floor():
 		parent.velocity.x = move_toward(parent.velocity.x, 0, parent.decel * delta)

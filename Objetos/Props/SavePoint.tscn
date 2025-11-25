@@ -17,6 +17,14 @@ animations = [{
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("2_3f5lj")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_3f5lj")
 }, {
 "duration": 1.0,
 "texture": ExtResource("4_j20lk")
@@ -25,11 +33,26 @@ animations = [{
 "texture": ExtResource("5_41v7y")
 }, {
 "duration": 1.0,
+"texture": ExtResource("5_41v7y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_41v7y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_41v7y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_41v7y")
+}, {
+"duration": 1.0,
 "texture": ExtResource("4_j20lk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_3f5lj")
 }],
-"loop": true,
+"loop": false,
 "name": &"Save",
-"speed": 4.0
+"speed": 30.0
 }]
 
 [node name="SavePoint" type="Area2D" node_paths=PackedStringArray("objeto_interacao")]
@@ -44,12 +67,12 @@ metadata/_custom_type_script = "uid://dd7svcu8l7fxu"
 position = Vector2(6.5, -185.75)
 shape = SubResource("RectangleShape2D_hntd5")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+[node name="Anim" type="AnimatedSprite2D" parent="."]
+unique_name_in_owner = true
 position = Vector2(54, -217)
 sprite_frames = SubResource("SpriteFrames_7viry")
 animation = &"Save"
-autoplay = "Save"
-frame_progress = 0.12414512
+autoplay = "Idle"
 speed_scale = 0.5
 script = ExtResource("1_hntd5")
 

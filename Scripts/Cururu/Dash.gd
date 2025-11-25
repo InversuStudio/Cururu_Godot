@@ -12,10 +12,15 @@ var pode_cair:bool = false
 func Enter() -> void:
 	print("DASH")
 	Console._State(name)
-	%Anim.play("Dash_Start")
+	#%Anim.play("Dash_Start")
 	parent.pode_dash = false
 	acabou = false
 	parent.velocity.y = 0.0
+	%Anim.play("Dash_Loop")
+	%DashCooldown.start()
+	%DashTime.start()
+	var mult:int = -1 if %Cururu.flip_h == true else 1
+	parent.velocity.x = parent.dash_speed * mult
 	%SFX_Dash.play()
 
 func Exit() -> void:
@@ -31,7 +36,6 @@ func FixedUpdate(delta:float) -> State:
 		parent.velocity.x = move_toward(parent.velocity.x, parent.input_move,
 			parent.decel * delta)
 	if acabou:
-		#parent.velocity = Vector2.ZERO
 		if parent.is_on_floor():
 			return chao_state
 		else: return fall_state
@@ -44,12 +48,13 @@ func _on_dash_time_timeout() -> void:
 	pode_cair = true
 
 func _on_anim_animation_finished(anim_name: StringName) -> void:
-	match anim_name:
-		"Dash_Start":
-			%Anim.play("Dash_Loop")
-			%DashCooldown.start()
-			%DashTime.start()
-			var mult:int = -1 if %Cururu.flip_h == true else 1
-			parent.velocity.x = parent.dash_speed * mult
-		"Dash_End":
-			acabou = true
+	if anim_name == "Dash_End": acabou = true
+	#match anim_name:
+		#"Dash_Start":
+			#%Anim.play("Dash_Loop")
+			#%DashCooldown.start()
+			#%DashTime.start()
+			#var mult:int = -1 if %Cururu.flip_h == true else 1
+			#parent.velocity.x = parent.dash_speed * mult
+		#"Dash_End":
+			#acabou = true

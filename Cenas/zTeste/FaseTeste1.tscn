@@ -260,17 +260,18 @@ id = 1
 position = Vector2(2274, -460)
 id = 2
 
+[node name="Sprite2D2" type="Sprite2D" parent="Props"]
+texture_repeat = 2
+position = Vector2(3333, -846)
+texture = ExtResource("21_lqome")
+region_enabled = true
+region_rect = Rect2(0, 0, 128, 128)
+
 [node name="DropAmVelAtaque" parent="Props" instance=ExtResource("16_der3i")]
 position = Vector2(3699, -463)
 
-[node name="DropAmVelAtaque2" parent="Props" instance=ExtResource("16_der3i")]
-position = Vector2(3907, -463)
-tipo_item = 1
-nome_tela = "O outro cara"
-descricao_tela = "Não se importa muito com ele"
-
 [node name="DropAmRecMagia" parent="Props" instance=ExtResource("17_der3i")]
-position = Vector2(3900, -597)
+position = Vector2(3900, -467)
 tipo_item = 1
 
 [node name="LimitCamera" type="StaticBody2D" parent="."]
@@ -289,7 +290,7 @@ top_level = true
 position = Vector2(-146, -534)
 script = ExtResource("9_2ryh1")
 priority = 1
-follow_mode = 5
+follow_mode = 2
 follow_target = NodePath("../../Entidades/Player")
 tween_resource = SubResource("Resource_0ho33")
 tween_on_load = false
