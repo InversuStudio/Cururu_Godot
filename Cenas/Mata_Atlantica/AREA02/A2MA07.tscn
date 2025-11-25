@@ -1,4 +1,4 @@
-[gd_scene load_steps=43 format=4 uid="uid://c4rls1pfwei2e"]
+[gd_scene load_steps=44 format=4 uid="uid://c4rls1pfwei2e"]
 
 [ext_resource type="Texture2D" uid="uid://c374cwih425cq" path="res://Sprites/Cenário/Tilemaps/Base.png" id="1_uhas7"]
 [ext_resource type="Texture2D" uid="uid://cqu5scrrmr5n5" path="res://Sprites/Cenário/Mata_Atlantica/Background/FUNDOCEU.png" id="1_xyjrg"]
@@ -28,6 +28,7 @@
 [ext_resource type="PackedScene" uid="uid://c7fydvoibqcaj" path="res://Objetos/Props/Miasma_Agua.tscn" id="24_xyjrg"]
 [ext_resource type="PackedScene" uid="uid://cy10kv6jimfwh" path="res://Objetos/Funcionalidade/CompDestroiPlataforma.tscn" id="25_eoclm"]
 [ext_resource type="Script" uid="uid://dd16yu704x6wt" path="res://Scripts/Componentes/BGM_Player.gd" id="25_xyjrg"]
+[ext_resource type="PackedScene" uid="uid://b1ycbf2ta6ces" path="res://Sprites/VFX/Iluminação/fire.tscn" id="29_781hd"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_uhas7"]
 size = Vector2(6138, 2310)
@@ -1203,3 +1204,12 @@ draw_limits = true
 limit_target = NodePath("../LimiteCamera")
 limit_margin = Vector4i(0, 0, 0, 50)
 metadata/_custom_type_script = "uid://bhexx6mj1xv3q"
+
+[node name="Node2D" parent="." instance=ExtResource("29_781hd")]
+position = Vector2(-4124, -10813)
+
+[node name="Node2D3" parent="." instance=ExtResource("29_781hd")]
+position = Vector2(-3823, -10821)
+
+[node name="Node2D2" parent="." instance=ExtResource("29_781hd")]
+position = Vector2(-3971, -10879)
