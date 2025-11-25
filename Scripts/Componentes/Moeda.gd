@@ -15,8 +15,16 @@ func _on_body_entered(body: Node2D) -> void:
 		# Soma valor ao total obtido
 		GameData.moedas += valor_moeda
 		Console._Print(GameData.moedas)
-		# Esconde sprite
-		$Imagem.hide()
+		
+		#Eleva a moeda e deixa o sprite transparente, depois deleta
+		var tweenPos = get_tree().create_tween()
+		var tweenMod = get_tree().create_tween()
+		
+		tweenPos.tween_property(self, "position", position - Vector2(0, 75), 0.3)
+		tweenMod.tween_property(self, "modulate:a", 0, 0.3)
+		
+		tweenPos.tween_callback(queue_free)
+		
 		# Toca som
 		if sfx:
 			var s:AudioStreamPlayer = AudioStreamPlayer.new()
@@ -26,8 +34,7 @@ func _on_body_entered(body: Node2D) -> void:
 			s.volume_db = -5.0
 			s.play()
 			return
-		# Deleta
-		queue_free()
+		
 
 func SfxTocou(s:AudioStreamPlayer) -> void:
 	s.queue_free()
