@@ -29,7 +29,7 @@ func _physics_process(delta: float) -> void:
 func _on_timer_timeout():
 	$Timer.wait_time = randf_range(0.5, 1.5)
 	if !_hunting:
-		dir = Vector2(randf_range(-1, 1), randf_range(-1, 1))
+		dir = Vector2(randf_range(-1, 1), randf_range(-1, 1)).normalized()
 		#dir = choose([Vector2.RIGHT, Vector2.UP, Vector2.LEFT, Vector2.DOWN])
 		print(dir)
 
