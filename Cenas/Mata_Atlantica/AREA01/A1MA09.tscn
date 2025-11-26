@@ -571,7 +571,7 @@ scale = Vector2(0.84375, 0.84375)
 texture = ExtResource("13_cuhbh")
 
 [node name="Frontfolha9" type="Sprite2D" parent="Cenario/Foreground"]
-position = Vector2(-4165, 203)
+position = Vector2(-4182, 177.5)
 scale = Vector2(0.6, 0.6)
 texture = ExtResource("13_cuhbh")
 flip_v = true
@@ -775,10 +775,10 @@ physics_interpolation_mode = 1
 position = Vector2(1206, -951)
 zoom = Vector2(0.8, 0.8)
 process_callback = 0
-limit_left = 6
-limit_top = -1402
-limit_right = 4783
-limit_bottom = -276
+limit_left = -4252
+limit_top = -9674
+limit_right = 8049
+limit_bottom = -5824
 editor_draw_limits = true
 
 [node name="PhantomCameraHost" type="Node" parent="Camera"]

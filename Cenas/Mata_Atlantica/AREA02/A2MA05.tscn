@@ -1,4 +1,4 @@
-[gd_scene load_steps=34 format=4 uid="uid://dvg6r2gfvcnfb"]
+[gd_scene load_steps=36 format=4 uid="uid://dvg6r2gfvcnfb"]
 
 [ext_resource type="Texture2D" uid="uid://cqu5scrrmr5n5" path="res://Sprites/Cenário/Mata_Atlantica/Background/FUNDOCEU.png" id="1_2x3ls"]
 [ext_resource type="Script" uid="uid://bhexx6mj1xv3q" path="res://addons/phantom_camera/scripts/phantom_camera/phantom_camera_2d.gd" id="1_3mtbg"]
@@ -28,6 +28,8 @@
 [ext_resource type="AudioStream" uid="uid://c7qftchbhu6xc" path="res://Audio/SFX/AMBIENTE/Musica_Jogo.mp3" id="26_patjh"]
 [ext_resource type="PackedScene" uid="uid://u48tpl3f3l20" path="res://Objetos/Props/DropGuarana.tscn" id="28_yk4cc"]
 [ext_resource type="PackedScene" uid="uid://dny88hy3w52nm" path="res://Objetos/Props/DropAcai.tscn" id="29_dug7p"]
+[ext_resource type="Texture2D" uid="uid://bg3yumuc4n238" path="res://Sprites/Cenário/Objetos/Upgrade/TOTEM.png" id="29_yk4cc"]
+[ext_resource type="PackedScene" uid="uid://dghxpclnjwg5k" path="res://Objetos/Props/PecaCoracao.tscn" id="30_dug7p"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g1p7l"]
 size = Vector2(7029, 5113)
@@ -206,8 +208,7 @@ scale = Vector2(1.1317073, 2.0922658)
 texture = ExtResource("2_ygqbx")
 
 [node name="Arvore3" type="Sprite2D" parent="ArvoresFundo"]
-position = Vector2(2624, -2679)
-rotation = 0.087266445
+position = Vector2(2463.0002, -2867)
 scale = Vector2(1.1317073, 2.1411126)
 texture = ExtResource("2_ygqbx")
 
@@ -271,7 +272,7 @@ texture = ExtResource("4_sux2v")
 flip_h = true
 
 [node name="Arvore11" type="Sprite2D" parent="ArvoresMeio"]
-position = Vector2(3062, -2796.848)
+position = Vector2(2820, -2797.0002)
 rotation = 0.08726645
 scale = Vector2(1.0951221, 2.2534168)
 texture = ExtResource("2_i4pw7")
@@ -461,6 +462,14 @@ rotation = 0.17453295
 scale = Vector2(0.7, 0.7)
 texture = ExtResource("4_sux2v")
 flip_h = true
+
+[node name="Totem" type="Sprite2D" parent="ArvoresFrente"]
+position = Vector2(-801.499, -1993.001)
+scale = Vector2(0.8066407, 0.8066407)
+texture = ExtResource("29_yk4cc")
+
+[node name="PecaCoracao" parent="ArvoresFrente" instance=ExtResource("30_dug7p")]
+position = Vector2(-805.4971, -2014.001)
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
 position = Vector2(540, 30)
@@ -3597,6 +3606,11 @@ position = Vector2(3705, -810)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("24_6t3gw")
 
+[node name="Cipó50" type="Sprite2D" parent="Cenario/Cipos"]
+position = Vector2(4256, -1077)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("24_6t3gw")
+
 [node name="Cipó28" type="Sprite2D" parent="Cenario/Cipos"]
 position = Vector2(3853, -1585)
 scale = Vector2(0.5, 0.5)
@@ -3761,9 +3775,6 @@ scale = Vector2(0.959163, 0.959163)
 
 [node name="Escorpiao10" parent="Entidades" instance=ExtResource("19_1vw3w")]
 position = Vector2(6179, -4481)
-
-[node name="Bau" parent="Entidades" instance=ExtResource("20_patjh")]
-position = Vector2(5328, -4451)
 
 [node name="Transicoes" type="Node2D" parent="."]
 

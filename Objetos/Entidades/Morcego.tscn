@@ -62,6 +62,7 @@ shape = SubResource("CircleShape2D_63e5l")
 
 [node name="Sprite" type="AnimatedSprite2D" parent="."]
 unique_name_in_owner = true
+modulate = Color(1.5790963, 1.5790963, 1.5790963, 1)
 self_modulate = Color(1.0542756, 1.6806661, 1.5060982, 1)
 position = Vector2(-4.3181305, 0.22733307)
 scale = Vector2(0.3648795, 0.3648795)

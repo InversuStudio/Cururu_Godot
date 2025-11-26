@@ -75,6 +75,8 @@ script = ExtResource("1_rixxk")
 
 [node name="Miasma" type="Sprite2D" parent="Porta"]
 modulate = Color(3.8147569, 3.8147569, 3.8147569, 1)
+self_modulate = Color(1.2237577, 1.2237577, 1.2237577, 1)
+show_behind_parent = true
 position = Vector2(93.00001, 34.054783)
 scale = Vector2(0.7837078, 0.7787574)
 texture = ExtResource("3_h4g8d")

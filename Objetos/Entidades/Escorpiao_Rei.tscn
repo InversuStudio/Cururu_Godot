@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://smwewolvvw6l"]
+[gd_scene load_steps=17 format=3 uid="uid://smwewolvvw6l"]
 
 [ext_resource type="Script" uid="uid://bxwx72gohremh" path="res://Scripts/Inimigos/Larva.gd" id="1_vgqag"]
 [ext_resource type="Texture2D" uid="uid://b0g3aehy8v827" path="res://Sprites/Inimigos/Escorpiao/scorpion_FRAME01.png" id="2_hg8ht"]
@@ -39,12 +39,16 @@ radius = 59.00001
 height = 177.94754
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_buqx5"]
-radius = 39.445328
-height = 161.57413
+radius = 44.26277
+height = 176.906
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ujy2f"]
 radius = 56.631668
 height = 143.42117
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_hg8ht"]
+radius = 58.17473
+height = 147.95206
 
 [node name="Escorpiao" type="CharacterBody2D"]
 scale = Vector2(0.67999953, 0.67999953)
@@ -59,6 +63,7 @@ shape = SubResource("RectangleShape2D_ntg74")
 
 [node name="Sprite" type="AnimatedSprite2D" parent="."]
 unique_name_in_owner = true
+modulate = Color(0.47682214, 0.4575567, 0.5538838, 1)
 self_modulate = Color(0.80079526, 0.25177434, 0, 1)
 position = Vector2(2, -197.05896)
 scale = Vector2(1.1962308, 1.1962308)
@@ -94,7 +99,7 @@ position = Vector2(49.500057, -120.394844)
 rotation = -0.7853982
 scale = Vector2(1.342759, 0.9138586)
 shape = SubResource("CapsuleShape2D_buqx5")
-debug_color = Color(1, 0, 0.0941176, 0.419608)
+debug_color = Color(0.36072385, 0.58757204, 0.5357076, 0.41960785)
 
 [node name="HitBox" parent="." node_paths=PackedStringArray("ignore") instance=ExtResource("8_dtm3y")]
 unique_name_in_owner = true
@@ -110,12 +115,11 @@ rotation = -1.57079
 shape = SubResource("CapsuleShape2D_ujy2f")
 debug_color = Color(0.807155, 0.414602, 3.85046e-07, 0.42)
 
-[node name="CollisionShape2D3" type="CollisionShape2D" parent="HitBox"]
-position = Vector2(43.421093, -120.394844)
-rotation = -0.7853982
-scale = Vector2(1.342759, 0.9138586)
-shape = SubResource("CapsuleShape2D_buqx5")
-debug_color = Color(0.807843, 0.415686, 0, 0.419608)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HitBox"]
+position = Vector2(45.23687, -118.42116)
+rotation = -0.77731293
+shape = SubResource("CapsuleShape2D_hg8ht")
+debug_color = Color(0.8492885, 0.30828175, 0.5518307, 0.41960785)
 
 [node name="RayDireita" type="RayCast2D" parent="."]
 unique_name_in_owner = true
