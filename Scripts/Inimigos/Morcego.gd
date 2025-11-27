@@ -42,10 +42,9 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 		_hunting = true
 		#print("caçando")
 
-func _on_area_2d_body_exited(body: Node2D) -> void:
+func _on_area_visao_saida_body_exited(body: Node2D) -> void:
 	if body.is_in_group("Player"):
 		_hunting = false
-		#print("idle")
 
 func RecebeuDano(_h:Array[HitBox]) -> void:
 	Console._Print("MORCEGO AIAIAI")

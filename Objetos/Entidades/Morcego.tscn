@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://bjvnm0aydr0vd"]
+[gd_scene load_steps=17 format=3 uid="uid://bjvnm0aydr0vd"]
 
 [ext_resource type="Script" uid="uid://byqf6bdnsd3m8" path="res://Scripts/Inimigos/Morcego.gd" id="1_j5mvf"]
 [ext_resource type="Texture2D" uid="uid://bicsa1wljjplt" path="res://Sprites/Inimigos/Morcego/iminigo_voador_FRAME01.png" id="2_87fsy"]
@@ -32,6 +32,8 @@ animations = [{
 "name": &"default",
 "speed": 8.0
 }]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_5qklw"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_j5mvf"]
 radius = 664.782
@@ -76,11 +78,21 @@ script = ExtResource("5_ohlaa")
 vida_max = 2
 metadata/_custom_type_script = "uid://hsdutxxttrp3"
 
-[node name="AreaVisao" type="Area2D" parent="."]
+[node name="AreaVisaoSaida" type="Area2D" parent="."]
 collision_layer = 0
 collision_mask = 2
 
-[node name="AreaColisaoVisao" type="CollisionShape2D" parent="AreaVisao"]
+[node name="AreaColisaoVisaoSaida" type="CollisionShape2D" parent="AreaVisaoSaida"]
+position = Vector2(0, -3.5762787e-07)
+scale = Vector2(125, 125)
+shape = SubResource("CircleShape2D_5qklw")
+debug_color = Color(0.7314883, 0.3718521, 0.7511793, 0.41960785)
+
+[node name="AreaVisaoEntrada" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 2
+
+[node name="AreaColisaoVisaoEntrada" type="CollisionShape2D" parent="AreaVisaoEntrada"]
 shape = SubResource("CircleShape2D_j5mvf")
 
 [node name="HurtBox" parent="." node_paths=PackedStringArray("comp_vida", "parent", "sprite") instance=ExtResource("5_87fsy")]
@@ -126,7 +138,8 @@ autostart = true
 unique_name_in_owner = true
 one_shot = true
 
-[connection signal="body_entered" from="AreaVisao" to="." method="_on_area_2d_body_entered"]
-[connection signal="body_exited" from="AreaVisao" to="." method="_on_area_2d_body_exited"]
+[connection signal="body_exited" from="AreaVisaoSaida" to="." method="_on_area_visao_saida_body_exited"]
+[connection signal="body_entered" from="AreaVisaoEntrada" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="AreaVisaoEntrada" to="." method="_on_area_2d_body_exited"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="timeout" from="TimerDano" to="." method="_on_timer_dano_timeout"]
