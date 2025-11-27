@@ -1,14 +1,27 @@
-extends Area2D
+extends RigidBody2D
 
 ## Valor a ser somado a quantia total
 @export var valor_moeda: int = 1
 ## Efeito sonoro aoser coletado
 @export var sfx: AudioStream = null
 
-func _ready() -> void:
-	connect("body_entered", _on_body_entered)
+var dir: Vector2 = Vector2.ZERO
+var velocity: Vector2 = Vector2.ZERO
 
-func _on_body_entered(body: Node2D) -> void:
+func _ready() -> void:
+	dir = Vector2(randf_range(-1, 1), randf_range(-1, -0.5)).normalized()
+	velocity = dir * 10
+
+func _physics_process(delta: float) -> void:
+	velocity = velocity.move_toward(Vector2.ZERO, 0.1)
+	move_and_collide(velocity)
+
+func SfxTocou(s:AudioStreamPlayer) -> void:
+	s.queue_free()
+	call_deferred("queue_free")
+
+
+func _on_area_2d_body_entered(body: Node2D) -> void:
 	if body.is_in_group("Player"):
 		# Desabilita colisão
 		set_deferred("monitoring", false)
@@ -34,8 +47,3 @@ func _on_body_entered(body: Node2D) -> void:
 			s.volume_db = -5.0
 			s.play()
 			return
-		
-
-func SfxTocou(s:AudioStreamPlayer) -> void:
-	s.queue_free()
-	call_deferred("queue_free")

@@ -27,7 +27,6 @@ func _on_timer_timeout():
 	$Timer.wait_time = randf_range(0.5, 1.5)
 	if !_hunting:
 		dir = Vector2(randf_range(-1, 1), randf_range(-1, 1)).normalized()
-		print(dir)
 
 func choose(array):
 	array.shuffle()
@@ -54,5 +53,6 @@ func Pushback(pos:Vector2) -> void:
 	%TimerDano.start()
 
 func Morte() -> void:
-	Mundos.SpawnMoeda(%SpawnMoeda.global_position)
+	for i in range(3):
+		Mundos.SpawnMoeda(%SpawnMoeda.global_position)
 	call_deferred("queue_free")

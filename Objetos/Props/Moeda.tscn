@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://bktu336s6ruri"]
+[gd_scene load_steps=7 format=3 uid="uid://bktu336s6ruri"]
 
 [ext_resource type="Script" uid="uid://67ddt0ghyjwf" path="res://Scripts/Componentes/Moeda.gd" id="1_c1as6"]
 [ext_resource type="AudioStream" uid="uid://d27segrop0yia" path="res://Audio/SFX/AMBIENTE/som_moeda.wav" id="2_0w4hx"]
@@ -8,17 +8,31 @@
 [sub_resource type="CircleShape2D" id="CircleShape2D_jisbj"]
 radius = 32.0156
 
-[node name="Moeda" type="Area2D"]
-collision_mask = 2
+[sub_resource type="CircleShape2D" id="CircleShape2D_0w4hx"]
+
+[node name="Moeda" type="RigidBody2D"]
+collision_layer = 128
+collision_mask = 3
 script = ExtResource("1_c1as6")
 sfx = ExtResource("2_0w4hx")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="AreaFisica" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_jisbj")
 
 [node name="Imagem" type="Sprite2D" parent="."]
+position = Vector2(0, -5.9999995)
 scale = Vector2(1.4374999, 1.4374999)
 texture = ExtResource("2_soojx")
 
 [node name="OtimizadorSprite" parent="." instance=ExtResource("4_0w4hx")]
 rect = Rect2(-30, -31, 60, 66)
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 128
+collision_mask = 2
+
+[node name="AreaColeta" type="CollisionShape2D" parent="Area2D"]
+scale = Vector2(5, 5)
+shape = SubResource("CircleShape2D_0w4hx")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
