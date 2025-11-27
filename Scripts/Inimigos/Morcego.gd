@@ -1,10 +1,7 @@
 extends CharacterBody2D
-#https://youtu.be/SkDCubKXj10?si=f10kJkj5mRmFEE2D
-#Só movimento feito, ainda é necessário rever outras ideias
-# Podexá, cumpadi -G
 
 @export var speed: float = 200
-var dir: Vector2 = Vector2.ZERO # Sempre adiciono um valor padrão, porque computadores.
+var dir: Vector2 = Vector2.ZERO
 var _hunting: bool = false
 var trava_move: bool = false
 
@@ -30,7 +27,6 @@ func _on_timer_timeout():
 	$Timer.wait_time = randf_range(0.5, 1.5)
 	if !_hunting:
 		dir = Vector2(randf_range(-1, 1), randf_range(-1, 1)).normalized()
-		#dir = choose([Vector2.RIGHT, Vector2.UP, Vector2.LEFT, Vector2.DOWN])
 		print(dir)
 
 func choose(array):
@@ -40,14 +36,12 @@ func choose(array):
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	if body.is_in_group("Player"):
 		_hunting = true
-		#print("caçando")
 
 func _on_area_visao_saida_body_exited(body: Node2D) -> void:
 	if body.is_in_group("Player"):
 		_hunting = false
 
 func RecebeuDano(_h:Array[HitBox]) -> void:
-	Console._Print("MORCEGO AIAIAI")
 	trava_move = true
 	%TimerDano.start(.2)
 
@@ -58,3 +52,7 @@ func Pushback(pos:Vector2) -> void:
 	trava_move = true
 	%HurtBox.CalcKnockback(distancia_push, tempo_push, pos)
 	%TimerDano.start()
+
+func Morte() -> void:
+	Mundos.SpawnMoeda(%SpawnMoeda.global_position)
+	call_deferred("queue_free")
