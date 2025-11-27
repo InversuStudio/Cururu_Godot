@@ -52,7 +52,7 @@ height = 147.95206
 
 [node name="Escorpiao" type="CharacterBody2D"]
 scale = Vector2(0.67999953, 0.67999953)
-collision_layer = 2
+collision_layer = 4
 script = ExtResource("1_vgqag")
 velocidade = 1.6
 
@@ -80,7 +80,7 @@ metadata/_custom_type_script = "uid://hsdutxxttrp3"
 [node name="HurtBox" parent="." node_paths=PackedStringArray("comp_vida", "parent", "sprite") instance=ExtResource("6_rcu2w")]
 unique_name_in_owner = true
 scale = Vector2(2.2352936, 2.2352936)
-collision_layer = 8
+collision_layer = 16
 comp_vida = NodePath("../Vida")
 distancia_knockback = 0.27
 tempo_knockback = 0.2
@@ -105,7 +105,7 @@ debug_color = Color(0.36072385, 0.58757204, 0.5357076, 0.41960785)
 unique_name_in_owner = true
 position = Vector2(13.58827, 0)
 scale = Vector2(2.2352936, 2.2352936)
-collision_layer = 8
+collision_layer = 16
 dano = 2
 ignore = NodePath("../HurtBox")
 

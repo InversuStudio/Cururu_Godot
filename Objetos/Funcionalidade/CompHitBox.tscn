@@ -4,8 +4,8 @@
 
 [node name="HitBox" type="Area2D"]
 editor_description = "Adiciona colisão a um componente. Requer componente de vida"
-collision_layer = 4
-collision_mask = 4
+collision_layer = 8
+collision_mask = 8
 script = ExtResource("1_187c1")
 
 [node name="SFX" type="AudioStreamPlayer2D" parent="."]

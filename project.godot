@@ -190,7 +190,12 @@ locale/translations_pot_files=PackedStringArray("res://Dialogos/Teste.dialogue")
 
 [layer_names]
 
-2d_physics/layer_8="Moedas"
+2d_physics/layer_1="Mundo"
+2d_physics/layer_2="Cururu"
+2d_physics/layer_3="Inimigos"
+2d_physics/layer_4="Hit/Hurt Cururu"
+2d_physics/layer_5="HitHurt Inimigos"
+2d_physics/layer_6="Coletaveis"
 
 [physics]
 

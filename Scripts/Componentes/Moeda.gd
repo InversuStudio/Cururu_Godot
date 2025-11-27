@@ -12,14 +12,13 @@ func _ready() -> void:
 	dir = Vector2(randf_range(-1, 1), randf_range(-1, -0.5)).normalized()
 	velocity = dir * 10
 
-func _physics_process(delta: float) -> void:
+func _physics_process(_delta: float) -> void:
 	velocity = velocity.move_toward(Vector2.ZERO, 0.1)
 	move_and_collide(velocity)
 
 func SfxTocou(s:AudioStreamPlayer) -> void:
 	s.queue_free()
 	call_deferred("queue_free")
-
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	if body.is_in_group("Player"):
@@ -46,4 +45,4 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 			s.finished.connect(SfxTocou.bind(s))
 			s.volume_db = -5.0
 			s.play()
-			return
+			#return

@@ -1249,9 +1249,10 @@ metadata/_custom_type_script = "uid://hsdutxxttrp3"
 [node name="HurtContainer" type="Node2D" parent="."]
 
 [node name="HurtBox" parent="HurtContainer" node_paths=PackedStringArray("comp_vida", "parent", "sprite") instance=ExtResource("46_wjcvp")]
+collision_mask = 16
 comp_vida = NodePath("../../Vida")
 distancia_knockback = 1.8
-tempo_knockback = 0.5
+tempo_knockback = 0.2
 cooldown_dano = 1.35
 hit_sfx = ExtResource("77_d7mdf")
 parent = NodePath("../..")
@@ -1267,7 +1268,7 @@ position = Vector2(-2, 0)
 
 [node name="Melee1" parent="HitContainer" node_paths=PackedStringArray("ignore", "parent") instance=ExtResource("47_grb16")]
 position = Vector2(33, -15)
-collision_mask = 12
+collision_mask = 16
 ignore = NodePath("../../HurtContainer/HurtBox")
 parent = NodePath("../..")
 
@@ -1279,7 +1280,7 @@ debug_color = Color(0.69455, 0.495447, 0, 0.42)
 
 [node name="Melee2" parent="HitContainer" node_paths=PackedStringArray("ignore", "parent") instance=ExtResource("47_grb16")]
 position = Vector2(12, 0)
-collision_mask = 12
+collision_mask = 16
 ignore = NodePath("../../HurtContainer/HurtBox")
 parent = NodePath("../..")
 
@@ -1290,7 +1291,7 @@ shape = SubResource("CapsuleShape2D_wq158")
 disabled = true
 
 [node name="MeleeUp" parent="HitContainer" node_paths=PackedStringArray("ignore", "parent") instance=ExtResource("47_grb16")]
-collision_mask = 12
+collision_mask = 16
 ignore = NodePath("../../HurtContainer/HurtBox")
 parent = NodePath("../..")
 
@@ -1301,7 +1302,7 @@ shape = SubResource("CapsuleShape2D_ny8nr")
 disabled = true
 
 [node name="MeleeDown" parent="HitContainer" node_paths=PackedStringArray("ignore", "parent") instance=ExtResource("47_grb16")]
-collision_mask = 12
+collision_mask = 16
 ignore = NodePath("../../HurtContainer/HurtBox")
 parent = NodePath("../..")
 
@@ -1312,7 +1313,7 @@ shape = SubResource("CapsuleShape2D_2t31h")
 disabled = true
 
 [node name="Special" parent="HitContainer" node_paths=PackedStringArray("ignore", "parent") groups=["Special"] instance=ExtResource("47_grb16")]
-collision_mask = 12
+collision_mask = 16
 dano = 2
 ignore = NodePath("../../HurtContainer/HurtBox")
 parent = NodePath("../..")
@@ -1324,7 +1325,7 @@ shape = SubResource("CapsuleShape2D_1dbdn")
 disabled = true
 
 [node name="SpecialUp" parent="HitContainer" node_paths=PackedStringArray("ignore", "parent") groups=["Special"] instance=ExtResource("47_grb16")]
-collision_mask = 12
+collision_mask = 16
 dano = 2
 ignore = NodePath("../../HurtContainer/HurtBox")
 parent = NodePath("../..")
@@ -1335,7 +1336,7 @@ shape = SubResource("CapsuleShape2D_s2eek")
 disabled = true
 
 [node name="SpecialDown" parent="HitContainer" node_paths=PackedStringArray("ignore", "parent") groups=["Special"] instance=ExtResource("47_grb16")]
-collision_mask = 12
+collision_mask = 16
 dano = 2
 ignore = NodePath("../../HurtContainer/HurtBox")
 parent = NodePath("../..")
@@ -1433,10 +1434,11 @@ script = ExtResource("53_k0fov")
 chao_state = NodePath("../Chao")
 fall_state = NodePath("../Fall")
 
-[node name="Dano" type="Node" parent="StateMachine" node_paths=PackedStringArray("fall_state", "chao_state")]
+[node name="Dano" type="Node" parent="StateMachine" node_paths=PackedStringArray("fall_state", "chao_state", "hurtbox")]
 script = ExtResource("54_jgcph")
 fall_state = NodePath("../Fall")
 chao_state = NodePath("../Chao")
+hurtbox = NodePath("../../HurtContainer/HurtBox")
 
 [node name="Melee" type="Node" parent="StateMachine" node_paths=PackedStringArray("chao_state", "fall_state", "hitboxes")]
 script = ExtResource("55_7uoqt")
@@ -1455,7 +1457,6 @@ hitboxes = [NodePath("../../HitContainer/Special"), NodePath("../../HitContainer
 [connection signal="animation_finished" from="Anim" to="StateMachine/Chao" method="_on_anim_animation_finished"]
 [connection signal="animation_finished" from="Anim" to="StateMachine/Fall" method="_on_anim_animation_finished"]
 [connection signal="animation_finished" from="Anim" to="StateMachine/Dash" method="_on_anim_animation_finished"]
-[connection signal="animation_finished" from="Anim" to="StateMachine/Dano" method="_on_anim_animation_finished"]
 [connection signal="animation_finished" from="Anim" to="StateMachine/Special" method="_on_anim_animation_finished"]
 [connection signal="timeout" from="Timers/Coyote" to="StateMachine/Fall" method="_on_coyote_timeout"]
 [connection signal="timeout" from="Timers/JumpLag" to="StateMachine/Fall" method="_on_jump_lag_timeout"]
