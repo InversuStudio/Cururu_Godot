@@ -24,7 +24,6 @@
 [ext_resource type="PackedScene" uid="uid://bu62qgilsxetf" path="res://Objetos/Entidades/Escorpiao.tscn" id="21_54dor"]
 [ext_resource type="Texture2D" uid="uid://uq6dbjep5wva" path="res://Sprites/Cenário/Mata_Atlantica/Foreground/frontfolha.png" id="23_3qqkp"]
 [ext_resource type="Texture2D" uid="uid://c2yapafbd3cnf" path="res://Sprites/Cenário/Mata_Atlantica/Foreground/cipó.png" id="24_xxaxg"]
-[ext_resource type="Script" uid="uid://bd046eokvcnu2" path="res://addons/phantom_camera/scripts/phantom_camera_host/phantom_camera_host.gd" id="25_4e4qg"]
 [ext_resource type="Script" uid="uid://bhexx6mj1xv3q" path="res://addons/phantom_camera/scripts/phantom_camera/phantom_camera_2d.gd" id="26_yftf5"]
 [ext_resource type="Texture2D" uid="uid://cw2yeg7ynw0kl" path="res://Sprites/Cenário/Mata_Atlantica/Chao/chap_externo.png" id="27_4e4qg"]
 [ext_resource type="Script" uid="uid://8umksf8e80fw" path="res://addons/phantom_camera/scripts/resources/tween_resource.gd" id="27_l7gx4"]
@@ -37,6 +36,7 @@
 [ext_resource type="Script" uid="uid://dd16yu704x6wt" path="res://Scripts/Componentes/BGM_Player.gd" id="31_op0pn"]
 [ext_resource type="AudioStream" uid="uid://c7qftchbhu6xc" path="res://Audio/SFX/AMBIENTE/Musica_Jogo.mp3" id="32_54dor"]
 [ext_resource type="Texture2D" uid="uid://cgx43fkvk7fk7" path="res://Sprites/Cenário/Miasma/miasma01.png" id="34_od6fv"]
+[ext_resource type="PackedScene" uid="uid://u28e3eudu6ch" path="res://Objetos/Funcionalidade/MainCamera.tscn" id="37_r86pu"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_l7gx4"]
 size = Vector2(10701, 6336)
@@ -2119,23 +2119,6 @@ rotation = 0.08726649
 scale = Vector2(1.2129631, 1.2129629)
 texture = ExtResource("30_op0pn")
 
-[node name="Camera2D" type="Camera2D" parent="."]
-physics_interpolation_mode = 1
-position = Vector2(-17693, -3583)
-zoom = Vector2(0.8, 0.8)
-process_callback = 0
-limit_left = -18893
-limit_top = -5349
-limit_right = -8192
-limit_bottom = 937
-editor_draw_limits = true
-
-[node name="PhantomCameraHost" type="Node" parent="Camera2D"]
-process_priority = 300
-process_physics_priority = 300
-script = ExtResource("25_4e4qg")
-metadata/_custom_type_script = "uid://bd046eokvcnu2"
-
 [node name="PlataformaSome2" type="StaticBody2D" parent="."]
 position = Vector2(-13664, -3514)
 
@@ -2214,3 +2197,11 @@ texture = ExtResource("24_xxaxg")
 [node name="Cipó8" type="Sprite2D" parent="."]
 position = Vector2(-12540, -4323)
 texture = ExtResource("24_xxaxg")
+
+[node name="MainCamera" parent="." instance=ExtResource("37_r86pu")]
+position = Vector2(-17693, -3583)
+zoom = Vector2(0.8, 0.8)
+limit_left = -18893
+limit_top = -5349
+limit_right = -8192
+limit_bottom = 937

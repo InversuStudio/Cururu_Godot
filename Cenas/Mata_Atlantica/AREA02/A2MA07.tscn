@@ -12,7 +12,6 @@
 [ext_resource type="Texture2D" uid="uid://dyv700lptbkyq" path="res://Sprites/Cenário/Mata_Atlantica/Background/composição2.png" id="4_eoclm"]
 [ext_resource type="Texture2D" uid="uid://ctar30vsktrrb" path="res://Sprites/Cenário/Mata_Atlantica/Background/FUNDONEVOA2.png" id="4_gnpt0"]
 [ext_resource type="Texture2D" uid="uid://dv0q1amqoq168" path="res://Sprites/Cenário/Mata_Atlantica/Background/mato03.png" id="4_jfnfb"]
-[ext_resource type="Script" uid="uid://bd046eokvcnu2" path="res://addons/phantom_camera/scripts/phantom_camera_host/phantom_camera_host.gd" id="4_kt8lh"]
 [ext_resource type="PackedScene" uid="uid://nohq28uk7lfk" path="res://Objetos/Entidades/Player.tscn" id="5_yius8"]
 [ext_resource type="Texture2D" uid="uid://dru600hg8oaty" path="res://Sprites/Cenário/Mata_Atlantica/Background/mato02.png" id="7_n1voe"]
 [ext_resource type="Texture2D" uid="uid://drcemrcpb3ydc" path="res://Sprites/Cenário/Mata_Atlantica/Chao/moita_chao2.png" id="9_gnpt0"]
@@ -33,6 +32,7 @@
 [ext_resource type="PackedScene" uid="uid://c7fydvoibqcaj" path="res://Objetos/Props/Miasma_Agua.tscn" id="24_xyjrg"]
 [ext_resource type="PackedScene" uid="uid://cy10kv6jimfwh" path="res://Objetos/Funcionalidade/CompDestroiPlataforma.tscn" id="25_eoclm"]
 [ext_resource type="Script" uid="uid://dd16yu704x6wt" path="res://Scripts/Componentes/BGM_Player.gd" id="25_xyjrg"]
+[ext_resource type="PackedScene" uid="uid://u28e3eudu6ch" path="res://Objetos/Funcionalidade/MainCamera.tscn" id="33_giq4m"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_uhas7"]
 size = Vector2(6138, 2310)
@@ -1199,23 +1199,6 @@ z_index = 0
 position = Vector2(-887.00006, -10384)
 scale = Vector2(0.919994, 0.919994)
 
-[node name="Camera2D" type="Camera2D" parent="."]
-physics_interpolation_mode = 1
-position = Vector2(-1590, -10469)
-zoom = Vector2(0.8, 0.8)
-process_callback = 0
-limit_left = -6528
-limit_top = -12054
-limit_right = -390
-limit_bottom = -9794
-editor_draw_limits = true
-
-[node name="PhantomCameraHost" type="Node" parent="Camera2D"]
-process_priority = 300
-process_physics_priority = 300
-script = ExtResource("4_kt8lh")
-metadata/_custom_type_script = "uid://bd046eokvcnu2"
-
 [node name="BGM_Player" type="Node" parent="."]
 script = ExtResource("25_xyjrg")
 volume = null
@@ -1283,3 +1266,11 @@ draw_limits = true
 limit_target = NodePath("../LimiteCamera")
 limit_margin = Vector4i(0, 0, 0, 50)
 metadata/_custom_type_script = "uid://bhexx6mj1xv3q"
+
+[node name="MainCamera" parent="." instance=ExtResource("33_giq4m")]
+position = Vector2(-1590, -10469)
+zoom = Vector2(0.8, 0.8)
+limit_left = -6528
+limit_top = -12054
+limit_right = -390
+limit_bottom = -9794

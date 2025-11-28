@@ -27,10 +27,10 @@
 [ext_resource type="Texture2D" uid="uid://nr8tuj0enpia" path="res://Sprites/Cenário/Objetos/Savepoint/banco_save.png" id="12_q40bt"]
 [ext_resource type="Script" uid="uid://bhexx6mj1xv3q" path="res://addons/phantom_camera/scripts/phantom_camera/phantom_camera_2d.gd" id="14_65x72"]
 [ext_resource type="Script" uid="uid://8umksf8e80fw" path="res://addons/phantom_camera/scripts/resources/tween_resource.gd" id="15_3han4"]
-[ext_resource type="Script" uid="uid://bd046eokvcnu2" path="res://addons/phantom_camera/scripts/phantom_camera_host/phantom_camera_host.gd" id="16_68j53"]
 [ext_resource type="PackedScene" uid="uid://bxixu84ahcyba" path="res://Objetos/NPCs/NpcBasico.tscn" id="20_1ewfi"]
 [ext_resource type="Script" uid="uid://dd16yu704x6wt" path="res://Scripts/Componentes/BGM_Player.gd" id="27_nh2iu"]
 [ext_resource type="AudioStream" uid="uid://c7qftchbhu6xc" path="res://Audio/SFX/AMBIENTE/Musica_Jogo.mp3" id="28_m4yll"]
+[ext_resource type="PackedScene" uid="uid://u28e3eudu6ch" path="res://Objetos/Funcionalidade/MainCamera.tscn" id="31_f8u2d"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6hqtm"]
 size = Vector2(11501, 2643)
@@ -1212,25 +1212,16 @@ limit_target = NodePath("../LimiteCamera")
 limit_margin = Vector4i(0, 0, 0, 50)
 metadata/_custom_type_script = "uid://bhexx6mj1xv3q"
 
-[node name="Camera" type="Camera2D" parent="."]
-physics_interpolation_mode = 1
-position = Vector2(-7882, -138.00002)
-zoom = Vector2(0.8, 0.8)
-process_callback = 0
-limit_left = -9082
-limit_top = -1286
-limit_right = 2419
-limit_bottom = 1307
-editor_draw_limits = true
-
-[node name="PhantomCameraHost" type="Node" parent="Camera"]
-process_priority = 300
-process_physics_priority = 300
-script = ExtResource("16_68j53")
-metadata/_custom_type_script = "uid://bd046eokvcnu2"
-
 [node name="BGM_Player" type="Node" parent="."]
 script = ExtResource("27_nh2iu")
 musica = ExtResource("28_m4yll")
 volume = -0.5
 metadata/_custom_type_script = "uid://dd16yu704x6wt"
+
+[node name="MainCamera" parent="." instance=ExtResource("31_f8u2d")]
+position = Vector2(-7882, -138.00002)
+zoom = Vector2(0.8, 0.8)
+limit_left = -9082
+limit_top = -1286
+limit_right = 2419
+limit_bottom = 1307

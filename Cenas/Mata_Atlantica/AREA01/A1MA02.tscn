@@ -6,7 +6,6 @@
 [ext_resource type="Texture2D" uid="uid://c374cwih425cq" path="res://Sprites/Cenário/Tilemaps/Base.png" id="1_k4aup"]
 [ext_resource type="Script" uid="uid://8umksf8e80fw" path="res://addons/phantom_camera/scripts/resources/tween_resource.gd" id="2_yt3qm"]
 [ext_resource type="PackedScene" uid="uid://nohq28uk7lfk" path="res://Objetos/Entidades/Player.tscn" id="3_dr2ls"]
-[ext_resource type="Script" uid="uid://bd046eokvcnu2" path="res://addons/phantom_camera/scripts/phantom_camera_host/phantom_camera_host.gd" id="3_tej34"]
 [ext_resource type="Texture2D" uid="uid://cqu5scrrmr5n5" path="res://Sprites/Cenário/Mata_Atlantica/Background/FUNDOCEU.png" id="3_wtee6"]
 [ext_resource type="Texture2D" uid="uid://dog2ml3xbyho2" path="res://Sprites/Cenário/Mata_Atlantica/Background/arvore2.png" id="4_yf878"]
 [ext_resource type="Texture2D" uid="uid://k22xru6heyh3" path="res://Sprites/Cenário/Mata_Atlantica/Background/arvore0.png" id="5_61gve"]
@@ -18,6 +17,7 @@
 [ext_resource type="Texture2D" uid="uid://ctar30vsktrrb" path="res://Sprites/Cenário/Mata_Atlantica/Background/FUNDONEVOA2.png" id="9_78wer"]
 [ext_resource type="PackedScene" uid="uid://bjvnm0aydr0vd" path="res://Objetos/Entidades/Morcego.tscn" id="9_fhpg3"]
 [ext_resource type="PackedScene" uid="uid://cdhelg6sloxbj" path="res://Objetos/Props/PortaTemp.tscn" id="10_0syxa"]
+[ext_resource type="PackedScene" uid="uid://u28e3eudu6ch" path="res://Objetos/Funcionalidade/MainCamera.tscn" id="10_3ocar"]
 [ext_resource type="PackedScene" uid="uid://bu62qgilsxetf" path="res://Objetos/Entidades/Escorpiao.tscn" id="10_tj4kc"]
 [ext_resource type="Texture2D" uid="uid://cjl88xeknofui" path="res://Sprites/Cenário/Mata_Atlantica/Chao/grama_reto.png" id="12_emg7a"]
 [ext_resource type="Texture2D" uid="uid://cw2yeg7ynw0kl" path="res://Sprites/Cenário/Mata_Atlantica/Chao/chap_externo.png" id="13_n8ivf"]
@@ -1455,23 +1455,6 @@ texture = ExtResource("28_441k1")
 position = Vector2(5328, -11654)
 texture = ExtResource("28_441k1")
 
-[node name="Camera" type="Camera2D" parent="Cenario"]
-physics_interpolation_mode = 1
-position = Vector2(3001, -60)
-zoom = Vector2(0.8, 0.8)
-process_callback = 0
-limit_left = 1801
-limit_top = -6000
-limit_right = 5506
-limit_bottom = 615
-editor_draw_limits = true
-
-[node name="PhantomCameraHost" type="Node" parent="Cenario/Camera"]
-process_priority = 300
-process_physics_priority = 300
-script = ExtResource("3_tej34")
-metadata/_custom_type_script = "uid://bd046eokvcnu2"
-
 [node name="TransicoesFase" type="Node2D" parent="."]
 position = Vector2(5324, -4502)
 
@@ -1584,3 +1567,11 @@ draw_limits = true
 limit_target = NodePath("../LimiteCamera")
 limit_margin = Vector4i(0, 0, 0, 50)
 metadata/_custom_type_script = "uid://bhexx6mj1xv3q"
+
+[node name="MainCamera" parent="." instance=ExtResource("10_3ocar")]
+position = Vector2(3001, -60)
+zoom = Vector2(0.8, 0.8)
+limit_left = 1801
+limit_top = -6000
+limit_right = 5506
+limit_bottom = 615

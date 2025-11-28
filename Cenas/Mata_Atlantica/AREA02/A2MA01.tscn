@@ -16,7 +16,6 @@
 [ext_resource type="Texture2D" uid="uid://rbtvfm4m7ft" path="res://Sprites/VFX/Iluminação/SOMBRA2.png" id="6_hl7mq"]
 [ext_resource type="Texture2D" uid="uid://cjl88xeknofui" path="res://Sprites/Cenário/Mata_Atlantica/Chao/grama_reto.png" id="7_52kex"]
 [ext_resource type="Texture2D" uid="uid://ctar30vsktrrb" path="res://Sprites/Cenário/Mata_Atlantica/Background/FUNDONEVOA2.png" id="7_ctjy6"]
-[ext_resource type="Script" uid="uid://bd046eokvcnu2" path="res://addons/phantom_camera/scripts/phantom_camera_host/phantom_camera_host.gd" id="7_wq0hp"]
 [ext_resource type="Texture2D" uid="uid://cj4rj4oj20ogb" path="res://Sprites/Cenário/Mata_Atlantica/Chao/chap_interno.png" id="8_iuhbl"]
 [ext_resource type="Texture2D" uid="uid://cw2yeg7ynw0kl" path="res://Sprites/Cenário/Mata_Atlantica/Chao/chap_externo.png" id="9_vptch"]
 [ext_resource type="PackedScene" uid="uid://bei1s8te3cwko" path="res://Sprites/Cenário/Mata_Atlantica/Interativos/plataforma.tscn" id="13_w4lji"]
@@ -25,6 +24,7 @@
 [ext_resource type="Texture2D" uid="uid://jecy4bfqqqxu" path="res://Sprites/Cenário/Mata_Atlantica/Teto/Moita teste.png" id="24_csesn"]
 [ext_resource type="PackedScene" uid="uid://bjvnm0aydr0vd" path="res://Objetos/Entidades/Morcego.tscn" id="26_ctjy6"]
 [ext_resource type="PackedScene" uid="uid://bu62qgilsxetf" path="res://Objetos/Entidades/Escorpiao.tscn" id="27_aw4uh"]
+[ext_resource type="PackedScene" uid="uid://u28e3eudu6ch" path="res://Objetos/Funcionalidade/MainCamera.tscn" id="27_ctjy6"]
 [ext_resource type="Script" uid="uid://dd16yu704x6wt" path="res://Scripts/Componentes/BGM_Player.gd" id="27_hdfdg"]
 [ext_resource type="AudioStream" uid="uid://c7qftchbhu6xc" path="res://Audio/SFX/AMBIENTE/Musica_Jogo.mp3" id="28_75oum"]
 
@@ -1219,23 +1219,6 @@ posicao = Vector2(2870, -599)
 position = Vector2(84, 221)
 shape = SubResource("RectangleShape2D_x3mff")
 
-[node name="Camera" type="Camera2D" parent="."]
-physics_interpolation_mode = 1
-position = Vector2(512.0005, 847)
-zoom = Vector2(0.8, 0.8)
-process_callback = 0
-limit_left = 182
-limit_top = -2903
-limit_right = 9305
-limit_bottom = -949
-editor_draw_limits = true
-
-[node name="PhantomCameraHost" type="Node" parent="Camera"]
-process_priority = 300
-process_physics_priority = 300
-script = ExtResource("7_wq0hp")
-metadata/_custom_type_script = "uid://bd046eokvcnu2"
-
 [node name="BGM_Player" type="Node" parent="."]
 script = ExtResource("27_hdfdg")
 musica = ExtResource("28_75oum")
@@ -1259,3 +1242,11 @@ draw_limits = true
 limit_target = NodePath("../LimiteCamera")
 limit_margin = Vector4i(0, 0, 0, 50)
 metadata/_custom_type_script = "uid://bhexx6mj1xv3q"
+
+[node name="MainCamera" parent="." instance=ExtResource("27_ctjy6")]
+position = Vector2(512.0005, 847)
+zoom = Vector2(0.8, 0.8)
+limit_left = -1538
+limit_top = -1896
+limit_right = 3356
+limit_bottom = 1522

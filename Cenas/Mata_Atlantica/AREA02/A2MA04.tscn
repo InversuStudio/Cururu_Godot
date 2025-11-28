@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://c374cwih425cq" path="res://Sprites/Cenário/Tilemaps/Base.png" id="2_qebi2"]
 [ext_resource type="Script" uid="uid://bhexx6mj1xv3q" path="res://addons/phantom_camera/scripts/phantom_camera/phantom_camera_2d.gd" id="4_4dku8"]
 [ext_resource type="Script" uid="uid://8umksf8e80fw" path="res://addons/phantom_camera/scripts/resources/tween_resource.gd" id="5_lseys"]
-[ext_resource type="Script" uid="uid://bd046eokvcnu2" path="res://addons/phantom_camera/scripts/phantom_camera_host/phantom_camera_host.gd" id="6_hqvp8"]
+[ext_resource type="PackedScene" uid="uid://u28e3eudu6ch" path="res://Objetos/Funcionalidade/MainCamera.tscn" id="6_ajh3t"]
 [ext_resource type="PackedScene" uid="uid://1apfpwlqocxn" path="res://Objetos/Funcionalidade/TransicaoFase.tscn" id="7_w1p45"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_brlxw"]
@@ -183,23 +183,6 @@ draw_limits = true
 limit_target = NodePath("../Camarea")
 metadata/_custom_type_script = "uid://bhexx6mj1xv3q"
 
-[node name="Camera2D2" type="Camera2D" parent="."]
-physics_interpolation_mode = 1
-position = Vector2(4691.333, -1871.9999)
-zoom = Vector2(0.9, 0.9)
-process_callback = 0
-limit_left = 2436
-limit_top = -4711
-limit_right = 5758
-limit_bottom = 1530
-editor_draw_limits = true
-
-[node name="PhantomCameraHost" type="Node" parent="Camera2D2"]
-process_priority = 300
-process_physics_priority = 300
-script = ExtResource("6_hqvp8")
-metadata/_custom_type_script = "uid://bd046eokvcnu2"
-
 [node name="TransicaoFase2" parent="." instance=ExtResource("7_w1p45")]
 position = Vector2(5745, -1733)
 destino = 18
@@ -220,3 +203,11 @@ shape = SubResource("RectangleShape2D_bt7f3")
 
 [node name="Node2D" type="Node2D" parent="."]
 position = Vector2(2616, 1285)
+
+[node name="MainCamera" parent="." instance=ExtResource("6_ajh3t")]
+position = Vector2(4691.333, -1871.9999)
+zoom = Vector2(0.9, 0.9)
+limit_left = 2436
+limit_top = -4711
+limit_right = 5758
+limit_bottom = 1530

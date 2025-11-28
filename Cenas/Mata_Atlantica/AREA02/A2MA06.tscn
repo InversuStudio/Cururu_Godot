@@ -6,10 +6,10 @@
 [ext_resource type="PackedScene" uid="uid://bnm668fws2641" path="res://Objetos/Props/Armadilha.tscn" id="2_4scg7"]
 [ext_resource type="Script" uid="uid://bhexx6mj1xv3q" path="res://addons/phantom_camera/scripts/phantom_camera/phantom_camera_2d.gd" id="5_jgbtl"]
 [ext_resource type="Script" uid="uid://8umksf8e80fw" path="res://addons/phantom_camera/scripts/resources/tween_resource.gd" id="6_g87lo"]
-[ext_resource type="Script" uid="uid://bd046eokvcnu2" path="res://addons/phantom_camera/scripts/phantom_camera_host/phantom_camera_host.gd" id="7_2hqmh"]
 [ext_resource type="PackedScene" uid="uid://bei1s8te3cwko" path="res://Sprites/Cenário/Mata_Atlantica/Interativos/plataforma.tscn" id="8_g87lo"]
 [ext_resource type="Texture2D" uid="uid://bg3yumuc4n238" path="res://Sprites/Cenário/Objetos/Upgrade/TOTEM.png" id="10_2b1x1"]
 [ext_resource type="Texture2D" uid="uid://cjl88xeknofui" path="res://Sprites/Cenário/Mata_Atlantica/Chao/grama_reto.png" id="12_2b1x1"]
+[ext_resource type="PackedScene" uid="uid://u28e3eudu6ch" path="res://Objetos/Funcionalidade/MainCamera.tscn" id="13_4scg7"]
 [ext_resource type="Texture2D" uid="uid://cw2yeg7ynw0kl" path="res://Sprites/Cenário/Mata_Atlantica/Chao/chap_externo.png" id="13_11u8x"]
 [ext_resource type="PackedScene" uid="uid://dghxpclnjwg5k" path="res://Objetos/Props/PecaCoracao.tscn" id="14_11u8x"]
 [ext_resource type="Texture2D" uid="uid://cj4rj4oj20ogb" path="res://Sprites/Cenário/Mata_Atlantica/Chao/chap_interno.png" id="14_tkmkl"]
@@ -374,22 +374,6 @@ position = Vector2(7347, -543.00006)
 [node name="Plataforma5" parent="." instance=ExtResource("8_g87lo")]
 position = Vector2(8327, -823)
 
-[node name="Camera" type="Camera2D" parent="."]
-physics_interpolation_mode = 1
-position = Vector2(1336, -727)
-zoom = Vector2(0.8, 0.8)
-process_callback = 0
-limit_left = 136
-limit_top = -1822
-limit_right = 11880
-limit_bottom = -52
-
-[node name="PhantomCameraHost" type="Node" parent="Camera"]
-process_priority = 300
-process_physics_priority = 300
-script = ExtResource("7_2hqmh")
-metadata/_custom_type_script = "uid://bd046eokvcnu2"
-
 [node name="Totem" type="Sprite2D" parent="."]
 position = Vector2(9469, -1081)
 scale = Vector2(0.8203125, 0.8203125)
@@ -535,6 +519,15 @@ follow_damping_value = Vector2(0.1, 0.2)
 rotation_damping_value = 0.0
 dead_zone_width = 0.06
 dead_zone_height = 0.3
+draw_limits = true
 limit_target = NodePath("../LimiteCamera")
 limit_margin = Vector4i(50, 50, 50, 50)
 metadata/_custom_type_script = "uid://bhexx6mj1xv3q"
+
+[node name="MainCamera" parent="." instance=ExtResource("13_4scg7")]
+position = Vector2(1336, -727)
+zoom = Vector2(0.8, 0.8)
+limit_left = 136
+limit_top = -1822
+limit_right = 11880
+limit_bottom = -52

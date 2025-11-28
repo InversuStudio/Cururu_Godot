@@ -12,7 +12,6 @@
 [ext_resource type="Script" uid="uid://bhexx6mj1xv3q" path="res://addons/phantom_camera/scripts/phantom_camera/phantom_camera_2d.gd" id="5_nva2y"]
 [ext_resource type="Script" uid="uid://8umksf8e80fw" path="res://addons/phantom_camera/scripts/resources/tween_resource.gd" id="6_gvt1b"]
 [ext_resource type="Texture2D" uid="uid://bg3yumuc4n238" path="res://Sprites/Cenário/Objetos/Upgrade/TOTEM.png" id="6_mhwhk"]
-[ext_resource type="Script" uid="uid://bd046eokvcnu2" path="res://addons/phantom_camera/scripts/phantom_camera_host/phantom_camera_host.gd" id="7_hyhx3"]
 [ext_resource type="Texture2D" uid="uid://cjl88xeknofui" path="res://Sprites/Cenário/Mata_Atlantica/Chao/grama_reto.png" id="10_uqj5l"]
 [ext_resource type="Texture2D" uid="uid://cj4rj4oj20ogb" path="res://Sprites/Cenário/Mata_Atlantica/Chao/chap_interno.png" id="11_old6t"]
 [ext_resource type="Texture2D" uid="uid://cw2yeg7ynw0kl" path="res://Sprites/Cenário/Mata_Atlantica/Chao/chap_externo.png" id="12_mcinh"]
@@ -25,6 +24,7 @@
 [ext_resource type="Texture2D" uid="uid://cdnyx0mqh22t0" path="res://Sprites/Cenário/Mata_Atlantica/Background/copa03.png" id="17_5bp2d"]
 [ext_resource type="Texture2D" uid="uid://c2yapafbd3cnf" path="res://Sprites/Cenário/Mata_Atlantica/Foreground/cipó.png" id="17_l3md2"]
 [ext_resource type="PackedScene" uid="uid://dghxpclnjwg5k" path="res://Objetos/Props/PecaCoracao.tscn" id="25_bf5tm"]
+[ext_resource type="PackedScene" uid="uid://u28e3eudu6ch" path="res://Objetos/Funcionalidade/MainCamera.tscn" id="25_mhwhk"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fgbha"]
 size = Vector2(3621, 1573)
@@ -255,23 +255,6 @@ tile_set = SubResource("TileSet_sjpl0")
 
 [node name="Node2D" type="Node2D" parent="."]
 position = Vector2(1995, -2946)
-
-[node name="Camera" type="Camera2D" parent="."]
-physics_interpolation_mode = 1
-position = Vector2(970, -2947)
-zoom = Vector2(0.8, 0.8)
-process_callback = 0
-limit_left = -1451
-limit_top = -3780
-limit_right = 2170
-limit_bottom = -2257
-editor_draw_limits = true
-
-[node name="PhantomCameraHost" type="Node" parent="Camera"]
-process_priority = 300
-process_physics_priority = 300
-script = ExtResource("7_hyhx3")
-metadata/_custom_type_script = "uid://bd046eokvcnu2"
 
 [node name="Copa01" type="Sprite2D" parent="."]
 position = Vector2(-371, -3220)
@@ -559,3 +542,11 @@ draw_limits = true
 limit_target = NodePath("../LimiteCamera")
 limit_margin = Vector4i(0, 0, 0, 50)
 metadata/_custom_type_script = "uid://bhexx6mj1xv3q"
+
+[node name="MainCamera" parent="." instance=ExtResource("25_mhwhk")]
+position = Vector2(970, -2947)
+zoom = Vector2(0.8, 0.8)
+limit_left = -1451
+limit_top = -3780
+limit_right = 2170
+limit_bottom = -2257

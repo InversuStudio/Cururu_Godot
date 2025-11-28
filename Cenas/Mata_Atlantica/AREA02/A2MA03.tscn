@@ -5,9 +5,9 @@
 [ext_resource type="PackedScene" uid="uid://nohq28uk7lfk" path="res://Objetos/Entidades/Player.tscn" id="3_fsywm"]
 [ext_resource type="Script" uid="uid://bhexx6mj1xv3q" path="res://addons/phantom_camera/scripts/phantom_camera/phantom_camera_2d.gd" id="4_u10of"]
 [ext_resource type="Script" uid="uid://8umksf8e80fw" path="res://addons/phantom_camera/scripts/resources/tween_resource.gd" id="5_awfgj"]
-[ext_resource type="Script" uid="uid://bd046eokvcnu2" path="res://addons/phantom_camera/scripts/phantom_camera_host/phantom_camera_host.gd" id="6_5f3ns"]
 [ext_resource type="PackedScene" uid="uid://bu62qgilsxetf" path="res://Objetos/Entidades/Escorpiao.tscn" id="7_awfgj"]
 [ext_resource type="PackedScene" uid="uid://bjvnm0aydr0vd" path="res://Objetos/Entidades/Morcego.tscn" id="8_5f3ns"]
+[ext_resource type="PackedScene" uid="uid://u28e3eudu6ch" path="res://Objetos/Funcionalidade/MainCamera.tscn" id="8_awfgj"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_adag1"]
 size = Vector2(7035.5, 3181)
@@ -203,23 +203,6 @@ draw_limits = true
 limit_target = NodePath("../Camarea")
 metadata/_custom_type_script = "uid://bhexx6mj1xv3q"
 
-[node name="Camera2D2" type="Camera2D" parent="."]
-physics_interpolation_mode = 1
-position = Vector2(6089, -1487)
-zoom = Vector2(0.8, 0.8)
-process_callback = 0
-limit_left = 254
-limit_top = -2926
-limit_right = 7289
-limit_bottom = 255
-editor_draw_limits = true
-
-[node name="PhantomCameraHost" type="Node" parent="Camera2D2"]
-process_priority = 300
-process_physics_priority = 300
-script = ExtResource("6_5f3ns")
-metadata/_custom_type_script = "uid://bd046eokvcnu2"
-
 [node name="Escorpiao" parent="." instance=ExtResource("7_awfgj")]
 position = Vector2(896, -522)
 
@@ -240,3 +223,11 @@ position = Vector2(1317, -2128)
 
 [node name="Node2D" type="Node2D" parent="."]
 position = Vector2(435, -1796)
+
+[node name="MainCamera" parent="." instance=ExtResource("8_awfgj")]
+position = Vector2(6089, -1487)
+zoom = Vector2(0.8, 0.8)
+limit_left = 254
+limit_top = -2926
+limit_right = 7289
+limit_bottom = 255
