@@ -83,6 +83,7 @@ texture = ExtResource("3_h4g8d")
 
 [node name="HurtBox" parent="Porta" node_paths=PackedStringArray("sprite") instance=ExtResource("3_7ptwx")]
 unique_name_in_owner = true
+collision_layer = 16
 sprite = NodePath("../Miasma")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Porta/HurtBox"]
@@ -98,6 +99,7 @@ position = Vector2(1.5, -63.5)
 shape = SubResource("RectangleShape2D_rixxk")
 
 [node name="HitBox" parent="Porta" node_paths=PackedStringArray("ignore") instance=ExtResource("4_7ptwx")]
+collision_layer = 16
 ignore = NodePath("../HurtBox")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Porta/HitBox"]

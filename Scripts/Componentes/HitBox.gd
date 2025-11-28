@@ -9,6 +9,8 @@ extends Area2D
 @export var sfx : AudioStream = null
 ## Recebe o node pai
 @export var parent: Node2D = null
+## O quanto a câmera vai tremer ao acertar
+@export var camera_shake:float = 10.0
 
 signal hit
 #signal pushback
@@ -21,13 +23,10 @@ func _on_area_entered(area: Area2D) -> void:
 		if area == ignore: return
 		hit.emit(area.global_position)
 		area.RecebeDano(dano, global_position)
+		get_tree().get_first_node_in_group("MainCamera").Shake(camera_shake)
 		# Toca som
 		if sfx:
 			$SFX.play()
-	
-# FUNÇÃO DE APLICAR SCREEN SHAKE
-func aplica_shake():
-	pass
 
 func CalcPushback(dist:float, time:float, pos_target:Vector2) -> void:
 	# Define direção do knockback

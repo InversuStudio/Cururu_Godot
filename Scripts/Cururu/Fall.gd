@@ -23,9 +23,10 @@ func Update(_delta: float) -> State:
 	if Input.is_action_just_pressed("melee"):
 		return melee_state
 	# INPUT MAGIA
-	if Input.is_action_just_pressed("magia"
-	) and GameData.upgrade_num >= 1 and GameData.magia_atual >= 3:
-		return special_state
+	if Input.is_action_just_pressed("magia") and GameData.upgrade_num >= 1:
+		if GameData.magia_atual >= 3:
+			return special_state
+		parent.state_machine.find_child("Special").TocaErro()
 	# INPUT PULO
 	if Input.is_action_just_pressed("pulo"):
 		if parent.is_coyote:

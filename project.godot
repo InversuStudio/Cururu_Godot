@@ -78,6 +78,7 @@ HUD=""
 Special=""
 Console=""
 PecaCoracao=""
+MainCamera=""
 
 [input]
 

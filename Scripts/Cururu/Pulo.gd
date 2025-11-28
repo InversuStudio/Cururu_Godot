@@ -17,7 +17,7 @@ func Enter() -> void:
 	parent.velocity.y = -parent.jump_force # Aplica pulo
 	%Anim.play("Jump") # Animação de pulo
 	%SFX_Pulo.play()
-	if !Input.is_action_pressed("pulo") and parent.pode_mover:
+	if !Input.is_action_pressed("pulo") and parent.pode_mover and !GameData.veio_de_baixo:
 		parent.velocity.y /= 2.0
 
 func Update(_delta: float) -> State:
@@ -25,9 +25,10 @@ func Update(_delta: float) -> State:
 	if Input.is_action_just_pressed("melee"):
 		return melee_state
 	# INPUT MAGIA
-	if Input.is_action_just_pressed("magia"
-	) and GameData.upgrade_num >= 1 and GameData.magia_atual >= 3:
-		return special_state
+	if Input.is_action_just_pressed("magia") and GameData.upgrade_num >= 1:
+		if GameData.magia_atual >= 3:
+			return special_state
+		parent.state_machine.find_child("Special").TocaErro()
 	# INPUT DASH
 	if Input.is_action_just_pressed("dash") and parent.pode_dash:
 		return dash_state

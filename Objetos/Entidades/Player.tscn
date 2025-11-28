@@ -1,4 +1,4 @@
-[gd_scene load_steps=119 format=3 uid="uid://nohq28uk7lfk"]
+[gd_scene load_steps=121 format=3 uid="uid://nohq28uk7lfk"]
 
 [ext_resource type="Script" uid="uid://cfu4ciwll8jcj" path="res://Scripts/Cururu/Cururu.gd" id="1_gwpdq"]
 [ext_resource type="Texture2D" uid="uid://6tjgxsgaflxb" path="res://Sprites/Cururu/Dano/03.png" id="2_0hf88"]
@@ -89,6 +89,8 @@
 [ext_resource type="AudioStream" uid="uid://cuyap2xmus3rf" path="res://Audio/SFX/CURURU/dash_cururu.mp3" id="81_2t31h"]
 [ext_resource type="Texture2D" uid="uid://b73nkcosr250e" path="res://Sprites/VFX/Iluminação/LightCururu.png" id="87_0w8y8"]
 [ext_resource type="AudioStream" uid="uid://d4ghkqb2kyw1m" path="res://Audio/SFX/Ataque_Basico.wav" id="90_2t31h"]
+[ext_resource type="AudioStream" uid="uid://chf637hlgvwxq" path="res://Audio/SFX/Cuica_1.ogg" id="90_s2eek"]
+[ext_resource type="AudioStream" uid="uid://b1e3re8ykc11o" path="res://Audio/SFX/Cuica_2.ogg" id="91_vpyrf"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_ser7u"]
 animations = [{
@@ -407,19 +409,20 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_qakxq"]
-radius = 46.0
-height = 170.0
+radius = 43.0
+height = 162.0
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ga1ek"]
-radius = 42.0
-height = 172.0
+radius = 43.0
+height = 160.0
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_xx3r0"]
-radius = 126.14278
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_7spwe"]
+radius = 87.47546
+height = 262.0
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_wq158"]
-radius = 100.00001
-height = 250.0
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_gjjix"]
+radius = 93.00001
+height = 304.0
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ny8nr"]
 radius = 76.0
@@ -430,8 +433,8 @@ radius = 74.0
 height = 308.0
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_1dbdn"]
-radius = 107.0
-height = 274.0
+radius = 95.99998
+height = 439.99997
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_s2eek"]
 radius = 107.0
@@ -1210,6 +1213,7 @@ tempo_pulo = 0.4
 tempo_cair = 0.65
 tempo_coyote = 0.1
 lag_pulo = 0.1
+velocidade_queda_max = 10.0
 tempo_dash = 0.15
 distancia_dash = 2.5
 cooldown_dash = 0.2
@@ -1230,7 +1234,7 @@ texture_scale = 0.3
 
 [node name="Cururu" type="AnimatedSprite2D" parent="."]
 unique_name_in_owner = true
-position = Vector2(-16, -117.00001)
+position = Vector2(0, -117.00001)
 scale = Vector2(0.375651, 0.375651)
 sprite_frames = SubResource("SpriteFrames_ser7u")
 animation = &"Special"
@@ -1238,7 +1242,7 @@ frame = 1
 speed_scale = 1.3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-17, -84)
+position = Vector2(0, -79)
 shape = SubResource("CapsuleShape2D_qakxq")
 
 [node name="Vida" type="Node" parent="."]
@@ -1259,7 +1263,7 @@ parent = NodePath("../..")
 sprite = NodePath("../../Cururu")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="HurtContainer/HurtBox"]
-position = Vector2(-18, -85)
+position = Vector2(0, -79)
 shape = SubResource("CapsuleShape2D_ga1ek")
 debug_color = Color(0.92912, 0, 0.16329, 0.42)
 
@@ -1273,9 +1277,9 @@ ignore = NodePath("../../HurtContainer/HurtBox")
 parent = NodePath("../..")
 
 [node name="ColMel1" type="CollisionShape2D" parent="HitContainer/Melee1"]
-position = Vector2(24, -83)
-shape = SubResource("CircleShape2D_xx3r0")
-disabled = true
+position = Vector2(27, -96.00001)
+rotation = -1.8463628
+shape = SubResource("CapsuleShape2D_7spwe")
 debug_color = Color(0.69455, 0.495447, 0, 0.42)
 
 [node name="Melee2" parent="HitContainer" node_paths=PackedStringArray("ignore", "parent") instance=ExtResource("47_grb16")]
@@ -1285,10 +1289,9 @@ ignore = NodePath("../../HurtContainer/HurtBox")
 parent = NodePath("../..")
 
 [node name="ColMel2" type="CollisionShape2D" parent="HitContainer/Melee2"]
-position = Vector2(61, -79)
+position = Vector2(53, -70)
 rotation = -1.57079
-shape = SubResource("CapsuleShape2D_wq158")
-disabled = true
+shape = SubResource("CapsuleShape2D_gjjix")
 
 [node name="MeleeUp" parent="HitContainer" node_paths=PackedStringArray("ignore", "parent") instance=ExtResource("47_grb16")]
 collision_mask = 16
@@ -1319,10 +1322,9 @@ ignore = NodePath("../../HurtContainer/HurtBox")
 parent = NodePath("../..")
 
 [node name="ColSpecial" type="CollisionShape2D" parent="HitContainer/Special"]
-position = Vector2(115, -105)
+position = Vector2(233, -105)
 rotation = 1.57079
 shape = SubResource("CapsuleShape2D_1dbdn")
-disabled = true
 
 [node name="SpecialUp" parent="HitContainer" node_paths=PackedStringArray("ignore", "parent") groups=["Special"] instance=ExtResource("47_grb16")]
 collision_mask = 16
@@ -1377,6 +1379,8 @@ max_polyphony = 100
 
 [node name="SFX_Extra" type="AudioStreamPlayer" parent="SFX"]
 unique_name_in_owner = true
+volume_db = -2.0
+max_polyphony = 100
 
 [node name="Timers" type="Node" parent="."]
 
@@ -1452,6 +1456,7 @@ script = ExtResource("56_7uoqt")
 chao_state = NodePath("../Chao")
 fall_state = NodePath("../Fall")
 hitboxes = [NodePath("../../HitContainer/Special"), NodePath("../../HitContainer/SpecialUp"), NodePath("../../HitContainer/SpecialDown")]
+sfx_sem_magia = Array[AudioStream]([ExtResource("90_s2eek"), ExtResource("91_vpyrf")])
 
 [connection signal="counter" from="HurtContainer/HurtBox" to="StateMachine/Dano" method="_on_hurt_box_counter"]
 [connection signal="animation_finished" from="Anim" to="StateMachine/Chao" method="_on_anim_animation_finished"]

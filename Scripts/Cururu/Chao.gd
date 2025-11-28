@@ -22,6 +22,9 @@ func Enter() -> void:
 	if parent.state_machine.last_state.name == "Fall":
 		%Anim.play("Land")
 	else: pode_anim = true
+	
+	if GameData.veio_de_baixo:
+		GameData.veio_de_baixo = false
 
 func Exit() -> void:
 	pode_anim = false
@@ -31,9 +34,10 @@ func Update(_delta: float) -> State:
 	if Input.is_action_just_pressed("melee"):
 		return melee_state
 	# INPUT MAGIA
-	if Input.is_action_just_pressed("magia"
-	) and GameData.upgrade_num >= 1 and GameData.magia_atual >= 3:
-		return special_state
+	if Input.is_action_just_pressed("magia") and GameData.upgrade_num >= 1:
+		if GameData.magia_atual >= 3:
+			return special_state
+		parent.state_machine.find_child("Special").TocaErro()
 	# INPUT DASH
 	if Input.is_action_just_pressed("dash") and parent.pode_dash:
 		return dash_state

@@ -13,7 +13,6 @@
 [ext_resource type="Script" uid="uid://8umksf8e80fw" path="res://addons/phantom_camera/scripts/resources/tween_resource.gd" id="10_0ho33"]
 [ext_resource type="PackedScene" uid="uid://1apfpwlqocxn" path="res://Objetos/Funcionalidade/TransicaoFase.tscn" id="10_wqlrc"]
 [ext_resource type="PackedScene" uid="uid://d3cks8kri2olw" path="res://Objetos/Props/AreaUpgrade.tscn" id="12_77bok"]
-[ext_resource type="Script" uid="uid://bd046eokvcnu2" path="res://addons/phantom_camera/scripts/phantom_camera_host/phantom_camera_host.gd" id="13_56qbx"]
 [ext_resource type="PackedScene" uid="uid://dghxpclnjwg5k" path="res://Objetos/Props/PecaCoracao.tscn" id="15_fjg5v"]
 [ext_resource type="PackedScene" uid="uid://bgiacv0vndt1q" path="res://Objetos/Props/DropAmVelAtaque.tscn" id="16_der3i"]
 [ext_resource type="PackedScene" uid="uid://b4fpjefuik8mq" path="res://Objetos/Props/DropAmRecMagia.tscn" id="17_der3i"]
@@ -21,6 +20,7 @@
 [ext_resource type="PackedScene" uid="uid://bxixu84ahcyba" path="res://Objetos/NPCs/NpcBasico.tscn" id="18_bp4ag"]
 [ext_resource type="Texture2D" uid="uid://c3tl3oddronfh" path="res://icon.svg" id="21_lqome"]
 [ext_resource type="PackedScene" uid="uid://1fdx2ie24dh8" path="res://Objetos/Props/Bau.tscn" id="22_b4qhl"]
+[ext_resource type="PackedScene" uid="uid://u28e3eudu6ch" path="res://Objetos/Funcionalidade/MainCamera.tscn" id="22_der3i"]
 [ext_resource type="PackedScene" uid="uid://cdhelg6sloxbj" path="res://Objetos/Props/PortaTemp.tscn" id="23_u25g5"]
 [ext_resource type="PackedScene" uid="uid://dny88hy3w52nm" path="res://Objetos/Props/DropAcai.tscn" id="23_wxyel"]
 [ext_resource type="PackedScene" uid="uid://cy10kv6jimfwh" path="res://Objetos/Funcionalidade/CompDestroiPlataforma.tscn" id="23_y7vak"]
@@ -321,21 +321,8 @@ metadata/_custom_type_script = "uid://bhexx6mj1xv3q"
 position = Vector2(4959, -515)
 dialogue_start = "mapa"
 
-[node name="MainCamera" type="Camera2D" parent="."]
-physics_interpolation_mode = 1
+[node name="MainCamera" parent="." instance=ExtResource("22_der3i")]
 position = Vector2(-146, -534)
-process_callback = 0
-limit_left = -2759
-limit_top = -1966
-limit_right = 1485
-limit_bottom = 71
-editor_draw_limits = true
-
-[node name="PhantomCameraHost" type="Node" parent="MainCamera"]
-process_priority = 300
-process_physics_priority = 300
-script = ExtResource("13_56qbx")
-metadata/_custom_type_script = "uid://bd046eokvcnu2"
 
 [node name="PlataformaSome" type="StaticBody2D" parent="."]
 position = Vector2(-1216, -665)

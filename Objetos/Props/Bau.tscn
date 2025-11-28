@@ -35,6 +35,7 @@ size = Vector2(234, 137)
 script = ExtResource("1_5tjap")
 
 [node name="HurtBox" parent="." instance=ExtResource("5_ku8j8")]
+collision_layer = 16
 hit_sfx = ExtResource("6_6tos4")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HurtBox"]

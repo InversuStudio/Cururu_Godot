@@ -21,6 +21,8 @@ extends CharacterBody2D
 @export var tempo_coyote: float = 0.0
 ## Espaço de tempo para aceitar input de pulo antes de chegar ao chão
 @export var lag_pulo: float = 0.0
+## Velocidade máxima de queda, em m/s
+@export var velocidade_queda_max:float = 1.0
 
 @export_group("Dash")
 ## Tempo de duração do dash, em segundos
@@ -50,6 +52,8 @@ extends CharacterBody2D
 @onready var jump_gravity: float = ((2.0 * altura_pulo) / pow(tempo_pulo, 2)) * 128
 # Gravidade da queda
 @onready var fall_gravity: float = ((2.0 * altura_pulo) / pow(tempo_cair, 2)) * 128
+# Velocidade máxima de queda
+@onready var max_fall_vel: float = velocidade_queda_max * 128
 
 @export_group("Componentes")
 ## Componente Vida
@@ -114,6 +118,7 @@ func _process(delta: float) -> void:
 func _physics_process(delta: float) -> void:
 	# Aplica PHYSICS_PROCESS do StateMachine
 	state_machine.FixedUpdate(delta)
+	velocity.y = clampf(velocity.y, -jump_force, max_fall_vel)
 	move_and_slide()
 
 # Habilita dash após cooldown

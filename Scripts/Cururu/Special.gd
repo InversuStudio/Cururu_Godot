@@ -5,6 +5,8 @@ extends State
 
 @export var hitboxes:Array[HitBox] = []
 
+@export var sfx_sem_magia: Array[AudioStream] = []
+
 @export_group("Pushback")
 @export var distancia_push:float = 1.0
 @export var tempo_push:float = .2
@@ -73,3 +75,9 @@ func Hit(pos_target:Vector2, hit:HitBox) -> void:
 	hit.CalcPushback(distancia_push, tempo_push, pos_target)
 	if !hit.is_in_group("Special"):
 		GameData.magia_atual += 1
+
+func TocaErro() -> void:
+	if sfx_sem_magia.size() == 0: return
+	var n:int = randi_range(0, sfx_sem_magia.size() - 1)
+	%SFX_Extra.stream = sfx_sem_magia[n]
+	%SFX_Extra.play()
