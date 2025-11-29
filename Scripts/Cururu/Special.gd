@@ -33,32 +33,37 @@ func Enter() -> void:
 		%Anim.play("Special")
 	%SFX_Ataque.stream = sfx
 	%SFX_Ataque.play()
+	
+	OffsetSprite()
 
 func Exit() -> void:
 	terminou = false
-	await get_tree().physics_frame
-	if parent.sprite.offset.x != 0.0:
-		parent.sprite.offset.x = 0.0
+	#await get_tree().physics_frame
+	#if parent.sprite.offset.x != 0.0:
+	#parent.sprite.offset.x = 0.0
 
-func Update(_delta:float) -> State:
-	if terminou == true:
-		if parent.is_on_floor():
-			return chao_state
-		if !parent.is_on_floor():
-			return fall_state
-	return null
+#func Update(_delta:float) -> State:
+	#
+	#return null
 
 func FixedUpdate(delta:float) -> State:
 	if Input.is_action_just_released("pulo"):
 		parent.velocity.y /= 2.0
 		#parent.velocity.y = 0.0
 	# Aplica gravidade de queda
-	if parent.is_on_floor():
-		parent.velocity.x = move_toward(parent.velocity.x, 0, parent.decel * delta)
-	elif parent.velocity.y >= 0:
+	#if parent.is_on_floor():
+	parent.velocity.x = move_toward(parent.velocity.x, 0, parent.decel * delta)
+	if parent.velocity.y >= 0:
 		parent.velocity.y += parent.fall_gravity * delta
 	else:
 		parent.velocity.y += parent.jump_gravity * delta
+	
+	if terminou == true:
+		if parent.is_on_floor():
+			return chao_state
+		if !parent.is_on_floor():
+			return fall_state
+	
 	return null
 
 func _on_anim_animation_finished(anim_name: StringName) -> void:
@@ -81,3 +86,7 @@ func TocaErro() -> void:
 	var n:int = randi_range(0, sfx_sem_magia.size() - 1)
 	%SFX_Extra.stream = sfx_sem_magia[n]
 	%SFX_Extra.play()
+
+func _on_anim_animation_started(_anim_name: StringName) -> void:
+	if is_node_ready():
+		parent.sprite.offset.x = 0.0

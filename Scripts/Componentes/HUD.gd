@@ -18,8 +18,11 @@ func _input(_event: InputEvent) -> void:
 		if Mundos.player == null or AvisoItem.ativo: return
 		%Pause.visible = true if %Pause.visible == false else false
 	
-	if Input.is_action_just_pressed("select") and %Pause.visible:
-		Mundos.CarregaFase(Mundos.NomeFase.MenuPrincipal)
+	#if Input.is_action_just_pressed("select") and %Pause.visible:
+		#Mundos.CarregaFase(Mundos.NomeFase.MenuPrincipal)
+	
+	if Input.is_action_just_pressed("ui_cancel"):
+		%Pause.visible = false
 	
 	if Input.is_action_just_pressed("bumper_direito"):
 		if hud_ativo + 1 <= %ContainerAbas.get_child_count() - 1:
