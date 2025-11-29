@@ -63,6 +63,9 @@ var pecas_coracao: Array = [
 	false,
 	false,
 	false,
+	false,
+	false,
+	false,
 ]
 
 # Enumerador com todas as peças de coração a serem coletadas
@@ -70,6 +73,9 @@ enum PecasCoracao {
 	Teste1,
 	Teste2,
 	Teste3,
+	MataAtlantica1,
+	MataAtlantica2,
+	MataAtlantica3,
 }
 
 # Registra fase atual
