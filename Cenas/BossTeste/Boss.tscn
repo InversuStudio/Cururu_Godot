@@ -75,9 +75,9 @@
 [ext_resource type="Script" uid="uid://rlmx3hnbiu12" path="res://Scripts/Boss/cospe_fogo.gd" id="75_16hqa"]
 [ext_resource type="AudioStream" uid="uid://b5wrm1fctq78" path="res://Audio/SFX/BOITATA/rugido_boitata.ogg" id="75_sgy8v"]
 [ext_resource type="Script" uid="uid://dmxvedpbqkt7c" path="res://Scripts/Boss/Nocaute.gd" id="77_iqxfe"]
+[ext_resource type="Texture2D" uid="uid://c0j1vjsqgxlo3" path="res://Sprites/UI/Boitata/BarraVidaBoss.png" id="77_mjx0v"]
 [ext_resource type="Texture2D" uid="uid://b4vgc71jojckt" path="res://Sprites/UI/Boitata/UI_-_BOITATA.png" id="84_6hkog"]
 [ext_resource type="Script" uid="uid://c041l8mwrkgsy" path="res://Scripts/Boss/PilarFogo.gd" id="85_fi4f6"]
-[ext_resource type="Texture2D" uid="uid://du6px2jonlioj" path="res://Sprites/UI/Boitata/UI_-_BOITATA2.png" id="85_iy7ck"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_fwdqd"]
 radius = 171.0
@@ -741,26 +741,20 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -784.0
-offset_top = -227.0
-offset_right = 1214.0
-offset_bottom = -14.5
+offset_left = -747.0
+offset_top = -197.0
+offset_right = 1128.0
 grow_horizontal = 2
 grow_vertical = 0
 scale = Vector2(0.8, 0.8)
 max_value = 15.0
 step = 0.1
-value = 15.0
-fill_mode = 6
-texture_progress = ExtResource("85_iy7ck")
-texture_progress_offset = Vector2(76.985, 137.11)
-tint_over = Color(0.3647059, 1, 1, 0)
+value = 12.4
+texture_under = ExtResource("77_mjx0v")
+texture_over = ExtResource("84_6hkog")
+texture_progress = ExtResource("77_mjx0v")
+tint_under = Color(0.25836357, 0.16748038, 0.20151487, 1)
 tint_progress = Color(0.6270837, 0, 0.048433684, 1)
-
-[node name="UiBoitata" type="Sprite2D" parent="UI_BOSS/Control/BarraVida"]
-position = Vector2(979.9999, 168.74988)
-scale = Vector2(1.0106664, 0.91370535)
-texture = ExtResource("84_6hkog")
 
 [connection signal="timeout" from="TimerIdle" to="StateMachine/Idle" method="_on_timer_idle_timeout"]
 [connection signal="timeout" from="TimerNocaute" to="StateMachine/Nocaute" method="_on_timer_nocaute_timeout"]
