@@ -522,9 +522,6 @@ position = Vector2(2135, -3345)
 scale = Vector2(0.8, 0.8)
 texture = ExtResource("17_l3md2")
 
-[node name="PecaCoracao" parent="." instance=ExtResource("25_bf5tm")]
-position = Vector2(-771, -2913)
-
 [node name="PhantomCamera2D" type="Node2D" parent="." node_paths=PackedStringArray("follow_target")]
 top_level = true
 position = Vector2(970, -2947)
@@ -550,3 +547,6 @@ limit_left = -1451
 limit_top = -3780
 limit_right = 2170
 limit_bottom = -2257
+
+[node name="PecaCoracao" parent="." instance=ExtResource("25_bf5tm")]
+position = Vector2(-767, -2918)

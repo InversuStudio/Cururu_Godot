@@ -388,7 +388,7 @@ texture = ExtResource("4_yftf5")
 
 [node name="Composição2" type="Sprite2D" parent="Background"]
 light_mask = 2
-position = Vector2(103.054535, 278.85318)
+position = Vector2(103.05469, 278.85315)
 scale = Vector2(0.37611157, 0.65778315)
 texture = ExtResource("29_qclta")
 
@@ -410,6 +410,17 @@ texture = ExtResource("7_op0pn")
 
 [node name="Arvore1" type="Node2D" parent="Background"]
 light_mask = 2
+
+[node name="Arvore8" type="Sprite2D" parent="Background/Arvore1"]
+light_mask = 2
+position = Vector2(-940.3862, 234.68768)
+scale = Vector2(0.5373022, 0.93969035)
+texture = ExtResource("4_yftf5")
+
+[node name="Mato04" type="Sprite2D" parent="Background/Arvore1"]
+position = Vector2(-386.96484, 1005.234)
+scale = Vector2(0.96714395, 1.6914428)
+texture = ExtResource("20_386eh")
 
 [node name="Arvore" type="Sprite2D" parent="Background/Arvore1"]
 light_mask = 2
@@ -447,12 +458,6 @@ position = Vector2(504.41934, 44.870224)
 scale = Vector2(0.5373022, 0.93969053)
 texture = ExtResource("4_yftf5")
 
-[node name="Arvore8" type="Sprite2D" parent="Background/Arvore1"]
-light_mask = 2
-position = Vector2(-940.3862, 234.68771)
-scale = Vector2(0.5373022, 0.93969053)
-texture = ExtResource("4_yftf5")
-
 [node name="Arvore3" type="Sprite2D" parent="Background/Arvore1"]
 light_mask = 2
 position = Vector2(-2633.4255, -3042.9534)
@@ -460,23 +465,28 @@ rotation = 0.17453292
 scale = Vector2(0.5373022, 0.93969053)
 texture = ExtResource("4_yftf5")
 
+[node name="Mato01" type="Sprite2D" parent="Background/Arvore1"]
+position = Vector2(-3511.915, 631.2372)
+scale = Vector2(0.96714395, 1.691443)
+texture = ExtResource("20_386eh")
+
 [node name="Composição3" type="Sprite2D" parent="Background/Arvore1"]
 light_mask = 2
-position = Vector2(-379.44287, 542.90625)
+position = Vector2(-366.0103, 542.90625)
 scale = Vector2(0.37611154, 0.65778315)
 texture = ExtResource("8_l7gx4")
 flip_h = true
+
+[node name="Moita3" type="Sprite2D" parent="Background/Arvore1"]
+position = Vector2(-4009.9941, -3232.7703)
+scale = Vector2(0.5373022, 0.9396905)
+texture = ExtResource("6_qclta")
 
 [node name="Fundonevoa2" type="Sprite2D" parent="Background/Arvore1"]
 light_mask = 2
 position = Vector2(-1796.3091, 406.6391)
 scale = Vector2(2.9202492, 0.96660674)
 texture = ExtResource("6_rnx0k")
-
-[node name="Moita3" type="Sprite2D" parent="Background/Arvore1"]
-position = Vector2(-4009.994, -3232.7705)
-scale = Vector2(0.5373022, 0.93969053)
-texture = ExtResource("6_qclta")
 
 [node name="Sombra3" type="Sprite2D" parent="Background/Arvore1"]
 position = Vector2(-4016.1726, -3213.9768)
@@ -676,16 +686,6 @@ position = Vector2(-15739, -1493)
 z_index = 0
 position = Vector2(-18459, -3583)
 scale = Vector2(0.919994, 0.919994)
-
-[node name="Mato01" type="Sprite2D" parent="."]
-position = Vector2(-16635, 481)
-scale = Vector2(1.8, 1.8)
-texture = ExtResource("20_386eh")
-
-[node name="Mato04" type="Sprite2D" parent="."]
-position = Vector2(-10342, 665)
-scale = Vector2(1.8, 1.8)
-texture = ExtResource("20_386eh")
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
 position = Vector2(-2, 0)

@@ -1209,7 +1209,7 @@ position = Vector2(3388, -6990)
 scale = Vector2(2, 2)
 
 [node name="Plataforma2" parent="Cenario/Props" instance=ExtResource("17_jpeib")]
-position = Vector2(1826, -7674)
+position = Vector2(1864, -7674)
 scale = Vector2(2, 2)
 
 [node name="Plataforma3" parent="Cenario/Props" instance=ExtResource("17_jpeib")]
@@ -1519,9 +1519,6 @@ position = Vector2(-2, 0)
 
 [node name="Morcego" parent="Entidades" instance=ExtResource("9_fhpg3")]
 position = Vector2(2923, -1366)
-
-[node name="Morcego2" parent="Entidades" instance=ExtResource("9_fhpg3")]
-position = Vector2(3189, -3325.9998)
 
 [node name="Morcego5" parent="Entidades" instance=ExtResource("9_fhpg3")]
 position = Vector2(4256, -5375)

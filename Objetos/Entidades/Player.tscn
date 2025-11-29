@@ -1,15 +1,23 @@
-[gd_scene load_steps=121 format=3 uid="uid://nohq28uk7lfk"]
+[gd_scene load_steps=131 format=3 uid="uid://nohq28uk7lfk"]
 
 [ext_resource type="Script" uid="uid://cfu4ciwll8jcj" path="res://Scripts/Cururu/Cururu.gd" id="1_gwpdq"]
 [ext_resource type="Texture2D" uid="uid://6tjgxsgaflxb" path="res://Sprites/Cururu/Dano/03.png" id="2_0hf88"]
 [ext_resource type="Texture2D" uid="uid://d3t3kefd5n5xu" path="res://Sprites/Cururu/Dano/02.png" id="2_smue1"]
+[ext_resource type="Texture2D" uid="uid://csu31k6vg4wh5" path="res://Sprites/Cururu/Caminhar/00.png" id="3_1ribx"]
 [ext_resource type="Texture2D" uid="uid://cy0621jbr41p2" path="res://Sprites/Cururu/Dano/04.png" id="3_7uoqt"]
+[ext_resource type="Texture2D" uid="uid://cfvloh76fvgs5" path="res://Sprites/Cururu/Caminhar/01.png" id="4_3s0sn"]
 [ext_resource type="Texture2D" uid="uid://glkn0v2wg77a" path="res://Sprites/Cururu/Dano/05.png" id="4_61o3p"]
 [ext_resource type="Texture2D" uid="uid://ba7idclgigop7" path="res://Sprites/Cururu/Dano/06.png" id="5_0r6tj"]
+[ext_resource type="Texture2D" uid="uid://wqrwgrnlhshs" path="res://Sprites/Cururu/Caminhar/02.png" id="5_dvy3r"]
+[ext_resource type="Texture2D" uid="uid://p101ag1fe5ci" path="res://Sprites/Cururu/Caminhar/03.png" id="6_damx7"]
 [ext_resource type="Texture2D" uid="uid://bmqfc0f6fg6e8" path="res://Sprites/Cururu/Dano/07.png" id="6_wao3i"]
 [ext_resource type="Texture2D" uid="uid://dbfnbqa44gix3" path="res://Sprites/Cururu/Dano/08.png" id="7_bo6dy"]
+[ext_resource type="Texture2D" uid="uid://5xbtc5vqe36b" path="res://Sprites/Cururu/Caminhar/04.png" id="7_k0fov"]
+[ext_resource type="Texture2D" uid="uid://bkdbrpstuuy4u" path="res://Sprites/Cururu/Caminhar/05.png" id="8_jgcph"]
+[ext_resource type="Texture2D" uid="uid://dxupvk38avuo0" path="res://Sprites/Cururu/Caminhar/06.png" id="9_jkcnl"]
 [ext_resource type="Texture2D" uid="uid://dtrqllxfdts32" path="res://Sprites/Cururu/Dash/02.png" id="9_pa0o1"]
 [ext_resource type="Texture2D" uid="uid://bssjqru2v4vci" path="res://Sprites/Cururu/Dash/03.png" id="10_7odhu"]
+[ext_resource type="Texture2D" uid="uid://blnbsfvs4ioph" path="res://Sprites/Cururu/Caminhar/07.png" id="10_33gbk"]
 [ext_resource type="Texture2D" uid="uid://bjhdn7dee4248" path="res://Sprites/Cururu/Dash/04.png" id="11_iqn86"]
 [ext_resource type="Texture2D" uid="uid://c3i6qokpcl81f" path="res://Sprites/Cururu/Dash/05.png" id="12_g3owr"]
 [ext_resource type="Texture2D" uid="uid://cdfi7b7xcaoy4" path="res://Sprites/Cururu/Dash/06_loop.png" id="13_xt7tl"]
@@ -32,7 +40,6 @@
 [ext_resource type="Texture2D" uid="uid://dduie5pdnwf2r" path="res://Sprites/Cururu/Pulo/08.png" id="25_bo6dy"]
 [ext_resource type="Texture2D" uid="uid://cacua4a7ofiai" path="res://Sprites/Cururu/Idle/06.png" id="25_wao3i"]
 [ext_resource type="Texture2D" uid="uid://bc1jiiukoj77c" path="res://Sprites/Cururu/Idle/07.png" id="26_bo6dy"]
-[ext_resource type="Texture2D" uid="uid://cxnptk3pasjog" path="res://Sprites/Cururu/Pulo/09.png" id="26_g8tdn"]
 [ext_resource type="Texture2D" uid="uid://dga8p80xnxn22" path="res://Sprites/Cururu/Idle/08.png" id="27_g8tdn"]
 [ext_resource type="Texture2D" uid="uid://b7d736ddd7mbh" path="res://Sprites/Cururu/Idle/09.png" id="28_3kywn"]
 [ext_resource type="Texture2D" uid="uid://cl66tdiqip5of" path="res://Sprites/Cururu/Idle/10.png" id="29_cj33d"]
@@ -87,6 +94,9 @@
 [ext_resource type="AudioStream" uid="uid://0svi6tafdid8" path="res://Audio/SFX/CURURU/DANO_PROTAGONISTA.wav" id="77_d7mdf"]
 [ext_resource type="AudioStream" uid="uid://clarwee0wchnk" path="res://Audio/SFX/CURURU/jump_cururu.mp3" id="80_ny8nr"]
 [ext_resource type="AudioStream" uid="uid://cuyap2xmus3rf" path="res://Audio/SFX/CURURU/dash_cururu.mp3" id="81_2t31h"]
+[ext_resource type="Texture2D" uid="uid://dxtsvqjcc8iyp" path="res://Sprites/Cururu/Virada/00.png" id="83_52p8t"]
+[ext_resource type="Texture2D" uid="uid://15c7aidibbn5" path="res://Sprites/Cururu/Virada/01.png" id="84_mm0hc"]
+[ext_resource type="Texture2D" uid="uid://cdy8yt07p7v8" path="res://Sprites/Cururu/Virada/02.png" id="85_0vd0f"]
 [ext_resource type="Texture2D" uid="uid://b73nkcosr250e" path="res://Sprites/VFX/Iluminação/LightCururu.png" id="87_0w8y8"]
 [ext_resource type="AudioStream" uid="uid://d4ghkqb2kyw1m" path="res://Audio/SFX/Ataque_Basico.wav" id="90_2t31h"]
 [ext_resource type="AudioStream" uid="uid://chf637hlgvwxq" path="res://Audio/SFX/Cuica_1.ogg" id="90_s2eek"]
@@ -94,6 +104,35 @@
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_ser7u"]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_1ribx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_3s0sn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_dvy3r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_damx7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_k0fov")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_jgcph")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_jkcnl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_33gbk")
+}],
+"loop": true,
+"name": &"Andando",
+"speed": 8.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("2_smue1")
@@ -191,9 +230,6 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": ExtResource("25_bo6dy")
-}, {
-"duration": 1.0,
-"texture": ExtResource("26_g8tdn")
 }],
 "loop": true,
 "name": &"Fall_Start",
@@ -405,6 +441,20 @@ animations = [{
 }],
 "loop": true,
 "name": &"Special_Up",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("83_52p8t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("84_mm0hc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("85_0vd0f")
+}],
+"loop": true,
+"name": &"Virada",
 "speed": 5.0
 }]
 
@@ -1213,7 +1263,7 @@ tempo_pulo = 0.4
 tempo_cair = 0.65
 tempo_coyote = 0.1
 lag_pulo = 0.1
-velocidade_queda_max = 10.0
+velocidade_queda_max = 50.0
 tempo_dash = 0.15
 distancia_dash = 2.5
 cooldown_dash = 0.2
@@ -1238,8 +1288,7 @@ position = Vector2(0, -117.00001)
 scale = Vector2(0.375651, 0.375651)
 sprite_frames = SubResource("SpriteFrames_ser7u")
 animation = &"Special"
-frame = 1
-speed_scale = 1.3
+speed_scale = 1.5
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, -79)
