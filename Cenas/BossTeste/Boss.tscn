@@ -655,11 +655,13 @@ unique_name_in_owner = true
 wait_time = 2.8
 one_shot = true
 
-[node name="HurtBox" parent="." node_paths=PackedStringArray("comp_vida") instance=ExtResource("3_fwdqd")]
+[node name="HurtBox" parent="." node_paths=PackedStringArray("comp_vida", "sprite") instance=ExtResource("3_fwdqd")]
 unique_name_in_owner = true
+collision_layer = 16
 monitorable = false
 comp_vida = NodePath("../Vida")
 hit_sfx = ExtResource("5_b2ig3")
+sprite = NodePath("../Sprite")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HurtBox"]
 position = Vector2(481, -550)

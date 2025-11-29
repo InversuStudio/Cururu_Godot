@@ -18,7 +18,7 @@ func _input(_event: InputEvent) -> void:
 		if Mundos.player == null or AvisoItem.ativo: return
 		%Pause.visible = true if %Pause.visible == false else false
 	
-	if Input.is_action_just_pressed("ui_cancel") and %Pause.visible:
+	if Input.is_action_just_pressed("select") and %Pause.visible:
 		Mundos.CarregaFase(Mundos.NomeFase.MenuPrincipal)
 	
 	if Input.is_action_just_pressed("bumper_direito"):
@@ -26,7 +26,7 @@ func _input(_event: InputEvent) -> void:
 			hud_ativo += 1
 			MudaAba()
 	
-	if Input.is_action_just_pressed("bumper_esquerdo"):
+	if Input.is_action_just_pressed("bumper_esquerdo") and %Pause.visible:
 		if hud_ativo - 1 >= 0:
 			hud_ativo -= 1
 			MudaAba()
@@ -66,6 +66,11 @@ func _ready() -> void:
 	# Organiza visibilidade das abas
 	MudaAba()
 	MostraHUD()
+	
+	%BtnContinuar.connect("pressed", func(): %Pause.visible = false)
+	%BtnSair.connect("pressed", func(): Mundos.CarregaFase(Mundos.NomeFase.MenuPrincipal))
+	%Opcoes.connect("visibility_changed", func():
+		if %Opcoes.visible: %BtnContinuar.grab_focus())
 	
 	# Lógica para evitar bugs durante testes
 	await get_tree().physics_frame

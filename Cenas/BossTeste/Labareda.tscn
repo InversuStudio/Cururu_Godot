@@ -92,6 +92,7 @@ autoplay = "Carga"
 frame_progress = 0.37443024
 
 [node name="HitBox" parent="." instance=ExtResource("11_tqvmf")]
+collision_layer = 16
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HitBox"]
 position = Vector2(0, -292)

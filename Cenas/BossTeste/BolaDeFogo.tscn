@@ -58,6 +58,7 @@ frame_progress = 0.6801996
 
 [node name="HitBox" parent="." instance=ExtResource("9_qng7f")]
 position = Vector2(0.125, 77.375)
+collision_layer = 16
 linear_damp = 1.0
 
 [node name="Col" type="CollisionShape2D" parent="HitBox"]

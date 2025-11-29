@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://bs5i45df7rwnf"]
+[gd_scene load_steps=22 format=3 uid="uid://bs5i45df7rwnf"]
 
 [ext_resource type="Script" uid="uid://dg1wm8v16vrwl" path="res://Scripts/Componentes/HUD.gd" id="1_yixhe"]
 [ext_resource type="Texture2D" uid="uid://dbohcm7v5pvg4" path="res://Sprites/UI/HUD/UIHUD-MAGIA.png" id="2_f2wx0"]
@@ -7,7 +7,6 @@
 [ext_resource type="PackedScene" uid="uid://kuarj30f8veq" path="res://UI/Inventario.tscn" id="5_f2wx0"]
 [ext_resource type="PackedScene" uid="uid://ddf8xx25186i" path="res://UI/Amuletos.tscn" id="6_gppie"]
 [ext_resource type="Texture2D" uid="uid://5n8owka562ts" path="res://Sprites/zWIP/CURURU-WIP-1.jpeg" id="7_2ptjp"]
-[ext_resource type="Texture2D" uid="uid://cvcoor8cji7w4" path="res://Sprites/zWIP/CURURU-WIP-2.jpeg" id="7_md4fy"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4n7mi"]
 
@@ -26,6 +25,27 @@ border_width_top = 10
 border_width_right = 10
 border_width_bottom = 10
 border_color = Color(0.3606777, 0.23431486, 0.19828233, 1)
+corner_radius_top_left = 50
+corner_radius_top_right = 50
+corner_radius_bottom_right = 50
+corner_radius_bottom_left = 50
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rbci0"]
+bg_color = Color(0.14901961, 0.3372549, 0.22352941, 1)
+corner_radius_top_left = 50
+corner_radius_top_right = 50
+corner_radius_bottom_right = 50
+corner_radius_bottom_left = 50
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_am7sw"]
+bg_color = Color(0.21852642, 0.46189827, 0.279338, 1)
+corner_radius_top_left = 50
+corner_radius_top_right = 50
+corner_radius_bottom_right = 50
+corner_radius_bottom_left = 50
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ixkb2"]
+bg_color = Color(0.21852642, 0.46189827, 0.279338, 1)
 corner_radius_top_left = 50
 corner_radius_top_right = 50
 corner_radius_bottom_right = 50
@@ -243,19 +263,56 @@ layout_mode = 2
 [node name="Amuletos" parent="Corpo/Pause/BG/ContainerMenus" instance=ExtResource("6_gppie")]
 layout_mode = 2
 
+[node name="Opcoes" type="VBoxContainer" parent="Corpo/Pause/BG/ContainerMenus"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 4
+alignment = 1
+
+[node name="Titulo" type="RichTextLabel" parent="Corpo/Pause/BG/ContainerMenus/Opcoes"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.5
+theme_override_font_sizes/normal_font_size = 40
+text = "OPÇÕES"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HBoxContainer" type="VBoxContainer" parent="Corpo/Pause/BG/ContainerMenus/Opcoes"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 4.0
+theme_override_constants/separation = 50
+alignment = 1
+
+[node name="BtnContinuar" type="Button" parent="Corpo/Pause/BG/ContainerMenus/Opcoes/HBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(500, 100)
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_rbci0")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_rbci0")
+theme_override_styles/hover = SubResource("StyleBoxFlat_am7sw")
+theme_override_styles/focus = SubResource("StyleBoxFlat_ixkb2")
+text = "Continuar"
+
+[node name="BtnSair" type="Button" parent="Corpo/Pause/BG/ContainerMenus/Opcoes/HBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(500, 100)
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_rbci0")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_rbci0")
+theme_override_styles/hover = SubResource("StyleBoxFlat_am7sw")
+theme_override_styles/focus = SubResource("StyleBoxFlat_ixkb2")
+text = "Menu Principal"
+
 [node name="Mapa" type="TextureRect" parent="Corpo/Pause/BG/ContainerMenus"]
 visible = false
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 texture = ExtResource("7_2ptjp")
-
-[node name="Opcoes" type="TextureRect" parent="Corpo/Pause/BG/ContainerMenus"]
-visible = false
-layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
-texture = ExtResource("7_md4fy")
 
 [node name="Abas" type="PanelContainer" parent="Corpo/Pause/BG"]
 clip_children = 1
@@ -300,6 +357,18 @@ toggle_mode = true
 button_group = SubResource("ButtonGroup_f2wx0")
 text = "Amuletos"
 
+[node name="Opcoes" type="Button" parent="Corpo/Pause/BG/Abas/ContainerAbas"]
+layout_mode = 2
+size_flags_horizontal = 3
+focus_mode = 0
+focus_behavior_recursive = 1
+theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = SubResource("StyleBoxFlat_md4fy")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_7i7fj")
+toggle_mode = true
+button_group = SubResource("ButtonGroup_f2wx0")
+text = "Opções"
+
 [node name="Mapa" type="Button" parent="Corpo/Pause/BG/Abas/ContainerAbas"]
 visible = false
 layout_mode = 2
@@ -313,19 +382,6 @@ toggle_mode = true
 button_group = SubResource("ButtonGroup_f2wx0")
 text = "Mapa"
 
-[node name="Opcoes" type="Button" parent="Corpo/Pause/BG/Abas/ContainerAbas"]
-visible = false
-layout_mode = 2
-size_flags_horizontal = 3
-focus_mode = 0
-focus_behavior_recursive = 1
-theme_override_font_sizes/font_size = 24
-theme_override_styles/normal = SubResource("StyleBoxFlat_md4fy")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_7i7fj")
-toggle_mode = true
-button_group = SubResource("ButtonGroup_f2wx0")
-text = "Opções"
-
 [node name="Comandos" type="PanelContainer" parent="Corpo/Pause/BG"]
 layout_mode = 1
 anchors_preset = 3
@@ -333,7 +389,7 @@ anchor_left = 1.0
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -529.0
+offset_left = -472.0
 offset_top = -50.0
 offset_right = -29.0
 offset_bottom = 47.0
@@ -348,7 +404,7 @@ alignment = 1
 [node name="Select" type="HBoxContainer" parent="Corpo/Pause/BG/Comandos/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
-size_flags_stretch_ratio = 1.3
+size_flags_stretch_ratio = 1.15
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Corpo/Pause/BG/Comandos/HBoxContainer/Select"]
 layout_mode = 2
@@ -366,19 +422,7 @@ size_flags_horizontal = 3
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_font_sizes/normal_font_size = 24
-text = "= - Voltar"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="Sair" type="HBoxContainer" parent="Corpo/Pause/BG/Comandos/HBoxContainer"]
-layout_mode = 2
-size_flags_horizontal = 3
-
-[node name="RichTextLabel" type="RichTextLabel" parent="Corpo/Pause/BG/Comandos/HBoxContainer/Sair"]
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_font_sizes/normal_font_size = 24
-text = "B - Tela Inicial"
+text = "B - Voltar"
 horizontal_alignment = 1
 vertical_alignment = 1
 

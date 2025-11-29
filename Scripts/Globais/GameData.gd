@@ -155,5 +155,8 @@ func ResetData() -> void:
 	direcao = false
 	veio_de_baixo = false
 	upgrade_num = 0
-	for peca:bool in peca_coracao:
-		peca_coracao = false
+	
+	peca_coracao = 0
+	for peca:int in Mundos.pecas_coracao.size() - 1:
+		Mundos.pecas_coracao[peca] = false
+		#peca_coracao = false
