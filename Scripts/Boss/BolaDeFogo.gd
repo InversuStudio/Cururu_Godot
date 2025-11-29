@@ -5,7 +5,7 @@ extends Node2D
 func _process(delta: float) -> void:
 	global_position += speed * 128 * delta
 
-func _on_hit_box_hit() -> void:
+func _on_hit_box_hit(_pos:Vector2) -> void:
 	Desabilita()
 
 func _on_hit_box_body_entered(_body: Node2D) -> void:
