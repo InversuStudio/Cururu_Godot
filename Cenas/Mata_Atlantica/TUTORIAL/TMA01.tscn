@@ -1,4 +1,4 @@
-[gd_scene load_steps=43 format=4 uid="uid://dfuswe0wcsy33"]
+[gd_scene load_steps=44 format=4 uid="uid://dfuswe0wcsy33"]
 
 [ext_resource type="Texture2D" uid="uid://c374cwih425cq" path="res://Sprites/Cenário/Tilemaps/Base.png" id="1_axyo6"]
 [ext_resource type="PackedScene" uid="uid://cqyub70sv0ofp" path="res://Objetos/Props/SavePoint.tscn" id="1_kqyhf"]
@@ -37,6 +37,7 @@
 [ext_resource type="Texture2D" uid="uid://d18vqjeq586b1" path="res://Sprites/Cenário/Mata_Atlantica/assets_v2/pedra_musgo.png" id="32_ym8ms"]
 [ext_resource type="Texture2D" uid="uid://b2f2ppntemt15" path="res://Sprites/Cenário/Mata_Atlantica/Chao/82 Sem Título_0000-25-35_20251125200851.png" id="36_wstxp"]
 [ext_resource type="PackedScene" uid="uid://u28e3eudu6ch" path="res://Objetos/Funcionalidade/MainCamera.tscn" id="37_nika8"]
+[ext_resource type="Texture2D" uid="uid://b7hwtujjwy182" path="res://Sprites/UI/Pause/maPEAMENTO.png" id="38_5nff6"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kwvnc"]
 size = Vector2(9123, 2004)
@@ -520,6 +521,11 @@ texture = ExtResource("36_wstxp")
 position = Vector2(-30918, -3295.5)
 scale = Vector2(1.7592592, 0.7920354)
 texture = ExtResource("8_l3w8l")
+
+[node name="MaPeamento" type="Sprite2D" parent="."]
+position = Vector2(5679, -1840)
+scale = Vector2(0.9335072, 0.93350714)
+texture = ExtResource("38_5nff6")
 
 [node name="Cururu" parent="." instance=ExtResource("6_rp2yr")]
 z_index = 0
