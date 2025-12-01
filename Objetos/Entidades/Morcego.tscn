@@ -132,15 +132,25 @@ debug_color = Color(0.807155, 0.414602, 3.85046e-07, 0.42)
 unique_name_in_owner = true
 position = Vector2(2.2727273, -18.181818)
 
-[node name="Timer" type="Timer" parent="."]
+[node name="TimerDirecaoIdle" type="Timer" parent="."]
 autostart = true
 
 [node name="TimerDano" type="Timer" parent="."]
 unique_name_in_owner = true
 one_shot = true
 
+[node name="TimerInvestida" type="Timer" parent="."]
+unique_name_in_owner = true
+one_shot = true
+
+[node name="TimerEntreAtaques" type="Timer" parent="."]
+unique_name_in_owner = true
+one_shot = true
+
 [connection signal="body_exited" from="AreaVisaoSaida" to="." method="_on_area_visao_saida_body_exited"]
 [connection signal="body_entered" from="AreaVisaoEntrada" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="AreaVisaoEntrada" to="." method="_on_area_2d_body_exited"]
-[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="timeout" from="TimerDirecaoIdle" to="." method="_on_timer_timeout"]
 [connection signal="timeout" from="TimerDano" to="." method="_on_timer_dano_timeout"]
+[connection signal="timeout" from="TimerInvestida" to="." method="_on_timer_investida_timeout"]
+[connection signal="timeout" from="TimerEntreAtaques" to="." method="_on_timer_entre_ataques_timeout"]

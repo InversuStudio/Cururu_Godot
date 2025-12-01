@@ -23,7 +23,8 @@ func _on_area_entered(area: Area2D) -> void:
 		if area == ignore: return
 		hit.emit(area.global_position)
 		area.RecebeDano(dano, global_position)
-		get_tree().get_first_node_in_group("MainCamera").Shake(camera_shake)
+		if get_tree().get_first_node_in_group("MainCamera"):
+			get_tree().get_first_node_in_group("MainCamera").Shake(camera_shake)
 		# Toca som
 		if sfx:
 			$SFX.play()
