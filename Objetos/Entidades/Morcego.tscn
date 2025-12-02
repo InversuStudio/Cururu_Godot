@@ -52,6 +52,7 @@ height = 240.39351
 scale = Vector2(0.88, 0.88)
 collision_layer = 4
 motion_mode = 1
+wall_min_slide_angle = 0.017453292
 safe_margin = 2.0
 script = ExtResource("1_j5mvf")
 distancia_push = 0.3
