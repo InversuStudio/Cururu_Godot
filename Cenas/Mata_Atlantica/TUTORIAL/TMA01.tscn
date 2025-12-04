@@ -446,7 +446,7 @@ scale = Vector2(0.6, 0.6)
 texture = ExtResource("32_ym8ms")
 
 [node name="SavePoint" parent="." instance=ExtResource("1_kqyhf")]
-position = Vector2(1379, -1096)
+position = Vector2(1379, -1147)
 
 [node name="Moitas" type="Node2D" parent="."]
 light_mask = 2
@@ -529,7 +529,7 @@ texture = ExtResource("38_5nff6")
 
 [node name="Cururu" parent="." instance=ExtResource("6_rp2yr")]
 z_index = 0
-position = Vector2(1242, -1181.9999)
+position = Vector2(1197, -1159.9999)
 scale = Vector2(0.959163, 0.959163)
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
