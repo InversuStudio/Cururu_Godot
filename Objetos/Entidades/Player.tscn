@@ -1,4 +1,4 @@
-[gd_scene load_steps=129 format=3 uid="uid://nohq28uk7lfk"]
+[gd_scene load_steps=130 format=3 uid="uid://nohq28uk7lfk"]
 
 [ext_resource type="Script" uid="uid://cfu4ciwll8jcj" path="res://Scripts/Cururu/Cururu.gd" id="1_gwpdq"]
 [ext_resource type="Texture2D" uid="uid://6tjgxsgaflxb" path="res://Sprites/Cururu/Dano/03.png" id="2_0hf88"]
@@ -45,7 +45,6 @@
 [ext_resource type="Texture2D" uid="uid://cl66tdiqip5of" path="res://Sprites/Cururu/Idle/10.png" id="29_cj33d"]
 [ext_resource type="Texture2D" uid="uid://dq3kklti8r44c" path="res://Sprites/Cururu/Idle/11.png" id="30_32f06"]
 [ext_resource type="Texture2D" uid="uid://clckveolmj08b" path="res://Sprites/Cururu/Idle/12.png" id="31_pa0o1"]
-[ext_resource type="Texture2D" uid="uid://dn7teanbyle7" path="res://Sprites/Cururu/Pulo/02.png" id="38_3kywn"]
 [ext_resource type="Texture2D" uid="uid://bo2cqgkghvnvi" path="res://Sprites/Cururu/Pulo/03.png" id="39_cj33d"]
 [ext_resource type="Texture2D" uid="uid://b04g02rixixdn" path="res://Sprites/Cururu/Pulo/04.png" id="40_32f06"]
 [ext_resource type="Texture2D" uid="uid://dqmv0hysgnoq4" path="res://Sprites/Cururu/Idle/13.png" id="40_s2eek"]
@@ -71,7 +70,9 @@
 [ext_resource type="Texture2D" uid="uid://b2br0jnttod5e" path="res://Sprites/Cururu/Special/08.png" id="52_vpyrf"]
 [ext_resource type="Texture2D" uid="uid://bp8jt5ldm18ou" path="res://Sprites/Cururu/Melee/02.png" id="53_1dbdn"]
 [ext_resource type="Texture2D" uid="uid://hsargowvj610" path="res://Sprites/Cururu/Special/09.png" id="53_7spwe"]
+[ext_resource type="Texture2D" uid="uid://xhaqnu3yj884" path="res://Sprites/Cururu/Melee/00.png" id="53_grb16"]
 [ext_resource type="Script" uid="uid://ctu2e3ln1kydq" path="res://Scripts/Cururu/Dash.gd" id="53_k0fov"]
+[ext_resource type="Texture2D" uid="uid://mjo3l6koxn12" path="res://Sprites/Cururu/Melee/01.png" id="53_wjcvp"]
 [ext_resource type="Texture2D" uid="uid://d1v3ex0xexpef" path="res://Sprites/Cururu/Melee/03.png" id="54_0w8y8"]
 [ext_resource type="Script" uid="uid://brymvmxc6n166" path="res://Scripts/Cururu/Dano.gd" id="54_jgcph"]
 [ext_resource type="Texture2D" uid="uid://dr0cp2sh6h7qh" path="res://Sprites/Cururu/Run/08.png" id="54_kmqi2"]
@@ -282,9 +283,6 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("38_3kywn")
-}, {
-"duration": 1.0,
 "texture": ExtResource("39_cj33d")
 }, {
 "duration": 1.0,
@@ -310,6 +308,12 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": ExtResource("53_grb16")
+}, {
+"duration": 1.0,
+"texture": ExtResource("53_wjcvp")
+}, {
+"duration": 1.0,
 "texture": ExtResource("53_1dbdn")
 }, {
 "duration": 1.0,
@@ -323,7 +327,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"Melee1",
-"speed": 7.0
+"speed": 8.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -337,10 +341,13 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": ExtResource("51_6iqbf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("56_w1841")
 }],
 "loop": true,
 "name": &"Melee2",
-"speed": 7.0
+"speed": 8.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -463,8 +470,8 @@ radius = 87.47546
 height = 262.0
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_gjjix"]
-radius = 93.00001
-height = 304.0
+radius = 83.999985
+height = 277.99997
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ny8nr"]
 radius = 76.0
@@ -813,7 +820,7 @@ tracks/3/path = NodePath("Cururu:frame")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
-"times": PackedFloat32Array(0, 0.08713468, 0.175, 0.25833333),
+"times": PackedFloat32Array(0.05553951, 0.122215815, 0.1888825, 0.2532066),
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 1,
 "values": [0, 1, 2, 3]
@@ -1266,6 +1273,7 @@ position = Vector2(0, -117.00001)
 scale = Vector2(0.375651, 0.375651)
 sprite_frames = SubResource("SpriteFrames_ser7u")
 animation = &"Special"
+frame = 1
 speed_scale = 1.5
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -1304,20 +1312,20 @@ ignore = NodePath("../../HurtContainer/HurtBox")
 parent = NodePath("../..")
 
 [node name="ColMel1" type="CollisionShape2D" parent="HitContainer/Melee1"]
-position = Vector2(27, -96.00001)
+position = Vector2(20, -96.00001)
 rotation = -1.8463628
 shape = SubResource("CapsuleShape2D_7spwe")
 disabled = true
 debug_color = Color(0.69455, 0.495447, 0, 0.42)
 
 [node name="Melee2" parent="HitContainer" node_paths=PackedStringArray("ignore", "parent") instance=ExtResource("47_grb16")]
-position = Vector2(12, 0)
+position = Vector2(-22, -35)
 collision_mask = 16
 ignore = NodePath("../../HurtContainer/HurtBox")
 parent = NodePath("../..")
 
 [node name="ColMel2" type="CollisionShape2D" parent="HitContainer/Melee2"]
-position = Vector2(53, -70)
+position = Vector2(63, -64)
 rotation = -1.57079
 shape = SubResource("CapsuleShape2D_gjjix")
 
