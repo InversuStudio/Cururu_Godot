@@ -82,13 +82,40 @@ func Save() -> void:
 		config.set_value("save", "peca_coracao", peca_coracao)
 		config.set_value("save", "lista_coracao", Mundos.pecas_coracao)
 		config.set_value("save", "tem_mapa", Inventario.tem_mapa)
+		
+		var save_path:String = OS.get_system_dir(OS.SYSTEM_DIR_DOCUMENTS) + "/SavedGames"
+		# Checa se pasta SavedGames existe
+		if DirAccess.dir_exists_absolute(save_path):
+			print("SavedGames existe")
+		# Senão, a cria
+		else:
+			var dir_err:Error = DirAccess.make_dir_absolute(save_path)
+			if dir_err == OK: print("SavedGames criada")
+			else:
+				printerr("Erro ao criar SavedGames")
+				return
+		
+		# Checa se pasta de save do Cururu existe
+		if DirAccess.dir_exists_absolute(save_path + "/Cururu"):
+			print("Pasta Cururu existe")
+		# Senão, a cria
+		else:
+			# Checa se pasta SavedGames existe
+			var dir_err:Error = DirAccess.make_dir_absolute(save_path + "/Cururu")
+			if dir_err == OK: print("Pasta Cururu criada")
+			else:
+				printerr("Erro ao criar pasta Cururu")
+				return
+		
 		# Salva arquivo
-		config.save(OS.get_executable_path().get_base_dir()+"/savedata.cfg")
+		var err:Error = config.save(save_path + "/Cururu/savedata.cfg")
+			#OS.get_executable_path().get_base_dir()+"/savedata.cfg")
 		# Lança aviso de save
-		HUD.AvisoSave()
-		print("Jogo salvo")
-	else:
-		printerr("Erro ao salvar")
+		if err == OK:
+			HUD.AvisoSave()
+			print("Jogo salvo")
+		else:
+			printerr("Erro ao salvar")
 
 # FUNÇÃO PARA CARREGAR SAVE
 func Load() -> bool:
@@ -132,7 +159,9 @@ func Load() -> bool:
 
 # FUNÇÃO QUE CHECA SE SAVE EXISTE
 func ChecaData() -> String:
-	var file_dir:String = OS.get_executable_path().get_base_dir()+"/savedata.cfg"
+	var file_dir:String = OS.get_system_dir(OS.SYSTEM_DIR_DOCUMENTS
+		)+"/SavedGames/Cururu/savedata.cfg"
+	#OS.get_executable_path().get_base_dir()+"/savedata.cfg"
 	var err:Error = config.load(file_dir)
 	if err == OK:
 		return file_dir
