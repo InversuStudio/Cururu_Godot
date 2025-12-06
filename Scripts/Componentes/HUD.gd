@@ -18,9 +18,6 @@ func _input(_event: InputEvent) -> void:
 		if Mundos.player == null or AvisoItem.ativo: return
 		%Pause.visible = true if %Pause.visible == false else false
 	
-	#if Input.is_action_just_pressed("select") and %Pause.visible:
-		#Mundos.CarregaFase(Mundos.NomeFase.MenuPrincipal)
-	
 	if Input.is_action_just_pressed("ui_cancel"):
 		%Pause.visible = false
 	
@@ -74,6 +71,18 @@ func _ready() -> void:
 	%BtnSair.connect("pressed", func(): Mundos.CarregaFase(Mundos.NomeFase.MenuPrincipal))
 	%Opcoes.connect("visibility_changed", func():
 		if %Opcoes.visible: %BtnContinuar.grab_focus())
+	
+	%SliderMaster.connect("value_changed", func(valor:float):
+		var bus:int = AudioServer.get_bus_index("Master")
+		AudioServer.set_bus_volume_db(bus, linear_to_db(valor)))
+		
+	%SliderBGM.connect("value_changed", func(valor:float):
+		var bus:int = AudioServer.get_bus_index("BGM")
+		AudioServer.set_bus_volume_db(bus, linear_to_db(valor)))
+		
+	%SliderSFX.connect("value_changed", func(valor:float):
+		var bus:int = AudioServer.get_bus_index("SFX")
+		AudioServer.set_bus_volume_db(bus, linear_to_db(valor)))
 	
 	# Lógica para evitar bugs durante testes
 	await get_tree().physics_frame

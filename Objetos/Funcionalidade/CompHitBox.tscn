@@ -10,5 +10,6 @@ script = ExtResource("1_187c1")
 
 [node name="SFX" type="AudioStreamPlayer2D" parent="."]
 max_polyphony = 100
+bus = &"SFX"
 
 [connection signal="area_entered" from="." to="." method="_on_area_entered"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://bs5i45df7rwnf"]
+[gd_scene load_steps=25 format=3 uid="uid://bs5i45df7rwnf"]
 
 [ext_resource type="Script" uid="uid://dg1wm8v16vrwl" path="res://Scripts/Componentes/HUD.gd" id="1_yixhe"]
 [ext_resource type="Texture2D" uid="uid://dbohcm7v5pvg4" path="res://Sprites/UI/HUD/UIHUD-MAGIA.png" id="2_f2wx0"]
@@ -50,6 +50,32 @@ corner_radius_top_left = 50
 corner_radius_top_right = 50
 corner_radius_bottom_right = 50
 corner_radius_bottom_left = 50
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mms7u"]
+bg_color = Color(0.11764706, 0.17254902, 0.15294118, 1)
+border_width_left = 10
+border_width_top = 15
+border_width_right = 10
+border_width_bottom = 15
+border_color = Color(0.11710768, 0.17248994, 0.15446869, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_281ki"]
+bg_color = Color(0.21960784, 0.4627451, 0.2784314, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_w37wn"]
+bg_color = Color(0.25882354, 0.7607843, 0.6039216, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2ptjp"]
 bg_color = Color(0.21852642, 0.46189827, 0.279338, 1)
@@ -306,6 +332,72 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_rbci0")
 theme_override_styles/hover = SubResource("StyleBoxFlat_am7sw")
 theme_override_styles/focus = SubResource("StyleBoxFlat_ixkb2")
 text = "Menu Principal"
+
+[node name="SomMaster" type="VBoxContainer" parent="Corpo/Pause/BG/ContainerMenus/Opcoes/HBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Titulo" type="RichTextLabel" parent="Corpo/Pause/BG/ContainerMenus/Opcoes/HBoxContainer/SomMaster"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/normal_font_size = 28
+text = "Master"
+vertical_alignment = 1
+
+[node name="SliderMaster" type="HSlider" parent="Corpo/Pause/BG/ContainerMenus/Opcoes/HBoxContainer/SomMaster"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 2
+theme_override_styles/slider = SubResource("StyleBoxFlat_mms7u")
+theme_override_styles/grabber_area = SubResource("StyleBoxFlat_281ki")
+theme_override_styles/grabber_area_highlight = SubResource("StyleBoxFlat_w37wn")
+max_value = 1.0
+step = 0.01
+value = 1.0
+
+[node name="SomBGM" type="VBoxContainer" parent="Corpo/Pause/BG/ContainerMenus/Opcoes/HBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Titulo" type="RichTextLabel" parent="Corpo/Pause/BG/ContainerMenus/Opcoes/HBoxContainer/SomBGM"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/normal_font_size = 28
+text = "Música"
+vertical_alignment = 1
+
+[node name="SliderBGM" type="HSlider" parent="Corpo/Pause/BG/ContainerMenus/Opcoes/HBoxContainer/SomBGM"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 2
+theme_override_styles/slider = SubResource("StyleBoxFlat_mms7u")
+theme_override_styles/grabber_area = SubResource("StyleBoxFlat_281ki")
+theme_override_styles/grabber_area_highlight = SubResource("StyleBoxFlat_w37wn")
+max_value = 1.0
+step = 0.01
+value = 1.0
+
+[node name="SomSFX" type="VBoxContainer" parent="Corpo/Pause/BG/ContainerMenus/Opcoes/HBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Titulo" type="RichTextLabel" parent="Corpo/Pause/BG/ContainerMenus/Opcoes/HBoxContainer/SomSFX"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/normal_font_size = 28
+text = "Efeitos Sonoros"
+vertical_alignment = 1
+
+[node name="SliderSFX" type="HSlider" parent="Corpo/Pause/BG/ContainerMenus/Opcoes/HBoxContainer/SomSFX"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 2
+theme_override_styles/slider = SubResource("StyleBoxFlat_mms7u")
+theme_override_styles/grabber_area = SubResource("StyleBoxFlat_281ki")
+theme_override_styles/grabber_area_highlight = SubResource("StyleBoxFlat_w37wn")
+max_value = 1.0
+step = 0.01
+value = 1.0
 
 [node name="Mapa" type="TextureRect" parent="Corpo/Pause/BG/ContainerMenus"]
 visible = false

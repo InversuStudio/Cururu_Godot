@@ -13,6 +13,7 @@ extends State
 @export var special_state: State = null
 
 var pode_anim: bool = false
+var turn:bool = false
 
 # INICIA O STATE
 func Enter() -> void:
@@ -71,8 +72,14 @@ func FixedUpdate(delta: float) -> State:
 	if parent.is_on_floor():
 		# Controla animações de parado e correndo
 		if pode_anim:
-			if parent.input_move: %Anim.play("Run")
-			else: %Anim.play("Idle")
+			if parent.velocity.x == 0:
+				%Anim.play("Idle")
+			elif sign(parent.input_move) == sign(parent.velocity.x):
+				%Anim.play("Run")
+			elif parent.input_move and turn == false:# and last_anim != "Turn":
+				%Anim.play("Turn")
+				#turn = true
+				#pode_anim = false
 			
 	# Se não estiver no chão, mudar State
 	if not parent.is_on_floor():
@@ -85,3 +92,9 @@ func FixedUpdate(delta: float) -> State:
 func _on_anim_animation_finished(anim_name: StringName) -> void:
 	if anim_name == "Land":
 		pode_anim = true
+
+func _on_anim_current_animation_changed(anim_name: String) -> void:
+	if anim_name == "Turn":
+		turn = true
+	elif anim_name != "": turn = false#pode_anim = true
+	#printerr(anim_name)

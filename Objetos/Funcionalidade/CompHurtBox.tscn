@@ -11,6 +11,7 @@ script = ExtResource("1_2g1rk")
 [node name="SFX" type="AudioStreamPlayer2D" parent="."]
 unique_name_in_owner = true
 max_polyphony = 100
+bus = &"SFX"
 
 [node name="Timer" type="Timer" parent="."]
 unique_name_in_owner = true

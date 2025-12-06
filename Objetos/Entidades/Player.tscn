@@ -1,4 +1,4 @@
-[gd_scene load_steps=130 format=3 uid="uid://nohq28uk7lfk"]
+[gd_scene load_steps=131 format=3 uid="uid://nohq28uk7lfk"]
 
 [ext_resource type="Script" uid="uid://cfu4ciwll8jcj" path="res://Scripts/Cururu/Cururu.gd" id="1_gwpdq"]
 [ext_resource type="Texture2D" uid="uid://6tjgxsgaflxb" path="res://Sprites/Cururu/Dano/03.png" id="2_0hf88"]
@@ -1213,6 +1213,34 @@ tracks/2/keys = {
 "values": [false, true]
 }
 
+[sub_resource type="Animation" id="Animation_grb16"]
+resource_name = "Turn"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Cururu:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"Virada"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Cururu:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.10000001, 0.20000002),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [0, 1, 2]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_g0l4m"]
 _data = {
 &"Dano": SubResource("Animation_aofpm"),
@@ -1232,7 +1260,8 @@ _data = {
 &"Run": SubResource("Animation_prtj7"),
 &"Special": SubResource("Animation_7uoqt"),
 &"Special_Down": SubResource("Animation_7spwe"),
-&"Special_Up": SubResource("Animation_vpyrf")
+&"Special_Up": SubResource("Animation_vpyrf"),
+&"Turn": SubResource("Animation_grb16")
 }
 
 [node name="Player" type="CharacterBody2D" node_paths=PackedStringArray("vida", "state_machine", "hitbox_container", "hurtbox_container") groups=["Player"]]
@@ -1241,8 +1270,8 @@ collision_layer = 2
 script = ExtResource("1_gwpdq")
 vel = 9.0
 vel_aerea = 6.5
-acel_time = 0.1
-decel_time = 0.1
+acel_time = 0.45
+decel_time = 0.2
 altura_pulo = 4.6
 tempo_pulo = 0.4
 tempo_cair = 0.65
@@ -1402,21 +1431,25 @@ autoplay = "Idle"
 unique_name_in_owner = true
 stream = ExtResource("80_ny8nr")
 max_polyphony = 100
+bus = &"SFX"
 
 [node name="SFX_Dash" type="AudioStreamPlayer" parent="SFX"]
 unique_name_in_owner = true
 stream = ExtResource("81_2t31h")
 max_polyphony = 100
+bus = &"SFX"
 
 [node name="SFX_Ataque" type="AudioStreamPlayer" parent="SFX"]
 unique_name_in_owner = true
 stream = ExtResource("81_2t31h")
 max_polyphony = 100
+bus = &"SFX"
 
 [node name="SFX_Extra" type="AudioStreamPlayer" parent="SFX"]
 unique_name_in_owner = true
 volume_db = -2.0
 max_polyphony = 100
+bus = &"SFX"
 
 [node name="Timers" type="Node" parent="."]
 
@@ -1500,6 +1533,7 @@ sfx_sem_magia = Array[AudioStream]([ExtResource("90_s2eek"), ExtResource("91_vpy
 [connection signal="animation_finished" from="Anim" to="StateMachine/Dash" method="_on_anim_animation_finished"]
 [connection signal="animation_finished" from="Anim" to="StateMachine/Special" method="_on_anim_animation_finished"]
 [connection signal="animation_started" from="Anim" to="StateMachine/Special" method="_on_anim_animation_started"]
+[connection signal="current_animation_changed" from="Anim" to="StateMachine/Chao" method="_on_anim_current_animation_changed"]
 [connection signal="timeout" from="Timers/Coyote" to="StateMachine/Fall" method="_on_coyote_timeout"]
 [connection signal="timeout" from="Timers/JumpLag" to="StateMachine/Fall" method="_on_jump_lag_timeout"]
 [connection signal="timeout" from="Timers/MeleeTime" to="StateMachine/Melee" method="_on_melee_timeout"]

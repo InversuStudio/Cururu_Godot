@@ -40,6 +40,7 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 		# Toca som
 		if sfx:
 			var s:AudioStreamPlayer = AudioStreamPlayer.new()
+			s.bus = "SFX"
 			s.stream = sfx
 			get_tree().current_scene.add_child(s)
 			s.finished.connect(SfxTocou.bind(s))

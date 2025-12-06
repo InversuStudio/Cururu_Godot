@@ -80,6 +80,7 @@ vertical_alignment = 1
 unique_name_in_owner = true
 stream = ExtResource("7_rm14k")
 volume_db = 1.0
+bus = &"SFX"
 
 [node name="OtimizadorSprite" type="VisibleOnScreenNotifier2D" parent="."]
 rect = Rect2(-145, -403, 290, 413)
