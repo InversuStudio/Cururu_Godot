@@ -53,7 +53,7 @@ func FixedUpdate(delta: float) -> State:
 	parent.velocity.y += 128 * delta
 	# Aplica movimento
 	if parent.pode_mover:
-		var dir = parent.input_move
+		var dir:float = parent.input_move.x
 		if dir != 0.0:
 			parent.velocity.x += parent.accel * dir * delta
 			if abs(parent.velocity.x) > parent.speed:
@@ -62,10 +62,10 @@ func FixedUpdate(delta: float) -> State:
 			parent.velocity.x = move_toward(parent.velocity.x, dir, parent.decel * delta)
 			
 	# Espelha o sprite de acordo com o input
-	if parent.input_move > 0:
+	if parent.input_move.x > 0:
 		%Cururu.flip_h = false
 		parent.hitbox_container.scale.x = 1
-	elif parent.input_move < 0:
+	elif parent.input_move.x < 0:
 		%Cururu.flip_h = true
 		parent.hitbox_container.scale.x = -1
 	
@@ -74,9 +74,9 @@ func FixedUpdate(delta: float) -> State:
 		if pode_anim:
 			if parent.velocity.x == 0:
 				%Anim.play("Idle")
-			elif sign(parent.input_move) == sign(parent.velocity.x):
+			elif sign(parent.input_move.x) == sign(parent.velocity.x):
 				%Anim.play("Run")
-			elif parent.input_move and turn == false:# and last_anim != "Turn":
+			elif parent.input_move.x and turn == false:# and last_anim != "Turn":
 				%Anim.play("Turn")
 				#turn = true
 				#pode_anim = false

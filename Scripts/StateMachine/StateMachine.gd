@@ -27,7 +27,7 @@ func Update(delta: float) -> void:
 	var new_state = current_state.Update(delta)
 	# Se resultado não for nulo, será o novo State
 	if new_state:
-		Muda_State(new_state)
+		MudaState(new_state)
 
 # # COMPORTAMENTO PHYSICS_PROCESS
 func FixedUpdate(delta: float) -> void:
@@ -35,10 +35,10 @@ func FixedUpdate(delta: float) -> void:
 	var new_state = current_state.FixedUpdate(delta)
 	# Se resultado não for nulo, será o novo State
 	if new_state:
-		Muda_State(new_state)
+		MudaState(new_state)
 
 # FUNÇÃO DE MUDAR STATE
-func Muda_State(new_state: State) -> void:
+func MudaState(new_state: State) -> void:
 	current_state.Exit() # Executa saída do State
 	last_state = current_state
 	current_state = new_state # Muda o State

@@ -48,7 +48,7 @@ func FixedUpdate(delta: float) -> State:
 	# Aplica movimento
 	#var dir = parent.input_move * parent.air_speed
 	#parent.velocity.x = move_toward(parent.velocity.x, dir, parent.accel * delta)
-	var dir = parent.input_move
+	var dir:float = parent.input_move.x
 	if dir != 0.0:
 		parent.velocity.x += parent.accel * dir * delta
 		if abs(parent.velocity.x) > parent.air_speed:
@@ -57,10 +57,10 @@ func FixedUpdate(delta: float) -> State:
 		parent.velocity.x = move_toward(parent.velocity.x, dir, parent.decel * delta)
 	
 	# Espelha o sprite de acordo com o input
-	if parent.input_move > 0:
+	if parent.input_move.x > 0:
 		%Cururu.flip_h = false
 		parent.hitbox_container.scale.x = 1
-	elif parent.input_move < 0:
+	elif parent.input_move.x < 0:
 		%Cururu.flip_h = true
 		parent.hitbox_container.scale.x = -1
 	

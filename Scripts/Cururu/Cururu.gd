@@ -72,15 +72,20 @@ var deu_air_dash: bool = false
 
 @onready var sprite: AnimatedSprite2D = %Cururu
 
-var input_move: float = 0.0
+var input_move: Vector2 = Vector2.ZERO
 var pode_mover: bool = true
+
+@onready var check_agua_up: RayCast2D = $CheckAguaUp
+@onready var check_agua_down: RayCast2D = $CheckAguaDown
+
 
 func _ready() -> void:
 	# Desabilita hitboxes
-	for h in hitbox_container.get_children():
+	for h:Node2D in hitbox_container.get_children():
 		if h is HitBox:
 			for c in h.get_children():
 				if c is CollisionShape2D: c.disabled = true
+	
 	# Configura Timers
 	%Coyote.wait_time = tempo_coyote
 	%JumpLag.wait_time = lag_pulo
@@ -97,14 +102,15 @@ func _ready() -> void:
 	if GameData.magia_atual > 0 and GameData.magia_atual < 1:
 		GameData.magia_atual = magia_max
 	if GameData.veio_de_baixo:
-		%StateMachine.Muda_State(%StateMachine.find_child("Pulo"))
+		state_machine.MudaState(state_machine.find_child("Pulo"))
 		GameData.veio_de_baixo = false
 
 func _process(delta: float) -> void:
 	# Controla se pode mover
 	if !pode_mover: return
 	# Recebe input
-	input_move = Input.get_axis("esquerda", "direita")
+	input_move.x = Input.get_axis("esquerda", "direita")
+	input_move.y = Input.get_axis("cima", "baixo")
 	# Aplica PROCESS do StateMachine
 	state_machine.Update(delta)
 	
@@ -132,7 +138,7 @@ func VidaMudou(vida_nova, vida_antiga) -> void:
 	if vida_nova < vida_antiga:
 		print("RECEBI DANO")
 		pode_mover = false
-		%StateMachine.call_deferred("Muda_State", %StateMachine.find_child("Dano"))
+		%StateMachine.call_deferred("MudaState", %StateMachine.find_child("Dano"))
 	else:
 		print("RECEBI CURA")
 	

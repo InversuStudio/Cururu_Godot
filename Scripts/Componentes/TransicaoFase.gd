@@ -22,12 +22,12 @@ func _on_body_entered(body: Node2D) -> void:
 			if body.velocity.y <= 0.0:
 				GameData.veio_de_baixo = true
 				body.velocity.y = -body.jump_force
-				body.input_move = 0.0
+				body.input_move.x = 0.0
 		else:
 			match virado_a_esquerda:
 				false:
-					body.input_move = 1.0
+					body.input_move.x = 1.0
 				true:
-					body.input_move = -1.0
+					body.input_move.x = -1.0
 				
 		Mundos.CarregaFase(destino, true, posicao, virado_a_esquerda)

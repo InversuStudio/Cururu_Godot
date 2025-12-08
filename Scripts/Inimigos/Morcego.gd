@@ -20,7 +20,7 @@ func _ready() -> void:
 	%HurtBox.hurt.connect(RecebeuDano)
 	%HitBox.hit.connect(Pushback)
 
-func _physics_process(delta: float) -> void:
+func _physics_process(_delta: float) -> void:
 	if !trava_move:
 		if _hunting:
 			if global_position.distance_to(Mundos.player.global_position) < alcanceAtaque and !_atacando and pode_atacar:

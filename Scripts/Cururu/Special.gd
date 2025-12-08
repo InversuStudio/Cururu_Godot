@@ -2,6 +2,7 @@ extends State
 
 @export var chao_state: State = null
 @export var fall_state: State = null
+@export var nado_state: State = null
 
 @export var hitboxes:Array[HitBox] = []
 
@@ -38,20 +39,14 @@ func Enter() -> void:
 
 func Exit() -> void:
 	terminou = false
-	#await get_tree().physics_frame
-	#if parent.sprite.offset.x != 0.0:
-	#parent.sprite.offset.x = 0.0
-
-#func Update(_delta:float) -> State:
-	#
-	#return null
 
 func FixedUpdate(delta:float) -> State:
 	if Input.is_action_just_released("pulo"):
 		parent.velocity.y /= 2.0
-		#parent.velocity.y = 0.0
-	# Aplica gravidade de queda
-	#if parent.is_on_floor():
+
+	if parent.check_agua_down.is_colliding():
+		return nado_state
+	
 	parent.velocity.x = move_toward(parent.velocity.x, 0, parent.decel * delta)
 	if parent.velocity.y >= 0:
 		parent.velocity.y += parent.fall_gravity * delta

@@ -17,4 +17,5 @@ script = ExtResource("1_tckdd")
 process_priority = 300
 process_physics_priority = 300
 script = ExtResource("2_lxfdy")
+interpolation_mode = 2
 metadata/_custom_type_script = "uid://bd046eokvcnu2"

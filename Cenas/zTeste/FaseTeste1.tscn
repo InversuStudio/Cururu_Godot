@@ -306,6 +306,7 @@ position = Vector2(2955, -985)
 script = ExtResource("9_2ryh1")
 zoom = Vector2(0.6, 0.6)
 tween_resource = SubResource("Resource_id35g")
+tween_on_load = false
 draw_limits = true
 metadata/_custom_type_script = "uid://bhexx6mj1xv3q"
 
@@ -314,6 +315,7 @@ position = Vector2(5059, -703)
 script = ExtResource("9_2ryh1")
 zoom = Vector2(1.53, 1.53)
 tween_resource = SubResource("Resource_g237d")
+tween_on_load = false
 draw_limits = true
 metadata/_custom_type_script = "uid://bhexx6mj1xv3q"
 

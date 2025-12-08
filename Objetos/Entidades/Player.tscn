@@ -1,4 +1,4 @@
-[gd_scene load_steps=126 format=3 uid="uid://nohq28uk7lfk"]
+[gd_scene load_steps=127 format=3 uid="uid://nohq28uk7lfk"]
 
 [ext_resource type="Script" uid="uid://cfu4ciwll8jcj" path="res://Scripts/Cururu/Cururu.gd" id="1_gwpdq"]
 [ext_resource type="Texture2D" uid="uid://6tjgxsgaflxb" path="res://Sprites/Cururu/Dano/03.png" id="2_0hf88"]
@@ -95,6 +95,7 @@
 [ext_resource type="AudioStream" uid="uid://d4ghkqb2kyw1m" path="res://Audio/SFX/Ataque_Basico.wav" id="90_2t31h"]
 [ext_resource type="AudioStream" uid="uid://chf637hlgvwxq" path="res://Audio/SFX/Cuica_1.ogg" id="90_s2eek"]
 [ext_resource type="AudioStream" uid="uid://b1e3re8ykc11o" path="res://Audio/SFX/Cuica_2.ogg" id="91_vpyrf"]
+[ext_resource type="Script" uid="uid://b47dm1pnrhmt1" path="res://Scripts/Cururu/Nadando.gd" id="96_0digr"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_ser7u"]
 animations = [{
@@ -1282,6 +1283,7 @@ position = Vector2(0, -117.00001)
 scale = Vector2(0.375651, 0.375651)
 sprite_frames = SubResource("SpriteFrames_ser7u")
 animation = &"Special"
+frame = 1
 speed_scale = 1.5
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -1336,6 +1338,7 @@ parent = NodePath("../..")
 position = Vector2(63, -64)
 rotation = -1.57079
 shape = SubResource("CapsuleShape2D_gjjix")
+disabled = true
 
 [node name="MeleeUp" parent="HitContainer" node_paths=PackedStringArray("ignore", "parent") instance=ExtResource("47_grb16")]
 collision_mask = 16
@@ -1453,10 +1456,22 @@ one_shot = true
 unique_name_in_owner = true
 one_shot = true
 
+[node name="CheckAguaUp" type="RayCast2D" parent="."]
+position = Vector2(0, -103)
+target_position = Vector2(0, -80)
+collision_mask = 64
+hit_from_inside = true
+
+[node name="CheckAguaDown" type="RayCast2D" parent="."]
+position = Vector2(0, -103)
+target_position = Vector2(0, 20)
+collision_mask = 64
+hit_from_inside = true
+
 [node name="StateMachine" type="Node" parent="." node_paths=PackedStringArray("start_state")]
 unique_name_in_owner = true
 script = ExtResource("49_1ribx")
-start_state = NodePath("Chao")
+start_state = NodePath("Fall")
 
 [node name="Chao" type="Node" parent="StateMachine" node_paths=PackedStringArray("pulo_state", "fall_state", "dash_state", "melee_state", "special_state")]
 script = ExtResource("50_3s0sn")
@@ -1466,13 +1481,14 @@ dash_state = NodePath("../Dash")
 melee_state = NodePath("../Melee")
 special_state = NodePath("../Special")
 
-[node name="Fall" type="Node" parent="StateMachine" node_paths=PackedStringArray("chao_state", "pulo_state", "dash_state", "melee_state", "special_state")]
+[node name="Fall" type="Node" parent="StateMachine" node_paths=PackedStringArray("chao_state", "pulo_state", "dash_state", "melee_state", "special_state", "nado_state")]
 script = ExtResource("51_dvy3r")
 chao_state = NodePath("../Chao")
 pulo_state = NodePath("../Pulo")
 dash_state = NodePath("../Dash")
 melee_state = NodePath("../Melee")
 special_state = NodePath("../Special")
+nado_state = NodePath("../Nadando")
 
 [node name="Pulo" type="Node" parent="StateMachine" node_paths=PackedStringArray("fall_state", "dash_state", "melee_state", "special_state")]
 script = ExtResource("52_damx7")
@@ -1492,19 +1508,25 @@ fall_state = NodePath("../Fall")
 chao_state = NodePath("../Chao")
 hurtbox = NodePath("../../HurtContainer/HurtBox")
 
-[node name="Melee" type="Node" parent="StateMachine" node_paths=PackedStringArray("chao_state", "fall_state", "hitboxes")]
+[node name="Melee" type="Node" parent="StateMachine" node_paths=PackedStringArray("chao_state", "fall_state", "nado_state", "hitboxes")]
 script = ExtResource("55_7uoqt")
 chao_state = NodePath("../Chao")
 fall_state = NodePath("../Fall")
+nado_state = NodePath("../Nadando")
 sfx = ExtResource("90_2t31h")
 hitboxes = [NodePath("../../HitContainer/Melee1"), NodePath("../../HitContainer/Melee2"), NodePath("../../HitContainer/MeleeUp"), NodePath("../../HitContainer/MeleeDown")]
 
-[node name="Special" type="Node" parent="StateMachine" node_paths=PackedStringArray("chao_state", "fall_state", "hitboxes")]
+[node name="Special" type="Node" parent="StateMachine" node_paths=PackedStringArray("chao_state", "fall_state", "nado_state", "hitboxes")]
 script = ExtResource("56_7uoqt")
 chao_state = NodePath("../Chao")
 fall_state = NodePath("../Fall")
+nado_state = NodePath("../Nadando")
 hitboxes = [NodePath("../../HitContainer/Special"), NodePath("../../HitContainer/SpecialUp"), NodePath("../../HitContainer/SpecialDown")]
 sfx_sem_magia = Array[AudioStream]([ExtResource("90_s2eek"), ExtResource("91_vpyrf")])
+
+[node name="Nadando" type="Node" parent="StateMachine" node_paths=PackedStringArray("jump_state")]
+script = ExtResource("96_0digr")
+jump_state = NodePath("../Pulo")
 
 [connection signal="counter" from="HurtContainer/HurtBox" to="StateMachine/Dano" method="_on_hurt_box_counter"]
 [connection signal="animation_finished" from="Anim" to="StateMachine/Chao" method="_on_anim_animation_finished"]

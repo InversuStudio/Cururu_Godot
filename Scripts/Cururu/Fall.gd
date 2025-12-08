@@ -11,6 +11,8 @@ extends State
 @export var melee_state: State = null
 ## State de ataque magico
 @export var special_state: State = null
+## State nadando
+@export var nado_state:State = null
 
 # INICIA O STATE
 func Enter() -> void:
@@ -44,9 +46,12 @@ func FixedUpdate(delta: float) -> State:
 	# Aplica gravidade de queda
 	parent.velocity.y += parent.fall_gravity * delta
 	
+	if parent.check_agua_down.is_colliding():
+		return nado_state
+	
 	# Aplica movimento
-	var dir = parent.input_move
-	if dir != 0.0:
+	var dir:float = parent.input_move.x
+	if dir:
 		parent.velocity.x += parent.accel * dir * delta
 		if abs(parent.velocity.x) > parent.air_speed:
 			parent.velocity.x = parent.air_speed * dir
@@ -55,10 +60,10 @@ func FixedUpdate(delta: float) -> State:
 	#parent.velocity.x = parent.input_move * parent.air_speed
 	
 	# Espelha o sprite de acordo com o input
-	if parent.input_move > 0:
+	if parent.input_move.x > 0:
 		%Cururu.flip_h = false
 		parent.hitbox_container.scale.x = 1
-	elif parent.input_move < 0:
+	elif parent.input_move.x < 0:
 		%Cururu.flip_h = true
 		parent.hitbox_container.scale.x = -1
 	

@@ -2,6 +2,7 @@ extends State
 
 @export var chao_state: State = null
 @export var fall_state: State = null
+@export var nado_state: State = null
 
 @export var sfx:AudioStream = null
 @export var hitboxes:Array[HitBox] = []
@@ -31,10 +32,11 @@ func Enter() -> void:
 	Console._State(name)
 	%MeleeTime.stop() # Reseta timer para mudar de combo
 	# Toca animação em ordem, loopando lista
-	if !parent.is_on_floor() and Input.is_action_pressed("baixo"):
-		%Anim.play("Melee_Down", -1, GameData.ataque_anim_speed)
-	elif Input.is_action_pressed("cima"):
-		%Anim.play("Melee_Up", -1, GameData.ataque_anim_speed)
+	if !parent.is_on_floor() and parent.input_move.y:
+		if parent.input_move.y > 0:
+			%Anim.play("Melee_Up", -1, GameData.ataque_anim_speed)
+		else:
+			%Anim.play("Melee_Down", -1, GameData.ataque_anim_speed)
 	else:
 		%Anim.play(combo_anim[combo_num], -1, GameData.ataque_anim_speed)
 		var next_combo = combo_num + 1
@@ -62,13 +64,16 @@ func FixedUpdate(delta:float) -> State:
 		else:
 			parent.velocity.y += parent.jump_gravity * delta
 	
+	if parent.check_agua_down.is_colliding():
+		return nado_state
+	
 	# Solução lógica pulo curto
 	if Input.is_action_just_released("pulo"):
 		parent.velocity.y /= 2.0
 		#parent.velocity.y = 0.0
 	
 	# Movimentação
-	var dir = parent.input_move
+	var dir = parent.input_move.x
 	if dir != 0.0:
 		parent.velocity.x += parent.accel * dir * delta
 		var target_speed:float = parent.speed if parent.is_on_floor(

@@ -33,7 +33,7 @@ func Exit() -> void:
 func FixedUpdate(delta:float) -> State:
 	if pode_cair:
 		parent.velocity.y += parent.fall_gravity * delta
-		parent.velocity.x = move_toward(parent.velocity.x, parent.input_move,
+		parent.velocity.x = move_toward(parent.velocity.x, parent.input_move.x,
 			parent.decel * delta)
 	if acabou:
 		if parent.is_on_floor():

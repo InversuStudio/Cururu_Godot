@@ -79,6 +79,7 @@ Special=""
 Console=""
 PecaCoracao=""
 MainCamera=""
+Agua=""
 
 [input]
 
@@ -197,6 +198,7 @@ locale/translations_pot_files=PackedStringArray("res://Dialogos/Teste.dialogue")
 2d_physics/layer_4="Hit/Hurt Cururu"
 2d_physics/layer_5="HitHurt Inimigos"
 2d_physics/layer_6="Coletaveis"
+2d_physics/layer_7="Agua"
 
 [physics]
 
