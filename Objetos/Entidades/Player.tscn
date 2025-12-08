@@ -1502,10 +1502,11 @@ script = ExtResource("53_k0fov")
 chao_state = NodePath("../Chao")
 fall_state = NodePath("../Fall")
 
-[node name="Dano" type="Node" parent="StateMachine" node_paths=PackedStringArray("fall_state", "chao_state", "hurtbox")]
+[node name="Dano" type="Node" parent="StateMachine" node_paths=PackedStringArray("fall_state", "chao_state", "nado_state", "hurtbox")]
 script = ExtResource("54_jgcph")
 fall_state = NodePath("../Fall")
 chao_state = NodePath("../Chao")
+nado_state = NodePath("../Nadando")
 hurtbox = NodePath("../../HurtContainer/HurtBox")
 
 [node name="Melee" type="Node" parent="StateMachine" node_paths=PackedStringArray("chao_state", "fall_state", "nado_state", "hitboxes")]

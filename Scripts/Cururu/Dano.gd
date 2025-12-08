@@ -2,6 +2,7 @@ extends State
 
 @export var fall_state: State = null
 @export var chao_state: State = null
+@export var nado_state: State = null
 @export var hurtbox: HurtBox = null
 
 var acabou: bool = false
@@ -36,6 +37,8 @@ func FixedUpdate(delta:float) -> State:
 	# Se tempo de stun já acabou
 	if acabou:
 		# Muda de State
+		if parent.check_agua_down.is_colliding():
+			return nado_state
 		if parent.is_on_floor():
 			return chao_state
 		return fall_state
