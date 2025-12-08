@@ -176,6 +176,9 @@ duration = 0.0
 
 [node name="MA_1-7" type="Node2D"]
 
+[node name="Node2D" type="Node2D" parent="."]
+position = Vector2(673, -3724)
+
 [node name="LimiteCamera" type="CollisionShape2D" parent="."]
 position = Vector2(2107, -2517.5)
 shape = SubResource("RectangleShape2D_v8nhw")
@@ -907,7 +910,7 @@ position = Vector2(1831.9998, -4277)
 
 [node name="Cururu" parent="Entidades" instance=ExtResource("5_v3esx")]
 z_index = 0
-position = Vector2(764, -391)
+position = Vector2(980.00006, -391)
 scale = Vector2(0.919994, 0.919994)
 
 [node name="TransicoesFase" type="Node2D" parent="."]
@@ -922,8 +925,8 @@ shape = SubResource("RectangleShape2D_k0m8e")
 
 [node name="1-8" parent="TransicoesFase" instance=ExtResource("2_n78ha")]
 position = Vector2(523, -3868)
-destino = 14
-posicao = Vector2(7835, -7424)
+destino = 9
+posicao = Vector2(3438, -4487)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TransicoesFase/1-8"]
 shape = SubResource("RectangleShape2D_k0m8e")

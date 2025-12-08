@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bgwwis0v04hil"
-path="res://.godot/imported/75 Sem Título_20251122094228.png-b86d1ab76e3ae5fd8e6b5aa22c963fb0.ctex"
+uid="uid://fvwb01o71euv"
+path="res://.godot/imported/CURURU_ATAQUE_61.png-898c0d9b41527806d979d6d230aa8361.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Cenário/Miasma/75 Sem Título_20251122094228.png"
-dest_files=["res://.godot/imported/75 Sem Título_20251122094228.png-b86d1ab76e3ae5fd8e6b5aa22c963fb0.ctex"]
+source_file="res://Sprites/Cururu/Melee/V2/ATAQUE_2_HITS_CEU/CURURU_ATAQUE_61.png"
+dest_files=["res://.godot/imported/CURURU_ATAQUE_61.png-898c0d9b41527806d979d6d230aa8361.ctex"]
 
 [params]
 

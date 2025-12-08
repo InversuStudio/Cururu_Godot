@@ -1,4 +1,4 @@
-[gd_scene load_steps=131 format=3 uid="uid://nohq28uk7lfk"]
+[gd_scene load_steps=126 format=3 uid="uid://nohq28uk7lfk"]
 
 [ext_resource type="Script" uid="uid://cfu4ciwll8jcj" path="res://Scripts/Cururu/Cururu.gd" id="1_gwpdq"]
 [ext_resource type="Texture2D" uid="uid://6tjgxsgaflxb" path="res://Sprites/Cururu/Dano/03.png" id="2_0hf88"]
@@ -20,13 +20,8 @@
 [ext_resource type="Texture2D" uid="uid://blnbsfvs4ioph" path="res://Sprites/Cururu/Caminhar/07.png" id="10_33gbk"]
 [ext_resource type="Texture2D" uid="uid://bjhdn7dee4248" path="res://Sprites/Cururu/Dash/04.png" id="11_iqn86"]
 [ext_resource type="Texture2D" uid="uid://c3i6qokpcl81f" path="res://Sprites/Cururu/Dash/05.png" id="12_g3owr"]
-[ext_resource type="Texture2D" uid="uid://cdfi7b7xcaoy4" path="res://Sprites/Cururu/Dash/06_loop.png" id="13_xt7tl"]
-[ext_resource type="Texture2D" uid="uid://cja3f7qn1d1nb" path="res://Sprites/Cururu/Dash/07_loop.png" id="14_4eubo"]
-[ext_resource type="Texture2D" uid="uid://p17ksn71mk8i" path="res://Sprites/Cururu/Dash/08_loop.png" id="15_uel2u"]
-[ext_resource type="Texture2D" uid="uid://c04kadibrpxeu" path="res://Sprites/Cururu/Dash/09_loop.png" id="16_jun3x"]
-[ext_resource type="Texture2D" uid="uid://c4ritprjb7jh2" path="res://Sprites/Cururu/Dash/10.png" id="17_xn3d7"]
-[ext_resource type="Texture2D" uid="uid://dn2p13w4cewje" path="res://Sprites/Cururu/Dash/11.png" id="18_ynp88"]
-[ext_resource type="Texture2D" uid="uid://dqfxdfpt7btw7" path="res://Sprites/Cururu/Dash/12.png" id="19_dayuk"]
+[ext_resource type="Texture2D" uid="uid://co40nfl2go82g" path="res://Sprites/Cururu/Dash/06.png" id="18_gjjix"]
+[ext_resource type="Texture2D" uid="uid://bbr1vsueiq6i3" path="res://Sprites/Cururu/Dash/07.png" id="19_0digr"]
 [ext_resource type="Texture2D" uid="uid://by4jepf5vk1mq" path="res://Sprites/Cururu/Pulo/10(loop).png" id="20_0hf88"]
 [ext_resource type="Texture2D" uid="uid://oueeifn344de" path="res://Sprites/Cururu/Idle/01.png" id="20_gwpdq"]
 [ext_resource type="Texture2D" uid="uid://g0sntps8nmbd" path="res://Sprites/Cururu/Idle/02.png" id="21_0hf88"]
@@ -160,39 +155,16 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("17_xn3d7")
+"texture": ExtResource("18_gjjix")
 }, {
 "duration": 1.0,
-"texture": ExtResource("18_ynp88")
-}, {
-"duration": 1.0,
-"texture": ExtResource("19_dayuk")
+"texture": ExtResource("19_0digr")
 }],
 "loop": true,
 "name": &"Dash_End",
 "speed": 5.0
 }, {
 "frames": [{
-"duration": 1.0,
-"texture": ExtResource("13_xt7tl")
-}, {
-"duration": 1.0,
-"texture": ExtResource("14_4eubo")
-}, {
-"duration": 1.0,
-"texture": ExtResource("15_uel2u")
-}, {
-"duration": 1.0,
-"texture": ExtResource("16_jun3x")
-}],
-"loop": true,
-"name": &"Dash_Loop",
-"speed": 8.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("9_pa0o1")
-}, {
 "duration": 1.0,
 "texture": ExtResource("10_7odhu")
 }, {
@@ -201,6 +173,14 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": ExtResource("12_g3owr")
+}],
+"loop": true,
+"name": &"Dash_Loop",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("9_pa0o1")
 }],
 "loop": true,
 "name": &"Dash_Start",
@@ -1302,7 +1282,6 @@ position = Vector2(0, -117.00001)
 scale = Vector2(0.375651, 0.375651)
 sprite_frames = SubResource("SpriteFrames_ser7u")
 animation = &"Special"
-frame = 1
 speed_scale = 1.5
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

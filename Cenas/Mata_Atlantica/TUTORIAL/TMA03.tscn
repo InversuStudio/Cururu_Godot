@@ -35,7 +35,7 @@
 [ext_resource type="PackedScene" uid="uid://bei1s8te3cwko" path="res://Sprites/Cenário/Mata_Atlantica/Interativos/plataforma.tscn" id="30_rnx0k"]
 [ext_resource type="Script" uid="uid://dd16yu704x6wt" path="res://Scripts/Componentes/BGM_Player.gd" id="31_op0pn"]
 [ext_resource type="AudioStream" uid="uid://c7qftchbhu6xc" path="res://Audio/SFX/AMBIENTE/Musica_Jogo.mp3" id="32_54dor"]
-[ext_resource type="Texture2D" uid="uid://cgx43fkvk7fk7" path="res://Sprites/Cenário/Miasma/miasma01.png" id="34_od6fv"]
+[ext_resource type="Texture2D" uid="uid://cgx43fkvk7fk7" path="res://Sprites/Cenário/Miasma/miasma_chao01.png" id="34_od6fv"]
 [ext_resource type="PackedScene" uid="uid://u28e3eudu6ch" path="res://Objetos/Funcionalidade/MainCamera.tscn" id="37_r86pu"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_l7gx4"]
@@ -2201,7 +2201,7 @@ texture = ExtResource("24_xxaxg")
 [node name="MainCamera" parent="." instance=ExtResource("37_r86pu")]
 position = Vector2(-17693, -3583)
 zoom = Vector2(0.8, 0.8)
-limit_left = -18893
-limit_top = -5349
-limit_right = -8192
-limit_bottom = 937
+limit_left = 182
+limit_top = -2903
+limit_right = 9305
+limit_bottom = -949

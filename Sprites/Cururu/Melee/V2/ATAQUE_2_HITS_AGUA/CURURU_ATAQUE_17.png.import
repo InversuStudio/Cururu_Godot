@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cgx43fkvk7fk7"
-path="res://.godot/imported/miasma01.png-93982373b893b0f0a7db30c5f69b0dd4.ctex"
+uid="uid://upb5alx2ftkv"
+path="res://.godot/imported/CURURU_ATAQUE_17.png-bcfa6fb95a00eed709af406d48efc181.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Cenário/Miasma/miasma01.png"
-dest_files=["res://.godot/imported/miasma01.png-93982373b893b0f0a7db30c5f69b0dd4.ctex"]
+source_file="res://Sprites/Cururu/Melee/V2/ATAQUE_2_HITS_AGUA/CURURU_ATAQUE_17.png"
+dest_files=["res://.godot/imported/CURURU_ATAQUE_17.png-bcfa6fb95a00eed709af406d48efc181.ctex"]
 
 [params]
 
