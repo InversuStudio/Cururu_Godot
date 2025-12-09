@@ -1292,6 +1292,7 @@ position = Vector2(0, -117.00001)
 scale = Vector2(0.375651, 0.375651)
 sprite_frames = SubResource("SpriteFrames_ser7u")
 animation = &"Special"
+frame = 1
 speed_scale = 1.5
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -1330,7 +1331,7 @@ ignore = NodePath("../../HurtContainer/HurtBox")
 parent = NodePath("../..")
 
 [node name="ColMel1" type="CollisionShape2D" parent="HitContainer/Melee1"]
-position = Vector2(20, -96.00001)
+position = Vector2(117, -96)
 rotation = -1.8463628
 shape = SubResource("CapsuleShape2D_7spwe")
 disabled = true
@@ -1343,7 +1344,7 @@ ignore = NodePath("../../HurtContainer/HurtBox")
 parent = NodePath("../..")
 
 [node name="ColMel2" type="CollisionShape2D" parent="HitContainer/Melee2"]
-position = Vector2(63, -64)
+position = Vector2(164, -64.00001)
 rotation = -1.57079
 shape = SubResource("CapsuleShape2D_gjjix")
 disabled = true
