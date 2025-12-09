@@ -15,10 +15,13 @@
 [ext_resource type="Texture2D" uid="uid://5xbtc5vqe36b" path="res://Sprites/Cururu/Caminhar/04.png" id="7_k0fov"]
 [ext_resource type="Texture2D" uid="uid://bkdbrpstuuy4u" path="res://Sprites/Cururu/Caminhar/05.png" id="8_jgcph"]
 [ext_resource type="Texture2D" uid="uid://dxupvk38avuo0" path="res://Sprites/Cururu/Caminhar/06.png" id="9_jkcnl"]
+[ext_resource type="Texture2D" uid="uid://dtrqllxfdts32" path="res://Sprites/Cururu/Dash/02.png" id="9_pa0o1"]
 [ext_resource type="Texture2D" uid="uid://bssjqru2v4vci" path="res://Sprites/Cururu/Dash/03.png" id="10_7odhu"]
 [ext_resource type="Texture2D" uid="uid://blnbsfvs4ioph" path="res://Sprites/Cururu/Caminhar/07.png" id="10_33gbk"]
 [ext_resource type="Texture2D" uid="uid://bjhdn7dee4248" path="res://Sprites/Cururu/Dash/04.png" id="11_iqn86"]
 [ext_resource type="Texture2D" uid="uid://c3i6qokpcl81f" path="res://Sprites/Cururu/Dash/05.png" id="12_g3owr"]
+[ext_resource type="Texture2D" uid="uid://7e3c0w7t7nqp" path="res://Sprites/Cururu/Dash/06.png" id="18_gjjix"]
+[ext_resource type="Texture2D" uid="uid://danqps42483rq" path="res://Sprites/Cururu/Dash/07.png" id="19_0digr"]
 [ext_resource type="Texture2D" uid="uid://by4jepf5vk1mq" path="res://Sprites/Cururu/Pulo/10(loop).png" id="20_0hf88"]
 [ext_resource type="Texture2D" uid="uid://oueeifn344de" path="res://Sprites/Cururu/Idle/01.png" id="20_gwpdq"]
 [ext_resource type="Texture2D" uid="uid://g0sntps8nmbd" path="res://Sprites/Cururu/Idle/02.png" id="21_0hf88"]
@@ -27,12 +30,9 @@
 [ext_resource type="Texture2D" uid="uid://b5kh1wi4uttd2" path="res://Sprites/Cururu/Pulo/12(loop).png" id="22_61o3p"]
 [ext_resource type="Texture2D" uid="uid://cca88o3m22mpd" path="res://Sprites/Cururu/Pulo/13(loop).png" id="23_0r6tj"]
 [ext_resource type="Texture2D" uid="uid://dnm2d4xi8ugmj" path="res://Sprites/Cururu/Idle/04.png" id="23_61o3p"]
-[ext_resource type="Texture2D" uid="uid://7e3c0w7t7nqp" path="res://Sprites/Cururu/Dash/06.png" id="23_wjcvp"]
 [ext_resource type="Texture2D" uid="uid://vuvwsnwj4j2o" path="res://Sprites/Cururu/Idle/05.png" id="24_0r6tj"]
-[ext_resource type="Texture2D" uid="uid://danqps42483rq" path="res://Sprites/Cururu/Dash/07.png" id="24_grb16"]
 [ext_resource type="Texture2D" uid="uid://c3bdxwiwi0fo" path="res://Sprites/Cururu/Pulo/07.png" id="24_wao3i"]
 [ext_resource type="Texture2D" uid="uid://dduie5pdnwf2r" path="res://Sprites/Cururu/Pulo/08.png" id="25_bo6dy"]
-[ext_resource type="Texture2D" uid="uid://is0ouv5w05g8" path="res://Sprites/Cururu/Dash/08.png" id="25_c8qv2"]
 [ext_resource type="Texture2D" uid="uid://cacua4a7ofiai" path="res://Sprites/Cururu/Idle/06.png" id="25_wao3i"]
 [ext_resource type="Texture2D" uid="uid://bc1jiiukoj77c" path="res://Sprites/Cururu/Idle/07.png" id="26_bo6dy"]
 [ext_resource type="Texture2D" uid="uid://dga8p80xnxn22" path="res://Sprites/Cururu/Idle/08.png" id="27_g8tdn"]
@@ -156,13 +156,10 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("12_g3owr")
+"texture": ExtResource("18_gjjix")
 }, {
 "duration": 1.0,
-"texture": ExtResource("23_wjcvp")
-}, {
-"duration": 1.0,
-"texture": ExtResource("24_grb16")
+"texture": ExtResource("19_0digr")
 }],
 "loop": true,
 "name": &"Dash_End",
@@ -170,19 +167,13 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": ExtResource("10_7odhu")
+}, {
+"duration": 1.0,
 "texture": ExtResource("11_iqn86")
 }, {
 "duration": 1.0,
 "texture": ExtResource("12_g3owr")
-}, {
-"duration": 1.0,
-"texture": ExtResource("23_wjcvp")
-}, {
-"duration": 1.0,
-"texture": ExtResource("24_grb16")
-}, {
-"duration": 1.0,
-"texture": ExtResource("25_c8qv2")
 }],
 "loop": true,
 "name": &"Dash_Loop",
@@ -190,7 +181,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("10_7odhu")
+"texture": ExtResource("9_pa0o1")
 }],
 "loop": true,
 "name": &"Dash_Start",
@@ -457,7 +448,7 @@ height = 160.0
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_7spwe"]
 radius = 87.47546
-height = 262.0
+height = 303.1923
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_gjjix"]
 radius = 83.999985
@@ -1260,8 +1251,8 @@ collision_layer = 2
 script = ExtResource("1_gwpdq")
 vel = 9.0
 vel_aerea = 6.5
-acel_time = 0.45
-decel_time = 0.2
+acel_time = 0.3
+decel_time = 0.1
 altura_pulo = 4.6
 tempo_pulo = 0.4
 tempo_cair = 0.65
@@ -1288,7 +1279,7 @@ texture_scale = 0.3
 
 [node name="Cururu" type="AnimatedSprite2D" parent="."]
 unique_name_in_owner = true
-position = Vector2(0, -117.00001)
+position = Vector2(0, -118)
 scale = Vector2(0.375651, 0.375651)
 sprite_frames = SubResource("SpriteFrames_ser7u")
 animation = &"Special"
@@ -1325,26 +1316,24 @@ debug_color = Color(0.92912, 0, 0.16329, 0.42)
 position = Vector2(-2, 0)
 
 [node name="Melee1" parent="HitContainer" node_paths=PackedStringArray("ignore", "parent") instance=ExtResource("47_grb16")]
-position = Vector2(33, -15)
 collision_mask = 16
 ignore = NodePath("../../HurtContainer/HurtBox")
 parent = NodePath("../..")
 
 [node name="ColMel1" type="CollisionShape2D" parent="HitContainer/Melee1"]
-position = Vector2(117, -96)
-rotation = -1.8463628
+position = Vector2(122, -118.99999)
+rotation = -1.7440166
 shape = SubResource("CapsuleShape2D_7spwe")
 disabled = true
 debug_color = Color(0.69455, 0.495447, 0, 0.42)
 
 [node name="Melee2" parent="HitContainer" node_paths=PackedStringArray("ignore", "parent") instance=ExtResource("47_grb16")]
-position = Vector2(-22, -35)
 collision_mask = 16
 ignore = NodePath("../../HurtContainer/HurtBox")
 parent = NodePath("../..")
 
 [node name="ColMel2" type="CollisionShape2D" parent="HitContainer/Melee2"]
-position = Vector2(164, -64.00001)
+position = Vector2(124, -104)
 rotation = -1.57079
 shape = SubResource("CapsuleShape2D_gjjix")
 disabled = true
@@ -1544,7 +1533,6 @@ jump_state = NodePath("../Pulo")
 [connection signal="animation_finished" from="Anim" to="StateMachine/Dash" method="_on_anim_animation_finished"]
 [connection signal="animation_finished" from="Anim" to="StateMachine/Special" method="_on_anim_animation_finished"]
 [connection signal="animation_started" from="Anim" to="StateMachine/Special" method="_on_anim_animation_started"]
-[connection signal="current_animation_changed" from="Anim" to="StateMachine/Chao" method="_on_anim_current_animation_changed"]
 [connection signal="timeout" from="Timers/Coyote" to="StateMachine/Fall" method="_on_coyote_timeout"]
 [connection signal="timeout" from="Timers/JumpLag" to="StateMachine/Fall" method="_on_jump_lag_timeout"]
 [connection signal="timeout" from="Timers/MeleeTime" to="StateMachine/Melee" method="_on_melee_timeout"]

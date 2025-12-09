@@ -14,9 +14,12 @@ extends State
 
 var pode_anim: bool = false
 var turn:bool = false
+var last_dir:int = 0#-1 if GameData.direcao else 1
 
 # INICIA O STATE
 func Enter() -> void:
+	#Engine.time_scale = .5
+	last_dir = -1 if parent.sprite.flip_h else 1
 	print("CHAO")
 	Console._State(name)
 	%Coyote.stop()
@@ -28,6 +31,7 @@ func Enter() -> void:
 		GameData.veio_de_baixo = false
 
 func Exit() -> void:
+	turn = false
 	pode_anim = false
 
 func Update(_delta: float) -> State:
@@ -51,8 +55,15 @@ func Update(_delta: float) -> State:
 func FixedUpdate(delta: float) -> State:
 	# Aplica gravidade bem fraca
 	parent.velocity.y += 128 * delta
+	
+	# Registra última direção
+	if parent.velocity.x > 0.0:
+		last_dir = 1
+	elif parent.velocity.x < 0.0:
+		last_dir = -1
+		
 	# Aplica movimento
-	if parent.pode_mover:
+	if parent.pode_mover:# and !turn:
 		var dir:float = parent.input_move.x
 		if dir != 0.0:
 			parent.velocity.x += parent.accel * dir * delta
@@ -60,27 +71,24 @@ func FixedUpdate(delta: float) -> State:
 				parent.velocity.x = parent.speed * dir
 		else:
 			parent.velocity.x = move_toward(parent.velocity.x, dir, parent.decel * delta)
-			
-	# Espelha o sprite de acordo com o input
-	if parent.input_move.x > 0:
-		%Cururu.flip_h = false
-		parent.hitbox_container.scale.x = 1
-	elif parent.input_move.x < 0:
-		%Cururu.flip_h = true
-		parent.hitbox_container.scale.x = -1
 	
-	if parent.is_on_floor():
-		# Controla animações de parado e correndo
-		if pode_anim:
-			if parent.velocity.x == 0:
-				%Anim.play("Idle")
-			elif sign(parent.input_move.x) == sign(parent.velocity.x):
-				%Anim.play("Run")
-			elif parent.input_move.x and turn == false:# and last_anim != "Turn":
+	
+	
+	if pode_anim:
+		# Aplica animação de virada
+		if Input.is_action_just_pressed("direita") or Input.is_action_just_pressed("esquerda"):
+			if parent.input_move.x != last_dir:
+				turn = true
 				%Anim.play("Turn")
-				#turn = true
-				#pode_anim = false
-			
+		# Espelha o sprite de acordo com o input
+		Flip()
+		# Controla animações de parado e correndo
+		if !turn:
+			if parent.input_move.x:
+				%Anim.play("Run")
+			else:
+				%Anim.play("Idle")
+		
 	# Se não estiver no chão, mudar State
 	if not parent.is_on_floor():
 		parent.is_coyote = true
@@ -91,10 +99,16 @@ func FixedUpdate(delta: float) -> State:
 
 func _on_anim_animation_finished(anim_name: StringName) -> void:
 	if anim_name == "Land":
+		print("Pode Anim")
 		pode_anim = true
-
-func _on_anim_current_animation_changed(anim_name: String) -> void:
 	if anim_name == "Turn":
-		turn = true
-	elif anim_name != "": turn = false#pode_anim = true
-	#printerr(anim_name)
+		print("Turn acabou")
+		turn = false
+
+func Flip() -> void:
+	if parent.input_move.x > 0:
+		%Cururu.flip_h = false
+		parent.hitbox_container.scale.x = 1
+	elif parent.input_move.x < 0:
+		%Cururu.flip_h = true
+		parent.hitbox_container.scale.x = -1
