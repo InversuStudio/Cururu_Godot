@@ -15,7 +15,7 @@
 [ext_resource type="PackedScene" uid="uid://d3cks8kri2olw" path="res://Objetos/Props/AreaUpgrade.tscn" id="12_77bok"]
 [ext_resource type="PackedScene" uid="uid://dghxpclnjwg5k" path="res://Objetos/Props/PecaCoracao.tscn" id="15_fjg5v"]
 [ext_resource type="PackedScene" uid="uid://bgiacv0vndt1q" path="res://Objetos/Props/DropAmVelAtaque.tscn" id="16_der3i"]
-[ext_resource type="PackedScene" uid="uid://b4fpjefuik8mq" path="res://Objetos/Props/DropAmRecMagia.tscn" id="17_der3i"]
+[ext_resource type="PackedScene" path="res://Objetos/Props/DropAmRecMagia.tscn" id="17_der3i"]
 [ext_resource type="PackedScene" uid="uid://b0hyovdafhkyk" path="res://Objetos/Funcionalidade/TransicaoCamera.tscn" id="17_id35g"]
 [ext_resource type="PackedScene" uid="uid://bxixu84ahcyba" path="res://Objetos/NPCs/NpcBasico.tscn" id="18_bp4ag"]
 [ext_resource type="Texture2D" uid="uid://c3tl3oddronfh" path="res://icon.svg" id="21_lqome"]
@@ -325,6 +325,10 @@ dialogue_start = "mapa"
 
 [node name="MainCamera" parent="." instance=ExtResource("22_der3i")]
 position = Vector2(-146, -534)
+limit_left = -2759
+limit_top = -1966
+limit_right = 1485
+limit_bottom = 71
 
 [node name="PlataformaSome" type="StaticBody2D" parent="."]
 position = Vector2(-1216, -665)

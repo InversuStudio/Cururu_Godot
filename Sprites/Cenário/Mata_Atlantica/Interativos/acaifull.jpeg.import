@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cdfi7b7xcaoy4"
-path="res://.godot/imported/06_loop.png-c61c0e00fea315e97c482ba56d6fddd7.ctex"
+uid="uid://q43585nc3ve4"
+path="res://.godot/imported/acaifull.jpeg-22039e9d11764e76a6c3a197071170d5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Cururu/Dash/06_loop.png"
-dest_files=["res://.godot/imported/06_loop.png-c61c0e00fea315e97c482ba56d6fddd7.ctex"]
+source_file="res://Sprites/Cenário/Mata_Atlantica/Interativos/acaifull.jpeg"
+dest_files=["res://.godot/imported/acaifull.jpeg-22039e9d11764e76a6c3a197071170d5.ctex"]
 
 [params]
 

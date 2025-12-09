@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dn2p13w4cewje"
-path="res://.godot/imported/11.png-d648d7f313cf6b5072787fbdd0633cc8.ctex"
+uid="uid://ycbhwfulvxxg"
+path="res://.godot/imported/acaicacho.jpeg-d65b61f0a9afc9402855e7bda79ad202.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Cururu/Dash/11.png"
-dest_files=["res://.godot/imported/11.png-d648d7f313cf6b5072787fbdd0633cc8.ctex"]
+source_file="res://Sprites/Cenário/Mata_Atlantica/Interativos/acaicacho.jpeg"
+dest_files=["res://.godot/imported/acaicacho.jpeg-d65b61f0a9afc9402855e7bda79ad202.ctex"]
 
 [params]
 

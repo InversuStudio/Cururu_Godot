@@ -341,13 +341,13 @@ rotation = 0.08726645
 texture = ExtResource("5_61gve")
 
 [node name="Composição2" type="Sprite2D" parent="LimiteCamera/background/Arvores01"]
-position = Vector2(-4026, -6340)
+position = Vector2(-3998.0002, -6346)
 scale = Vector2(0.7, 0.7)
 texture = ExtResource("7_v6p7i")
 flip_h = true
 
 [node name="Composição" type="Sprite2D" parent="LimiteCamera/background/Arvores01"]
-position = Vector2(-3499, -6033)
+position = Vector2(-3530.0002, -6017.0005)
 scale = Vector2(0.7, 0.7)
 texture = ExtResource("8_dyi4w")
 
@@ -1235,11 +1235,11 @@ position = Vector2(3388, -6990)
 scale = Vector2(2, 2)
 
 [node name="Plataforma2" parent="Cenario/Props" instance=ExtResource("17_jpeib")]
-position = Vector2(1864, -7674)
+position = Vector2(1870, -7648)
 scale = Vector2(2, 2)
 
 [node name="Plataforma3" parent="Cenario/Props" instance=ExtResource("17_jpeib")]
-position = Vector2(2891, -8606)
+position = Vector2(2960, -8606)
 scale = Vector2(2, 2)
 
 [node name="Espinhos" type="Node2D" parent="Cenario/Props"]
@@ -1668,30 +1668,30 @@ flip_h = true
 
 [node name="82SemTítulo0000253520251125200851" type="Sprite2D" parent="."]
 modulate = Color(2.34715, 2.34715, 2.34715, 1)
-position = Vector2(2156, -4810)
-scale = Vector2(0.35589817, 0.35589814)
+position = Vector2(2159, -4804)
+scale = Vector2(0.5, 0.5)
 texture = ExtResource("36_3t3iu")
 
 [node name="82SemTítulo0000253520251125200852" type="Sprite2D" parent="."]
 modulate = Color(2.34715, 2.34715, 2.34715, 1)
-position = Vector2(2349, -4791)
-scale = Vector2(0.35589817, 0.35589814)
+position = Vector2(2327, -4793)
+scale = Vector2(0.5, 0.5)
 texture = ExtResource("36_3t3iu")
 flip_h = true
 
 [node name="82SemTítulo0000253520251125200855" type="Sprite2D" parent="."]
 modulate = Color(2.34715, 2.34715, 2.34715, 1)
 z_index = 2
-position = Vector2(2921, -4705)
-scale = Vector2(0.35589817, 0.35589814)
+position = Vector2(2914, -4698)
+scale = Vector2(0.5, 0.5)
 texture = ExtResource("36_3t3iu")
 flip_h = true
 
 [node name="82SemTítulo0000253520251125200856" type="Sprite2D" parent="."]
 modulate = Color(2.34715, 2.34715, 2.34715, 1)
 z_index = 2
-position = Vector2(2919, -4376.0005)
-scale = Vector2(0.35589817, 0.35589814)
+position = Vector2(2913, -4389)
+scale = Vector2(0.5, 0.5)
 texture = ExtResource("36_3t3iu")
 flip_h = true
 flip_v = true
@@ -1699,16 +1699,16 @@ flip_v = true
 [node name="82SemTítulo0000253520251125200853" type="Sprite2D" parent="."]
 modulate = Color(2.34715, 2.34715, 2.34715, 1)
 z_index = 2
-position = Vector2(1972, -5046)
-scale = Vector2(0.35589817, 0.35589814)
+position = Vector2(1972, -5049)
+scale = Vector2(0.5, 0.5)
 texture = ExtResource("36_3t3iu")
 flip_v = true
 
 [node name="82SemTítulo0000253520251125200854" type="Sprite2D" parent="."]
 modulate = Color(2.34715, 2.34715, 2.34715, 1)
 z_index = 2
-position = Vector2(2298, -5098)
-scale = Vector2(0.35589817, 0.35589814)
+position = Vector2(2300, -5112)
+scale = Vector2(0.5, 0.5)
 texture = ExtResource("36_3t3iu")
 flip_v = true
 

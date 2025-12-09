@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://dny88hy3w52nm"]
 
 [ext_resource type="Script" uid="uid://du13c3vr4mc5k" path="res://Scripts/Componentes/DropItem.gd" id="1_qvwd5"]
-[ext_resource type="Texture2D" uid="uid://bdipo31btb3h4" path="res://Sprites/Cenário/Objetos/frutos/AÇAI.png" id="2_qvwd5"]
+[ext_resource type="Texture2D" uid="uid://bntrdtmlwietc" path="res://Sprites/Cenário/Objetos/frutos/açai.png" id="2_qvwd5"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_qvwd5"]
 radius = 44.0
@@ -14,7 +14,8 @@ collision_layer = 0
 script = ExtResource("1_qvwd5")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(0.35, 0.35)
+position = Vector2(-2, 58)
+scale = Vector2(0.7, 0.7)
 texture = ExtResource("2_qvwd5")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

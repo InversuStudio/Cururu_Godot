@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c04kadibrpxeu"
-path="res://.godot/imported/09_loop.png-d6da9aca5e4df62a6875ac773ead6725.ctex"
+uid="uid://co40nfl2go82g"
+path="res://.godot/imported/09.png-c78e5f58098ef702e63219063f2c9841.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Cururu/Dash/09_loop.png"
-dest_files=["res://.godot/imported/09_loop.png-d6da9aca5e4df62a6875ac773ead6725.ctex"]
+source_file="res://Sprites/Cururu/Dash/09.png"
+dest_files=["res://.godot/imported/09.png-c78e5f58098ef702e63219063f2c9841.ctex"]
 
 [params]
 

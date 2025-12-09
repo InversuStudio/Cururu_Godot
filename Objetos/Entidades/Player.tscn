@@ -15,13 +15,10 @@
 [ext_resource type="Texture2D" uid="uid://5xbtc5vqe36b" path="res://Sprites/Cururu/Caminhar/04.png" id="7_k0fov"]
 [ext_resource type="Texture2D" uid="uid://bkdbrpstuuy4u" path="res://Sprites/Cururu/Caminhar/05.png" id="8_jgcph"]
 [ext_resource type="Texture2D" uid="uid://dxupvk38avuo0" path="res://Sprites/Cururu/Caminhar/06.png" id="9_jkcnl"]
-[ext_resource type="Texture2D" uid="uid://dtrqllxfdts32" path="res://Sprites/Cururu/Dash/02.png" id="9_pa0o1"]
 [ext_resource type="Texture2D" uid="uid://bssjqru2v4vci" path="res://Sprites/Cururu/Dash/03.png" id="10_7odhu"]
 [ext_resource type="Texture2D" uid="uid://blnbsfvs4ioph" path="res://Sprites/Cururu/Caminhar/07.png" id="10_33gbk"]
 [ext_resource type="Texture2D" uid="uid://bjhdn7dee4248" path="res://Sprites/Cururu/Dash/04.png" id="11_iqn86"]
 [ext_resource type="Texture2D" uid="uid://c3i6qokpcl81f" path="res://Sprites/Cururu/Dash/05.png" id="12_g3owr"]
-[ext_resource type="Texture2D" uid="uid://co40nfl2go82g" path="res://Sprites/Cururu/Dash/06.png" id="18_gjjix"]
-[ext_resource type="Texture2D" uid="uid://bbr1vsueiq6i3" path="res://Sprites/Cururu/Dash/07.png" id="19_0digr"]
 [ext_resource type="Texture2D" uid="uid://by4jepf5vk1mq" path="res://Sprites/Cururu/Pulo/10(loop).png" id="20_0hf88"]
 [ext_resource type="Texture2D" uid="uid://oueeifn344de" path="res://Sprites/Cururu/Idle/01.png" id="20_gwpdq"]
 [ext_resource type="Texture2D" uid="uid://g0sntps8nmbd" path="res://Sprites/Cururu/Idle/02.png" id="21_0hf88"]
@@ -30,9 +27,12 @@
 [ext_resource type="Texture2D" uid="uid://b5kh1wi4uttd2" path="res://Sprites/Cururu/Pulo/12(loop).png" id="22_61o3p"]
 [ext_resource type="Texture2D" uid="uid://cca88o3m22mpd" path="res://Sprites/Cururu/Pulo/13(loop).png" id="23_0r6tj"]
 [ext_resource type="Texture2D" uid="uid://dnm2d4xi8ugmj" path="res://Sprites/Cururu/Idle/04.png" id="23_61o3p"]
+[ext_resource type="Texture2D" uid="uid://7e3c0w7t7nqp" path="res://Sprites/Cururu/Dash/06.png" id="23_wjcvp"]
 [ext_resource type="Texture2D" uid="uid://vuvwsnwj4j2o" path="res://Sprites/Cururu/Idle/05.png" id="24_0r6tj"]
+[ext_resource type="Texture2D" uid="uid://danqps42483rq" path="res://Sprites/Cururu/Dash/07.png" id="24_grb16"]
 [ext_resource type="Texture2D" uid="uid://c3bdxwiwi0fo" path="res://Sprites/Cururu/Pulo/07.png" id="24_wao3i"]
 [ext_resource type="Texture2D" uid="uid://dduie5pdnwf2r" path="res://Sprites/Cururu/Pulo/08.png" id="25_bo6dy"]
+[ext_resource type="Texture2D" uid="uid://is0ouv5w05g8" path="res://Sprites/Cururu/Dash/08.png" id="25_c8qv2"]
 [ext_resource type="Texture2D" uid="uid://cacua4a7ofiai" path="res://Sprites/Cururu/Idle/06.png" id="25_wao3i"]
 [ext_resource type="Texture2D" uid="uid://bc1jiiukoj77c" path="res://Sprites/Cururu/Idle/07.png" id="26_bo6dy"]
 [ext_resource type="Texture2D" uid="uid://dga8p80xnxn22" path="res://Sprites/Cururu/Idle/08.png" id="27_g8tdn"]
@@ -156,10 +156,13 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("18_gjjix")
+"texture": ExtResource("12_g3owr")
 }, {
 "duration": 1.0,
-"texture": ExtResource("19_0digr")
+"texture": ExtResource("23_wjcvp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_grb16")
 }],
 "loop": true,
 "name": &"Dash_End",
@@ -167,13 +170,19 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("10_7odhu")
-}, {
-"duration": 1.0,
 "texture": ExtResource("11_iqn86")
 }, {
 "duration": 1.0,
 "texture": ExtResource("12_g3owr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_wjcvp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_grb16")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_c8qv2")
 }],
 "loop": true,
 "name": &"Dash_Loop",
@@ -181,7 +190,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("9_pa0o1")
+"texture": ExtResource("10_7odhu")
 }],
 "loop": true,
 "name": &"Dash_Start",
@@ -1283,7 +1292,6 @@ position = Vector2(0, -117.00001)
 scale = Vector2(0.375651, 0.375651)
 sprite_frames = SubResource("SpriteFrames_ser7u")
 animation = &"Special"
-frame = 1
 speed_scale = 1.5
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
