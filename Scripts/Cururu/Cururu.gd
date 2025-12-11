@@ -118,8 +118,10 @@ func _process(delta: float) -> void:
 	input_move.y = Input.get_axis("cima", "baixo")
 	# Armazena último input
 	if input_move.x and input_move.x != input_buffer[1]:
-		input_buffer.remove_at(0)
-		input_buffer.append(input_move.x)
+		#input_buffer.remove_at(0)
+		input_buffer[0] = input_buffer[1]
+		#input_buffer.append(input_move.x)
+		input_buffer[1] = input_move.x
 		if input_buffer[0] != input_buffer[1]: virou.emit()
 	#print(input_buffer)
 	# Aplica PROCESS do StateMachine
