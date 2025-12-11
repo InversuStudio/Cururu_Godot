@@ -46,6 +46,7 @@ func Enter() -> void:
 	OffsetSprite()
 
 func Exit() -> void:
+	parent.sprite.offset.y = 0
 	terminou = false
 
 func Update(_delta:float) -> State:
@@ -100,6 +101,7 @@ func Hit(pos_target:Vector2, hit:HitBox) -> void:
 		GameData.magia_atual += 1
 
 func OffsetSprite() -> void:
+	parent.sprite.offset.y = 28.0
 	if parent.sprite.flip_h:
 		parent.sprite.offset.x = -235.0
 	else: parent.sprite.offset.x = 235.0
