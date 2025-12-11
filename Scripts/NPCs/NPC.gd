@@ -14,7 +14,7 @@ func _ready() -> void:
 func Interact(player:CharacterBody2D) -> void:
 	%Texto.hide()
 	interacao.pode_interagir = false
-	player.input_move = 0.0
+	player.input_move.x = 0.0
 	player.velocity.x = 0.0
 	player.pode_mover = false
 	DialogueManager.show_dialogue_balloon_scene(balao, arquivo_dialogo, dialogue_start)

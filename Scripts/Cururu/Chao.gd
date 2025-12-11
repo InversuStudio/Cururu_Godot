@@ -14,12 +14,19 @@ extends State
 
 var pode_anim: bool = false
 var turn:bool = false
-var last_dir:int = 0#-1 if GameData.direcao else 1
+
+@onready var last_dir:int = -1 if GameData.direcao else 1
+
+func _ready() -> void:
+	await get_tree().current_scene.ready
+	parent.connect("virou", func():
+		if pode_anim:
+			%Anim.play("Turn")
+			turn = true
+		Flip())
 
 # INICIA O STATE
 func Enter() -> void:
-	#Engine.time_scale = .5
-	last_dir = -1 if parent.sprite.flip_h else 1
 	print("CHAO")
 	Console._State(name)
 	%Coyote.stop()
@@ -55,12 +62,6 @@ func Update(_delta: float) -> State:
 func FixedUpdate(delta: float) -> State:
 	# Aplica gravidade bem fraca
 	parent.velocity.y += 128 * delta
-	
-	# Registra última direção
-	if parent.velocity.x > 0.0:
-		last_dir = 1
-	elif parent.velocity.x < 0.0:
-		last_dir = -1
 		
 	# Aplica movimento
 	if parent.pode_mover:# and !turn:
@@ -72,22 +73,11 @@ func FixedUpdate(delta: float) -> State:
 		else:
 			parent.velocity.x = move_toward(parent.velocity.x, dir, parent.decel * delta)
 	
-	
-	
-	if pode_anim:
-		# Aplica animação de virada
-		if Input.is_action_just_pressed("direita") or Input.is_action_just_pressed("esquerda"):
-			if parent.input_move.x != last_dir:
-				turn = true
-				%Anim.play("Turn")
-		# Espelha o sprite de acordo com o input
-		Flip()
-		# Controla animações de parado e correndo
-		if !turn:
-			if parent.input_move.x:
-				%Anim.play("Run")
-			else:
-				%Anim.play("Idle")
+	if pode_anim and !turn:
+		if parent.input_move.x:
+			%Anim.play("Run")
+		else:
+			%Anim.play("Idle")
 		
 	# Se não estiver no chão, mudar State
 	if not parent.is_on_floor():

@@ -78,6 +78,9 @@ var pode_mover: bool = true
 @onready var check_agua_up: RayCast2D = $CheckAguaUp
 @onready var check_agua_down: RayCast2D = $CheckAguaDown
 
+signal virou
+var input_buffer:Array[float] = [0.0, 0.0]
+
 
 func _ready() -> void:
 	# Desabilita hitboxes
@@ -85,6 +88,8 @@ func _ready() -> void:
 		if h is HitBox:
 			for c in h.get_children():
 				if c is CollisionShape2D: c.disabled = true
+	var ib:Array = [-1.0, -1.0] if GameData.direcao else [1.0, 1.0]
+	input_buffer.assign(ib)
 	
 	# Configura Timers
 	%Coyote.wait_time = tempo_coyote
@@ -111,6 +116,12 @@ func _process(delta: float) -> void:
 	# Recebe input
 	input_move.x = Input.get_axis("esquerda", "direita")
 	input_move.y = Input.get_axis("cima", "baixo")
+	# Armazena último input
+	if input_move.x and input_move.x != input_buffer[1]:
+		input_buffer.remove_at(0)
+		input_buffer.append(input_move.x)
+		if input_buffer[0] != input_buffer[1]: virou.emit()
+	#print(input_buffer)
 	# Aplica PROCESS do StateMachine
 	state_machine.Update(delta)
 	
