@@ -503,6 +503,7 @@ flip_v = true
 
 [node name="PecaCoracao" parent="." instance=ExtResource("14_11u8x")]
 position = Vector2(9466, -1113)
+nome_id = "MA_2_6"
 
 [node name="PhantomCamera2D2" type="Node2D" parent="." node_paths=PackedStringArray("follow_target")]
 top_level = true

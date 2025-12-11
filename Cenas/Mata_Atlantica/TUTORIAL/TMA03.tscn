@@ -681,6 +681,7 @@ texture = ExtResource("16_od6fv")
 
 [node name="PecaCoracao" parent="." instance=ExtResource("17_bu38j")]
 position = Vector2(-15739, -1493)
+nome_id = "MA_0_3"
 
 [node name="Cururu" parent="." instance=ExtResource("28_yftf5")]
 z_index = 0
@@ -2201,7 +2202,7 @@ texture = ExtResource("24_xxaxg")
 [node name="MainCamera" parent="." instance=ExtResource("37_r86pu")]
 position = Vector2(-17693, -3583)
 zoom = Vector2(0.8, 0.8)
-limit_left = 182
-limit_top = -2903
-limit_right = 9305
-limit_bottom = -949
+limit_left = -18893
+limit_top = -5349
+limit_right = -8192
+limit_bottom = 937

@@ -3838,4 +3838,4 @@ limit_bottom = -150
 
 [node name="PecaCoracao" parent="." instance=ExtResource("30_dug7p")]
 position = Vector2(5381, -4669)
-id = 2
+nome_id = "MA_2_5"
