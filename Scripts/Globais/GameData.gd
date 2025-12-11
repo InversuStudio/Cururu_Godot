@@ -127,7 +127,7 @@ func Load() -> bool:
 		direcao = config.get_value("save", "direcao")
 		
 		# Carrega o jogo, com os dados certos
-		Mundos.CarregaFase(fase, true, posicao, direcao)
+		Mundos.CarregaFase(fase, true, posicao)#, direcao)
 		await Fade.terminou
 		
 		vida_max = config.get_value("save", "vida_max")
@@ -186,6 +186,7 @@ func ResetData() -> void:
 	upgrade_num = 0
 	
 	peca_coracao = 0
-	for peca:int in Mundos.pecas_coracao.size() - 1:
-		Mundos.pecas_coracao[peca] = false
+	Mundos.pecas_coracao = []
+	#for peca:int in Mundos.pecas_coracao.size() - 1:
+		#Mundos.pecas_coracao[peca] = false
 		#peca_coracao = false

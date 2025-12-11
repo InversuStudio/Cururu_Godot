@@ -24,13 +24,13 @@ func _physics_process(delta: float) -> void:
 		dir = -1
 		%Sprite.flip_h = false
 		%HitBox.scale.x = 1
-		%HurtBox.scale.x = 1
+		#%HurtBox.scale.x = 1
 	
 	if %RayEsquerda.is_colliding() or !%RayVazioEsquerda.is_colliding():
 		dir = 1
 		%Sprite.flip_h = true
 		%HitBox.scale.x = -1
-		%HurtBox.scale.x = -1
+		#%HurtBox.scale.x = -1
 	
 	move_and_slide()
 

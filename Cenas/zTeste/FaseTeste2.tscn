@@ -90,6 +90,7 @@ tile_set = SubResource("TileSet_kppoi")
 [node name="AreaSecreta" parent="." node_paths=PackedStringArray("area_escondida") instance=ExtResource("5_f7bsu")]
 position = Vector2(-2952, 0)
 area_escondida = NodePath("../Obscuro")
+nome_id = "Teste2"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AreaSecreta"]
 position = Vector2(-478.5, -458.5)

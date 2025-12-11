@@ -15,7 +15,7 @@
 [ext_resource type="PackedScene" uid="uid://d3cks8kri2olw" path="res://Objetos/Props/AreaUpgrade.tscn" id="12_77bok"]
 [ext_resource type="PackedScene" uid="uid://dghxpclnjwg5k" path="res://Objetos/Props/PecaCoracao.tscn" id="15_fjg5v"]
 [ext_resource type="PackedScene" uid="uid://bgiacv0vndt1q" path="res://Objetos/Props/DropAmVelAtaque.tscn" id="16_der3i"]
-[ext_resource type="PackedScene" path="res://Objetos/Props/DropAmRecMagia.tscn" id="17_der3i"]
+[ext_resource type="PackedScene" uid="uid://b4fpjefuik8mq" path="res://Objetos/Props/DropAmRecMagia.tscn" id="17_der3i"]
 [ext_resource type="PackedScene" uid="uid://b0hyovdafhkyk" path="res://Objetos/Funcionalidade/TransicaoCamera.tscn" id="17_id35g"]
 [ext_resource type="PackedScene" uid="uid://bxixu84ahcyba" path="res://Objetos/NPCs/NpcBasico.tscn" id="18_bp4ag"]
 [ext_resource type="Texture2D" uid="uid://c3tl3oddronfh" path="res://icon.svg" id="21_lqome"]
@@ -251,14 +251,17 @@ multi_drop = true
 
 [node name="PecaCoracao" parent="Props" instance=ExtResource("15_fjg5v")]
 position = Vector2(1830, -460)
+nome_id = "Teste1"
 
 [node name="PecaCoracao2" parent="Props" instance=ExtResource("15_fjg5v")]
 position = Vector2(2056, -460)
 id = 1
+nome_id = "Teste2"
 
 [node name="PecaCoracao3" parent="Props" instance=ExtResource("15_fjg5v")]
 position = Vector2(2274, -460)
 id = 2
+nome_id = "Teste3"
 
 [node name="Sprite2D2" type="Sprite2D" parent="Props"]
 texture_repeat = 2

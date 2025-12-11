@@ -59,24 +59,9 @@ enum NomeFase {
 }
 
 # Lista que registra que peças de coração foram coletadas
-var pecas_coracao: Array = [
-	false,
-	false,
-	false,
-	false,
-	false,
-	false,
-]
-
-# Enumerador com todas as peças de coração a serem coletadas
-enum PecasCoracao {
-	Teste1,
-	Teste2,
-	Teste3,
-	MataAtlantica1,
-	MataAtlantica2,
-	MataAtlantica3,
-}
+var pecas_coracao: Array[String] = []
+# Lista que registra areas secretas desbloqueadas
+var areas_secretas: Array[String] = []
 
 # Registra fase atual
 var fase_atual : NomeFase
@@ -86,7 +71,7 @@ signal fase_mudou
 
 # Função para carregar nova fase
 func CarregaFase(lugar:NomeFase, detalhado:bool = false,
-	pos:Vector2=Vector2.ZERO, virado:bool=false) -> void:
+	pos:Vector2=Vector2.ZERO) -> void:#, virado:bool=false) -> void:
 	# Inicia Fade Out e espera a animação terminar
 	Fade.FadeOut()
 	await Fade.terminou
@@ -106,7 +91,7 @@ func CarregaFase(lugar:NomeFase, detalhado:bool = false,
 	player = get_tree().get_first_node_in_group("Player")
 	if player and detalhado == true:
 		player.global_position = pos
-		player.sprite.flip_h = virado
+		player.sprite.flip_h = GameData.direcao#virado
 		
 	# Registra novo HUD na cena
 	HUD.IniciaHUD()

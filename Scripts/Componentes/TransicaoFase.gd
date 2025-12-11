@@ -16,7 +16,8 @@ func _on_body_entered(body: Node2D) -> void:
 		# Desabilita controle do player
 		body.pode_mover = false
 		# Armazena direção que player está olhando
-		virado_a_esquerda = body.sprite.flip_h
+		GameData.direcao = true if body.sprite.flip_h else false
+		#virado_a_esquerda = body.sprite.flip_h
 		# Se for transição vertical
 		if vertical:
 			if body.velocity.y <= 0.0:
@@ -24,10 +25,10 @@ func _on_body_entered(body: Node2D) -> void:
 				body.velocity.y = -body.jump_force
 				body.input_move.x = 0.0
 		else:
-			match virado_a_esquerda:
+			match GameData.direcao:
 				false:
 					body.input_move.x = 1.0
 				true:
 					body.input_move.x = -1.0
 				
-		Mundos.CarregaFase(destino, true, posicao, virado_a_esquerda)
+		Mundos.CarregaFase(destino, true, posicao)#, virado_a_esquerda)
