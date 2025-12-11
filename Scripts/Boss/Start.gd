@@ -8,7 +8,7 @@ var player:CharacterBody2D = null
 func PlayerEntrou(body:Node2D) -> void:
 	if body.is_in_group("Player"):
 		player = body
-		player.input_move = 0.0
+		player.input_move.x = 0.0
 		player.velocity.x = 0.0
 		player.pode_mover = false
 		parent.area_check_player.queue_free()
