@@ -32,6 +32,7 @@ func Enter() -> void:
 	%Coyote.stop()
 	if parent.state_machine.last_state.name == "Fall":
 		%Anim.play("Land")
+		SpawnFolhas()
 	else: pode_anim = true
 	
 	if GameData.veio_de_baixo:
@@ -40,6 +41,13 @@ func Enter() -> void:
 func Exit() -> void:
 	turn = false
 	pode_anim = false
+	
+
+func SpawnFolhas() -> void:
+	var folha = preload("res://Objetos/Props/VFX_FOLHA.tscn")
+	var folhas = folha.instantiate()
+	parent.add_child(folhas)
+	folhas.global_position = parent.global_position
 
 func Update(_delta: float) -> State:
 	# INPUT MELEE
