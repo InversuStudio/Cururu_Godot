@@ -4,13 +4,15 @@ extends RigidBody2D
 @export var valor_moeda: int = 1
 ## Efeito sonoro aoser coletado
 @export var sfx: AudioStream = null
+## Força do impulso aplicado ao item quando spawnado
+@export var forca_impulso:float = 10.0
 
-var dir: Vector2 = Vector2.ZERO
+#var dir: Vector2 = Vector2.ZERO
 var velocity: Vector2 = Vector2.ZERO
 
 func _ready() -> void:
-	dir = Vector2(randf_range(-1, 1), randf_range(-1, -0.5)).normalized()
-	velocity = dir * 10
+	var dir:Vector2 = Vector2(randf_range(-1, 1), randf_range(-1, -0.5)).normalized()
+	velocity = dir * forca_impulso
 
 func _physics_process(_delta: float) -> void:
 	velocity = velocity.move_toward(Vector2.ZERO, 0.1)

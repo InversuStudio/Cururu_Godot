@@ -982,7 +982,7 @@ metadata/_custom_type_script = "uid://dd16yu704x6wt"
 [node name="MainCamera" parent="." instance=ExtResource("34_xqsk0")]
 position = Vector2(3178.0005, -1061)
 zoom = Vector2(0.8, 0.8)
-limit_left = -4252
-limit_top = -9674
-limit_right = 8049
-limit_bottom = -5824
+limit_left = 779
+limit_top = -4051
+limit_right = 4983
+limit_bottom = -386

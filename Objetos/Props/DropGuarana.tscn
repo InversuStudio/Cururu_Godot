@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://u48tpl3f3l20"]
+[gd_scene load_steps=6 format=3 uid="uid://u48tpl3f3l20"]
 
 [ext_resource type="Script" uid="uid://du13c3vr4mc5k" path="res://Scripts/Componentes/DropItem.gd" id="1_fhqsw"]
 [ext_resource type="Texture2D" uid="uid://dk4wua1wjthnt" path="res://Sprites/Cenário/Objetos/frutos/GUARA.png" id="2_fhqsw"]
+[ext_resource type="PackedScene" uid="uid://ffqi6t0ahbmk" path="res://Objetos/Funcionalidade/OtimizadorSprite.tscn" id="3_ehqyr"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_fhqsw"]
 radius = 55.081757
@@ -9,8 +10,9 @@ radius = 55.081757
 [sub_resource type="CircleShape2D" id="CircleShape2D_s361a"]
 radius = 70.0
 
-[node name="DropGuarana" type="CharacterBody2D"]
-collision_layer = 0
+[node name="DropGuarana" type="RigidBody2D"]
+collision_layer = 32
+collision_mask = 3
 script = ExtResource("1_fhqsw")
 tipo_item = 1
 
@@ -28,3 +30,7 @@ collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AreaGet"]
 shape = SubResource("CircleShape2D_s361a")
+
+[node name="OtimizadorSprite" parent="." instance=ExtResource("3_ehqyr")]
+rect = Rect2(-72, -50, 135, 116)
+follow = true

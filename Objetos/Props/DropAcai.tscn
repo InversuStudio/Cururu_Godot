@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://dny88hy3w52nm"]
+[gd_scene load_steps=6 format=3 uid="uid://dny88hy3w52nm"]
 
 [ext_resource type="Script" uid="uid://du13c3vr4mc5k" path="res://Scripts/Componentes/DropItem.gd" id="1_qvwd5"]
 [ext_resource type="Texture2D" uid="uid://2de6nadjv7s5" path="res://Sprites/Cenário/Objetos/frutos/AÇAI.png" id="2_qvwd5"]
+[ext_resource type="PackedScene" uid="uid://ffqi6t0ahbmk" path="res://Objetos/Funcionalidade/OtimizadorSprite.tscn" id="3_h0hhl"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_qvwd5"]
 radius = 44.0
@@ -9,8 +10,9 @@ radius = 44.0
 [sub_resource type="CircleShape2D" id="CircleShape2D_s361a"]
 radius = 62.03225
 
-[node name="DropAcai" type="CharacterBody2D"]
-collision_layer = 0
+[node name="DropAcai" type="RigidBody2D"]
+collision_layer = 32
+collision_mask = 3
 script = ExtResource("1_qvwd5")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
@@ -26,3 +28,7 @@ collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AreaGet"]
 shape = SubResource("CircleShape2D_s361a")
+
+[node name="OtimizadorSprite" parent="." instance=ExtResource("3_h0hhl")]
+rect = Rect2(-49, -50, 98, 100)
+follow = true

@@ -255,12 +255,10 @@ nome_id = "Teste1"
 
 [node name="PecaCoracao2" parent="Props" instance=ExtResource("15_fjg5v")]
 position = Vector2(2056, -460)
-id = 1
 nome_id = "Teste2"
 
 [node name="PecaCoracao3" parent="Props" instance=ExtResource("15_fjg5v")]
 position = Vector2(2274, -460)
-id = 2
 nome_id = "Teste3"
 
 [node name="Sprite2D2" type="Sprite2D" parent="Props"]

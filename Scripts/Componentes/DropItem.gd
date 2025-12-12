@@ -1,26 +1,22 @@
-extends CharacterBody2D
+extends RigidBody2D
 
 ## Item a ser adicionado ao inventário
 @export var tipo_item: Inventario.Itens
-## Impulso aplicado ao spawnar item, em m/s
-@export var impulso: Vector2 = Vector2(1.0, 1.0)
-## Tempo até desacelerar após impulso
-@export var tempo_decel:float = 2.5
+## Força do impulso aplicado ao item quando spawnado
+@export var forca_impulso:float = 10.0
 
-@onready var speed:Vector2 = impulso * 128
-@onready var decel:float = speed.x / tempo_decel
+var vel:Vector2 = Vector2.ZERO
 
 func _ready() -> void:
 	$AreaGet.connect("body_entered", _on_body_entered)
-	var rand_x:float = randf_range(-1.0, 1.0)
-	speed.x *= rand_x
-	speed.y *= -1
-	velocity = speed
+	# É isso mesmo, Theo. Roubei seu código na cara dura
+	var dir:Vector2 = Vector2(randf_range(-1, 1), randf_range(-1, -0.5)).normalized()
+	vel = dir * forca_impulso
 
-func _physics_process(delta: float) -> void:
-	velocity.y += 128 * delta
-	velocity.x = move_toward(velocity.x, 0.0, decel * delta)
-	move_and_slide()
+func _physics_process(_delta: float) -> void:
+	vel = vel.move_toward(Vector2.ZERO, 0.1)
+	move_and_collide(vel)
+	print(global_position)
 
 func _on_body_entered(body: Node2D) -> void:
 	if body.is_in_group("Player"):

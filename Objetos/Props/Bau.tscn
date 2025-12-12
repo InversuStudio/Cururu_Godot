@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://1fdx2ie24dh8"]
+[gd_scene load_steps=8 format=3 uid="uid://1fdx2ie24dh8"]
 
 [ext_resource type="Script" uid="uid://drxk6hwuv2e3i" path="res://Scripts/Componentes/Bau.gd" id="1_5tjap"]
 [ext_resource type="Texture2D" uid="uid://b23uvpo1t5txg" path="res://Sprites/Cenário/Objetos/Bau/BAU2.png" id="2_dpba2"]
@@ -28,9 +28,6 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_dpba2"]
-size = Vector2(234, 137)
-
 [node name="Bau" type="Node2D"]
 script = ExtResource("1_5tjap")
 
@@ -44,7 +41,7 @@ shape = SubResource("RectangleShape2D_4vmwf")
 debug_color = Color(0.7753908, 0.38766962, 0.5591627, 0.41960785)
 
 [node name="PosItem" type="Marker2D" parent="."]
-position = Vector2(0, -19)
+position = Vector2(0, -110)
 
 [node name="Sprite" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, -115)
@@ -52,10 +49,5 @@ scale = Vector2(0.5, 0.5)
 sprite_frames = SubResource("SpriteFrames_5tjap")
 animation = &"Normal"
 autoplay = "Normal"
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite"]
-position = Vector2(0, 93)
-scale = Vector2(2, 2)
-shape = SubResource("RectangleShape2D_dpba2")
 
 [connection signal="hurt" from="HurtBox" to="." method="_on_hurt_box_hurt"]

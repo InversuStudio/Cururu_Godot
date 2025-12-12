@@ -11,6 +11,8 @@ extends Area2D
 @export var parent: Node2D = null
 ## O quanto a câmera vai tremer ao acertar
 @export var camera_shake:float = 10.0
+## Tempo que jogo congela ao acertar
+@export var hit_freeze:float = .05
 
 signal hit
 #signal pushback
@@ -23,6 +25,10 @@ func _on_area_entered(area: Area2D) -> void:
 		if area == ignore: return
 		hit.emit(area.global_position)
 		area.RecebeDano(dano, global_position)
+		if hit_freeze > 0.0:
+			Engine.time_scale = 0.0
+			await get_tree().create_timer(hit_freeze, true, false, true).timeout
+			Engine.time_scale = 1.0
 		if get_tree().get_first_node_in_group("MainCamera"):
 			get_tree().get_first_node_in_group("MainCamera").Shake(camera_shake)
 		# Toca som

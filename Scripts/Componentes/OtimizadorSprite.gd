@@ -4,6 +4,8 @@ extends VisibleOnScreenNotifier2D
 var parent: Node2D = null
 ## Define se segue objeto alvo
 @export var follow:bool = false
+## Define se lógica do objeto é desabilitada
+@export var disable:bool = false
 
 func _ready() -> void:
 	parent = get_parent() # Recebe o node pai original
@@ -22,6 +24,8 @@ func Aparece() -> void:
 	Console._Print("[color=orange]%s(%s) APARECEU[/color]" % [
 		parent.name, parent.get_class()])
 	parent.show()
+	if disable:
+		parent.process_mode = Node.PROCESS_MODE_INHERIT
 
 func Some() -> void:
 	if parent == null:
@@ -31,6 +35,8 @@ func Some() -> void:
 	Console._Print("[color=red]%s(%s) SUMIU[/color]" % [
 		parent.name, parent.get_class()])
 	parent.hide()
+	if disable:
+		parent.process_mode = Node.PROCESS_MODE_DISABLED
 
 func _process(_delta: float) -> void:
 	# Se habilitado, segue node pai original
