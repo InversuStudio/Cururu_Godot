@@ -14,7 +14,7 @@ func Enter() -> void:
 	%Anim.play("Idle")
 	%TimerIdle.start()
 	if parent.num_vul >= parent.num_ate_vulneravel:
-		get_parent().Muda_State(state_nocaute)
+		get_parent().MudaState(state_nocaute)
 		parent.num_vul = 0
 		%TimerIdle.stop()
 
