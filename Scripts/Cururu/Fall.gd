@@ -88,5 +88,12 @@ func _on_anim_animation_finished(anim_name: StringName) -> void:
 	if anim_name == "Fall_Start":
 		%Anim.play("Fall_Loop")
 
+var folha = preload("res://Objetos/Props/VFX_FOLHA.tscn")
+
 func Exit() -> void:
 	parent.is_coyote = false
+	
+	var folhas = folha.instantiate()
+	parent.add_child(folhas)
+	#get_tree().current_scene.call_deferred("add_child", folhas)
+	folhas.global_position = parent.global_position
