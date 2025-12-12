@@ -21,6 +21,7 @@ func _on_timer_nocaute_timeout() -> void:
 func Exit() -> void:
 	prossegue = false
 	%TimerNocaute.stop()
+	parent.ResetArmor()
 
 func _on_anim_animation_finished(anim_name: StringName) -> void:
 	if anim_name == "NocauteEnd":

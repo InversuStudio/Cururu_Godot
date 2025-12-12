@@ -261,13 +261,6 @@ nome_id = "Teste2"
 position = Vector2(2274, -460)
 nome_id = "Teste3"
 
-[node name="Sprite2D2" type="Sprite2D" parent="Props"]
-texture_repeat = 2
-position = Vector2(3333, -846)
-texture = ExtResource("21_lqome")
-region_enabled = true
-region_rect = Rect2(0, 0, 128, 128)
-
 [node name="DropAmVelAtaque" parent="Props" instance=ExtResource("16_der3i")]
 position = Vector2(3699, -463)
 

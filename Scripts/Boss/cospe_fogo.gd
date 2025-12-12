@@ -2,8 +2,8 @@ extends State
 
 ## State de Idle
 @export var idle_state:State = null
-## Tempo que boss ficará em idle após State atual
-@export var tempo_idle:float = 1.0
+# Tempo que boss ficará em idle após State atual
+#@export var tempo_idle:float = 1.0
 var prosseguir:bool = false
 
 const bola_fogo:PackedScene = preload("res://Cenas/BossTeste/BolaDeFogo.tscn")
@@ -12,7 +12,7 @@ func Enter() -> void:
 	Console._Print("Cospe Fogo aqui")
 	%Anim.play("CospeFogo")
 	parent.num_vul += 1
-	%TimerIdle.wait_time = tempo_idle
+	%TimerIdle.wait_time = parent.tempo_idle_cuspe
 
 func Update(_delta : float) -> State:
 	if prosseguir:

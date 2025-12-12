@@ -4,6 +4,8 @@ extends Node
 ## Valor máximo de pontos de vida
 @export var vida_max : int = 0
 var vida_atual : int = 0
+## Define se chama função de morte quando vida chega a 0
+@export var morre:bool = true
 
 # Sinal emite com 2 valores: vida_antiga, vida_atual
 signal alterou_vida
@@ -38,7 +40,7 @@ func RecebeDano(dano:int = 1) -> void:
 	vida_atual = clampi(vida_atual, 0, vida_max)
 	alterou_vida.emit(vida_atual, vida_antiga)
 	# Se vida for zerada, morre
-	if vida_atual <= 0:
+	if vida_atual <= 0 and morre:
 		Morre()
 
 # FUNÇÃO PARA AUMENTAR VIDA

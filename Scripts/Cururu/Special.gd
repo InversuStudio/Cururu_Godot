@@ -71,8 +71,8 @@ func OffsetSprite() -> void:
 		parent.sprite.offset.x = -470.0
 	else: parent.sprite.offset.x = 470.0
 
-func Hit(pos_target:Vector2, hit:HitBox) -> void:
-	hit.CalcPushback(distancia_push, tempo_push, pos_target)
+func Hit(_pos_target:Vector2, hit:HitBox) -> void:
+	#hit.CalcPushback(distancia_push, tempo_push, pos_target)
 	if !hit.is_in_group("Special"):
 		GameData.magia_atual += 1
 

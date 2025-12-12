@@ -2,8 +2,8 @@ extends State
 
 ## State de Idle
 @export var idle_state:State = null
-## Tempo que boss ficará em idle após State atual
-@export var tempo_idle:float = 1.0
+# Tempo que boss ficará em idle após State atual
+#@export var tempo_idle:float = 1.0
 var prosseguir:bool = false
 
 const pilar:PackedScene = preload("res://Cenas/BossTeste/Labareda.tscn")
@@ -13,7 +13,7 @@ func Enter() -> void:
 	%Anim.play("Pilar")
 	parent.num_vul += 1
 	Console._Print(parent.num_vul)
-	%TimerIdle.wait_time = tempo_idle
+	%TimerIdle.wait_time = parent.tempo_idle_pilar
 
 func Update(_delta : float) -> State:
 	if prosseguir:

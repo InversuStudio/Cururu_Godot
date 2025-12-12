@@ -25,7 +25,7 @@ func _on_area_entered(area: Area2D) -> void:
 		if area == ignore: return
 		hit.emit(area.global_position)
 		area.RecebeDano(dano, global_position)
-		if hit_freeze > 0.0:
+		if hit_freeze > 0.0 and Engine.time_scale == 1.0:
 			Engine.time_scale = 0.0
 			await get_tree().create_timer(hit_freeze, true, false, true).timeout
 			Engine.time_scale = 1.0

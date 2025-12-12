@@ -7,22 +7,25 @@ extends State
 ## State de Vulnerável
 @export var state_nocaute: State = null
 
-var prosseguir: bool = false
+var prosseguir:bool = false
 
 func Enter() -> void:
-	Console._Print("Idle aqui")
 	%Anim.play("Idle")
 	%TimerIdle.start()
-	if parent.num_vul >= parent.num_ate_vulneravel:
-		get_parent().MudaState(state_nocaute)
-		parent.num_vul = 0
-		%TimerIdle.stop()
+	#if parent.num_vul >= parent.num_ate_vulneravel:
+		#get_parent().MudaState(state_nocaute)
+		#parent.num_vul = 0
+		#%TimerIdle.stop()
 
 func FixedUpdate(_delta : float) -> State:
 	if prosseguir:
-		if randi_range(0,1) == 1:
-			return state_cospe_fogo
-		return state_pilar_fogo
+		var dist:float = Mundos.player.global_position.x - parent.global_position.x
+		if abs(dist) <= parent.dist_para_pilar * 128:
+			return state_pilar_fogo
+		return state_cospe_fogo
+		#if randi_range(0,1) == 1:
+			#return state_cospe_fogo
+		#return state_pilar_fogo
 	return null
 	
 func _on_timer_idle_timeout() -> void:
@@ -30,3 +33,4 @@ func _on_timer_idle_timeout() -> void:
 
 func Exit() -> void:
 	prosseguir = false
+	%TimerIdle.stop()

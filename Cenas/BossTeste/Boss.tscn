@@ -1,4 +1,4 @@
-[gd_scene load_steps=91 format=3 uid="uid://b7m7lb1s11mbw"]
+[gd_scene load_steps=94 format=3 uid="uid://b7m7lb1s11mbw"]
 
 [ext_resource type="Script" uid="uid://bekibpja60hxm" path="res://Scripts/Boss/boss.gd" id="1_s15tt"]
 [ext_resource type="Texture2D" uid="uid://cxo6j4mj6u5rs" path="res://Sprites/Inimigos/Boitata/TesteTeste/BOITATA_BOLA_DE_FOGO/boitata_81.png" id="2_1jvks"]
@@ -71,6 +71,7 @@
 [ext_resource type="Texture2D" uid="uid://bxmjqqvthh617" path="res://Sprites/Inimigos/Boitata/TesteTeste/BOITATA_LEVANTA/boitata_09.png" id="65_d4lcm"]
 [ext_resource type="Texture2D" uid="uid://dvxcgooe7ym0v" path="res://Sprites/Inimigos/Boitata/TesteTeste/BOITATA_LEVANTA/boitata_11.png" id="66_djwlo"]
 [ext_resource type="Texture2D" uid="uid://b2ctbcwijg1yb" path="res://Sprites/Inimigos/Boitata/TesteTeste/BOITATA_LEVANTA/boitata_13.png" id="67_0jjh8"]
+[ext_resource type="Texture2D" uid="uid://c3tl3oddronfh" path="res://icon.svg" id="70_0w5f0"]
 [ext_resource type="Script" uid="uid://cfu466euekcdn" path="res://Scripts/Boss/Start.gd" id="72_0ddi0"]
 [ext_resource type="Script" uid="uid://rlmx3hnbiu12" path="res://Scripts/Boss/cospe_fogo.gd" id="75_16hqa"]
 [ext_resource type="AudioStream" uid="uid://b5wrm1fctq78" path="res://Audio/SFX/BOITATA/rugido_boitata.ogg" id="75_sgy8v"]
@@ -78,10 +79,6 @@
 [ext_resource type="Texture2D" uid="uid://c0j1vjsqgxlo3" path="res://Sprites/UI/Boitata/BarraVidaBoss.png" id="77_mjx0v"]
 [ext_resource type="Texture2D" uid="uid://b4vgc71jojckt" path="res://Sprites/UI/Boitata/UI_-_BOITATA.png" id="84_6hkog"]
 [ext_resource type="Script" uid="uid://c041l8mwrkgsy" path="res://Scripts/Boss/PilarFogo.gd" id="85_fi4f6"]
-
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_fwdqd"]
-radius = 171.0
-height = 780.0
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_nkv4g"]
 animations = [{
@@ -332,13 +329,25 @@ animations = [{
 "speed": 10.0
 }]
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_fwdqd"]
+radius = 171.0
+height = 780.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_mjx0v"]
+radius = 226.0
+height = 568.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_0w5f0"]
+radius = 198.0
+height = 468.0
+
 [sub_resource type="Animation" id="Animation_16hqa"]
 resource_name = "CospeFogo"
 length = 0.8
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite:animation")
+tracks/0/path = NodePath("SpriteMain:animation")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -350,7 +359,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("Sprite:frame")
+tracks/1/path = NodePath("SpriteMain:frame")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -380,7 +389,7 @@ length = 0.915
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite:animation")
+tracks/0/path = NodePath("SpriteMain:animation")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -392,7 +401,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("Sprite:frame")
+tracks/1/path = NodePath("SpriteMain:frame")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -421,7 +430,7 @@ loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite:animation")
+tracks/0/path = NodePath("SpriteMain:animation")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -433,7 +442,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("Sprite:frame")
+tracks/1/path = NodePath("SpriteMain:frame")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -449,7 +458,7 @@ length = 0.8
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite:animation")
+tracks/0/path = NodePath("SpriteMain:animation")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -461,7 +470,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("Sprite:frame")
+tracks/1/path = NodePath("SpriteMain:frame")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -489,7 +498,7 @@ length = 0.9
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite:animation")
+tracks/0/path = NodePath("SpriteMain:animation")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -501,7 +510,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("Sprite:frame")
+tracks/1/path = NodePath("SpriteMain:frame")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -529,7 +538,7 @@ length = 1.4
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite:animation")
+tracks/0/path = NodePath("SpriteMain:animation")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -541,7 +550,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("Sprite:frame")
+tracks/1/path = NodePath("SpriteMain:frame")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -585,7 +594,7 @@ length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite:frame")
+tracks/0/path = NodePath("SpriteMain:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -601,7 +610,7 @@ length = 0.68
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite:animation")
+tracks/0/path = NodePath("SpriteMain:animation")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -613,7 +622,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("Sprite:frame")
+tracks/1/path = NodePath("SpriteMain:frame")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -638,13 +647,10 @@ _data = {
 
 [node name="Boss" type="Node2D"]
 script = ExtResource("1_s15tt")
+dist_para_pilar = 7.0
+tempo_idle_cuspe = 0.6
+tempo_idle_pilar = 2.0
 musica_luta = ExtResource("2_ojojp")
-
-[node name="Vida" type="Node" parent="."]
-unique_name_in_owner = true
-script = ExtResource("2_16hqa")
-vida_max = 25
-metadata/_custom_type_script = "uid://hsdutxxttrp3"
 
 [node name="TimerIdle" type="Timer" parent="."]
 unique_name_in_owner = true
@@ -655,13 +661,28 @@ unique_name_in_owner = true
 wait_time = 2.8
 one_shot = true
 
+[node name="SpriteMain" type="AnimatedSprite2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(0, -1020)
+scale = Vector2(1.5, 1.5)
+sprite_frames = SubResource("SpriteFrames_nkv4g")
+animation = &"Idle"
+autoplay = "Escondido"
+frame = 1
+
+[node name="VidaBoss" type="Node" parent="."]
+unique_name_in_owner = true
+script = ExtResource("2_16hqa")
+vida_max = 25
+metadata/_custom_type_script = "uid://hsdutxxttrp3"
+
 [node name="HurtBox" parent="." node_paths=PackedStringArray("comp_vida", "sprite") instance=ExtResource("3_fwdqd")]
 unique_name_in_owner = true
 collision_layer = 16
 monitorable = false
-comp_vida = NodePath("../Vida")
+comp_vida = NodePath("../VidaBoss")
 hit_sfx = ExtResource("5_b2ig3")
-sprite = NodePath("../Sprite")
+sprite = NodePath("../SpriteMain")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HurtBox"]
 position = Vector2(481, -550)
@@ -669,19 +690,56 @@ rotation = 1.5707964
 shape = SubResource("CapsuleShape2D_fwdqd")
 debug_color = Color(0.9968892, 0, 0.18689972, 0.41960785)
 
+[node name="VidaMCabeca" type="Node" parent="."]
+unique_name_in_owner = true
+script = ExtResource("2_16hqa")
+vida_max = 5
+morre = false
+metadata/_custom_type_script = "uid://hsdutxxttrp3"
+
+[node name="HurtCabeca" parent="." node_paths=PackedStringArray("comp_vida") instance=ExtResource("3_fwdqd")]
+unique_name_in_owner = true
+collision_layer = 16
+comp_vida = NodePath("../VidaMCabeca")
+hit_sfx = ExtResource("5_b2ig3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HurtCabeca"]
+position = Vector2(83, -961)
+rotation = 1.5707964
+shape = SubResource("CapsuleShape2D_mjx0v")
+
+[node name="SpriteCabeca" type="Sprite2D" parent="HurtCabeca"]
+position = Vector2(176, -942)
+scale = Vector2(2.1875, 2.1875)
+texture = ExtResource("70_0w5f0")
+
+[node name="VidaMCorpo" type="Node" parent="."]
+unique_name_in_owner = true
+script = ExtResource("2_16hqa")
+vida_max = 5
+morre = false
+metadata/_custom_type_script = "uid://hsdutxxttrp3"
+
+[node name="HurtCorpo" parent="." node_paths=PackedStringArray("comp_vida") instance=ExtResource("3_fwdqd")]
+unique_name_in_owner = true
+collision_layer = 16
+comp_vida = NodePath("../VidaMCorpo")
+hit_sfx = ExtResource("5_b2ig3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HurtCorpo"]
+position = Vector2(91, -360)
+rotation = -3.1415927
+shape = SubResource("CapsuleShape2D_0w5f0")
+
+[node name="SpriteCorpo" type="Sprite2D" parent="HurtCorpo"]
+position = Vector2(121, -390)
+scale = Vector2(2.1875, 2.1875)
+texture = ExtResource("70_0w5f0")
+
 [node name="PosTiro" type="Marker2D" parent="."]
 unique_name_in_owner = true
 position = Vector2(517, -714)
 gizmo_extents = 45.0
-
-[node name="Sprite" type="AnimatedSprite2D" parent="."]
-unique_name_in_owner = true
-position = Vector2(0, -1020)
-scale = Vector2(1.5, 1.5)
-sprite_frames = SubResource("SpriteFrames_nkv4g")
-animation = &"PilarDeFogo"
-autoplay = "Escondido"
-frame = 1
 
 [node name="Anim" type="AnimationPlayer" parent="."]
 unique_name_in_owner = true
@@ -710,12 +768,10 @@ state_nocaute = NodePath("../Nocaute")
 [node name="CospeFogo" type="Node" parent="StateMachine" node_paths=PackedStringArray("idle_state")]
 script = ExtResource("75_16hqa")
 idle_state = NodePath("../Idle")
-tempo_idle = 0.6
 
 [node name="PilarFogo" type="Node" parent="StateMachine" node_paths=PackedStringArray("idle_state")]
 script = ExtResource("85_fi4f6")
 idle_state = NodePath("../Idle")
-tempo_idle = 2.0
 
 [node name="Purificado" type="Node" parent="StateMachine"]
 

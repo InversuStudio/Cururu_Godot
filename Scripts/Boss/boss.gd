@@ -4,8 +4,16 @@ extends Node2D
 @export var area_check_player: Area2D = null
 ## Posições onde pilares de fogo vão spawnar
 @export var pos_pilares: Array[Node2D] = []
-## Número de ataques até ficar vulnerável
-@export var num_ate_vulneravel: int = 2
+# Número de ataques até ficar vulnerável
+#@export var num_ate_vulneravel: int = 2
+## Distância em que boss usa pilar de fogo
+@export var dist_para_pilar:float = 0.0
+## Node do rabo
+@export var rabo:HitBox = null
+## Tempo parado após cuspir fogo
+@export var tempo_idle_cuspe:float = 0.0
+## Tempo parado após pilar de fogo
+@export var tempo_idle_pilar:float = 0.0
 ## Música Boss
 @export var musica_luta:AudioStream = null
 # Número ataques que se passaram
@@ -17,17 +25,48 @@ var tween:Tween = null
 
 var morreu:bool = false
 
+func ChecaArmor() -> void:
+	if %VidaMCabeca.vida_atual <= 0 and %VidaMCorpo.vida_atual <= 0:
+		state_machine.MudaState(state_machine.find_child("Nocaute"))
+
 func _ready() -> void:
-	Console._Print(pos_pilares.size())
-	%Vida.connect("alterou_vida", TomouDano)
+	# Sinais de vida
+	%VidaBoss.connect("alterou_vida", TomouDano)
+	%VidaMCabeca.connect("alterou_vida", func(atual:int, _old:int):
+		if atual <= 0:
+			#Esconde sprite armadura
+			%HurtCabeca.set_deferred("monitorable", false)
+			%HurtCabeca.hide()
+			ChecaArmor()
+	)
+	%VidaMCorpo.connect("alterou_vida", func(atual:int, _old:int):
+		if atual <= 0:
+			#Esconde sprite armadura
+			%HurtCorpo.set_deferred("monitorable", false)
+			%HurtCorpo.hide()
+			ChecaArmor()
+	)
+	
+	# Sinais de hurtbox
 	%HurtBox.monitorable = false
-	%BarraVida.max_value = %Vida.vida_max
+	
+	# Inicializa barra de vida
+	%BarraVida.max_value = %VidaBoss.vida_max
 	%BarraVida.value = 0.0
 	%BarraVida.hide()
+	
+	# Conecta sinal para iniciar luta
 	if area_check_player:
 		var start_state:State = state_machine.find_child("Start")
 		if start_state:
 			area_check_player.connect("body_entered", start_state.PlayerEntrou)
+	
+	# Inicializa rabo
+	rabo.visibility_changed.connect(func():
+		var val:bool = true if rabo.visible else false
+		rabo.set_deferred("monitoring", val)
+		rabo.set_deferred("monitorable", val))
+	rabo.hide()
 
 func _process(delta: float) -> void:
 	state_machine.Update(delta)
@@ -40,7 +79,21 @@ func TomouDano(vida_atual:int, _vida_antiga:int) -> void:
 		tween.kill()
 	tween = create_tween()
 	tween.tween_property(%BarraVida, "value", vida_atual, .15)
-	Console._Print(vida_atual)
+	
+	if vida_atual == 10:
+		tempo_idle_cuspe /= 2.0
+		tempo_idle_pilar /= 2.0
+		
+	#Console._Print(vida_atual)
+
+func ResetArmor() -> void:
+	%VidaMCabeca.RecebeCura(100)
+	%HurtCabeca.set_deferred("monitorable", true)
+	%HurtCabeca.show()
+	
+	%VidaMCorpo.RecebeCura(100)
+	%HurtCorpo.set_deferred("monitorable", true)
+	%HurtCorpo.show()
 
 func Morte() -> void:
 	%HurtBox.queue_free()

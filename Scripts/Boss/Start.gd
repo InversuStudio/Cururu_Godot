@@ -14,6 +14,7 @@ func PlayerEntrou(body:Node2D) -> void:
 		parent.area_check_player.queue_free()
 		parent.area_check_player = null
 		%Anim.play("Surge")
+		parent.rabo.show()
 
 func Update(_delta : float) -> State:
 	if inicia_luta:
@@ -30,6 +31,6 @@ func _on_anim_animation_finished(anim_name: StringName) -> void:
 			if parent.tween:
 				parent.tween.kill()
 			parent.tween = create_tween()
-			parent.tween.tween_property(%BarraVida, "value", %Vida.vida_max, 2.)
+			parent.tween.tween_property(%BarraVida, "value", %VidaBoss.vida_max, 2.)
 	if anim_name == "Grito":
 		inicia_luta = true
