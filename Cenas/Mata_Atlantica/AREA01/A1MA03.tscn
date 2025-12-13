@@ -178,7 +178,7 @@ position = Vector2(3438, -4487)
 [node name="TransicaoFase2" parent="." instance=ExtResource("3_bcoor")]
 position = Vector2(3696, -4463)
 destino = 13
-posicao = Vector2(-1434, -1206.5)
+posicao = Vector2(673, -3737)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TransicaoFase2"]
 position = Vector2(-22, -215)

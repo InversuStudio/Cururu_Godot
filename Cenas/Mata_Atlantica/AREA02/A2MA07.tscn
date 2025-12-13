@@ -1,23 +1,23 @@
 [gd_scene load_steps=62 format=4 uid="uid://c4rls1pfwei2e"]
 
 [ext_resource type="Texture2D" uid="uid://c374cwih425cq" path="res://Sprites/Cenário/Tilemaps/Base.png" id="1_uhas7"]
-[ext_resource type="Texture2D" uid="uid://cqu5scrrmr5n5" path="res://Sprites/Cenário/Mata_Atlantica/Background/FUNDOCEU.png" id="1_xyjrg"]
+[ext_resource type="Texture2D" uid="uid://cqu5scrrmr5n5" path="res://Sprites/Cenário/Mata_Atlantica/Background/Iluminação e Fundo/FUNDOCEU.png" id="1_xyjrg"]
 [ext_resource type="Script" uid="uid://bhexx6mj1xv3q" path="res://addons/phantom_camera/scripts/phantom_camera/phantom_camera_2d.gd" id="2_3i4df"]
-[ext_resource type="Texture2D" uid="uid://k22xru6heyh3" path="res://Sprites/Cenário/Mata_Atlantica/Background/arvore0.png" id="2_c6gyn"]
-[ext_resource type="Texture2D" uid="uid://dog2ml3xbyho2" path="res://Sprites/Cenário/Mata_Atlantica/Background/arvore2.png" id="2_eoclm"]
-[ext_resource type="Texture2D" uid="uid://2x6q1ni8klgv" path="res://Sprites/Cenário/Mata_Atlantica/Background/arvore_fundo1.png" id="2_giq4m"]
+[ext_resource type="Texture2D" uid="uid://k22xru6heyh3" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/arvore0.png" id="2_c6gyn"]
+[ext_resource type="Texture2D" uid="uid://dog2ml3xbyho2" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/arvore_S1.png" id="2_eoclm"]
+[ext_resource type="Texture2D" uid="uid://2x6q1ni8klgv" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/arvore_fundo1.png" id="2_giq4m"]
 [ext_resource type="Script" uid="uid://8umksf8e80fw" path="res://addons/phantom_camera/scripts/resources/tween_resource.gd" id="3_8qltl"]
-[ext_resource type="Texture2D" uid="uid://dmh8fodubelsr" path="res://Sprites/Cenário/Mata_Atlantica/Background/FUNDONEVOA.png" id="3_eoclm"]
-[ext_resource type="Texture2D" uid="uid://btb3tlxsmx38i" path="res://Sprites/Cenário/Mata_Atlantica/Background/arvore_fundo2.png" id="3_n82pn"]
-[ext_resource type="Texture2D" uid="uid://dyv700lptbkyq" path="res://Sprites/Cenário/Mata_Atlantica/Background/composição2.png" id="4_eoclm"]
-[ext_resource type="Texture2D" uid="uid://ctar30vsktrrb" path="res://Sprites/Cenário/Mata_Atlantica/Background/FUNDONEVOA2.png" id="4_gnpt0"]
-[ext_resource type="Texture2D" uid="uid://dv0q1amqoq168" path="res://Sprites/Cenário/Mata_Atlantica/Background/mato03.png" id="4_jfnfb"]
+[ext_resource type="Texture2D" uid="uid://dmh8fodubelsr" path="res://Sprites/Cenário/Mata_Atlantica/Background/Iluminação e Fundo/FUNDONEVOA.png" id="3_eoclm"]
+[ext_resource type="Texture2D" uid="uid://btb3tlxsmx38i" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/arvore_fundo2.png" id="3_n82pn"]
+[ext_resource type="Texture2D" uid="uid://dyv700lptbkyq" path="res://Sprites/Cenário/Mata_Atlantica/Background/Galhos/composição2.png" id="4_eoclm"]
+[ext_resource type="Texture2D" uid="uid://ctar30vsktrrb" path="res://Sprites/Cenário/Mata_Atlantica/Background/Iluminação e Fundo/FUNDONEVOA2.png" id="4_gnpt0"]
+[ext_resource type="Texture2D" uid="uid://dv0q1amqoq168" path="res://Sprites/Cenário/Mata_Atlantica/Background/Mata/mato03.png" id="4_jfnfb"]
 [ext_resource type="PackedScene" uid="uid://nohq28uk7lfk" path="res://Objetos/Entidades/Player.tscn" id="5_yius8"]
-[ext_resource type="Texture2D" uid="uid://dru600hg8oaty" path="res://Sprites/Cenário/Mata_Atlantica/Background/mato02.png" id="7_n1voe"]
+[ext_resource type="Texture2D" uid="uid://dru600hg8oaty" path="res://Sprites/Cenário/Mata_Atlantica/Background/Mata/mato02.png" id="7_n1voe"]
 [ext_resource type="Texture2D" uid="uid://drcemrcpb3ydc" path="res://Sprites/Cenário/Mata_Atlantica/Chao/moita_chao2.png" id="9_gnpt0"]
 [ext_resource type="PackedScene" uid="uid://1apfpwlqocxn" path="res://Objetos/Funcionalidade/TransicaoFase.tscn" id="9_iyc38"]
 [ext_resource type="Texture2D" uid="uid://jecy4bfqqqxu" path="res://Sprites/Cenário/Mata_Atlantica/Teto/Moita teste.png" id="10_ymck4"]
-[ext_resource type="Texture2D" uid="uid://d3t6c4pjsosio" path="res://Sprites/Cenário/Mata_Atlantica/Background/mato01.png" id="11_a200r"]
+[ext_resource type="Texture2D" uid="uid://d3t6c4pjsosio" path="res://Sprites/Cenário/Mata_Atlantica/Background/Mata/mato01.png" id="11_a200r"]
 [ext_resource type="Texture2D" uid="uid://cw2yeg7ynw0kl" path="res://Sprites/Cenário/Mata_Atlantica/Chao/chap_externo.png" id="11_s8tgr"]
 [ext_resource type="Texture2D" uid="uid://c2yapafbd3cnf" path="res://Sprites/Cenário/Mata_Atlantica/Foreground/cipó.png" id="12_3r8ne"]
 [ext_resource type="Texture2D" uid="uid://b6f4rmw8i4g77" path="res://Sprites/Inimigos/Boitata/Corpo/PropCorpoBoitata.png" id="12_o607x"]
@@ -286,7 +286,7 @@ animations = [{
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_s7f4i"]
 radius = 209.0
-height = 610.0
+height = 665.0498
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_giq4m"]
 
@@ -1103,6 +1103,36 @@ position = Vector2(1079.6399, 377.00864)
 scale = Vector2(4.94872, 1.3534904)
 texture = ExtResource("13_xyjrg")
 
+[node name="Moita15" type="Sprite2D" parent="Cenario/BoitataCenario"]
+position = Vector2(2066.7317, 119.82402)
+scale = Vector2(1.4612763, 1.4612763)
+texture = ExtResource("22_4rfcs")
+
+[node name="Sombra5" type="Sprite2D" parent="Cenario/BoitataCenario"]
+position = Vector2(1839.5035, 160.73973)
+scale = Vector2(4.94872, 1.3534904)
+texture = ExtResource("13_xyjrg")
+
+[node name="Moita16" type="Sprite2D" parent="Cenario/BoitataCenario"]
+position = Vector2(2655.626, 159.27847)
+scale = Vector2(1.4612763, 1.4612763)
+texture = ExtResource("22_4rfcs")
+
+[node name="Sombra7" type="Sprite2D" parent="Cenario/BoitataCenario"]
+position = Vector2(2428.3977, 200.1942)
+scale = Vector2(4.94872, 1.3534904)
+texture = ExtResource("13_xyjrg")
+
+[node name="Moita17" type="Sprite2D" parent="Cenario/BoitataCenario"]
+position = Vector2(2199.7083, 309.79044)
+scale = Vector2(1.4612764, 1.4612764)
+texture = ExtResource("22_4rfcs")
+
+[node name="Moita18" type="Sprite2D" parent="Cenario/BoitataCenario"]
+position = Vector2(1749.6351, 321.48065)
+scale = Vector2(1.4612764, 1.4612764)
+texture = ExtResource("22_4rfcs")
+
 [node name="Moita7" type="Sprite2D" parent="Cenario/BoitataCenario"]
 position = Vector2(1818.3154, 518.7532)
 scale = Vector2(1.4612763, 1.4612763)
@@ -1155,6 +1185,11 @@ texture = ExtResource("13_3r0k0")
 
 [node name="Frontfolha32" type="Sprite2D" parent="Cenario/BoitataCenario"]
 position = Vector2(2677.5457, 512.9072)
+scale = Vector2(1.4612763, 1.4612763)
+texture = ExtResource("13_3r0k0")
+
+[node name="Frontfolha36" type="Sprite2D" parent="Cenario/BoitataCenario"]
+position = Vector2(3226.9854, 280.56433)
 scale = Vector2(1.4612763, 1.4612763)
 texture = ExtResource("13_3r0k0")
 
@@ -1245,17 +1280,18 @@ position = Vector2(1771.5999, -316.2002)
 gizmo_extents = 143.8
 
 [node name="Rabo" parent="Boss" instance=ExtResource("35_5ppts")]
-position = Vector2(1985, -988)
+position = Vector2(2497.0002, -1030)
+scale = Vector2(1.6255717, 1.6255717)
 collision_layer = 16
 
 [node name="Rabo" type="AnimatedSprite2D" parent="Boss/Rabo"]
 sprite_frames = SubResource("SpriteFrames_hqusl")
 autoplay = "default"
-frame = 6
-frame_progress = 0.1963083
+frame = 1
+frame_progress = 0.06395235
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Boss/Rabo"]
-position = Vector2(28, 362)
+position = Vector2(28, 331.57562)
 shape = SubResource("CapsuleShape2D_s7f4i")
 debug_color = Color(0.9866224, 0, 0.3265099, 0.41960785)
 

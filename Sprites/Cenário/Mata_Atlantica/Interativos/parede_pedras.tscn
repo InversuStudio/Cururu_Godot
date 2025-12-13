@@ -1,0 +1,30 @@
+[gd_scene load_steps=3 format=3 uid="uid://dn2kwqjchyumh"]
+
+[ext_resource type="Texture2D" uid="uid://cn6a67mc7hffx" path="res://Sprites/Cenário/Mata_Atlantica/Pedras e Ruinas/pedra_lisa.png" id="1_3e3ao"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8xt7f"]
+size = Vector2(151, 743)
+
+[node name="PAREDE PEDRAS" type="Node2D"]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-0.5, -120.5)
+shape = SubResource("RectangleShape2D_8xt7f")
+
+[node name="PedraLisa3" type="Sprite2D" parent="."]
+position = Vector2(-354.00003, -272.99994)
+scale = Vector2(1.5599995, 1.5599995)
+texture = ExtResource("1_3e3ao")
+
+[node name="PedraLisa" type="Sprite2D" parent="."]
+position = Vector2(-312, 69.00002)
+scale = Vector2(1.5599995, 1.5599995)
+texture = ExtResource("1_3e3ao")
+
+[node name="PedraLisa2" type="Sprite2D" parent="."]
+position = Vector2(-329.00003, -133)
+scale = Vector2(1.5599995, 1.5599995)
+texture = ExtResource("1_3e3ao")
+flip_h = true
