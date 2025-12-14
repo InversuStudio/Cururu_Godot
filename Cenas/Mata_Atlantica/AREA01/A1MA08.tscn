@@ -718,6 +718,80 @@ flip_h = true
 position = Vector2(2101, 1366)
 texture = ExtResource("9_sitov")
 
+[node name="Central" type="Sprite2D" parent="LimiteCamera/ArvoresFrente"]
+position = Vector2(-4403.5, 1220)
+texture = ExtResource("25_gdp7s")
+
+[node name="Composição2" type="Sprite2D" parent="LimiteCamera/ArvoresFrente"]
+position = Vector2(-4159.5, 265)
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("6_gdqac")
+
+[node name="Composição3" type="Sprite2D" parent="LimiteCamera/ArvoresFrente"]
+position = Vector2(-5400.5, 980)
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("6_gdqac")
+
+[node name="Esquerda01" type="Sprite2D" parent="LimiteCamera/ArvoresFrente"]
+position = Vector2(-4667.5, 497)
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("26_ipsmi")
+
+[node name="PedraMusgo3" type="Sprite2D" parent="LimiteCamera/ArvoresFrente"]
+modulate = Color(1.3655106, 1.3655106, 1.3655106, 1)
+position = Vector2(2670.5, -127)
+scale = Vector2(0.36729452, 0.36729452)
+texture = ExtResource("21_sdpnw")
+flip_h = true
+
+[node name="PedraMusgo5" type="Sprite2D" parent="LimiteCamera/ArvoresFrente"]
+modulate = Color(1.3655106, 1.3655106, 1.3655106, 1)
+position = Vector2(-299.5, -1161)
+scale = Vector2(0.36729452, 0.36729452)
+texture = ExtResource("21_sdpnw")
+
+[node name="PedraMusgo" type="Sprite2D" parent="LimiteCamera/ArvoresFrente"]
+position = Vector2(-2329.5, 1418)
+scale = Vector2(0.36729452, 0.36729452)
+texture = ExtResource("21_sdpnw")
+
+[node name="PedraMusgo2" type="Sprite2D" parent="LimiteCamera/ArvoresFrente"]
+position = Vector2(-4164.5, 1522)
+scale = Vector2(0.36729452, 0.36729452)
+texture = ExtResource("21_sdpnw")
+flip_h = true
+
+[node name="PedraMusgo4" type="Sprite2D" parent="LimiteCamera/ArvoresFrente"]
+position = Vector2(3902.5, 895)
+scale = Vector2(0.36729452, 0.36729452)
+texture = ExtResource("21_sdpnw")
+flip_h = true
+
+[node name="Moita2" type="Sprite2D" parent="LimiteCamera/ArvoresFrente"]
+position = Vector2(4322.5234, 1018.5)
+scale = Vector2(0.9150944, 0.9150943)
+texture = ExtResource("22_v7od0")
+
+[node name="Moita3" type="Sprite2D" parent="LimiteCamera/ArvoresFrente"]
+position = Vector2(90.49951, 1193)
+scale = Vector2(0.9150944, 0.9150943)
+texture = ExtResource("22_v7od0")
+
+[node name="Moita5" type="Sprite2D" parent="LimiteCamera/ArvoresFrente"]
+position = Vector2(-49.50049, -983.5)
+scale = Vector2(0.9150944, 0.9150943)
+texture = ExtResource("22_v7od0")
+
+[node name="Moita4" type="Sprite2D" parent="LimiteCamera/ArvoresFrente"]
+position = Vector2(-979.5, 1195)
+scale = Vector2(0.9150944, 0.9150943)
+texture = ExtResource("22_v7od0")
+
+[node name="Moita6" type="Sprite2D" parent="LimiteCamera/ArvoresFrente"]
+position = Vector2(-4500.5, 1709)
+scale = Vector2(0.9150944, 0.9150943)
+texture = ExtResource("22_v7od0")
+
 [node name="AreaUpgrade" parent="." instance=ExtResource("2_d6eef")]
 position = Vector2(0, -7937)
 
@@ -1175,61 +1249,6 @@ scale = Vector2(0.8, 0.8)
 texture = ExtResource("23_esn82")
 
 [node name="Chao" type="Node2D" parent="Cenario"]
-
-[node name="PedraMusgo3" type="Sprite2D" parent="Cenario/Chao"]
-modulate = Color(1.3655106, 1.3655106, 1.3655106, 1)
-position = Vector2(-3266, -427)
-scale = Vector2(0.36729452, 0.36729452)
-texture = ExtResource("21_sdpnw")
-flip_h = true
-
-[node name="PedraMusgo5" type="Sprite2D" parent="Cenario/Chao"]
-modulate = Color(1.3655106, 1.3655106, 1.3655106, 1)
-position = Vector2(-6236, -1461)
-scale = Vector2(0.36729452, 0.36729452)
-texture = ExtResource("21_sdpnw")
-
-[node name="PedraMusgo" type="Sprite2D" parent="Cenario/Chao"]
-position = Vector2(-8266, 1118)
-scale = Vector2(0.36729452, 0.36729452)
-texture = ExtResource("21_sdpnw")
-
-[node name="PedraMusgo2" type="Sprite2D" parent="Cenario/Chao"]
-position = Vector2(-10101, 1222)
-scale = Vector2(0.36729452, 0.36729452)
-texture = ExtResource("21_sdpnw")
-flip_h = true
-
-[node name="PedraMusgo4" type="Sprite2D" parent="Cenario/Chao"]
-position = Vector2(-2034, 595)
-scale = Vector2(0.36729452, 0.36729452)
-texture = ExtResource("21_sdpnw")
-flip_h = true
-
-[node name="Moita2" type="Sprite2D" parent="Cenario/Chao"]
-position = Vector2(-1613.9766, 718.5)
-scale = Vector2(0.9150944, 0.9150943)
-texture = ExtResource("22_v7od0")
-
-[node name="Moita3" type="Sprite2D" parent="Cenario/Chao"]
-position = Vector2(-5846.0005, 893)
-scale = Vector2(0.9150944, 0.9150943)
-texture = ExtResource("22_v7od0")
-
-[node name="Moita5" type="Sprite2D" parent="Cenario/Chao"]
-position = Vector2(-5986.0005, -1283.5)
-scale = Vector2(0.9150944, 0.9150943)
-texture = ExtResource("22_v7od0")
-
-[node name="Moita4" type="Sprite2D" parent="Cenario/Chao"]
-position = Vector2(-6916, 895)
-scale = Vector2(0.9150944, 0.9150943)
-texture = ExtResource("22_v7od0")
-
-[node name="Moita6" type="Sprite2D" parent="Cenario/Chao"]
-position = Vector2(-10437, 1409)
-scale = Vector2(0.9150944, 0.9150943)
-texture = ExtResource("22_v7od0")
 
 [node name="ChapInterno" type="Sprite2D" parent="Cenario/Chao"]
 position = Vector2(-7804, 173)
@@ -1842,25 +1861,6 @@ scale = Vector2(0.8, 0.8)
 texture = ExtResource("17_ui1e1")
 
 [node name="Plataforma" type="Node2D" parent="Cenario"]
-
-[node name="Central" type="Sprite2D" parent="Cenario/Plataforma"]
-position = Vector2(-10340, 920)
-texture = ExtResource("25_gdp7s")
-
-[node name="Composição2" type="Sprite2D" parent="Cenario/Plataforma"]
-position = Vector2(-10096, -35)
-scale = Vector2(0.7, 0.7)
-texture = ExtResource("6_gdqac")
-
-[node name="Composição3" type="Sprite2D" parent="Cenario/Plataforma"]
-position = Vector2(-11337, 680)
-scale = Vector2(0.7, 0.7)
-texture = ExtResource("6_gdqac")
-
-[node name="Esquerda01" type="Sprite2D" parent="Cenario/Plataforma"]
-position = Vector2(-10604, 197)
-scale = Vector2(0.7, 0.7)
-texture = ExtResource("26_ipsmi")
 
 [node name="Plataforma" parent="Cenario/Plataforma" instance=ExtResource("7_6yqlo")]
 position = Vector2(-9978, -197)
