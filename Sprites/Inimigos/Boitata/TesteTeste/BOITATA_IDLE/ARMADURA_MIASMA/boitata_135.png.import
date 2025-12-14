@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c1y7wbo1dwncg"
-path="res://.godot/imported/boitata_139.png-140d62e419f76c2cf339ec6d72e5c295.ctex"
+uid="uid://ds7hsxp7ui1d4"
+path="res://.godot/imported/boitata_135.png-414dfce74054c0cb7add8e179f5cb116.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Inimigos/Boitata/TesteTeste/BOITATA_IDLE/ARMADUA_MIASMA/boitata_139.png"
-dest_files=["res://.godot/imported/boitata_139.png-140d62e419f76c2cf339ec6d72e5c295.ctex"]
+source_file="res://Sprites/Inimigos/Boitata/TesteTeste/BOITATA_IDLE/ARMADURA_MIASMA/boitata_135.png"
+dest_files=["res://.godot/imported/boitata_135.png-414dfce74054c0cb7add8e179f5cb116.ctex"]
 
 [params]
 
