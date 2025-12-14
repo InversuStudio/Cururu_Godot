@@ -63,6 +63,7 @@ folder_colors={
 "res://Scripts/": "green",
 "res://Sprites/": "yellow",
 "res://Sprites/Cenário/zSem_Uso/": "gray",
+"res://Sprites/Inimigos/Boitata/": "red",
 "res://Sprites/zTeste_Parellax/": "gray",
 "res://Sprites/zWIP/": "gray",
 "res://Teste_Script/": "teal",

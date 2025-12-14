@@ -32,7 +32,7 @@
 [ext_resource type="Texture2D" uid="uid://6xmqb8rst36e" path="res://Sprites/Cenário/Mata_Atlantica/Chao/moita_miasma1.png" id="18_ir41t"]
 [ext_resource type="PackedScene" uid="uid://u48tpl3f3l20" path="res://Objetos/Props/DropGuarana.tscn" id="18_p7mcf"]
 [ext_resource type="Texture2D" uid="uid://rbtvfm4m7ft" path="res://Sprites/VFX/Iluminação/SOMBRA2.png" id="19_yk7fv"]
-[ext_resource type="Texture2D" uid="uid://b6f4rmw8i4g77" path="res://Sprites/Inimigos/Boitata/Corpo/PropCorpoBoitata.png" id="20_sjxar"]
+[ext_resource type="Texture2D" uid="uid://b6f4rmw8i4g77" path="res://Sprites/Inimigos/Boitata/PropCorpoBoitata.png" id="20_sjxar"]
 [ext_resource type="Texture2D" uid="uid://jecy4bfqqqxu" path="res://Sprites/Cenário/Mata_Atlantica/Teto/Moita teste.png" id="21_vgqnr"]
 [ext_resource type="Texture2D" uid="uid://dw42p1qq6njp8" path="res://Sprites/Cenário/Mata_Atlantica/Chao/moita_miasma2.png" id="22_n7put"]
 [ext_resource type="Texture2D" uid="uid://uq6dbjep5wva" path="res://Sprites/Cenário/Mata_Atlantica/Foreground/frontfolha.png" id="22_omrxv"]
