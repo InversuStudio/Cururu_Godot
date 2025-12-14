@@ -338,7 +338,7 @@ radius = 226.0
 height = 568.0
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_0w5f0"]
-radius = 198.0
+radius = 214.0
 height = 468.0
 
 [sub_resource type="Animation" id="Animation_16hqa"]
@@ -704,7 +704,7 @@ comp_vida = NodePath("../VidaMCabeca")
 hit_sfx = ExtResource("5_b2ig3")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HurtCabeca"]
-position = Vector2(83, -961)
+position = Vector2(111, -943)
 rotation = 1.5707964
 shape = SubResource("CapsuleShape2D_mjx0v")
 
@@ -727,7 +727,7 @@ comp_vida = NodePath("../VidaMCorpo")
 hit_sfx = ExtResource("5_b2ig3")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HurtCorpo"]
-position = Vector2(91, -360)
+position = Vector2(91, -351)
 rotation = -3.1415927
 shape = SubResource("CapsuleShape2D_0w5f0")
 

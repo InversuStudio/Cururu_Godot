@@ -1,27 +1,64 @@
-[gd_scene load_steps=16 format=3 uid="uid://dppj6i0ifoocp"]
+[gd_scene load_steps=35 format=3 uid="uid://dppj6i0ifoocp"]
 
 [ext_resource type="Script" uid="uid://bacf3raoqf4ns" path="res://Scripts/Boss/Pilar.gd" id="1_tdbse"]
-[ext_resource type="Texture2D" uid="uid://fakskg5rd5mq" path="res://Sprites/Inimigos/Boitata/Ataque2/Pilar_Fogo/fogo_pilar01.png" id="1_tqvmf"]
-[ext_resource type="Texture2D" uid="uid://d4ft4p7v0p2n7" path="res://Sprites/Inimigos/Boitata/Ataque2/Pilar_Fogo/fogo_pilar03.png" id="2_tdbse"]
-[ext_resource type="Texture2D" uid="uid://dg2e8jw0ikr5l" path="res://Sprites/Inimigos/Boitata/Ataque2/Pilar_Fogo/fogo_pilar05.png" id="3_petnf"]
-[ext_resource type="Texture2D" uid="uid://51sctqbttdam" path="res://Sprites/Inimigos/Boitata/Ataque2/Pilar_Fogo/fogo_pilar07.png" id="4_twefq"]
-[ext_resource type="Texture2D" uid="uid://bt864isqeoqkt" path="res://Sprites/Inimigos/Boitata/Ataque2/Pilar_Fogo/fogo_pilar09.png" id="5_y4c4x"]
-[ext_resource type="Texture2D" uid="uid://dr4usyu7elhwg" path="res://Sprites/Inimigos/Boitata/Ataque2/Pilar_Fogo/fogo_pilar11.png" id="6_bewqd"]
-[ext_resource type="Texture2D" uid="uid://bmwbnq7ol8wv8" path="res://Sprites/Inimigos/Boitata/Ataque2/Pilar_Fogo/fogo_pilar13.png" id="7_aapsr"]
-[ext_resource type="Texture2D" uid="uid://cplyclegxquhd" path="res://Sprites/Inimigos/Boitata/Ataque2/Pilar_Fogo/fogo_pilar15.png" id="8_griib"]
-[ext_resource type="Texture2D" uid="uid://bspf3gaq681gl" path="res://Sprites/Inimigos/Boitata/Ataque2/Pilar_Fogo/fogo_pilar17.png" id="9_0ry6m"]
-[ext_resource type="Texture2D" uid="uid://ch1na8t4hj27y" path="res://Sprites/Inimigos/Boitata/Ataque2/Pilar_Fogo/fogo_pilar19.png" id="10_d12gu"]
+[ext_resource type="Texture2D" uid="uid://csgctbosjole1" path="res://Sprites/Inimigos/Boitata/Ataque2/Pilar_Fogo/V2/final-0002.png" id="4_vqjxp"]
+[ext_resource type="Texture2D" uid="uid://bn8mhmsqkevks" path="res://Sprites/Inimigos/Boitata/Ataque2/Pilar_Fogo/V2/final-0004.png" id="5_0li0k"]
+[ext_resource type="Texture2D" uid="uid://b6m7sjo1roexa" path="res://Sprites/Inimigos/Boitata/Ataque2/Pilar_Fogo/V2/final-0006.png" id="6_ly41o"]
+[ext_resource type="Texture2D" uid="uid://davcyj4fkh7r0" path="res://Sprites/Inimigos/Boitata/Ataque2/Pilar_Fogo/V2/final-0008.png" id="7_m5d4x"]
+[ext_resource type="Texture2D" uid="uid://cqora54upfvb1" path="res://Sprites/Inimigos/Boitata/Ataque2/Pilar_Fogo/V2/final-0010.png" id="8_rkhv2"]
+[ext_resource type="Texture2D" uid="uid://cj22vuqh81dav" path="res://Sprites/Inimigos/Boitata/Ataque2/Pilar_Fogo/V2/final-0012.png" id="9_7ybf5"]
+[ext_resource type="Texture2D" uid="uid://b01uscnys5gfp" path="res://Sprites/Inimigos/Boitata/Ataque2/Pilar_Fogo/V2/final-0014.png" id="10_4hgvp"]
+[ext_resource type="Texture2D" uid="uid://bgcn30cikicol" path="res://Sprites/Inimigos/Boitata/Ataque2/Pilar_Fogo/V2/final-0016.png" id="11_5e8kx"]
 [ext_resource type="PackedScene" uid="uid://pc4mgv2nv8af" path="res://Objetos/Funcionalidade/CompHitBox.tscn" id="11_tqvmf"]
+[ext_resource type="Texture2D" uid="uid://m0nrrj0n3y88" path="res://Sprites/Inimigos/Boitata/Ataque2/Pilar_Fogo/V2/final-0018.png" id="12_dngjy"]
+[ext_resource type="Texture2D" uid="uid://batbbo2vmkbs0" path="res://Sprites/Inimigos/Boitata/Ataque2/Pilar_Fogo/V2/final-0019.png" id="13_68fjd"]
 [ext_resource type="AudioStream" uid="uid://bcatsesjwy8f4" path="res://Audio/SFX/BOITATA/Pilar_Fogo.mp3" id="13_petnf"]
+[ext_resource type="Texture2D" uid="uid://cb2vrbrfcleyk" path="res://Sprites/Inimigos/Boitata/Ataque2/Pilar_Fogo/V2/final-0020.png" id="14_oqld0"]
+[ext_resource type="Texture2D" uid="uid://c8sip4j3jbwd4" path="res://Sprites/Inimigos/Boitata/Ataque2/Pilar_Fogo/V2/final-0021.png" id="15_44x64"]
+[ext_resource type="Texture2D" uid="uid://db0xtau0juyo5" path="res://Sprites/Inimigos/Boitata/Ataque2/Pilar_Fogo/V2/final-0022.png" id="16_gvu5f"]
+[ext_resource type="Texture2D" uid="uid://bweul1itiif3s" path="res://Sprites/Inimigos/Boitata/Ataque2/Pilar_Fogo/V2/final-0023.png" id="17_fmqfs"]
+[ext_resource type="Texture2D" uid="uid://c7fjdqitwaq25" path="res://Sprites/Inimigos/Boitata/Ataque2/Pilar_Fogo/V2/final-0024.png" id="18_nqy47"]
+[ext_resource type="Texture2D" uid="uid://bjfcd8thnylr2" path="res://Sprites/Inimigos/Boitata/Ataque2/Pilar_Fogo/V2/final-0025.png" id="19_lx5ky"]
+[ext_resource type="Texture2D" uid="uid://eorux41ranc6" path="res://Sprites/Inimigos/Boitata/Ataque2/Pilar_Fogo/V2/final-0026.png" id="20_g4bto"]
+[ext_resource type="Texture2D" uid="uid://bfhrmacdshphj" path="res://Sprites/Inimigos/Boitata/Ataque2/Pilar_Fogo/V2/final-0027.png" id="21_mrqum"]
+[ext_resource type="Texture2D" uid="uid://4oi5huevvpm2" path="res://Sprites/Inimigos/Boitata/Ataque2/Pilar_Fogo/V2/final-0028.png" id="22_xl6hi"]
+[ext_resource type="Texture2D" uid="uid://bvefhcf33fjqn" path="res://Sprites/Inimigos/Boitata/Ataque2/Pilar_Fogo/V2/final-0029.png" id="23_6po5d"]
+[ext_resource type="Texture2D" uid="uid://c6lih2gm8irbx" path="res://Sprites/Inimigos/Boitata/Ataque2/Pilar_Fogo/V2/final-0030.png" id="24_u4l4q"]
+[ext_resource type="Texture2D" uid="uid://djw1a2iehh5wp" path="res://Sprites/Inimigos/Boitata/Ataque2/Pilar_Fogo/V2/final-0031.png" id="25_uxjyq"]
+[ext_resource type="Texture2D" uid="uid://d1fuleek2rysg" path="res://Sprites/Inimigos/Boitata/Ataque2/Pilar_Fogo/V2/final-0032.png" id="26_yowug"]
+[ext_resource type="Texture2D" uid="uid://c1sosljkqiv38" path="res://Sprites/Inimigos/Boitata/Ataque2/Pilar_Fogo/V2/final-0033.png" id="27_hbiq0"]
+[ext_resource type="Texture2D" uid="uid://do8h0xh4inkhy" path="res://Sprites/Inimigos/Boitata/Ataque2/Pilar_Fogo/V2/final-0034.png" id="28_xu7bp"]
+[ext_resource type="Texture2D" uid="uid://3p8a4724aqxj" path="res://Sprites/Inimigos/Boitata/Ataque2/Pilar_Fogo/V2/final-0035.png" id="29_jf45a"]
+[ext_resource type="Texture2D" uid="uid://dashcbs1i6hol" path="res://Sprites/Inimigos/Boitata/Ataque2/Pilar_Fogo/V2/final-0036.png" id="30_xwv4y"]
+[ext_resource type="Texture2D" uid="uid://ccegc5pplv4gx" path="res://Sprites/Inimigos/Boitata/Ataque2/Pilar_Fogo/V2/final-0037.png" id="31_8u1mn"]
+[ext_resource type="Texture2D" uid="uid://bo1apn0o2ltrk" path="res://Sprites/Inimigos/Boitata/Ataque2/Pilar_Fogo/V2/final-0038.png" id="32_bmbxo"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_u0rk8"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("1_tqvmf")
+"texture": ExtResource("4_vqjxp")
 }, {
 "duration": 1.0,
-"texture": ExtResource("10_d12gu")
+"texture": ExtResource("5_0li0k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_ly41o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_m5d4x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_rkhv2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_7ybf5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_4hgvp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_5e8kx")
 }],
 "loop": true,
 "name": &"Carga",
@@ -29,46 +66,67 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("10_d12gu")
+"texture": ExtResource("12_dngjy")
 }, {
 "duration": 1.0,
-"texture": ExtResource("1_tqvmf")
+"texture": ExtResource("13_68fjd")
 }, {
 "duration": 1.0,
-"texture": ExtResource("3_petnf")
+"texture": ExtResource("14_oqld0")
 }, {
 "duration": 1.0,
-"texture": ExtResource("4_twefq")
+"texture": ExtResource("15_44x64")
 }, {
 "duration": 1.0,
-"texture": ExtResource("5_y4c4x")
+"texture": ExtResource("16_gvu5f")
 }, {
 "duration": 1.0,
-"texture": ExtResource("6_bewqd")
+"texture": ExtResource("17_fmqfs")
 }, {
 "duration": 1.0,
-"texture": ExtResource("7_aapsr")
+"texture": ExtResource("18_nqy47")
 }, {
 "duration": 1.0,
-"texture": ExtResource("8_griib")
+"texture": ExtResource("19_lx5ky")
 }, {
 "duration": 1.0,
-"texture": ExtResource("9_0ry6m")
+"texture": ExtResource("20_g4bto")
 }, {
 "duration": 1.0,
-"texture": ExtResource("2_tdbse")
+"texture": ExtResource("21_mrqum")
 }, {
 "duration": 1.0,
-"texture": ExtResource("2_tdbse")
+"texture": ExtResource("22_xl6hi")
 }, {
 "duration": 1.0,
-"texture": ExtResource("9_0ry6m")
+"texture": ExtResource("23_6po5d")
 }, {
 "duration": 1.0,
-"texture": ExtResource("8_griib")
+"texture": ExtResource("24_u4l4q")
 }, {
 "duration": 1.0,
-"texture": ExtResource("3_petnf")
+"texture": ExtResource("25_uxjyq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_yowug")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_hbiq0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_xu7bp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_jf45a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_xwv4y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_8u1mn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_bmbxo")
 }],
 "loop": true,
 "name": &"Jato",
@@ -87,9 +145,9 @@ tempo_ativo = 1.2
 [node name="Sprite" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, -422)
 sprite_frames = SubResource("SpriteFrames_u0rk8")
-animation = &"Jato"
+animation = &"Carga"
 autoplay = "Carga"
-frame_progress = 0.37443024
+frame_progress = 0.38878995
 
 [node name="HitBox" parent="." instance=ExtResource("11_tqvmf")]
 collision_layer = 16
