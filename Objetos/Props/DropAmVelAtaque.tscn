@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://bgiacv0vndt1q"]
+[gd_scene load_steps=5 format=3 uid="uid://bgiacv0vndt1q"]
 
 [ext_resource type="Script" uid="uid://bjl3lkbpnbx3k" path="res://Scripts/Componentes/DropAmuleto.gd" id="1_es4ah"]
 [ext_resource type="Texture2D" uid="uid://c3tl3oddronfh" path="res://icon.svg" id="2_e41ni"]
+[ext_resource type="Texture2D" uid="uid://drlhy888vf1qh" path="res://Sprites/UI/Amuletos/ICONE/START WATER2.png" id="3_e41ni"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_s361a"]
 radius = 61.03278
@@ -15,9 +16,8 @@ descricao_tela = "Todos os seus golpes se tornam mais rápidos"
 imagem_tela = ExtResource("2_e41ni")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-self_modulate = Color(0.9861104, 0, 0.35392314, 1)
-scale = Vector2(0.7, 0.7)
-texture = ExtResource("2_e41ni")
+scale = Vector2(1.6976742, 1.6976742)
+texture = ExtResource("3_e41ni")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_s361a")
