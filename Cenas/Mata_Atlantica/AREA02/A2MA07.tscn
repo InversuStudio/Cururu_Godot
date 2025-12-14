@@ -589,8 +589,8 @@ scale = Vector2(0.9999999, 0.9999997)
 shape = SubResource("RectangleShape2D_xyjrg")
 
 [node name="PointLight2D" type="PointLight2D" parent="Cenario"]
-position = Vector2(-2971.5713, -706.5713)
-scale = Vector2(5.9752064, 5.9752083)
+position = Vector2(-3299.571, -641.57166)
+scale = Vector2(8.15978, 8.159782)
 energy = 1.45
 blend_mode = 2
 texture = ExtResource("31_s7f4i")

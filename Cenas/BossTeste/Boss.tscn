@@ -1,4 +1,4 @@
-[gd_scene load_steps=94 format=3 uid="uid://b7m7lb1s11mbw"]
+[gd_scene load_steps=92 format=3 uid="uid://b7m7lb1s11mbw"]
 
 [ext_resource type="Script" uid="uid://bekibpja60hxm" path="res://Scripts/Boss/boss.gd" id="1_s15tt"]
 [ext_resource type="Texture2D" uid="uid://cxo6j4mj6u5rs" path="res://Sprites/Inimigos/Boitata/TesteTeste/BOITATA_BOLA_DE_FOGO/boitata_81.png" id="2_1jvks"]
@@ -31,32 +31,30 @@
 [ext_resource type="Texture2D" uid="uid://cpnc8kjosmc67" path="res://Sprites/Inimigos/Boitata/TesteTeste/BOITATA_IDLE/boitata_141.png" id="29_ycj6j"]
 [ext_resource type="Texture2D" uid="uid://da0tq6wlh3ct2" path="res://Sprites/Inimigos/Boitata/TesteTeste/BOITATA_IDLE/boitata_143.png" id="30_r12sw"]
 [ext_resource type="Texture2D" uid="uid://bmbj7inphyio8" path="res://Sprites/Inimigos/Boitata/TesteTeste/BOITATA_IDLE/boitata_145.png" id="31_5irpk"]
+[ext_resource type="Texture2D" uid="uid://bufo33hf2v0ga" path="res://Sprites/Inimigos/Boitata/TesteTeste/BOITATA_NOCAUTE/boitata_111.png" id="31_iqxfe"]
 [ext_resource type="Texture2D" uid="uid://b6wchnr835cwa" path="res://Sprites/Inimigos/Boitata/TesteTeste/BOITATA_IDLE/boitata_147.png" id="32_3cfl8"]
+[ext_resource type="Texture2D" uid="uid://eemalnl4x2oh" path="res://Sprites/Inimigos/Boitata/TesteTeste/BOITATA_NOCAUTE/boitata_113.png" id="32_mjx0v"]
+[ext_resource type="Texture2D" uid="uid://bhryyyelnu7v6" path="res://Sprites/Inimigos/Boitata/TesteTeste/BOITATA_NOCAUTE/boitata_115.png" id="33_0w5f0"]
 [ext_resource type="Texture2D" uid="uid://dwodbcebpi7lg" path="res://Sprites/Inimigos/Boitata/TesteTeste/BOITATA_IDLE/boitata_149.png" id="33_bf3fi"]
-[ext_resource type="Texture2D" uid="uid://dvw7yu1nemajp" path="res://Sprites/Inimigos/Boitata/Nocaute/boitata_95.png" id="42_6hkog"]
-[ext_resource type="Texture2D" uid="uid://cqwljki7ur24f" path="res://Sprites/Inimigos/Boitata/Nocaute/boitata_97.png" id="43_fi4f6"]
-[ext_resource type="Texture2D" uid="uid://d1r158588e0cj" path="res://Sprites/Inimigos/Boitata/Nocaute/boitata_99.png" id="44_iy7ck"]
-[ext_resource type="Texture2D" uid="uid://cyhn8e8dyk26s" path="res://Sprites/Inimigos/Boitata/Nocaute/boitata_101.png" id="45_hsjt7"]
-[ext_resource type="Texture2D" uid="uid://btjpqmk58tll3" path="res://Sprites/Inimigos/Boitata/Nocaute/boitata_103.png" id="46_lll36"]
-[ext_resource type="Texture2D" uid="uid://crb6wx1e181xi" path="res://Sprites/Inimigos/Boitata/Nocaute/boitata_105.png" id="47_4tqxs"]
+[ext_resource type="Texture2D" uid="uid://dgm0feaqxpmoj" path="res://Sprites/Inimigos/Boitata/TesteTeste/BOITATA_NOCAUTE/boitata_117.png" id="34_uoyl7"]
+[ext_resource type="Texture2D" uid="uid://umpnuxh85pyg" path="res://Sprites/Inimigos/Boitata/TesteTeste/BOITATA_NOCAUTE/boitata_119.png" id="35_sgy8v"]
+[ext_resource type="Texture2D" uid="uid://cdw83rr0apt7a" path="res://Sprites/Inimigos/Boitata/TesteTeste/BOITATA_NOCAUTE/boitata_121.png" id="36_ojojp"]
+[ext_resource type="Texture2D" uid="uid://vys1ftf705rb" path="res://Sprites/Inimigos/Boitata/TesteTeste/BOITATA_NOCAUTE/boitata_123.png" id="37_b2ig3"]
+[ext_resource type="Texture2D" uid="uid://vbeai555nva0" path="res://Sprites/Inimigos/Boitata/TesteTeste/BOITATA_NOCAUTE/boitata_99.png" id="38_lo6ol"]
+[ext_resource type="Texture2D" uid="uid://daxgbq2h4u6oc" path="res://Sprites/Inimigos/Boitata/TesteTeste/BOITATA_NOCAUTE/boitata_101.png" id="39_6hkog"]
+[ext_resource type="Texture2D" uid="uid://bj14fahgh3h07" path="res://Sprites/Inimigos/Boitata/TesteTeste/BOITATA_NOCAUTE/boitata_103.png" id="40_fi4f6"]
+[ext_resource type="Texture2D" uid="uid://cb2junpu8iaaw" path="res://Sprites/Inimigos/Boitata/TesteTeste/BOITATA_NOCAUTE/boitata_105.png" id="41_iy7ck"]
+[ext_resource type="Texture2D" uid="uid://blbopej1mv1s1" path="res://Sprites/Inimigos/Boitata/TesteTeste/BOITATA_NOCAUTE/boitata_107.png" id="42_hsjt7"]
+[ext_resource type="Texture2D" uid="uid://dowds0x1lda55" path="res://Sprites/Inimigos/Boitata/TesteTeste/BOITATA_NOCAUTE/boitata_109.png" id="43_lll36"]
 [ext_resource type="Texture2D" uid="uid://cek2l1yvpwpl" path="res://Sprites/Inimigos/Boitata/TesteTeste/BOITATA_GRITA_FOGO/boitata_49.png" id="47_huafx"]
 [ext_resource type="Texture2D" uid="uid://br4kxtwjfgwqh" path="res://Sprites/Inimigos/Boitata/TesteTeste/BOITATA_GRITA_FOGO/boitata_51.png" id="48_h0fin"]
-[ext_resource type="Texture2D" uid="uid://kwtriesnj0xq" path="res://Sprites/Inimigos/Boitata/Nocaute/boitata_107.png" id="48_xvx5y"]
 [ext_resource type="Texture2D" uid="uid://6n0ubfsrcx8g" path="res://Sprites/Inimigos/Boitata/TesteTeste/BOITATA_GRITA_FOGO/boitata_53.png" id="49_e3enr"]
-[ext_resource type="Texture2D" uid="uid://dh6oacfodrl8o" path="res://Sprites/Inimigos/Boitata/Nocaute/boitata_109.png" id="49_xq2h5"]
-[ext_resource type="Texture2D" uid="uid://dse2vphkvs5ko" path="res://Sprites/Inimigos/Boitata/Nocaute/boitata_111.png" id="50_v0ih0"]
 [ext_resource type="Texture2D" uid="uid://dbt5250xfa2f7" path="res://Sprites/Inimigos/Boitata/TesteTeste/BOITATA_GRITA_FOGO/boitata_55.png" id="50_y5ilg"]
-[ext_resource type="Texture2D" uid="uid://cq5xb6ru07dyd" path="res://Sprites/Inimigos/Boitata/Nocaute/boitata_113.png" id="51_i41or"]
 [ext_resource type="Texture2D" uid="uid://cxg4pbfqwah6e" path="res://Sprites/Inimigos/Boitata/TesteTeste/BOITATA_GRITA_FOGO/boitata_57.png" id="51_tift1"]
-[ext_resource type="Texture2D" uid="uid://c781ch4cr3msl" path="res://Sprites/Inimigos/Boitata/Nocaute/boitata_115.png" id="52_1mvtp"]
 [ext_resource type="Texture2D" uid="uid://rpgkug1vkwm5" path="res://Sprites/Inimigos/Boitata/TesteTeste/BOITATA_GRITA_FOGO/boitata_59.png" id="52_x6621"]
 [ext_resource type="Texture2D" uid="uid://cpo1k33da4vpt" path="res://Sprites/Inimigos/Boitata/TesteTeste/BOITATA_GRITA_FOGO/boitata_61.png" id="53_aensq"]
-[ext_resource type="Texture2D" uid="uid://cflav4p1oi7yf" path="res://Sprites/Inimigos/Boitata/Nocaute/boitata_117.png" id="53_qhv3i"]
 [ext_resource type="Texture2D" uid="uid://6qns3er86scv" path="res://Sprites/Inimigos/Boitata/TesteTeste/BOITATA_GRITA_FOGO/boitata_63.png" id="54_e4ef7"]
-[ext_resource type="Texture2D" uid="uid://b7kdshueux5oq" path="res://Sprites/Inimigos/Boitata/Nocaute/boitata_119.png" id="54_q1nmn"]
 [ext_resource type="Texture2D" uid="uid://r8a1fr4f1seq" path="res://Sprites/Inimigos/Boitata/TesteTeste/BOITATA_GRITA_FOGO/boitata_65.png" id="55_osj2x"]
-[ext_resource type="Texture2D" uid="uid://c7mmrv85a8fq0" path="res://Sprites/Inimigos/Boitata/Nocaute/boitata_121.png" id="55_vsrrx"]
-[ext_resource type="Texture2D" uid="uid://bvb6kowht8pcv" path="res://Sprites/Inimigos/Boitata/Nocaute/boitata_123.png" id="56_hbr26"]
 [ext_resource type="Texture2D" uid="uid://btogqmq0j0bpt" path="res://Sprites/Inimigos/Boitata/TesteTeste/BOITATA_GRITA_FOGO/boitata_67.png" id="56_umvt4"]
 [ext_resource type="Texture2D" uid="uid://13ang232fa8x" path="res://Sprites/Inimigos/Boitata/TesteTeste/BOITATA_GRITA_FOGO/boitata_69.png" id="57_tr0xw"]
 [ext_resource type="Texture2D" uid="uid://ctjlobpmaaojx" path="res://Sprites/Inimigos/Boitata/TesteTeste/BOITATA_GRITA_FOGO/boitata_71.png" id="58_y76ig"]
@@ -191,25 +189,25 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("50_v0ih0")
+"texture": ExtResource("31_iqxfe")
 }, {
 "duration": 1.0,
-"texture": ExtResource("51_i41or")
+"texture": ExtResource("32_mjx0v")
 }, {
 "duration": 1.0,
-"texture": ExtResource("52_1mvtp")
+"texture": ExtResource("33_0w5f0")
 }, {
 "duration": 1.0,
-"texture": ExtResource("53_qhv3i")
+"texture": ExtResource("34_uoyl7")
 }, {
 "duration": 1.0,
-"texture": ExtResource("54_q1nmn")
+"texture": ExtResource("35_sgy8v")
 }, {
 "duration": 1.0,
-"texture": ExtResource("55_vsrrx")
+"texture": ExtResource("36_ojojp")
 }, {
 "duration": 1.0,
-"texture": ExtResource("56_hbr26")
+"texture": ExtResource("37_b2ig3")
 }, {
 "duration": 1.0,
 "texture": null
@@ -220,31 +218,31 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("42_6hkog")
+"texture": ExtResource("23_i41or")
 }, {
 "duration": 1.0,
-"texture": ExtResource("43_fi4f6")
+"texture": ExtResource("23_i41or")
 }, {
 "duration": 1.0,
-"texture": ExtResource("44_iy7ck")
+"texture": ExtResource("38_lo6ol")
 }, {
 "duration": 1.0,
-"texture": ExtResource("45_hsjt7")
+"texture": ExtResource("39_6hkog")
 }, {
 "duration": 1.0,
-"texture": ExtResource("46_lll36")
+"texture": ExtResource("40_fi4f6")
 }, {
 "duration": 1.0,
-"texture": ExtResource("47_4tqxs")
+"texture": ExtResource("41_iy7ck")
 }, {
 "duration": 1.0,
-"texture": ExtResource("48_xvx5y")
+"texture": ExtResource("42_hsjt7")
 }, {
 "duration": 1.0,
-"texture": ExtResource("49_xq2h5")
+"texture": ExtResource("43_lll36")
 }, {
 "duration": 1.0,
-"texture": ExtResource("50_v0ih0")
+"texture": ExtResource("31_iqxfe")
 }],
 "loop": false,
 "name": &"NocauteStart",
@@ -666,7 +664,7 @@ unique_name_in_owner = true
 position = Vector2(0, -1020)
 scale = Vector2(1.5, 1.5)
 sprite_frames = SubResource("SpriteFrames_nkv4g")
-animation = &"Idle"
+animation = &"GritoEntrada"
 autoplay = "Escondido"
 frame = 1
 
