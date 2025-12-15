@@ -1,4 +1,4 @@
-[gd_scene load_steps=56 format=4 uid="uid://dfuswe0wcsy33"]
+[gd_scene load_steps=57 format=4 uid="uid://dfuswe0wcsy33"]
 
 [ext_resource type="Texture2D" uid="uid://c374cwih425cq" path="res://Sprites/Cenário/Tilemaps/Base.png" id="1_axyo6"]
 [ext_resource type="PackedScene" uid="uid://cqyub70sv0ofp" path="res://Objetos/Props/SavePoint.tscn" id="1_kqyhf"]
@@ -29,7 +29,7 @@
 [ext_resource type="Texture2D" uid="uid://dmmwsf5tpgg24" path="res://Sprites/Cenário/Mata_Atlantica/Interativos/ponte exemplo.png" id="20_34afy"]
 [ext_resource type="Texture2D" uid="uid://bykelnwq60jce" path="res://Sprites/Cenário/Mata_Atlantica/Pedras e Ruinas/pilar_templo.png" id="20_jwima"]
 [ext_resource type="Texture2D" uid="uid://c8t5do0sox8mj" path="res://Sprites/Cenário/Mata_Atlantica/Pedras e Ruinas/pedra_smusgo.png" id="20_ny35b"]
-[ext_resource type="Texture2D" uid="uid://dkvg4f1dg8j0g" path="res://Sprites/Cenário/Tilemaps/agua.png" id="21_t4v06"]
+[ext_resource type="Texture2D" uid="uid://dkvg4f1dg8j0g" path="res://Sprites/Cenário/Tilemaps/AGUA.png" id="21_t4v06"]
 [ext_resource type="Texture2D" uid="uid://jecy4bfqqqxu" path="res://Sprites/Cenário/Mata_Atlantica/Teto/Moita teste.png" id="23_0v3sa"]
 [ext_resource type="Texture2D" uid="uid://nr8tuj0enpia" path="res://Sprites/Cenário/Objetos/Savepoint/banco_save.png" id="23_l3w8l"]
 [ext_resource type="Texture2D" uid="uid://c8bkav2g3wyeu" path="res://Sprites/Cenário/Mata_Atlantica/Chao/moita2.png" id="24_l3w8l"]
@@ -189,6 +189,9 @@ texture_region_size = Vector2i(128, 128)
 tile_size = Vector2i(128, 128)
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_0f8ab")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ny35b"]
+size = Vector2(1417, 141)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jwima"]
 size = Vector2(1449, 44)
@@ -980,6 +983,13 @@ texture = ExtResource("5_cvdhq")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Cenario/Foregroundchao"]
 position = Vector2(5565.5, -26)
+
+[node name="AreaPonteVFX" type="Area2D" parent="Cenario/Foregroundchao/StaticBody2D"]
+position = Vector2(11, -33.5)
+
+[node name="Node2D" type="CollisionShape2D" parent="Cenario/Foregroundchao/StaticBody2D/AreaPonteVFX"]
+position = Vector2(-18, 0)
+shape = SubResource("RectangleShape2D_ny35b")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Cenario/Foregroundchao/StaticBody2D"]
 visibility_layer = 0
