@@ -1,4 +1,4 @@
-[gd_scene load_steps=47 format=4 uid="uid://exty4suocudj"]
+[gd_scene load_steps=43 format=4 uid="uid://exty4suocudj"]
 
 [ext_resource type="PackedScene" uid="uid://nohq28uk7lfk" path="res://Objetos/Entidades/Player.tscn" id="1_v83m2"]
 [ext_resource type="Texture2D" uid="uid://2x6q1ni8klgv" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/arvore_fundo1.png" id="2_f8u2d"]
@@ -28,8 +28,6 @@
 [ext_resource type="Texture2D" uid="uid://nr8tuj0enpia" path="res://Sprites/Cenário/Objetos/Savepoint/banco_save.png" id="12_q40bt"]
 [ext_resource type="Texture2D" uid="uid://7msrkwwo018f" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/arvore02.png" id="13_1gvhd"]
 [ext_resource type="Texture2D" uid="uid://bi1a2quip0tli" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/arvore03.png" id="14_8g6fq"]
-[ext_resource type="Script" uid="uid://bhexx6mj1xv3q" path="res://addons/phantom_camera/scripts/phantom_camera/phantom_camera_2d.gd" id="14_65x72"]
-[ext_resource type="Script" uid="uid://8umksf8e80fw" path="res://addons/phantom_camera/scripts/resources/tween_resource.gd" id="15_3han4"]
 [ext_resource type="Texture2D" uid="uid://b6yel5f58h380" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/arvore05.png" id="15_5jfld"]
 [ext_resource type="Texture2D" uid="uid://ccy8rilccs3gf" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/arvore06.png" id="16_0daqe"]
 [ext_resource type="Texture2D" uid="uid://d18vqjeq586b1" path="res://Sprites/Cenário/Mata_Atlantica/Pedras e Ruinas/pedra_musgo.png" id="19_8g6fq"]
@@ -40,9 +38,6 @@
 [ext_resource type="Texture2D" uid="uid://c8t5do0sox8mj" path="res://Sprites/Cenário/Mata_Atlantica/Pedras e Ruinas/pedra_smusgo.png" id="33_5jfld"]
 [ext_resource type="Texture2D" uid="uid://c8tb73qiqhhk8" path="res://Sprites/Cenário/Mata_Atlantica/Background/Galhos/esquerda01.png" id="37_1gvhd"]
 [ext_resource type="PackedScene" uid="uid://bei1s8te3cwko" path="res://Sprites/Cenário/Mata_Atlantica/Interativos/plataforma.tscn" id="38_8g6fq"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_6hqtm"]
-size = Vector2(11501, 2643)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mw8rc"]
 size = Vector2(63, 541)
@@ -187,16 +182,7 @@ tile_size = Vector2i(128, 128)
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_b8uhf")
 
-[sub_resource type="Resource" id="Resource_1ewfi"]
-script = ExtResource("15_3han4")
-duration = 0.0
-
 [node name="MA_1-1" type="Node2D"]
-
-[node name="LimiteCamera" type="CollisionShape2D" parent="."]
-position = Vector2(-3331.5, 35.5)
-shape = SubResource("RectangleShape2D_6hqtm")
-debug_color = Color(0, 0.6, 0.701961, 0)
 
 [node name="background" type="Node2D" parent="."]
 light_mask = 2
@@ -1292,34 +1278,25 @@ position = Vector2(-2150, 1128)
 texture = ExtResource("7_5ka01")
 flip_h = true
 
-[node name="PhantomCamera2D" type="Node2D" parent="." node_paths=PackedStringArray("follow_target")]
-top_level = true
-position = Vector2(-7882, -138.00002)
-script = ExtResource("14_65x72")
-priority = 1
-follow_mode = 5
-follow_target = NodePath("../Cururu")
-zoom = Vector2(0.8, 0.8)
-tween_resource = SubResource("Resource_1ewfi")
-follow_damping = true
-follow_damping_value = Vector2(0.12, 0.15)
-dead_zone_width = 0.06
-dead_zone_height = 0.3
-draw_limits = true
-limit_target = NodePath("../LimiteCamera")
-limit_margin = Vector4i(0, 0, 0, 50)
-metadata/_custom_type_script = "uid://bhexx6mj1xv3q"
-
 [node name="BGM_Player" type="Node" parent="."]
 script = ExtResource("27_nh2iu")
 musica = ExtResource("28_m4yll")
 volume = -0.5
 metadata/_custom_type_script = "uid://dd16yu704x6wt"
 
-[node name="MainCamera" parent="." instance=ExtResource("31_f8u2d")]
-position = Vector2(-7882, -138.00002)
+[node name="MainCamera" parent="." node_paths=PackedStringArray("target", "limite_camera") instance=ExtResource("31_f8u2d")]
+position = Vector2(-8781.001, -217.99994)
 zoom = Vector2(0.8, 0.8)
-limit_left = -9082
-limit_top = -1286
-limit_right = 2419
-limit_bottom = 1307
+limit_enabled = true
+limit_left = -9068
+limit_top = -1278
+limit_right = 2407
+limit_bottom = 1356
+target = NodePath("../Cururu")
+limite_camera = NodePath("../LimiteCam")
+
+[node name="LimiteCam" type="ReferenceRect" parent="."]
+offset_left = -9068.0
+offset_top = -1278.0
+offset_right = 2407.0
+offset_bottom = 1356.0

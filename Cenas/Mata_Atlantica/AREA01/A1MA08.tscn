@@ -1,4 +1,4 @@
-[gd_scene load_steps=50 format=4 uid="uid://dyxt6ow8l0up5"]
+[gd_scene load_steps=47 format=4 uid="uid://dyxt6ow8l0up5"]
 
 [ext_resource type="Texture2D" uid="uid://cqu5scrrmr5n5" path="res://Sprites/Cenário/Mata_Atlantica/Background/Iluminação e Fundo/FUNDOCEU.png" id="1_cpcvs"]
 [ext_resource type="Texture2D" uid="uid://k22xru6heyh3" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/arvore0.png" id="1_f0sik"]
@@ -21,10 +21,8 @@
 [ext_resource type="PackedScene" uid="uid://bei1s8te3cwko" path="res://Sprites/Cenário/Mata_Atlantica/Interativos/plataforma.tscn" id="7_6yqlo"]
 [ext_resource type="PackedScene" uid="uid://nohq28uk7lfk" path="res://Objetos/Entidades/Player.tscn" id="8_c5tg8"]
 [ext_resource type="PackedScene" uid="uid://cdhelg6sloxbj" path="res://Objetos/Props/PortaTemp.tscn" id="8_krmto"]
-[ext_resource type="Script" uid="uid://bhexx6mj1xv3q" path="res://addons/phantom_camera/scripts/phantom_camera/phantom_camera_2d.gd" id="9_8acf8"]
 [ext_resource type="Texture2D" uid="uid://d3t6c4pjsosio" path="res://Sprites/Cenário/Mata_Atlantica/Background/Mata/mato01.png" id="9_gdp7s"]
 [ext_resource type="Texture2D" uid="uid://u12dsbd5ebth" path="res://Sprites/Cenário/Mata_Atlantica/Background/Mata/mato00.png" id="9_sitov"]
-[ext_resource type="Script" uid="uid://8umksf8e80fw" path="res://addons/phantom_camera/scripts/resources/tween_resource.gd" id="10_xyfmp"]
 [ext_resource type="Texture2D" uid="uid://cw2yeg7ynw0kl" path="res://Sprites/Cenário/Mata_Atlantica/Chao/chap_externo.png" id="13_ammsr"]
 [ext_resource type="Texture2D" uid="uid://cj4rj4oj20ogb" path="res://Sprites/Cenário/Mata_Atlantica/Chao/chap_interno.png" id="15_gc8i2"]
 [ext_resource type="Texture2D" uid="uid://cjl88xeknofui" path="res://Sprites/Cenário/Mata_Atlantica/Chao/grama_reto.png" id="17_ui1e1"]
@@ -186,10 +184,6 @@ sources/0 = SubResource("TileSetAtlasSource_d743e")
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_krmto"]
 size = Vector2(70, 399)
 
-[sub_resource type="Resource" id="Resource_esn82"]
-script = ExtResource("10_xyfmp")
-duration = 0.0
-
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_2cj0u"]
 texture = ExtResource("1_rn8bk")
 texture_region_size = Vector2i(128, 128)
@@ -329,468 +323,472 @@ sources/0 = SubResource("TileSetAtlasSource_2cj0u")
 
 [node name="MA_1-8" type="Node2D"]
 
-[node name="LimiteCamera" type="CollisionShape2D" parent="."]
-position = Vector2(1898.5, -7724)
-shape = SubResource("RectangleShape2D_8acf8")
-debug_color = Color(0, 0.6, 0.69803923, 0)
+[node name="Fundo" type="Node2D" parent="."]
 
-[node name="FundoCeu" type="Sprite2D" parent="LimiteCamera"]
-position = Vector2(30.83395, 19.5)
+[node name="FundoCeu" type="Sprite2D" parent="Fundo"]
+position = Vector2(1929.334, -7704.5)
 scale = Vector2(5.9938145, 1.9619565)
 texture = ExtResource("1_cpcvs")
 
-[node name="ArvoresFundo" type="Parallax2D" parent="LimiteCamera"]
+[node name="ArvoresFundo" type="Parallax2D" parent="Fundo"]
 scroll_scale = Vector2(0.8, 1)
 
-[node name="ArvoreFundo1" type="Sprite2D" parent="LimiteCamera"]
-position = Vector2(1221.5002, -1055.0381)
+[node name="ArvoreFundo1" type="Sprite2D" parent="Fundo"]
+position = Vector2(3120.0002, -8779.038)
 scale = Vector2(1.9838715, 1.9838715)
 texture = ExtResource("2_u1r77")
 
-[node name="ArvoreFundo3" type="Sprite2D" parent="LimiteCamera"]
-position = Vector2(1267.5, 689)
-scale = Vector2(1.9838715, 1.9838715)
-texture = ExtResource("2_u1r77")
-flip_h = true
-
-[node name="ArvoreFundo4" type="Sprite2D" parent="LimiteCamera"]
-position = Vector2(-742.49976, -1055.0381)
-scale = Vector2(1.9838715, 1.9838715)
-texture = ExtResource("2_u1r77")
-
-[node name="ArvoreFundo5" type="Sprite2D" parent="LimiteCamera"]
-position = Vector2(-696.5, 689)
+[node name="ArvoreFundo3" type="Sprite2D" parent="Fundo"]
+position = Vector2(3166, -7035)
 scale = Vector2(1.9838715, 1.9838715)
 texture = ExtResource("2_u1r77")
 flip_h = true
 
-[node name="ArvoreFundo6" type="Sprite2D" parent="LimiteCamera"]
-position = Vector2(-5076.5, -1055.0381)
+[node name="ArvoreFundo4" type="Sprite2D" parent="Fundo"]
+position = Vector2(1156.0002, -8779.038)
 scale = Vector2(1.9838715, 1.9838715)
 texture = ExtResource("2_u1r77")
 
-[node name="ArvoreFundo7" type="Sprite2D" parent="LimiteCamera"]
-position = Vector2(-5030.5, 689)
+[node name="ArvoreFundo5" type="Sprite2D" parent="Fundo"]
+position = Vector2(1202, -7035)
 scale = Vector2(1.9838715, 1.9838715)
 texture = ExtResource("2_u1r77")
 flip_h = true
 
-[node name="ArvoreFundo2" type="Sprite2D" parent="LimiteCamera"]
-position = Vector2(5251.75, 263.51465)
+[node name="ArvoreFundo6" type="Sprite2D" parent="Fundo"]
+position = Vector2(-3178, -8779.038)
+scale = Vector2(1.9838715, 1.9838715)
+texture = ExtResource("2_u1r77")
+
+[node name="ArvoreFundo7" type="Sprite2D" parent="Fundo"]
+position = Vector2(-3132, -7035)
+scale = Vector2(1.9838715, 1.9838715)
+texture = ExtResource("2_u1r77")
+flip_h = true
+
+[node name="ArvoreFundo2" type="Sprite2D" parent="Fundo"]
+position = Vector2(7150.25, -7460.4854)
 scale = Vector2(2.1885645, 2.1885645)
 texture = ExtResource("3_7aepq")
 
-[node name="ArvoreS24" type="Sprite2D" parent="LimiteCamera"]
-position = Vector2(-566.5, -858)
+[node name="ArvoreS24" type="Sprite2D" parent="Fundo"]
+position = Vector2(1332, -8582)
 texture = ExtResource("2_h7icq")
 
-[node name="ArvoreS25" type="Sprite2D" parent="LimiteCamera"]
-position = Vector2(1123.5, -793)
+[node name="ArvoreS25" type="Sprite2D" parent="Fundo"]
+position = Vector2(3022, -8517)
 texture = ExtResource("2_h7icq")
 
-[node name="ArvoreS26" type="Sprite2D" parent="LimiteCamera"]
-position = Vector2(5143.5, 334)
+[node name="ArvoreS26" type="Sprite2D" parent="Fundo"]
+position = Vector2(7042, -7390)
 texture = ExtResource("2_h7icq")
 
-[node name="ArvoreS27" type="Sprite2D" parent="LimiteCamera"]
-position = Vector2(3700.5, 159)
+[node name="ArvoreS27" type="Sprite2D" parent="Fundo"]
+position = Vector2(5599, -7565)
 texture = ExtResource("2_h7icq")
 
-[node name="ArvoreS28" type="Sprite2D" parent="LimiteCamera"]
-position = Vector2(2119.5, -310)
+[node name="ArvoreS28" type="Sprite2D" parent="Fundo"]
+position = Vector2(4018, -8034)
 texture = ExtResource("2_h7icq")
 
-[node name="ArvoreS29" type="Sprite2D" parent="LimiteCamera"]
-position = Vector2(-2030.5, -635)
+[node name="ArvoreS29" type="Sprite2D" parent="Fundo"]
+position = Vector2(-132, -8359)
 texture = ExtResource("2_h7icq")
 
-[node name="ArvoreS32" type="Sprite2D" parent="LimiteCamera"]
-position = Vector2(-4317.5, -1222)
+[node name="ArvoreS32" type="Sprite2D" parent="Fundo"]
+position = Vector2(-2419, -8946)
 texture = ExtResource("2_h7icq")
 
-[node name="ArvoreS33" type="Sprite2D" parent="LimiteCamera"]
-position = Vector2(-4317.5, 989)
+[node name="ArvoreS33" type="Sprite2D" parent="Fundo"]
+position = Vector2(-2419, -6735)
 texture = ExtResource("2_h7icq")
 flip_v = true
 
-[node name="ArvoreS34" type="Sprite2D" parent="LimiteCamera"]
-position = Vector2(-2030.5, 633)
+[node name="ArvoreS34" type="Sprite2D" parent="Fundo"]
+position = Vector2(-132, -7091)
 texture = ExtResource("2_h7icq")
 
-[node name="ArvoreS35" type="Sprite2D" parent="LimiteCamera"]
-position = Vector2(1123.5, 1081)
+[node name="ArvoreS35" type="Sprite2D" parent="Fundo"]
+position = Vector2(3022, -6643)
 texture = ExtResource("2_h7icq")
 
-[node name="ArvoreS36" type="Sprite2D" parent="LimiteCamera"]
-position = Vector2(-566.5, 1092)
+[node name="ArvoreS36" type="Sprite2D" parent="Fundo"]
+position = Vector2(1332, -6632)
 texture = ExtResource("2_h7icq")
 
-[node name="Mato12" type="Sprite2D" parent="LimiteCamera"]
-position = Vector2(-5741.5005, 1271)
+[node name="Mato12" type="Sprite2D" parent="Fundo"]
+position = Vector2(-3843.0005, -6453)
 scale = Vector2(1.2365407, 1.2365407)
 texture = ExtResource("3_qyssx")
 
-[node name="Mato13" type="Sprite2D" parent="LimiteCamera"]
-position = Vector2(-2491.5005, 1163)
+[node name="Mato13" type="Sprite2D" parent="Fundo"]
+position = Vector2(-593.0005, -6561)
 scale = Vector2(1.2365407, 1.2365407)
 texture = ExtResource("3_qyssx")
 
-[node name="Mato14" type="Sprite2D" parent="LimiteCamera"]
-position = Vector2(-757.50024, 1124)
+[node name="Mato14" type="Sprite2D" parent="Fundo"]
+position = Vector2(1140.9998, -6600)
 scale = Vector2(1.2365407, 1.2365407)
 texture = ExtResource("3_qyssx")
 
-[node name="Mato15" type="Sprite2D" parent="LimiteCamera"]
-position = Vector2(2680.5, 1085)
+[node name="Mato15" type="Sprite2D" parent="Fundo"]
+position = Vector2(4579, -6639)
 scale = Vector2(1.2365407, 1.2365407)
 texture = ExtResource("3_qyssx")
 
-[node name="Mato16" type="Sprite2D" parent="LimiteCamera"]
-position = Vector2(5270.5, 641)
+[node name="Mato16" type="Sprite2D" parent="Fundo"]
+position = Vector2(7169, -7083)
 scale = Vector2(1.2365407, 1.2365407)
 texture = ExtResource("3_qyssx")
 
-[node name="FundoNevoa" type="Sprite2D" parent="LimiteCamera"]
-position = Vector2(-22.55603, 443.03397)
+[node name="FundoNevoa" type="Sprite2D" parent="Fundo"]
+position = Vector2(1875.944, -7280.966)
 scale = Vector2(6.0312896, 1.6504234)
 texture = ExtResource("3_mwnxc")
 
-[node name="ArvoreS1" type="Sprite2D" parent="LimiteCamera"]
-position = Vector2(-281.5, 603)
+[node name="ArvoreS1" type="Sprite2D" parent="Fundo"]
+position = Vector2(1617, -7121)
 texture = ExtResource("5_u1r77")
 
-[node name="ArvoreS2" type="Sprite2D" parent="LimiteCamera"]
-position = Vector2(-281.5, -1743)
+[node name="ArvoreS2" type="Sprite2D" parent="Fundo"]
+position = Vector2(1617, -9467)
 texture = ExtResource("5_u1r77")
 
-[node name="ArvoreS14" type="Sprite2D" parent="LimiteCamera"]
-position = Vector2(-2734.5, 1283.5)
+[node name="ArvoreS14" type="Sprite2D" parent="Fundo"]
+position = Vector2(-836, -6440.5)
 texture = ExtResource("5_u1r77")
 
-[node name="ArvoreS15" type="Sprite2D" parent="LimiteCamera"]
-position = Vector2(-2734.5, -1062.5)
+[node name="ArvoreS15" type="Sprite2D" parent="Fundo"]
+position = Vector2(-836, -8786.5)
 texture = ExtResource("5_u1r77")
 
-[node name="ArvoreS16" type="Sprite2D" parent="LimiteCamera"]
-position = Vector2(-3916.5, -1143)
+[node name="ArvoreS16" type="Sprite2D" parent="Fundo"]
+position = Vector2(-2018, -8867)
 texture = ExtResource("5_u1r77")
 
-[node name="ArvoreS17" type="Sprite2D" parent="LimiteCamera"]
-position = Vector2(-3916.5, 1068)
-texture = ExtResource("5_u1r77")
-flip_v = true
-
-[node name="ArvoreS22" type="Sprite2D" parent="LimiteCamera"]
-position = Vector2(-5441.5, -1143)
-texture = ExtResource("5_u1r77")
-
-[node name="ArvoreS23" type="Sprite2D" parent="LimiteCamera"]
-position = Vector2(-5441.5, 1068)
+[node name="ArvoreS17" type="Sprite2D" parent="Fundo"]
+position = Vector2(-2018, -6656)
 texture = ExtResource("5_u1r77")
 flip_v = true
 
-[node name="ArvoreS18" type="Sprite2D" parent="LimiteCamera"]
-position = Vector2(1446.5, 603)
+[node name="ArvoreS22" type="Sprite2D" parent="Fundo"]
+position = Vector2(-3543, -8867)
 texture = ExtResource("5_u1r77")
 
-[node name="ArvoreS19" type="Sprite2D" parent="LimiteCamera"]
-position = Vector2(1446.5, -935)
+[node name="ArvoreS23" type="Sprite2D" parent="Fundo"]
+position = Vector2(-3543, -6656)
+texture = ExtResource("5_u1r77")
+flip_v = true
+
+[node name="ArvoreS18" type="Sprite2D" parent="Fundo"]
+position = Vector2(3345, -7121)
 texture = ExtResource("5_u1r77")
 
-[node name="ArvoreS20" type="Sprite2D" parent="LimiteCamera"]
-position = Vector2(5797.5, -24)
+[node name="ArvoreS19" type="Sprite2D" parent="Fundo"]
+position = Vector2(3345, -8659)
 texture = ExtResource("5_u1r77")
 
-[node name="ArvoreS21" type="Sprite2D" parent="LimiteCamera"]
-position = Vector2(3532.5, 253.5)
+[node name="ArvoreS20" type="Sprite2D" parent="Fundo"]
+position = Vector2(7696, -7748)
 texture = ExtResource("5_u1r77")
 
-[node name="Mato02" type="Sprite2D" parent="LimiteCamera"]
-position = Vector2(-3645.4998, 1330)
+[node name="ArvoreS21" type="Sprite2D" parent="Fundo"]
+position = Vector2(5431, -7470.5)
+texture = ExtResource("5_u1r77")
+
+[node name="Mato02" type="Sprite2D" parent="Fundo"]
+position = Vector2(-1746.9998, -6394)
 scale = Vector2(1.1151203, 1.1151203)
 texture = ExtResource("6_7aepq")
 
-[node name="Mato03" type="Sprite2D" parent="LimiteCamera"]
-position = Vector2(-487.50024, 1258)
+[node name="Mato03" type="Sprite2D" parent="Fundo"]
+position = Vector2(1410.9998, -6466)
 scale = Vector2(1.1151203, 1.1151203)
 texture = ExtResource("6_7aepq")
 
-[node name="Mato04" type="Sprite2D" parent="LimiteCamera"]
-position = Vector2(3709.4993, 1215)
+[node name="Mato04" type="Sprite2D" parent="Fundo"]
+position = Vector2(5607.999, -6509)
 scale = Vector2(1.1151203, 1.1151203)
 texture = ExtResource("6_7aepq")
 
-[node name="Mato11" type="Sprite2D" parent="LimiteCamera"]
-position = Vector2(1092.5005, 1289)
+[node name="Mato11" type="Sprite2D" parent="Fundo"]
+position = Vector2(2991.0005, -6435)
 scale = Vector2(1.1151203, 1.1151203)
 texture = ExtResource("6_7aepq")
 
-[node name="Mato05" type="Sprite2D" parent="LimiteCamera"]
-position = Vector2(868.5005, -486.99988)
+[node name="Mato05" type="Sprite2D" parent="Fundo"]
+position = Vector2(2767.0005, -8211)
 scale = Vector2(1.1151203, 1.1151203)
 texture = ExtResource("6_7aepq")
 
-[node name="Mato06" type="Sprite2D" parent="LimiteCamera"]
-position = Vector2(-2001.4998, -342.99988)
+[node name="Mato06" type="Sprite2D" parent="Fundo"]
+position = Vector2(-102.999756, -8067)
 scale = Vector2(1.1151203, 1.1151203)
 texture = ExtResource("6_7aepq")
 
-[node name="FundoNevoa2" type="Sprite2D" parent="LimiteCamera"]
-position = Vector2(38.1344, 165.82617)
+[node name="FundoNevoa2" type="Sprite2D" parent="Fundo"]
+position = Vector2(1936.6344, -7558.174)
 scale = Vector2(5.9896207, 1.902174)
 texture = ExtResource("4_gdqac")
 
-[node name="ArvoresMeio" type="Parallax2D" parent="LimiteCamera"]
+[node name="ArvoresMeio" type="Parallax2D" parent="Fundo"]
 scroll_scale = Vector2(0.8, 1)
 
-[node name="ARV02" type="Node2D" parent="LimiteCamera/ArvoresMeio"]
+[node name="ARV02" type="Node2D" parent="Fundo/ArvoresMeio"]
 
-[node name="ArvoreS3" type="Sprite2D" parent="LimiteCamera"]
-position = Vector2(-4920.5, 639)
+[node name="ArvoreS3" type="Sprite2D" parent="Fundo"]
+position = Vector2(-3022, -7085)
 texture = ExtResource("4_r33ly")
 
-[node name="ArvoreS4" type="Sprite2D" parent="LimiteCamera"]
-position = Vector2(-4920.5, -1572)
-texture = ExtResource("4_r33ly")
-flip_v = true
-
-[node name="ArvoreS5" type="Sprite2D" parent="LimiteCamera"]
-position = Vector2(-3642.5, 639)
-texture = ExtResource("4_r33ly")
-
-[node name="ArvoreS6" type="Sprite2D" parent="LimiteCamera"]
-position = Vector2(-3642.5, -1572)
+[node name="ArvoreS4" type="Sprite2D" parent="Fundo"]
+position = Vector2(-3022, -9296)
 texture = ExtResource("4_r33ly")
 flip_v = true
 
-[node name="ArvoreS7" type="Sprite2D" parent="LimiteCamera"]
-position = Vector2(-1497.5, 639)
+[node name="ArvoreS5" type="Sprite2D" parent="Fundo"]
+position = Vector2(-1744, -7085)
 texture = ExtResource("4_r33ly")
 
-[node name="ArvoreS8" type="Sprite2D" parent="LimiteCamera"]
-position = Vector2(-1497.5, -1572)
-texture = ExtResource("4_r33ly")
-flip_v = true
-
-[node name="ArvoreS9" type="Sprite2D" parent="LimiteCamera"]
-position = Vector2(604.5, 639)
-texture = ExtResource("4_r33ly")
-
-[node name="ArvoreS10" type="Sprite2D" parent="LimiteCamera"]
-position = Vector2(604.5, -1572)
+[node name="ArvoreS6" type="Sprite2D" parent="Fundo"]
+position = Vector2(-1744, -9296)
 texture = ExtResource("4_r33ly")
 flip_v = true
 
-[node name="ArvoreS11" type="Sprite2D" parent="LimiteCamera"]
-position = Vector2(2259.5, 639)
+[node name="ArvoreS7" type="Sprite2D" parent="Fundo"]
+position = Vector2(401, -7085)
 texture = ExtResource("4_r33ly")
 
-[node name="ArvoreS12" type="Sprite2D" parent="LimiteCamera"]
-position = Vector2(2259.5, -1572)
+[node name="ArvoreS8" type="Sprite2D" parent="Fundo"]
+position = Vector2(401, -9296)
 texture = ExtResource("4_r33ly")
 flip_v = true
 
-[node name="ArvoreS13" type="Sprite2D" parent="LimiteCamera"]
-position = Vector2(4620.5, 639)
+[node name="ArvoreS9" type="Sprite2D" parent="Fundo"]
+position = Vector2(2503, -7085)
 texture = ExtResource("4_r33ly")
 
-[node name="Mato01" type="Sprite2D" parent="LimiteCamera"]
-position = Vector2(-4395.5, 1489)
+[node name="ArvoreS10" type="Sprite2D" parent="Fundo"]
+position = Vector2(2503, -9296)
+texture = ExtResource("4_r33ly")
+flip_v = true
+
+[node name="ArvoreS11" type="Sprite2D" parent="Fundo"]
+position = Vector2(4158, -7085)
+texture = ExtResource("4_r33ly")
+
+[node name="ArvoreS12" type="Sprite2D" parent="Fundo"]
+position = Vector2(4158, -9296)
+texture = ExtResource("4_r33ly")
+flip_v = true
+
+[node name="ArvoreS13" type="Sprite2D" parent="Fundo"]
+position = Vector2(6519, -7085)
+texture = ExtResource("4_r33ly")
+
+[node name="Mato01" type="Sprite2D" parent="Fundo"]
+position = Vector2(-2497, -6235)
 scale = Vector2(1.1151203, 1.1151203)
 texture = ExtResource("9_gdp7s")
 
-[node name="Mato07" type="Sprite2D" parent="LimiteCamera"]
-position = Vector2(-1572.5, -131.99988)
-scale = Vector2(1.1151203, 1.1151203)
-texture = ExtResource("9_gdp7s")
-flip_h = true
-
-[node name="Mato08" type="Sprite2D" parent="LimiteCamera"]
-position = Vector2(2820.4995, 85.00011)
+[node name="Mato07" type="Sprite2D" parent="Fundo"]
+position = Vector2(326, -7856)
 scale = Vector2(1.1151203, 1.1151203)
 texture = ExtResource("9_gdp7s")
 flip_h = true
 
-[node name="Mato09" type="Sprite2D" parent="LimiteCamera"]
-position = Vector2(2820.4995, 85.00011)
+[node name="Mato08" type="Sprite2D" parent="Fundo"]
+position = Vector2(4718.9995, -7639)
 scale = Vector2(1.1151203, 1.1151203)
 texture = ExtResource("9_gdp7s")
 flip_h = true
 
-[node name="Mato10" type="Sprite2D" parent="LimiteCamera"]
-position = Vector2(5255.499, 1108)
+[node name="Mato09" type="Sprite2D" parent="Fundo"]
+position = Vector2(4718.9995, -7639)
 scale = Vector2(1.1151203, 1.1151203)
 texture = ExtResource("9_gdp7s")
 flip_h = true
 
-[node name="ArvoresFrente" type="Node2D" parent="LimiteCamera"]
+[node name="Mato10" type="Sprite2D" parent="Fundo"]
+position = Vector2(7153.999, -6616)
+scale = Vector2(1.1151203, 1.1151203)
+texture = ExtResource("9_gdp7s")
+flip_h = true
 
-[node name="Arvore03" type="Sprite2D" parent="LimiteCamera/ArvoresFrente"]
+[node name="ArvoresFrente" type="Node2D" parent="Fundo"]
+position = Vector2(1898.5, -7724)
+
+[node name="Arvore03" type="Sprite2D" parent="Fundo/ArvoresFrente"]
 position = Vector2(-4416.5, -1274.5)
 texture = ExtResource("5_5qn7w")
 flip_v = true
 
-[node name="Arvore04" type="Sprite2D" parent="LimiteCamera/ArvoresFrente"]
+[node name="Arvore04" type="Sprite2D" parent="Fundo/ArvoresFrente"]
 position = Vector2(-5644.5, 716.5)
 texture = ExtResource("6_8ryge")
 
-[node name="Arvore06" type="Sprite2D" parent="LimiteCamera/ArvoresFrente"]
+[node name="Arvore06" type="Sprite2D" parent="Fundo/ArvoresFrente"]
 position = Vector2(-4416.5, 936.5)
 texture = ExtResource("7_4cgmv")
 
-[node name="Arvore14" type="Sprite2D" parent="LimiteCamera/ArvoresFrente"]
+[node name="Arvore14" type="Sprite2D" parent="Fundo/ArvoresFrente"]
 position = Vector2(4175.5, 5)
 texture = ExtResource("7_4cgmv")
 
-[node name="Arvore0" type="Sprite2D" parent="LimiteCamera/ArvoresFrente"]
+[node name="Arvore0" type="Sprite2D" parent="Fundo/ArvoresFrente"]
 position = Vector2(-5644.5, -1494.5)
 texture = ExtResource("1_f0sik")
 flip_v = true
 
-[node name="Arvore05" type="Sprite2D" parent="LimiteCamera/ArvoresFrente"]
+[node name="Arvore05" type="Sprite2D" parent="Fundo/ArvoresFrente"]
 position = Vector2(-1215.5, -1274.5)
 texture = ExtResource("5_5qn7w")
 flip_v = true
 
-[node name="Arvore07" type="Sprite2D" parent="LimiteCamera/ArvoresFrente"]
+[node name="Arvore07" type="Sprite2D" parent="Fundo/ArvoresFrente"]
 position = Vector2(-2243.5, 761)
 texture = ExtResource("6_8ryge")
 
-[node name="Arvore08" type="Sprite2D" parent="LimiteCamera/ArvoresFrente"]
+[node name="Arvore08" type="Sprite2D" parent="Fundo/ArvoresFrente"]
 position = Vector2(-1215.5, 936.5)
 texture = ExtResource("7_4cgmv")
 
-[node name="Arvore1" type="Sprite2D" parent="LimiteCamera/ArvoresFrente"]
+[node name="Arvore1" type="Sprite2D" parent="Fundo/ArvoresFrente"]
 position = Vector2(-2243.5, -1450)
 texture = ExtResource("1_f0sik")
 flip_v = true
 
-[node name="Arvore09" type="Sprite2D" parent="LimiteCamera/ArvoresFrente"]
+[node name="Arvore09" type="Sprite2D" parent="Fundo/ArvoresFrente"]
 position = Vector2(258.5, 761)
 texture = ExtResource("6_8ryge")
 
-[node name="Arvore12" type="Sprite2D" parent="LimiteCamera/ArvoresFrente"]
+[node name="Arvore12" type="Sprite2D" parent="Fundo/ArvoresFrente"]
 position = Vector2(1631.5, 1185)
 texture = ExtResource("6_8ryge")
 
-[node name="Arvore10" type="Sprite2D" parent="LimiteCamera/ArvoresFrente"]
+[node name="Arvore10" type="Sprite2D" parent="Fundo/ArvoresFrente"]
 position = Vector2(1631.5, -644)
 texture = ExtResource("5_5qn7w")
 flip_v = true
 
-[node name="Arvore13" type="Sprite2D" parent="LimiteCamera/ArvoresFrente"]
+[node name="Arvore13" type="Sprite2D" parent="Fundo/ArvoresFrente"]
 position = Vector2(5531.5, -37)
 texture = ExtResource("5_5qn7w")
 flip_v = true
 
-[node name="Arvore11" type="Sprite2D" parent="LimiteCamera/ArvoresFrente"]
+[node name="Arvore11" type="Sprite2D" parent="Fundo/ArvoresFrente"]
 position = Vector2(3016.5, 613)
 texture = ExtResource("6_8ryge")
 
-[node name="Arvore2" type="Sprite2D" parent="LimiteCamera/ArvoresFrente"]
+[node name="Arvore2" type="Sprite2D" parent="Fundo/ArvoresFrente"]
 position = Vector2(258.5, -1450)
 texture = ExtResource("1_f0sik")
 flip_v = true
 
-[node name="Mato00" type="Sprite2D" parent="LimiteCamera/ArvoresFrente"]
+[node name="Mato00" type="Sprite2D" parent="Fundo/ArvoresFrente"]
 position = Vector2(-5258.5, 1649)
 texture = ExtResource("9_sitov")
 
-[node name="Mato03" type="Sprite2D" parent="LimiteCamera/ArvoresFrente"]
+[node name="Mato03" type="Sprite2D" parent="Fundo/ArvoresFrente"]
 position = Vector2(-949.5, -260)
 texture = ExtResource("9_sitov")
 
-[node name="Mato01" type="Sprite2D" parent="LimiteCamera/ArvoresFrente"]
+[node name="Mato01" type="Sprite2D" parent="Fundo/ArvoresFrente"]
 position = Vector2(-1976, 1484)
 texture = ExtResource("9_sitov")
 
-[node name="Mato04" type="Sprite2D" parent="LimiteCamera/ArvoresFrente"]
+[node name="Mato04" type="Sprite2D" parent="Fundo/ArvoresFrente"]
 position = Vector2(1320.5, -123)
 texture = ExtResource("9_sitov")
 flip_h = true
 
-[node name="Mato05" type="Sprite2D" parent="LimiteCamera/ArvoresFrente"]
+[node name="Mato05" type="Sprite2D" parent="Fundo/ArvoresFrente"]
 position = Vector2(1320.5, -123)
 texture = ExtResource("9_sitov")
 flip_h = true
 
-[node name="Mato02" type="Sprite2D" parent="LimiteCamera/ArvoresFrente"]
+[node name="Mato02" type="Sprite2D" parent="Fundo/ArvoresFrente"]
 position = Vector2(2101, 1366)
 texture = ExtResource("9_sitov")
 
-[node name="Central" type="Sprite2D" parent="LimiteCamera/ArvoresFrente"]
+[node name="Central" type="Sprite2D" parent="Fundo/ArvoresFrente"]
 position = Vector2(-4403.5, 1220)
 texture = ExtResource("25_gdp7s")
 
-[node name="Composição2" type="Sprite2D" parent="LimiteCamera/ArvoresFrente"]
+[node name="Composição2" type="Sprite2D" parent="Fundo/ArvoresFrente"]
 position = Vector2(-4159.5, 265)
 scale = Vector2(0.7, 0.7)
 texture = ExtResource("6_gdqac")
 
-[node name="Composição3" type="Sprite2D" parent="LimiteCamera/ArvoresFrente"]
+[node name="Composição3" type="Sprite2D" parent="Fundo/ArvoresFrente"]
 position = Vector2(-5400.5, 980)
 scale = Vector2(0.7, 0.7)
 texture = ExtResource("6_gdqac")
 
-[node name="Esquerda01" type="Sprite2D" parent="LimiteCamera/ArvoresFrente"]
+[node name="Esquerda01" type="Sprite2D" parent="Fundo/ArvoresFrente"]
 position = Vector2(-4667.5, 497)
 scale = Vector2(0.7, 0.7)
 texture = ExtResource("26_ipsmi")
 
-[node name="PedraMusgo3" type="Sprite2D" parent="LimiteCamera/ArvoresFrente"]
+[node name="PedraMusgo3" type="Sprite2D" parent="Fundo/ArvoresFrente"]
 modulate = Color(1.3655106, 1.3655106, 1.3655106, 1)
 position = Vector2(2670.5, -127)
 scale = Vector2(0.36729452, 0.36729452)
 texture = ExtResource("21_sdpnw")
 flip_h = true
 
-[node name="PedraMusgo5" type="Sprite2D" parent="LimiteCamera/ArvoresFrente"]
+[node name="PedraMusgo5" type="Sprite2D" parent="Fundo/ArvoresFrente"]
 modulate = Color(1.3655106, 1.3655106, 1.3655106, 1)
 position = Vector2(-299.5, -1161)
 scale = Vector2(0.36729452, 0.36729452)
 texture = ExtResource("21_sdpnw")
 
-[node name="PedraMusgo" type="Sprite2D" parent="LimiteCamera/ArvoresFrente"]
+[node name="PedraMusgo" type="Sprite2D" parent="Fundo/ArvoresFrente"]
 position = Vector2(-2329.5, 1418)
 scale = Vector2(0.36729452, 0.36729452)
 texture = ExtResource("21_sdpnw")
 
-[node name="PedraMusgo2" type="Sprite2D" parent="LimiteCamera/ArvoresFrente"]
+[node name="PedraMusgo2" type="Sprite2D" parent="Fundo/ArvoresFrente"]
 position = Vector2(-4164.5, 1522)
 scale = Vector2(0.36729452, 0.36729452)
 texture = ExtResource("21_sdpnw")
 flip_h = true
 
-[node name="PedraMusgo4" type="Sprite2D" parent="LimiteCamera/ArvoresFrente"]
+[node name="PedraMusgo4" type="Sprite2D" parent="Fundo/ArvoresFrente"]
 position = Vector2(3902.5, 895)
 scale = Vector2(0.36729452, 0.36729452)
 texture = ExtResource("21_sdpnw")
 flip_h = true
 
-[node name="Moita2" type="Sprite2D" parent="LimiteCamera/ArvoresFrente"]
+[node name="Moita2" type="Sprite2D" parent="Fundo/ArvoresFrente"]
 position = Vector2(4322.5234, 1018.5)
 scale = Vector2(0.9150944, 0.9150943)
 texture = ExtResource("22_v7od0")
 
-[node name="Moita3" type="Sprite2D" parent="LimiteCamera/ArvoresFrente"]
+[node name="Moita3" type="Sprite2D" parent="Fundo/ArvoresFrente"]
 position = Vector2(90.49951, 1193)
 scale = Vector2(0.9150944, 0.9150943)
 texture = ExtResource("22_v7od0")
 
-[node name="Moita5" type="Sprite2D" parent="LimiteCamera/ArvoresFrente"]
+[node name="Moita5" type="Sprite2D" parent="Fundo/ArvoresFrente"]
 position = Vector2(-49.50049, -983.5)
 scale = Vector2(0.9150944, 0.9150943)
 texture = ExtResource("22_v7od0")
 
-[node name="Moita4" type="Sprite2D" parent="LimiteCamera/ArvoresFrente"]
+[node name="Moita4" type="Sprite2D" parent="Fundo/ArvoresFrente"]
 position = Vector2(-979.5, 1195)
 scale = Vector2(0.9150944, 0.9150943)
 texture = ExtResource("22_v7od0")
 
-[node name="Moita6" type="Sprite2D" parent="LimiteCamera/ArvoresFrente"]
+[node name="Moita6" type="Sprite2D" parent="Fundo/ArvoresFrente"]
 position = Vector2(-4500.5, 1709)
 scale = Vector2(0.9150944, 0.9150943)
 texture = ExtResource("22_v7od0")
+
+[node name="LimiteCamera" type="CollisionShape2D" parent="."]
+z_index = 3
+position = Vector2(1898.5, -7724)
+shape = SubResource("RectangleShape2D_8acf8")
+debug_color = Color(0, 0.6, 0.69803923, 0)
 
 [node name="AreaUpgrade" parent="." instance=ExtResource("2_d6eef")]
 position = Vector2(0, -7937)
@@ -2337,33 +2335,6 @@ musica = ExtResource("27_5qn7w")
 volume = -0.5
 metadata/_custom_type_script = "uid://dd16yu704x6wt"
 
-[node name="PhantomCamera2D" type="Node2D" parent="." node_paths=PackedStringArray("follow_target")]
-top_level = true
-position = Vector2(6849, -7501.0005)
-script = ExtResource("9_8acf8")
-priority = 1
-follow_mode = 5
-follow_target = NodePath("../Entidades/Cururu")
-zoom = Vector2(0.8, 0.8)
-tween_resource = SubResource("Resource_esn82")
-follow_offset = Vector2(0, -80)
-follow_damping = true
-follow_damping_value = Vector2(0.12, 0.15)
-dead_zone_width = 0.06
-dead_zone_height = 0.3
-draw_limits = true
-limit_target = NodePath("../LimiteCamera")
-limit_margin = Vector4i(0, 0, 0, 50)
-metadata/_custom_type_script = "uid://bhexx6mj1xv3q"
-
-[node name="MainCamera" parent="." instance=ExtResource("24_bx6hf")]
-position = Vector2(6849, -7501.0005)
-zoom = Vector2(0.8, 0.8)
-limit_left = -4252
-limit_top = -9674
-limit_right = 8049
-limit_bottom = -5824
-
 [node name="Node2D" type="Node2D" parent="."]
 position = Vector2(7879, -7426)
 
@@ -2436,3 +2407,19 @@ position = Vector2(-2060, 340.00195)
 rotation = 3.1415925
 scale = Vector2(0.9999998, 0.9999998)
 texture = ExtResource("17_ui1e1")
+
+[node name="MainCamera" parent="." node_paths=PackedStringArray("target", "limite_camera") instance=ExtResource("24_bx6hf")]
+position = Vector2(7554.997, -7501.0005)
+zoom = Vector2(0.8, 0.8)
+limit_left = -4252
+limit_top = -9674
+limit_right = 8049
+limit_bottom = -5824
+target = NodePath("../Entidades/Cururu")
+limite_camera = NodePath("../LimiteCam")
+
+[node name="LimiteCam" type="ReferenceRect" parent="."]
+offset_left = -4240.0
+offset_top = -9677.0
+offset_right = 8044.0
+offset_bottom = -5773.0

@@ -1,15 +1,13 @@
-[gd_scene load_steps=25 format=4 uid="uid://jgubb6mfikfv"]
+[gd_scene load_steps=16 format=4 uid="uid://jgubb6mfikfv"]
 
 [ext_resource type="Texture2D" uid="uid://c374cwih425cq" path="res://Sprites/Cenário/Tilemaps/Base.png" id="1_qgc5v"]
 [ext_resource type="PackedScene" uid="uid://nohq28uk7lfk" path="res://Objetos/Entidades/Player.tscn" id="2_01inf"]
 [ext_resource type="Texture2D" uid="uid://c3tl3oddronfh" path="res://icon.svg" id="2_qgc5v"]
 [ext_resource type="PackedScene" uid="uid://dbp8j3rqvdpna" path="res://Objetos/Funcionalidade/CompSecret.tscn" id="5_f7bsu"]
 [ext_resource type="PackedScene" uid="uid://1apfpwlqocxn" path="res://Objetos/Funcionalidade/TransicaoFase.tscn" id="6_sf0m0"]
-[ext_resource type="PackedScene" uid="uid://b0hyovdafhkyk" path="res://Objetos/Funcionalidade/TransicaoCamera.tscn" id="7_pgu41"]
+[ext_resource type="Script" uid="uid://b5hndlauwu1sk" path="res://Scripts/Componentes/TrasicaoCameraPoly.gd" id="8_17h7x"]
 [ext_resource type="PackedScene" uid="uid://cqyub70sv0ofp" path="res://Objetos/Props/SavePoint.tscn" id="8_42ak8"]
-[ext_resource type="Script" uid="uid://bhexx6mj1xv3q" path="res://addons/phantom_camera/scripts/phantom_camera/phantom_camera_2d.gd" id="9_qsxph"]
-[ext_resource type="Script" uid="uid://8umksf8e80fw" path="res://addons/phantom_camera/scripts/resources/tween_resource.gd" id="10_u4i7t"]
-[ext_resource type="Script" uid="uid://bd046eokvcnu2" path="res://addons/phantom_camera/scripts/phantom_camera_host/phantom_camera_host.gd" id="11_3u8b2"]
+[ext_resource type="PackedScene" uid="uid://u28e3eudu6ch" path="res://Objetos/Funcionalidade/MainCamera.tscn" id="9_p6tq3"]
 [ext_resource type="PackedScene" uid="uid://bjvnm0aydr0vd" path="res://Objetos/Entidades/Morcego.tscn" id="12_dvqwq"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gjd7l"]
@@ -41,30 +39,6 @@ size = Vector2(1125, 937)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5alkp"]
 size = Vector2(56, 395)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_qgc5v"]
-size = Vector2(261, 29)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_7pkwg"]
-size = Vector2(261, 29)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_kppoi"]
-size = Vector2(261, 29)
-
-[sub_resource type="Resource" id="Resource_2iwj7"]
-script = ExtResource("10_u4i7t")
-duration = 0.5
-transition = 1
-
-[sub_resource type="Resource" id="Resource_kq68w"]
-script = ExtResource("10_u4i7t")
-duration = 0.4
-
-[sub_resource type="Resource" id="Resource_qgc5v"]
-script = ExtResource("10_u4i7t")
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_d17v6"]
-size = Vector2(3406, 1243)
 
 [node name="FaseTeste2" type="Node2D"]
 
@@ -104,111 +78,74 @@ posicao = Vector2(-2500, -514)
 position = Vector2(40, -187.5)
 shape = SubResource("RectangleShape2D_5alkp")
 
-[node name="Main-Secret" parent="." node_paths=PackedStringArray("de_camera_x", "para_camera_y") instance=ExtResource("7_pgu41")]
-position = Vector2(-2925, -5)
-de_camera_x = NodePath("../Cameras/Main")
-para_camera_y = NodePath("../Cameras/SalaSecreta")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Main-Secret"]
-position = Vector2(-26.5, -119)
-rotation = -1.5707964
-shape = SubResource("RectangleShape2D_qgc5v")
-
-[node name="Main-Agua" parent="." node_paths=PackedStringArray("de_camera_x", "para_camera_y") instance=ExtResource("7_pgu41")]
-position = Vector2(-1413, 90)
-de_camera_x = NodePath("../Cameras/Main")
-para_camera_y = NodePath("../Cameras/Agua")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Main-Agua"]
-position = Vector2(-1.5, -2.5)
-shape = SubResource("RectangleShape2D_7pkwg")
-
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="Main-Agua"]
-position = Vector2(-1145, -2.5)
-shape = SubResource("RectangleShape2D_7pkwg")
-
-[node name="Agua-Main" parent="." node_paths=PackedStringArray("de_camera_x", "para_camera_y") instance=ExtResource("7_pgu41")]
-position = Vector2(-1413, -24)
-de_camera_x = NodePath("../Cameras/Agua")
-para_camera_y = NodePath("../Cameras/Main")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Agua-Main"]
-position = Vector2(-1.5, -2.5)
-shape = SubResource("RectangleShape2D_7pkwg")
-
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="Agua-Main"]
-position = Vector2(-1145, -2.5)
-shape = SubResource("RectangleShape2D_7pkwg")
-
-[node name="Secret-Main" parent="." node_paths=PackedStringArray("de_camera_x", "para_camera_y") instance=ExtResource("7_pgu41")]
-position = Vector2(-2818, -5)
-de_camera_x = NodePath("../Cameras/SalaSecreta")
-para_camera_y = NodePath("../Cameras/Main")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Secret-Main"]
-position = Vector2(-26.5, -119)
-rotation = -1.5707964
-shape = SubResource("RectangleShape2D_kppoi")
-
 [node name="SavePoint" parent="." instance=ExtResource("8_42ak8")]
 position = Vector2(-1864, 0)
 
 [node name="Cameras" type="Node2D" parent="."]
 
-[node name="Main" type="Node2D" parent="Cameras" node_paths=PackedStringArray("follow_target")]
-top_level = true
-position = Vector2(-408, -454)
-script = ExtResource("9_qsxph")
-priority = 1
-follow_mode = 2
-follow_target = NodePath("../../Player")
-tween_resource = SubResource("Resource_2iwj7")
-tween_on_load = false
-draw_limits = true
-limit_target = NodePath("../../LimiteCamera/CollisionShape2D")
-metadata/_custom_type_script = "uid://bhexx6mj1xv3q"
-
-[node name="SalaSecreta" type="Node2D" parent="Cameras"]
-position = Vector2(-3519, -370)
-script = ExtResource("9_qsxph")
-zoom = Vector2(1.2, 1.2)
-tween_resource = SubResource("Resource_kq68w")
-tween_on_load = false
-draw_limits = true
-metadata/_custom_type_script = "uid://bhexx6mj1xv3q"
-
-[node name="Agua" type="Node2D" parent="Cameras"]
-z_index = 7
-position = Vector2(-1983, 130)
-script = ExtResource("9_qsxph")
-tween_resource = SubResource("Resource_qgc5v")
-draw_limits = true
-metadata/_custom_type_script = "uid://bhexx6mj1xv3q"
-
-[node name="LimiteCamera" type="StaticBody2D" parent="."]
-collision_layer = 0
-collision_mask = 0
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="LimiteCamera"]
-position = Vector2(-1151, -535.5)
-shape = SubResource("RectangleShape2D_d17v6")
-debug_color = Color(0, 0.6, 0.701961, 0)
-
-[node name="MainCamera" type="Camera2D" parent="."]
-physics_interpolation_mode = 1
-position = Vector2(-408, -454)
-process_callback = 0
-limit_left = -2854
-limit_top = -1157
-limit_right = 552
-limit_bottom = 86
-editor_draw_limits = true
-
-[node name="PhantomCameraHost" type="Node" parent="MainCamera"]
-process_priority = 300
-process_physics_priority = 300
-script = ExtResource("11_3u8b2")
-metadata/_custom_type_script = "uid://bd046eokvcnu2"
-
 [node name="Morcego" parent="." instance=ExtResource("12_dvqwq")]
 position = Vector2(-1329, -661)
+
+[node name="Oculto->Main" type="Polygon2D" parent="." node_paths=PackedStringArray("de", "para")]
+position = Vector2(0, 1)
+polygon = PackedVector2Array(-2830, 17, -2834, -269, -2794, -269, -2799, 11)
+script = ExtResource("8_17h7x")
+de = NodePath("../CamOculto")
+para = NodePath("../MainCamera")
+metadata/_custom_type_script = "uid://b5hndlauwu1sk"
+
+[node name="Main->Oculto" type="Polygon2D" parent="." node_paths=PackedStringArray("de", "para")]
+polygon = PackedVector2Array(-2937, 16, -2933, -268, -2892, -271, -2886, 19)
+script = ExtResource("8_17h7x")
+de = NodePath("../MainCamera")
+para = NodePath("../CamOculto")
+metadata/_custom_type_script = "uid://b5hndlauwu1sk"
+
+[node name="L_Agua->Main" type="Polygon2D" parent="." node_paths=PackedStringArray("de", "para")]
+polygon = PackedVector2Array(-2691, -12, -2686, -67, -2427, -63, -2430, -12)
+script = ExtResource("8_17h7x")
+de = NodePath("../CamAgua")
+para = NodePath("../MainCamera")
+metadata/_custom_type_script = "uid://b5hndlauwu1sk"
+
+[node name="R_Agua->Main" type="Polygon2D" parent="." node_paths=PackedStringArray("de", "para")]
+polygon = PackedVector2Array(-1528, -13, -1530, -62, -1274, -63, -1274, -15)
+script = ExtResource("8_17h7x")
+de = NodePath("../CamAgua")
+para = NodePath("../MainCamera")
+metadata/_custom_type_script = "uid://b5hndlauwu1sk"
+
+[node name="Main->R_Agua" type="Polygon2D" parent="." node_paths=PackedStringArray("de", "para")]
+polygon = PackedVector2Array(-1540, 104, -1535, 48, -1267, 57, -1269, 112)
+script = ExtResource("8_17h7x")
+de = NodePath("../MainCamera")
+para = NodePath("../CamAgua")
+metadata/_custom_type_script = "uid://b5hndlauwu1sk"
+
+[node name="Main->L_Agua" type="Polygon2D" parent="." node_paths=PackedStringArray("de", "para")]
+polygon = PackedVector2Array(-2696, 80, -2689, 27, -2433, 38, -2432, 86)
+script = ExtResource("8_17h7x")
+de = NodePath("../MainCamera")
+para = NodePath("../CamAgua")
+metadata/_custom_type_script = "uid://b5hndlauwu1sk"
+
+[node name="LimiteCam" type="ReferenceRect" parent="."]
+offset_left = -2882.0
+offset_top = -991.0
+offset_right = 1152.0
+offset_bottom = 80.0
+
+[node name="CamOculto" type="Camera2D" parent="."]
+position = Vector2(-3511, -397)
+enabled = false
+zoom = Vector2(1.255, 1.255)
+
+[node name="CamAgua" type="Camera2D" parent="."]
+position = Vector2(-1990, 88)
+enabled = false
+zoom = Vector2(1.11, 1.11)
+
+[node name="MainCamera" parent="." node_paths=PackedStringArray("target", "limite_camera") instance=ExtResource("9_p6tq3")]
+position = Vector2(0, -79.99995)
+target = NodePath("../Player")
+limite_camera = NodePath("../LimiteCam")

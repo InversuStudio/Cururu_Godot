@@ -1,10 +1,8 @@
-[gd_scene load_steps=45 format=4 uid="uid://dvg6r2gfvcnfb"]
+[gd_scene load_steps=41 format=4 uid="uid://dvg6r2gfvcnfb"]
 
 [ext_resource type="Texture2D" uid="uid://cqu5scrrmr5n5" path="res://Sprites/Cenário/Mata_Atlantica/Background/Iluminação e Fundo/FUNDOCEU.png" id="1_2x3ls"]
-[ext_resource type="Script" uid="uid://bhexx6mj1xv3q" path="res://addons/phantom_camera/scripts/phantom_camera/phantom_camera_2d.gd" id="1_3mtbg"]
 [ext_resource type="Texture2D" uid="uid://c374cwih425cq" path="res://Sprites/Cenário/Tilemaps/Base.png" id="1_b1cal"]
 [ext_resource type="PackedScene" uid="uid://nohq28uk7lfk" path="res://Objetos/Entidades/Player.tscn" id="2_oho8c"]
-[ext_resource type="Script" uid="uid://8umksf8e80fw" path="res://addons/phantom_camera/scripts/resources/tween_resource.gd" id="2_qvog4"]
 [ext_resource type="Texture2D" uid="uid://dog2ml3xbyho2" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/arvore_S1.png" id="2_ygqbx"]
 [ext_resource type="Texture2D" uid="uid://btb3tlxsmx38i" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/arvore_fundo2.png" id="3_o4mwd"]
 [ext_resource type="Texture2D" uid="uid://2x6q1ni8klgv" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/arvore_fundo1.png" id="4_dw2fs"]
@@ -39,9 +37,6 @@
 [ext_resource type="Texture2D" uid="uid://bg3yumuc4n238" path="res://Sprites/Cenário/Objetos/Upgrade/TOTEM.png" id="29_yk4cc"]
 [ext_resource type="PackedScene" uid="uid://dghxpclnjwg5k" path="res://Objetos/Props/PecaCoracao.tscn" id="30_dug7p"]
 [ext_resource type="PackedScene" uid="uid://u28e3eudu6ch" path="res://Objetos/Funcionalidade/MainCamera.tscn" id="30_yk4cc"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_g1p7l"]
-size = Vector2(7029, 5113)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_oqv1c"]
 texture = ExtResource("1_b1cal")
@@ -183,16 +178,7 @@ sources/0 = SubResource("TileSetAtlasSource_oqv1c")
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_uw7k4"]
 size = Vector2(70, 399)
 
-[sub_resource type="Resource" id="Resource_hx3nd"]
-script = ExtResource("2_qvog4")
-duration = 0.0
-
 [node name="MA_2-5" type="Node2D"]
-
-[node name="LimiteCamera" type="CollisionShape2D" parent="."]
-position = Vector2(4183.5, -2656.5)
-shape = SubResource("RectangleShape2D_g1p7l")
-debug_color = Color(0, 0.6, 0.69803923, 0)
 
 [node name="FundoCeu" type="Sprite2D" parent="."]
 light_mask = 2
@@ -4082,31 +4068,22 @@ musica = ExtResource("26_patjh")
 volume = -0.5
 metadata/_custom_type_script = "uid://dd16yu704x6wt"
 
-[node name="PhantomCamera2D" type="Node2D" parent="." node_paths=PackedStringArray("follow_target")]
-top_level = true
-position = Vector2(6498, -825)
-script = ExtResource("1_3mtbg")
-priority = 1
-follow_mode = 5
-follow_target = NodePath("../Entidades/Cururu")
-zoom = Vector2(0.8, 0.8)
-tween_resource = SubResource("Resource_hx3nd")
-follow_damping = true
-follow_damping_value = Vector2(0.12, 0.15)
-dead_zone_width = 0.06
-dead_zone_height = 0.3
-draw_limits = true
-limit_target = NodePath("../LimiteCamera")
-limit_margin = Vector4i(0, 0, 0, 50)
-metadata/_custom_type_script = "uid://bhexx6mj1xv3q"
+[node name="LimiteCam" type="ReferenceRect" parent="."]
+offset_left = 674.0
+offset_top = -5419.0
+offset_right = 7697.0
+offset_bottom = -95.0
 
-[node name="MainCamera" parent="." instance=ExtResource("30_yk4cc")]
-position = Vector2(6498, -825)
+[node name="MainCamera" parent="." node_paths=PackedStringArray("target", "limite_camera") instance=ExtResource("30_yk4cc")]
+position = Vector2(7348.9995, -433.99976)
 zoom = Vector2(0.8, 0.8)
-limit_left = 669
-limit_top = -5213
-limit_right = 7698
-limit_bottom = -150
+limit_enabled = true
+limit_left = 674
+limit_top = -5419
+limit_right = 7697
+limit_bottom = -95
+target = NodePath("../Entidades/Cururu")
+limite_camera = NodePath("../LimiteCam")
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
 color = Color(0, 0, 0, 1)

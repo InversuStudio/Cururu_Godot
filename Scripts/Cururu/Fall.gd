@@ -88,9 +88,6 @@ func _on_anim_animation_finished(anim_name: StringName) -> void:
 	if anim_name == "Fall_Start":
 		%Anim.play("Fall_Loop")
 
-
-
 func Exit() -> void:
 	parent.is_coyote = false
-	
 	

@@ -16,7 +16,6 @@ func _ready() -> void:
 func _physics_process(_delta: float) -> void:
 	vel = vel.move_toward(Vector2.ZERO, 0.1)
 	move_and_collide(vel)
-	print(global_position)
 
 func _on_body_entered(body: Node2D) -> void:
 	if body.is_in_group("Player"):

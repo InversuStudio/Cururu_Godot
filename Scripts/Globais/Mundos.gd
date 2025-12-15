@@ -65,7 +65,7 @@ var areas_secretas: Array[String] = []
 
 # Registra fase atual
 var fase_atual : NomeFase
-@onready var player:CharacterBody2D = get_tree().get_first_node_in_group("Player")
+@onready var player:Player = get_tree().get_first_node_in_group("Player")
 
 signal fase_mudou
 

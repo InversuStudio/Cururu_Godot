@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://bjvnm0aydr0vd"]
+[gd_scene load_steps=16 format=3 uid="uid://bjvnm0aydr0vd"]
 
 [ext_resource type="Script" uid="uid://byqf6bdnsd3m8" path="res://Scripts/Inimigos/Morcego.gd" id="1_j5mvf"]
 [ext_resource type="Texture2D" uid="uid://bicsa1wljjplt" path="res://Sprites/Inimigos/Morcego/iminigo_voador_FRAME01.png" id="2_87fsy"]
@@ -40,9 +40,6 @@ radius = 664.782
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_87fsy"]
 radius = 136.6731
-
-[sub_resource type="Resource" id="Resource_87fsy"]
-metadata/__load_path__ = "res://Audio/SFX/INIMIGOS/HIT_INIMIGO.wav"
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ujy2f"]
 radius = 120.196754
@@ -120,7 +117,6 @@ position = Vector2(0.22733307, 27.500069)
 scale = Vector2(0.6818189, 0.6818189)
 collision_layer = 16
 ignore = NodePath("../HurtBox")
-sfx = SubResource("Resource_87fsy")
 parent = NodePath("..")
 
 [node name="AreaColisaoHitBox" type="CollisionShape2D" parent="HitBox"]

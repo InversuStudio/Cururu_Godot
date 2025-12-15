@@ -1,12 +1,10 @@
-[gd_scene load_steps=43 format=4 uid="uid://nnn0vb4dfupv"]
+[gd_scene load_steps=39 format=4 uid="uid://nnn0vb4dfupv"]
 
 [ext_resource type="Texture2D" uid="uid://cqu5scrrmr5n5" path="res://Sprites/Cenário/Mata_Atlantica/Background/Iluminação e Fundo/FUNDOCEU.png" id="1_11k6r"]
 [ext_resource type="Texture2D" uid="uid://c374cwih425cq" path="res://Sprites/Cenário/Tilemaps/Base.png" id="1_b5521"]
-[ext_resource type="Script" uid="uid://bhexx6mj1xv3q" path="res://addons/phantom_camera/scripts/phantom_camera/phantom_camera_2d.gd" id="2_1nva7"]
 [ext_resource type="Texture2D" uid="uid://dog2ml3xbyho2" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/arvore_S1.png" id="2_lwypx"]
 [ext_resource type="PackedScene" uid="uid://1apfpwlqocxn" path="res://Objetos/Funcionalidade/TransicaoFase.tscn" id="2_n78ha"]
 [ext_resource type="Texture2D" uid="uid://ckqo2bxr2g0ii" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/arvore_S2.png" id="2_qowst"]
-[ext_resource type="Script" uid="uid://8umksf8e80fw" path="res://addons/phantom_camera/scripts/resources/tween_resource.gd" id="3_3l4px"]
 [ext_resource type="Texture2D" uid="uid://dphhlbwaebgco" path="res://Sprites/Cenário/Mata_Atlantica/Background/Galhos/composição.png" id="3_is666"]
 [ext_resource type="Texture2D" uid="uid://dv0q1amqoq168" path="res://Sprites/Cenário/Mata_Atlantica/Background/Mata/mato03.png" id="3_w7ifw"]
 [ext_resource type="Texture2D" uid="uid://cac7su7slu38j" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/arvore04.png" id="4_k72yp"]
@@ -37,9 +35,6 @@
 [ext_resource type="PackedScene" uid="uid://bjvnm0aydr0vd" path="res://Objetos/Entidades/Morcego.tscn" id="27_k72yp"]
 [ext_resource type="Script" uid="uid://dd16yu704x6wt" path="res://Scripts/Componentes/BGM_Player.gd" id="27_pp8n3"]
 [ext_resource type="AudioStream" uid="uid://c7qftchbhu6xc" path="res://Audio/SFX/AMBIENTE/Musica_Jogo.mp3" id="28_a7eud"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_v8nhw"]
-size = Vector2(3172, 4915)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_n78ha"]
 texture = ExtResource("1_b5521")
@@ -181,19 +176,10 @@ sources/0 = SubResource("TileSetAtlasSource_n78ha")
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_k0m8e"]
 size = Vector2(70, 486)
 
-[sub_resource type="Resource" id="Resource_v7vqr"]
-script = ExtResource("3_3l4px")
-duration = 0.0
-
 [node name="MA_1-7" type="Node2D"]
 
 [node name="Node2D" type="Node2D" parent="."]
 position = Vector2(673, -3737)
-
-[node name="LimiteCamera" type="CollisionShape2D" parent="."]
-position = Vector2(2107, -2517.5)
-shape = SubResource("RectangleShape2D_v8nhw")
-debug_color = Color(0, 0.6, 0.69803923, 0)
 
 [node name="FundoCeu" type="Sprite2D" parent="."]
 position = Vector2(2114.501, -2320.9998)
@@ -1032,28 +1018,18 @@ musica = ExtResource("28_a7eud")
 volume = -0.5
 metadata/_custom_type_script = "uid://dd16yu704x6wt"
 
-[node name="PhantomCamera2D" type="Node2D" parent="." node_paths=PackedStringArray("follow_target")]
-top_level = true
-position = Vector2(1721, -785)
-script = ExtResource("2_1nva7")
-priority = 1
-follow_mode = 5
-follow_target = NodePath("../Entidades/Cururu")
-zoom = Vector2(0.8, 0.8)
-tween_resource = SubResource("Resource_v7vqr")
-follow_damping = true
-follow_damping_value = Vector2(0.12, 0.15)
-dead_zone_width = 0.06
-dead_zone_height = 0.3
-draw_limits = true
-limit_target = NodePath("../LimiteCamera")
-limit_margin = Vector4i(0, 0, 0, 50)
-metadata/_custom_type_script = "uid://bhexx6mj1xv3q"
-
-[node name="MainCamera" parent="." instance=ExtResource("26_v7vqr")]
-position = Vector2(1721, -785)
+[node name="MainCamera" parent="." node_paths=PackedStringArray("target", "limite_camera") instance=ExtResource("26_v7vqr")]
+position = Vector2(980.0004, -471.00018)
 zoom = Vector2(0.8, 0.8)
 limit_left = 521
 limit_top = -4975
 limit_right = 3693
 limit_bottom = -110
+target = NodePath("../Entidades/Cururu")
+limite_camera = NodePath("../LimiteCam")
+
+[node name="LimiteCam" type="ReferenceRect" parent="."]
+offset_left = 518.0
+offset_top = -4977.0
+offset_right = 3688.0
+offset_bottom = -66.0

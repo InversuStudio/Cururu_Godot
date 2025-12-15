@@ -1,11 +1,9 @@
-[gd_scene load_steps=19 format=4 uid="uid://b5am6yc3iwy8e"]
+[gd_scene load_steps=15 format=4 uid="uid://b5am6yc3iwy8e"]
 
 [ext_resource type="Texture2D" uid="uid://c374cwih425cq" path="res://Sprites/Cenário/Tilemaps/Base.png" id="1_7yx4j"]
 [ext_resource type="PackedScene" uid="uid://nohq28uk7lfk" path="res://Objetos/Entidades/Player.tscn" id="2_2tgjk"]
 [ext_resource type="PackedScene" uid="uid://dgfcdht1gifdp" path="res://Objetos/Props/Espinhos.tscn" id="2_3f14n"]
 [ext_resource type="PackedScene" uid="uid://bnm668fws2641" path="res://Objetos/Props/Armadilha.tscn" id="2_4scg7"]
-[ext_resource type="Script" uid="uid://bhexx6mj1xv3q" path="res://addons/phantom_camera/scripts/phantom_camera/phantom_camera_2d.gd" id="5_jgbtl"]
-[ext_resource type="Script" uid="uid://8umksf8e80fw" path="res://addons/phantom_camera/scripts/resources/tween_resource.gd" id="6_g87lo"]
 [ext_resource type="PackedScene" uid="uid://bei1s8te3cwko" path="res://Sprites/Cenário/Mata_Atlantica/Interativos/plataforma.tscn" id="8_g87lo"]
 [ext_resource type="Texture2D" uid="uid://bg3yumuc4n238" path="res://Sprites/Cenário/Objetos/Upgrade/TOTEM.png" id="10_2b1x1"]
 [ext_resource type="Texture2D" uid="uid://cjl88xeknofui" path="res://Sprites/Cenário/Mata_Atlantica/Chao/grama_reto.png" id="12_2b1x1"]
@@ -13,9 +11,6 @@
 [ext_resource type="Texture2D" uid="uid://cw2yeg7ynw0kl" path="res://Sprites/Cenário/Mata_Atlantica/Chao/chap_externo.png" id="13_11u8x"]
 [ext_resource type="PackedScene" uid="uid://dghxpclnjwg5k" path="res://Objetos/Props/PecaCoracao.tscn" id="14_11u8x"]
 [ext_resource type="Texture2D" uid="uid://cj4rj4oj20ogb" path="res://Sprites/Cenário/Mata_Atlantica/Chao/chap_interno.png" id="14_tkmkl"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_jgbtl"]
-size = Vector2(11844, 1870)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ogowb"]
 texture = ExtResource("1_7yx4j")
@@ -157,16 +152,7 @@ sources/0 = SubResource("TileSetAtlasSource_ogowb")
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g87lo"]
 size = Vector2(113.5, 1032)
 
-[sub_resource type="Resource" id="Resource_4scg7"]
-script = ExtResource("6_g87lo")
-duration = 0.0
-
 [node name="MA_2-6" type="Node2D"]
-
-[node name="LimiteCamera" type="CollisionShape2D" parent="."]
-position = Vector2(6008, -937)
-shape = SubResource("RectangleShape2D_jgbtl")
-debug_color = Color(0, 0.6, 0.69803923, 0)
 
 [node name="Armadilha2" parent="." node_paths=PackedStringArray("spawn_points") instance=ExtResource("2_3f14n")]
 position = Vector2(2563, -171)
@@ -505,30 +491,18 @@ flip_v = true
 position = Vector2(9466, -1113)
 nome_id = "MA_2_6"
 
-[node name="PhantomCamera2D2" type="Node2D" parent="." node_paths=PackedStringArray("follow_target")]
-top_level = true
-position = Vector2(1336, -727)
-script = ExtResource("5_jgbtl")
-priority = 1
-follow_mode = 5
-follow_target = NodePath("../Player")
-zoom = Vector2(0.8, 0.8)
-tween_resource = SubResource("Resource_4scg7")
-follow_offset = Vector2(0, 45)
-follow_damping = true
-follow_damping_value = Vector2(0.1, 0.2)
-rotation_damping_value = 0.0
-dead_zone_width = 0.06
-dead_zone_height = 0.3
-draw_limits = true
-limit_target = NodePath("../LimiteCamera")
-limit_margin = Vector4i(50, 50, 50, 50)
-metadata/_custom_type_script = "uid://bhexx6mj1xv3q"
-
-[node name="MainCamera" parent="." instance=ExtResource("13_4scg7")]
-position = Vector2(1336, -727)
+[node name="MainCamera" parent="." node_paths=PackedStringArray("target", "limite_camera") instance=ExtResource("13_4scg7")]
+position = Vector2(404.0001, -334.0002)
 zoom = Vector2(0.8, 0.8)
 limit_left = 136
 limit_top = -1822
 limit_right = 11880
 limit_bottom = -52
+target = NodePath("../Player")
+limite_camera = NodePath("../LimiteCam")
+
+[node name="LimiteCam" type="ReferenceRect" parent="."]
+offset_left = 84.0
+offset_top = -1870.0
+offset_right = 11820.0
+offset_bottom = -34.0

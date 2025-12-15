@@ -85,6 +85,7 @@ debug_color = Color(0.99999, 0, 0.0935918, 0.42)
 unique_name_in_owner = true
 collision_layer = 16
 ignore = NodePath("../HurtBox")
+camera_shake = 50.0
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="HitBox"]
 position = Vector2(-13.235305, -54.411804)

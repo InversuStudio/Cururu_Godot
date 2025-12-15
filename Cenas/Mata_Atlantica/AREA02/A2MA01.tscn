@@ -1,4 +1,4 @@
-[gd_scene load_steps=53 format=4 uid="uid://ba8igbg8v441c"]
+[gd_scene load_steps=49 format=4 uid="uid://ba8igbg8v441c"]
 
 [ext_resource type="Texture2D" uid="uid://cqu5scrrmr5n5" path="res://Sprites/Cenário/Mata_Atlantica/Background/Iluminação e Fundo/FUNDOCEU.png" id="1_hnubh"]
 [ext_resource type="Texture2D" uid="uid://c374cwih425cq" path="res://Sprites/Cenário/Tilemaps/Base.png" id="1_umcgc"]
@@ -9,10 +9,8 @@
 [ext_resource type="Texture2D" uid="uid://dv0q1amqoq168" path="res://Sprites/Cenário/Mata_Atlantica/Background/Mata/mato03.png" id="4_4xj1r"]
 [ext_resource type="PackedScene" uid="uid://1apfpwlqocxn" path="res://Objetos/Funcionalidade/TransicaoFase.tscn" id="4_aepc8"]
 [ext_resource type="Texture2D" uid="uid://dmh8fodubelsr" path="res://Sprites/Cenário/Mata_Atlantica/Background/Iluminação e Fundo/FUNDONEVOA.png" id="4_csesn"]
-[ext_resource type="Script" uid="uid://bhexx6mj1xv3q" path="res://addons/phantom_camera/scripts/phantom_camera/phantom_camera_2d.gd" id="5_76oxg"]
 [ext_resource type="Texture2D" uid="uid://dphhlbwaebgco" path="res://Sprites/Cenário/Mata_Atlantica/Background/Galhos/composição.png" id="5_csesn"]
 [ext_resource type="Texture2D" uid="uid://c8bkav2g3wyeu" path="res://Sprites/Cenário/Mata_Atlantica/Chao/moita2.png" id="5_k7ugy"]
-[ext_resource type="Script" uid="uid://8umksf8e80fw" path="res://addons/phantom_camera/scripts/resources/tween_resource.gd" id="6_1ih26"]
 [ext_resource type="Texture2D" uid="uid://rbtvfm4m7ft" path="res://Sprites/VFX/Iluminação/SOMBRA2.png" id="6_hl7mq"]
 [ext_resource type="Texture2D" uid="uid://b6yel5f58h380" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/arvore05.png" id="6_odcdb"]
 [ext_resource type="Texture2D" uid="uid://dru600hg8oaty" path="res://Sprites/Cenário/Mata_Atlantica/Background/Mata/mato02.png" id="7_1bo8s"]
@@ -43,9 +41,6 @@
 [ext_resource type="Texture2D" uid="uid://c3tl3oddronfh" path="res://icon.svg" id="31_1bo8s"]
 [ext_resource type="Texture2D" uid="uid://ccql65wj55kqf" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/arvore_s3.png" id="36_otcsn"]
 [ext_resource type="Texture2D" uid="uid://ckqo2bxr2g0ii" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/arvore_S2.png" id="37_0ual7"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_52kex"]
-size = Vector2(7705, 3468)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_mbqr8"]
 texture = ExtResource("31_1bo8s")
@@ -336,16 +331,7 @@ sources/0 = SubResource("TileSetAtlasSource_75oum")
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_x3mff"]
 size = Vector2(734.375, 94.31251)
 
-[sub_resource type="Resource" id="Resource_ctjy6"]
-script = ExtResource("6_1ih26")
-duration = 0.0
-
 [node name="MA_2-1" type="Node2D"]
-
-[node name="LimiteCamera" type="CollisionShape2D" parent="."]
-position = Vector2(-496.5, -162)
-shape = SubResource("RectangleShape2D_52kex")
-debug_color = Color(0, 0.6, 0.69803923, 0)
 
 [node name="FundoCeu" type="Sprite2D" parent="."]
 light_mask = 2
@@ -2013,31 +1999,21 @@ musica = ExtResource("28_75oum")
 volume = -0.5
 metadata/_custom_type_script = "uid://dd16yu704x6wt"
 
-[node name="PhantomCamera2D" type="Node2D" parent="." node_paths=PackedStringArray("follow_target")]
-top_level = true
-position = Vector2(512.0005, 847)
-script = ExtResource("5_76oxg")
-priority = 1
-follow_mode = 5
-follow_target = NodePath("../Entidades/Cururu")
-zoom = Vector2(0.8, 0.8)
-tween_resource = SubResource("Resource_ctjy6")
-follow_damping = true
-follow_damping_value = Vector2(0.12, 0.15)
-dead_zone_width = 0.06
-dead_zone_height = 0.3
-draw_limits = true
-limit_target = NodePath("../LimiteCamera")
-limit_margin = Vector4i(0, 0, 0, 50)
-metadata/_custom_type_script = "uid://bhexx6mj1xv3q"
+[node name="DropAmVelAtaque" parent="." instance=ExtResource("30_75oum")]
+position = Vector2(-1936, 904)
 
-[node name="MainCamera" parent="." instance=ExtResource("27_ctjy6")]
-position = Vector2(512.0005, 847)
+[node name="MainCamera" parent="." node_paths=PackedStringArray("target", "limite_camera") instance=ExtResource("27_ctjy6")]
+position = Vector2(512.0005, 1313.9993)
 zoom = Vector2(0.8, 0.8)
 limit_left = -4349
 limit_top = -1896
 limit_right = 3356
 limit_bottom = 1522
+target = NodePath("../Entidades/Cururu")
+limite_camera = NodePath("../LimiteCam")
 
-[node name="DropAmVelAtaque" parent="." instance=ExtResource("30_75oum")]
-position = Vector2(-1936, 904)
+[node name="LimiteCam" type="ReferenceRect" parent="."]
+offset_left = -4343.0
+offset_top = -1889.0
+offset_right = 3353.0
+offset_bottom = 1589.0

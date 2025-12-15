@@ -1,11 +1,9 @@
-[gd_scene load_steps=60 format=4 uid="uid://djvuyfef1wujd"]
+[gd_scene load_steps=56 format=4 uid="uid://djvuyfef1wujd"]
 
 [ext_resource type="PackedScene" uid="uid://1apfpwlqocxn" path="res://Objetos/Funcionalidade/TransicaoFase.tscn" id="1_2ybff"]
-[ext_resource type="Script" uid="uid://bhexx6mj1xv3q" path="res://addons/phantom_camera/scripts/phantom_camera/phantom_camera_2d.gd" id="1_g5wd4"]
 [ext_resource type="PackedScene" uid="uid://bnm668fws2641" path="res://Objetos/Props/Armadilha.tscn" id="1_ja78a"]
 [ext_resource type="Texture2D" uid="uid://c374cwih425cq" path="res://Sprites/Cenário/Tilemaps/Base.png" id="1_k4aup"]
 [ext_resource type="Texture2D" uid="uid://ckqo2bxr2g0ii" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/arvore_S2.png" id="2_mjou1"]
-[ext_resource type="Script" uid="uid://8umksf8e80fw" path="res://addons/phantom_camera/scripts/resources/tween_resource.gd" id="2_yt3qm"]
 [ext_resource type="PackedScene" uid="uid://nohq28uk7lfk" path="res://Objetos/Entidades/Player.tscn" id="3_dr2ls"]
 [ext_resource type="Texture2D" uid="uid://cqu5scrrmr5n5" path="res://Sprites/Cenário/Mata_Atlantica/Background/Iluminação e Fundo/FUNDOCEU.png" id="3_wtee6"]
 [ext_resource type="Texture2D" uid="uid://dog2ml3xbyho2" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/arvore_S1.png" id="4_yf878"]
@@ -51,9 +49,6 @@
 [ext_resource type="Texture2D" uid="uid://cac7su7slu38j" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/arvore04.png" id="39_s2l6g"]
 [ext_resource type="Texture2D" uid="uid://b6yel5f58h380" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/arvore05.png" id="40_x4lte"]
 [ext_resource type="Texture2D" uid="uid://c8tb73qiqhhk8" path="res://Sprites/Cenário/Mata_Atlantica/Background/Galhos/esquerda01.png" id="42_d626j"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_0syxa"]
-size = Vector2(3707, 6665)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0lx4q"]
 size = Vector2(754.5305, 922.58105)
@@ -204,15 +199,7 @@ size = Vector2(91, 453)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_n8ivf"]
 size = Vector2(70, 486)
 
-[sub_resource type="Resource" id="Resource_t8cqu"]
-script = ExtResource("2_yt3qm")
-duration = 0.0
-
 [node name="MA_1-2" type="Node2D"]
-
-[node name="LimiteCamera" type="CollisionShape2D" parent="."]
-position = Vector2(3654.5, -2667.5)
-shape = SubResource("RectangleShape2D_0syxa")
 
 [node name="background" type="Node2D" parent="."]
 position = Vector2(3653.5, -2667.5)
@@ -2016,28 +2003,19 @@ multi_drop = true
 [node name="Node2D" type="Node2D" parent="."]
 position = Vector2(1951, -4737)
 
-[node name="MainCamera" parent="." instance=ExtResource("10_3ocar")]
-position = Vector2(3001, -60)
+[node name="MainCamera" parent="." node_paths=PackedStringArray("target", "limite_camera") instance=ExtResource("10_3ocar")]
+position = Vector2(2064, 421.00012)
 zoom = Vector2(0.8, 0.8)
+limit_enabled = true
 limit_left = 1801
 limit_top = -6000
-limit_right = 5508
-limit_bottom = 615
+limit_right = 5507
+limit_bottom = 662
+target = NodePath("../Entidades/Cururu")
+limite_camera = NodePath("../LimiteCam")
 
-[node name="PhantomCamera2D2" type="Node2D" parent="." node_paths=PackedStringArray("follow_target")]
-top_level = true
-position = Vector2(3001, -60)
-script = ExtResource("1_g5wd4")
-priority = 1
-follow_mode = 5
-follow_target = NodePath("../Entidades/Cururu")
-zoom = Vector2(0.8, 0.8)
-tween_resource = SubResource("Resource_t8cqu")
-follow_damping = true
-follow_damping_value = Vector2(0.12, 0.15)
-dead_zone_width = 0.06
-dead_zone_height = 0.3
-draw_limits = true
-limit_target = NodePath("../LimiteCamera")
-limit_margin = Vector4i(0, 0, 0, 50)
-metadata/_custom_type_script = "uid://bhexx6mj1xv3q"
+[node name="LimiteCam" type="ReferenceRect" parent="."]
+offset_left = 1801.0
+offset_top = -6000.0
+offset_right = 5507.0
+offset_bottom = 662.0

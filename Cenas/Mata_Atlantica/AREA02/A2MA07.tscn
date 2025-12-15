@@ -1,11 +1,9 @@
-[gd_scene load_steps=61 format=4 uid="uid://c4rls1pfwei2e"]
+[gd_scene load_steps=57 format=4 uid="uid://c4rls1pfwei2e"]
 
 [ext_resource type="Texture2D" uid="uid://c374cwih425cq" path="res://Sprites/Cenário/Tilemaps/Base.png" id="1_uhas7"]
 [ext_resource type="Texture2D" uid="uid://cqu5scrrmr5n5" path="res://Sprites/Cenário/Mata_Atlantica/Background/Iluminação e Fundo/FUNDOCEU.png" id="1_xyjrg"]
-[ext_resource type="Script" uid="uid://bhexx6mj1xv3q" path="res://addons/phantom_camera/scripts/phantom_camera/phantom_camera_2d.gd" id="2_3i4df"]
 [ext_resource type="Texture2D" uid="uid://dog2ml3xbyho2" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/arvore_S1.png" id="2_eoclm"]
 [ext_resource type="Texture2D" uid="uid://2x6q1ni8klgv" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/arvore_fundo1.png" id="2_giq4m"]
-[ext_resource type="Script" uid="uid://8umksf8e80fw" path="res://addons/phantom_camera/scripts/resources/tween_resource.gd" id="3_8qltl"]
 [ext_resource type="Texture2D" uid="uid://dmh8fodubelsr" path="res://Sprites/Cenário/Mata_Atlantica/Background/Iluminação e Fundo/FUNDONEVOA.png" id="3_eoclm"]
 [ext_resource type="Texture2D" uid="uid://btb3tlxsmx38i" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/arvore_fundo2.png" id="3_n82pn"]
 [ext_resource type="Texture2D" uid="uid://ctar30vsktrrb" path="res://Sprites/Cenário/Mata_Atlantica/Background/Iluminação e Fundo/FUNDONEVOA2.png" id="4_gnpt0"]
@@ -46,9 +44,6 @@
 [ext_resource type="Texture2D" uid="uid://bqihusvyjd72t" path="res://Sprites/Inimigos/Boitata/Animacoes/Rabo/boitata_165.png" id="42_l2epp"]
 [ext_resource type="Texture2D" uid="uid://1b3wpku343w0" path="res://Sprites/Inimigos/Boitata/Animacoes/Rabo/boitata_167.png" id="43_h52o2"]
 [ext_resource type="Texture2D" uid="uid://17gdvg1dt1yf" path="res://Sprites/Inimigos/Boitata/Animacoes/Rabo/boitata_169.png" id="44_rm6pu"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_uhas7"]
-size = Vector2(6138, 2202)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_o607x"]
 size = Vector2(66, 525)
@@ -288,16 +283,7 @@ shader_parameter/offset = 0.0
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yhkqu"]
 size = Vector2(70, 399)
 
-[sub_resource type="Resource" id="Resource_gnpt0"]
-script = ExtResource("3_8qltl")
-duration = 0.0
-
 [node name="MA_2-7" type="Node2D"]
-
-[node name="LimiteCamera" type="CollisionShape2D" parent="."]
-position = Vector2(-3459, -10953)
-shape = SubResource("RectangleShape2D_uhas7")
-debug_color = Color(1, 1, 1, 0)
 
 [node name="Fundoceu" type="Sprite2D" parent="."]
 z_index = -2
@@ -1371,32 +1357,21 @@ script = ExtResource("25_xyjrg")
 volume = null
 metadata/_custom_type_script = "uid://dd16yu704x6wt"
 
-[node name="PhantomCamera2D" type="Node2D" parent="." node_paths=PackedStringArray("follow_target")]
-top_level = true
-position = Vector2(-1590, -10577)
-script = ExtResource("2_3i4df")
-priority = 1
-follow_mode = 5
-follow_target = NodePath("../Cenario/Cururu")
-zoom = Vector2(0.8, 0.8)
-tween_resource = SubResource("Resource_gnpt0")
-follow_offset = Vector2(0, -150)
-follow_damping = true
-follow_damping_value = Vector2(0.12, 0.15)
-dead_zone_width = 0.06
-dead_zone_height = 0.3
-draw_limits = true
-limit_target = NodePath("../LimiteCamera")
-limit_margin = Vector4i(0, 0, 0, 50)
-metadata/_custom_type_script = "uid://bhexx6mj1xv3q"
-
-[node name="MainCamera" parent="." instance=ExtResource("33_giq4m")]
-position = Vector2(-1590, -10577)
+[node name="MainCamera" parent="." node_paths=PackedStringArray("target", "limite_camera") instance=ExtResource("33_giq4m")]
+position = Vector2(-887.0005, -10464.007)
 zoom = Vector2(0.8, 0.8)
 limit_left = -6528
 limit_top = -12054
 limit_right = -390
 limit_bottom = -9902
+target = NodePath("../Cenario/Cururu")
+limite_camera = NodePath("../LimiteCam")
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
 color = Color(0.012617188, 0.012617188, 0.012617188, 1)
+
+[node name="LimiteCam" type="ReferenceRect" parent="."]
+offset_left = -6530.0
+offset_top = -12056.0
+offset_right = -394.0
+offset_bottom = -9836.0

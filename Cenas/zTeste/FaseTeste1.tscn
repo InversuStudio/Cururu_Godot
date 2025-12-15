@@ -1,22 +1,18 @@
-[gd_scene load_steps=44 format=4 uid="uid://driflyxauqbxs"]
+[gd_scene load_steps=34 format=4 uid="uid://driflyxauqbxs"]
 
 [ext_resource type="Texture2D" uid="uid://c374cwih425cq" path="res://Sprites/Cenário/Tilemaps/Base.png" id="1_52y5a"]
-[ext_resource type="Texture2D" uid="uid://cov3k8uja4wwj" path="res://Sprites/Cenário/zSem_Uso/PAU_BRASIL.png" id="2_bp4ag"]
-[ext_resource type="Texture2D" uid="uid://dxylu3tdlsq2" path="res://Sprites/Cenário/zSem_Uso/FOG01.png" id="3_0he43"]
+[ext_resource type="Texture2D" uid="uid://dt8o7r2gdnfv3" path="res://Sprites/zTeste_Parellax/ParallaxTeste_2/ParallaxBack3.png" id="1_fjg5v"]
+[ext_resource type="Texture2D" uid="uid://bxjhu7t48ftev" path="res://Sprites/zTeste_Parellax/ParallaxTeste_2/ParallaxBack2.png" id="2_der3i"]
 [ext_resource type="PackedScene" uid="uid://nohq28uk7lfk" path="res://Objetos/Entidades/Player.tscn" id="3_2vimk"]
-[ext_resource type="Texture2D" uid="uid://csr2gynumyiv2" path="res://Sprites/Cenário/zSem_Uso/PAU_BRASIL03.png" id="4_77bok"]
+[ext_resource type="Texture2D" uid="uid://balhletbs6ogr" path="res://Sprites/zTeste_Parellax/ParallaxTeste_2/ParallaxBack1.png" id="3_ixy8u"]
 [ext_resource type="PackedScene" uid="uid://cqyub70sv0ofp" path="res://Objetos/Props/SavePoint.tscn" id="4_fo4t4"]
-[ext_resource type="Texture2D" uid="uid://bdh06r7m0p0js" path="res://Sprites/Cenário/zSem_Uso/Folhas02.png" id="5_npj8t"]
 [ext_resource type="PackedScene" uid="uid://bu62qgilsxetf" path="res://Objetos/Entidades/Escorpiao.tscn" id="7_2vimk"]
 [ext_resource type="PackedScene" uid="uid://bktu336s6ruri" path="res://Objetos/Props/Moeda.tscn" id="8_fo4t4"]
-[ext_resource type="Script" uid="uid://bhexx6mj1xv3q" path="res://addons/phantom_camera/scripts/phantom_camera/phantom_camera_2d.gd" id="9_2ryh1"]
-[ext_resource type="Script" uid="uid://8umksf8e80fw" path="res://addons/phantom_camera/scripts/resources/tween_resource.gd" id="10_0ho33"]
 [ext_resource type="PackedScene" uid="uid://1apfpwlqocxn" path="res://Objetos/Funcionalidade/TransicaoFase.tscn" id="10_wqlrc"]
 [ext_resource type="PackedScene" uid="uid://d3cks8kri2olw" path="res://Objetos/Props/AreaUpgrade.tscn" id="12_77bok"]
 [ext_resource type="PackedScene" uid="uid://dghxpclnjwg5k" path="res://Objetos/Props/PecaCoracao.tscn" id="15_fjg5v"]
 [ext_resource type="PackedScene" uid="uid://bgiacv0vndt1q" path="res://Objetos/Props/DropAmVelAtaque.tscn" id="16_der3i"]
 [ext_resource type="PackedScene" uid="uid://b4fpjefuik8mq" path="res://Objetos/Props/DropAmRecMagia.tscn" id="17_der3i"]
-[ext_resource type="PackedScene" uid="uid://b0hyovdafhkyk" path="res://Objetos/Funcionalidade/TransicaoCamera.tscn" id="17_id35g"]
 [ext_resource type="PackedScene" uid="uid://bxixu84ahcyba" path="res://Objetos/NPCs/NpcBasico.tscn" id="18_bp4ag"]
 [ext_resource type="Texture2D" uid="uid://c3tl3oddronfh" path="res://icon.svg" id="21_lqome"]
 [ext_resource type="PackedScene" uid="uid://1fdx2ie24dh8" path="res://Objetos/Props/Bau.tscn" id="22_b4qhl"]
@@ -28,6 +24,7 @@
 [ext_resource type="PackedScene" uid="uid://bnm668fws2641" path="res://Objetos/Props/Armadilha.tscn" id="24_tkd1t"]
 [ext_resource type="Shader" uid="uid://da2wxasx6evg0" path="res://Scripts/Shaders/Grama.gdshader" id="25_vdl7m"]
 [ext_resource type="Texture2D" uid="uid://c8bkav2g3wyeu" path="res://Sprites/Cenário/Mata_Atlantica/Chao/moita2.png" id="26_fjg5v"]
+[ext_resource type="PackedScene" uid="uid://davj0hqm0kiya" path="res://Objetos/Funcionalidade/TransicaoCameraNeo.tscn" id="27_der3i"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_77bok"]
 texture = ExtResource("1_52y5a")
@@ -42,37 +39,11 @@ physics_layer_0/collision_layer = 1
 physics_layer_0/collision_mask = 0
 sources/0 = SubResource("TileSetAtlasSource_77bok")
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_id35g"]
-size = Vector2(29, 419)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_y7vak"]
-size = Vector2(1058, 412)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_b4qhl"]
-size = Vector2(470, 419)
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_77bok"]
 size = Vector2(32, 400)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bajew"]
 size = Vector2(523, 96)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_g237d"]
-size = Vector2(4244, 2037)
-
-[sub_resource type="Resource" id="Resource_0ho33"]
-script = ExtResource("10_0ho33")
-duration = 0.4
-transition = 1
-
-[sub_resource type="Resource" id="Resource_id35g"]
-script = ExtResource("10_0ho33")
-duration = 0.0
-metadata/_custom_type_script = "uid://8umksf8e80fw"
-
-[sub_resource type="Resource" id="Resource_g237d"]
-script = ExtResource("10_0ho33")
-duration = 0.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lqome"]
 size = Vector2(360, 62)
@@ -98,45 +69,62 @@ shader_parameter/offset = 0.0
 [node name="FaseTeste" type="Node2D"]
 
 [node name="Background" type="Node2D" parent="."]
-position = Vector2(-1316, -1092)
+position = Vector2(-78, -524)
 
-[node name="Parallax2D" type="Parallax2D" parent="Background"]
-scroll_scale = Vector2(0.2, 1)
+[node name="-3" type="CanvasLayer" parent="Background"]
+layer = -5
+follow_viewport_enabled = true
+follow_viewport_scale = 0.7
+
+[node name="-4" type="Parallax2D" parent="Background/-3"]
+scroll_scale = Vector2(0.7, 0.7)
+scroll_offset = Vector2(0, -642.8571)
 repeat_size = Vector2(1920, 0)
 repeat_times = 3
+follow_viewport = false
+ignore_camera_scroll = true
 
-[node name="Sprite2D" type="Sprite2D" parent="Background/Parallax2D"]
-position = Vector2(237, -622)
-texture = ExtResource("2_bp4ag")
-centered = false
+[node name="Sprite2D" type="Sprite2D" parent="Background/-3/-4"]
+position = Vector2(0, 62.857117)
+texture = ExtResource("1_fjg5v")
 
-[node name="Parallax2D2" type="Parallax2D" parent="Background"]
-scroll_scale = Vector2(0.6, 1)
+[node name="Sprite2D2" type="Sprite2D" parent="Background/-3/-4"]
+position = Vector2(360.28568, -220.42859)
+texture = ExtResource("21_lqome")
+
+[node name="-2" type="CanvasLayer" parent="Background"]
+layer = -5
+follow_viewport_enabled = true
+follow_viewport_scale = 0.8
+
+[node name="-5" type="Parallax2D" parent="Background/-2"]
+scroll_scale = Vector2(0.8, 0.8)
+scroll_offset = Vector2(0, -562.49994)
 repeat_size = Vector2(1920, 0)
 repeat_times = 3
+follow_viewport = false
+ignore_camera_scroll = true
 
-[node name="Fog01" type="Sprite2D" parent="Background/Parallax2D2"]
-position = Vector2(765.25, 546)
-scale = Vector2(2.33992, 1)
-texture = ExtResource("3_0he43")
+[node name="Sprite2D" type="Sprite2D" parent="Background/-2/-5"]
+position = Vector2(0, 55)
+texture = ExtResource("2_der3i")
 
-[node name="Sprite2D" type="Sprite2D" parent="Background/Parallax2D2"]
-position = Vector2(-318, -659)
-texture = ExtResource("4_77bok")
-centered = false
+[node name="-1" type="CanvasLayer" parent="Background"]
+layer = -5
+follow_viewport_enabled = true
+follow_viewport_scale = 0.9
 
-[node name="Folhas02" type="Sprite2D" parent="Background/Parallax2D2"]
-position = Vector2(391, 650)
-texture = ExtResource("5_npj8t")
-
-[node name="Parallax2D3" type="Parallax2D" parent="Background"]
+[node name="-6" type="Parallax2D" parent="Background/-1"]
+scroll_scale = Vector2(0.9, 0.9)
+scroll_offset = Vector2(0, -500.00003)
 repeat_size = Vector2(1920, 0)
 repeat_times = 3
+follow_viewport = false
+ignore_camera_scroll = true
 
-[node name="Sprite2D" type="Sprite2D" parent="Background/Parallax2D3"]
-position = Vector2(807, -622)
-texture = ExtResource("2_bp4ag")
-centered = false
+[node name="Sprite2D" type="Sprite2D" parent="Background/-1/-6"]
+position = Vector2(0, 48.888916)
+texture = ExtResource("3_ixy8u")
 
 [node name="Tilemap" type="Node2D" parent="."]
 position = Vector2(0, 1)
@@ -153,52 +141,6 @@ tile_map_data = PackedByteArray("AADm//n/AAABAAAAAADm//r/AAABAAAAAADm//v/AAABAAA
 tile_set = SubResource("TileSet_l7pwf")
 
 [node name="Transicoes" type="Node" parent="."]
-
-[node name="Main-Salao" parent="Transicoes" node_paths=PackedStringArray("de_camera_x", "para_camera_y") instance=ExtResource("17_id35g")]
-position = Vector2(1531, -646)
-de_camera_x = NodePath("../../Cameras/AreaPrincipal")
-para_camera_y = NodePath("../../Cameras/AreaAberta")
-
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="Transicoes/Main-Salao"]
-position = Vector2(-8, -186)
-shape = SubResource("RectangleShape2D_id35g")
-
-[node name="Salao-Main" parent="Transicoes" node_paths=PackedStringArray("de_camera_x", "para_camera_y") instance=ExtResource("17_id35g")]
-position = Vector2(1437, -646)
-de_camera_x = NodePath("../../Cameras/AreaAberta")
-para_camera_y = NodePath("../../Cameras/AreaPrincipal")
-
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="Transicoes/Salao-Main"]
-position = Vector2(-8, -186)
-shape = SubResource("RectangleShape2D_id35g")
-
-[node name="Salao-Canto" parent="Transicoes" node_paths=PackedStringArray("de_camera_x", "para_camera_y") instance=ExtResource("17_id35g")]
-position = Vector2(4599, -388)
-de_camera_x = NodePath("../../Cameras/AreaAberta")
-para_camera_y = NodePath("../../Cameras/SalaCanto")
-
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="Transicoes/Salao-Canto"]
-position = Vector2(511, -193)
-shape = SubResource("RectangleShape2D_y7vak")
-debug_color = Color(0, 0.6, 0.701961, 0.137255)
-
-[node name="Canto-Salao" parent="Transicoes" node_paths=PackedStringArray("de_camera_x", "para_camera_y") instance=ExtResource("17_id35g")]
-position = Vector2(4457, -388)
-de_camera_x = NodePath("../../Cameras/SalaCanto")
-para_camera_y = NodePath("../../Cameras/AreaAberta")
-
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="Transicoes/Canto-Salao"]
-position = Vector2(-8, -186)
-shape = SubResource("RectangleShape2D_id35g")
-
-[node name="MeioSalao" parent="Transicoes" node_paths=PackedStringArray("de_camera_x", "para_camera_y") instance=ExtResource("17_id35g")]
-position = Vector2(2957, -388)
-de_camera_x = NodePath("../../Cameras/AreaPrincipal")
-para_camera_y = NodePath("../../Cameras/AreaAberta")
-
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="Transicoes/MeioSalao"]
-position = Vector2(-8, -186)
-shape = SubResource("RectangleShape2D_b4qhl")
 
 [node name="TransicaoFase" parent="Transicoes" instance=ExtResource("10_wqlrc")]
 position = Vector2(-2655, -514)
@@ -268,61 +210,9 @@ position = Vector2(3699, -463)
 position = Vector2(3900, -467)
 tipo_item = 1
 
-[node name="LimitCamera" type="StaticBody2D" parent="."]
-collision_layer = 0
-collision_mask = 0
-
-[node name="LimiteCamPrincipal" type="CollisionShape2D" parent="LimitCamera"]
-position = Vector2(-637, -947.5)
-shape = SubResource("RectangleShape2D_g237d")
-debug_color = Color(0, 0.6, 0.701961, 0)
-
-[node name="Cameras" type="Node" parent="."]
-
-[node name="AreaPrincipal" type="Node2D" parent="Cameras" node_paths=PackedStringArray("follow_target")]
-top_level = true
-position = Vector2(-146, -534)
-script = ExtResource("9_2ryh1")
-priority = 1
-follow_mode = 2
-follow_target = NodePath("../../Entidades/Player")
-tween_resource = SubResource("Resource_0ho33")
-tween_on_load = false
-follow_offset = Vector2(0, -100)
-follow_damping = true
-dead_zone_width = 0.15
-dead_zone_height = 0.25
-draw_limits = true
-limit_target = NodePath("../../LimitCamera/LimiteCamPrincipal")
-
-[node name="AreaAberta" type="Node2D" parent="Cameras"]
-position = Vector2(2955, -985)
-script = ExtResource("9_2ryh1")
-zoom = Vector2(0.6, 0.6)
-tween_resource = SubResource("Resource_id35g")
-tween_on_load = false
-draw_limits = true
-metadata/_custom_type_script = "uid://bhexx6mj1xv3q"
-
-[node name="SalaCanto" type="Node2D" parent="Cameras"]
-position = Vector2(5059, -703)
-script = ExtResource("9_2ryh1")
-zoom = Vector2(1.53, 1.53)
-tween_resource = SubResource("Resource_g237d")
-tween_on_load = false
-draw_limits = true
-metadata/_custom_type_script = "uid://bhexx6mj1xv3q"
-
 [node name="NPC Basico" parent="." instance=ExtResource("18_bp4ag")]
 position = Vector2(4959, -515)
 dialogue_start = "mapa"
-
-[node name="MainCamera" parent="." instance=ExtResource("22_der3i")]
-position = Vector2(-146, -534)
-limit_left = -2759
-limit_top = -1966
-limit_right = 1485
-limit_bottom = 71
 
 [node name="PlataformaSome" type="StaticBody2D" parent="."]
 position = Vector2(-1216, -665)
@@ -421,5 +311,60 @@ position = Vector2(-2012.0002, -675.00006)
 rotation = -3.1415927
 scale = Vector2(1.5016018, 1.5016018)
 texture = ExtResource("26_fjg5v")
+
+[node name="Cameras" type="Node" parent="."]
+
+[node name="MainCamera" parent="Cameras" node_paths=PackedStringArray("target", "limite_camera") instance=ExtResource("22_der3i")]
+position = Vector2(-146, -513.9996)
+zoom = Vector2(0.8, 0.8)
+limit_enabled = true
+limit_left = -2759
+limit_top = -1968
+limit_right = 1490
+limit_bottom = 70
+target = NodePath("../../Entidades/Player")
+limite_camera = NodePath("../../LimiteCam")
+mostrar_deadzone_no_jogo = true
+
+[node name="Salao" type="Camera2D" parent="Cameras"]
+position = Vector2(3045, -1042)
+enabled = false
+zoom = Vector2(0.62, 0.62)
+drag_horizontal_enabled = true
+drag_vertical_enabled = true
+
+[node name="Canto" type="Camera2D" parent="Cameras"]
+position = Vector2(5106, -726)
+enabled = false
+zoom = Vector2(1.4, 1.4)
+drag_horizontal_enabled = true
+drag_vertical_enabled = true
+
+[node name="LimiteCam" type="ReferenceRect" parent="."]
+offset_left = -2759.0
+offset_top = -1968.0
+offset_right = 1490.0
+offset_bottom = 70.0
+border_width = 5.0
+
+[node name="Salao->Main" parent="." node_paths=PackedStringArray("de", "para") instance=ExtResource("27_der3i")]
+polygon = PackedVector2Array(1379, -628, 1374, -1041, 1452, -1041, 1450, -621)
+de = NodePath("../Cameras/Salao")
+para = NodePath("../Cameras/MainCamera")
+
+[node name="Main->Salao" parent="." node_paths=PackedStringArray("de", "para") instance=ExtResource("27_der3i")]
+polygon = PackedVector2Array(1504, -621, 1502, -1038, 1558, -1038, 1563, -619)
+de = NodePath("../Cameras/MainCamera")
+para = NodePath("../Cameras/Salao")
+
+[node name="Salao->Canto" parent="." node_paths=PackedStringArray("de", "para") instance=ExtResource("27_der3i")]
+polygon = PackedVector2Array(4569, -744, 4635, -746, 4638, -357, 4586, -359)
+de = NodePath("../Cameras/Salao")
+para = NodePath("../Cameras/Canto")
+
+[node name="Canto->Salao" parent="." node_paths=PackedStringArray("de", "para") instance=ExtResource("27_der3i")]
+polygon = PackedVector2Array(4343, -753, 4404, -751, 4416, -369, 4345, -369)
+de = NodePath("../Cameras/Canto")
+para = NodePath("../Cameras/Salao")
 
 [editable path="Props/UpgradeMissil"]

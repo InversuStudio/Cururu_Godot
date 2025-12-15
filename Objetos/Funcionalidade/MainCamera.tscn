@@ -1,7 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://u28e3eudu6ch"]
+[gd_scene load_steps=2 format=3 uid="uid://u28e3eudu6ch"]
 
 [ext_resource type="Script" uid="uid://cw522wgjoa2p7" path="res://Scripts/Componentes/MainCamera.gd" id="1_tckdd"]
-[ext_resource type="Script" uid="uid://bd046eokvcnu2" path="res://addons/phantom_camera/scripts/phantom_camera_host/phantom_camera_host.gd" id="2_lxfdy"]
 
 [node name="MainCamera" type="Camera2D" groups=["MainCamera"]]
 physics_interpolation_mode = 1
@@ -9,10 +8,6 @@ process_callback = 0
 limit_enabled = false
 editor_draw_limits = true
 script = ExtResource("1_tckdd")
-
-[node name="PhantomCameraHost" type="Node" parent="."]
-process_priority = 300
-process_physics_priority = 300
-script = ExtResource("2_lxfdy")
-interpolation_mode = 2
-metadata/_custom_type_script = "uid://bd046eokvcnu2"
+offset_target = Vector2(0, -80)
+speed = 4.0
+deadzone = Vector2(200, 275)

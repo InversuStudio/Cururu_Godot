@@ -1,14 +1,9 @@
-[gd_scene load_steps=12 format=4 uid="uid://cubw3i1ch5jq1"]
+[gd_scene load_steps=8 format=4 uid="uid://cubw3i1ch5jq1"]
 
 [ext_resource type="PackedScene" uid="uid://nohq28uk7lfk" path="res://Objetos/Entidades/Player.tscn" id="1_65boa"]
 [ext_resource type="Texture2D" uid="uid://c374cwih425cq" path="res://Sprites/Cenário/Tilemaps/Base.png" id="1_xvyko"]
 [ext_resource type="PackedScene" uid="uid://1apfpwlqocxn" path="res://Objetos/Funcionalidade/TransicaoFase.tscn" id="3_bcoor"]
-[ext_resource type="Script" uid="uid://bhexx6mj1xv3q" path="res://addons/phantom_camera/scripts/phantom_camera/phantom_camera_2d.gd" id="4_mfo0i"]
-[ext_resource type="Script" uid="uid://8umksf8e80fw" path="res://addons/phantom_camera/scripts/resources/tween_resource.gd" id="5_uo1oq"]
 [ext_resource type="PackedScene" uid="uid://u28e3eudu6ch" path="res://Objetos/Funcionalidade/MainCamera.tscn" id="6_w3wn0"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_kbtvm"]
-size = Vector2(5116, 1889)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_32tfj"]
 texture = ExtResource("1_xvyko")
@@ -150,19 +145,7 @@ sources/0 = SubResource("TileSetAtlasSource_32tfj")
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_87p3x"]
 size = Vector2(70, 410)
 
-[sub_resource type="Resource" id="Resource_m5iat"]
-script = ExtResource("5_uo1oq")
-duration = 0.0
-
 [node name="MA_1-3" type="Node2D"]
-
-[node name="LimiteCamera" type="CollisionShape2D" parent="."]
-position = Vector2(1135, -4855.5)
-shape = SubResource("RectangleShape2D_kbtvm")
-debug_color = Color(0, 0.6, 0.69803923, 0)
-
-[node name="Node2D" type="Node2D" parent="LimiteCamera"]
-position = Vector2(-1476, -1212.5)
 
 [node name="Player" parent="." instance=ExtResource("1_65boa")]
 position = Vector2(3269, -4493)
@@ -184,29 +167,19 @@ posicao = Vector2(673, -3737)
 position = Vector2(-22, -215)
 shape = SubResource("RectangleShape2D_87p3x")
 
-[node name="PhantomCamera2D" type="Node2D" parent="." node_paths=PackedStringArray("follow_target")]
-top_level = true
-position = Vector2(2493, -4636)
-script = ExtResource("4_mfo0i")
-priority = 1
-follow_mode = 5
-follow_target = NodePath("../Player")
+[node name="MainCamera" parent="." node_paths=PackedStringArray("target", "limite_camera") instance=ExtResource("6_w3wn0")]
+position = Vector2(3269, -4572.997)
 zoom = Vector2(0.8, 0.8)
-tween_resource = SubResource("Resource_m5iat")
-follow_offset = Vector2(0, -100)
-follow_damping = true
-follow_damping_value = Vector2(0.12, 0.15)
-dead_zone_width = 0.06
-dead_zone_height = 0.3
-draw_limits = true
-limit_target = NodePath("../LimiteCamera")
-limit_margin = Vector4i(0, 0, 0, 50)
-metadata/_custom_type_script = "uid://bhexx6mj1xv3q"
+limit_enabled = true
+limit_left = -1418
+limit_top = -5803
+limit_right = 3692
+limit_bottom = -3913
+target = NodePath("../Player")
+limite_camera = NodePath("../LimiteCam")
 
-[node name="MainCamera" parent="." instance=ExtResource("6_w3wn0")]
-position = Vector2(2493, -4636)
-zoom = Vector2(0.8, 0.8)
-limit_left = -1423
-limit_top = -5800
-limit_right = 3693
-limit_bottom = -3961
+[node name="LimiteCam" type="ReferenceRect" parent="."]
+offset_left = -1418.0
+offset_top = -5803.0
+offset_right = 3692.0
+offset_bottom = -3913.0

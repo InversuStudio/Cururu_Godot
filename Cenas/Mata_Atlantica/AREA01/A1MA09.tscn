@@ -1,4 +1,4 @@
-[gd_scene load_steps=40 format=4 uid="uid://c2wxcq8h71dqe"]
+[gd_scene load_steps=35 format=4 uid="uid://c2wxcq8h71dqe"]
 
 [ext_resource type="Texture2D" uid="uid://cqu5scrrmr5n5" path="res://Sprites/Cenário/Mata_Atlantica/Background/Iluminação e Fundo/FUNDOCEU.png" id="1_7lg54"]
 [ext_resource type="Texture2D" uid="uid://c374cwih425cq" path="res://Sprites/Cenário/Tilemaps/Base.png" id="1_lvkdv"]
@@ -8,12 +8,10 @@
 [ext_resource type="Texture2D" uid="uid://dv0q1amqoq168" path="res://Sprites/Cenário/Mata_Atlantica/Background/Mata/mato03.png" id="3_fs0qs"]
 [ext_resource type="Texture2D" uid="uid://cjl88xeknofui" path="res://Sprites/Cenário/Mata_Atlantica/Chao/grama_reto.png" id="4_8dhcb"]
 [ext_resource type="Texture2D" uid="uid://c8bkav2g3wyeu" path="res://Sprites/Cenário/Mata_Atlantica/Chao/moita2.png" id="4_n5d52"]
-[ext_resource type="Script" uid="uid://bhexx6mj1xv3q" path="res://addons/phantom_camera/scripts/phantom_camera/phantom_camera_2d.gd" id="5_8d2qe"]
 [ext_resource type="Texture2D" uid="uid://rbtvfm4m7ft" path="res://Sprites/VFX/Iluminação/SOMBRA2.png" id="5_fpvhh"]
 [ext_resource type="Texture2D" uid="uid://cw2yeg7ynw0kl" path="res://Sprites/Cenário/Mata_Atlantica/Chao/chap_externo.png" id="5_x8u7e"]
 [ext_resource type="Texture2D" uid="uid://dmh8fodubelsr" path="res://Sprites/Cenário/Mata_Atlantica/Background/Iluminação e Fundo/FUNDONEVOA.png" id="6_8nsrb"]
 [ext_resource type="Texture2D" uid="uid://cj4rj4oj20ogb" path="res://Sprites/Cenário/Mata_Atlantica/Chao/chap_interno.png" id="6_csefs"]
-[ext_resource type="Script" uid="uid://8umksf8e80fw" path="res://addons/phantom_camera/scripts/resources/tween_resource.gd" id="6_prd0w"]
 [ext_resource type="Texture2D" uid="uid://dru600hg8oaty" path="res://Sprites/Cenário/Mata_Atlantica/Background/Mata/mato02.png" id="6_yjmhh"]
 [ext_resource type="Texture2D" uid="uid://ctar30vsktrrb" path="res://Sprites/Cenário/Mata_Atlantica/Background/Iluminação e Fundo/FUNDONEVOA2.png" id="7_4ft46"]
 [ext_resource type="Texture2D" uid="uid://ccql65wj55kqf" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/arvore_s3.png" id="7_u1c06"]
@@ -32,9 +30,6 @@
 [ext_resource type="PackedScene" uid="uid://u28e3eudu6ch" path="res://Objetos/Funcionalidade/MainCamera.tscn" id="23_n5d52"]
 [ext_resource type="AudioStream" uid="uid://c7qftchbhu6xc" path="res://Audio/SFX/AMBIENTE/Musica_Jogo.mp3" id="24_4ft46"]
 [ext_resource type="PackedScene" uid="uid://cdhelg6sloxbj" path="res://Objetos/Props/PortaTemp.tscn" id="25_8nsrb"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_x8u7e"]
-size = Vector2(4777, 1176)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_p2dm5"]
 texture = ExtResource("1_lvkdv")
@@ -179,22 +174,7 @@ size = Vector2(70, 410)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_q2u2q"]
 size = Vector2(444, 73)
 
-[sub_resource type="Curve2D" id="Curve2D_decf0"]
-_data = {
-"points": PackedVector2Array(0, 0, 0, 0, -1201, -683, 0, 0, 0, 0, 3560, -683)
-}
-point_count = 2
-
-[sub_resource type="Resource" id="Resource_n5d52"]
-script = ExtResource("6_prd0w")
-duration = 0.0
-
 [node name="MA_1-9" type="Node2D"]
-
-[node name="LimiteCamera" type="CollisionShape2D" parent="."]
-position = Vector2(2394.5, -813.5)
-shape = SubResource("RectangleShape2D_x8u7e")
-debug_color = Color(0, 0.6, 0.69803923, 0)
 
 [node name="FundoCeu" type="Sprite2D" parent="."]
 light_mask = 2
@@ -802,38 +782,24 @@ posicao = Vector2(70, 1537)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TransicoesFase/2-1"]
 shape = SubResource("RectangleShape2D_q2u2q")
 
-[node name="CaminhoCamera" type="Path2D" parent="."]
-position = Vector2(1221, -32)
-curve = SubResource("Curve2D_decf0")
-
 [node name="BGM_Player" type="Node" parent="."]
 script = ExtResource("23_8nsrb")
 musica = ExtResource("24_4ft46")
 volume = -0.5
 metadata/_custom_type_script = "uid://dd16yu704x6wt"
 
-[node name="PhantomCamera2D" type="Node2D" parent="." node_paths=PackedStringArray("follow_target")]
-top_level = true
-position = Vector2(1206, -951)
-script = ExtResource("5_8d2qe")
-priority = 1
-follow_mode = 5
-follow_target = NodePath("../Entidades/Cururu")
-zoom = Vector2(0.8, 0.8)
-tween_resource = SubResource("Resource_n5d52")
-follow_damping = true
-follow_damping_value = Vector2(0.12, 0.15)
-dead_zone_width = 0.06
-dead_zone_height = 0.3
-draw_limits = true
-limit_target = NodePath("../LimiteCamera")
-limit_margin = Vector4i(0, 0, 0, 50)
-metadata/_custom_type_script = "uid://bhexx6mj1xv3q"
-
-[node name="MainCamera" parent="." instance=ExtResource("23_n5d52")]
-position = Vector2(1206, -951)
+[node name="MainCamera" parent="." node_paths=PackedStringArray("target", "limite_camera") instance=ExtResource("23_n5d52")]
+position = Vector2(228.00009, -596.50037)
 zoom = Vector2(0.8, 0.8)
 limit_left = 6
 limit_top = -1402
 limit_right = 4783
 limit_bottom = -276
+target = NodePath("../Entidades/Cururu")
+limite_camera = NodePath("../LimiteCam")
+
+[node name="LimiteCam" type="ReferenceRect" parent="."]
+offset_left = 6.0
+offset_top = -1401.0
+offset_right = 4783.0
+offset_bottom = -232.0

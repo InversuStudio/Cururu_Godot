@@ -46,8 +46,6 @@ func FixedUpdate(delta: float) -> State:
 	parent.velocity.y += parent.jump_gravity * delta
 	
 	# Aplica movimento
-	#var dir = parent.input_move * parent.air_speed
-	#parent.velocity.x = move_toward(parent.velocity.x, dir, parent.accel * delta)
 	var dir:float = parent.input_move.x
 	if dir != 0.0:
 		parent.velocity.x += parent.accel * dir * delta
@@ -67,10 +65,5 @@ func FixedUpdate(delta: float) -> State:
 	# Se estiver caindo, muda State
 	if parent.velocity.y >= 0.0:
 		return fall_state
-	# Se soltar botão de pulo, zera velocidade e muda State
-	
-		#pode_cair = true
-		#parent.velocity.y = 0.0
-		#return fall_state
 		
 	return null # Não muda o State
