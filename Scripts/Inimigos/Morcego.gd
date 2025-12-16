@@ -11,10 +11,11 @@ var alvo_ataque = Vector2.ZERO
 var trava_move: bool = false
 var pode_atacar: bool = true
 
-
 @export_group("Pushback")
 @export var distancia_push:float = 1.0
 @export var tempo_push:float = .2
+
+var para_ataque:bool = false
 
 func _ready() -> void:
 	%HurtBox.hurt.connect(RecebeuDano)
@@ -40,6 +41,12 @@ func _physics_process(_delta: float) -> void:
 	#Flip da sprite
 	if velocity.x != 0:
 		%Sprite.flip_h = false if velocity.x < 0 else true
+		
+	if (is_on_wall() and !para_ataque) or para_ataque:
+		para_ataque = false
+		%TimerInvestida.stop()
+		_on_timer_investida_timeout()
+	
 	move_and_slide()
 
 func _on_timer_timeout():
@@ -68,6 +75,7 @@ func _on_timer_dano_timeout() -> void:
 
 func Pushback(pos:Vector2) -> void:
 	trava_move = true
+	para_ataque = true
 	%HurtBox.CalcKnockback(distancia_push, tempo_push, pos)
 	%TimerDano.start()
 
@@ -88,6 +96,6 @@ func _on_timer_investida_timeout() -> void:
 	_atacando = false
 	%Sprite.skew = 0.0
 
-
 func _on_timer_entre_ataques_timeout() -> void:
 	pode_atacar = true
+	para_ataque = false

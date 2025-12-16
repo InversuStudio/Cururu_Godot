@@ -107,6 +107,12 @@ func SpawnMoeda(pos:Vector2) -> void:
 	get_tree().current_scene.call_deferred("add_child", coin)
 	coin.global_position = pos
 
+func HitFreeze(hit_freeze:float) -> void:
+	if hit_freeze > 0.0 and Engine.time_scale == 1.0:
+		Engine.time_scale = 0.0
+		await get_tree().create_timer(hit_freeze, true, false, true).timeout
+		Engine.time_scale = 1.0
+
 func FechaJogo() -> void:
 	Fade.FadeOut()
 	await Fade.terminou
