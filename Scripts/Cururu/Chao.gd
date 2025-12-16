@@ -89,6 +89,9 @@ func FixedUpdate(delta: float) -> State:
 	if pode_anim and !turn:
 		if parent.input_move.x:
 			%Anim.play("Run")
+			if %RunVFXCooldown.is_stopped():
+				SpawnFolhas()
+				%RunVFXCooldown.start()
 		else:
 			%Anim.play("Idle")
 		
