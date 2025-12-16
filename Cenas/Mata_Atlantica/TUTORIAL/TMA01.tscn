@@ -1192,7 +1192,7 @@ light_mask = 7
 shape = SubResource("RectangleShape2D_td0al")
 
 [node name="MainCamera" parent="." node_paths=PackedStringArray("target", "limite_camera") instance=ExtResource("37_nika8")]
-position = Vector2(1720, -1239.9993)
+position = Vector2(1720, -1239.996)
 zoom = Vector2(0.8, 0.8)
 limit_enabled = true
 limit_left = 243

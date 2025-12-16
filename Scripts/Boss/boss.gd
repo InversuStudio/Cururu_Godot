@@ -2,6 +2,10 @@ extends Node2D
 
 ## Area2D que checa se player está presente, para iniciar Boss Fight
 @export var area_check_player: Area2D = null
+## Câmera da batalha
+@export var camera_batalha:MainCamera = null
+## Posição nova da câmera durante batalha
+@export var target_camera_batalha:Node2D = null
 ## Posições onde pilares de fogo vão spawnar
 @export var pos_pilares: Array[Node2D] = []
 # Número de ataques até ficar vulnerável
@@ -26,7 +30,8 @@ var tween:Tween = null
 var morreu:bool = false
 
 func ChecaArmor() -> void:
-	if %VidaMCabeca.vida_atual <= 0 and %VidaMCorpo.vida_atual <= 0:
+	if %VidaMCorpo.vida_atual <= 0:
+	#if %VidaMCabeca.vida_atual <= 0 and %VidaMCorpo.vida_atual <= 0:
 		state_machine.MudaState(state_machine.find_child("Nocaute"))
 
 func _ready() -> void:
@@ -59,7 +64,12 @@ func _ready() -> void:
 	if area_check_player:
 		var start_state:State = state_machine.find_child("Start")
 		if start_state:
-			area_check_player.connect("body_entered", start_state.PlayerEntrou)
+			area_check_player.connect("body_entered", func(b:Node2D):
+				start_state.PlayerEntrou(b)
+				camera_batalha.MudaTarget(target_camera_batalha, Vector2.ZERO)
+				camera_batalha.MudaZoom(.6)
+				#camera_batalha.
+			)
 	
 	# Inicializa rabo
 	rabo.visibility_changed.connect(func():
@@ -67,6 +77,8 @@ func _ready() -> void:
 		rabo.set_deferred("monitoring", val)
 		rabo.set_deferred("monitorable", val))
 	rabo.hide()
+	
+	HidePartes()
 
 func _process(delta: float) -> void:
 	state_machine.Update(delta)
@@ -89,11 +101,11 @@ func TomouDano(vida_atual:int, _vida_antiga:int) -> void:
 func ResetArmor() -> void:
 	%VidaMCabeca.RecebeCura(100)
 	%HurtCabeca.set_deferred("monitorable", true)
-	%HurtCabeca.show()
+	#%HurtCabeca.show()
 	
 	%VidaMCorpo.RecebeCura(100)
 	%HurtCorpo.set_deferred("monitorable", true)
-	%HurtCorpo.show()
+	#%HurtCorpo.show()
 
 func Morte() -> void:
 	%HurtBox.queue_free()
@@ -104,3 +116,22 @@ func Morte() -> void:
 	morreu = true
 	#BGM.TocaMusica()
 	Mundos.CarregaFase(Mundos.NomeFase.FinalDemo)
+
+# ESSAS FUNÇÕES SÃO TEMPORÁRIAS
+func HidePartes() -> void:
+	%SpriteCabeca.hide()
+	%SpriteCorpo.hide()
+	$Temp.hide()
+	
+	%SpriteCabeca.stop()
+	%SpriteCorpo.stop()
+	$Temp.stop()
+
+func ShowPartes() -> void:
+	%SpriteCabeca.show()
+	%SpriteCorpo.show()
+	$Temp.show()
+	
+	%SpriteCabeca.play("Idle")
+	%SpriteCorpo.play("Idle")
+	$Temp.play("default")

@@ -1060,7 +1060,7 @@ offset_right = 4981.0
 offset_bottom = -392.0
 
 [node name="MainCamera" parent="." node_paths=PackedStringArray("target", "limite_camera") instance=ExtResource("34_xqsk0")]
-position = Vector2(2588.0002, -725.9996)
+position = Vector2(2588.0002, -724.07214)
 zoom = Vector2(0.8, 0.8)
 limit_enabled = true
 limit_left = 782

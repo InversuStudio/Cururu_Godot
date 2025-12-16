@@ -1,4 +1,4 @@
-[gd_scene load_steps=82 format=3 uid="uid://b7m7lb1s11mbw"]
+[gd_scene load_steps=114 format=3 uid="uid://b7m7lb1s11mbw"]
 
 [ext_resource type="Script" uid="uid://bekibpja60hxm" path="res://Scripts/Boss/boss.gd" id="1_s15tt"]
 [ext_resource type="Script" uid="uid://hsdutxxttrp3" path="res://Scripts/Componentes/Vida.gd" id="2_16hqa"]
@@ -50,17 +50,46 @@
 [ext_resource type="Texture2D" uid="uid://cb2junpu8iaaw" path="res://Sprites/Inimigos/Boitata/Animacoes/Nocaute/boitata_105.png" id="41_iy7ck"]
 [ext_resource type="Texture2D" uid="uid://blbopej1mv1s1" path="res://Sprites/Inimigos/Boitata/Animacoes/Nocaute/boitata_107.png" id="42_hsjt7"]
 [ext_resource type="Texture2D" uid="uid://dowds0x1lda55" path="res://Sprites/Inimigos/Boitata/Animacoes/Nocaute/boitata_109.png" id="43_lll36"]
+[ext_resource type="Texture2D" uid="uid://ukwchyssdswb" path="res://Sprites/Inimigos/Boitata/Animacoes/Idle/ARMADURA_MIASMA/boitata_131.png" id="55_iqxfe"]
+[ext_resource type="Texture2D" uid="uid://dus0tidtp7ytc" path="res://Sprites/Inimigos/Boitata/Animacoes/Idle/CABEÇA_MIASMA/boitata_131.png" id="55_q1nmn"]
+[ext_resource type="Texture2D" uid="uid://bk7sluuyj8kc0" path="res://Sprites/Inimigos/Boitata/Animacoes/Idle/ARMADURA_MIASMA/boitata_133.png" id="56_mjx0v"]
+[ext_resource type="Texture2D" uid="uid://cxusm2a0xykmj" path="res://Sprites/Inimigos/Boitata/Animacoes/Idle/CABEÇA_MIASMA/boitata_133.png" id="56_vsrrx"]
+[ext_resource type="Texture2D" uid="uid://ds7hsxp7ui1d4" path="res://Sprites/Inimigos/Boitata/Animacoes/Idle/ARMADURA_MIASMA/boitata_135.png" id="57_0w5f0"]
+[ext_resource type="Texture2D" uid="uid://c3f78wa228h8q" path="res://Sprites/Inimigos/Boitata/Animacoes/Idle/CABEÇA_MIASMA/boitata_135.png" id="57_hbr26"]
+[ext_resource type="Texture2D" uid="uid://ckv0y2rivblej" path="res://Sprites/Inimigos/Boitata/Animacoes/Idle/ARMADURA_MIASMA/boitata_137.png" id="58_uoyl7"]
+[ext_resource type="Texture2D" uid="uid://br7ageu6w4bl7" path="res://Sprites/Inimigos/Boitata/Animacoes/Idle/CABEÇA_MIASMA/boitata_137.png" id="58_ycj6j"]
+[ext_resource type="Texture2D" uid="uid://dglj1rk1qwcun" path="res://Sprites/Inimigos/Boitata/Animacoes/Idle/CABEÇA_MIASMA/boitata_139.png" id="59_r12sw"]
+[ext_resource type="Texture2D" uid="uid://c1y7wbo1dwncg" path="res://Sprites/Inimigos/Boitata/Animacoes/Idle/ARMADURA_MIASMA/boitata_139.png" id="59_sgy8v"]
+[ext_resource type="Texture2D" uid="uid://pqliqou0coew" path="res://Sprites/Inimigos/Boitata/Animacoes/Idle/CABEÇA_MIASMA/boitata_141.png" id="60_5irpk"]
+[ext_resource type="Texture2D" uid="uid://br7mivmves8mf" path="res://Sprites/Inimigos/Boitata/Animacoes/Idle/ARMADURA_MIASMA/boitata_141.png" id="60_ojojp"]
 [ext_resource type="Script" uid="uid://cerjc6sna0dxs" path="res://Scripts/StateMachine/StateMachine.gd" id="61_01cui"]
+[ext_resource type="Texture2D" uid="uid://dr6fjr5jdsuh1" path="res://Sprites/Inimigos/Boitata/Animacoes/Idle/CABEÇA_MIASMA/boitata_143.png" id="61_3cfl8"]
+[ext_resource type="Texture2D" uid="uid://bddlhi5xvt047" path="res://Sprites/Inimigos/Boitata/Animacoes/Idle/ARMADURA_MIASMA/boitata_143.png" id="61_b2ig3"]
 [ext_resource type="Texture2D" uid="uid://c1eohc1qe4eve" path="res://Sprites/Inimigos/Boitata/Animacoes/Levanta/boitata_01.png" id="61_tev85"]
+[ext_resource type="Texture2D" uid="uid://dp6wi3p8g6o8m" path="res://Sprites/Inimigos/Boitata/Animacoes/Idle/CABEÇA_MIASMA/boitata_145.png" id="62_bf3fi"]
 [ext_resource type="Script" uid="uid://cragh486tqv72" path="res://Scripts/Boss/Idle.gd" id="62_g25rt"]
+[ext_resource type="Texture2D" uid="uid://dueetm3uk2bnp" path="res://Sprites/Inimigos/Boitata/Animacoes/Idle/ARMADURA_MIASMA/boitata_145.png" id="62_lo6ol"]
 [ext_resource type="Texture2D" uid="uid://cikln1focprsa" path="res://Sprites/Inimigos/Boitata/Animacoes/Levanta/boitata_03.png" id="62_ulty5"]
+[ext_resource type="Texture2D" uid="uid://dwc1v8he87oms" path="res://Sprites/Inimigos/Boitata/Animacoes/Idle/ARMADURA_MIASMA/boitata_147.png" id="63_6hkog"]
 [ext_resource type="Texture2D" uid="uid://cqmfy55pixtln" path="res://Sprites/Inimigos/Boitata/Animacoes/Levanta/boitata_05.png" id="63_dr8qx"]
+[ext_resource type="Texture2D" uid="uid://ddfslv051aehr" path="res://Sprites/Inimigos/Boitata/Animacoes/Idle/CABEÇA_MIASMA/boitata_147.png" id="63_kb2t2"]
+[ext_resource type="Texture2D" uid="uid://dltdg60hbf1vk" path="res://Sprites/Inimigos/Boitata/Animacoes/Idle/CABEÇA_MIASMA/boitata_149.png" id="64_71r63"]
+[ext_resource type="Texture2D" uid="uid://pf56bm1ywjx6" path="res://Sprites/Inimigos/Boitata/Animacoes/Idle/ARMADURA_MIASMA/boitata_149.png" id="64_fi4f6"]
 [ext_resource type="Texture2D" uid="uid://b76dlwmgu0tul" path="res://Sprites/Inimigos/Boitata/Animacoes/Levanta/boitata_07.png" id="64_go6es"]
 [ext_resource type="Texture2D" uid="uid://bxmjqqvthh617" path="res://Sprites/Inimigos/Boitata/Animacoes/Levanta/boitata_09.png" id="65_d4lcm"]
+[ext_resource type="Texture2D" uid="uid://bbfqdikqcsp34" path="res://Sprites/Inimigos/Boitata/Animacoes/Idle/CHMA_BOCA/boitata_131.png" id="65_tic1h"]
 [ext_resource type="Texture2D" uid="uid://dvxcgooe7ym0v" path="res://Sprites/Inimigos/Boitata/Animacoes/Levanta/boitata_11.png" id="66_djwlo"]
+[ext_resource type="Texture2D" uid="uid://chq0br27dwdsb" path="res://Sprites/Inimigos/Boitata/Animacoes/Idle/CHMA_BOCA/boitata_133.png" id="66_q1i38"]
 [ext_resource type="Texture2D" uid="uid://b2ctbcwijg1yb" path="res://Sprites/Inimigos/Boitata/Animacoes/Levanta/boitata_13.png" id="67_0jjh8"]
-[ext_resource type="Texture2D" uid="uid://c3tl3oddronfh" path="res://icon.svg" id="70_0w5f0"]
+[ext_resource type="Texture2D" uid="uid://d0ejqo3ki81n8" path="res://Sprites/Inimigos/Boitata/Animacoes/Idle/CHMA_BOCA/boitata_135.png" id="67_gebvg"]
+[ext_resource type="Texture2D" uid="uid://dg656bhvw7s12" path="res://Sprites/Inimigos/Boitata/Animacoes/Idle/CHMA_BOCA/boitata_137.png" id="68_2onqu"]
+[ext_resource type="Texture2D" uid="uid://wm1pc7qxqxqa" path="res://Sprites/Inimigos/Boitata/Animacoes/Idle/CHMA_BOCA/boitata_139.png" id="69_475ov"]
+[ext_resource type="Texture2D" uid="uid://cuapuisq7cbtv" path="res://Sprites/Inimigos/Boitata/Animacoes/Idle/CHMA_BOCA/boitata_141.png" id="70_q8716"]
+[ext_resource type="Texture2D" uid="uid://dstjhhdybsgoh" path="res://Sprites/Inimigos/Boitata/Animacoes/Idle/CHMA_BOCA/boitata_143.png" id="71_iwjnr"]
 [ext_resource type="Script" uid="uid://cfu466euekcdn" path="res://Scripts/Boss/Start.gd" id="72_0ddi0"]
+[ext_resource type="Texture2D" uid="uid://clqghnsgxhrvu" path="res://Sprites/Inimigos/Boitata/Animacoes/Idle/CHMA_BOCA/boitata_145.png" id="72_fhomc"]
+[ext_resource type="Texture2D" uid="uid://bp8qe2hwjejpm" path="res://Sprites/Inimigos/Boitata/Animacoes/Idle/CHMA_BOCA/boitata_147.png" id="73_3l7sv"]
+[ext_resource type="Texture2D" uid="uid://krs7s12k22je" path="res://Sprites/Inimigos/Boitata/Animacoes/Idle/CHMA_BOCA/boitata_149.png" id="74_efqca"]
 [ext_resource type="Script" uid="uid://rlmx3hnbiu12" path="res://Scripts/Boss/cospe_fogo.gd" id="75_16hqa"]
 [ext_resource type="AudioStream" uid="uid://b5wrm1fctq78" path="res://Audio/SFX/BOITATA/rugido_boitata.ogg" id="75_sgy8v"]
 [ext_resource type="Script" uid="uid://dmxvedpbqkt7c" path="res://Scripts/Boss/Nocaute.gd" id="77_iqxfe"]
@@ -282,6 +311,120 @@ animations = [{
 "speed": 10.0
 }]
 
+[sub_resource type="SpriteFrames" id="SpriteFrames_n6ujt"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("55_q1nmn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("56_vsrrx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("57_hbr26")
+}, {
+"duration": 1.0,
+"texture": ExtResource("58_ycj6j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("59_r12sw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("60_5irpk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("61_3cfl8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("62_bf3fi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("63_kb2t2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("64_71r63")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 10.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_huafx"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("65_tic1h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("66_q1i38")
+}, {
+"duration": 1.0,
+"texture": ExtResource("67_gebvg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("68_2onqu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("69_475ov")
+}, {
+"duration": 1.0,
+"texture": ExtResource("70_q8716")
+}, {
+"duration": 1.0,
+"texture": ExtResource("71_iwjnr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("72_fhomc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("73_3l7sv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("74_efqca")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_qsydn"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("55_iqxfe")
+}, {
+"duration": 1.0,
+"texture": ExtResource("56_mjx0v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("57_0w5f0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("58_uoyl7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("59_sgy8v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("60_ojojp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("61_b2ig3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("62_lo6ol")
+}, {
+"duration": 1.0,
+"texture": ExtResource("63_6hkog")
+}, {
+"duration": 1.0,
+"texture": ExtResource("64_fi4f6")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 10.0
+}]
+
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_fwdqd"]
 radius = 171.0
 height = 780.0
@@ -292,7 +435,7 @@ height = 568.0
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_0w5f0"]
 radius = 214.0
-height = 468.0
+height = 606.0
 
 [sub_resource type="Animation" id="Animation_16hqa"]
 resource_name = "CospeFogo"
@@ -337,7 +480,7 @@ tracks/2/keys = {
 
 [sub_resource type="Animation" id="Animation_ojojp"]
 resource_name = "Grito"
-length = 1.4
+length = 1.1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -618,9 +761,31 @@ unique_name_in_owner = true
 position = Vector2(0, -1020)
 scale = Vector2(1.5, 1.5)
 sprite_frames = SubResource("SpriteFrames_nkv4g")
-animation = &"CospeFogo"
+animation = &"Grito"
 autoplay = "Escondido"
 frame = 1
+
+[node name="SpriteCabeca" type="AnimatedSprite2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(0, -1020)
+scale = Vector2(1.5, 1.5)
+sprite_frames = SubResource("SpriteFrames_n6ujt")
+animation = &"Idle"
+
+[node name="Temp" type="AnimatedSprite2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(0, -1020)
+scale = Vector2(1.5, 1.5)
+sprite_frames = SubResource("SpriteFrames_huafx")
+frame = 4
+frame_progress = 0.24865994
+
+[node name="SpriteCorpo" type="AnimatedSprite2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(0, -1020)
+scale = Vector2(1.5, 1.5)
+sprite_frames = SubResource("SpriteFrames_qsydn")
+animation = &"Idle"
 
 [node name="VidaBoss" type="Node" parent="."]
 unique_name_in_owner = true
@@ -652,24 +817,19 @@ metadata/_custom_type_script = "uid://hsdutxxttrp3"
 [node name="HurtCabeca" parent="." node_paths=PackedStringArray("comp_vida", "sprite") instance=ExtResource("3_fwdqd")]
 unique_name_in_owner = true
 collision_layer = 16
-comp_vida = NodePath("../VidaMCabeca")
+comp_vida = NodePath("../VidaMCorpo")
 hit_sfx = ExtResource("5_b2ig3")
-sprite = NodePath("SpriteCabeca")
+sprite = NodePath("../SpriteCabeca")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HurtCabeca"]
-position = Vector2(111, -943)
+position = Vector2(24, -1065)
 rotation = 1.5707964
 shape = SubResource("CapsuleShape2D_mjx0v")
-
-[node name="SpriteCabeca" type="Sprite2D" parent="HurtCabeca"]
-position = Vector2(176, -942)
-scale = Vector2(2.1875, 2.1875)
-texture = ExtResource("70_0w5f0")
 
 [node name="VidaMCorpo" type="Node" parent="."]
 unique_name_in_owner = true
 script = ExtResource("2_16hqa")
-vida_max = 5
+vida_max = 10
 morre = false
 metadata/_custom_type_script = "uid://hsdutxxttrp3"
 
@@ -678,17 +838,12 @@ unique_name_in_owner = true
 collision_layer = 16
 comp_vida = NodePath("../VidaMCorpo")
 hit_sfx = ExtResource("5_b2ig3")
-sprite = NodePath("SpriteCorpo")
+sprite = NodePath("../SpriteCorpo")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HurtCorpo"]
-position = Vector2(91, -351)
+position = Vector2(11, -455)
 rotation = -3.1415927
 shape = SubResource("CapsuleShape2D_0w5f0")
-
-[node name="SpriteCorpo" type="Sprite2D" parent="HurtCorpo"]
-position = Vector2(121, -390)
-scale = Vector2(2.1875, 2.1875)
-texture = ExtResource("70_0w5f0")
 
 [node name="PosTiro" type="Marker2D" parent="."]
 unique_name_in_owner = true

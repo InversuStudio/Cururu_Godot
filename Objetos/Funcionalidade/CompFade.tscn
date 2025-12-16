@@ -58,7 +58,7 @@ _data = {
 
 [node name="Fade" type="CanvasLayer"]
 process_mode = 3
-layer = 10
+layer = 8000
 script = ExtResource("1_aeedw")
 
 [node name="Color" type="ColorRect" parent="."]

@@ -2,9 +2,11 @@
 class_name MainCamera extends Camera2D
 
 ## Node do Player que a câmera irá seguir
-@export var target:Player = null
+@export var target:Node2D = null
 ## Desvio aplicado à posição final
 @export var offset_target:Vector2 = Vector2.ZERO
+## Zoom aplicado à câmera
+@export var zoom_target:float = 0.8
 # Desvio horizontal aplicado quando node se move. Serve para mostrar mais do mapa
 #@export var look_ahead:float = 0.0
 ## Velocidade da câmera ao seguir target
@@ -74,6 +76,8 @@ func _physics_process(delta: float) -> void:
 		)
 		shake_tempo_resta = max(shake_tempo_resta - delta, 0.0)
 		if shake_tempo_resta <= 0.0: shake_ativo = false
+	
+	zoom = zoom.lerp(Vector2(zoom_target, zoom_target), 0.05)
 
 func Shake(forca:float, duracao:float = 0.5) -> void:
 	#forca_shake = forca
@@ -89,4 +93,7 @@ func Shake(forca:float, duracao:float = 0.5) -> void:
 func MudaTarget(novo_target:Node2D, novo_offset:Vector2) -> void:
 	target = novo_target
 	offset_target = novo_offset
+
+func MudaZoom(novo_zoom:float = 0.8) -> void:
+	zoom_target = novo_zoom
 	

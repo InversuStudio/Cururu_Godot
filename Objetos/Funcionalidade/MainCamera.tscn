@@ -4,6 +4,7 @@
 
 [node name="MainCamera" type="Camera2D" groups=["MainCamera"]]
 physics_interpolation_mode = 1
+zoom = Vector2(0.7999995, 0.7999995)
 process_callback = 0
 limit_enabled = false
 editor_draw_limits = true
