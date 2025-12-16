@@ -23,7 +23,8 @@ func _ready() -> void:
 		if pode_anim:
 			%Anim.play("Turn")
 			turn = true
-		Flip())
+		if get_parent().current_state == self:
+			Flip())
 
 # INICIA O STATE
 func Enter() -> void:
@@ -41,7 +42,6 @@ func Enter() -> void:
 func Exit() -> void:
 	turn = false
 	pode_anim = false
-	
 
 func SpawnFolhas() -> void:
 	var folha = preload("res://Objetos/Props/VFX_FOLHA.tscn")

@@ -61,10 +61,10 @@ func FixedUpdate(delta: float) -> State:
 	
 	# Espelha o sprite de acordo com o input
 	if parent.input_move.x > 0:
-		%Cururu.flip_h = false
+		parent.sprite.flip_h = false
 		parent.hitbox_container.scale.x = 1
 	elif parent.input_move.x < 0:
-		%Cururu.flip_h = true
+		parent.sprite.flip_h = true
 		parent.hitbox_container.scale.x = -1
 	
 	# Se estiver no chão, mudar State

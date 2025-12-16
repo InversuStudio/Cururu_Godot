@@ -100,7 +100,7 @@ func _ready() -> void:
 	# Conecta sinal de dano
 	vida.connect("alterou_vida", VidaMudou)
 	# Aplica flip, se necessário
-	if sprite.flip_h == true:
+	if sprite.flip_h:
 		hitbox_container.scale.x = -1
 	# Seta Magia
 	GameData.magia_max = int(magia_max)
@@ -161,3 +161,13 @@ func Morte() -> void:
 	if await GameData.Load() == false:
 		GameData.player_morreu = true
 		Mundos.CarregaFase(Mundos.NomeFase.TUTORIAL_1)
+
+func OffsetMelee() -> void:
+	sprite.offset.y = 28.0
+	sprite.offset.x = -235.0 if sprite.flip_h else 235.0
+
+func OffsetSpecial() -> void:
+	sprite.offset.x = -470.0 if sprite.flip_h else 470.0
+
+func ResetOffset() -> void:
+	sprite.offset = Vector2.ZERO

@@ -352,19 +352,14 @@ polygon = PackedVector2Array(1379, -628, 1374, -1041, 1452, -1041, 1450, -621)
 de = NodePath("../Cameras/Salao")
 para = NodePath("../Cameras/MainCamera")
 
-[node name="Main->Salao" parent="." node_paths=PackedStringArray("de", "para") instance=ExtResource("27_der3i")]
-polygon = PackedVector2Array(1504, -621, 1502, -1038, 1558, -1038, 1563, -619)
+[node name="Salao" parent="." node_paths=PackedStringArray("de", "para") instance=ExtResource("27_der3i")]
+polygon = PackedVector2Array(1518, -305, 1495, -981, 4411, -977, 4412, -275)
 de = NodePath("../Cameras/MainCamera")
 para = NodePath("../Cameras/Salao")
 
-[node name="Salao->Canto" parent="." node_paths=PackedStringArray("de", "para") instance=ExtResource("27_der3i")]
-polygon = PackedVector2Array(4569, -744, 4635, -746, 4638, -357, 4586, -359)
+[node name="Canto" parent="." node_paths=PackedStringArray("de", "para") instance=ExtResource("27_der3i")]
+polygon = PackedVector2Array(4578, -742, 5683, -750, 5655, -369, 4586, -359)
 de = NodePath("../Cameras/Salao")
 para = NodePath("../Cameras/Canto")
-
-[node name="Canto->Salao" parent="." node_paths=PackedStringArray("de", "para") instance=ExtResource("27_der3i")]
-polygon = PackedVector2Array(4343, -753, 4404, -751, 4416, -369, 4345, -369)
-de = NodePath("../Cameras/Canto")
-para = NodePath("../Cameras/Salao")
 
 [editable path="Props/UpgradeMissil"]

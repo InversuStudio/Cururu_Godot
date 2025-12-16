@@ -3,4 +3,5 @@
 [ext_resource type="Script" uid="uid://b5hndlauwu1sk" path="res://Scripts/Componentes/TrasicaoCameraPoly.gd" id="1_fn6vg"]
 
 [node name="TransicaoCameraNeo" type="Polygon2D"]
+color = Color(1, 1, 1, 0.2784314)
 script = ExtResource("1_fn6vg")

@@ -35,7 +35,6 @@ func Enter() -> void:
 	%SFX_Ataque.stream = sfx
 	%SFX_Ataque.play()
 	
-	OffsetSprite()
 
 func Exit() -> void:
 	terminou = false
@@ -66,11 +65,6 @@ func _on_anim_animation_finished(anim_name: StringName) -> void:
 		or anim_name == "Special_Down"):
 		terminou = true
 
-func OffsetSprite() -> void:
-	if parent.sprite.flip_h:
-		parent.sprite.offset.x = -470.0
-	else: parent.sprite.offset.x = 470.0
-
 func Hit(_pos_target:Vector2, hit:HitBox) -> void:
 	#hit.CalcPushback(distancia_push, tempo_push, pos_target)
 	if !hit.is_in_group("Special"):
@@ -81,7 +75,3 @@ func TocaErro() -> void:
 	var n:int = randi_range(0, sfx_sem_magia.size() - 1)
 	%SFX_Extra.stream = sfx_sem_magia[n]
 	%SFX_Extra.play()
-
-func _on_anim_animation_started(_anim_name: StringName) -> void:
-	if is_node_ready():
-		parent.sprite.offset.x = 0.0

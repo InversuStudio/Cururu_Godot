@@ -9,7 +9,6 @@ func _ready() -> void:
 func _physics_process(_delta: float) -> void:
 	if Mundos.player:
 		if Geometry2D.is_point_in_polygon(Mundos.player.global_position, self.polygon):
-			print(name)
 			if de:
 				de.enabled = false
 			if para:

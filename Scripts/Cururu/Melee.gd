@@ -43,10 +43,8 @@ func Enter() -> void:
 		combo_num = next_combo if next_combo <= combo_limit else 0
 	%SFX_Ataque.stream = sfx
 	%SFX_Ataque.play()
-	OffsetSprite()
 
 func Exit() -> void:
-	parent.sprite.offset.y = 0
 	terminou = false
 
 func Update(_delta:float) -> State:
@@ -99,9 +97,3 @@ func Hit(_pos_target:Vector2, hit:HitBox) -> void:
 	#hit.CalcPushback(distancia_push, tempo_push, pos_target)
 	if !hit.is_in_group("Special"):
 		GameData.magia_atual += 1
-
-func OffsetSprite() -> void:
-	parent.sprite.offset.y = 28.0
-	if parent.sprite.flip_h:
-		parent.sprite.offset.x = -235.0
-	else: parent.sprite.offset.x = 235.0
