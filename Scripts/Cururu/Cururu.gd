@@ -123,10 +123,12 @@ func _process(delta: float) -> void:
 	# Armazena último input
 	if input_move.x and input_move.x != input_buffer[1]:
 		#input_buffer.remove_at(0)
-		input_buffer[0] = input_buffer[1]
+		input_buffer[0] = sign(input_buffer[1])
 		#input_buffer.append(input_move.x)
-		input_buffer[1] = input_move.x
-		if input_buffer[0] != input_buffer[1]: virou.emit()
+		input_buffer[1] = sign(input_move.x)
+		if input_buffer[0] != input_buffer[1]:
+			virou.emit()
+			print(input_buffer)
 	#print(input_buffer)
 	# Aplica PROCESS do StateMachine
 	var col:Object = check_chao.get_collider()
