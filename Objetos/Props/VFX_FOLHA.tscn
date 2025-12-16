@@ -10,30 +10,7 @@ colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
 [node name="VFX_FOLHA" type="Node2D"]
 script = ExtResource("1_26h3a")
 
-[node name="Particulas_Folha_Corre" type="CPUParticles2D" parent="."]
-modulate = Color(1.4687854, 1.4687854, 1.4687854, 1)
-show_behind_parent = true
-amount = 50
-texture = ExtResource("1_5s672")
-lifetime = 0.6
-explosiveness = 0.9
-randomness = 1.0
-lifetime_randomness = 0.4
-emission_shape = 1
-emission_sphere_radius = 25.0
-direction = Vector2(-1, -1)
-spread = 30.0
-gravity = Vector2(0, 400)
-initial_velocity_min = 250.0
-initial_velocity_max = 400.0
-angular_velocity_min = 50.0
-angular_velocity_max = 100.0
-angle_max = 360.0
-scale_amount_min = 0.3
-scale_amount_max = 0.5
-color_ramp = SubResource("Gradient_26h3a")
-
-[node name="Particulas_Folha_Queda" type="CPUParticles2D" parent="."]
+[node name="GramaQueda" type="CPUParticles2D" parent="."]
 modulate = Color(1.4687854, 1.4687854, 1.4687854, 1)
 show_behind_parent = true
 emitting = false
@@ -48,6 +25,31 @@ emission_shape = 1
 emission_sphere_radius = 25.0
 direction = Vector2(0, -1)
 spread = 60.0
+gravity = Vector2(0, 400)
+initial_velocity_min = 250.0
+initial_velocity_max = 400.0
+angular_velocity_min = 50.0
+angular_velocity_max = 100.0
+angle_max = 360.0
+scale_amount_min = 0.3
+scale_amount_max = 0.5
+color_ramp = SubResource("Gradient_26h3a")
+
+[node name="GramaCorre" type="CPUParticles2D" parent="."]
+visible = false
+modulate = Color(1.4687854, 1.4687854, 1.4687854, 1)
+show_behind_parent = true
+emitting = false
+amount = 50
+texture = ExtResource("1_5s672")
+lifetime = 0.6
+explosiveness = 0.9
+randomness = 1.0
+lifetime_randomness = 0.4
+emission_shape = 1
+emission_sphere_radius = 25.0
+direction = Vector2(-1, -1)
+spread = 30.0
 gravity = Vector2(0, 400)
 initial_velocity_min = 250.0
 initial_velocity_max = 400.0

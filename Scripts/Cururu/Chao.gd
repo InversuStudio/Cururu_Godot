@@ -25,6 +25,7 @@ func _ready() -> void:
 			turn = true
 		#if get_parent().current_state == self:
 			Flip())
+	%RunVFXCooldown.connect("timeout", SpawnFolhas)
 
 # INICIA O STATE
 func Enter() -> void:
@@ -45,6 +46,7 @@ func Enter() -> void:
 		Flip()
 
 func Exit() -> void:
+	%RunVFXCooldown.stop()
 	turn = false
 	pode_anim = false
 
@@ -90,10 +92,11 @@ func FixedUpdate(delta: float) -> State:
 		if parent.input_move.x:
 			%Anim.play("Run")
 			if %RunVFXCooldown.is_stopped():
-				SpawnFolhas()
 				%RunVFXCooldown.start()
+				#SpawnFolhas()
 		else:
 			%Anim.play("Idle")
+			%RunVFXCooldown.stop()
 		
 	# Se não estiver no chão, mudar State
 	if not parent.is_on_floor():
