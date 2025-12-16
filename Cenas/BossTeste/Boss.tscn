@@ -439,6 +439,7 @@ height = 606.0
 
 [sub_resource type="Animation" id="Animation_16hqa"]
 resource_name = "CospeFogo"
+length = 0.6
 tracks/0/type = "method"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -460,10 +461,10 @@ tracks/1/path = NodePath("SpriteMain:frame")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.10000001, 0.20000002, 0.3, 0.40000004, 0.5, 0.6, 0.70000005),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"times": PackedFloat32Array(0, 0.10000001, 0.20000002, 0.3, 0.40000004, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
 "update": 1,
-"values": [0, 1, 2, 3, 4, 5, 6, 7]
+"values": [0, 1, 2, 3, 4, 5]
 }
 tracks/2/type = "value"
 tracks/2/imported = false
@@ -743,7 +744,7 @@ _data = {
 [node name="Boss" type="Node2D"]
 script = ExtResource("1_s15tt")
 dist_para_pilar = 7.0
-tempo_idle_cuspe = 0.6
+tempo_idle_cuspe = 1.0
 tempo_idle_pilar = 2.0
 musica_luta = ExtResource("2_ojojp")
 
@@ -761,7 +762,7 @@ unique_name_in_owner = true
 position = Vector2(0, -1020)
 scale = Vector2(1.5, 1.5)
 sprite_frames = SubResource("SpriteFrames_nkv4g")
-animation = &"Grito"
+animation = &"CospeFogo"
 autoplay = "Escondido"
 frame = 1
 
