@@ -86,6 +86,7 @@ func Shake(forca:float, duracao:float = 0.5) -> void:
 	
 	shake_ativo = true
 
-func MudaTarget(novo_target:Node2D) -> void:
+func MudaTarget(novo_target:Node2D, novo_offset:Vector2) -> void:
 	target = novo_target
+	offset_target = novo_offset
 	

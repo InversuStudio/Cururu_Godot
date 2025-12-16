@@ -108,6 +108,7 @@ func _ready() -> void:
 		GameData.magia_atual = magia_max
 	if GameData.veio_de_baixo:
 		state_machine.MudaState(state_machine.find_child("Pulo"))
+		await get_tree().create_timer(1.0).timeout
 		GameData.veio_de_baixo = false
 
 func _process(delta: float) -> void:

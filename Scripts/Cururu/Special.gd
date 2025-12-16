@@ -25,13 +25,14 @@ func Enter() -> void:
 	print("MAGIA")
 	Console._State(name)
 	GameData.magia_atual -= 3
+	
 	# Toca animação, de acordo com input direcional
-	if !parent.is_on_floor() and Input.is_action_pressed("baixo"):
-		%Anim.play("Special_Down")
-	elif Input.is_action_pressed("cima"):
-		%Anim.play("Special_Up")
-	else:
-		%Anim.play("Special")
+	#if !parent.is_on_floor() and Input.is_action_pressed("baixo"):
+		#%Anim.play("Special_Down")
+	#elif Input.is_action_pressed("cima"):
+		#%Anim.play("Special_Up")
+	#else:
+	%Anim.play("Special")
 	%SFX_Ataque.stream = sfx
 	%SFX_Ataque.play()
 	
