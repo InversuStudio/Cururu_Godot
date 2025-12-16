@@ -1142,12 +1142,13 @@ musica = ExtResource("31_7dakl")
 metadata/_custom_type_script = "uid://dd16yu704x6wt"
 
 [node name="MainCamera" parent="." node_paths=PackedStringArray("target", "limite_camera") instance=ExtResource("37_nika8")]
-position = Vector2(1720, -1240.0005)
+position = Vector2(1720, -1239.7007)
 zoom = Vector2(0.8, 0.8)
-limit_left = 240
-limit_top = -2903
+limit_enabled = true
+limit_left = 243
+limit_top = -2910
 limit_right = 9305
-limit_bottom = -949
+limit_bottom = -900
 target = NodePath("../Cururu")
 limite_camera = NodePath("../LimiteCamera")
 

@@ -1,4 +1,4 @@
-[gd_scene load_steps=49 format=4 uid="uid://ba8igbg8v441c"]
+[gd_scene load_steps=51 format=4 uid="uid://ba8igbg8v441c"]
 
 [ext_resource type="Texture2D" uid="uid://cqu5scrrmr5n5" path="res://Sprites/Cenário/Mata_Atlantica/Background/Iluminação e Fundo/FUNDOCEU.png" id="1_hnubh"]
 [ext_resource type="Texture2D" uid="uid://c374cwih425cq" path="res://Sprites/Cenário/Tilemaps/Base.png" id="1_umcgc"]
@@ -41,6 +41,7 @@
 [ext_resource type="Texture2D" uid="uid://c3tl3oddronfh" path="res://icon.svg" id="31_1bo8s"]
 [ext_resource type="Texture2D" uid="uid://ccql65wj55kqf" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/arvore_s3.png" id="36_otcsn"]
 [ext_resource type="Texture2D" uid="uid://ckqo2bxr2g0ii" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/arvore_S2.png" id="37_0ual7"]
+[ext_resource type="Script" uid="uid://1asbq143ewh0" path="res://Cenas/Mata_Atlantica/AREA02/empurrar_player_direita.gd" id="37_4xj1r"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_mbqr8"]
 texture = ExtResource("31_1bo8s")
@@ -327,6 +328,8 @@ texture_region_size = Vector2i(128, 128)
 tile_size = Vector2i(128, 128)
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_75oum")
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_1bo8s"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_x3mff"]
 size = Vector2(734.375, 94.31251)
@@ -1968,8 +1971,20 @@ position = Vector2(2004, 1405)
 drop_item = Array[PackedScene]([ExtResource("19_aw4uh")])
 multi_drop = true
 
+[node name="EmpurrarPlayer" type="Area2D" parent="."]
+position = Vector2(-4343, -1889)
+collision_layer = 0
+collision_mask = 2
+script = ExtResource("37_4xj1r")
+
+[node name="EmpurrarPlayer" type="CollisionShape2D" parent="EmpurrarPlayer"]
+position = Vector2(4426, 3098.0002)
+scale = Vector2(15, 15)
+shape = SubResource("CircleShape2D_1bo8s")
+debug_color = Color(0.71713597, 0.46270615, 0.37672725, 0.41960785)
+
 [node name="TransicoesFase" type="Node2D" parent="."]
-position = Vector2(-4670, 1574)
+position = Vector2(-4670, 1575)
 
 [node name="TransicaoFase" parent="TransicoesFase" instance=ExtResource("4_aepc8")]
 position = Vector2(4736, 31)
@@ -2003,12 +2018,13 @@ metadata/_custom_type_script = "uid://dd16yu704x6wt"
 position = Vector2(-1936, 904)
 
 [node name="MainCamera" parent="." node_paths=PackedStringArray("target", "limite_camera") instance=ExtResource("27_ctjy6")]
-position = Vector2(512.0005, 1313.9993)
+position = Vector2(512.0005, 1314.0009)
 zoom = Vector2(0.8, 0.8)
-limit_left = -4349
-limit_top = -1896
-limit_right = 3356
-limit_bottom = 1522
+limit_enabled = true
+limit_left = -4343
+limit_top = -1889
+limit_right = 3353
+limit_bottom = 1589
 target = NodePath("../Entidades/Cururu")
 limite_camera = NodePath("../LimiteCam")
 
@@ -2017,3 +2033,5 @@ offset_left = -4343.0
 offset_top = -1889.0
 offset_right = 3353.0
 offset_bottom = 1589.0
+
+[connection signal="body_entered" from="EmpurrarPlayer" to="EmpurrarPlayer" method="_on_body_entered"]

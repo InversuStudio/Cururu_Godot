@@ -1,4 +1,4 @@
-[gd_scene load_steps=49 format=4 uid="uid://chmrn5p1wbo0m"]
+[gd_scene load_steps=51 format=4 uid="uid://chmrn5p1wbo0m"]
 
 [ext_resource type="Texture2D" uid="uid://cqu5scrrmr5n5" path="res://Sprites/Cenário/Mata_Atlantica/Background/Iluminação e Fundo/FUNDOCEU.png" id="1_dk80r"]
 [ext_resource type="Texture2D" uid="uid://c374cwih425cq" path="res://Sprites/Cenário/Tilemaps/Base.png" id="1_swhqk"]
@@ -42,6 +42,7 @@
 [ext_resource type="AudioStream" uid="uid://c7qftchbhu6xc" path="res://Audio/SFX/AMBIENTE/Musica_Jogo.mp3" id="27_vgqnr"]
 [ext_resource type="PackedScene" uid="uid://u28e3eudu6ch" path="res://Objetos/Funcionalidade/MainCamera.tscn" id="34_xqsk0"]
 [ext_resource type="Texture2D" uid="uid://0agjwkmg3gef" path="res://Sprites/VFX/Iluminação/luz azul.png" id="43_n7put"]
+[ext_resource type="Script" uid="uid://1asbq143ewh0" path="res://Cenas/Mata_Atlantica/AREA02/empurrar_player_direita.gd" id="43_ygge3"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ic43t"]
 size = Vector2(4204, 3665)
@@ -200,6 +201,8 @@ size = Vector2(444, 68)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_n0g4c"]
 size = Vector2(76.04419, 466.39465)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_66bak"]
 
 [node name="MA_2-2" type="Node2D"]
 
@@ -1057,12 +1060,13 @@ offset_right = 4981.0
 offset_bottom = -392.0
 
 [node name="MainCamera" parent="." node_paths=PackedStringArray("target", "limite_camera") instance=ExtResource("34_xqsk0")]
-position = Vector2(2588.0002, -726.0004)
+position = Vector2(2588.0002, -725.9996)
 zoom = Vector2(0.8, 0.8)
-limit_left = 779
-limit_top = -4051
-limit_right = 4983
-limit_bottom = -386
+limit_enabled = true
+limit_left = 782
+limit_top = -4049
+limit_right = 4981
+limit_bottom = -392
 target = NodePath("../Entidades/Cururu")
 limite_camera = NodePath("../LimiteCam")
 
@@ -1079,3 +1083,17 @@ texture = ExtResource("43_n7put")
 position = Vector2(3466, -599)
 scale = Vector2(0.57534164, 0.8)
 color = Color(0.012617188, 0.012617188, 0.012617188, 1)
+
+[node name="EmpurrarPlayer" type="Area2D" parent="."]
+position = Vector2(-4343, -1889)
+collision_layer = 0
+collision_mask = 2
+script = ExtResource("43_ygge3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="EmpurrarPlayer"]
+position = Vector2(7232, 1093.0001)
+scale = Vector2(15, 15)
+shape = SubResource("CircleShape2D_66bak")
+debug_color = Color(0.71713597, 0.46270615, 0.37672725, 0.41960785)
+
+[connection signal="body_entered" from="EmpurrarPlayer" to="EmpurrarPlayer" method="_on_body_entered"]
