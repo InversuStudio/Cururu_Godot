@@ -1590,18 +1590,21 @@ position = Vector2(-25772, -3343)
 position = Vector2(17.125, -716.6875)
 shape = SubResource("RectangleShape2D_nj6rs")
 
+[node name="MainCamera" parent="." node_paths=PackedStringArray("target", "limite_camera") instance=ExtResource("1_nutf4")]
+position = Vector2(-29361.998, -3397.9985)
+zoom = Vector2(0.8, 0.8)
+limit_enabled = true
+limit_left = -29820
+limit_top = -5314
+limit_right = -16129
+limit_bottom = -2407
+target = NodePath("../Cururu")
+speed = 6.0
+limite_camera = NodePath("../LimiteCam")
+deadzone = Vector2(100, 300)
+
 [node name="LimiteCam" type="ReferenceRect" parent="."]
 offset_left = -29820.0
 offset_top = -5314.0
 offset_right = -16129.0
 offset_bottom = -2407.0
-
-[node name="MainCamera" parent="." node_paths=PackedStringArray("target", "limite_camera") instance=ExtResource("1_nutf4")]
-position = Vector2(-29361.988, -3397.9985)
-zoom = Vector2(0.8, 0.8)
-limit_left = -29819
-limit_top = -5320
-limit_right = -16130
-limit_bottom = -2469
-target = NodePath("../Cururu")
-limite_camera = NodePath("../LimiteCam")

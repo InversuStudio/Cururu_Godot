@@ -492,12 +492,13 @@ position = Vector2(9466, -1113)
 nome_id = "MA_2_6"
 
 [node name="MainCamera" parent="." node_paths=PackedStringArray("target", "limite_camera") instance=ExtResource("13_4scg7")]
-position = Vector2(404.0001, -334.0002)
+position = Vector2(403.99988, -333.99918)
 zoom = Vector2(0.8, 0.8)
-limit_left = 136
-limit_top = -1822
-limit_right = 11880
-limit_bottom = -52
+limit_enabled = true
+limit_left = 84
+limit_top = -1870
+limit_right = 11820
+limit_bottom = -34
 target = NodePath("../Player")
 limite_camera = NodePath("../LimiteCam")
 

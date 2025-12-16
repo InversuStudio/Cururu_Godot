@@ -2394,18 +2394,21 @@ position = Vector2(-8265, -910)
 scale = Vector2(0.71126765, 0.7112676)
 texture = ExtResource("46_tssdc")
 
+[node name="MainCamera" parent="." node_paths=PackedStringArray("target", "limite_camera") instance=ExtResource("37_r86pu")]
+position = Vector2(-18459, -3666.9993)
+zoom = Vector2(0.8, 0.8)
+limit_enabled = true
+limit_left = -18893
+limit_top = -5354
+limit_right = -8185
+limit_bottom = 992
+target = NodePath("../Cururu")
+speed = 7.0
+limite_camera = NodePath("../ReferenceRect")
+deadzone = Vector2(100, 300)
+
 [node name="ReferenceRect" type="ReferenceRect" parent="."]
 offset_left = -18893.0
 offset_top = -5354.0
 offset_right = -8185.0
 offset_bottom = 992.0
-
-[node name="MainCamera" parent="." node_paths=PackedStringArray("target", "limite_camera") instance=ExtResource("37_r86pu")]
-position = Vector2(-18458.988, -3662.9985)
-zoom = Vector2(0.8, 0.8)
-limit_left = -18893
-limit_top = -5349
-limit_right = -8192
-limit_bottom = 937
-target = NodePath("../Cururu")
-limite_camera = NodePath("../ReferenceRect")
