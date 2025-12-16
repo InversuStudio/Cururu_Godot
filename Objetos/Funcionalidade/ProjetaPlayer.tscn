@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://cex7nla2adui2"]
+
+[ext_resource type="Script" uid="uid://1asbq143ewh0" path="res://Scripts/Componentes/empurrar_player_direita.gd" id="1_hl3p3"]
+
+[node name="ProjetaPlayer" type="Area2D"]
+collision_layer = 0
+collision_mask = 2
+script = ExtResource("1_hl3p3")

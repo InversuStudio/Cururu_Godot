@@ -1,9 +1,10 @@
-[gd_scene load_steps=8 format=4 uid="uid://di1jub7im5me4"]
+[gd_scene load_steps=10 format=4 uid="uid://di1jub7im5me4"]
 
 [ext_resource type="Texture2D" uid="uid://c374cwih425cq" path="res://Sprites/Cenário/Tilemaps/Base.png" id="1_tjjcd"]
 [ext_resource type="PackedScene" uid="uid://cqyub70sv0ofp" path="res://Objetos/Props/SavePoint.tscn" id="2_ojfrm"]
 [ext_resource type="PackedScene" uid="uid://nohq28uk7lfk" path="res://Objetos/Entidades/Player.tscn" id="3_14s47"]
 [ext_resource type="PackedScene" uid="uid://1apfpwlqocxn" path="res://Objetos/Funcionalidade/TransicaoFase.tscn" id="4_aug86"]
+[ext_resource type="PackedScene" uid="uid://cex7nla2adui2" path="res://Objetos/Funcionalidade/ProjetaPlayer.tscn" id="5_kwcei"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gj2pb"]
 texture = ExtResource("1_tjjcd")
@@ -20,6 +21,9 @@ sources/0 = SubResource("TileSetAtlasSource_gj2pb")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nl0uo"]
 size = Vector2(530, 52)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tjjcd"]
+size = Vector2(502, 89.5)
 
 [node name="FaseTeste3" type="Node2D"]
 
@@ -44,3 +48,9 @@ posicao = Vector2(-497, -1570)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TransicaoFase"]
 position = Vector2(0, 127)
 shape = SubResource("RectangleShape2D_nl0uo")
+
+[node name="ProjetaPlayer" parent="." instance=ExtResource("5_kwcei")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ProjetaPlayer"]
+position = Vector2(1, -226.25)
+shape = SubResource("RectangleShape2D_tjjcd")

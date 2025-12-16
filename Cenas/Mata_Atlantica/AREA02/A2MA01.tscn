@@ -41,7 +41,7 @@
 [ext_resource type="Texture2D" uid="uid://c3tl3oddronfh" path="res://icon.svg" id="31_1bo8s"]
 [ext_resource type="Texture2D" uid="uid://ccql65wj55kqf" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/arvore_s3.png" id="36_otcsn"]
 [ext_resource type="Texture2D" uid="uid://ckqo2bxr2g0ii" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/arvore_S2.png" id="37_0ual7"]
-[ext_resource type="Script" uid="uid://1asbq143ewh0" path="res://Cenas/Mata_Atlantica/AREA02/empurrar_player_direita.gd" id="37_4xj1r"]
+[ext_resource type="Script" uid="uid://1asbq143ewh0" path="res://Scripts/Componentes/empurrar_player_direita.gd" id="37_4xj1r"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_mbqr8"]
 texture = ExtResource("31_1bo8s")
@@ -801,7 +801,7 @@ position = Vector2(66, -152)
 position = Vector2(2285, -277)
 
 [node name="Plataforma2" parent="Plataformas" instance=ExtResource("13_w4lji")]
-position = Vector2(-469, 1156)
+position = Vector2(-535, 1156)
 
 [node name="Plataforma8" parent="Plataformas" instance=ExtResource("13_w4lji")]
 position = Vector2(-3705, 939.0001)
@@ -1976,6 +1976,7 @@ position = Vector2(-4343, -1889)
 collision_layer = 0
 collision_mask = 2
 script = ExtResource("37_4xj1r")
+forca = 5
 
 [node name="EmpurrarPlayer" type="CollisionShape2D" parent="EmpurrarPlayer"]
 position = Vector2(4426, 3098.0002)
@@ -2033,5 +2034,3 @@ offset_left = -4343.0
 offset_top = -1889.0
 offset_right = 3353.0
 offset_bottom = 1589.0
-
-[connection signal="body_entered" from="EmpurrarPlayer" to="EmpurrarPlayer" method="_on_body_entered"]

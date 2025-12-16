@@ -10,6 +10,8 @@ extends State
 ## State de ataque magico
 @export var special_state: State = null
 
+var nao_move:bool = false
+
 # INICIA O STATE
 func Enter() -> void:
 	print("JUMP")
@@ -19,6 +21,11 @@ func Enter() -> void:
 	%SFX_Pulo.play()
 	if !Input.is_action_pressed("pulo") and parent.pode_mover and !GameData.veio_de_baixo:
 		parent.velocity.y /= 2.0
+	if GameData.veio_de_baixo:
+		nao_move = true
+
+func Exit() -> void:
+	nao_move = false
 
 func Update(_delta: float) -> State:
 	# INPUT MELEE
@@ -47,12 +54,13 @@ func FixedUpdate(delta: float) -> State:
 	
 	# Aplica movimento
 	var dir:float = parent.input_move.x
-	if dir != 0.0:
-		parent.velocity.x += parent.accel * dir * delta
-		if abs(parent.velocity.x) > parent.air_speed:
-			parent.velocity.x = parent.air_speed * dir
-	else:
-		parent.velocity.x = move_toward(parent.velocity.x, dir, parent.decel * delta)
+	if !nao_move:
+		if dir != 0.0:
+			parent.velocity.x += parent.accel * dir * delta
+			if abs(parent.velocity.x) > parent.air_speed:
+				parent.velocity.x = parent.air_speed * dir
+		else:
+			parent.velocity.x = move_toward(parent.velocity.x, dir, parent.decel * delta)
 	
 	# Espelha o sprite de acordo com o input
 	if parent.input_move.x > 0:

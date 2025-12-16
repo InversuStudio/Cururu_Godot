@@ -777,7 +777,7 @@ shape = SubResource("RectangleShape2D_xlh4k")
 position = Vector2(4284, -1399)
 vertical = true
 destino = 16
-posicao = Vector2(70, 1537)
+posicao = Vector2(67, 1557)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TransicoesFase/2-1"]
 shape = SubResource("RectangleShape2D_q2u2q")
@@ -789,12 +789,13 @@ volume = -0.5
 metadata/_custom_type_script = "uid://dd16yu704x6wt"
 
 [node name="MainCamera" parent="." node_paths=PackedStringArray("target", "limite_camera") instance=ExtResource("23_n5d52")]
-position = Vector2(228.00009, -596.50037)
+position = Vector2(228, -596.4996)
 zoom = Vector2(0.8, 0.8)
+limit_enabled = true
 limit_left = 6
-limit_top = -1402
+limit_top = -1401
 limit_right = 4783
-limit_bottom = -276
+limit_bottom = -232
 target = NodePath("../Entidades/Cururu")
 limite_camera = NodePath("../LimiteCam")
 

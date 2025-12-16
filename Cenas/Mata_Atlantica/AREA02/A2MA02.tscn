@@ -42,7 +42,7 @@
 [ext_resource type="AudioStream" uid="uid://c7qftchbhu6xc" path="res://Audio/SFX/AMBIENTE/Musica_Jogo.mp3" id="27_vgqnr"]
 [ext_resource type="PackedScene" uid="uid://u28e3eudu6ch" path="res://Objetos/Funcionalidade/MainCamera.tscn" id="34_xqsk0"]
 [ext_resource type="Texture2D" uid="uid://0agjwkmg3gef" path="res://Sprites/VFX/Iluminação/luz azul.png" id="43_n7put"]
-[ext_resource type="Script" uid="uid://1asbq143ewh0" path="res://Cenas/Mata_Atlantica/AREA02/empurrar_player_direita.gd" id="43_ygge3"]
+[ext_resource type="Script" uid="uid://1asbq143ewh0" path="res://Scripts/Componentes/empurrar_player_direita.gd" id="43_ygge3"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ic43t"]
 size = Vector2(4204, 3665)

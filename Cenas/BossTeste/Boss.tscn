@@ -649,11 +649,12 @@ vida_max = 5
 morre = false
 metadata/_custom_type_script = "uid://hsdutxxttrp3"
 
-[node name="HurtCabeca" parent="." node_paths=PackedStringArray("comp_vida") instance=ExtResource("3_fwdqd")]
+[node name="HurtCabeca" parent="." node_paths=PackedStringArray("comp_vida", "sprite") instance=ExtResource("3_fwdqd")]
 unique_name_in_owner = true
 collision_layer = 16
 comp_vida = NodePath("../VidaMCabeca")
 hit_sfx = ExtResource("5_b2ig3")
+sprite = NodePath("SpriteCabeca")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HurtCabeca"]
 position = Vector2(111, -943)
@@ -672,11 +673,12 @@ vida_max = 5
 morre = false
 metadata/_custom_type_script = "uid://hsdutxxttrp3"
 
-[node name="HurtCorpo" parent="." node_paths=PackedStringArray("comp_vida") instance=ExtResource("3_fwdqd")]
+[node name="HurtCorpo" parent="." node_paths=PackedStringArray("comp_vida", "sprite") instance=ExtResource("3_fwdqd")]
 unique_name_in_owner = true
 collision_layer = 16
 comp_vida = NodePath("../VidaMCorpo")
 hit_sfx = ExtResource("5_b2ig3")
+sprite = NodePath("SpriteCorpo")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HurtCorpo"]
 position = Vector2(91, -351)

@@ -77,6 +77,9 @@ var pode_mover: bool = true
 
 @onready var check_agua_up: RayCast2D = $CheckAguaUp
 @onready var check_agua_down: RayCast2D = $CheckAguaDown
+@onready var check_chao: RayCast2D = $CheckChao
+
+var detalhe_chao:Array = [false, ""]
 
 signal virou
 var input_buffer:Array[float] = [0.0, 0.0]
@@ -126,6 +129,13 @@ func _process(delta: float) -> void:
 		if input_buffer[0] != input_buffer[1]: virou.emit()
 	#print(input_buffer)
 	# Aplica PROCESS do StateMachine
+	if check_chao.is_colliding():
+		var grupo:String = ""
+		if check_chao.get_collider().get_groups() != []:
+			grupo = check_chao.get_collider().get_groups()[0]
+		detalhe_chao = [true, grupo]
+	else:
+		detalhe_chao = [false, ""]
 	state_machine.Update(delta)
 	
 	# !!!!!!!!DEBUG - TIRAR DEPOIS!!!!!!!!!!!
