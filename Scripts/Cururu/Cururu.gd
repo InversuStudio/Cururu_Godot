@@ -129,10 +129,11 @@ func _process(delta: float) -> void:
 		if input_buffer[0] != input_buffer[1]: virou.emit()
 	#print(input_buffer)
 	# Aplica PROCESS do StateMachine
-	if check_chao.is_colliding():
+	var col:Object = check_chao.get_collider()
+	if col:
 		var grupo:String = ""
-		if check_chao.get_collider().get_groups() != []:
-			grupo = check_chao.get_collider().get_groups()[0]
+		if col.get_groups() != []:
+			grupo = col.get_groups()[0]
 		detalhe_chao = [true, grupo]
 	else:
 		detalhe_chao = [false, ""]
