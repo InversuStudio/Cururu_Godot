@@ -16,7 +16,7 @@ func _on_hurt_box_hurt(_h:Array[HitBox]) -> void:
 		if multi_drop:
 			for i:PackedScene in drop_item:
 				var item:Node2D = i.instantiate()
-				get_tree().current_scene.add_child(item)
+				get_parent().add_child(item)
 				item.global_position = $PosItem.global_position
 		else:
 			var rand:int = randi_range(0, drop_item.size() - 1)
