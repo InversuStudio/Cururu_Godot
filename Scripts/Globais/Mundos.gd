@@ -102,9 +102,9 @@ func Reload() -> void:
 	get_tree().reload_current_scene()
 
 var moeda: PackedScene = preload("res://Objetos/Props/Moeda.tscn")
-func SpawnMoeda(pos:Vector2) -> void:
+func SpawnMoeda(parent:Node2D, pos:Vector2) -> void:
 	var coin : Node2D = moeda.instantiate()
-	get_tree().current_scene.call_deferred("add_child", coin)
+	parent.call_deferred("add_child", coin)
 	coin.global_position = pos
 
 func HitFreeze(hit_freeze:float) -> void:
