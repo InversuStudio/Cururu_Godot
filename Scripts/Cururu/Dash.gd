@@ -49,12 +49,3 @@ func _on_dash_time_timeout() -> void:
 
 func _on_anim_animation_finished(anim_name: StringName) -> void:
 	if anim_name == "Dash_End": acabou = true
-	#match anim_name:
-		#"Dash_Start":
-			#%Anim.play("Dash_Loop")
-			#%DashCooldown.start()
-			#%DashTime.start()
-			#var mult:int = -1 if %Cururu.flip_h == true else 1
-			#parent.velocity.x = parent.dash_speed * mult
-		#"Dash_End":
-			#acabou = true

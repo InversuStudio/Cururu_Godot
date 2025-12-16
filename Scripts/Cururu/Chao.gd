@@ -20,10 +20,10 @@ var turn:bool = false
 func _ready() -> void:
 	await get_tree().current_scene.ready
 	parent.connect("virou", func():
-		if pode_anim:
+		if get_parent().current_state == self:#pode_anim:
 			%Anim.play("Turn")
 			turn = true
-		if get_parent().current_state == self:
+		#if get_parent().current_state == self:
 			Flip())
 
 # INICIA O STATE
@@ -38,6 +38,11 @@ func Enter() -> void:
 	
 	if GameData.veio_de_baixo:
 		GameData.veio_de_baixo = false
+	var flip:float = -1.0 if parent.sprite.flip_h else 1.0
+	if parent.input_move.x and flip != parent.input_buffer[1]:
+		%Anim.play("Turn")
+		turn = true
+		Flip()
 
 func Exit() -> void:
 	turn = false
@@ -102,6 +107,7 @@ func _on_anim_animation_finished(anim_name: StringName) -> void:
 	if anim_name == "Turn":
 		print("Turn acabou")
 		turn = false
+		pode_anim = true
 
 func Flip() -> void:
 	if parent.input_move.x > 0:
