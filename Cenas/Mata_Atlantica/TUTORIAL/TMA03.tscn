@@ -1,4 +1,4 @@
-[gd_scene load_steps=51 format=4 uid="uid://nqosq2wj0auk"]
+[gd_scene load_steps=50 format=4 uid="uid://nqosq2wj0auk"]
 
 [ext_resource type="Texture2D" uid="uid://cqu5scrrmr5n5" path="res://Sprites/Cenário/Mata_Atlantica/Background/Iluminação e Fundo/FUNDOCEU.png" id="1_4e4qg"]
 [ext_resource type="Texture2D" uid="uid://c374cwih425cq" path="res://Sprites/Cenário/Tilemaps/Base.png" id="1_vftmf"]
@@ -26,7 +26,6 @@
 [ext_resource type="Texture2D" uid="uid://jecy4bfqqqxu" path="res://Sprites/Cenário/Mata_Atlantica/Teto/Moita teste.png" id="17_wfqej"]
 [ext_resource type="Texture2D" uid="uid://d3t6c4pjsosio" path="res://Sprites/Cenário/Mata_Atlantica/Background/Mata/mato01.png" id="20_386eh"]
 [ext_resource type="Texture2D" uid="uid://cj4rj4oj20ogb" path="res://Sprites/Cenário/Mata_Atlantica/Chao/chap_interno.png" id="20_l7gx4"]
-[ext_resource type="PackedScene" uid="uid://bu62qgilsxetf" path="res://Objetos/Entidades/Escorpiao.tscn" id="21_54dor"]
 [ext_resource type="Texture2D" uid="uid://uq6dbjep5wva" path="res://Sprites/Cenário/Mata_Atlantica/Foreground/frontfolha.png" id="23_3qqkp"]
 [ext_resource type="Texture2D" uid="uid://c2yapafbd3cnf" path="res://Sprites/Cenário/Mata_Atlantica/Foreground/cipó.png" id="24_xxaxg"]
 [ext_resource type="Texture2D" uid="uid://cw2yeg7ynw0kl" path="res://Sprites/Cenário/Mata_Atlantica/Chao/chap_externo.png" id="27_4e4qg"]
@@ -886,12 +885,6 @@ shape = SubResource("RectangleShape2D_yftf5")
 position = Vector2(106, -279)
 scale = Vector2(1, 2.4414063)
 texture = ExtResource("12_flheb")
-
-[node name="Escorpiao2" parent="Background/0" instance=ExtResource("21_54dor")]
-position = Vector2(-15433.001, -406.00003)
-
-[node name="Escorpiao3" parent="Background/0" instance=ExtResource("21_54dor")]
-position = Vector2(-16902, -791)
 
 [node name="Cururu" parent="Background/0" instance=ExtResource("28_yftf5")]
 z_index = 0

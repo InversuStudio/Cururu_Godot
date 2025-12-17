@@ -843,7 +843,6 @@ texture = ExtResource("24_csesn")
 position = Vector2(66, -152)
 
 [node name="ParedeSecreta" parent="0/Plataformas" instance=ExtResource("10_hdfdg")]
-visible = false
 visibility_layer = 7
 z_index = 1
 position = Vector2(-1486.0004, -111.99997)

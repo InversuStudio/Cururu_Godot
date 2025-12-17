@@ -183,6 +183,7 @@ physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_b8uhf")
 
 [node name="MA_1-1" type="Node2D"]
+position = Vector2(1, 0)
 
 [node name="background" type="Node2D" parent="."]
 light_mask = 2
@@ -1315,7 +1316,7 @@ volume = -0.5
 metadata/_custom_type_script = "uid://dd16yu704x6wt"
 
 [node name="MainCamera" parent="." node_paths=PackedStringArray("target", "limite_camera") instance=ExtResource("31_f8u2d")]
-position = Vector2(-8781.001, -217.99994)
+position = Vector2(-8781.996, -217.99994)
 zoom = Vector2(0.8, 0.8)
 limit_enabled = true
 limit_left = -9068

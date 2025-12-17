@@ -1,4 +1,4 @@
-[gd_scene load_steps=34 format=4 uid="uid://c2wxcq8h71dqe"]
+[gd_scene load_steps=35 format=4 uid="uid://c2wxcq8h71dqe"]
 
 [ext_resource type="Texture2D" uid="uid://cqu5scrrmr5n5" path="res://Sprites/Cenário/Mata_Atlantica/Background/Iluminação e Fundo/FUNDOCEU.png" id="1_7lg54"]
 [ext_resource type="Texture2D" uid="uid://c374cwih425cq" path="res://Sprites/Cenário/Tilemaps/Base.png" id="1_lvkdv"]
@@ -25,6 +25,7 @@
 [ext_resource type="Texture2D" uid="uid://jecy4bfqqqxu" path="res://Sprites/Cenário/Mata_Atlantica/Teto/Moita teste.png" id="14_deoee"]
 [ext_resource type="Texture2D" uid="uid://c2yapafbd3cnf" path="res://Sprites/Cenário/Mata_Atlantica/Foreground/cipó.png" id="16_decf0"]
 [ext_resource type="Texture2D" uid="uid://dw42p1qq6njp8" path="res://Sprites/Cenário/Mata_Atlantica/Chao/moita_miasma2.png" id="16_wlrva"]
+[ext_resource type="PackedScene" uid="uid://cdhelg6sloxbj" path="res://Objetos/Props/PortaTemp.tscn" id="18_8hrd6"]
 [ext_resource type="Script" uid="uid://dd16yu704x6wt" path="res://Scripts/Componentes/BGM_Player.gd" id="23_8nsrb"]
 [ext_resource type="PackedScene" uid="uid://bu62qgilsxetf" path="res://Objetos/Entidades/Escorpiao.tscn" id="23_fpvhh"]
 [ext_resource type="PackedScene" uid="uid://u28e3eudu6ch" path="res://Objetos/Funcionalidade/MainCamera.tscn" id="23_n5d52"]
@@ -398,6 +399,9 @@ texture = ExtResource("16_wlrva")
 [node name="MoitaMiasma3" type="Sprite2D" parent="0/Moitas"]
 position = Vector2(1067, -599)
 texture = ExtResource("16_wlrva")
+
+[node name="PortaTemp" parent="0" instance=ExtResource("18_8hrd6")]
+position = Vector2(1475, -952)
 
 [node name="Entidades" type="Node2D" parent="0"]
 
