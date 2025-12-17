@@ -81,8 +81,8 @@ func Pushback(pos:Vector2) -> void:
 
 func Morte() -> void:
 	for i in range(3):
-		Mundos.SpawnMoeda(get_parent(), %SpawnMoeda.global_position)
-	call_deferred("queue_free")	
+		Mundos.SpawnMoeda(get_parent(), global_position)
+	call_deferred("queue_free")
 
 func PausaEMira() -> void:
 	velocity = Vector2.ZERO

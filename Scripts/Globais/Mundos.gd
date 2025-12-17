@@ -105,7 +105,8 @@ var moeda: PackedScene = preload("res://Objetos/Props/Moeda.tscn")
 func SpawnMoeda(parent:Node2D, pos:Vector2) -> void:
 	var coin : Node2D = moeda.instantiate()
 	parent.call_deferred("add_child", coin)
-	coin.global_position = pos
+	#coin.global_position = pos
+	coin.set_deferred("global_position", pos)
 
 func HitFreeze(hit_freeze:float) -> void:
 	if hit_freeze > 0.0 and Engine.time_scale == 1.0:

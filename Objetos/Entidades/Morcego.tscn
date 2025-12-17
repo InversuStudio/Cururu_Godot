@@ -125,10 +125,6 @@ rotation = -1.57079
 shape = SubResource("CapsuleShape2D_ujy2f")
 debug_color = Color(0.807155, 0.414602, 3.85046e-07, 0.42)
 
-[node name="SpawnMoeda" type="Marker2D" parent="."]
-unique_name_in_owner = true
-position = Vector2(2.2727273, -18.181818)
-
 [node name="TimerDirecaoIdle" type="Timer" parent="."]
 autostart = true
 
