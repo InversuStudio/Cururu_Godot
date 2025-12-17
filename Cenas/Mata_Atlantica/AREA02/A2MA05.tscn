@@ -4075,7 +4075,7 @@ offset_right = 7697.0
 offset_bottom = -95.0
 
 [node name="MainCamera" parent="." node_paths=PackedStringArray("target", "limite_camera") instance=ExtResource("30_yk4cc")]
-position = Vector2(7348.9995, -433.99976)
+position = Vector2(7348.9995, -433.99802)
 zoom = Vector2(0.8, 0.8)
 limit_enabled = true
 limit_left = 674
@@ -4087,3 +4087,47 @@ limite_camera = NodePath("../LimiteCam")
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
 color = Color(0, 0, 0, 1)
+
+[node name="-4" type="CanvasLayer" parent="."]
+follow_viewport_enabled = true
+follow_viewport_scale = 0.6
+
+[node name="-3" type="CanvasLayer" parent="."]
+follow_viewport_enabled = true
+follow_viewport_scale = 0.7
+
+[node name="-25" type="CanvasLayer" parent="."]
+follow_viewport_enabled = true
+follow_viewport_scale = 0.75
+
+[node name="-2" type="CanvasLayer" parent="."]
+follow_viewport_enabled = true
+follow_viewport_scale = 0.8
+
+[node name="-15" type="CanvasLayer" parent="."]
+follow_viewport_enabled = true
+follow_viewport_scale = 0.85
+
+[node name="-1" type="CanvasLayer" parent="."]
+follow_viewport_enabled = true
+follow_viewport_scale = 0.9
+
+[node name="-05" type="CanvasLayer" parent="."]
+follow_viewport_enabled = true
+follow_viewport_scale = 0.95
+
+[node name="-02" type="CanvasLayer" parent="."]
+follow_viewport_enabled = true
+follow_viewport_scale = 0.98
+
+[node name="0" type="CanvasLayer" parent="."]
+follow_viewport_enabled = true
+
+[node name="1" type="CanvasLayer" parent="."]
+follow_viewport_enabled = true
+
+[node name="2" type="CanvasLayer" parent="."]
+follow_viewport_enabled = true
+
+[node name="3" type="CanvasLayer" parent="."]
+follow_viewport_enabled = true

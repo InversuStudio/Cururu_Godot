@@ -1,4 +1,4 @@
-[gd_scene load_steps=54 format=4 uid="uid://dfuswe0wcsy33"]
+[gd_scene load_steps=55 format=4 uid="uid://dfuswe0wcsy33"]
 
 [ext_resource type="Texture2D" uid="uid://c374cwih425cq" path="res://Sprites/Cenário/Tilemaps/Base.png" id="1_axyo6"]
 [ext_resource type="PackedScene" uid="uid://cqyub70sv0ofp" path="res://Objetos/Props/SavePoint.tscn" id="1_kqyhf"]
@@ -24,6 +24,7 @@
 [ext_resource type="Texture2D" uid="uid://bi1a2quip0tli" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/arvore03.png" id="13_rcn2b"]
 [ext_resource type="Texture2D" uid="uid://b6yel5f58h380" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/arvore05.png" id="14_wmciv"]
 [ext_resource type="Texture2D" uid="uid://ccy8rilccs3gf" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/arvore06.png" id="15_i5sln"]
+[ext_resource type="Texture2D" uid="uid://u12dsbd5ebth" path="res://Sprites/Cenário/Mata_Atlantica/Background/Mata/mato00.png" id="16_ny35b"]
 [ext_resource type="Texture2D" uid="uid://dujq612hvg603" path="res://Sprites/Cenário/Mata_Atlantica/Pedras e Ruinas/ruinas.png" id="19_6kvc1"]
 [ext_resource type="Texture2D" uid="uid://dmmwsf5tpgg24" path="res://Sprites/Cenário/Mata_Atlantica/Interativos/ponte exemplo.png" id="20_34afy"]
 [ext_resource type="Texture2D" uid="uid://bykelnwq60jce" path="res://Sprites/Cenário/Mata_Atlantica/Pedras e Ruinas/pilar_templo.png" id="20_jwima"]
@@ -266,7 +267,7 @@ texture = ExtResource("4_mcqsr")
 
 [node name="-25" type="CanvasLayer" parent="."]
 follow_viewport_enabled = true
-follow_viewport_scale = 0.85
+follow_viewport_scale = 0.75
 
 [node name="Mato03" type="Sprite2D" parent="-25"]
 position = Vector2(2596.4705, -1188.5002)
@@ -329,23 +330,23 @@ light_mask = 2
 position = Vector2(-186, 164)
 texture = ExtResource("5_l3w8l")
 
-[node name="-1_5" type="CanvasLayer" parent="."]
+[node name="-15" type="CanvasLayer" parent="."]
 follow_viewport_enabled = true
 follow_viewport_scale = 0.85
 
-[node name="Mato02" type="Sprite2D" parent="-1_5"]
+[node name="Mato02" type="Sprite2D" parent="-15"]
 position = Vector2(3267, -1145.8824)
 texture = ExtResource("6_ym8ms")
 
-[node name="Mato05" type="Sprite2D" parent="-1_5"]
+[node name="Mato05" type="Sprite2D" parent="-15"]
 position = Vector2(5624.4707, -1314.0881)
 texture = ExtResource("6_ym8ms")
 
-[node name="Mato09" type="Sprite2D" parent="-1_5"]
+[node name="Mato09" type="Sprite2D" parent="-15"]
 position = Vector2(6493.47, -1238.0883)
 texture = ExtResource("6_ym8ms")
 
-[node name="Mato10" type="Sprite2D" parent="-1_5"]
+[node name="Mato10" type="Sprite2D" parent="-15"]
 position = Vector2(8569.471, -1167.0884)
 texture = ExtResource("6_ym8ms")
 
@@ -379,58 +380,74 @@ texture = ExtResource("6_fgbk1")
 position = Vector2(8027, -1527)
 texture = ExtResource("6_fgbk1")
 
-[node name="-0_5" type="CanvasLayer" parent="."]
+[node name="-05" type="CanvasLayer" parent="."]
 follow_viewport_enabled = true
-follow_viewport_scale = 0.95
+follow_viewport_scale = 0.93
 
-[node name="Mato06" type="Sprite2D" parent="-0_5"]
+[node name="Mato06" type="Sprite2D" parent="-05"]
 position = Vector2(4427, -1170.8685)
 texture = ExtResource("8_mcqsr")
 
-[node name="Mato07" type="Sprite2D" parent="-0_5"]
+[node name="Mato07" type="Sprite2D" parent="-05"]
 position = Vector2(7281, -1158.8685)
 texture = ExtResource("8_mcqsr")
 
-[node name="Mato08" type="Sprite2D" parent="-0_5"]
+[node name="Mato08" type="Sprite2D" parent="-05"]
 position = Vector2(9411.111, -1060.6462)
 texture = ExtResource("8_mcqsr")
 
-[node name="Mato01" type="Sprite2D" parent="-0_5"]
+[node name="Mato01" type="Sprite2D" parent="-05"]
 position = Vector2(2192.6316, -1135.8685)
 texture = ExtResource("8_mcqsr")
+
+[node name="-02" type="CanvasLayer" parent="."]
+follow_viewport_enabled = true
+follow_viewport_scale = 0.98
+
+[node name="ArvoresFrente" type="Node2D" parent="-02"]
+light_mask = 2
+position = Vector2(8946, -1954)
+
+[node name="Arvore02" type="Sprite2D" parent="-02/ArvoresFrente"]
+position = Vector2(-6242, 266)
+texture = ExtResource("44_jwima")
+
+[node name="Arvore04" type="Sprite2D" parent="-02/ArvoresFrente"]
+position = Vector2(-203, 266)
+texture = ExtResource("44_jwima")
+
+[node name="Arvore03" type="Sprite2D" parent="-02/ArvoresFrente"]
+position = Vector2(-5134, 262)
+texture = ExtResource("13_rcn2b")
+
+[node name="Arvore05" type="Sprite2D" parent="-02/ArvoresFrente"]
+position = Vector2(-3617, 262)
+texture = ExtResource("14_wmciv")
+
+[node name="Arvore06" type="Sprite2D" parent="-02/ArvoresFrente"]
+position = Vector2(-1905, 230)
+texture = ExtResource("15_i5sln")
 
 [node name="0" type="CanvasLayer" parent="."]
 follow_viewport_enabled = true
 
-[node name="ArvoresFrente" type="Node2D" parent="0"]
-light_mask = 2
-position = Vector2(8946, -1954)
+[node name="Mato00" type="Sprite2D" parent="0"]
+position = Vector2(3502, -1065)
+texture = ExtResource("16_ny35b")
 
-[node name="Arvore02" type="Sprite2D" parent="0/ArvoresFrente"]
-position = Vector2(-6242, 266)
-texture = ExtResource("44_jwima")
+[node name="Mato01" type="Sprite2D" parent="0"]
+position = Vector2(5648, -976)
+texture = ExtResource("16_ny35b")
+flip_h = true
 
-[node name="Arvore04" type="Sprite2D" parent="0/ArvoresFrente"]
-position = Vector2(-203, 266)
-texture = ExtResource("44_jwima")
-
-[node name="Arvore03" type="Sprite2D" parent="0/ArvoresFrente"]
-position = Vector2(-5134, 262)
-texture = ExtResource("13_rcn2b")
-
-[node name="Arvore05" type="Sprite2D" parent="0/ArvoresFrente"]
-position = Vector2(-3617, 262)
-texture = ExtResource("14_wmciv")
-
-[node name="Arvore06" type="Sprite2D" parent="0/ArvoresFrente"]
-position = Vector2(-1905, 230)
-texture = ExtResource("15_i5sln")
+[node name="Mato02" type="Sprite2D" parent="0"]
+position = Vector2(8223, -976)
+texture = ExtResource("16_ny35b")
 
 [node name="PedraMusgo" type="Sprite2D" parent="0"]
 position = Vector2(4791, -1325.2999)
 scale = Vector2(0.5114725, 0.5114725)
 texture = ExtResource("32_ym8ms")
-flip_h = true
 
 [node name="PedraMusgo2" type="Sprite2D" parent="0"]
 position = Vector2(7073.0005, -1375)
@@ -442,6 +459,12 @@ flip_h = true
 position = Vector2(8200, -1375)
 scale = Vector2(0.6, 0.6)
 texture = ExtResource("32_ym8ms")
+
+[node name="PedraMusgo4" type="Sprite2D" parent="0"]
+position = Vector2(3532.746, -1236.8999)
+scale = Vector2(0.22619864, 0.22619863)
+texture = ExtResource("32_ym8ms")
+flip_h = true
 
 [node name="Ruinas" type="Sprite2D" parent="0"]
 position = Vector2(811.15466, -1678)
@@ -576,6 +599,12 @@ position = Vector2(-35026, -3251)
 rotation = -3.1415925
 texture = ExtResource("23_0v3sa")
 
+[node name="VfxLuz" type="Sprite2D" parent="0"]
+modulate = Color(1, 1, 0.77254903, 1)
+position = Vector2(5611.579, -2029)
+scale = Vector2(1.3723654, 1.3723654)
+texture = ExtResource("11_i5sln")
+
 [node name="MaPeamento" type="Sprite2D" parent="0"]
 position = Vector2(6051.9995, -1823.0001)
 scale = Vector2(0.9335072, 0.93350714)
@@ -610,13 +639,6 @@ position = Vector2(9177, -1627)
 scale = Vector2(1, 3.640625)
 texture = ExtResource("9_ogbcg")
 flip_h = true
-
-[node name="VfxLuz" type="Sprite2D" parent="0"]
-modulate = Color(1, 1, 0.77254903, 1)
-z_index = -1
-position = Vector2(5611.579, -2029)
-scale = Vector2(1.3723654, 1.3723654)
-texture = ExtResource("11_i5sln")
 
 [node name="TileMapLayer" type="TileMapLayer" parent="0"]
 light_mask = 2
@@ -976,12 +998,6 @@ position = Vector2(-38674, -4384)
 rotation = 3.14159
 texture = ExtResource("5_cvdhq")
 
-[node name="PedraMusgo4" type="Sprite2D" parent="2"]
-position = Vector2(3532.746, -1236.8999)
-scale = Vector2(0.22619864, 0.22619863)
-texture = ExtResource("32_ym8ms")
-flip_h = true
-
 [node name="Foregroundchao" type="Node2D" parent="2"]
 position = Vector2(523, -1104)
 
@@ -1017,8 +1033,6 @@ position = Vector2(5565.5, -26)
 
 [node name="AreaPonteVFX" type="Area2D" parent="2/Foregroundchao/StaticBody2D"]
 position = Vector2(11, -33.5)
-collision_layer = 0
-collision_mask = 2
 
 [node name="Node2D" type="CollisionShape2D" parent="2/Foregroundchao/StaticBody2D/AreaPonteVFX"]
 position = Vector2(-18, 0)
@@ -1216,6 +1230,3 @@ offset_bottom = -900.0
 script = ExtResource("30_fgbk1")
 musica = ExtResource("31_7dakl")
 metadata/_custom_type_script = "uid://dd16yu704x6wt"
-
-[connection signal="body_entered" from="2/Foregroundchao/StaticBody2D/AreaPonteVFX" to="0/Cururu" method="_on_area_ponte_vfx_body_entered"]
-[connection signal="body_exited" from="2/Foregroundchao/StaticBody2D/AreaPonteVFX" to="0/Cururu" method="_on_area_ponte_vfx_body_exited"]
