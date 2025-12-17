@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://prhnhdy7cpg5"]
 
 [ext_resource type="Texture2D" uid="uid://b84nc2d8gc062" path="res://Sprites/VFX/Partículas/FOLHA_VFX.png" id="1_5s672"]
-[ext_resource type="Script" uid="uid://bkmhtmj4opin" path="res://Objetos/Props/vfx_folha.gd" id="1_26h3a"]
+[ext_resource type="Script" uid="uid://bkmhtmj4opin" path="res://Scripts/Componentes/vfx_folha.gd" id="1_26h3a"]
 
 [sub_resource type="Gradient" id="Gradient_26h3a"]
 offsets = PackedFloat32Array(0, 0.9931507)

@@ -1017,6 +1017,8 @@ position = Vector2(5565.5, -26)
 
 [node name="AreaPonteVFX" type="Area2D" parent="2/Foregroundchao/StaticBody2D"]
 position = Vector2(11, -33.5)
+collision_layer = 0
+collision_mask = 2
 
 [node name="Node2D" type="CollisionShape2D" parent="2/Foregroundchao/StaticBody2D/AreaPonteVFX"]
 position = Vector2(-18, 0)
@@ -1192,7 +1194,7 @@ light_mask = 7
 shape = SubResource("RectangleShape2D_td0al")
 
 [node name="MainCamera" parent="." node_paths=PackedStringArray("target", "limite_camera") instance=ExtResource("37_nika8")]
-position = Vector2(1720, -1239.996)
+position = Vector2(1720, -1239.9993)
 zoom = Vector2(0.8, 0.8)
 limit_enabled = true
 limit_left = 243
@@ -1214,3 +1216,6 @@ offset_bottom = -900.0
 script = ExtResource("30_fgbk1")
 musica = ExtResource("31_7dakl")
 metadata/_custom_type_script = "uid://dd16yu704x6wt"
+
+[connection signal="body_entered" from="2/Foregroundchao/StaticBody2D/AreaPonteVFX" to="0/Cururu" method="_on_area_ponte_vfx_body_entered"]
+[connection signal="body_exited" from="2/Foregroundchao/StaticBody2D/AreaPonteVFX" to="0/Cururu" method="_on_area_ponte_vfx_body_exited"]

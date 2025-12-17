@@ -185,3 +185,12 @@ func OffsetSpecial() -> void:
 
 func ResetOffset() -> void:
 	sprite.offset = Vector2.ZERO
+
+#solução temporária para remover o VFX das folhas na ponte
+func _on_area_ponte_vfx_body_entered(body: Node2D) -> void:
+	if body.is_in_group("Player"):
+		$StateMachine/Chao.pode_emitir_vfx = false
+
+func _on_area_ponte_vfx_body_exited(body: Node2D) -> void:
+	if body.is_in_group("Player"):
+		$StateMachine/Chao.pode_emitir_vfx = true
