@@ -27,7 +27,7 @@
 [ext_resource type="Texture2D" uid="uid://fsecg0kdmjx7" path="res://Sprites/Cenário/Mata_Atlantica/Background/Galhos/central.png" id="11_h5gcj"]
 [ext_resource type="Texture2D" uid="uid://c8tb73qiqhhk8" path="res://Sprites/Cenário/Mata_Atlantica/Background/Galhos/esquerda01.png" id="12_qex2w"]
 [ext_resource type="PackedScene" uid="uid://bei1s8te3cwko" path="res://Sprites/Cenário/Mata_Atlantica/Interativos/plataforma.tscn" id="13_w4lji"]
-[ext_resource type="PackedScene" uid="uid://1fdx2ie24dh8" path="res://Objetos/Props/Bau.tscn" id="18_aw4uh"]
+[ext_resource type="PackedScene" uid="uid://1fdx2ie24dh8" path="res://Objetos/Props/arvoreguarana.tscn" id="18_aw4uh"]
 [ext_resource type="Texture2D" uid="uid://bt8vw2o8t62am" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/arvore_miasma.png" id="19_4xj1r"]
 [ext_resource type="PackedScene" uid="uid://dny88hy3w52nm" path="res://Objetos/Props/DropAcai.tscn" id="19_aw4uh"]
 [ext_resource type="Texture2D" uid="uid://uq6dbjep5wva" path="res://Sprites/Cenário/Mata_Atlantica/Foreground/frontfolha.png" id="22_k7ugy"]
@@ -2033,7 +2033,7 @@ volume = -0.5
 metadata/_custom_type_script = "uid://dd16yu704x6wt"
 
 [node name="MainCamera" parent="." node_paths=PackedStringArray("target", "limite_camera") instance=ExtResource("27_ctjy6")]
-position = Vector2(512.0005, 1314.0009)
+position = Vector2(512.0005, 1394)
 zoom = Vector2(0.8, 0.8)
 limit_enabled = true
 limit_left = -4343

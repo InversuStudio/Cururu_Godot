@@ -1,8 +1,8 @@
 [gd_scene load_steps=8 format=3 uid="uid://1fdx2ie24dh8"]
 
 [ext_resource type="Script" uid="uid://drxk6hwuv2e3i" path="res://Scripts/Componentes/Bau.gd" id="1_5tjap"]
-[ext_resource type="Texture2D" uid="uid://b23uvpo1t5txg" path="res://Sprites/Cenário/Objetos/Bau/BAU2.png" id="2_dpba2"]
-[ext_resource type="Texture2D" uid="uid://bubffpix746dw" path="res://Sprites/Cenário/Objetos/Bau/BAU.png" id="3_2h5gw"]
+[ext_resource type="Texture2D" uid="uid://b7osbcusvyx0g" path="res://Sprites/Cenário/Objetos/frutos/arvore sem guarana.png" id="4_bha3u"]
+[ext_resource type="Texture2D" uid="uid://csoc5q7br131j" path="res://Sprites/Cenário/Objetos/frutos/guarana.png" id="5_bha3u"]
 [ext_resource type="PackedScene" uid="uid://va5pjd6vuuo2" path="res://Objetos/Funcionalidade/CompHurtBox.tscn" id="5_ku8j8"]
 [ext_resource type="AudioStream" uid="uid://b3mmkipqf30jd" path="res://Audio/SFX/INIMIGOS/HIT_INIMIGO.wav" id="6_6tos4"]
 
@@ -13,7 +13,7 @@ size = Vector2(238, 140)
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_dpba2")
+"texture": ExtResource("4_bha3u")
 }],
 "loop": true,
 "name": &"Abre",
@@ -21,7 +21,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("3_2h5gw")
+"texture": ExtResource("5_bha3u")
 }],
 "loop": true,
 "name": &"Normal",
@@ -44,10 +44,11 @@ debug_color = Color(0.7753908, 0.38766962, 0.5591627, 0.41960785)
 position = Vector2(0, -110)
 
 [node name="Sprite" type="AnimatedSprite2D" parent="."]
-position = Vector2(0, -115)
-scale = Vector2(0.5, 0.5)
+position = Vector2(0, -136)
+scale = Vector2(0.37109375, 0.3710938)
 sprite_frames = SubResource("SpriteFrames_5tjap")
 animation = &"Normal"
 autoplay = "Normal"
+frame_progress = 0.59634286
 
 [connection signal="hurt" from="HurtBox" to="." method="_on_hurt_box_hurt"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=56 format=4 uid="uid://djvuyfef1wujd"]
+[gd_scene load_steps=54 format=4 uid="uid://djvuyfef1wujd"]
 
 [ext_resource type="PackedScene" uid="uid://1apfpwlqocxn" path="res://Objetos/Funcionalidade/TransicaoFase.tscn" id="1_2ybff"]
 [ext_resource type="PackedScene" uid="uid://bnm668fws2641" path="res://Objetos/Props/Armadilha.tscn" id="1_ja78a"]
@@ -36,14 +36,12 @@
 [ext_resource type="Texture2D" uid="uid://uq6dbjep5wva" path="res://Sprites/Cenário/Mata_Atlantica/Foreground/frontfolha.png" id="27_61gve"]
 [ext_resource type="Texture2D" uid="uid://c2yapafbd3cnf" path="res://Sprites/Cenário/Mata_Atlantica/Foreground/cipó.png" id="28_441k1"]
 [ext_resource type="Script" uid="uid://dd16yu704x6wt" path="res://Scripts/Componentes/BGM_Player.gd" id="30_78wer"]
+[ext_resource type="PackedScene" uid="uid://u48tpl3f3l20" path="res://Objetos/Props/DropGuarana.tscn" id="30_p3ssm"]
 [ext_resource type="AudioStream" uid="uid://c7qftchbhu6xc" path="res://Audio/SFX/AMBIENTE/Musica_Jogo.mp3" id="31_byk7f"]
-[ext_resource type="PackedScene" uid="uid://1fdx2ie24dh8" path="res://Objetos/Props/Bau.tscn" id="32_byk7f"]
-[ext_resource type="PackedScene" uid="uid://dny88hy3w52nm" path="res://Objetos/Props/DropAcai.tscn" id="33_3y27v"]
+[ext_resource type="PackedScene" uid="uid://1fdx2ie24dh8" path="res://Objetos/Props/arvoreguarana.tscn" id="32_byk7f"]
 [ext_resource type="PackedScene" uid="uid://pc4mgv2nv8af" path="res://Objetos/Funcionalidade/CompHitBox.tscn" id="33_t8cqu"]
-[ext_resource type="PackedScene" uid="uid://bktu336s6ruri" path="res://Objetos/Props/Moeda.tscn" id="34_0wiyh"]
 [ext_resource type="Texture2D" uid="uid://c81axtnengkmx" path="res://Sprites/Cenário/Miasma/miasmacanto.png" id="35_3t3iu"]
 [ext_resource type="Texture2D" uid="uid://drcemrcpb3ydc" path="res://Sprites/Cenário/Mata_Atlantica/Chao/moita_chao2.png" id="36_wdv41"]
-[ext_resource type="Texture2D" uid="uid://csoc5q7br131j" path="res://Sprites/Cenário/Objetos/frutos/guarana.png" id="37_t8cqu"]
 [ext_resource type="Texture2D" uid="uid://7msrkwwo018f" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/arvore02.png" id="38_0bkep"]
 [ext_resource type="Texture2D" uid="uid://cq84hl6xuuo0t" path="res://Sprites/Cenário/Miasma/miasma pequeno.png" id="38_1i6hi"]
 [ext_resource type="Texture2D" uid="uid://cac7su7slu38j" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/arvore04.png" id="39_s2l6g"]
@@ -711,11 +709,6 @@ position = Vector2(4656, -384)
 scale = Vector2(0.35589817, 0.35589814)
 texture = ExtResource("35_3t3iu")
 
-[node name="Guarana" type="Sprite2D" parent="background/0"]
-position = Vector2(4970, -2235.0002)
-scale = Vector2(0.5041508, 0.5041508)
-texture = ExtResource("37_t8cqu")
-
 [node name="90SemTítulo20251205150838" type="Sprite2D" parent="background/0"]
 modulate = Color(0.012617188, 0.012617188, 0.012617188, 1)
 position = Vector2(4738, -407)
@@ -778,6 +771,10 @@ position = Vector2(-113, -222)
 scale = Vector2(0.98828125, 1.6250002)
 texture = ExtResource("15_yf878")
 flip_h = true
+
+[node name="Bau2" parent="background/0" instance=ExtResource("32_byk7f")]
+position = Vector2(4982, -2057)
+drop_item = Array[PackedScene]([ExtResource("30_p3ssm")])
 
 [node name="Entidades" type="Node2D" parent="background/0"]
 position = Vector2(-2, 0)
@@ -2010,12 +2007,6 @@ script = ExtResource("30_78wer")
 musica = ExtResource("31_byk7f")
 volume = -0.5
 metadata/_custom_type_script = "uid://dd16yu704x6wt"
-
-[node name="Bau" parent="." instance=ExtResource("32_byk7f")]
-visible = false
-position = Vector2(5065, -2056)
-drop_item = Array[PackedScene]([ExtResource("33_3y27v"), ExtResource("34_0wiyh"), ExtResource("34_0wiyh"), ExtResource("34_0wiyh")])
-multi_drop = true
 
 [node name="Node2D" type="Node2D" parent="."]
 position = Vector2(1951, -4737)

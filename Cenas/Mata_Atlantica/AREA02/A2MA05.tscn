@@ -25,7 +25,7 @@
 [ext_resource type="Texture2D" uid="uid://dw42p1qq6njp8" path="res://Sprites/Cenário/Mata_Atlantica/Chao/moita_miasma2.png" id="17_dug7p"]
 [ext_resource type="PackedScene" uid="uid://smwewolvvw6l" path="res://Objetos/Entidades/Escorpiao_Rei.tscn" id="19_1vw3w"]
 [ext_resource type="Texture2D" uid="uid://jecy4bfqqqxu" path="res://Sprites/Cenário/Mata_Atlantica/Teto/Moita teste.png" id="19_ygqbx"]
-[ext_resource type="PackedScene" uid="uid://1fdx2ie24dh8" path="res://Objetos/Props/Bau.tscn" id="20_patjh"]
+[ext_resource type="PackedScene" uid="uid://1fdx2ie24dh8" path="res://Objetos/Props/arvoreguarana.tscn" id="20_patjh"]
 [ext_resource type="Texture2D" uid="uid://uq6dbjep5wva" path="res://Sprites/Cenário/Mata_Atlantica/Foreground/frontfolha.png" id="20_sux2v"]
 [ext_resource type="Texture2D" uid="uid://ciulkfu83ohwu" path="res://Sprites/Cenário/Mata_Atlantica/Foreground/04.png" id="21_favji"]
 [ext_resource type="Texture2D" uid="uid://c2yapafbd3cnf" path="res://Sprites/Cenário/Mata_Atlantica/Foreground/cipó.png" id="24_6t3gw"]
@@ -4075,7 +4075,7 @@ offset_right = 7697.0
 offset_bottom = -95.0
 
 [node name="MainCamera" parent="." node_paths=PackedStringArray("target", "limite_camera") instance=ExtResource("30_yk4cc")]
-position = Vector2(7348.9995, -433.99802)
+position = Vector2(7348.9995, -353.99997)
 zoom = Vector2(0.8, 0.8)
 limit_enabled = true
 limit_left = 674

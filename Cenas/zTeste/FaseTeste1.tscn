@@ -15,7 +15,7 @@
 [ext_resource type="PackedScene" uid="uid://b4fpjefuik8mq" path="res://Objetos/Props/DropAmRecMagia.tscn" id="17_der3i"]
 [ext_resource type="PackedScene" uid="uid://bxixu84ahcyba" path="res://Objetos/NPCs/NpcBasico.tscn" id="18_bp4ag"]
 [ext_resource type="Texture2D" uid="uid://c3tl3oddronfh" path="res://icon.svg" id="21_lqome"]
-[ext_resource type="PackedScene" uid="uid://1fdx2ie24dh8" path="res://Objetos/Props/Bau.tscn" id="22_b4qhl"]
+[ext_resource type="PackedScene" uid="uid://1fdx2ie24dh8" path="res://Objetos/Props/arvoreguarana.tscn" id="22_b4qhl"]
 [ext_resource type="PackedScene" uid="uid://u28e3eudu6ch" path="res://Objetos/Funcionalidade/MainCamera.tscn" id="22_der3i"]
 [ext_resource type="PackedScene" uid="uid://cdhelg6sloxbj" path="res://Objetos/Props/PortaTemp.tscn" id="23_u25g5"]
 [ext_resource type="PackedScene" uid="uid://dny88hy3w52nm" path="res://Objetos/Props/DropAcai.tscn" id="23_wxyel"]
@@ -315,7 +315,7 @@ texture = ExtResource("26_fjg5v")
 [node name="Cameras" type="Node" parent="."]
 
 [node name="MainCamera" parent="Cameras" node_paths=PackedStringArray("target", "limite_camera") instance=ExtResource("22_der3i")]
-position = Vector2(-146, -513.9996)
+position = Vector2(-146, -513.9998)
 zoom = Vector2(0.8, 0.8)
 limit_enabled = true
 limit_left = -2759

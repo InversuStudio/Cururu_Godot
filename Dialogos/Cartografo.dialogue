@@ -1,0 +1,18 @@
+~ start
+if Inventario.tem_mapa == false:
+	Ararê: Olá pequeno companhei, como vai. Vejo que está perdido.
+	Ararê: Me chamo Ararê, sou um grande explorador das terras de Zootania.
+	Ararê: Acho que posso ajudar você com um com um mapa antigo da região.
+	Ararê: Custa apenas 10 semetes de [b][i]ybirá[/i][/b]. Vai querer um?
+	- Sim, me vê um antes que me perca.
+		if GameData.moedas >= 10
+			Ararê: [do! DialogoCMD.AddMapa(), GameData.moedas -= 3] Toma, esse mapa é todo seu!.
+		else:
+			Ararê: Desculpe, sem [b][i]ybirá[/i][/b], sem mapa.
+			Ararê: Volte quando precisar de orientações!
+	- Não, obrigado, vou desbravar sozinho.
+		Ararê: Ok, boa sorte na sua jornada.
+else:
+	Ararê: E ai companheiro, tudo bem?
+	Ararê: O Mapa acabou, preciso desenhar mais deles.
+=> END!

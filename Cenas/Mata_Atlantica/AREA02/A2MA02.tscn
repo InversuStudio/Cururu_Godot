@@ -24,7 +24,7 @@
 [ext_resource type="PackedScene" uid="uid://smwewolvvw6l" path="res://Objetos/Entidades/Escorpiao_Rei.tscn" id="14_jb1wv"]
 [ext_resource type="Texture2D" uid="uid://fsecg0kdmjx7" path="res://Sprites/Cenário/Mata_Atlantica/Background/Galhos/central.png" id="14_ygge3"]
 [ext_resource type="Texture2D" uid="uid://c8tb73qiqhhk8" path="res://Sprites/Cenário/Mata_Atlantica/Background/Galhos/esquerda01.png" id="15_66bak"]
-[ext_resource type="PackedScene" uid="uid://1fdx2ie24dh8" path="res://Objetos/Props/Bau.tscn" id="16_yk7fv"]
+[ext_resource type="PackedScene" uid="uid://1fdx2ie24dh8" path="res://Objetos/Props/arvoreguarana.tscn" id="16_yk7fv"]
 [ext_resource type="Texture2D" uid="uid://u12dsbd5ebth" path="res://Sprites/Cenário/Mata_Atlantica/Background/Mata/mato00.png" id="17_g3wcl"]
 [ext_resource type="PackedScene" uid="uid://dny88hy3w52nm" path="res://Objetos/Props/DropAcai.tscn" id="17_sjxar"]
 [ext_resource type="Texture2D" uid="uid://6xmqb8rst36e" path="res://Sprites/Cenário/Mata_Atlantica/Chao/moita_miasma1.png" id="18_ir41t"]
@@ -1044,7 +1044,7 @@ offset_right = 4981.0
 offset_bottom = -392.0
 
 [node name="MainCamera" parent="." node_paths=PackedStringArray("target", "limite_camera") instance=ExtResource("34_xqsk0")]
-position = Vector2(2588.0002, -725.9996)
+position = Vector2(2588.0002, -646)
 zoom = Vector2(0.8, 0.8)
 limit_enabled = true
 limit_left = 782

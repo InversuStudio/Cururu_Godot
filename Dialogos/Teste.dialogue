@@ -9,7 +9,7 @@ SACI: Mas olho vivo. Nem todo monstro é inimigo... e nem todo aliado tá limpo.
 
 ~ mapa
 if Inventario.tem_mapa == false:
-	CARTÓGRAFO: Oi.
+	CACARTÓGRAFO: Oi.
 	CARTÓGRAFO: Você quer um mapa? Só 3 sementes.
 	- Pô, maneiro. Quero sim.
 		if GameData.moedas >= 3

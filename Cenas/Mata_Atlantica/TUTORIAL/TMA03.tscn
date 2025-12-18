@@ -1,4 +1,4 @@
-[gd_scene load_steps=50 format=4 uid="uid://nqosq2wj0auk"]
+[gd_scene load_steps=49 format=4 uid="uid://nqosq2wj0auk"]
 
 [ext_resource type="Texture2D" uid="uid://cqu5scrrmr5n5" path="res://Sprites/Cenário/Mata_Atlantica/Background/Iluminação e Fundo/FUNDOCEU.png" id="1_4e4qg"]
 [ext_resource type="Texture2D" uid="uid://c374cwih425cq" path="res://Sprites/Cenário/Tilemaps/Base.png" id="1_vftmf"]
@@ -37,7 +37,6 @@
 [ext_resource type="Script" uid="uid://dd16yu704x6wt" path="res://Scripts/Componentes/BGM_Player.gd" id="31_op0pn"]
 [ext_resource type="AudioStream" uid="uid://c7qftchbhu6xc" path="res://Audio/SFX/AMBIENTE/Musica_Jogo.mp3" id="32_54dor"]
 [ext_resource type="Texture2D" uid="uid://u12dsbd5ebth" path="res://Sprites/Cenário/Mata_Atlantica/Background/Mata/mato00.png" id="33_3fe7p"]
-[ext_resource type="Texture2D" uid="uid://cgx43fkvk7fk7" path="res://Sprites/Cenário/Miasma/miasma_chao01.png" id="34_od6fv"]
 [ext_resource type="PackedScene" uid="uid://u28e3eudu6ch" path="res://Objetos/Funcionalidade/MainCamera.tscn" id="37_r86pu"]
 [ext_resource type="Texture2D" uid="uid://2x6q1ni8klgv" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/arvore_fundo1.png" id="43_2aq70"]
 [ext_resource type="Texture2D" uid="uid://btb3tlxsmx38i" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/arvore_fundo2.png" id="44_uygvq"]
@@ -1736,11 +1735,6 @@ follow_viewport_enabled = true
 [node name="foreground" type="Sprite2D" parent="Background/2"]
 position = Vector2(-11986, -142)
 rotation = -0.08726649
-
-[node name="Miasma01" type="Sprite2D" parent="Background/2/foreground"]
-position = Vector2(-4890.795, -3876.0103)
-rotation = 0.08726649
-texture = ExtResource("34_od6fv")
 
 [node name="Frontfolha" type="Sprite2D" parent="Background/2/foreground"]
 position = Vector2(2483.4941, 1066.5093)
