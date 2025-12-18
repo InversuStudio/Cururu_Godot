@@ -136,6 +136,7 @@ func Load() -> bool:
 		peca_coracao = config.get_value("save", "peca_coracao")
 		Mundos.pecas_coracao = config.get_value("save", "lista_coracao")
 		
+		Inventario.inventario = []
 		HUD.LimpaInv()
 		
 		var inv:Array[Array] = config.get_value("save", "inventario")
