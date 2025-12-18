@@ -1,14 +1,10 @@
-[gd_scene load_steps=35 format=3 uid="uid://dppj6i0ifoocp"]
+[gd_scene load_steps=31 format=3 uid="uid://dppj6i0ifoocp"]
 
 [ext_resource type="Script" uid="uid://bacf3raoqf4ns" path="res://Scripts/Boss/Pilar.gd" id="1_tdbse"]
 [ext_resource type="Texture2D" uid="uid://csgctbosjole1" path="res://Sprites/Inimigos/Boitata/Ataques/Pilar de Fogo/final-0002.png" id="4_vqjxp"]
 [ext_resource type="Texture2D" uid="uid://bn8mhmsqkevks" path="res://Sprites/Inimigos/Boitata/Ataques/Pilar de Fogo/final-0004.png" id="5_0li0k"]
 [ext_resource type="Texture2D" uid="uid://b6m7sjo1roexa" path="res://Sprites/Inimigos/Boitata/Ataques/Pilar de Fogo/final-0006.png" id="6_ly41o"]
 [ext_resource type="Texture2D" uid="uid://davcyj4fkh7r0" path="res://Sprites/Inimigos/Boitata/Ataques/Pilar de Fogo/final-0008.png" id="7_m5d4x"]
-[ext_resource type="Texture2D" uid="uid://cqora54upfvb1" path="res://Sprites/Inimigos/Boitata/Ataques/Pilar de Fogo/final-0010.png" id="8_rkhv2"]
-[ext_resource type="Texture2D" uid="uid://cj22vuqh81dav" path="res://Sprites/Inimigos/Boitata/Ataques/Pilar de Fogo/final-0012.png" id="9_7ybf5"]
-[ext_resource type="Texture2D" uid="uid://b01uscnys5gfp" path="res://Sprites/Inimigos/Boitata/Ataques/Pilar de Fogo/final-0014.png" id="10_4hgvp"]
-[ext_resource type="Texture2D" uid="uid://bgcn30cikicol" path="res://Sprites/Inimigos/Boitata/Ataques/Pilar de Fogo/final-0016.png" id="11_5e8kx"]
 [ext_resource type="PackedScene" uid="uid://pc4mgv2nv8af" path="res://Objetos/Funcionalidade/CompHitBox.tscn" id="11_tqvmf"]
 [ext_resource type="Texture2D" uid="uid://m0nrrj0n3y88" path="res://Sprites/Inimigos/Boitata/Ataques/Pilar de Fogo/final-0018.png" id="12_dngjy"]
 [ext_resource type="Texture2D" uid="uid://batbbo2vmkbs0" path="res://Sprites/Inimigos/Boitata/Ataques/Pilar de Fogo/final-0019.png" id="13_68fjd"]
@@ -47,18 +43,6 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": ExtResource("7_m5d4x")
-}, {
-"duration": 1.0,
-"texture": ExtResource("8_rkhv2")
-}, {
-"duration": 1.0,
-"texture": ExtResource("9_7ybf5")
-}, {
-"duration": 1.0,
-"texture": ExtResource("10_4hgvp")
-}, {
-"duration": 1.0,
-"texture": ExtResource("11_5e8kx")
 }],
 "loop": true,
 "name": &"Carga",
@@ -157,7 +141,7 @@ shape = SubResource("CapsuleShape2D_e7y2f")
 disabled = true
 
 [node name="Timer" type="Timer" parent="."]
-wait_time = 0.65
+wait_time = 0.55
 one_shot = true
 
 [node name="SFX" type="AudioStreamPlayer2D" parent="."]

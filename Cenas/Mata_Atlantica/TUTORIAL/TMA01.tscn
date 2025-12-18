@@ -1,4 +1,4 @@
-[gd_scene load_steps=55 format=4 uid="uid://dfuswe0wcsy33"]
+[gd_scene load_steps=57 format=4 uid="uid://dfuswe0wcsy33"]
 
 [ext_resource type="Texture2D" uid="uid://c374cwih425cq" path="res://Sprites/Cenário/Tilemaps/Base.png" id="1_axyo6"]
 [ext_resource type="PackedScene" uid="uid://cqyub70sv0ofp" path="res://Objetos/Props/SavePoint.tscn" id="1_kqyhf"]
@@ -36,8 +36,10 @@
 [ext_resource type="Texture2D" uid="uid://cw2yeg7ynw0kl" path="res://Sprites/Cenário/Mata_Atlantica/Chao/chap_externo.png" id="26_6kvc1"]
 [ext_resource type="PackedScene" uid="uid://dn2kwqjchyumh" path="res://Sprites/Cenário/Mata_Atlantica/Interativos/parede_pedras.tscn" id="27_i5sln"]
 [ext_resource type="Texture2D" uid="uid://ciulkfu83ohwu" path="res://Sprites/Cenário/Mata_Atlantica/Foreground/04.png" id="27_te2fn"]
+[ext_resource type="Texture2D" uid="uid://5crpeva5qkhc" path="res://Sprites/VFX/Iluminação/VFX - LUZ3.png" id="28_rh2pu"]
 [ext_resource type="Texture2D" uid="uid://cgnnux60eiern" path="res://Sprites/Cenário/Mata_Atlantica/Foreground/05.png" id="28_wstxp"]
 [ext_resource type="Texture2D" uid="uid://b0pui1q2vj5g0" path="res://Sprites/Cenário/zSem_Uso/PAU_BRASIL02.png" id="29_0v3sa"]
+[ext_resource type="Texture2D" uid="uid://c26uwd68seub4" path="res://Sprites/VFX/Iluminação/VFX - LUZ2.png" id="29_yyslo"]
 [ext_resource type="Texture2D" uid="uid://5m4b2cn86u3t" path="res://Sprites/Cenário/Mata_Atlantica/Foreground/03.png" id="30_5nff6"]
 [ext_resource type="Script" uid="uid://dd16yu704x6wt" path="res://Scripts/Componentes/BGM_Player.gd" id="30_fgbk1"]
 [ext_resource type="AudioStream" uid="uid://c7qftchbhu6xc" path="res://Audio/SFX/AMBIENTE/Musica_Jogo.mp3" id="31_7dakl"]
@@ -501,6 +503,11 @@ position = Vector2(865, -1138)
 scale = Vector2(1.2113702, 1.2113702)
 texture = ExtResource("33_ny35b")
 
+[node name="VfxLuz4" type="Sprite2D" parent="0"]
+modulate = Color(0.48537982, 0.6027341, 0.6027341, 1)
+position = Vector2(1572, -1500)
+texture = ExtResource("11_i5sln")
+
 [node name="SavePoint" parent="0" instance=ExtResource("1_kqyhf")]
 position = Vector2(1518, -1147)
 
@@ -600,10 +607,22 @@ rotation = -3.1415925
 texture = ExtResource("23_0v3sa")
 
 [node name="VfxLuz" type="Sprite2D" parent="0"]
-modulate = Color(1, 1, 0.77254903, 1)
-position = Vector2(5611.579, -2029)
-scale = Vector2(1.3723654, 1.3723654)
+modulate = Color(0.7016299, 0.7016299, 0.5750679, 1)
+position = Vector2(5926.9995, -1834.7434)
+scale = Vector2(2.2188587, 2.2188592)
 texture = ExtResource("11_i5sln")
+
+[node name="VfxLuz2" type="Sprite2D" parent="0"]
+modulate = Color(0.7016299, 0.7016299, 0.5750679, 1)
+position = Vector2(6684.0005, -1657.6198)
+scale = Vector2(1.6469135, 1.6469135)
+texture = ExtResource("29_yyslo")
+
+[node name="VfxLuz3" type="Sprite2D" parent="0"]
+modulate = Color(0.7016299, 0.7016299, 0.5750679, 1)
+position = Vector2(6951.25, -1776.5076)
+scale = Vector2(1.4943609, 1.4943608)
+texture = ExtResource("28_rh2pu")
 
 [node name="MaPeamento" type="Sprite2D" parent="0"]
 position = Vector2(6051.9995, -1823.0001)

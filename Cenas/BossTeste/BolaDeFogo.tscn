@@ -1,11 +1,16 @@
-[gd_scene load_steps=11 format=3 uid="uid://dct0yu1s5isad"]
+[gd_scene load_steps=16 format=3 uid="uid://dct0yu1s5isad"]
 
 [ext_resource type="Script" uid="uid://dbg0osum7dedd" path="res://Scripts/Boss/BolaDeFogo.gd" id="1_qng7f"]
 [ext_resource type="Texture2D" uid="uid://363pc3kisej3" path="res://Sprites/Inimigos/Boitata/Ataques/Bola de Fogo/boitata_91.png" id="2_qng7f"]
 [ext_resource type="Texture2D" uid="uid://0n53nlbb4pjo" path="res://Sprites/Inimigos/Boitata/Ataques/Bola de Fogo/boitata_93.png" id="3_u6gje"]
 [ext_resource type="Texture2D" uid="uid://dluq1p6xvq6tu" path="res://Sprites/Inimigos/Boitata/Ataques/Bola de Fogo/boitata_95.png" id="4_iwi73"]
 [ext_resource type="Texture2D" uid="uid://cfmgg0u3q40yc" path="res://Sprites/Inimigos/Boitata/Ataques/Bola de Fogo/boitata_97.png" id="5_jby16"]
+[ext_resource type="Texture2D" uid="uid://p88cv8l7a52c" path="res://Sprites/Inimigos/Boitata/Ataques/Bola de Fogo/boitata_103.png" id="6_8h3ej"]
+[ext_resource type="Texture2D" uid="uid://wx7w2imyg061" path="res://Sprites/Inimigos/Boitata/Ataques/Bola de Fogo/boitata_105.png" id="7_xe7ot"]
+[ext_resource type="Texture2D" uid="uid://d2f7e7f5x0o04" path="res://Sprites/Inimigos/Boitata/Ataques/Bola de Fogo/boitata_107.png" id="8_4frxx"]
+[ext_resource type="Texture2D" uid="uid://cfwfrf5umhxdj" path="res://Sprites/Inimigos/Boitata/Ataques/Bola de Fogo/boitata_109.png" id="9_g4iak"]
 [ext_resource type="PackedScene" uid="uid://pc4mgv2nv8af" path="res://Objetos/Funcionalidade/CompHitBox.tscn" id="9_qng7f"]
+[ext_resource type="Texture2D" uid="uid://n6pd6v23a4j2" path="res://Sprites/Inimigos/Boitata/Ataques/Bola de Fogo/boitata_111.png" id="10_363cr"]
 [ext_resource type="AudioStream" uid="uid://bsgfpgh6g7f4o" path="res://Audio/SFX/BOITATA/Bola_fogo.mp3" id="10_u6gje"]
 [ext_resource type="AudioStream" uid="uid://cji7jh2imtp5t" path="res://Audio/SFX/BOITATA/Caindo_chão.mp3" id="11_iwi73"]
 
@@ -35,6 +40,21 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": ExtResource("5_jby16")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_8h3ej")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_xe7ot")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_4frxx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_g4iak")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_363cr")
 }],
 "loop": true,
 "name": &"default",
@@ -50,11 +70,11 @@ script = ExtResource("1_qng7f")
 speed = Vector2(6, 0.3)
 
 [node name="Sprite" type="AnimatedSprite2D" parent="."]
-position = Vector2(0.125, 77.375)
-scale = Vector2(0.28739613, 0.28739613)
+position = Vector2(-30, 120)
+scale = Vector2(0.40370366, 0.40370363)
 sprite_frames = SubResource("SpriteFrames_u0rk8")
 autoplay = "default"
-frame_progress = 0.6801996
+frame_progress = 0.033659127
 
 [node name="HitBox" parent="." instance=ExtResource("9_qng7f")]
 position = Vector2(0.125, 77.375)

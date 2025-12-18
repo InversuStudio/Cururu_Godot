@@ -256,23 +256,23 @@ follow_viewport_scale = 0.7
 position = Vector2(-19851, -4047)
 
 [node name="ArvoreS2" type="Sprite2D" parent="Background2/-3/Arvores04"]
-position = Vector2(-7604, 168.5)
+position = Vector2(-7604, -73.1427)
 texture = ExtResource("9_s0t4j")
 
 [node name="ArvoreS11" type="Sprite2D" parent="Background2/-3/Arvores04"]
-position = Vector2(-3067.5718, -120.142914)
+position = Vector2(-3067.5718, -361.7856)
 texture = ExtResource("9_s0t4j")
 
 [node name="ArvoreS13" type="Sprite2D" parent="Background2/-3/Arvores04"]
-position = Vector2(-1469, 168.5)
+position = Vector2(-1469, -73.1427)
 texture = ExtResource("9_s0t4j")
 
 [node name="ArvoreS15" type="Sprite2D" parent="Background2/-3/Arvores04"]
-position = Vector2(1310, 168.5)
+position = Vector2(1310, -73.1427)
 texture = ExtResource("9_s0t4j")
 
 [node name="ArvoreS17" type="Sprite2D" parent="Background2/-3/Arvores04"]
-position = Vector2(3224, -187.28596)
+position = Vector2(3224, -428.92865)
 texture = ExtResource("9_s0t4j")
 
 [node name="-25" type="CanvasLayer" parent="Background2"]
@@ -306,7 +306,7 @@ follow_viewport_scale = 0.8
 
 [node name="Arvores03" type="Node2D" parent="Background2/-2"]
 light_mask = 2
-position = Vector2(-19851, -4047)
+position = Vector2(-19851, -4285)
 
 [node name="ArvoreS1" type="Sprite2D" parent="Background2/-2/Arvores03"]
 position = Vector2(-8194, 207.5)
