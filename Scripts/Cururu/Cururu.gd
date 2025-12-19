@@ -85,7 +85,7 @@ signal virou
 var input_buffer:Array[float] = [0.0, 0.0]
 
 
-func _ready() -> void:
+func _ready() -> void:	
 	# Desabilita hitboxes
 	for h:Node2D in hitbox_container.get_children():
 		if h is HitBox:
@@ -113,6 +113,9 @@ func _ready() -> void:
 		state_machine.MudaState(state_machine.find_child("Pulo"))
 		await get_tree().create_timer(1.0).timeout
 		GameData.veio_de_baixo = false
+		
+	#deixa VFX invisível
+	%VFX.visible = false
 
 func _process(delta: float) -> void:
 	# Controla se pode mover

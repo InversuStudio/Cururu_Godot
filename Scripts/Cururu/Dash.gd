@@ -12,7 +12,11 @@ var pode_cair:bool = false
 func Enter() -> void:
 	print("DASH")
 	Console._State(name)
-	#%Anim.play("Dash_Start")
+	#POR ALGUM MOTIVO, NÃO CONSEGUI USAR %VFX.flip_h = parent.sprite.flip_h. Não houve efeito
+	#TIVE QUE COPIAR MANUALMENTE A ESCALA E A POSIÇÃO DO X NAS LINHAS ABAIXO. código ficou nojento, com certeza tem jeito melhor de fazer @Gustavo :D
+	%VFX.scale.x = -0.376 if parent.sprite.flip_h else 0.376
+	%VFX.position.x = 87.0 if parent.sprite.flip_h else -87.0
+	%AnimVFX.play("Dash")
 	parent.pode_dash = false
 	acabou = false
 	parent.velocity.y = 0.0

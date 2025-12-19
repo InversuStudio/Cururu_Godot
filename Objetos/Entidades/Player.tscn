@@ -1,4 +1,4 @@
-[gd_scene load_steps=127 format=3 uid="uid://nohq28uk7lfk"]
+[gd_scene load_steps=136 format=3 uid="uid://nohq28uk7lfk"]
 
 [ext_resource type="Script" uid="uid://cfu4ciwll8jcj" path="res://Scripts/Cururu/Cururu.gd" id="1_gwpdq"]
 [ext_resource type="Texture2D" uid="uid://6tjgxsgaflxb" path="res://Sprites/Cururu/Dano/03.png" id="2_0hf88"]
@@ -86,9 +86,14 @@
 [ext_resource type="Texture2D" uid="uid://dpot1mm6audq2" path="res://Sprites/Cururu/Run/06.png" id="61_jpq87"]
 [ext_resource type="Texture2D" uid="uid://c3tl3oddronfh" path="res://icon.svg" id="65_ny8nr"]
 [ext_resource type="AudioStream" uid="uid://0svi6tafdid8" path="res://Audio/SFX/CURURU/DANO_PROTAGONISTA.wav" id="77_d7mdf"]
+[ext_resource type="Texture2D" uid="uid://bhf1ccuw8e518" path="res://Sprites/Cururu/Dash/VFX/06.png" id="79_c8qv2"]
+[ext_resource type="Texture2D" uid="uid://yc4g46w0dltb" path="res://Sprites/Cururu/Dash/VFX/08.png" id="80_1ribx"]
 [ext_resource type="AudioStream" uid="uid://clarwee0wchnk" path="res://Audio/SFX/CURURU/jump_cururu.mp3" id="80_ny8nr"]
 [ext_resource type="AudioStream" uid="uid://cuyap2xmus3rf" path="res://Audio/SFX/CURURU/dash_cururu.mp3" id="81_2t31h"]
+[ext_resource type="Texture2D" uid="uid://b3r5os20m6bmk" path="res://Sprites/Cururu/Dash/VFX/10.png" id="81_3s0sn"]
+[ext_resource type="Texture2D" uid="uid://bdt3wwh3lslf" path="res://Sprites/Cururu/Dash/VFX/12.png" id="82_dvy3r"]
 [ext_resource type="Texture2D" uid="uid://dxtsvqjcc8iyp" path="res://Sprites/Cururu/Virada/00.png" id="83_52p8t"]
+[ext_resource type="Texture2D" uid="uid://og30qejxpng8" path="res://Sprites/Cururu/Dash/VFX/14.png" id="83_damx7"]
 [ext_resource type="Texture2D" uid="uid://15c7aidibbn5" path="res://Sprites/Cururu/Virada/01.png" id="84_mm0hc"]
 [ext_resource type="Texture2D" uid="uid://cdy8yt07p7v8" path="res://Sprites/Cururu/Virada/02.png" id="85_0vd0f"]
 [ext_resource type="Texture2D" uid="uid://b73nkcosr250e" path="res://Sprites/VFX/Iluminação/LightCururu.png" id="87_0w8y8"]
@@ -438,6 +443,29 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="SpriteFrames" id="SpriteFrames_k0fov"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("79_c8qv2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("80_1ribx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("81_3s0sn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("82_dvy3r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("83_damx7")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_qakxq"]
 radius = 43.0
 height = 162.0
@@ -473,6 +501,79 @@ height = 316.0
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_vpyrf"]
 radius = 107.0
 height = 316.0
+
+[sub_resource type="Animation" id="Animation_jgcph"]
+resource_name = "Dash"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("%Anim/../VFX:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(),
+"transitions": PackedFloat32Array(),
+"update": 1,
+"values": []
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("%Anim/../VFX:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("%Anim/../VFX:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+
+[sub_resource type="Animation" id="Animation_jkcnl"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("%Anim/../VFX:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("%Anim/../VFX:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_33gbk"]
+_data = {
+&"Dash": SubResource("Animation_jgcph"),
+&"RESET": SubResource("Animation_jkcnl")
+}
 
 [sub_resource type="Animation" id="Animation_aofpm"]
 resource_name = "Dano"
@@ -1426,6 +1527,12 @@ animation = &"Special"
 frame = 1
 speed_scale = 1.5
 
+[node name="VFX" type="AnimatedSprite2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(-87.00001, -108)
+scale = Vector2(0.375651, 0.375651)
+sprite_frames = SubResource("SpriteFrames_k0fov")
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, -79)
 shape = SubResource("CapsuleShape2D_qakxq")
@@ -1537,6 +1644,13 @@ disabled = true
 [node name="PosTiroMagia" type="Marker2D" parent="HitContainer"]
 unique_name_in_owner = true
 position = Vector2(135, -92)
+
+[node name="AnimVFX" type="AnimationPlayer" parent="."]
+unique_name_in_owner = true
+root_node = NodePath("../Anim")
+libraries = {
+&"": SubResource("AnimationLibrary_33gbk")
+}
 
 [node name="Anim" type="AnimationPlayer" parent="."]
 unique_name_in_owner = true
