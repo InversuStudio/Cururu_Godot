@@ -294,12 +294,6 @@ position = Vector2(-19292, -3235)
 scale = Vector2(0.7743413, 0.77434134)
 texture = ExtResource("6_nutf4")
 
-[node name="Fundonevoa" type="Sprite2D" parent="Background2/-25"]
-light_mask = 2
-position = Vector2(-23674.166, -3932.9866)
-scale = Vector2(8.111111, 1.5253856)
-texture = ExtResource("4_2gijv")
-
 [node name="-2" type="CanvasLayer" parent="Background2"]
 follow_viewport_enabled = true
 follow_viewport_scale = 0.8
@@ -331,6 +325,13 @@ texture = ExtResource("2_6xeqa")
 [node name="ArvoreS16" type="Sprite2D" parent="Background2/-2/Arvores03"]
 position = Vector2(2412, 154.5)
 texture = ExtResource("2_6xeqa")
+
+[node name="Fundonevoa" type="Sprite2D" parent="Background2/-2"]
+modulate = Color(1, 1, 1, 0.59607846)
+light_mask = 2
+position = Vector2(-23604, -3793.3333)
+scale = Vector2(8.111111, 1.5253856)
+texture = ExtResource("4_2gijv")
 
 [node name="-15" type="CanvasLayer" parent="Background2"]
 follow_viewport_enabled = true
@@ -405,8 +406,9 @@ scale = Vector2(0.8636884, 0.8636884)
 texture = ExtResource("9_oteog")
 
 [node name="Fundonevoa2" type="Sprite2D" parent="Background2/-1"]
-position = Vector2(-23243.58, -3768.25)
-scale = Vector2(7.7301884, 1.056369)
+modulate = Color(1, 1, 1, 0.38039216)
+position = Vector2(-23564.445, -5840)
+scale = Vector2(7.7301884, 2.9206662)
 texture = ExtResource("5_atocc")
 
 [node name="-05" type="CanvasLayer" parent="Background2"]
@@ -1642,7 +1644,6 @@ limit_bottom = -2407
 target = NodePath("../Background2/0/Cururu")
 speed = 6.0
 limite_camera = NodePath("../LimiteCam")
-deadzone = Vector2(100, 300)
 
 [node name="LimiteCam" type="ReferenceRect" parent="."]
 offset_left = -29820.0

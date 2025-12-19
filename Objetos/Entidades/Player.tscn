@@ -1,4 +1,4 @@
-[gd_scene load_steps=136 format=3 uid="uid://nohq28uk7lfk"]
+[gd_scene load_steps=147 format=3 uid="uid://nohq28uk7lfk"]
 
 [ext_resource type="Script" uid="uid://cfu4ciwll8jcj" path="res://Scripts/Cururu/Cururu.gd" id="1_gwpdq"]
 [ext_resource type="Texture2D" uid="uid://6tjgxsgaflxb" path="res://Sprites/Cururu/Dano/03.png" id="2_0hf88"]
@@ -63,6 +63,7 @@
 [ext_resource type="Texture2D" uid="uid://w6usfm7vcovw" path="res://Sprites/Cururu/Run/07.png" id="52_548ar"]
 [ext_resource type="Script" uid="uid://c1tkv8brk85ke" path="res://Scripts/Cururu/Pulo.gd" id="52_damx7"]
 [ext_resource type="Texture2D" uid="uid://b2br0jnttod5e" path="res://Sprites/Cururu/Special/08.png" id="52_vpyrf"]
+[ext_resource type="Texture2D" uid="uid://jrhp2hi1cmop" path="res://Sprites/Cururu/Levantando/01.png" id="53_0vd0f"]
 [ext_resource type="Texture2D" uid="uid://bp8jt5ldm18ou" path="res://Sprites/Cururu/Melee/02.png" id="53_1dbdn"]
 [ext_resource type="Texture2D" uid="uid://hsargowvj610" path="res://Sprites/Cururu/Special/09.png" id="53_7spwe"]
 [ext_resource type="Texture2D" uid="uid://xhaqnu3yj884" path="res://Sprites/Cururu/Melee/00.png" id="53_grb16"]
@@ -71,18 +72,25 @@
 [ext_resource type="Texture2D" uid="uid://d1v3ex0xexpef" path="res://Sprites/Cururu/Melee/03.png" id="54_0w8y8"]
 [ext_resource type="Script" uid="uid://brymvmxc6n166" path="res://Scripts/Cururu/Dano.gd" id="54_jgcph"]
 [ext_resource type="Texture2D" uid="uid://dr0cp2sh6h7qh" path="res://Sprites/Cururu/Run/08.png" id="54_kmqi2"]
+[ext_resource type="Texture2D" uid="uid://jmtrn70yd4x2" path="res://Sprites/Cururu/Levantando/02.png" id="54_mmhjr"]
 [ext_resource type="Texture2D" uid="uid://cn4bj8b2eog4" path="res://Sprites/Cururu/Run/09.png" id="55_2q4c8"]
 [ext_resource type="Script" uid="uid://biel3i584hg88" path="res://Scripts/Cururu/Melee.gd" id="55_7uoqt"]
 [ext_resource type="Texture2D" uid="uid://canqyijdsj0qa" path="res://Sprites/Cururu/Melee/04.png" id="55_d7mdf"]
+[ext_resource type="Texture2D" uid="uid://bf6lhakaaw7bs" path="res://Sprites/Cururu/Levantando/03.png" id="55_o27xl"]
 [ext_resource type="Script" uid="uid://twsepycefell" path="res://Scripts/Cururu/Special.gd" id="56_7uoqt"]
+[ext_resource type="Texture2D" uid="uid://crb6ajowqupi4" path="res://Sprites/Cururu/Levantando/04.png" id="56_15js0"]
 [ext_resource type="Texture2D" uid="uid://vpqiwf03ahgm" path="res://Sprites/Cururu/Melee/05.png" id="56_w1841"]
 [ext_resource type="Texture2D" uid="uid://s7dywbsrphlw" path="res://Sprites/Cururu/Run/01.png" id="56_wq158"]
 [ext_resource type="Texture2D" uid="uid://brcw3gx52yk73" path="res://Sprites/Cururu/Run/02.png" id="57_1mxu7"]
+[ext_resource type="Texture2D" uid="uid://cc51061wquhv4" path="res://Sprites/Cururu/Levantando/05.png" id="57_7cs7m"]
 [ext_resource type="Texture2D" uid="uid://d1ctksgo2tfrn" path="res://Sprites/Cururu/Melee/06.png" id="57_ny8nr"]
 [ext_resource type="Texture2D" uid="uid://c3rk5l2di2igp" path="res://Sprites/Cururu/Melee/07.png" id="58_2t31h"]
 [ext_resource type="Texture2D" uid="uid://c8x6cggwvhx64" path="res://Sprites/Cururu/Run/03.png" id="58_lwl7b"]
+[ext_resource type="Texture2D" uid="uid://c43ha18bywnfu" path="res://Sprites/Cururu/Levantando/06.png" id="58_pabuw"]
 [ext_resource type="Texture2D" uid="uid://cl48ho610vpku" path="res://Sprites/Cururu/Melee/08.png" id="59_s2eek"]
+[ext_resource type="Texture2D" uid="uid://dx5shib2di2oc" path="res://Sprites/Cururu/Levantando/07.png" id="59_ujast"]
 [ext_resource type="Texture2D" uid="uid://6dnbonxcb2gu" path="res://Sprites/Cururu/Run/05.png" id="60_ga1ek"]
+[ext_resource type="Texture2D" uid="uid://daq05acvf7ldg" path="res://Sprites/Cururu/Levantando/08.png" id="60_jbtm5"]
 [ext_resource type="Texture2D" uid="uid://dpot1mm6audq2" path="res://Sprites/Cururu/Run/06.png" id="61_jpq87"]
 [ext_resource type="Texture2D" uid="uid://c3tl3oddronfh" path="res://icon.svg" id="65_ny8nr"]
 [ext_resource type="AudioStream" uid="uid://0svi6tafdid8" path="res://Audio/SFX/CURURU/DANO_PROTAGONISTA.wav" id="77_d7mdf"]
@@ -91,9 +99,12 @@
 [ext_resource type="AudioStream" uid="uid://clarwee0wchnk" path="res://Audio/SFX/CURURU/jump_cururu.mp3" id="80_ny8nr"]
 [ext_resource type="AudioStream" uid="uid://cuyap2xmus3rf" path="res://Audio/SFX/CURURU/dash_cururu.mp3" id="81_2t31h"]
 [ext_resource type="Texture2D" uid="uid://b3r5os20m6bmk" path="res://Sprites/Cururu/Dash/VFX/10.png" id="81_3s0sn"]
+[ext_resource type="Texture2D" uid="uid://clpqx2aa5gv33" path="res://Sprites/Cururu/Special/10.png" id="81_dvy3r"]
+[ext_resource type="Texture2D" uid="uid://cw4kumsykkays" path="res://Sprites/Cururu/Special/11.png" id="82_damx7"]
 [ext_resource type="Texture2D" uid="uid://bdt3wwh3lslf" path="res://Sprites/Cururu/Dash/VFX/12.png" id="82_dvy3r"]
 [ext_resource type="Texture2D" uid="uid://dxtsvqjcc8iyp" path="res://Sprites/Cururu/Virada/00.png" id="83_52p8t"]
 [ext_resource type="Texture2D" uid="uid://og30qejxpng8" path="res://Sprites/Cururu/Dash/VFX/14.png" id="83_damx7"]
+[ext_resource type="Texture2D" uid="uid://h2chlk3jplox" path="res://Sprites/Cururu/Special/12.png" id="83_k0fov"]
 [ext_resource type="Texture2D" uid="uid://15c7aidibbn5" path="res://Sprites/Cururu/Virada/01.png" id="84_mm0hc"]
 [ext_resource type="Texture2D" uid="uid://cdy8yt07p7v8" path="res://Sprites/Cururu/Virada/02.png" id="85_0vd0f"]
 [ext_resource type="Texture2D" uid="uid://b73nkcosr250e" path="res://Sprites/VFX/Iluminação/LightCururu.png" id="87_0w8y8"]
@@ -101,6 +112,29 @@
 [ext_resource type="AudioStream" uid="uid://chf637hlgvwxq" path="res://Audio/SFX/Cuica_1.ogg" id="90_s2eek"]
 [ext_resource type="AudioStream" uid="uid://b1e3re8ykc11o" path="res://Audio/SFX/Cuica_2.ogg" id="91_vpyrf"]
 [ext_resource type="Script" uid="uid://b47dm1pnrhmt1" path="res://Scripts/Cururu/Nadando.gd" id="96_0digr"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_k0fov"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("79_c8qv2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("80_1ribx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("81_3s0sn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("82_dvy3r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("83_damx7")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_ser7u"]
 animations = [{
@@ -294,6 +328,35 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": ExtResource("53_0vd0f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("54_mmhjr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("55_o27xl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("56_15js0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("57_7cs7m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("58_pabuw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("59_ujast")
+}, {
+"duration": 1.0,
+"texture": ExtResource("60_jbtm5")
+}],
+"loop": true,
+"name": &"Levantando",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": ExtResource("53_grb16")
 }, {
 "duration": 1.0,
@@ -407,6 +470,15 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": ExtResource("53_7spwe")
+}, {
+"duration": 1.0,
+"texture": ExtResource("81_dvy3r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("82_damx7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("83_k0fov")
 }],
 "loop": true,
 "name": &"Special",
@@ -440,29 +512,6 @@ animations = [{
 }],
 "loop": true,
 "name": &"Virada",
-"speed": 5.0
-}]
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_k0fov"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("79_c8qv2")
-}, {
-"duration": 1.0,
-"texture": ExtResource("80_1ribx")
-}, {
-"duration": 1.0,
-"texture": ExtResource("81_3s0sn")
-}, {
-"duration": 1.0,
-"texture": ExtResource("82_dvy3r")
-}, {
-"duration": 1.0,
-"texture": ExtResource("83_damx7")
-}],
-"loop": true,
-"name": &"default",
 "speed": 5.0
 }]
 
@@ -508,7 +557,7 @@ length = 0.5
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("%Anim/../VFX:animation")
+tracks/0/path = NodePath("../VFX:animation")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -520,7 +569,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("%Anim/../VFX:frame")
+tracks/1/path = NodePath("../VFX:frame")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -532,7 +581,7 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("%Anim/../VFX:visible")
+tracks/2/path = NodePath("../VFX:visible")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
@@ -547,7 +596,7 @@ length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("%Anim/../VFX:frame")
+tracks/0/path = NodePath("../VFX:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -559,7 +608,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("%Anim/../VFX:visible")
+tracks/1/path = NodePath("../VFX:visible")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -1518,20 +1567,19 @@ shadow_color = Color(0, 0, 0, 0.7764706)
 texture = ExtResource("87_0w8y8")
 texture_scale = 0.3
 
+[node name="VFX" type="AnimatedSprite2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(-87.00001, -108)
+scale = Vector2(0.375651, 0.375651)
+sprite_frames = SubResource("SpriteFrames_k0fov")
+
 [node name="Cururu" type="AnimatedSprite2D" parent="."]
 unique_name_in_owner = true
 position = Vector2(0, -118)
 scale = Vector2(0.375651, 0.375651)
 sprite_frames = SubResource("SpriteFrames_ser7u")
 animation = &"Special"
-frame = 1
 speed_scale = 1.5
-
-[node name="VFX" type="AnimatedSprite2D" parent="."]
-unique_name_in_owner = true
-position = Vector2(-87.00001, -108)
-scale = Vector2(0.375651, 0.375651)
-sprite_frames = SubResource("SpriteFrames_k0fov")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, -79)

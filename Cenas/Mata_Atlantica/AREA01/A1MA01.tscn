@@ -1316,17 +1316,16 @@ volume = -0.5
 metadata/_custom_type_script = "uid://dd16yu704x6wt"
 
 [node name="MainCamera" parent="." node_paths=PackedStringArray("target", "limite_camera") instance=ExtResource("31_f8u2d")]
-position = Vector2(-8781.996, -217.99994)
+position = Vector2(-8782.001, -217.98253)
 zoom = Vector2(0.8, 0.8)
 limit_enabled = true
-limit_left = -9068
+limit_left = -9067
 limit_top = -1278
-limit_right = 2407
+limit_right = 2408
 limit_bottom = 1356
 target = NodePath("../background/0/Cururu")
 speed = 6.0
 limite_camera = NodePath("../LimiteCam")
-deadzone = Vector2(100, 300)
 
 [node name="LimiteCam" type="ReferenceRect" parent="."]
 offset_left = -9068.0
