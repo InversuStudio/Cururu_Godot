@@ -1,0 +1,32 @@
+[gd_scene load_steps=4 format=3 uid="uid://714h1bd64svj"]
+
+[ext_resource type="Script" uid="uid://creukp514gbny" path="res://Scripts/Componentes/vfx_poeira.gd" id="1_mtlvk"]
+[ext_resource type="Texture2D" uid="uid://c4q0ph8pm44av" path="res://Sprites/VFX/Partículas/POEIRA_VFX.png" id="2_ejmxj"]
+
+[sub_resource type="Gradient" id="Gradient_no7jo"]
+colors = PackedColorArray(1, 1, 1, 0.5294118, 1, 1, 1, 0)
+
+[node name="VfxPoeira" type="Node2D"]
+script = ExtResource("1_mtlvk")
+
+[node name="PoeiraAtaque" type="CPUParticles2D" parent="."]
+emitting = false
+amount = 50
+texture = ExtResource("2_ejmxj")
+lifetime = 0.5
+one_shot = true
+explosiveness = 0.95
+randomness = 1.0
+emission_shape = 1
+emission_sphere_radius = 25.0
+direction = Vector2(0, 0)
+spread = 180.0
+gravity = Vector2(0, 50)
+initial_velocity_min = 100.0
+initial_velocity_max = 150.0
+angular_velocity_min = 15.0
+angular_velocity_max = 250.0
+color = Color(0.5609553, 0.5609549, 0.5609547, 1)
+color_ramp = SubResource("Gradient_no7jo")
+hue_variation_min = -1.0
+hue_variation_max = 1.0

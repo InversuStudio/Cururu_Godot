@@ -87,6 +87,7 @@ func Morte() -> void:
 func PausaEMira() -> void:
 	velocity = Vector2.ZERO
 	await get_tree().create_timer(tempo_mira).timeout
+	SpawnPoeira()
 	alvo_ataque = global_position.direction_to(Mundos.player.global_position)
 	%TimerInvestida.start()
 
@@ -99,3 +100,9 @@ func _on_timer_investida_timeout() -> void:
 func _on_timer_entre_ataques_timeout() -> void:
 	pode_atacar = true
 	para_ataque = false
+
+func SpawnPoeira() -> void:
+	var poeira:PackedScene = preload("res://Objetos/Funcionalidade/VFX_POEIRA.tscn")
+	var poeiras:Node2D = poeira.instantiate()
+	self.add_child(poeiras)
+	poeiras.global_position = self.global_position

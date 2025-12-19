@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://wng7roaj8xu6"
-path="res://.godot/imported/arvore_S1.png-8a70aea631dc1036e2c1c1588cdc5cda.ctex"
+uid="uid://c4q0ph8pm44av"
+path="res://.godot/imported/POEIRA_VFX.png-070a7bfe6ec4d9873d6053b793c63091.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/arvore_S1.png"
-dest_files=["res://.godot/imported/arvore_S1.png-8a70aea631dc1036e2c1c1588cdc5cda.ctex"]
+source_file="res://Sprites/VFX/Partículas/POEIRA_VFX.png"
+dest_files=["res://.godot/imported/POEIRA_VFX.png-070a7bfe6ec4d9873d6053b793c63091.ctex"]
 
 [params]
 

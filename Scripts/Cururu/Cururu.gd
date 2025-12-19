@@ -114,7 +114,7 @@ func _ready() -> void:
 		await get_tree().create_timer(1.0).timeout
 		GameData.veio_de_baixo = false
 		
-	#deixa VFX invisível
+	#Deixa VFX invisível
 	%VFX.visible = false
 
 func _process(delta: float) -> void:
