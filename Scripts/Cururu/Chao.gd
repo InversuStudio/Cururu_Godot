@@ -21,13 +21,13 @@ var pode_emitir_vfx: bool = true
 
 func _ready() -> void:
 	await get_tree().current_scene.ready
+	%RunVFXCooldown.connect("timeout", SpawnFolhasRun)
 	parent.connect("virou", func():
 		if get_parent().current_state == self:#pode_anim:
 			%Anim.play("Turn")
 			turn = true
 		#if get_parent().current_state == self:
 			Flip())
-	%RunVFXCooldown.connect("timeout", SpawnFolhas)
 
 # INICIA O STATE
 func Enter() -> void:
@@ -36,7 +36,7 @@ func Enter() -> void:
 	%Coyote.stop()
 	if parent.state_machine.last_state.name == "Fall":
 		%Anim.play("Land")
-		if parent.detalhe_chao[0]: SpawnFolhas()
+		if parent.detalhe_chao[0]: SpawnFolhasFall()
 	else: pode_anim = true
 	
 	if GameData.veio_de_baixo:
@@ -48,16 +48,32 @@ func Enter() -> void:
 		Flip()
 
 func Exit() -> void:
+	
+#esse %RunVFXCooldown.stop() tá causando o efeito do VFX quando o personagem para de se mover. dá pra ver se vc estiver andando da direita pra esquerda /
+#não consegui pensar numa maneira de resolver isso sem separar o state de 'CHAO' em IDLE e RUNNING separadamente. 
+#acho que manter tudo jutno pode dar mais problema daqui pra frente tbm
 	%RunVFXCooldown.stop()
 	turn = false
 	pode_anim = false
 
-func SpawnFolhas() -> void:
+#AJUSTE TEMPORÁRIO PARA MÚLTIPLOS EFEITOS // QUERIA USAR A MESMA FUNÇÃO E PASSAR UMA STRING DO TIPO DE ANIM QUANDO CHAMAR A FUNÇÃO MAS,
+#NÃO CONSEGUI ISSO FAZER FUNCIONAR COM O %RunVFXCooldown.connect("timeout", SpawnFolhasRun)
+
+func SpawnFolhasFall() -> void:
 	if pode_emitir_vfx:
-		var folha:PackedScene = preload("res://Objetos/Funcionalidade/VFX_FOLHA.tscn")
+		var folha:PackedScene = preload("res://Objetos/Funcionalidade/VFX_FOLHA_FALL.tscn")
 		var folhas:Node2D = folha.instantiate()
 		parent.add_child(folhas)
 		folhas.global_position = parent.global_position
+		
+func SpawnFolhasRun() -> void:
+	if pode_emitir_vfx:
+		var folha:PackedScene = preload("res://Objetos/Funcionalidade/VFX_FOLHA_RUN.tscn")
+		var folhas:Node2D = folha.instantiate()
+		parent.add_child(folhas)
+		folhas.global_position = parent.global_position
+		if parent.sprite.flip_h : folhas.set_flip(true) 
+		else : folhas.set_flip(false)
 
 func Update(_delta: float) -> State:
 	# INPUT MELEE
@@ -96,7 +112,6 @@ func FixedUpdate(delta: float) -> State:
 			%Anim.play("Run")
 			if %RunVFXCooldown.is_stopped():
 				%RunVFXCooldown.start()
-				#SpawnFolhas()
 		else:
 			%Anim.play("Idle")
 			%RunVFXCooldown.stop()
