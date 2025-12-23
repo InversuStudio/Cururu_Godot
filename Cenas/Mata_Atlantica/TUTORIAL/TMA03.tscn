@@ -2,9 +2,9 @@
 
 [ext_resource type="Texture2D" uid="uid://cqu5scrrmr5n5" path="res://Sprites/Cenário/Mata_Atlantica/Background/Iluminação e Fundo/FUNDOCEU.png" id="1_4e4qg"]
 [ext_resource type="Texture2D" uid="uid://c374cwih425cq" path="res://Sprites/Cenário/Tilemaps/Base.png" id="1_vftmf"]
-[ext_resource type="Texture2D" uid="uid://ckqo2bxr2g0ii" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/arvore_S2.png" id="2_0j414"]
+[ext_resource type="Texture2D" uid="uid://3g4iv5385ymw" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/arvore_s2.png" id="2_0j414"]
 [ext_resource type="Texture2D" uid="uid://ccql65wj55kqf" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/arvore_s3.png" id="4_3fe7p"]
-[ext_resource type="Texture2D" uid="uid://dog2ml3xbyho2" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/arvore_S1.png" id="4_l7gx4"]
+[ext_resource type="Texture2D" uid="uid://wng7roaj8xu6" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/arvore_s1.png" id="4_l7gx4"]
 [ext_resource type="Texture2D" uid="uid://dmh8fodubelsr" path="res://Sprites/Cenário/Mata_Atlantica/Background/Iluminação e Fundo/FUNDONEVOA.png" id="5_l7gx4"]
 [ext_resource type="Texture2D" uid="uid://dv0q1amqoq168" path="res://Sprites/Cenário/Mata_Atlantica/Background/Mata/mato03.png" id="5_r86pu"]
 [ext_resource type="Texture2D" uid="uid://c8bkav2g3wyeu" path="res://Sprites/Cenário/Mata_Atlantica/Chao/moita2.png" id="6_qclta"]
@@ -349,6 +349,7 @@ texture = ExtResource("4_l7gx4")
 position = Vector2(-13899, -2982.5002)
 scale = Vector2(1, 0.9999997)
 texture = ExtResource("4_l7gx4")
+flip_v = true
 
 [node name="ArvoreS15" type="Sprite2D" parent="Background/-25"]
 position = Vector2(-13899, -5193.334)
@@ -439,6 +440,7 @@ texture = ExtResource("4_3fe7p")
 position = Vector2(-2394.8633, -3210.2185)
 scale = Vector2(0.5373022, 0.9396903)
 texture = ExtResource("4_3fe7p")
+flip_v = true
 
 [node name="ArvoreS13" type="Sprite2D" parent="Background/-2/Arvore2"]
 position = Vector2(-2394.8633, -1133.5027)
@@ -449,11 +451,7 @@ texture = ExtResource("4_3fe7p")
 position = Vector2(-2394.8633, 942.2742)
 scale = Vector2(0.5373022, 0.9396903)
 texture = ExtResource("4_3fe7p")
-
-[node name="ArvoreS18" type="Sprite2D" parent="Background/-2/Arvore2"]
-position = Vector2(-2394.8633, 942.2742)
-scale = Vector2(0.5373022, 0.9396903)
-texture = ExtResource("4_3fe7p")
+flip_v = true
 
 [node name="ArvoreS15" type="Sprite2D" parent="Background/-2/Arvore2"]
 position = Vector2(-1730.2207, -3978.416)
@@ -470,6 +468,7 @@ flip_v = true
 position = Vector2(-1730.2207, -1901.6998)
 scale = Vector2(0.5373022, 0.9396903)
 texture = ExtResource("4_3fe7p")
+flip_v = true
 
 [node name="ArvoreS19" type="Sprite2D" parent="Background/-2/Arvore2"]
 position = Vector2(-1730.2207, 174.077)
@@ -2471,7 +2470,6 @@ limit_bottom = 992
 target = NodePath("../Background/0/Cururu")
 speed = 7.0
 limite_camera = NodePath("../ReferenceRect")
-deadzone = Vector2(100, 300)
 
 [node name="ReferenceRect" type="ReferenceRect" parent="."]
 offset_left = -18893.0
