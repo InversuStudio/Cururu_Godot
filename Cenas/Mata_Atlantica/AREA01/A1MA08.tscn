@@ -392,7 +392,11 @@ position = Vector2(5599, -7756.8325)
 texture = ExtResource("2_h7icq")
 
 [node name="ArvoreS28" type="Sprite2D" parent="Fundo/-4"]
-position = Vector2(4018, -7684.9995)
+position = Vector2(4018, -8676.667)
+texture = ExtResource("2_h7icq")
+
+[node name="ArvoreS30" type="Sprite2D" parent="Fundo/-4"]
+position = Vector2(4018, -6710)
 texture = ExtResource("2_h7icq")
 
 [node name="ArvoreS29" type="Sprite2D" parent="Fundo/-4"]

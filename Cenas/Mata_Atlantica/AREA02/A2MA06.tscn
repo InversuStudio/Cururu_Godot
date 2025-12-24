@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=4 uid="uid://b5am6yc3iwy8e"]
+[gd_scene load_steps=23 format=4 uid="uid://b5am6yc3iwy8e"]
 
 [ext_resource type="Texture2D" uid="uid://c374cwih425cq" path="res://Sprites/Cenário/Tilemaps/Base.png" id="1_7yx4j"]
 [ext_resource type="Texture2D" uid="uid://cqu5scrrmr5n5" path="res://Sprites/Cenário/Mata_Atlantica/Background/Iluminação e Fundo/FUNDOCEU.png" id="1_rxhom"]
@@ -9,7 +9,6 @@
 [ext_resource type="Texture2D" uid="uid://cac7su7slu38j" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/arvore04.png" id="3_yh1lr"]
 [ext_resource type="Texture2D" uid="uid://bi1a2quip0tli" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/arvore03.png" id="4_134jb"]
 [ext_resource type="Texture2D" uid="uid://7msrkwwo018f" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/arvore02.png" id="5_3jwno"]
-[ext_resource type="Texture2D" uid="uid://dmh8fodubelsr" path="res://Sprites/Cenário/Mata_Atlantica/Background/Iluminação e Fundo/FUNDONEVOA.png" id="6_og03o"]
 [ext_resource type="Texture2D" uid="uid://b6yel5f58h380" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/arvore05.png" id="7_f6oy5"]
 [ext_resource type="Texture2D" uid="uid://byfd2kdi00poy" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/asrvore07.png" id="8_a4h14"]
 [ext_resource type="PackedScene" uid="uid://bei1s8te3cwko" path="res://Sprites/Cenário/Mata_Atlantica/Interativos/plataforma.tscn" id="8_g87lo"]
@@ -192,12 +191,6 @@ texture = ExtResource("5_3jwno")
 position = Vector2(4210, -874)
 texture = ExtResource("2_j2hae")
 
-[node name="Fundonevoa" type="Sprite2D" parent="-4"]
-modulate = Color(1, 1, 1, 0.5882353)
-position = Vector2(5966.6675, -1258.8661)
-scale = Vector2(7.299495, 2.0828125)
-texture = ExtResource("6_og03o")
-
 [node name="-3" type="CanvasLayer" parent="."]
 follow_viewport_enabled = true
 follow_viewport_scale = 0.7
@@ -213,12 +206,6 @@ texture = ExtResource("2_j2hae")
 [node name="Arvore03" type="Sprite2D" parent="-3"]
 position = Vector2(3252, -919)
 texture = ExtResource("4_134jb")
-
-[node name="Fundonevoa3" type="Sprite2D" parent="-3"]
-modulate = Color(1, 1, 1, 0.5882353)
-position = Vector2(6375.714, -902.21826)
-scale = Vector2(6.9218445, 2.0611706)
-texture = ExtResource("6_og03o")
 
 [node name="-2" type="CanvasLayer" parent="."]
 follow_viewport_enabled = true
@@ -239,12 +226,6 @@ texture = ExtResource("5_3jwno")
 [node name="Arvore04" type="Sprite2D" parent="-2"]
 position = Vector2(7900, -838)
 texture = ExtResource("3_yh1lr")
-
-[node name="Fundonevoa5" type="Sprite2D" parent="-2"]
-modulate = Color(1, 1, 1, 0.5882353)
-position = Vector2(5931.5166, -797.0399)
-scale = Vector2(6.48827, 1.9584571)
-texture = ExtResource("6_og03o")
 
 [node name="-1" type="CanvasLayer" parent="."]
 follow_viewport_enabled = true
@@ -273,12 +254,6 @@ texture = ExtResource("2_j2hae")
 [node name="ArvoreMiasma" type="Sprite2D" parent="-1"]
 position = Vector2(8419, -865)
 texture = ExtResource("10_cejqw")
-
-[node name="Fundonevoa6" type="Sprite2D" parent="-1"]
-modulate = Color(1, 1, 1, 0.5882353)
-position = Vector2(6351.031, -465.23425)
-scale = Vector2(6.8977513, 1.6344284)
-texture = ExtResource("6_og03o")
 
 [node name="0" type="CanvasLayer" parent="."]
 follow_viewport_enabled = true

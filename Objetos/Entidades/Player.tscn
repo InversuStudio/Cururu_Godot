@@ -1,4 +1,4 @@
-[gd_scene load_steps=147 format=3 uid="uid://nohq28uk7lfk"]
+[gd_scene load_steps=145 format=3 uid="uid://nohq28uk7lfk"]
 
 [ext_resource type="Script" uid="uid://cfu4ciwll8jcj" path="res://Scripts/Cururu/Cururu.gd" id="1_gwpdq"]
 [ext_resource type="Texture2D" uid="uid://6tjgxsgaflxb" path="res://Sprites/Cururu/Dano/03.png" id="2_0hf88"]
@@ -100,11 +100,9 @@
 [ext_resource type="AudioStream" uid="uid://cuyap2xmus3rf" path="res://Audio/SFX/CURURU/dash_cururu.mp3" id="81_2t31h"]
 [ext_resource type="Texture2D" uid="uid://b3r5os20m6bmk" path="res://Sprites/Cururu/Dash/VFX/10.png" id="81_3s0sn"]
 [ext_resource type="Texture2D" uid="uid://clpqx2aa5gv33" path="res://Sprites/Cururu/Special/10.png" id="81_dvy3r"]
-[ext_resource type="Texture2D" uid="uid://cw4kumsykkays" path="res://Sprites/Cururu/Special/11.png" id="82_damx7"]
 [ext_resource type="Texture2D" uid="uid://bdt3wwh3lslf" path="res://Sprites/Cururu/Dash/VFX/12.png" id="82_dvy3r"]
 [ext_resource type="Texture2D" uid="uid://dxtsvqjcc8iyp" path="res://Sprites/Cururu/Virada/00.png" id="83_52p8t"]
 [ext_resource type="Texture2D" uid="uid://og30qejxpng8" path="res://Sprites/Cururu/Dash/VFX/14.png" id="83_damx7"]
-[ext_resource type="Texture2D" uid="uid://h2chlk3jplox" path="res://Sprites/Cururu/Special/12.png" id="83_k0fov"]
 [ext_resource type="Texture2D" uid="uid://15c7aidibbn5" path="res://Sprites/Cururu/Virada/01.png" id="84_mm0hc"]
 [ext_resource type="Texture2D" uid="uid://cdy8yt07p7v8" path="res://Sprites/Cururu/Virada/02.png" id="85_0vd0f"]
 [ext_resource type="Texture2D" uid="uid://b73nkcosr250e" path="res://Sprites/VFX/Iluminação/LightCururu.png" id="87_0w8y8"]
@@ -473,16 +471,10 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": ExtResource("81_dvy3r")
-}, {
-"duration": 1.0,
-"texture": ExtResource("82_damx7")
-}, {
-"duration": 1.0,
-"texture": ExtResource("83_k0fov")
 }],
 "loop": true,
 "name": &"Special",
-"speed": 12.0
+"speed": 2.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -540,8 +532,8 @@ radius = 74.0
 height = 308.0
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_1dbdn"]
-radius = 95.99998
-height = 439.99997
+radius = 71.00001
+height = 331.99997
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_s2eek"]
 radius = 107.0
@@ -1338,7 +1330,7 @@ tracks/2/keys = {
 
 [sub_resource type="Animation" id="Animation_7uoqt"]
 resource_name = "Special"
-length = 0.7
+length = 0.65
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -1346,7 +1338,7 @@ tracks/0/path = NodePath("HitContainer/Special/ColSpecial:disabled")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0.2, 0.5),
+"times": PackedFloat32Array(0.23333333, 0.26666668),
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
 "values": [false, true]
@@ -1370,10 +1362,10 @@ tracks/2/path = NodePath("Cururu:frame")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(0, 0.083333336, 0.16666667, 0.25000003, 0.33333334, 0.4166667, 0.50000006, 0.5833334, 0.6666667),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
+"times": PackedFloat32Array(0, 0.06666667, 0.13333334, 0.2, 0.26666668, 0.33333334, 0.4, 0.46666667, 0.53333336, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
 "update": 1,
-"values": [0, 1, 2, 3, 4, 5, 6, 7, 8]
+"values": [0, 1, 2, 3, 4, 5, 6, 7, 8, 0]
 }
 tracks/3/type = "method"
 tracks/3/imported = false
@@ -1663,7 +1655,7 @@ ignore = NodePath("../../HurtContainer/HurtBox")
 parent = NodePath("../..")
 
 [node name="ColSpecial" type="CollisionShape2D" parent="HitContainer/Special"]
-position = Vector2(233, -105)
+position = Vector2(134, -79)
 rotation = 1.57079
 shape = SubResource("CapsuleShape2D_1dbdn")
 
@@ -1706,7 +1698,6 @@ unique_name_in_owner = true
 libraries = {
 &"": SubResource("AnimationLibrary_g0l4m")
 }
-autoplay = "Idle"
 
 [node name="SFX" type="Node" parent="."]
 

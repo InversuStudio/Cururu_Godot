@@ -1,11 +1,10 @@
-[gd_scene load_steps=49 format=4 uid="uid://nqosq2wj0auk"]
+[gd_scene load_steps=48 format=4 uid="uid://nqosq2wj0auk"]
 
 [ext_resource type="Texture2D" uid="uid://cqu5scrrmr5n5" path="res://Sprites/Cenário/Mata_Atlantica/Background/Iluminação e Fundo/FUNDOCEU.png" id="1_4e4qg"]
 [ext_resource type="Texture2D" uid="uid://c374cwih425cq" path="res://Sprites/Cenário/Tilemaps/Base.png" id="1_vftmf"]
 [ext_resource type="Texture2D" uid="uid://3g4iv5385ymw" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/arvore_s2.png" id="2_0j414"]
 [ext_resource type="Texture2D" uid="uid://ccql65wj55kqf" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/arvore_s3.png" id="4_3fe7p"]
 [ext_resource type="Texture2D" uid="uid://wng7roaj8xu6" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/arvore_s1.png" id="4_l7gx4"]
-[ext_resource type="Texture2D" uid="uid://dmh8fodubelsr" path="res://Sprites/Cenário/Mata_Atlantica/Background/Iluminação e Fundo/FUNDONEVOA.png" id="5_l7gx4"]
 [ext_resource type="Texture2D" uid="uid://dv0q1amqoq168" path="res://Sprites/Cenário/Mata_Atlantica/Background/Mata/mato03.png" id="5_r86pu"]
 [ext_resource type="Texture2D" uid="uid://c8bkav2g3wyeu" path="res://Sprites/Cenário/Mata_Atlantica/Chao/moita2.png" id="6_qclta"]
 [ext_resource type="Texture2D" uid="uid://ctar30vsktrrb" path="res://Sprites/Cenário/Mata_Atlantica/Background/Iluminação e Fundo/FUNDONEVOA2.png" id="6_rnx0k"]
@@ -290,6 +289,7 @@ texture = ExtResource("2_0j414")
 position = Vector2(-2225.077, -3408.8599)
 scale = Vector2(0.46129233, 0.8067565)
 texture = ExtResource("2_0j414")
+flip_v = true
 
 [node name="ArvoreS4" type="Sprite2D" parent="Background/-3/Arvore3"]
 position = Vector2(-2225.077, -1625.8998)
@@ -305,6 +305,7 @@ texture = ExtResource("2_0j414")
 position = Vector2(-1504.5544, -3408.8599)
 scale = Vector2(0.46129233, 0.8067565)
 texture = ExtResource("2_0j414")
+flip_v = true
 
 [node name="ArvoreS8" type="Sprite2D" parent="Background/-3/Arvore3"]
 position = Vector2(-1504.5544, -1625.8998)
@@ -326,16 +327,6 @@ position = Vector2(745.13086, -3743.9626)
 scale = Vector2(0.5373022, 0.9396905)
 texture = ExtResource("2_0j414")
 
-[node name="Mato03" type="Sprite2D" parent="Background/-3"]
-position = Vector2(-15258, 117.99997)
-scale = Vector2(1.4, 1.3999994)
-texture = ExtResource("5_r86pu")
-
-[node name="Mato05" type="Sprite2D" parent="Background/-3"]
-position = Vector2(-11416.996, 331.99994)
-scale = Vector2(1.4, 1.3999994)
-texture = ExtResource("5_r86pu")
-
 [node name="-25" type="CanvasLayer" parent="Background"]
 follow_viewport_enabled = true
 follow_viewport_scale = 0.75
@@ -355,7 +346,6 @@ flip_v = true
 position = Vector2(-13899, -5193.334)
 scale = Vector2(1, 0.9999997)
 texture = ExtResource("4_l7gx4")
-flip_v = true
 
 [node name="ArvoreS14" type="Sprite2D" parent="Background/-25"]
 position = Vector2(-13899, -771.50006)
@@ -377,10 +367,24 @@ position = Vector2(-8620, -214.66666)
 scale = Vector2(1, 0.9999996)
 texture = ExtResource("4_l7gx4")
 
-[node name="Mato02" type="Sprite2D" parent="Background/-25"]
+[node name="-27" type="CanvasLayer" parent="Background"]
+follow_viewport_enabled = true
+follow_viewport_scale = 0.78
+
+[node name="Mato03" type="Sprite2D" parent="Background/-27"]
+position = Vector2(-15976, 117.99997)
+scale = Vector2(1.4, 1.3999994)
+texture = ExtResource("5_r86pu")
+
+[node name="Mato02" type="Sprite2D" parent="Background/-27"]
 position = Vector2(-13135, 427.99988)
 scale = Vector2(1.5999999, 1.5999988)
 texture = ExtResource("9_t50kr")
+
+[node name="Mato05" type="Sprite2D" parent="Background/-27"]
+position = Vector2(-11416.996, 331.99994)
+scale = Vector2(1.4, 1.3999994)
+texture = ExtResource("5_r86pu")
 
 [node name="-2" type="CanvasLayer" parent="Background"]
 follow_viewport_enabled = true
@@ -480,13 +484,6 @@ position = Vector2(-494.9629, 331.00653)
 scale = Vector2(0.5373022, 0.9396903)
 texture = ExtResource("4_3fe7p")
 
-[node name="Fundonevoa" type="Sprite2D" parent="Background/-2"]
-visible = false
-light_mask = 2
-position = Vector2(-13261.621, -419.3531)
-scale = Vector2(5.6379657, 1.3404754)
-texture = ExtResource("5_l7gx4")
-
 [node name="-15" type="CanvasLayer" parent="Background"]
 follow_viewport_enabled = true
 follow_viewport_scale = 0.85
@@ -497,15 +494,9 @@ scale = Vector2(1.8, 1.7999997)
 texture = ExtResource("20_386eh")
 
 [node name="Mato01" type="Sprite2D" parent="Background/-15"]
-position = Vector2(-16635, 481)
+position = Vector2(-15541.177, 638.8235)
 scale = Vector2(1.8, 1.7999997)
 texture = ExtResource("20_386eh")
-
-[node name="Fundonevoa2" type="Sprite2D" parent="Background/-15"]
-light_mask = 2
-position = Vector2(-13219, 652.00006)
-scale = Vector2(5.6803374, 0.4013672)
-texture = ExtResource("5_l7gx4")
 
 [node name="-1" type="CanvasLayer" parent="Background"]
 follow_viewport_enabled = true
@@ -556,9 +547,25 @@ scale = Vector2(0.5373022, 0.93969053)
 texture = ExtResource("10_tssdc")
 
 [node name="Arvore15" type="Sprite2D" parent="Background/-1/Arvore1"]
-position = Vector2(-3204.578, -497.33127)
+position = Vector2(-3204.578, -828.3112)
 scale = Vector2(0.5373022, 0.93969053)
 texture = ExtResource("10_tssdc")
+
+[node name="Arvore18" type="Sprite2D" parent="Background/-1/Arvore1"]
+position = Vector2(-3204.578, 1199.3323)
+scale = Vector2(0.5373022, 0.93969053)
+texture = ExtResource("10_tssdc")
+
+[node name="Arvore16" type="Sprite2D" parent="Background/-1/Arvore1"]
+position = Vector2(-3796.984, 51.865753)
+scale = Vector2(0.5358484, 0.9384192)
+texture = ExtResource("10_tssdc")
+
+[node name="Arvore17" type="Sprite2D" parent="Background/-1/Arvore1"]
+position = Vector2(-3796.984, -2022.7637)
+scale = Vector2(0.5358484, 0.9384192)
+texture = ExtResource("10_tssdc")
+flip_v = true
 
 [node name="Arvore07" type="Sprite2D" parent="Background/-1/Arvore1"]
 position = Vector2(-252.10205, -3721.4092)
@@ -619,132 +626,151 @@ follow_viewport_enabled = true
 follow_viewport_scale = 0.95
 
 [node name="Mato00" type="Sprite2D" parent="Background/-05"]
+position = Vector2(-9533.684, 728.4211)
+scale = Vector2(1.1960375, 1.1082407)
+texture = ExtResource("33_3fe7p")
+flip_h = true
+
+[node name="Mato01" type="Sprite2D" parent="Background/-05"]
+position = Vector2(-12557.119, 628.18933)
+scale = Vector2(1.3319443, 1.2341709)
+texture = ExtResource("33_3fe7p")
+flip_h = true
+
+[node name="Mato02" type="Sprite2D" parent="Background/-05"]
+visible = false
+position = Vector2(-16712.63, 628.18933)
+scale = Vector2(1.3319443, 1.2341709)
+texture = ExtResource("33_3fe7p")
+flip_h = true
+
+[node name="-02" type="CanvasLayer" parent="Background"]
+follow_viewport_enabled = true
+follow_viewport_scale = 0.98
+
+[node name="Mato00" type="Sprite2D" parent="Background/-02"]
 position = Vector2(-16095, 696.9999)
 scale = Vector2(1, 0.9999999)
 texture = ExtResource("33_3fe7p")
 
-[node name="Moita7" type="Sprite2D" parent="Background/-05"]
+[node name="Moita7" type="Sprite2D" parent="Background/-02"]
 position = Vector2(-13876.002, 634.9998)
 scale = Vector2(1, 0.9999995)
 texture = ExtResource("6_qclta")
 
-[node name="Sombra7" type="Sprite2D" parent="Background/-05"]
+[node name="Sombra7" type="Sprite2D" parent="Background/-02"]
 position = Vector2(-13887.5, 639.9999)
 scale = Vector2(1.8217573, 0.9999995)
 texture = ExtResource("7_op0pn")
 
-[node name="Moita8" type="Sprite2D" parent="Background/-05"]
+[node name="Moita8" type="Sprite2D" parent="Background/-02"]
 position = Vector2(-11668.003, 597.99994)
 scale = Vector2(1, 0.9999995)
 texture = ExtResource("6_qclta")
 
-[node name="Sombra8" type="Sprite2D" parent="Background/-05"]
+[node name="Sombra8" type="Sprite2D" parent="Background/-02"]
 position = Vector2(-11679.499, 602.99994)
 scale = Vector2(1.8217573, 0.9999995)
 texture = ExtResource("7_op0pn")
 
-[node name="Moita3" type="Sprite2D" parent="Background/-05"]
+[node name="Moita3" type="Sprite2D" parent="Background/-02"]
 position = Vector2(-17562, -3630.9995)
 scale = Vector2(1, 0.9999998)
 texture = ExtResource("6_qclta")
 
-[node name="Fundonevoa2" type="Sprite2D" parent="Background/-05"]
+[node name="Fundonevoa2" type="Sprite2D" parent="Background/-02"]
 light_mask = 2
 position = Vector2(-13442, 241.98721)
 scale = Vector2(5.435022, 1.0286436)
 texture = ExtResource("6_rnx0k")
 
-[node name="Sombra3" type="Sprite2D" parent="Background/-05"]
+[node name="Sombra3" type="Sprite2D" parent="Background/-02"]
 position = Vector2(-17573.5, -3611)
 scale = Vector2(1.8217573, 0.9999999)
 texture = ExtResource("7_op0pn")
 
-[node name="Moita4" type="Sprite2D" parent="Background/-05"]
+[node name="Moita4" type="Sprite2D" parent="Background/-02"]
 position = Vector2(-15903, -3578)
 scale = Vector2(1, 0.9999999)
 texture = ExtResource("6_qclta")
 
-[node name="Sombra4" type="Sprite2D" parent="Background/-05"]
+[node name="Sombra4" type="Sprite2D" parent="Background/-02"]
 position = Vector2(-15914.499, -3573)
 scale = Vector2(1.8217573, 0.9999999)
 texture = ExtResource("7_op0pn")
 
-[node name="Moita5" type="Sprite2D" parent="Background/-05"]
+[node name="Moita5" type="Sprite2D" parent="Background/-02"]
 position = Vector2(-13027.001, 604)
 scale = Vector2(1, 0.9999999)
 texture = ExtResource("6_qclta")
 
-[node name="Sombra10" type="Sprite2D" parent="Background/-05"]
+[node name="Sombra10" type="Sprite2D" parent="Background/-02"]
 position = Vector2(-15984.75, 620.49994)
 scale = Vector2(4.609952, 1.1814156)
 texture = ExtResource("7_op0pn")
 
-[node name="Sombra5" type="Sprite2D" parent="Background/-05"]
+[node name="Sombra5" type="Sprite2D" parent="Background/-02"]
 position = Vector2(-13038.5, 609.00006)
 scale = Vector2(1.8217573, 0.9999999)
 texture = ExtResource("7_op0pn")
 
-[node name="Flores" type="Sprite2D" parent="Background/-05"]
+[node name="Flores" type="Sprite2D" parent="Background/-02"]
 modulate = Color(3.2944162, 3.2944162, 3.2944162, 1)
 position = Vector2(-8898, -342)
 scale = Vector2(0.71126765, 0.7112675)
 texture = ExtResource("46_tssdc")
 
-[node name="Moita10" type="Sprite2D" parent="Background/-05"]
+[node name="Moita10" type="Sprite2D" parent="Background/-02"]
 position = Vector2(-15281, 644.00006)
 scale = Vector2(1, 0.9999999)
 texture = ExtResource("6_qclta")
 
-[node name="Sombra9" type="Sprite2D" parent="Background/-05"]
+[node name="Sombra9" type="Sprite2D" parent="Background/-02"]
 position = Vector2(-15292.5, 649.00006)
 scale = Vector2(1.8217573, 0.9999999)
 texture = ExtResource("7_op0pn")
 
-[node name="Moita6" type="Sprite2D" parent="Background/-05"]
+[node name="Moita6" type="Sprite2D" parent="Background/-02"]
 position = Vector2(-10281.001, 604)
 scale = Vector2(1, 0.9999999)
 texture = ExtResource("6_qclta")
 
-[node name="Flores4" type="Sprite2D" parent="Background/-05"]
+[node name="Flores4" type="Sprite2D" parent="Background/-02"]
 modulate = Color(3.2944162, 3.2944162, 3.2944162, 1)
 position = Vector2(-10118, 553.9999)
 scale = Vector2(0.71126765, 0.7112675)
 texture = ExtResource("46_tssdc")
 flip_h = true
 
-[node name="Sombra6" type="Sprite2D" parent="Background/-05"]
+[node name="Sombra6" type="Sprite2D" parent="Background/-02"]
 position = Vector2(-10292.5, 609.00006)
 scale = Vector2(1.8217573, 0.9999999)
 texture = ExtResource("7_op0pn")
 
-[node name="Moita2" type="Sprite2D" parent="Background/-05"]
+[node name="Moita2" type="Sprite2D" parent="Background/-02"]
 position = Vector2(-18089, -3602)
 scale = Vector2(1, 0.99999994)
 texture = ExtResource("6_qclta")
 
-[node name="Moita9" type="Sprite2D" parent="Background/-05"]
+[node name="Moita9" type="Sprite2D" parent="Background/-02"]
 position = Vector2(-18707, -3527)
 scale = Vector2(1, 0.99999994)
 texture = ExtResource("6_qclta")
 
-[node name="Sombra2" type="Sprite2D" parent="Background/-05"]
+[node name="Sombra2" type="Sprite2D" parent="Background/-02"]
 position = Vector2(-18100.5, -3540.0002)
 scale = Vector2(1.8217573, 0.99999994)
 texture = ExtResource("7_op0pn")
 
-[node name="Moita11" type="Sprite2D" parent="Background/-05"]
+[node name="Moita11" type="Sprite2D" parent="Background/-02"]
 position = Vector2(-8727.001, -257)
 scale = Vector2(1, 0.9999997)
 texture = ExtResource("6_qclta")
 
-[node name="Sombra11" type="Sprite2D" parent="Background/-05"]
+[node name="Sombra11" type="Sprite2D" parent="Background/-02"]
 position = Vector2(-8740.75, -235)
 scale = Vector2(1.6053236, 0.9646016)
 texture = ExtResource("7_op0pn")
-
-[node name="-02" type="CanvasLayer" parent="Background"]
-follow_viewport_enabled = true
-follow_viewport_scale = 0.98
 
 [node name="0" type="CanvasLayer" parent="Background"]
 follow_viewport_enabled = true

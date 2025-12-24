@@ -1,15 +1,13 @@
-[gd_scene load_steps=40 format=4 uid="uid://cwvi3pve0viqq"]
+[gd_scene load_steps=38 format=4 uid="uid://cwvi3pve0viqq"]
 
 [ext_resource type="Texture2D" uid="uid://c374cwih425cq" path="res://Sprites/Cenário/Tilemaps/Base.png" id="1_mkak3"]
 [ext_resource type="Texture2D" uid="uid://cqu5scrrmr5n5" path="res://Sprites/Cenário/Mata_Atlantica/Background/Iluminação e Fundo/FUNDOCEU.png" id="1_mo78v"]
 [ext_resource type="Texture2D" uid="uid://2x6q1ni8klgv" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/arvore_fundo1.png" id="2_158ye"]
 [ext_resource type="PackedScene" uid="uid://1apfpwlqocxn" path="res://Objetos/Funcionalidade/TransicaoFase.tscn" id="2_botoi"]
-[ext_resource type="Texture2D" uid="uid://dog2ml3xbyho2" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/arvore_S1.png" id="2_pluiq"]
+[ext_resource type="Texture2D" uid="uid://wng7roaj8xu6" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/arvore_S1.png" id="2_pluiq"]
 [ext_resource type="Texture2D" uid="uid://btb3tlxsmx38i" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/arvore_fundo2.png" id="3_m6ifx"]
 [ext_resource type="Texture2D" uid="uid://dv0q1amqoq168" path="res://Sprites/Cenário/Mata_Atlantica/Background/Mata/mato03.png" id="4_15hca"]
 [ext_resource type="Texture2D" uid="uid://rwmi1ggde5dy" path="res://Sprites/VFX/Iluminação/PORTAL.png" id="4_hyhx3"]
-[ext_resource type="Texture2D" uid="uid://dmh8fodubelsr" path="res://Sprites/Cenário/Mata_Atlantica/Background/Iluminação e Fundo/FUNDONEVOA.png" id="4_mhwhk"]
-[ext_resource type="Texture2D" uid="uid://ctar30vsktrrb" path="res://Sprites/Cenário/Mata_Atlantica/Background/Iluminação e Fundo/FUNDONEVOA2.png" id="5_bf5tm"]
 [ext_resource type="PackedScene" uid="uid://nohq28uk7lfk" path="res://Objetos/Entidades/Player.tscn" id="5_gvt1b"]
 [ext_resource type="Texture2D" uid="uid://bg3yumuc4n238" path="res://Sprites/Cenário/Objetos/Upgrade/TOTEM.png" id="6_mhwhk"]
 [ext_resource type="Texture2D" uid="uid://dru600hg8oaty" path="res://Sprites/Cenário/Mata_Atlantica/Background/Mata/mato02.png" id="7_2jjbf"]
@@ -34,7 +32,7 @@
 [ext_resource type="Texture2D" uid="uid://ccy8rilccs3gf" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/arvore06.png" id="26_hxknu"]
 [ext_resource type="Texture2D" uid="uid://bi1a2quip0tli" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/arvore03.png" id="27_l2wog"]
 [ext_resource type="Texture2D" uid="uid://ccql65wj55kqf" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/arvore_s3.png" id="28_kw2xg"]
-[ext_resource type="Texture2D" uid="uid://ckqo2bxr2g0ii" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/arvore_S2.png" id="29_l7lqk"]
+[ext_resource type="Texture2D" uid="uid://3g4iv5385ymw" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/arvore_S2.png" id="29_l7lqk"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fgbha"]
 size = Vector2(3621, 1573)
@@ -240,11 +238,6 @@ position = Vector2(1797, -3081)
 scale = Vector2(0.7414634, 0.7414634)
 texture = ExtResource("2_pluiq")
 
-[node name="Fundonevoa" type="Sprite2D" parent="-3"]
-position = Vector2(220.71445, -2740)
-scale = Vector2(2.1174095, 1)
-texture = ExtResource("4_mhwhk")
-
 [node name="-25" type="CanvasLayer" parent="."]
 follow_viewport_enabled = true
 follow_viewport_scale = 0.75
@@ -296,11 +289,6 @@ texture = ExtResource("9_lsyrr")
 position = Vector2(714.99994, -2723)
 scale = Vector2(0.4312715, 0.43127146)
 texture = ExtResource("9_lsyrr")
-
-[node name="Fundonevoa2" type="Sprite2D" parent="-15"]
-position = Vector2(348.8236, -2855.9705)
-scale = Vector2(2.1778197, 0.75876033)
-texture = ExtResource("5_bf5tm")
 
 [node name="-1" type="CanvasLayer" parent="."]
 follow_viewport_enabled = true
@@ -675,7 +663,7 @@ texture = ExtResource("17_l3md2")
 follow_viewport_enabled = true
 
 [node name="MainCamera" parent="." node_paths=PackedStringArray("target", "limite_camera") instance=ExtResource("25_mhwhk")]
-position = Vector2(1593.9999, -3026.9983)
+position = Vector2(1593.9999, -3026.9993)
 zoom = Vector2(0.8, 0.8)
 limit_enabled = true
 limit_left = -1449

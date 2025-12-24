@@ -1,19 +1,17 @@
-[gd_scene load_steps=35 format=4 uid="uid://c2wxcq8h71dqe"]
+[gd_scene load_steps=33 format=4 uid="uid://c2wxcq8h71dqe"]
 
 [ext_resource type="Texture2D" uid="uid://cqu5scrrmr5n5" path="res://Sprites/Cenário/Mata_Atlantica/Background/Iluminação e Fundo/FUNDOCEU.png" id="1_7lg54"]
 [ext_resource type="Texture2D" uid="uid://c374cwih425cq" path="res://Sprites/Cenário/Tilemaps/Base.png" id="1_lvkdv"]
-[ext_resource type="Texture2D" uid="uid://dog2ml3xbyho2" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/arvore_S1.png" id="2_deoee"]
-[ext_resource type="Texture2D" uid="uid://ckqo2bxr2g0ii" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/arvore_S2.png" id="2_lift6"]
+[ext_resource type="Texture2D" uid="uid://wng7roaj8xu6" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/arvore_S1.png" id="2_deoee"]
+[ext_resource type="Texture2D" uid="uid://3g4iv5385ymw" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/arvore_S2.png" id="2_lift6"]
 [ext_resource type="PackedScene" uid="uid://1apfpwlqocxn" path="res://Objetos/Funcionalidade/TransicaoFase.tscn" id="2_p2dm5"]
 [ext_resource type="Texture2D" uid="uid://dv0q1amqoq168" path="res://Sprites/Cenário/Mata_Atlantica/Background/Mata/mato03.png" id="3_fs0qs"]
 [ext_resource type="Texture2D" uid="uid://cjl88xeknofui" path="res://Sprites/Cenário/Mata_Atlantica/Chao/grama_reto.png" id="4_8dhcb"]
 [ext_resource type="Texture2D" uid="uid://c8bkav2g3wyeu" path="res://Sprites/Cenário/Mata_Atlantica/Chao/moita2.png" id="4_n5d52"]
 [ext_resource type="Texture2D" uid="uid://rbtvfm4m7ft" path="res://Sprites/VFX/Iluminação/SOMBRA2.png" id="5_fpvhh"]
 [ext_resource type="Texture2D" uid="uid://cw2yeg7ynw0kl" path="res://Sprites/Cenário/Mata_Atlantica/Chao/chap_externo.png" id="5_x8u7e"]
-[ext_resource type="Texture2D" uid="uid://dmh8fodubelsr" path="res://Sprites/Cenário/Mata_Atlantica/Background/Iluminação e Fundo/FUNDONEVOA.png" id="6_8nsrb"]
 [ext_resource type="Texture2D" uid="uid://cj4rj4oj20ogb" path="res://Sprites/Cenário/Mata_Atlantica/Chao/chap_interno.png" id="6_csefs"]
 [ext_resource type="Texture2D" uid="uid://dru600hg8oaty" path="res://Sprites/Cenário/Mata_Atlantica/Background/Mata/mato02.png" id="6_yjmhh"]
-[ext_resource type="Texture2D" uid="uid://ctar30vsktrrb" path="res://Sprites/Cenário/Mata_Atlantica/Background/Iluminação e Fundo/FUNDONEVOA2.png" id="7_4ft46"]
 [ext_resource type="Texture2D" uid="uid://ccql65wj55kqf" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/arvore_s3.png" id="7_u1c06"]
 [ext_resource type="PackedScene" uid="uid://nohq28uk7lfk" path="res://Objetos/Entidades/Player.tscn" id="8_4sa1d"]
 [ext_resource type="Texture2D" uid="uid://d3t6c4pjsosio" path="res://Sprites/Cenário/Mata_Atlantica/Background/Mata/mato01.png" id="9_q14ba"]
@@ -207,13 +205,6 @@ texture = ExtResource("3_fs0qs")
 position = Vector2(3847.5, -977.5)
 texture = ExtResource("3_fs0qs")
 
-[node name="FundoNevoa" type="Sprite2D" parent="-3"]
-light_mask = 2
-z_index = -2
-position = Vector2(2458.499, -654.49854)
-scale = Vector2(2.4589918, 0.6907111)
-texture = ExtResource("6_8nsrb")
-
 [node name="-25" type="CanvasLayer" parent="."]
 follow_viewport_enabled = true
 follow_viewport_scale = 0.75
@@ -265,13 +256,6 @@ texture = ExtResource("9_q14ba")
 [node name="Mato03" type="Sprite2D" parent="-1"]
 position = Vector2(4267.5, -689.5)
 texture = ExtResource("9_q14ba")
-
-[node name="FundoNevoa2" type="Sprite2D" parent="-1"]
-light_mask = 2
-z_index = -2
-position = Vector2(2443.002, -647.5005)
-scale = Vector2(2.44417, 0.6892294)
-texture = ExtResource("7_4ft46")
 
 [node name="-05" type="CanvasLayer" parent="."]
 follow_viewport_enabled = true
@@ -825,7 +809,7 @@ volume = -0.5
 metadata/_custom_type_script = "uid://dd16yu704x6wt"
 
 [node name="MainCamera" parent="." node_paths=PackedStringArray("target", "limite_camera") instance=ExtResource("23_n5d52")]
-position = Vector2(228, -596.4996)
+position = Vector2(228, -596.4998)
 zoom = Vector2(0.8, 0.8)
 limit_enabled = true
 limit_left = 6

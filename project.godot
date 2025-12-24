@@ -45,6 +45,8 @@ window/size/viewport_width=1920
 window/size/viewport_height=1080
 window/size/initial_position_type=3
 window/size/resizable=false
+window/size/window_width_override=1280
+window/size/window_height_override=720
 window/stretch/mode="canvas_items"
 window/stretch/aspect="ignore"
 
@@ -62,7 +64,6 @@ folder_colors={
 "res://Objetos/": "blue",
 "res://Scripts/": "green",
 "res://Sprites/": "yellow",
-"res://Sprites/Cenário/zSem_Uso/": "gray",
 "res://Sprites/Inimigos/Boitata/": "red",
 "res://Sprites/zTeste_Parellax/": "gray",
 "res://Sprites/zWIP/": "gray",
