@@ -1,10 +1,157 @@
-[gd_scene load_steps=13 format=3 uid="uid://cdhelg6sloxbj"]
+[gd_scene load_steps=38 format=3 uid="uid://cdhelg6sloxbj"]
 
 [ext_resource type="Script" uid="uid://b0ou3eu3i1sxg" path="res://Scripts/Componentes/PortaTemp.gd" id="1_rixxk"]
+[ext_resource type="Texture2D" uid="uid://clqh4rstgwwgd" path="res://Sprites/Cenário/Miasma/Porta de Miasma/Abrindo/01.png" id="2_cxcld"]
+[ext_resource type="Texture2D" uid="uid://ch3k7gd7vr6vj" path="res://Sprites/Cenário/Miasma/Porta de Miasma/Idle/01.png" id="2_tctdy"]
 [ext_resource type="PackedScene" uid="uid://va5pjd6vuuo2" path="res://Objetos/Funcionalidade/CompHurtBox.tscn" id="3_7ptwx"]
+[ext_resource type="Texture2D" uid="uid://lvtrxxiqe484" path="res://Sprites/Cenário/Miasma/Porta de Miasma/Abrindo/02.png" id="3_br5by"]
 [ext_resource type="Texture2D" uid="uid://bgdktvv3wdxl5" path="res://Sprites/Cenário/Objetos/Portas/MIASMA.png" id="3_h4g8d"]
+[ext_resource type="Texture2D" uid="uid://dbr7hoitduc3h" path="res://Sprites/Cenário/Miasma/Porta de Miasma/Idle/02.png" id="3_viq74"]
 [ext_resource type="PackedScene" uid="uid://pc4mgv2nv8af" path="res://Objetos/Funcionalidade/CompHitBox.tscn" id="4_7ptwx"]
+[ext_resource type="Texture2D" uid="uid://c0lvkftcicofr" path="res://Sprites/Cenário/Miasma/Porta de Miasma/Idle/03.png" id="4_jw3wc"]
+[ext_resource type="Texture2D" uid="uid://dapmw3oedm2ru" path="res://Sprites/Cenário/Miasma/Porta de Miasma/Abrindo/03.png" id="4_q52yi"]
+[ext_resource type="Texture2D" uid="uid://dvp8btd1svfub" path="res://Sprites/Cenário/Miasma/Porta de Miasma/Abrindo/04.png" id="5_2dd8m"]
+[ext_resource type="Texture2D" uid="uid://dnp7x66lqecp" path="res://Sprites/Cenário/Miasma/Porta de Miasma/Idle/04.png" id="5_8tfr7"]
+[ext_resource type="Texture2D" uid="uid://cfwj43iaqbrjn" path="res://Sprites/Cenário/Miasma/Porta de Miasma/Idle/05.png" id="6_7uoca"]
+[ext_resource type="Texture2D" uid="uid://bfwl4to0pbtpd" path="res://Sprites/Cenário/Miasma/Porta de Miasma/Abrindo/05.png" id="6_8snrn"]
 [ext_resource type="AudioStream" uid="uid://c8tt33f71nk6f" path="res://Audio/SFX/AMBIENTE/Som_portaabrindo.ogg" id="6_h4g8d"]
+[ext_resource type="Texture2D" uid="uid://qb7sgid57pvy" path="res://Sprites/Cenário/Miasma/Porta de Miasma/Abrindo/06.png" id="7_g5sf2"]
+[ext_resource type="Texture2D" uid="uid://dvnq27m48kuw8" path="res://Sprites/Cenário/Miasma/Porta de Miasma/Idle/06.png" id="7_lxunt"]
+[ext_resource type="Texture2D" uid="uid://x6sepdicmidt" path="res://Sprites/Cenário/Miasma/Porta de Miasma/Abrindo/07.png" id="8_61daq"]
+[ext_resource type="Texture2D" uid="uid://bw78i0dkx1bd5" path="res://Sprites/Cenário/Miasma/Porta de Miasma/Idle/07.png" id="8_c061b"]
+[ext_resource type="Texture2D" uid="uid://dl2w8m8a8rpc7" path="res://Sprites/Cenário/Miasma/Porta de Miasma/Idle/08.png" id="9_jmx7o"]
+[ext_resource type="Texture2D" uid="uid://c31grf2vngb4x" path="res://Sprites/Cenário/Miasma/Porta de Miasma/Abrindo/08.png" id="9_wna4e"]
+[ext_resource type="Texture2D" uid="uid://cq8te0wv3y3wx" path="res://Sprites/Cenário/Miasma/Porta de Miasma/Idle/09.png" id="10_e8wtr"]
+[ext_resource type="Texture2D" uid="uid://bn1wvfjtcf2rr" path="res://Sprites/Cenário/Miasma/Porta de Miasma/Abrindo/09.png" id="10_jf00q"]
+[ext_resource type="Texture2D" uid="uid://dgehawjw83tyq" path="res://Sprites/Cenário/Miasma/Porta de Miasma/Idle/10.png" id="11_mmnu0"]
+[ext_resource type="Texture2D" uid="uid://dai0r28yipgkb" path="res://Sprites/Cenário/Miasma/Porta de Miasma/Abrindo/10.png" id="11_xrhga"]
+[ext_resource type="Texture2D" uid="uid://dg0kf8cbwjh4d" path="res://Sprites/Cenário/Miasma/Porta de Miasma/Abrindo/11.png" id="12_owqr3"]
+[ext_resource type="Texture2D" uid="uid://ct8qfkybnoei8" path="res://Sprites/Cenário/Miasma/Porta de Miasma/Idle/11.png" id="12_q1th7"]
+[ext_resource type="Texture2D" uid="uid://b6d5f511qf3mi" path="res://Sprites/Cenário/Miasma/Porta de Miasma/Idle/12.png" id="13_cxcld"]
+[ext_resource type="Texture2D" uid="uid://blj3s26ahh8e4" path="res://Sprites/Cenário/Miasma/Porta de Miasma/Idle/13.png" id="14_br5by"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_q52yi"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_cxcld")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_br5by")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_q52yi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_2dd8m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_8snrn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_g5sf2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_61daq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_wna4e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_jf00q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_xrhga")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_owqr3")
+}],
+"loop": true,
+"name": &"Abre",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("12_owqr3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_xrhga")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_jf00q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_wna4e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_61daq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_g5sf2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_8snrn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_2dd8m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_q52yi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_cxcld")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_br5by")
+}],
+"loop": true,
+"name": &"Fecha",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_tctdy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_viq74")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_jw3wc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_8tfr7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_7uoca")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_lxunt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_c061b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_jmx7o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_e8wtr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_mmnu0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_q1th7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_cxcld")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_br5by")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 5.0
+}]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_41i4q"]
 size = Vector2(206, 511)
@@ -13,7 +160,7 @@ size = Vector2(206, 511)
 size = Vector2(175, 511)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7ptwx"]
-size = Vector2(186, 612)
+size = Vector2(186, 511.69998)
 
 [sub_resource type="Animation" id="Animation_41i4q"]
 resource_name = "Abre"
@@ -55,7 +202,7 @@ tracks/0/path = NodePath("Porta:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0),
+"times": PackedFloat32Array(1),
 "transitions": PackedFloat32Array(1),
 "update": 0,
 "values": [Vector2(0, 0)]
@@ -70,14 +217,24 @@ _data = {
 
 [node name="PortaTemp" type="Node2D" groups=["Special"]]
 script = ExtResource("1_rixxk")
+tempo_aberta = 2.0
 
 [node name="Porta" type="Node2D" parent="."]
 
 [node name="Miasma" type="Sprite2D" parent="Porta"]
+visible = false
 show_behind_parent = true
 position = Vector2(7.6293945e-06, -6)
 scale = Vector2(0.7837078, 0.7787574)
 texture = ExtResource("3_h4g8d")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Porta"]
+position = Vector2(-35.999992, 3.5000458)
+scale = Vector2(0.53125, 0.6620371)
+sprite_frames = SubResource("SpriteFrames_q52yi")
+animation = &"Idle"
+autoplay = "Idle"
+frame_progress = 0.17313515
 
 [node name="HurtBox" parent="Porta" node_paths=PackedStringArray("sprite") instance=ExtResource("3_7ptwx")]
 unique_name_in_owner = true
@@ -101,12 +258,12 @@ collision_layer = 16
 ignore = NodePath("../HurtBox")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Porta/HitBox"]
-position = Vector2(1, -12)
+position = Vector2(1, -62.149994)
 shape = SubResource("RectangleShape2D_7ptwx")
 
 [node name="Timer" type="Timer" parent="."]
 unique_name_in_owner = true
-wait_time = 3.0
+wait_time = 2.0
 one_shot = true
 
 [node name="Anim" type="AnimationPlayer" parent="."]

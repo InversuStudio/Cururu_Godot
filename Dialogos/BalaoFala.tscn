@@ -99,10 +99,12 @@ corner_radius_bottom_right = 50
 corner_radius_bottom_left = 50
 
 [node name="BalaoFala" type="CanvasLayer"]
+layer = 1001
 script = ExtResource("1_w6bav")
 
 [node name="Balloon" type="Control" parent="."]
 unique_name_in_owner = true
+z_index = 8
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0

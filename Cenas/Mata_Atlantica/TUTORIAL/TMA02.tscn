@@ -235,14 +235,14 @@ texture = ExtResource("4_j0qai")
 flip_h = true
 
 [node name="ArvoreFundo3" type="Sprite2D" parent="Background2/-4"]
-position = Vector2(-23249, -4593.803)
+position = Vector2(-23218.334, -4286.667)
 rotation = -0.087266445
-scale = Vector2(1.6247656, 1.9257675)
+scale = Vector2(2.577639, 2.5966532)
 texture = ExtResource("3_6d1b1")
 
 [node name="ArvoreFundo4" type="Sprite2D" parent="Background2/-4"]
-position = Vector2(-20861.002, -4661.803)
-scale = Vector2(1.9654094, 2.0864298)
+position = Vector2(-20861.002, -4503.333)
+scale = Vector2(3.520216, 2.8448913)
 texture = ExtResource("4_j0qai")
 flip_h = true
 
@@ -262,8 +262,13 @@ position = Vector2(-3067.5718, -361.7856)
 texture = ExtResource("9_s0t4j")
 
 [node name="ArvoreS13" type="Sprite2D" parent="Background2/-3/Arvores04"]
-position = Vector2(-1469, -73.1427)
+position = Vector2(-1469, 8.428513)
 texture = ExtResource("9_s0t4j")
+
+[node name="ArvoreS14" type="Sprite2D" parent="Background2/-3/Arvores04"]
+position = Vector2(-1469, -2145.8574)
+texture = ExtResource("9_s0t4j")
+flip_v = true
 
 [node name="ArvoreS15" type="Sprite2D" parent="Background2/-3/Arvores04"]
 position = Vector2(1310, -73.1427)
@@ -283,7 +288,7 @@ scale = Vector2(0.7743413, 0.77434134)
 texture = ExtResource("6_nutf4")
 
 [node name="Mato07" type="Sprite2D" parent="Background2/-25"]
-position = Vector2(-22237, -3421.9998)
+position = Vector2(-22129.33, -3324.0002)
 scale = Vector2(0.7743413, 0.77434134)
 texture = ExtResource("6_nutf4")
 

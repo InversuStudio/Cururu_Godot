@@ -332,7 +332,7 @@ follow_viewport_enabled = true
 follow_viewport_scale = 0.75
 
 [node name="ArvoreS6" type="Sprite2D" parent="Background/-25"]
-position = Vector2(-12256, -4087.998)
+position = Vector2(-12229.333, -4087.998)
 scale = Vector2(1, 0.9999997)
 texture = ExtResource("4_l7gx4")
 
@@ -1174,6 +1174,7 @@ scale = Vector2(0.5311066, 0.6)
 texture = ExtResource("17_wfqej")
 
 [node name="ParedeSecreta" parent="Background/0" instance=ExtResource("17_54dor")]
+visible = false
 position = Vector2(-14782, 639)
 
 [node name="AreaSecreta" type="TileMapLayer" parent="Background/0/ParedeSecreta"]
@@ -1848,9 +1849,9 @@ texture = ExtResource("23_3qqkp")
 flip_v = true
 
 [node name="Frontfolha78" type="Sprite2D" parent="Background/2/foreground"]
-position = Vector2(-3859.0156, -2027.049)
+position = Vector2(-3845.776, -2043.1047)
 rotation = 0.0872665
-scale = Vector2(0.7, 0.7)
+scale = Vector2(0.7230272, 0.79743487)
 texture = ExtResource("23_3qqkp")
 flip_v = true
 
