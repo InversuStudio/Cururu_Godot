@@ -1,4 +1,4 @@
-[gd_scene load_steps=55 format=4 uid="uid://dfuswe0wcsy33"]
+[gd_scene load_steps=59 format=4 uid="uid://dfuswe0wcsy33"]
 
 [ext_resource type="Texture2D" uid="uid://c374cwih425cq" path="res://Sprites/Cenário/Tilemaps/Base.png" id="1_axyo6"]
 [ext_resource type="PackedScene" uid="uid://cqyub70sv0ofp" path="res://Objetos/Props/SavePoint.tscn" id="1_kqyhf"]
@@ -36,7 +36,7 @@
 [ext_resource type="Texture2D" uid="uid://ciulkfu83ohwu" path="res://Sprites/Cenário/Mata_Atlantica/Foreground/04.png" id="27_te2fn"]
 [ext_resource type="Texture2D" uid="uid://5crpeva5qkhc" path="res://Sprites/VFX/Iluminação/VFX - LUZ3.png" id="28_rh2pu"]
 [ext_resource type="Texture2D" uid="uid://cgnnux60eiern" path="res://Sprites/Cenário/Mata_Atlantica/Foreground/05.png" id="28_wstxp"]
-[ext_resource type="Texture2D" uid="uid://b0pui1q2vj5g0" path="res://Sprites/Cenário/zSem_Uso/PAU_BRASIL02.png" id="29_0v3sa"]
+[ext_resource type="PackedScene" uid="uid://bxixu84ahcyba" path="res://Objetos/NPCs/NpcBasico.tscn" id="29_qeqrq"]
 [ext_resource type="Texture2D" uid="uid://c26uwd68seub4" path="res://Sprites/VFX/Iluminação/VFX - LUZ2.png" id="29_yyslo"]
 [ext_resource type="Texture2D" uid="uid://5m4b2cn86u3t" path="res://Sprites/Cenário/Mata_Atlantica/Foreground/03.png" id="30_5nff6"]
 [ext_resource type="Script" uid="uid://dd16yu704x6wt" path="res://Scripts/Componentes/BGM_Player.gd" id="30_fgbk1"]
@@ -45,10 +45,235 @@
 [ext_resource type="Texture2D" uid="uid://b2pop4ke31d1x" path="res://Sprites/Cenário/Mata_Atlantica/Foreground/02.png" id="32_dglwx"]
 [ext_resource type="Texture2D" uid="uid://d18vqjeq586b1" path="res://Sprites/Cenário/Mata_Atlantica/Pedras e Ruinas/pedra_musgo.png" id="32_ym8ms"]
 [ext_resource type="Texture2D" uid="uid://drcemrcpb3ydc" path="res://Sprites/Cenário/Mata_Atlantica/Chao/moita_chao2.png" id="33_ny35b"]
+[ext_resource type="Texture2D" uid="uid://vbs4iv3kv3am" path="res://Sprites/Cenário/Tilemaps/MIASMA.png" id="34_ny35b"]
 [ext_resource type="Texture2D" uid="uid://b2f2ppntemt15" path="res://Sprites/Cenário/Mata_Atlantica/Chao/flores.png" id="36_wstxp"]
 [ext_resource type="PackedScene" uid="uid://u28e3eudu6ch" path="res://Objetos/Funcionalidade/MainCamera.tscn" id="37_nika8"]
 [ext_resource type="Texture2D" uid="uid://b7hwtujjwy182" path="res://Sprites/UI/Pause/maPEAMENTO.png" id="38_5nff6"]
 [ext_resource type="Texture2D" uid="uid://7msrkwwo018f" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/arvore02.png" id="44_jwima"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rh2pu"]
+texture = ExtResource("21_t4v06")
+texture_region_size = Vector2i(128, 128)
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-64, -64, 64, -64, 64, 64, -64, 64)
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+5:0/0 = 0
+6:0/0 = 0
+7:0/0 = 0
+8:0/0 = 0
+9:0/0 = 0
+10:0/0 = 0
+11:0/0 = 0
+12:0/0 = 0
+13:0/0 = 0
+14:0/0 = 0
+15:0/0 = 0
+16:0/0 = 0
+17:0/0 = 0
+18:0/0 = 0
+19:0/0 = 0
+20:0/0 = 0
+21:0/0 = 0
+22:0/0 = 0
+23:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+4:1/0 = 0
+5:1/0 = 0
+6:1/0 = 0
+7:1/0 = 0
+8:1/0 = 0
+9:1/0 = 0
+10:1/0 = 0
+11:1/0 = 0
+12:1/0 = 0
+13:1/0 = 0
+14:1/0 = 0
+15:1/0 = 0
+16:1/0 = 0
+17:1/0 = 0
+18:1/0 = 0
+19:1/0 = 0
+20:1/0 = 0
+21:1/0 = 0
+22:1/0 = 0
+23:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+4:2/0 = 0
+5:2/0 = 0
+6:2/0 = 0
+7:2/0 = 0
+8:2/0 = 0
+9:2/0 = 0
+10:2/0 = 0
+11:2/0 = 0
+12:2/0 = 0
+13:2/0 = 0
+14:2/0 = 0
+15:2/0 = 0
+16:2/0 = 0
+17:2/0 = 0
+18:2/0 = 0
+19:2/0 = 0
+20:2/0 = 0
+21:2/0 = 0
+22:2/0 = 0
+23:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+3:3/0 = 0
+4:3/0 = 0
+5:3/0 = 0
+6:3/0 = 0
+7:3/0 = 0
+8:3/0 = 0
+9:3/0 = 0
+10:3/0 = 0
+11:3/0 = 0
+12:3/0 = 0
+13:3/0 = 0
+14:3/0 = 0
+15:3/0 = 0
+16:3/0 = 0
+17:3/0 = 0
+18:3/0 = 0
+19:3/0 = 0
+20:3/0 = 0
+21:3/0 = 0
+22:3/0 = 0
+23:3/0 = 0
+0:4/0 = 0
+1:4/0 = 0
+2:4/0 = 0
+3:4/0 = 0
+4:4/0 = 0
+5:4/0 = 0
+6:4/0 = 0
+7:4/0 = 0
+8:4/0 = 0
+9:4/0 = 0
+10:4/0 = 0
+11:4/0 = 0
+12:4/0 = 0
+13:4/0 = 0
+14:4/0 = 0
+15:4/0 = 0
+16:4/0 = 0
+17:4/0 = 0
+18:4/0 = 0
+19:4/0 = 0
+20:4/0 = 0
+21:4/0 = 0
+22:4/0 = 0
+23:4/0 = 0
+0:5/0 = 0
+1:5/0 = 0
+2:5/0 = 0
+3:5/0 = 0
+4:5/0 = 0
+5:5/0 = 0
+6:5/0 = 0
+7:5/0 = 0
+8:5/0 = 0
+9:5/0 = 0
+10:5/0 = 0
+11:5/0 = 0
+12:5/0 = 0
+13:5/0 = 0
+14:5/0 = 0
+15:5/0 = 0
+16:5/0 = 0
+17:5/0 = 0
+18:5/0 = 0
+19:5/0 = 0
+20:5/0 = 0
+21:5/0 = 0
+22:5/0 = 0
+23:5/0 = 0
+0:6/0 = 0
+1:6/0 = 0
+2:6/0 = 0
+3:6/0 = 0
+4:6/0 = 0
+5:6/0 = 0
+6:6/0 = 0
+7:6/0 = 0
+8:6/0 = 0
+9:6/0 = 0
+10:6/0 = 0
+11:6/0 = 0
+12:6/0 = 0
+13:6/0 = 0
+14:6/0 = 0
+15:6/0 = 0
+16:6/0 = 0
+17:6/0 = 0
+18:6/0 = 0
+19:6/0 = 0
+20:6/0 = 0
+21:6/0 = 0
+22:6/0 = 0
+23:6/0 = 0
+0:7/0 = 0
+1:7/0 = 0
+2:7/0 = 0
+3:7/0 = 0
+4:7/0 = 0
+5:7/0 = 0
+6:7/0 = 0
+7:7/0 = 0
+8:7/0 = 0
+9:7/0 = 0
+10:7/0 = 0
+11:7/0 = 0
+12:7/0 = 0
+13:7/0 = 0
+14:7/0 = 0
+15:7/0 = 0
+16:7/0 = 0
+17:7/0 = 0
+18:7/0 = 0
+19:7/0 = 0
+20:7/0 = 0
+21:7/0 = 0
+22:7/0 = 0
+23:7/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_yyslo"]
+texture = ExtResource("34_ny35b")
+texture_region_size = Vector2i(128, 128)
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+3:3/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_yyslo"]
+tile_size = Vector2i(128, 128)
+physics_layer_0/collision_layer = 64
+physics_layer_0/collision_mask = 8
+sources/0 = SubResource("TileSetAtlasSource_rh2pu")
+sources/2 = SubResource("TileSetAtlasSource_yyslo")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0f8ab"]
 texture = ExtResource("1_axyo6")
@@ -491,7 +716,7 @@ texture = ExtResource("33_ny35b")
 
 [node name="VfxLuz4" type="Sprite2D" parent="0"]
 modulate = Color(0.48537982, 0.6027341, 0.6027341, 1)
-position = Vector2(1572, -1500)
+position = Vector2(2071, -1500)
 texture = ExtResource("11_i5sln")
 
 [node name="SavePoint" parent="0" instance=ExtResource("1_kqyhf")]
@@ -598,22 +823,34 @@ position = Vector2(5926.9995, -1834.7434)
 scale = Vector2(2.2188587, 2.2188592)
 texture = ExtResource("11_i5sln")
 
-[node name="VfxLuz2" type="Sprite2D" parent="0"]
-modulate = Color(0.7016299, 0.7016299, 0.5750679, 1)
-position = Vector2(6684.0005, -1657.6198)
-scale = Vector2(1.6469135, 1.6469135)
-texture = ExtResource("29_yyslo")
-
 [node name="VfxLuz3" type="Sprite2D" parent="0"]
 modulate = Color(0.7016299, 0.7016299, 0.5750679, 1)
-position = Vector2(6951.25, -1776.5076)
+position = Vector2(6665, -1802.9999)
+rotation = 0.10068097
 scale = Vector2(1.4943609, 1.4943608)
 texture = ExtResource("28_rh2pu")
+
+[node name="VfxLuz2" type="Sprite2D" parent="0"]
+modulate = Color(0.7016299, 0.7016299, 0.5750679, 1)
+position = Vector2(7015.001, -1676.0001)
+rotation = -0.1809028
+scale = Vector2(3.0629606, 1.6469135)
+texture = ExtResource("29_yyslo")
+
+[node name="VfxLuz5" type="Sprite2D" parent="0"]
+modulate = Color(0.7016299, 0.7016299, 0.5750679, 1)
+position = Vector2(7666.001, -1676.0001)
+rotation = -0.37417936
+scale = Vector2(3.0629606, 1.6469135)
+texture = ExtResource("29_yyslo")
 
 [node name="MaPeamento" type="Sprite2D" parent="0"]
 position = Vector2(6051.9995, -1823.0001)
 scale = Vector2(0.9335072, 0.93350714)
 texture = ExtResource("38_5nff6")
+
+[node name="NPC-Basico" parent="0" instance=ExtResource("29_qeqrq")]
+position = Vector2(8001, -1290)
 
 [node name="Cururu" parent="0" instance=ExtResource("6_rp2yr")]
 z_index = 0
@@ -636,6 +873,7 @@ scale = Vector2(0.50812995, 0.40720722)
 texture = ExtResource("21_t4v06")
 
 [node name="PAREDE PEDRAS" parent="0" instance=ExtResource("27_i5sln")]
+visible = false
 position = Vector2(711, -1412)
 scale = Vector2(1.28, 1.28)
 
@@ -644,6 +882,14 @@ position = Vector2(9177, -1627)
 scale = Vector2(1, 3.640625)
 texture = ExtResource("9_ogbcg")
 flip_h = true
+
+[node name="Agua2" type="TileMapLayer" parent="0" groups=["Agua"]]
+modulate = Color(0, 0.5215811, 0.8861342, 1)
+self_modulate = Color(1, 1, 1, 0.6745098)
+position = Vector2(-3286.8381, 1919.0046)
+scale = Vector2(0.77247924, 0.7724791)
+tile_map_data = PackedByteArray("AAD9//n/AAAAAAAAAAD9//r/AAAAAAEAAAD+//n/AAAAAAAAAAD+//r/AAABAAEAAAD///n/AAAAAAAAAAD///r/AAACAAEAAAAAAPn/AAAAAAAAAAAAAPr/AAADAAEAAAABAPn/AAAAAAAAAAABAPr/AAAAAAEAAAACAPn/AAAAAAAAAAACAPr/AAABAAEAAAADAPn/AAAAAAAAAAADAPr/AAACAAEAAAAEAPn/AAAAAAAAAAAEAPr/AAADAAEAAAAFAPn/AAAAAAAAAAAFAPr/AAAAAAEAAAAGAPn/AAAAAAAAAAAGAPr/AAABAAEAAAAHAPn/AAAAAAAAAAAHAPr/AAACAAEAAAAIAPn/AAAAAAAAAAAIAPr/AAADAAEAAAAJAPn/AAAAAAAAAAAJAPr/AAAAAAEAAABXAOL/AAAAAAEAAABYAOL/AAAAAAAAAABZAOL/AAAAAAAAAABaAOL/AAAAAAAAAABbAOL/AAAAAAAAAABcAOL/AAAAAAAAAABdAOL/AAAAAAAAAABeAOL/AAAAAAAAAABfAOL/AAAAAAAAAABgAOL/AAAAAAAAAABhAOL/AAAAAAAAAABiAOL/AAAAAAAAAABjAOL/AAAAAAAAAABkAOL/AAAAAAAAAABlAOL/AAAAAAAAAABiAOP/AAAAAAEAAABjAOP/AAABAAEAAABkAOP/AAACAAEAAABlAOP/AAADAAEAAABeAOP/AAAAAAEAAABfAOP/AAABAAEAAABgAOP/AAACAAEAAABhAOP/AAADAAEAAABaAOP/AAAAAAEAAABbAOP/AAABAAEAAABcAOP/AAACAAEAAABdAOP/AAADAAEAAABWAOP/AAAAAAEAAABXAOP/AAABAAEAAABYAOP/AAACAAEAAABZAOP/AAADAAEAAAA=")
+tile_set = SubResource("TileSet_yyslo")
 
 [node name="TileMapLayer" type="TileMapLayer" parent="0"]
 light_mask = 2
@@ -667,7 +913,7 @@ position = Vector2(-38116, -3290.5)
 texture = ExtResource("5_53ur3")
 
 [node name="GramaReto3" type="Sprite2D" parent="0/Chão/piso"]
-position = Vector2(-37582, -3290.5)
+position = Vector2(-37556, -3290.5)
 texture = ExtResource("5_53ur3")
 
 [node name="GramaReto4" type="Sprite2D" parent="0/Chão/piso"]
@@ -746,6 +992,7 @@ texture = ExtResource("5_53ur3")
 [node name="Plataforma" type="Node2D" parent="0/Chão"]
 
 [node name="BancoSave" type="Sprite2D" parent="0/Chão"]
+visible = false
 position = Vector2(-37825.668, -3527.5237)
 scale = Vector2(0.959163, 0.959163)
 texture = ExtResource("23_l3w8l")
@@ -1091,11 +1338,9 @@ texture = ExtResource("5_cvdhq")
 
 [node name="PauBrasil02" type="Sprite2D" parent="2/Foregroundchao"]
 position = Vector2(8848, -749)
-texture = ExtResource("29_0v3sa")
 
 [node name="PauBrasil04" type="Sprite2D" parent="2/Foregroundchao"]
 position = Vector2(-187, -651)
-texture = ExtResource("29_0v3sa")
 
 [node name="Cipó" type="Node2D" parent="2"]
 position = Vector2(39407, 2267)
@@ -1118,7 +1363,7 @@ position = Vector2(-37124, -4285)
 texture = ExtResource("13_kwvnc")
 
 [node name="Cipó5" type="Sprite2D" parent="2/Cipó"]
-position = Vector2(-36634, -4272)
+position = Vector2(-36514.617, -4295.5713)
 texture = ExtResource("13_kwvnc")
 
 [node name="Cipó6" type="Sprite2D" parent="2/Cipó"]
@@ -1162,13 +1407,14 @@ position = Vector2(-37617, -4124)
 texture = ExtResource("27_te2fn")
 
 [node name="05" type="Sprite2D" parent="2/Cipó"]
-position = Vector2(-37379, -3472)
-scale = Vector2(0.578125, 0.578125)
+position = Vector2(-36961.285, -3494.6194)
+scale = Vector2(0.75967836, 0.75967836)
 texture = ExtResource("28_wstxp")
 
 [node name="06" type="Sprite2D" parent="2/Cipó"]
-position = Vector2(-36201, -3456.0002)
-scale = Vector2(0.5058594, 0.5058594)
+position = Vector2(-36311.76, -3465.0962)
+rotation = 0.2617994
+scale = Vector2(0.6621559, 0.6621559)
 texture = ExtResource("28_wstxp")
 
 [node name="07" type="Sprite2D" parent="2/Cipó"]
@@ -1190,6 +1436,26 @@ texture = ExtResource("31_ku32q")
 position = Vector2(-31271.5, -4221.5)
 scale = Vector2(1.3789063, 1.3789063)
 texture = ExtResource("32_dglwx")
+
+[node name="Arvore07" type="Sprite2D" parent="2"]
+modulate = Color(0.012617188, 0.012617188, 0.012617188, 1)
+position = Vector2(4666.6665, -1710.4761)
+rotation = 0.08343956
+scale = Vector2(0.6718941, 0.9860546)
+texture = ExtResource("13_rcn2b")
+
+[node name="PilarTemplo3" type="Sprite2D" parent="2"]
+modulate = Color(0.012617188, 0.012617188, 0.012617188, 1)
+position = Vector2(2403.6409, -1500.7294)
+rotation = 0.08452551
+scale = Vector2(0.687068, 0.8117587)
+texture = ExtResource("20_jwima")
+
+[node name="PilarTemplo4" type="Sprite2D" parent="2"]
+modulate = Color(0.012617188, 0.012617188, 0.012617188, 1)
+position = Vector2(422.85718, -1497.143)
+scale = Vector2(0.687068, 0.8117587)
+texture = ExtResource("20_jwima")
 
 [node name="3" type="CanvasLayer" parent="."]
 follow_viewport_enabled = true

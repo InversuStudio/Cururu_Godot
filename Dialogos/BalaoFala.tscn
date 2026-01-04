@@ -64,7 +64,7 @@ MarginContainer/constants/margin_top = 15
 PanelContainer/styles/panel = SubResource("StyleBoxFlat_qkmqt")
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6n6n8"]
-bg_color = Color(0, 0, 0, 0.8627451)
+bg_color = Color(0.14117648, 0.25490198, 0.25490198, 1)
 corner_radius_top_left = 10
 corner_radius_top_right = 10
 corner_radius_bottom_right = 10
@@ -74,18 +74,17 @@ expand_margin_left = 25.0
 expand_margin_top = 15.0
 expand_margin_right = 25.0
 expand_margin_bottom = 15.0
-shadow_size = 15
+shadow_color = Color(0.14117648, 0.25490198, 0.25490198, 1)
+shadow_size = 10
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_f5qgn"]
-bg_color = Color(0.0998727, 0.185782, 0.25441, 1)
-border_width_left = 4
-border_width_top = 4
-border_width_right = 4
-border_width_bottom = 4
-corner_radius_top_left = 50
-corner_radius_top_right = 50
-corner_radius_bottom_right = 50
-corner_radius_bottom_left = 50
+bg_color = Color(0.14117648, 0.25490198, 0.25490198, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 25
+corner_radius_bottom_right = 25
+corner_radius_bottom_left = 15
+shadow_color = Color(0.14117648, 0.25490198, 0.25490198, 1)
+shadow_size = 5
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_to3uj"]
 bg_color = Color(0.160784, 0.278431, 0.372549, 1)

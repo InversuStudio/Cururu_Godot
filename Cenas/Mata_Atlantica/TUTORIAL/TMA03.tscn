@@ -7,7 +7,6 @@
 [ext_resource type="Texture2D" uid="uid://wng7roaj8xu6" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/arvore_s1.png" id="4_l7gx4"]
 [ext_resource type="Texture2D" uid="uid://dv0q1amqoq168" path="res://Sprites/Cenário/Mata_Atlantica/Background/Mata/mato03.png" id="5_r86pu"]
 [ext_resource type="Texture2D" uid="uid://c8bkav2g3wyeu" path="res://Sprites/Cenário/Mata_Atlantica/Chao/moita2.png" id="6_qclta"]
-[ext_resource type="Texture2D" uid="uid://ctar30vsktrrb" path="res://Sprites/Cenário/Mata_Atlantica/Background/Iluminação e Fundo/FUNDONEVOA2.png" id="6_rnx0k"]
 [ext_resource type="Texture2D" uid="uid://rbtvfm4m7ft" path="res://Sprites/VFX/Iluminação/SOMBRA2.png" id="7_op0pn"]
 [ext_resource type="Texture2D" uid="uid://dru600hg8oaty" path="res://Sprites/Cenário/Mata_Atlantica/Background/Mata/mato02.png" id="9_t50kr"]
 [ext_resource type="Texture2D" uid="uid://b6yel5f58h380" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/arvore05.png" id="10_tssdc"]
@@ -23,6 +22,7 @@
 [ext_resource type="PackedScene" uid="uid://dy4duxmhynhha" path="res://Objetos/Props/Parede_Secreta.tscn" id="17_54dor"]
 [ext_resource type="PackedScene" uid="uid://dghxpclnjwg5k" path="res://Objetos/Props/PecaCoracao.tscn" id="17_bu38j"]
 [ext_resource type="Texture2D" uid="uid://jecy4bfqqqxu" path="res://Sprites/Cenário/Mata_Atlantica/Teto/Moita teste.png" id="17_wfqej"]
+[ext_resource type="Texture2D" uid="uid://d18vqjeq586b1" path="res://Sprites/Cenário/Mata_Atlantica/Pedras e Ruinas/pedra_musgo.png" id="18_6xkwf"]
 [ext_resource type="Texture2D" uid="uid://d3t6c4pjsosio" path="res://Sprites/Cenário/Mata_Atlantica/Background/Mata/mato01.png" id="20_386eh"]
 [ext_resource type="Texture2D" uid="uid://cj4rj4oj20ogb" path="res://Sprites/Cenário/Mata_Atlantica/Chao/chap_interno.png" id="20_l7gx4"]
 [ext_resource type="Texture2D" uid="uid://uq6dbjep5wva" path="res://Sprites/Cenário/Mata_Atlantica/Foreground/frontfolha.png" id="23_3qqkp"]
@@ -302,18 +302,18 @@ scale = Vector2(0.46129233, 0.8067565)
 texture = ExtResource("2_0j414")
 
 [node name="ArvoreS6" type="Sprite2D" parent="Background/-3/Arvore3"]
-position = Vector2(-1504.5544, -3408.8599)
+position = Vector2(-1419.2, -3408.8599)
 scale = Vector2(0.46129233, 0.8067565)
 texture = ExtResource("2_0j414")
 flip_v = true
 
 [node name="ArvoreS8" type="Sprite2D" parent="Background/-3/Arvore3"]
-position = Vector2(-1504.5544, -1625.8998)
+position = Vector2(-1419.2, -1625.8998)
 scale = Vector2(0.46129233, 0.8067565)
 texture = ExtResource("2_0j414")
 
 [node name="ArvoreS9" type="Sprite2D" parent="Background/-3/Arvore3"]
-position = Vector2(-1505.0916, 114.407394)
+position = Vector2(-1419.737, 114.407394)
 scale = Vector2(0.46129233, 0.8067565)
 texture = ExtResource("2_0j414")
 
@@ -330,11 +330,6 @@ texture = ExtResource("2_0j414")
 [node name="-25" type="CanvasLayer" parent="Background"]
 follow_viewport_enabled = true
 follow_viewport_scale = 0.75
-
-[node name="ArvoreS6" type="Sprite2D" parent="Background/-25"]
-position = Vector2(-12229.333, -4087.998)
-scale = Vector2(1, 0.9999997)
-texture = ExtResource("4_l7gx4")
 
 [node name="ArvoreS13" type="Sprite2D" parent="Background/-25"]
 position = Vector2(-13899, -2982.5002)
@@ -458,24 +453,24 @@ texture = ExtResource("4_3fe7p")
 flip_v = true
 
 [node name="ArvoreS15" type="Sprite2D" parent="Background/-2/Arvore2"]
-position = Vector2(-1730.2207, -3978.416)
+position = Vector2(-1591.731, -3978.416)
 scale = Vector2(0.5373022, 0.9396903)
 texture = ExtResource("4_3fe7p")
 
 [node name="ArvoreS16" type="Sprite2D" parent="Background/-2/Arvore2"]
-position = Vector2(-1730.2207, 2251.7332)
+position = Vector2(-1591.731, 2251.7332)
 scale = Vector2(0.5373022, 0.9396903)
 texture = ExtResource("4_3fe7p")
 flip_v = true
 
 [node name="ArvoreS17" type="Sprite2D" parent="Background/-2/Arvore2"]
-position = Vector2(-1730.2207, -1901.6998)
+position = Vector2(-1591.731, -1901.6998)
 scale = Vector2(0.5373022, 0.9396903)
 texture = ExtResource("4_3fe7p")
 flip_v = true
 
 [node name="ArvoreS19" type="Sprite2D" parent="Background/-2/Arvore2"]
-position = Vector2(-1730.2207, 174.077)
+position = Vector2(-1591.731, 174.077)
 scale = Vector2(0.5373022, 0.9396903)
 texture = ExtResource("4_3fe7p")
 
@@ -648,132 +643,147 @@ flip_h = true
 follow_viewport_enabled = true
 follow_viewport_scale = 0.98
 
-[node name="Mato00" type="Sprite2D" parent="Background/-02"]
-position = Vector2(-16095, 696.9999)
+[node name="Mato01" type="Sprite2D" parent="Background/-02"]
+position = Vector2(-16576.53, 696.9999)
 scale = Vector2(1, 0.9999999)
 texture = ExtResource("33_3fe7p")
 
-[node name="Moita7" type="Sprite2D" parent="Background/-02"]
+[node name="Mato00" type="Sprite2D" parent="Background/-02"]
+position = Vector2(-14996.938, 696.9999)
+scale = Vector2(1, 0.9999999)
+texture = ExtResource("33_3fe7p")
+
+[node name="0" type="CanvasLayer" parent="Background"]
+follow_viewport_enabled = true
+
+[node name="PedraMusgo" type="Sprite2D" parent="Background/0"]
+position = Vector2(-14199, 440.99997)
+scale = Vector2(0.43407536, 0.43407536)
+texture = ExtResource("18_6xkwf")
+
+[node name="Moita7" type="Sprite2D" parent="Background/0"]
 position = Vector2(-13876.002, 634.9998)
 scale = Vector2(1, 0.9999995)
 texture = ExtResource("6_qclta")
 
-[node name="Sombra7" type="Sprite2D" parent="Background/-02"]
+[node name="Sombra7" type="Sprite2D" parent="Background/0"]
 position = Vector2(-13887.5, 639.9999)
 scale = Vector2(1.8217573, 0.9999995)
 texture = ExtResource("7_op0pn")
 
-[node name="Moita8" type="Sprite2D" parent="Background/-02"]
+[node name="PedraMusgo2" type="Sprite2D" parent="Background/0"]
+position = Vector2(-11358, 440.99997)
+scale = Vector2(0.43407536, 0.43407536)
+texture = ExtResource("18_6xkwf")
+flip_h = true
+
+[node name="Moita8" type="Sprite2D" parent="Background/0"]
 position = Vector2(-11668.003, 597.99994)
 scale = Vector2(1, 0.9999995)
 texture = ExtResource("6_qclta")
 
-[node name="Sombra8" type="Sprite2D" parent="Background/-02"]
+[node name="Sombra8" type="Sprite2D" parent="Background/0"]
 position = Vector2(-11679.499, 602.99994)
 scale = Vector2(1.8217573, 0.9999995)
 texture = ExtResource("7_op0pn")
 
-[node name="Moita3" type="Sprite2D" parent="Background/-02"]
+[node name="Moita3" type="Sprite2D" parent="Background/0"]
 position = Vector2(-17562, -3630.9995)
 scale = Vector2(1, 0.9999998)
 texture = ExtResource("6_qclta")
 
-[node name="Fundonevoa2" type="Sprite2D" parent="Background/-02"]
-light_mask = 2
-position = Vector2(-13442, 241.98721)
-scale = Vector2(5.435022, 1.0286436)
-texture = ExtResource("6_rnx0k")
-
-[node name="Sombra3" type="Sprite2D" parent="Background/-02"]
+[node name="Sombra3" type="Sprite2D" parent="Background/0"]
 position = Vector2(-17573.5, -3611)
 scale = Vector2(1.8217573, 0.9999999)
 texture = ExtResource("7_op0pn")
 
-[node name="Moita4" type="Sprite2D" parent="Background/-02"]
+[node name="Moita4" type="Sprite2D" parent="Background/0"]
 position = Vector2(-15903, -3578)
 scale = Vector2(1, 0.9999999)
 texture = ExtResource("6_qclta")
 
-[node name="Sombra4" type="Sprite2D" parent="Background/-02"]
+[node name="Sombra4" type="Sprite2D" parent="Background/0"]
 position = Vector2(-15914.499, -3573)
 scale = Vector2(1.8217573, 0.9999999)
 texture = ExtResource("7_op0pn")
 
-[node name="Moita5" type="Sprite2D" parent="Background/-02"]
+[node name="Moita5" type="Sprite2D" parent="Background/0"]
 position = Vector2(-13027.001, 604)
 scale = Vector2(1, 0.9999999)
 texture = ExtResource("6_qclta")
 
-[node name="Sombra10" type="Sprite2D" parent="Background/-02"]
-position = Vector2(-15984.75, 620.49994)
-scale = Vector2(4.609952, 1.1814156)
+[node name="Sombra12" type="Sprite2D" parent="Background/0"]
+position = Vector2(-14640, 694.5)
+scale = Vector2(5.7615747, 1.8362834)
 texture = ExtResource("7_op0pn")
 
-[node name="Sombra5" type="Sprite2D" parent="Background/-02"]
+[node name="Sombra10" type="Sprite2D" parent="Background/0"]
+position = Vector2(-16233.501, 694.5)
+scale = Vector2(5.7615747, 1.8362834)
+texture = ExtResource("7_op0pn")
+
+[node name="Sombra5" type="Sprite2D" parent="Background/0"]
 position = Vector2(-13038.5, 609.00006)
 scale = Vector2(1.8217573, 0.9999999)
 texture = ExtResource("7_op0pn")
 
-[node name="Flores" type="Sprite2D" parent="Background/-02"]
+[node name="Flores" type="Sprite2D" parent="Background/0"]
 modulate = Color(3.2944162, 3.2944162, 3.2944162, 1)
 position = Vector2(-8898, -342)
 scale = Vector2(0.71126765, 0.7112675)
 texture = ExtResource("46_tssdc")
 
-[node name="Moita10" type="Sprite2D" parent="Background/-02"]
-position = Vector2(-15281, 644.00006)
-scale = Vector2(1, 0.9999999)
-texture = ExtResource("6_qclta")
-
-[node name="Sombra9" type="Sprite2D" parent="Background/-02"]
-position = Vector2(-15292.5, 649.00006)
-scale = Vector2(1.8217573, 0.9999999)
-texture = ExtResource("7_op0pn")
-
-[node name="Moita6" type="Sprite2D" parent="Background/-02"]
+[node name="Moita6" type="Sprite2D" parent="Background/0"]
 position = Vector2(-10281.001, 604)
 scale = Vector2(1, 0.9999999)
 texture = ExtResource("6_qclta")
 
-[node name="Flores4" type="Sprite2D" parent="Background/-02"]
+[node name="Moita10" type="Sprite2D" parent="Background/0"]
+position = Vector2(-15514.388, 644.00006)
+scale = Vector2(1, 0.9999999)
+texture = ExtResource("6_qclta")
+
+[node name="Sombra9" type="Sprite2D" parent="Background/0"]
+position = Vector2(-15525.888, 649.00006)
+scale = Vector2(1.8217573, 0.9999999)
+texture = ExtResource("7_op0pn")
+
+[node name="Flores4" type="Sprite2D" parent="Background/0"]
 modulate = Color(3.2944162, 3.2944162, 3.2944162, 1)
 position = Vector2(-10118, 553.9999)
 scale = Vector2(0.71126765, 0.7112675)
 texture = ExtResource("46_tssdc")
 flip_h = true
 
-[node name="Sombra6" type="Sprite2D" parent="Background/-02"]
+[node name="Sombra6" type="Sprite2D" parent="Background/0"]
 position = Vector2(-10292.5, 609.00006)
 scale = Vector2(1.8217573, 0.9999999)
 texture = ExtResource("7_op0pn")
 
-[node name="Moita2" type="Sprite2D" parent="Background/-02"]
+[node name="Moita2" type="Sprite2D" parent="Background/0"]
 position = Vector2(-18089, -3602)
 scale = Vector2(1, 0.99999994)
 texture = ExtResource("6_qclta")
 
-[node name="Moita9" type="Sprite2D" parent="Background/-02"]
+[node name="Moita9" type="Sprite2D" parent="Background/0"]
 position = Vector2(-18707, -3527)
 scale = Vector2(1, 0.99999994)
 texture = ExtResource("6_qclta")
 
-[node name="Sombra2" type="Sprite2D" parent="Background/-02"]
+[node name="Sombra2" type="Sprite2D" parent="Background/0"]
 position = Vector2(-18100.5, -3540.0002)
 scale = Vector2(1.8217573, 0.99999994)
 texture = ExtResource("7_op0pn")
 
-[node name="Moita11" type="Sprite2D" parent="Background/-02"]
+[node name="Moita11" type="Sprite2D" parent="Background/0"]
 position = Vector2(-8727.001, -257)
 scale = Vector2(1, 0.9999997)
 texture = ExtResource("6_qclta")
 
-[node name="Sombra11" type="Sprite2D" parent="Background/-02"]
+[node name="Sombra11" type="Sprite2D" parent="Background/0"]
 position = Vector2(-8740.75, -235)
 scale = Vector2(1.6053236, 0.9646016)
 texture = ExtResource("7_op0pn")
-
-[node name="0" type="CanvasLayer" parent="Background"]
-follow_viewport_enabled = true
 
 [node name="Espinhos" type="Node2D" parent="Background/0"]
 position = Vector2(-15558, -3270)
@@ -1174,7 +1184,6 @@ scale = Vector2(0.5311066, 0.6)
 texture = ExtResource("17_wfqej")
 
 [node name="ParedeSecreta" parent="Background/0" instance=ExtResource("17_54dor")]
-visible = false
 position = Vector2(-14782, 639)
 
 [node name="AreaSecreta" type="TileMapLayer" parent="Background/0/ParedeSecreta"]
@@ -1779,6 +1788,16 @@ texture = ExtResource("23_3qqkp")
 
 [node name="Frontfolha4" type="Sprite2D" parent="Background/2/foreground"]
 position = Vector2(-1577.6013, 718.236)
+rotation = 0.0872665
+texture = ExtResource("23_3qqkp")
+
+[node name="Frontfolha71" type="Sprite2D" parent="Background/2/foreground"]
+position = Vector2(-5741.9673, -3888.2415)
+rotation = 0.0872665
+texture = ExtResource("23_3qqkp")
+
+[node name="Frontfolha84" type="Sprite2D" parent="Background/2/foreground"]
+position = Vector2(-4668.3555, -3745.1255)
 rotation = 0.0872665
 texture = ExtResource("23_3qqkp")
 
@@ -2503,3 +2522,4 @@ offset_left = -18893.0
 offset_top = -5354.0
 offset_right = -8185.0
 offset_bottom = 992.0
+rotation = -0.00014461271

@@ -1,4 +1,4 @@
-[gd_scene load_steps=52 format=4 uid="uid://djvuyfef1wujd"]
+[gd_scene load_steps=53 format=4 uid="uid://djvuyfef1wujd"]
 
 [ext_resource type="PackedScene" uid="uid://1apfpwlqocxn" path="res://Objetos/Funcionalidade/TransicaoFase.tscn" id="1_2ybff"]
 [ext_resource type="PackedScene" uid="uid://bnm668fws2641" path="res://Objetos/Props/Armadilha.tscn" id="1_ja78a"]
@@ -43,6 +43,7 @@
 [ext_resource type="Texture2D" uid="uid://7msrkwwo018f" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/arvore02.png" id="38_0bkep"]
 [ext_resource type="Texture2D" uid="uid://cq84hl6xuuo0t" path="res://Sprites/Cenário/Miasma/miasma pequeno.png" id="38_1i6hi"]
 [ext_resource type="Texture2D" uid="uid://cac7su7slu38j" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/arvore04.png" id="39_s2l6g"]
+[ext_resource type="Texture2D" uid="uid://cv4arvcoi1o8j" path="res://Sprites/Cenário/Mata_Atlantica/Chao/A FLOR.png" id="40_kob7j"]
 [ext_resource type="Texture2D" uid="uid://b6yel5f58h380" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/arvore05.png" id="40_x4lte"]
 [ext_resource type="Texture2D" uid="uid://c8tb73qiqhhk8" path="res://Sprites/Cenário/Mata_Atlantica/Background/Galhos/esquerda01.png" id="42_d626j"]
 
@@ -1441,6 +1442,17 @@ position = Vector2(2063, -522)
 scale = Vector2(0.7, 0.7)
 texture = ExtResource("14_46u3v")
 
+[node name="AFlor" type="Sprite2D" parent="background/0/Chao"]
+position = Vector2(869, -5258)
+rotation = -0.5235988
+texture = ExtResource("40_kob7j")
+
+[node name="AFlor2" type="Sprite2D" parent="background/0/Chao"]
+position = Vector2(784.00006, -5279.0005)
+rotation = -1.0471976
+scale = Vector2(0.76187927, 0.7618792)
+texture = ExtResource("40_kob7j")
+
 [node name="1" type="CanvasLayer" parent="background"]
 follow_viewport_enabled = true
 follow_viewport_scale = 1.02
@@ -1587,6 +1599,18 @@ texture = ExtResource("15_sm228")
 [node name="MoitaTeste41" type="Sprite2D" parent="background/1/Teto"]
 position = Vector2(7060, 36)
 texture = ExtResource("15_sm228")
+
+[node name="AFlor3" type="Sprite2D" parent="background/1/Teto"]
+position = Vector2(1114.9806, -10519.921)
+rotation = 0.2617994
+scale = Vector2(1.5237586, 1.5237584)
+texture = ExtResource("40_kob7j")
+
+[node name="AFlor4" type="Sprite2D" parent="background/1/Teto"]
+position = Vector2(797.3335, -10423.843)
+rotation = 1.3089969
+scale = Vector2(1.5237586, 1.5237584)
+texture = ExtResource("40_kob7j")
 
 [node name="Foreground" type="Node2D" parent="background/1"]
 position = Vector2(1918, 108)
@@ -2031,7 +2055,7 @@ target = NodePath("../background/0/Entidades/Cururu")
 limite_camera = NodePath("../LimiteCam")
 
 [node name="LimiteCam" type="ReferenceRect" parent="."]
-offset_left = 1801.0
-offset_top = -6000.0
-offset_right = 5507.0
-offset_bottom = 662.0
+offset_left = 1816.0
+offset_top = -5998.0
+offset_right = 5522.0
+offset_bottom = 664.0

@@ -439,7 +439,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"Run",
-"speed": 10.0
+"speed": 8.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -1531,7 +1531,7 @@ _data = {
 z_index = 1
 collision_layer = 2
 script = ExtResource("1_gwpdq")
-vel = 9.0
+vel = 8.0
 vel_aerea = 6.5
 acel_time = 0.3
 decel_time = 0.1
@@ -1572,7 +1572,7 @@ scale = Vector2(0.375651, 0.375651)
 sprite_frames = SubResource("SpriteFrames_ser7u")
 animation = &"Special"
 frame = 1
-speed_scale = 1.5
+speed_scale = 1.6
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, -79)

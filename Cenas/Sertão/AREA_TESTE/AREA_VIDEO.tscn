@@ -182,31 +182,20 @@ position = Vector2(9846, -133.5)
 shape = SubResource("RectangleShape2D_4mh8b")
 
 [node name="Back" type="Sprite2D" parent="."]
-position = Vector2(9843.5, -94.25)
-scale = Vector2(11.884004, 1.409022)
+position = Vector2(9843.5, 27.750114)
+scale = Vector2(11.884004, 1.5940107)
 texture = ExtResource("1_wc2c6")
 
 [node name="Sombra" type="Sprite2D" parent="."]
-position = Vector2(9852.5, -663.75)
-scale = Vector2(11.920394, 0.5788476)
+modulate = Color(1, 1, 1, 0.6039216)
+position = Vector2(9852.5, -471.75)
+scale = Vector2(11.920394, 0.86997724)
 texture = ExtResource("2_hdssx")
-
-[node name="57SemTítulo20251027131420" type="Sprite2D" parent="."]
-modulate = Color(0.5167645, 0.5167645, 0.5167645, 1)
-position = Vector2(3290.5, 106)
-scale = Vector2(1.5, 1.5)
-texture = ExtResource("3_mwgs2")
-flip_h = true
 
 [node name="Sombra2" type="Sprite2D" parent="."]
 position = Vector2(3301.5, 547)
 scale = Vector2(5.8587966, 2.1592922)
 texture = ExtResource("4_gh6e1")
-
-[node name="57SemTítulo20251027131421" type="Sprite2D" parent="."]
-position = Vector2(6951, 221)
-scale = Vector2(1.5, 1.5)
-texture = ExtResource("3_mwgs2")
 
 [node name="Sombra3" type="Sprite2D" parent="."]
 position = Vector2(5260.0005, 620)

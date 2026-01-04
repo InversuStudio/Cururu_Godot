@@ -890,6 +890,7 @@ script = ExtResource("77_iqxfe")
 state_idle = NodePath("../Idle")
 
 [node name="UI_BOSS" type="CanvasLayer" parent="."]
+visible = false
 
 [node name="Control" type="Control" parent="UI_BOSS"]
 layout_mode = 3
@@ -907,12 +908,13 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -747.0
-offset_top = -197.0
-offset_right = 1128.0
+offset_left = -593.0
+offset_top = -158.0
+offset_right = 1282.0
+offset_bottom = 39.0
 grow_horizontal = 2
 grow_vertical = 0
-scale = Vector2(0.8, 0.8)
+scale = Vector2(0.59999996, 0.59999996)
 max_value = 15.0
 step = 0.1
 value = 12.4

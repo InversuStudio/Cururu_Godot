@@ -25,6 +25,7 @@ script = ExtResource("1_r0vgv")
 
 [node name="Sprite" type="AnimatedSprite2D" parent="."]
 unique_name_in_owner = true
+visible = false
 position = Vector2(9.99999, -38.0813)
 scale = Vector2(2.3022223, 2.4568536)
 sprite_frames = SubResource("SpriteFrames_tkh53")

@@ -1,4 +1,4 @@
-[gd_scene load_steps=49 format=4 uid="uid://ba8igbg8v441c"]
+[gd_scene load_steps=53 format=4 uid="uid://ba8igbg8v441c"]
 
 [ext_resource type="Texture2D" uid="uid://cqu5scrrmr5n5" path="res://Sprites/Cenário/Mata_Atlantica/Background/Iluminação e Fundo/FUNDOCEU.png" id="1_hnubh"]
 [ext_resource type="Texture2D" uid="uid://c374cwih425cq" path="res://Sprites/Cenário/Tilemaps/Base.png" id="1_umcgc"]
@@ -31,27 +31,242 @@
 [ext_resource type="Texture2D" uid="uid://uq6dbjep5wva" path="res://Sprites/Cenário/Mata_Atlantica/Foreground/frontfolha.png" id="22_k7ugy"]
 [ext_resource type="Texture2D" uid="uid://jecy4bfqqqxu" path="res://Sprites/Cenário/Mata_Atlantica/Teto/Moita teste.png" id="24_csesn"]
 [ext_resource type="PackedScene" uid="uid://bjvnm0aydr0vd" path="res://Objetos/Entidades/Morcego.tscn" id="26_ctjy6"]
+[ext_resource type="Texture2D" uid="uid://dkvg4f1dg8j0g" path="res://Sprites/Cenário/Tilemaps/AGUA.png" id="27_8261n"]
 [ext_resource type="PackedScene" uid="uid://bu62qgilsxetf" path="res://Objetos/Entidades/Escorpiao.tscn" id="27_aw4uh"]
 [ext_resource type="PackedScene" uid="uid://u28e3eudu6ch" path="res://Objetos/Funcionalidade/MainCamera.tscn" id="27_ctjy6"]
 [ext_resource type="Script" uid="uid://dd16yu704x6wt" path="res://Scripts/Componentes/BGM_Player.gd" id="27_hdfdg"]
+[ext_resource type="Texture2D" uid="uid://vbs4iv3kv3am" path="res://Sprites/Cenário/Tilemaps/MIASMA.png" id="28_4xj1r"]
 [ext_resource type="AudioStream" uid="uid://c7qftchbhu6xc" path="res://Audio/SFX/AMBIENTE/Musica_Jogo.mp3" id="28_75oum"]
 [ext_resource type="PackedScene" uid="uid://bgiacv0vndt1q" path="res://Objetos/Props/DropAmVelAtaque.tscn" id="30_75oum"]
-[ext_resource type="Texture2D" uid="uid://c3tl3oddronfh" path="res://icon.svg" id="31_1bo8s"]
+[ext_resource type="Texture2D" uid="uid://baoeeq18bsna1" path="res://Sprites/Cenário/Objetos/Upgrade/TOTEM PODER.png" id="31_1bo8s"]
 [ext_resource type="Texture2D" uid="uid://ccql65wj55kqf" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/arvore_s3.png" id="36_otcsn"]
 [ext_resource type="Texture2D" uid="uid://3g4iv5385ymw" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/arvore_s2.png" id="37_0ual7"]
+[ext_resource type="Texture2D" uid="uid://c2yapafbd3cnf" path="res://Sprites/Cenário/Mata_Atlantica/Foreground/cipó.png" id="37_1bo8s"]
 [ext_resource type="Script" uid="uid://1asbq143ewh0" path="res://Scripts/Componentes/empurrar_player_direita.gd" id="37_4xj1r"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_mbqr8"]
-texture = ExtResource("31_1bo8s")
+texture = ExtResource("27_8261n")
 texture_region_size = Vector2i(128, 128)
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-64, -64, 64, -64, 64, 64, -64, 64)
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+5:0/0 = 0
+6:0/0 = 0
+7:0/0 = 0
+8:0/0 = 0
+9:0/0 = 0
+10:0/0 = 0
+11:0/0 = 0
+12:0/0 = 0
+13:0/0 = 0
+14:0/0 = 0
+15:0/0 = 0
+16:0/0 = 0
+17:0/0 = 0
+18:0/0 = 0
+19:0/0 = 0
+20:0/0 = 0
+21:0/0 = 0
+22:0/0 = 0
+23:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+4:1/0 = 0
+5:1/0 = 0
+6:1/0 = 0
+7:1/0 = 0
+8:1/0 = 0
+9:1/0 = 0
+10:1/0 = 0
+11:1/0 = 0
+12:1/0 = 0
+13:1/0 = 0
+14:1/0 = 0
+15:1/0 = 0
+16:1/0 = 0
+17:1/0 = 0
+18:1/0 = 0
+19:1/0 = 0
+20:1/0 = 0
+21:1/0 = 0
+22:1/0 = 0
+23:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+4:2/0 = 0
+5:2/0 = 0
+6:2/0 = 0
+7:2/0 = 0
+8:2/0 = 0
+9:2/0 = 0
+10:2/0 = 0
+11:2/0 = 0
+12:2/0 = 0
+13:2/0 = 0
+14:2/0 = 0
+15:2/0 = 0
+16:2/0 = 0
+17:2/0 = 0
+18:2/0 = 0
+19:2/0 = 0
+20:2/0 = 0
+21:2/0 = 0
+22:2/0 = 0
+23:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+3:3/0 = 0
+4:3/0 = 0
+5:3/0 = 0
+6:3/0 = 0
+7:3/0 = 0
+8:3/0 = 0
+9:3/0 = 0
+10:3/0 = 0
+11:3/0 = 0
+12:3/0 = 0
+13:3/0 = 0
+14:3/0 = 0
+15:3/0 = 0
+16:3/0 = 0
+17:3/0 = 0
+18:3/0 = 0
+19:3/0 = 0
+20:3/0 = 0
+21:3/0 = 0
+22:3/0 = 0
+23:3/0 = 0
+0:4/0 = 0
+1:4/0 = 0
+2:4/0 = 0
+3:4/0 = 0
+4:4/0 = 0
+5:4/0 = 0
+6:4/0 = 0
+7:4/0 = 0
+8:4/0 = 0
+9:4/0 = 0
+10:4/0 = 0
+11:4/0 = 0
+12:4/0 = 0
+13:4/0 = 0
+14:4/0 = 0
+15:4/0 = 0
+16:4/0 = 0
+17:4/0 = 0
+18:4/0 = 0
+19:4/0 = 0
+20:4/0 = 0
+21:4/0 = 0
+22:4/0 = 0
+23:4/0 = 0
+0:5/0 = 0
+1:5/0 = 0
+2:5/0 = 0
+3:5/0 = 0
+4:5/0 = 0
+5:5/0 = 0
+6:5/0 = 0
+7:5/0 = 0
+8:5/0 = 0
+9:5/0 = 0
+10:5/0 = 0
+11:5/0 = 0
+12:5/0 = 0
+13:5/0 = 0
+14:5/0 = 0
+15:5/0 = 0
+16:5/0 = 0
+17:5/0 = 0
+18:5/0 = 0
+19:5/0 = 0
+20:5/0 = 0
+21:5/0 = 0
+22:5/0 = 0
+23:5/0 = 0
+0:6/0 = 0
+1:6/0 = 0
+2:6/0 = 0
+3:6/0 = 0
+4:6/0 = 0
+5:6/0 = 0
+6:6/0 = 0
+7:6/0 = 0
+8:6/0 = 0
+9:6/0 = 0
+10:6/0 = 0
+11:6/0 = 0
+12:6/0 = 0
+13:6/0 = 0
+14:6/0 = 0
+15:6/0 = 0
+16:6/0 = 0
+17:6/0 = 0
+18:6/0 = 0
+19:6/0 = 0
+20:6/0 = 0
+21:6/0 = 0
+22:6/0 = 0
+23:6/0 = 0
+0:7/0 = 0
+1:7/0 = 0
+2:7/0 = 0
+3:7/0 = 0
+4:7/0 = 0
+5:7/0 = 0
+6:7/0 = 0
+7:7/0 = 0
+8:7/0 = 0
+9:7/0 = 0
+10:7/0 = 0
+11:7/0 = 0
+12:7/0 = 0
+13:7/0 = 0
+14:7/0 = 0
+15:7/0 = 0
+16:7/0 = 0
+17:7/0 = 0
+18:7/0 = 0
+19:7/0 = 0
+20:7/0 = 0
+21:7/0 = 0
+22:7/0 = 0
+23:7/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1bo8s"]
+texture = ExtResource("28_4xj1r")
+texture_region_size = Vector2i(128, 128)
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+3:3/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_qe8vq"]
 tile_size = Vector2i(128, 128)
 physics_layer_0/collision_layer = 64
 physics_layer_0/collision_mask = 8
 sources/0 = SubResource("TileSetAtlasSource_mbqr8")
+sources/2 = SubResource("TileSetAtlasSource_1bo8s")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4lf50"]
 texture = ExtResource("1_umcgc")
@@ -806,7 +1021,7 @@ modulate = Color(0, 0.5215811, 0.8861342, 1)
 self_modulate = Color(1, 1, 1, 0.6745098)
 position = Vector2(-3286.8381, 1919.0046)
 scale = Vector2(0.77247924, 0.7724791)
-tile_map_data = PackedByteArray("AAD9//n/AAAAAAAAAAD9//r/AAAAAAAAAAD+//n/AAAAAAAAAAD+//r/AAAAAAAAAAD///n/AAAAAAAAAAD///r/AAAAAAAAAAAAAPn/AAAAAAAAAAAAAPr/AAAAAAAAAAABAPn/AAAAAAAAAAABAPr/AAAAAAAAAAACAPn/AAAAAAAAAAACAPr/AAAAAAAAAAADAPn/AAAAAAAAAAADAPr/AAAAAAAAAAAEAPn/AAAAAAAAAAAEAPr/AAAAAAAAAAAFAPn/AAAAAAAAAAAFAPr/AAAAAAAAAAAGAPn/AAAAAAAAAAAGAPr/AAAAAAAAAAAHAPn/AAAAAAAAAAAHAPr/AAAAAAAAAAAIAPn/AAAAAAAAAAAIAPr/AAAAAAAAAAAJAPn/AAAAAAAAAAAJAPr/AAAAAAAAAAA=")
+tile_map_data = PackedByteArray("AAD9//n/AAAAAAAAAAD9//r/AAAAAAEAAAD+//n/AAAAAAAAAAD+//r/AAABAAEAAAD///n/AAAAAAAAAAD///r/AAACAAEAAAAAAPn/AAAAAAAAAAAAAPr/AAADAAEAAAABAPn/AAAAAAAAAAABAPr/AAAAAAEAAAACAPn/AAAAAAAAAAACAPr/AAABAAEAAAADAPn/AAAAAAAAAAADAPr/AAACAAEAAAAEAPn/AAAAAAAAAAAEAPr/AAADAAEAAAAFAPn/AAAAAAAAAAAFAPr/AAAAAAEAAAAGAPn/AAAAAAAAAAAGAPr/AAABAAEAAAAHAPn/AAAAAAAAAAAHAPr/AAACAAEAAAAIAPn/AAAAAAAAAAAIAPr/AAADAAEAAAAJAPn/AAAAAAAAAAAJAPr/AAAAAAEAAAA=")
 tile_set = SubResource("TileSet_qe8vq")
 
 [node name="TileMapLayer" type="TileMapLayer" parent="0"]
@@ -827,6 +1042,11 @@ texture = ExtResource("24_csesn")
 
 [node name="Plataformas" type="Node2D" parent="0"]
 position = Vector2(66, -152)
+
+[node name="TotemPoder" type="Sprite2D" parent="0/Plataformas"]
+position = Vector2(-1891, 1157)
+scale = Vector2(0.6171875, 0.6171875)
+texture = ExtResource("31_1bo8s")
 
 [node name="ParedeSecreta" parent="0/Plataformas" instance=ExtResource("10_hdfdg")]
 visibility_layer = 7
@@ -1080,6 +1300,13 @@ texture = ExtResource("8_iuhbl")
 flip_h = true
 flip_v = true
 
+[node name="ChapExterno27" type="Sprite2D" parent="0/Plataformas/Chao"]
+position = Vector2(-1800, 107.999985)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("9_vptch")
+flip_h = true
+flip_v = true
+
 [node name="ChapInterno26" type="Sprite2D" parent="0/Plataformas/Chao"]
 position = Vector2(2655, 334.60004)
 scale = Vector2(0.8, 0.8)
@@ -1102,13 +1329,6 @@ position = Vector2(-599.0001, 291.6001)
 scale = Vector2(0.8, 0.8)
 texture = ExtResource("8_iuhbl")
 
-[node name="ChapInterno15" type="Sprite2D" parent="0/Plataformas/Chao"]
-position = Vector2(-1735, -39)
-scale = Vector2(0.8, 0.8)
-texture = ExtResource("8_iuhbl")
-flip_h = true
-flip_v = true
-
 [node name="ChapInterno18" type="Sprite2D" parent="0/Plataformas/Chao"]
 position = Vector2(-1956, 211)
 scale = Vector2(0.8, 0.8)
@@ -1118,6 +1338,13 @@ flip_v = true
 
 [node name="ChapInterno19" type="Sprite2D" parent="0/Plataformas/Chao"]
 position = Vector2(-1717, 1109)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("8_iuhbl")
+flip_h = true
+flip_v = true
+
+[node name="ChapInterno15" type="Sprite2D" parent="0/Plataformas/Chao"]
+position = Vector2(-1700, -39)
 scale = Vector2(0.8, 0.8)
 texture = ExtResource("8_iuhbl")
 flip_h = true
@@ -1253,13 +1480,6 @@ flip_v = true
 
 [node name="ChapExterno25" type="Sprite2D" parent="0/Plataformas/Chao"]
 position = Vector2(-1547, -147)
-scale = Vector2(0.8, 0.8)
-texture = ExtResource("9_vptch")
-flip_h = true
-flip_v = true
-
-[node name="ChapExterno27" type="Sprite2D" parent="0/Plataformas/Chao"]
-position = Vector2(-1800, 107.999985)
 scale = Vector2(0.8, 0.8)
 texture = ExtResource("9_vptch")
 flip_h = true
@@ -1619,7 +1839,7 @@ scale = Vector2(0.6019721, 0.6)
 texture = ExtResource("24_csesn")
 
 [node name="MoitaTeste44" type="Sprite2D" parent="0/Teto"]
-position = Vector2(-2640, -275)
+position = Vector2(-2613, -239)
 scale = Vector2(0.6019721, 0.6)
 texture = ExtResource("24_csesn")
 
@@ -1755,7 +1975,7 @@ scale = Vector2(0.6019721, 0.6)
 texture = ExtResource("24_csesn")
 
 [node name="MoitaTeste42" type="Sprite2D" parent="0/Teto"]
-position = Vector2(-2132.0002, -755)
+position = Vector2(-2054, -737)
 scale = Vector2(0.6019721, 0.6)
 texture = ExtResource("24_csesn")
 
@@ -1827,7 +2047,7 @@ position = Vector2(84, 221)
 shape = SubResource("RectangleShape2D_x3mff")
 
 [node name="DropAmVelAtaque" parent="0" instance=ExtResource("30_75oum")]
-position = Vector2(-1936, 904)
+position = Vector2(-1965, 961)
 
 [node name="1" type="CanvasLayer" parent="."]
 follow_viewport_enabled = true
@@ -1875,8 +2095,8 @@ texture = ExtResource("22_k7ugy")
 flip_v = true
 
 [node name="Frontfolha27" type="Sprite2D" parent="1/Foreground"]
-position = Vector2(-2248, -766)
-scale = Vector2(0.6, 0.6)
+position = Vector2(-2204.0054, -746.94635)
+scale = Vector2(0.5411308, 0.5411308)
 texture = ExtResource("22_k7ugy")
 flip_v = true
 
@@ -1993,6 +2213,26 @@ position = Vector2(1489.2, 1212.6)
 scale = Vector2(0.6, 0.6)
 texture = ExtResource("22_k7ugy")
 flip_v = true
+
+[node name="Cipó" type="Sprite2D" parent="1"]
+position = Vector2(-2978.5369, -208.7805)
+scale = Vector2(0.4446276, 0.44462758)
+texture = ExtResource("37_1bo8s")
+
+[node name="Cipó2" type="Sprite2D" parent="1"]
+position = Vector2(-2584.3901, -151.21951)
+scale = Vector2(0.4446276, 0.44462758)
+texture = ExtResource("37_1bo8s")
+
+[node name="Cipó3" type="Sprite2D" parent="1"]
+position = Vector2(-2414.634, -203.90244)
+scale = Vector2(0.4446276, 0.44462758)
+texture = ExtResource("37_1bo8s")
+
+[node name="Cipó4" type="Sprite2D" parent="1"]
+position = Vector2(-3602.927, -30.243896)
+scale = Vector2(0.4446276, 0.44462758)
+texture = ExtResource("37_1bo8s")
 
 [node name="2" type="CanvasLayer" parent="."]
 follow_viewport_enabled = true

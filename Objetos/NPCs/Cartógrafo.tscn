@@ -1,0 +1,149 @@
+[gd_scene load_steps=28 format=3 uid="uid://d0l4afitq8qog"]
+
+[ext_resource type="Script" uid="uid://bt5du2sk1ba4i" path="res://Scripts/NPCs/NPC.gd" id="1_p100d"]
+[ext_resource type="Resource" uid="uid://coddi06d35ds7" path="res://Dialogos/Cartografo.dialogue" id="2_p100d"]
+[ext_resource type="Texture2D" uid="uid://cgkiwshmkqw1q" path="res://Sprites/NPCS/Cartografo/01.png" id="3_qi8lf"]
+[ext_resource type="Texture2D" uid="uid://cjlcluvh5od5w" path="res://Sprites/NPCS/Cartografo/02.png" id="4_etm06"]
+[ext_resource type="Texture2D" uid="uid://ca2p76lcthggv" path="res://Sprites/NPCS/Cartografo/03.png" id="5_mpnoa"]
+[ext_resource type="Texture2D" uid="uid://b4fe6yuihiy3m" path="res://Sprites/NPCS/Cartografo/04.png" id="6_error"]
+[ext_resource type="Texture2D" uid="uid://chkrcgpgmdldt" path="res://Sprites/NPCS/Cartografo/05.png" id="7_kf2am"]
+[ext_resource type="Texture2D" uid="uid://cs8ohm4r5pxcg" path="res://Sprites/NPCS/Cartografo/06.png" id="8_u6kpe"]
+[ext_resource type="Texture2D" uid="uid://d11xvhl3cllds" path="res://Sprites/NPCS/Cartografo/07.png" id="9_h080q"]
+[ext_resource type="Texture2D" uid="uid://nle0w3tq4f1l" path="res://Sprites/NPCS/Cartografo/08.png" id="10_bhrv3"]
+[ext_resource type="Script" uid="uid://dd7svcu8l7fxu" path="res://Scripts/Componentes/Interacao.gd" id="10_ytso4"]
+[ext_resource type="Texture2D" uid="uid://bdlk0rfsaxd5w" path="res://Sprites/NPCS/Cartografo/09.png" id="11_0tn4j"]
+[ext_resource type="Texture2D" uid="uid://3fndwwvknj3j" path="res://Sprites/Cenário/Objetos/Savepoint/LOGO V1 STEAM.png" id="11_p11p3"]
+[ext_resource type="Texture2D" uid="uid://55vmcio5lsks" path="res://Sprites/NPCS/Cartografo/10.png" id="12_cffsu"]
+[ext_resource type="Texture2D" uid="uid://cgmti77ct0rqk" path="res://Sprites/NPCS/Cartografo/11.png" id="13_xk5gk"]
+[ext_resource type="Texture2D" uid="uid://clf3pguygkiio" path="res://Sprites/NPCS/Cartografo/12.png" id="14_i5fdo"]
+[ext_resource type="Texture2D" uid="uid://qcltoyqwemws" path="res://Sprites/NPCS/Cartografo/13.png" id="15_fax5h"]
+[ext_resource type="Texture2D" uid="uid://bnc1e44cikvef" path="res://Sprites/NPCS/Cartografo/14.png" id="16_484tq"]
+[ext_resource type="Texture2D" uid="uid://cwxew0s02f1es" path="res://Sprites/NPCS/Cartografo/15.png" id="17_0dndy"]
+[ext_resource type="Texture2D" uid="uid://b61kbdyftpnyw" path="res://Sprites/NPCS/Cartografo/16.png" id="18_7w2cb"]
+[ext_resource type="Texture2D" uid="uid://2cha6t2lce84" path="res://Sprites/NPCS/Cartografo/17.png" id="19_11aar"]
+[ext_resource type="Texture2D" uid="uid://crd0a76yqoxk2" path="res://Sprites/NPCS/Cartografo/18.png" id="20_rxbjo"]
+[ext_resource type="Texture2D" uid="uid://bdt66yxkh15y5" path="res://Sprites/NPCS/Cartografo/19.png" id="21_xeub2"]
+[ext_resource type="Texture2D" uid="uid://bxmcj0fh8nwpg" path="res://Sprites/NPCS/Cartografo/20.png" id="22_bgqc5"]
+[ext_resource type="Texture2D" uid="uid://whlrmln2d37f" path="res://Sprites/NPCS/Cartografo/21.png" id="23_7qdmg"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_rmtcg"]
+resource_local_to_scene = true
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_qi8lf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_etm06")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_mpnoa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_error")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_kf2am")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_u6kpe")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_h080q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_bhrv3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_0tn4j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_cffsu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_xk5gk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_i5fdo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_fax5h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_484tq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_0dndy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_7w2cb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_11aar")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_rxbjo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_xeub2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_bgqc5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_7qdmg")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 12.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lqome"]
+size = Vector2(712.47833, 623.2616)
+
+[node name="NPC-Basico" type="Sprite2D" node_paths=PackedStringArray("interacao")]
+scale = Vector2(0.4348958, 0.43489587)
+script = ExtResource("1_p100d")
+arquivo_dialogo = ExtResource("2_p100d")
+interacao = NodePath("Interacao")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(6.8982077, 0)
+sprite_frames = SubResource("SpriteFrames_rmtcg")
+animation = &"idle"
+autoplay = "idle"
+frame_progress = 0.97686094
+speed_scale = 1.2
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+root_node = NodePath("../AnimatedSprite2D")
+
+[node name="Interacao" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 2
+script = ExtResource("10_ytso4")
+metadata/_custom_type_script = "uid://dd7svcu8l7fxu"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Interacao"]
+position = Vector2(-18.39521, 13.292308)
+shape = SubResource("RectangleShape2D_lqome")
+
+[node name="Texto" type="RichTextLabel" parent="."]
+unique_name_in_owner = true
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -315.51797
+offset_top = -531.8802
+offset_right = 284.62576
+offset_bottom = -326.51495
+grow_horizontal = 2
+theme_override_font_sizes/normal_font_size = 90
+text = "CONVERSAR"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="LogoV1Steam" type="Sprite2D" parent="Texto"]
+position = Vector2(315.01794, 115.688644)
+scale = Vector2(0.2987412, 0.29874122)
+texture = ExtResource("11_p11p3")
