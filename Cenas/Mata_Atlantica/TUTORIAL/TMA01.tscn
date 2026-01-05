@@ -36,7 +36,7 @@
 [ext_resource type="Texture2D" uid="uid://ciulkfu83ohwu" path="res://Sprites/Cenário/Mata_Atlantica/Foreground/04.png" id="27_te2fn"]
 [ext_resource type="Texture2D" uid="uid://5crpeva5qkhc" path="res://Sprites/VFX/Iluminação/VFX - LUZ3.png" id="28_rh2pu"]
 [ext_resource type="Texture2D" uid="uid://cgnnux60eiern" path="res://Sprites/Cenário/Mata_Atlantica/Foreground/05.png" id="28_wstxp"]
-[ext_resource type="PackedScene" uid="uid://bxixu84ahcyba" path="res://Objetos/NPCs/NpcBasico.tscn" id="29_qeqrq"]
+[ext_resource type="PackedScene" uid="uid://bxixu84ahcyba" path="res://Objetos/NPCs/Saci.tscn" id="29_qeqrq"]
 [ext_resource type="Texture2D" uid="uid://c26uwd68seub4" path="res://Sprites/VFX/Iluminação/VFX - LUZ2.png" id="29_yyslo"]
 [ext_resource type="Texture2D" uid="uid://5m4b2cn86u3t" path="res://Sprites/Cenário/Mata_Atlantica/Foreground/03.png" id="30_5nff6"]
 [ext_resource type="Script" uid="uid://dd16yu704x6wt" path="res://Scripts/Componentes/BGM_Player.gd" id="30_fgbk1"]

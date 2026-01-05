@@ -163,8 +163,8 @@ size = Vector2(113.5, 1032)
 [node name="MA_2-6" type="Node2D"]
 
 [node name="Fundoceu" type="Sprite2D" parent="."]
-position = Vector2(4506.25, -1048.75)
-scale = Vector2(4.5834556, 1.0217179)
+position = Vector2(4567.5, -1003.75)
+scale = Vector2(4.52367, 1.0656418)
 texture = ExtResource("1_rxhom")
 
 [node name="-4" type="CanvasLayer" parent="."]

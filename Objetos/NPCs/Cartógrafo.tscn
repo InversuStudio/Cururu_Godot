@@ -99,7 +99,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lqome"]
-size = Vector2(712.47833, 623.2616)
+size = Vector2(931.0895, 496.67062)
 
 [node name="NPC-Basico" type="Sprite2D" node_paths=PackedStringArray("interacao")]
 scale = Vector2(0.4348958, 0.43489587)
@@ -114,6 +114,7 @@ animation = &"idle"
 autoplay = "idle"
 frame_progress = 0.97686094
 speed_scale = 1.2
+flip_h = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 root_node = NodePath("../AnimatedSprite2D")
@@ -125,7 +126,7 @@ script = ExtResource("10_ytso4")
 metadata/_custom_type_script = "uid://dd7svcu8l7fxu"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Interacao"]
-position = Vector2(-18.39521, 13.292308)
+position = Vector2(-127.70079, 6.898214)
 shape = SubResource("RectangleShape2D_lqome")
 
 [node name="Texto" type="RichTextLabel" parent="."]

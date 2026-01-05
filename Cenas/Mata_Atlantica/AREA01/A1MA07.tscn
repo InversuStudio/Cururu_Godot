@@ -1,4 +1,4 @@
-[gd_scene load_steps=36 format=4 uid="uid://nnn0vb4dfupv"]
+[gd_scene load_steps=38 format=4 uid="uid://nnn0vb4dfupv"]
 
 [ext_resource type="Texture2D" uid="uid://cqu5scrrmr5n5" path="res://Sprites/Cenário/Mata_Atlantica/Background/Iluminação e Fundo/FUNDOCEU.png" id="1_11k6r"]
 [ext_resource type="Texture2D" uid="uid://c374cwih425cq" path="res://Sprites/Cenário/Tilemaps/Base.png" id="1_b5521"]
@@ -31,7 +31,9 @@
 [ext_resource type="PackedScene" uid="uid://u28e3eudu6ch" path="res://Objetos/Funcionalidade/MainCamera.tscn" id="26_v7vqr"]
 [ext_resource type="PackedScene" uid="uid://bjvnm0aydr0vd" path="res://Objetos/Entidades/Morcego.tscn" id="27_k72yp"]
 [ext_resource type="Script" uid="uid://dd16yu704x6wt" path="res://Scripts/Componentes/BGM_Player.gd" id="27_pp8n3"]
+[ext_resource type="Texture2D" uid="uid://d3i6g64tongye" path="res://Sprites/Cenário/Objetos/Savepoint/florlotus.png" id="27_u3tko"]
 [ext_resource type="AudioStream" uid="uid://c7qftchbhu6xc" path="res://Audio/SFX/AMBIENTE/Musica_Jogo.mp3" id="28_a7eud"]
+[ext_resource type="Texture2D" uid="uid://y2nkuuqe0avj" path="res://Sprites/Cenário/Objetos/Savepoint/90 Sem Título_20251205150944.png" id="28_g56nb"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_k0m8e"]
 size = Vector2(70, 486)
@@ -697,6 +699,26 @@ position = Vector2(3225.0002, -3472.5)
 texture = ExtResource("6_pc0o4")
 flip_h = true
 
+[node name="90SemTítulo20251205150914" type="Sprite2D" parent="0"]
+position = Vector2(945.00006, -3747.0002)
+scale = Vector2(0.1730776, 0.17307758)
+texture = ExtResource("27_u3tko")
+
+[node name="90SemTítulo20251205150944" type="Sprite2D" parent="0/90SemTítulo20251205150914"]
+position = Vector2(11.555176, 115.55664)
+scale = Vector2(1.1905679, 1.1905679)
+texture = ExtResource("28_g56nb")
+
+[node name="90SemTítulo20251205150915" type="Sprite2D" parent="0"]
+position = Vector2(1156, -3350)
+scale = Vector2(0.1730776, 0.17307758)
+texture = ExtResource("27_u3tko")
+
+[node name="90SemTítulo20251205150944" type="Sprite2D" parent="0/90SemTítulo20251205150915"]
+position = Vector2(11.555176, 115.55664)
+scale = Vector2(1.1905679, 1.1905679)
+texture = ExtResource("28_g56nb")
+
 [node name="1" type="CanvasLayer" parent="."]
 follow_viewport_enabled = true
 follow_viewport_scale = 1.02
@@ -1046,7 +1068,7 @@ target = NodePath("../0/Entidades/Cururu")
 limite_camera = NodePath("../LimiteCam")
 
 [node name="LimiteCam" type="ReferenceRect" parent="."]
-offset_left = 518.0
-offset_top = -4977.0
-offset_right = 3688.0
-offset_bottom = -66.0
+offset_left = 510.0
+offset_top = -4970.0
+offset_right = 3680.0
+offset_bottom = -59.0

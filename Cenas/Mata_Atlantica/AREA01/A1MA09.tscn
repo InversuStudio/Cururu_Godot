@@ -177,8 +177,8 @@ sources/0 = SubResource("TileSetAtlasSource_p2dm5")
 [node name="FundoCeu" type="Sprite2D" parent="."]
 light_mask = 2
 z_index = -4
-position = Vector2(2439.5, -1312.25)
-scale = Vector2(2.42836, 1.3100297)
+position = Vector2(2418.6775, -1312.25)
+scale = Vector2(2.4486845, 1.3100297)
 texture = ExtResource("1_7lg54")
 
 [node name="-4" type="CanvasLayer" parent="."]

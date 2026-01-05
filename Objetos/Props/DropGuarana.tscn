@@ -17,7 +17,8 @@ script = ExtResource("1_fhqsw")
 tipo_item = 1
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(-67.99999, 228)
+z_index = 1001
+position = Vector2(-18.999998, -13.999999)
 scale = Vector2(0.8242187, 0.8242187)
 texture = ExtResource("2_fhqsw")
 

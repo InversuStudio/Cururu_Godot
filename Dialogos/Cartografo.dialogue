@@ -1,20 +1,20 @@
 ~ start
 if Inventario.tem_mapa == false:
-	Ararê: Olá companhei, como vai? 
-	Ararê: Vejo que está perdido pela mata, acho que posso ajudar.
-	Ararê: Me chamo Ararê, sou de uma família de bicudos exploradores e estou registrando cada arvore nesse mapa.
-	Ararê: Talvês você devesse levar um com você para não se perder por Zootania.
-	Ararê: Custa apenas 10 semetes de [b][i]ybirá[/i][/b]. Vai querer um?
+	ARARÊ: Olá companhei, como vai? 
+	ARARÊ: Vejo que está perdido pela mata, acho que posso ajudar.
+	ARARÊ: Me chamo Ararê, sou de uma família de bicudos exploradores e estou registrando cada arvore nesse mapa.
+	ARARÊ: Talvês você devesse levar um com você para não se perder por Zootania.
+	ARARÊ: Custa apenas 10 semetes de [b][i]ybirá[/i][/b]. Vai querer um?
 	- Sim, antes que me perca.
 		if GameData.moedas >= 10
-			Ararê: [do! DialogoCMD.AddMapa(), GameData.moedas -= 3] Ta na pata, esse mapa é todo seu!.
+			ARARÊ: [do! DialogoCMD.AddMapa(), GameData.moedas -= 3] Ta na pata, esse mapa é todo seu!.
 		else:
-			Ararê: Desculpe, sem [b][i]ybirá[/i][/b], sem mapa.
-			Ararê: Volte quando precisar de orientações!
+			ARARÊ: Desculpe, sem [b][i]ybirá[/i][/b], sem mapa.
+			ARARÊ: Volte quando precisar de orientações!
 	- Não, obrigado, sou um rastreador nato.
-		Ararê: Ok, boa sorte na sua jornada.
+		ARARÊ: Ok, boa sorte na sua jornada.
 else:
-	Ararê: E ai companheiro, tudo bem?
-	Ararê: Veio buscar mais mapas?
-	Ararê: No momento vou ficar devendo, quem sabe outra hora..
+	ARARÊ: E ai companheiro, tudo bem?
+	ARARÊ: Veio buscar mais mapas?
+	ARARÊ: No momento vou ficar devendo, quem sabe outra hora..
 => END!

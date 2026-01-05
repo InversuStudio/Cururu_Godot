@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://g00v1kyl32ub"
+path="res://.godot/imported/Vitoria Régia.dialogue-96e5f7e92b0e0799e276978f4bf4b327.tres"
+
+[deps]
+
+source_file="res://Vitoria Régia.dialogue"
+dest_files=["res://.godot/imported/Vitoria Régia.dialogue-96e5f7e92b0e0799e276978f4bf4b327.tres"]
+
+[params]
+
+defaults=true

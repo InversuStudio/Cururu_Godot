@@ -13,7 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://dghxpclnjwg5k" path="res://Objetos/Props/PecaCoracao.tscn" id="15_fjg5v"]
 [ext_resource type="PackedScene" uid="uid://bgiacv0vndt1q" path="res://Objetos/Props/DropAmVelAtaque.tscn" id="16_der3i"]
 [ext_resource type="PackedScene" uid="uid://b4fpjefuik8mq" path="res://Objetos/Props/DropAmRecMagia.tscn" id="17_der3i"]
-[ext_resource type="PackedScene" uid="uid://bxixu84ahcyba" path="res://Objetos/NPCs/NpcBasico.tscn" id="18_bp4ag"]
+[ext_resource type="PackedScene" uid="uid://bxixu84ahcyba" path="res://Objetos/NPCs/Saci.tscn" id="18_bp4ag"]
 [ext_resource type="Texture2D" uid="uid://c3tl3oddronfh" path="res://icon.svg" id="21_lqome"]
 [ext_resource type="PackedScene" uid="uid://1fdx2ie24dh8" path="res://Objetos/Props/arvoreguarana.tscn" id="22_b4qhl"]
 [ext_resource type="PackedScene" uid="uid://u28e3eudu6ch" path="res://Objetos/Funcionalidade/MainCamera.tscn" id="22_der3i"]

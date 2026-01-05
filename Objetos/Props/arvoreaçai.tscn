@@ -1,9 +1,8 @@
-[gd_scene load_steps=9 format=3 uid="uid://1kp2cm82lp4b"]
+[gd_scene load_steps=8 format=3 uid="uid://1kp2cm82lp4b"]
 
 [ext_resource type="Script" uid="uid://drxk6hwuv2e3i" path="res://Scripts/Componentes/Bau.gd" id="1_b7nho"]
 [ext_resource type="PackedScene" uid="uid://va5pjd6vuuo2" path="res://Objetos/Funcionalidade/CompHurtBox.tscn" id="2_etetv"]
 [ext_resource type="AudioStream" uid="uid://b3mmkipqf30jd" path="res://Audio/SFX/INIMIGOS/HIT_INIMIGO.wav" id="3_r6u0v"]
-[ext_resource type="Texture2D" uid="uid://b23uvpo1t5txg" path="res://Sprites/Cenário/Objetos/Bau/BAU2.png" id="4_7h2i2"]
 [ext_resource type="Texture2D" uid="uid://dtggowcotioot" path="res://Sprites/Cenário/Objetos/frutos/arvore sem açai.png" id="4_qtac0"]
 [ext_resource type="Texture2D" uid="uid://bubffpix746dw" path="res://Sprites/Cenário/Objetos/Bau/BAU.png" id="5_cuq0q"]
 
@@ -15,9 +14,6 @@ animations = [{
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("4_qtac0")
-}, {
-"duration": 1.0,
-"texture": ExtResource("4_7h2i2")
 }],
 "loop": true,
 "name": &"Abre",
@@ -51,7 +47,7 @@ position = Vector2(0, -110)
 position = Vector2(-9, -65.5)
 scale = Vector2(0.26464844, 0.26464844)
 sprite_frames = SubResource("SpriteFrames_5tjap")
-animation = &"Abre"
+animation = &"Normal"
 autoplay = "Normal"
 
 [connection signal="hurt" from="HurtBox" to="." method="_on_hurt_box_hurt"]
