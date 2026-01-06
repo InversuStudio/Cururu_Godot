@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://wng7roaj8xu6"
-path="res://.godot/imported/arvore_s1.png-6ae52d29241f2c4968ef1fe2e8486369.ctex"
+path="res://.godot/imported/arvore_S1.png-8a70aea631dc1036e2c1c1588cdc5cda.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/arvore_s1.png"
-dest_files=["res://.godot/imported/arvore_s1.png-6ae52d29241f2c4968ef1fe2e8486369.ctex"]
+source_file="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/arvore_S1.png"
+dest_files=["res://.godot/imported/arvore_S1.png-8a70aea631dc1036e2c1c1588cdc5cda.ctex"]
 
 [params]
 

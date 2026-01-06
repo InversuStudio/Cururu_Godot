@@ -1,4 +1,4 @@
-[gd_scene load_steps=38 format=3 uid="uid://cdhelg6sloxbj"]
+[gd_scene load_steps=39 format=3 uid="uid://cdhelg6sloxbj"]
 
 [ext_resource type="Script" uid="uid://b0ou3eu3i1sxg" path="res://Scripts/Componentes/PortaTemp.gd" id="1_rixxk"]
 [ext_resource type="Texture2D" uid="uid://clqh4rstgwwgd" path="res://Sprites/Cenário/Miasma/Porta de Miasma/Abrindo/01.png" id="2_cxcld"]
@@ -99,10 +99,10 @@ animations = [{
 "texture": ExtResource("4_q52yi")
 }, {
 "duration": 1.0,
-"texture": ExtResource("2_cxcld")
+"texture": ExtResource("3_br5by")
 }, {
 "duration": 1.0,
-"texture": ExtResource("3_br5by")
+"texture": ExtResource("2_cxcld")
 }],
 "loop": true,
 "name": &"Fecha",
@@ -164,32 +164,82 @@ size = Vector2(186, 511.69998)
 
 [sub_resource type="Animation" id="Animation_41i4q"]
 resource_name = "Abre"
+length = 1.1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Porta:position")
+tracks/0/path = NodePath("Porta/Desab:process_mode")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 1),
+"times": PackedFloat32Array(0.5),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [4]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Porta/AnimatedSprite2D:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1.1),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(0, 0), Vector2(0, -430)]
+"values": [0, 10]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Porta/AnimatedSprite2D:animation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"Abre"]
 }
 
 [sub_resource type="Animation" id="Animation_h4g8d"]
 resource_name = "Fecha"
+length = 1.1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Porta:position")
+tracks/0/path = NodePath("Porta/Desab:process_mode")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 1),
+"times": PackedFloat32Array(0.5),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Porta/AnimatedSprite2D:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1.1),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(0, -430), Vector2(0, 0)]
+"values": [0, 10]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Porta/AnimatedSprite2D:animation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"Fecha"]
 }
 
 [sub_resource type="Animation" id="Animation_rixxk"]
@@ -208,11 +258,39 @@ tracks/0/keys = {
 "values": [Vector2(0, 0)]
 }
 
+[sub_resource type="Animation" id="Animation_cxcld"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Porta/Desab:process_mode")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Porta/AnimatedSprite2D:animation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"Abre"]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_41i4q"]
 _data = {
 &"Abre": SubResource("Animation_41i4q"),
 &"Fecha": SubResource("Animation_h4g8d"),
-&"Idle": SubResource("Animation_rixxk")
+&"Idle": SubResource("Animation_rixxk"),
+&"RESET": SubResource("Animation_cxcld")
 }
 
 [node name="PortaTemp" type="Node2D" groups=["Special"]]
@@ -232,31 +310,32 @@ texture = ExtResource("3_h4g8d")
 position = Vector2(-35.999992, -47.999985)
 scale = Vector2(0.53125, 0.56666666)
 sprite_frames = SubResource("SpriteFrames_q52yi")
-animation = &"Idle"
-autoplay = "Idle"
+animation = &"Abre"
 
-[node name="HurtBox" parent="Porta" node_paths=PackedStringArray("sprite") instance=ExtResource("3_7ptwx")]
+[node name="Desab" type="Node2D" parent="Porta"]
+
+[node name="HurtBox" parent="Porta/Desab" node_paths=PackedStringArray("sprite") instance=ExtResource("3_7ptwx")]
 unique_name_in_owner = true
 collision_layer = 16
-sprite = NodePath("../Miasma")
+sprite = NodePath("../../Miasma")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Porta/HurtBox"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Porta/Desab/HurtBox"]
 position = Vector2(4, -63.5)
 shape = SubResource("RectangleShape2D_41i4q")
 debug_color = Color(0.99137133, 0, 0.27243033, 0.41960785)
 
-[node name="Colisao" type="StaticBody2D" parent="Porta"]
+[node name="Colisao" type="StaticBody2D" parent="Porta/Desab"]
 collision_mask = 0
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Porta/Colisao"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Porta/Desab/Colisao"]
 position = Vector2(1.5, -63.5)
 shape = SubResource("RectangleShape2D_rixxk")
 
-[node name="HitBox" parent="Porta" node_paths=PackedStringArray("ignore") instance=ExtResource("4_7ptwx")]
+[node name="HitBox" parent="Porta/Desab" node_paths=PackedStringArray("ignore") instance=ExtResource("4_7ptwx")]
 collision_layer = 16
 ignore = NodePath("../HurtBox")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Porta/HitBox"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Porta/Desab/HitBox"]
 position = Vector2(1, -62.149994)
 shape = SubResource("RectangleShape2D_7ptwx")
 
