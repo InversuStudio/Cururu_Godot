@@ -3,12 +3,12 @@
 [ext_resource type="PackedScene" uid="uid://nohq28uk7lfk" path="res://Objetos/Entidades/Player.tscn" id="1_65boa"]
 [ext_resource type="Texture2D" uid="uid://cqu5scrrmr5n5" path="res://Sprites/Cenário/Mata_Atlantica/Background/Iluminação e Fundo/FUNDOCEU.png" id="1_f6ry5"]
 [ext_resource type="Texture2D" uid="uid://c374cwih425cq" path="res://Sprites/Cenário/Tilemaps/Base.png" id="1_xvyko"]
-[ext_resource type="Texture2D" uid="uid://3g4iv5385ymw" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/arvore_s2.png" id="2_bekt5"]
+[ext_resource type="Texture2D" uid="uid://3g4iv5385ymw" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/arvore_S2.png" id="2_bekt5"]
 [ext_resource type="Texture2D" uid="uid://d3vhntxer3hod" path="res://Sprites/VFX/Iluminação/VFX - LUZ.png" id="2_kg1xm"]
 [ext_resource type="PackedScene" uid="uid://1apfpwlqocxn" path="res://Objetos/Funcionalidade/TransicaoFase.tscn" id="3_bcoor"]
 [ext_resource type="Texture2D" uid="uid://c26uwd68seub4" path="res://Sprites/VFX/Iluminação/VFX - LUZ2.png" id="3_m86x8"]
 [ext_resource type="Texture2D" uid="uid://dv0q1amqoq168" path="res://Sprites/Cenário/Mata_Atlantica/Background/Mata/mato03.png" id="3_qrlbo"]
-[ext_resource type="Texture2D" uid="uid://wng7roaj8xu6" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/arvore_s1.png" id="4_iy160"]
+[ext_resource type="Texture2D" uid="uid://wng7roaj8xu6" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/arvore_S1.png" id="4_iy160"]
 [ext_resource type="Texture2D" uid="uid://dru600hg8oaty" path="res://Sprites/Cenário/Mata_Atlantica/Background/Mata/mato02.png" id="5_6epi5"]
 [ext_resource type="Texture2D" uid="uid://dmmwsf5tpgg24" path="res://Sprites/Cenário/Mata_Atlantica/Interativos/ponte exemplo.png" id="5_cdhd2"]
 [ext_resource type="Texture2D" uid="uid://ccql65wj55kqf" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/arvore_s3.png" id="6_smmoq"]
@@ -597,7 +597,7 @@ modulate = Color(0, 0.5215811, 0.8861342, 1)
 self_modulate = Color(1, 1, 1, 0.6745098)
 position = Vector2(-3323.0002, 1907.0049)
 scale = Vector2(0.77247924, 0.7724791)
-tile_map_data = PackedByteArray("AAD9//n/AAAAAAAAAAD9//r/AAAAAAEAAAD+//n/AAAAAAAAAAD+//r/AAABAAEAAAD///n/AAAAAAAAAAD///r/AAACAAEAAAAAAPn/AAAAAAAAAAAAAPr/AAADAAEAAAABAPn/AAAAAAAAAAABAPr/AAAAAAEAAAACAPn/AAAAAAAAAAACAPr/AAABAAEAAAADAPn/AAAAAAAAAAADAPr/AAACAAEAAAAEAPn/AAAAAAAAAAAEAPr/AAADAAEAAAAFAPn/AAAAAAAAAAAFAPr/AAAAAAEAAAAGAPn/AAAAAAAAAAAGAPr/AAABAAEAAAAHAPn/AAAAAAAAAAAHAPr/AAACAAEAAAAIAPn/AAAAAAAAAAAIAPr/AAADAAEAAAAJAPn/AAAAAAAAAAAJAPr/AAAAAAEAAABXAOL/AAAAAAEAAABYAOL/AAAAAAAAAABZAOL/AAAAAAAAAABaAOL/AAAAAAAAAABbAOL/AAAAAAAAAABcAOL/AAAAAAAAAABdAOL/AAAAAAAAAABeAOL/AAAAAAAAAABfAOL/AAAAAAAAAABgAOL/AAAAAAAAAABhAOL/AAAAAAAAAABiAOL/AAAAAAAAAABjAOL/AAAAAAAAAABkAOL/AAAAAAAAAABlAOL/AAAAAAAAAABiAOP/AAAAAAEAAABjAOP/AAABAAEAAABkAOP/AAACAAEAAABlAOP/AAADAAEAAABeAOP/AAAAAAEAAABfAOP/AAABAAEAAABgAOP/AAACAAEAAABhAOP/AAADAAEAAABaAOP/AAAAAAEAAABbAOP/AAABAAEAAABcAOP/AAACAAEAAABdAOP/AAADAAEAAABWAOP/AAAAAAEAAABXAOP/AAABAAEAAABYAOP/AAACAAEAAABZAOP/AAADAAEAAAAjAMH/AAAAAAEAAAAjAMD/AAAAAAAAAAAkAMD/AAABAAAAAAAlAMD/AAACAAAAAAAmAMD/AAADAAAAAAAnAMD/AAAAAAAAAAAoAMD/AAABAAAAAAApAMD/AAACAAAAAAAqAMD/AAADAAAAAAArAMD/AAAAAAAAAAAsAMD/AAABAAAAAAAtAMD/AAACAAAAAAAuAMD/AAADAAAAAAAvAMD/AAAAAAAAAAAkAMH/AAABAAEAAAAlAMH/AAACAAEAAAAmAMH/AAADAAEAAAAnAMH/AAAAAAEAAAAoAMH/AAABAAEAAAApAMH/AAACAAEAAAAqAMH/AAADAAEAAAArAMH/AAAAAAEAAAAsAMH/AAABAAEAAAAtAMH/AAACAAEAAAAuAMH/AAADAAEAAAAvAMH/AAAAAAEAAAAfAMD/AAAAAAAAAAAfAMH/AAAAAAEAAAAgAMD/AAAAAAAAAAAgAMH/AAAAAAEAAAAhAMD/AAAAAAAAAAAhAMH/AAAAAAEAAAAiAMD/AAAAAAAAAAAiAMH/AAAAAAEAAAA=")
+tile_map_data = PackedByteArray("AAAjAMH/AAAAAAEAAAAjAMD/AAAAAAAAAAAkAMD/AAABAAAAAAAlAMD/AAACAAAAAAAmAMD/AAADAAAAAAAnAMD/AAAAAAAAAAAoAMD/AAABAAAAAAApAMD/AAACAAAAAAAqAMD/AAADAAAAAAArAMD/AAAAAAAAAAAsAMD/AAABAAAAAAAtAMD/AAACAAAAAAAuAMD/AAADAAAAAAAvAMD/AAAAAAAAAAAkAMH/AAABAAEAAAAlAMH/AAACAAEAAAAmAMH/AAADAAEAAAAnAMH/AAAAAAEAAAAoAMH/AAABAAEAAAApAMH/AAACAAEAAAAqAMH/AAADAAEAAAArAMH/AAAAAAEAAAAsAMH/AAABAAEAAAAtAMH/AAACAAEAAAAuAMH/AAADAAEAAAAvAMH/AAAAAAEAAAAfAMD/AAAAAAAAAAAfAMH/AAAAAAEAAAAgAMD/AAAAAAAAAAAgAMH/AAAAAAEAAAAhAMD/AAAAAAAAAAAhAMH/AAAAAAEAAAAiAMD/AAAAAAAAAAAiAMH/AAAAAAEAAAA=")
 tile_set = SubResource("TileSet_smmoq")
 
 [node name="GramaReto" type="Sprite2D" parent="0"]

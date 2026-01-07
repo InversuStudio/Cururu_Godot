@@ -474,7 +474,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"Special",
-"speed": 2.0
+"speed": 8.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -533,7 +533,7 @@ height = 308.0
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_1dbdn"]
 radius = 71.00001
-height = 331.99997
+height = 326.0
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_s2eek"]
 radius = 107.0
@@ -1571,7 +1571,6 @@ position = Vector2(0, -118)
 scale = Vector2(0.375651, 0.375651)
 sprite_frames = SubResource("SpriteFrames_ser7u")
 animation = &"Special"
-frame = 1
 speed_scale = 1.6
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -1655,7 +1654,7 @@ ignore = NodePath("../../HurtContainer/HurtBox")
 parent = NodePath("../..")
 
 [node name="ColSpecial" type="CollisionShape2D" parent="HitContainer/Special"]
-position = Vector2(134, -79)
+position = Vector2(207, -79)
 rotation = 1.57079
 shape = SubResource("CapsuleShape2D_1dbdn")
 
@@ -1737,8 +1736,9 @@ one_shot = true
 
 [node name="MeleeTime" type="Timer" parent="Timers"]
 unique_name_in_owner = true
-wait_time = 0.2
+wait_time = 0.12
 one_shot = true
+ignore_time_scale = true
 
 [node name="DashTime" type="Timer" parent="Timers"]
 unique_name_in_owner = true

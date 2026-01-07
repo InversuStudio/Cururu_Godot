@@ -10,7 +10,7 @@ extends Area2D
 ## Recebe o node pai
 @export var parent: Node2D = null
 ## O quanto a câmera vai tremer ao acertar
-@export var camera_shake:float = 50.0
+@export var camera_shake:float = 20.0
 ## Tempo que jogo congela ao acertar
 @export var hit_freeze:float = .05
 

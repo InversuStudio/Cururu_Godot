@@ -154,13 +154,13 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_41i4q"]
-size = Vector2(206, 511)
+size = Vector2(233, 511)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rixxk"]
-size = Vector2(175, 511)
+size = Vector2(211, 511)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7ptwx"]
-size = Vector2(186, 511.69998)
+size = Vector2(220, 511.69998)
 
 [sub_resource type="Animation" id="Animation_41i4q"]
 resource_name = "Abre"
@@ -245,6 +245,7 @@ tracks/2/keys = {
 [sub_resource type="Animation" id="Animation_rixxk"]
 resource_name = "Idle"
 length = 2.2
+loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -369,7 +370,7 @@ collision_layer = 16
 sprite = NodePath("../../Miasma")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Porta/Desab/HurtBox"]
-position = Vector2(4, -63.5)
+position = Vector2(-0.5, -63.5)
 shape = SubResource("RectangleShape2D_41i4q")
 debug_color = Color(0.99137133, 0, 0.27243033, 0.41960785)
 
@@ -377,7 +378,7 @@ debug_color = Color(0.99137133, 0, 0.27243033, 0.41960785)
 collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Porta/Desab/Colisao"]
-position = Vector2(1.5, -63.5)
+position = Vector2(-0.5, -63.5)
 shape = SubResource("RectangleShape2D_rixxk")
 
 [node name="HitBox" parent="Porta/Desab" node_paths=PackedStringArray("ignore") instance=ExtResource("4_7ptwx")]
@@ -385,7 +386,7 @@ collision_layer = 16
 ignore = NodePath("../HurtBox")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Porta/Desab/HitBox"]
-position = Vector2(1, -62.149994)
+position = Vector2(-1, -62.149994)
 shape = SubResource("RectangleShape2D_7ptwx")
 
 [node name="Timer" type="Timer" parent="."]
