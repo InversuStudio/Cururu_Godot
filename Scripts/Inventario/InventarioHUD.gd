@@ -7,6 +7,7 @@ func _ready() -> void:
 	
 	visibility_changed.connect(func():
 		if visible:
+			GameData.menu_aberto = visible
 			if %Inv.get_child_count() > 0:
 				%Inv.get_child(0).grab_focus()
 			else:

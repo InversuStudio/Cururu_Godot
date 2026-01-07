@@ -1,7 +1,9 @@
-[gd_scene load_steps=25 format=3 uid="uid://bs5i45df7rwnf"]
+[gd_scene load_steps=27 format=3 uid="uid://bs5i45df7rwnf"]
 
 [ext_resource type="Script" uid="uid://dg1wm8v16vrwl" path="res://Scripts/Componentes/HUD.gd" id="1_yixhe"]
 [ext_resource type="Texture2D" uid="uid://dbohcm7v5pvg4" path="res://Sprites/UI/HUD/UIHUD-MAGIA.png" id="2_f2wx0"]
+[ext_resource type="Script" uid="uid://ded3gd0hff7e6" path="res://Scripts/MenuDeCuraRápida/MenuDeCuraRápida.gd" id="2_md4fy"]
+[ext_resource type="PackedScene" uid="uid://c4qqwpn8wd4aq" path="res://UI/ItemSlot.tscn" id="3_7i7fj"]
 [ext_resource type="Texture2D" uid="uid://0vn3u6huw3ie" path="res://Sprites/UI/HUD/UIHUDCASH.png" id="4_uk570"]
 [ext_resource type="Texture2D" uid="uid://8tc3pgq3fdi8" path="res://Sprites/UI/HUD/UIHUD-MAGIABK.png" id="5_2ptjp"]
 [ext_resource type="PackedScene" uid="uid://kuarj30f8veq" path="res://UI/Inventario.tscn" id="5_f2wx0"]
@@ -145,6 +147,45 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
+
+[node name="CuraRápida" type="Control" parent="Corpo"]
+layout_mode = 1
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("2_md4fy")
+item_slot_scene = ExtResource("3_7i7fj")
+
+[node name="ItemBar" type="Control" parent="Corpo/CuraRápida"]
+clip_contents = true
+custom_minimum_size = Vector2(32, 32)
+anchors_preset = 0
+offset_left = 45.0
+offset_top = 166.0
+offset_right = 243.0
+offset_bottom = 303.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Corpo/CuraRápida/ItemBar"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 65
+alignment = 1
+
+[node name="ItemSlot1" parent="Corpo/CuraRápida/ItemBar/HBoxContainer" instance=ExtResource("3_7i7fj")]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="ItemSlot2" parent="Corpo/CuraRápida/ItemBar/HBoxContainer" instance=ExtResource("3_7i7fj")]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
 
 [node name="Main" type="TextureRect" parent="Corpo"]
 layout_mode = 1

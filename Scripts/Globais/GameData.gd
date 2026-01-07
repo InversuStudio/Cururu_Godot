@@ -12,7 +12,8 @@ var posicao: Vector2 = Vector2(0, 0)
 var direcao: bool = false
 # Armazena se player foi para outra área vindo de baixo
 var veio_de_baixo:bool = false
-
+# Armazena o estado do menu de pause
+var menu_aberto: bool = false
 # Armazena o total de moedas coletadas
 signal update_moeda
 var moedas: int = 0:
