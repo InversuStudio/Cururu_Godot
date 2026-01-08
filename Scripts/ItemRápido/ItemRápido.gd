@@ -3,6 +3,7 @@ extends Control
 @export var item_slot_scene : PackedScene
 @onready var container = $Seletor/ItemBar/HBoxContainer
 @onready var label_quantidade_total = $Seletor/Label # Ajuste o nome conforme sua cena
+@onready var seletor_img = $Seletor
 
 var current_index : int = 0
 var slot_width : float = 70.0 
@@ -10,6 +11,13 @@ var slot_width : float = 70.0
 var sprites_ui = {
 	"Acai": preload("res://Sprites/UI/HUD/Menu_Rapido/Itens/ACAI.png"),
 	"Guarana": preload("res://Sprites/UI/HUD/Menu_Rapido/Itens/GUARA.png")
+}
+
+var sprites_seletor ={
+	"padrao": preload("res://Sprites/UI/HUD/Menu_Rapido/UIHUD - SELETOR DE ITEM.png"),
+	"bumper_direito": preload("res://Sprites/UI/HUD/Menu_Rapido/UIHUD - SELETOR DE ITEM_RB.png"),
+	"bumper_esquerdo": preload("res://Sprites/UI/HUD/Menu_Rapido/UIHUD - SELETOR DE ITEM_LB.png"),
+	"usar_item": preload("res://Sprites/UI/HUD/Menu_Rapido/UIHUD - SELETOR DE ITEM_Y.png")
 }
 
 func _ready():
@@ -24,19 +32,25 @@ func _on_inventario_alterado(_item = null, _qtd = null):
 	atualizar_barra()
 
 func _input(event):
-	#Se o inventário estiver aberto trava o menu de cura
-	
 	# Girar para a direita
 	if event.is_action_pressed("bumper_direito"):
+		seletor_img.texture = sprites_seletor["bumper_direito"]
 		navegar(1)
 	
 	# Girar para a esquerda
 	elif event.is_action_pressed("bumper_esquerdo"):
+		seletor_img.texture = sprites_seletor["bumper_esquerdo"]
 		navegar(-1)
 	
 	# Usar o item selecionado
 	elif event.is_action_pressed("usar_item"):
+		seletor_img.texture = sprites_seletor["usar_item"]
 		usar_item_selecionado()
+		
+	if (event.is_action_released("bumper_direito") 
+	or event.is_action_released("bumper_esquerdo") 
+	or event.is_action_released("usar_item")):
+		seletor_img.texture = sprites_seletor["padrao"]
 
 func navegar(direcao: int): # direcao pode ser 1 para frente e -1 para trás
 	var total = container.get_child_count()
