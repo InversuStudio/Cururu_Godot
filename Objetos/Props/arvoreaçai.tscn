@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://va5pjd6vuuo2" path="res://Objetos/Funcionalidade/CompHurtBox.tscn" id="2_etetv"]
 [ext_resource type="AudioStream" uid="uid://b3mmkipqf30jd" path="res://Audio/SFX/INIMIGOS/HIT_INIMIGO.wav" id="3_r6u0v"]
 [ext_resource type="Texture2D" uid="uid://dtggowcotioot" path="res://Sprites/Cenário/Objetos/frutos/arvore sem açai.png" id="4_qtac0"]
-[ext_resource type="Texture2D" uid="uid://bubffpix746dw" path="res://Sprites/Cenário/Objetos/Bau/BAU.png" id="5_cuq0q"]
+[ext_resource type="Texture2D" uid="uid://cdtknlx234dq4" path="res://Sprites/Cenário/Objetos/frutos/arvore_acai.png" id="5_xmbds"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4vmwf"]
 size = Vector2(142, 269)
@@ -21,7 +21,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("5_cuq0q")
+"texture": ExtResource("5_xmbds")
 }],
 "loop": true,
 "name": &"Normal",

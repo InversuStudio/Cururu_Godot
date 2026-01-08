@@ -1,4 +1,4 @@
-[gd_scene load_steps=62 format=4 uid="uid://c4rls1pfwei2e"]
+[gd_scene load_steps=63 format=4 uid="uid://c4rls1pfwei2e"]
 
 [ext_resource type="Texture2D" uid="uid://c374cwih425cq" path="res://Sprites/Cenário/Tilemaps/Base.png" id="1_uhas7"]
 [ext_resource type="Texture2D" uid="uid://cqu5scrrmr5n5" path="res://Sprites/Cenário/Mata_Atlantica/Background/Iluminação e Fundo/FUNDOCEU.png" id="1_xyjrg"]
@@ -25,6 +25,7 @@
 [ext_resource type="Texture2D" uid="uid://6xmqb8rst36e" path="res://Sprites/Cenário/Mata_Atlantica/Chao/moita_miasma1.png" id="13_5ppts"]
 [ext_resource type="Texture2D" uid="uid://cj4rj4oj20ogb" path="res://Sprites/Cenário/Mata_Atlantica/Chao/chap_interno.png" id="13_rcpf6"]
 [ext_resource type="Texture2D" uid="uid://rbtvfm4m7ft" path="res://Sprites/VFX/Iluminação/SOMBRA2.png" id="13_xyjrg"]
+[ext_resource type="AudioStream" uid="uid://bw1sgrrx8pvit" path="res://Audio/SFX/AMBIENTE/Musica_Boss_Boitata.ogg" id="15_dgonc"]
 [ext_resource type="Shader" uid="uid://da2wxasx6evg0" path="res://Scripts/Shaders/Grama.gdshader" id="17_gnpt0"]
 [ext_resource type="Texture2D" uid="uid://c8bkav2g3wyeu" path="res://Sprites/Cenário/Mata_Atlantica/Chao/moita2.png" id="22_4rfcs"]
 [ext_resource type="PackedScene" uid="uid://b7m7lb1s11mbw" path="res://Cenas/BossTeste/Boss.tscn" id="24_o607x"]
@@ -532,6 +533,7 @@ camera_batalha = NodePath("../MainCamera")
 target_camera_batalha = NodePath("PosCameraBatalha")
 pos_pilares = [NodePath("../Cenario/PosPilar1"), NodePath("../Cenario/PosPilar2"), NodePath("../Cenario/PosPilar3"), NodePath("../Cenario/PosPilar4"), NodePath("../Cenario/PosPilar5")]
 rabo = NodePath("Rabo")
+musica_luta = ExtResource("15_dgonc")
 
 [node name="CheckPlayer" type="Area2D" parent="Boss"]
 position = Vector2(576, -430)
