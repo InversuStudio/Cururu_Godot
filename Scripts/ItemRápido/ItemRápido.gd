@@ -1,10 +1,16 @@
 extends Control
 
 @export var item_slot_scene : PackedScene
-@onready var container = $ItemBar/HBoxContainer
+@onready var container = $Seletor/ItemBar/HBoxContainer
+@onready var label_quantidade_total = $Seletor/Label # Ajuste o nome conforme sua cena
 
 var current_index : int = 0
 var slot_width : float = 70.0 
+
+var sprites_ui = {
+	"Acai": preload("res://Sprites/UI/HUD/Menu_Rapido/Itens/ACAI.png"),
+	"Guarana": preload("res://Sprites/UI/HUD/Menu_Rapido/Itens/GUARA.png")
+}
 
 func _ready():
 	# Conecta os sinais que você já tem no inventário
@@ -22,42 +28,77 @@ func _input(event):
 	
 	# Girar para a direita
 	if event.is_action_pressed("bumper_direito"):
-		mudar_item(1)
+		navegar(1)
 	
 	# Girar para a esquerda
 	elif event.is_action_pressed("bumper_esquerdo"):
-		mudar_item(-1)
+		navegar(-1)
 	
 	# Usar o item selecionado
 	elif event.is_action_pressed("usar_item"):
 		usar_item_selecionado()
 
+func navegar(direcao: int): # direcao pode ser 1 para frente e -1 para trás
+	var total = container.get_child_count()
+	if total <= 1: return
+
+	# 1. Esconde o item que estava aparecendo
+	container.get_child(current_index).visible = false
+	
+	# 2. Calcula o novo índice rotatório
+	current_index = (current_index + direcao + total) % total
+	
+	# 3. Mostra o novo item
+	var novo_item_visivel = container.get_child(current_index)
+	novo_item_visivel.visible = true
+	
+	# 4. ATUALIZAÇÃO DO HUD (Importante)
+	atualizar_barra()
+
 # FUNÇÃO PARA ATUALIZAR A BARRA DE ITENS
 func atualizar_barra():
-	# 1. Limpa a barra
+	# 1. Limpa os slots
 	for child in container.get_children():
 		child.queue_free()
 	
-	# 2. Cria os slots (sua versão funcional)
+	# 2. Cria os slots baseados no inventário
 	for i in range(Inventario.inventario.size()):
-		var dados_item = Inventario.inventario[i]
-		var quantidade = dados_item[1]
+		var dados = Inventario.inventario[i]
+		var item_id = dados[0]
 		var novo_slot = item_slot_scene.instantiate()
 		container.add_child(novo_slot)
 		
-		var cena_item = Inventario.lista_itens[dados_item[0]]
-		var item_temp = cena_item.instantiate()
+		# 3. ATRIBUIÇÃO DA TEXTURA
+		var sprite_alvo = sprites_ui.get(item_id)
+		if sprite_alvo != null:
+			# Procure o nó 'Icone' (TextureRect) dentro do seu ItemSlot
+			var icone_node = novo_slot.get_node("Icone") 
+			icone_node.texture = sprite_alvo # Força a aplicação da textura
+		else:
+			print("ERRO: ID '", item_id, "' não encontrado no dicionário sprites_ui!")
 		
-		# Passa os dados para o slot
-		novo_slot.atualizar_slot(item_temp.sprite_normal, quantidade)
-		item_temp.queue_free()
+		# 4. Lógica de visibilidade: apenas o selecionado aparece
+		novo_slot.visible = (i == current_index)
 
-	# 3. O SEGREDO DO INÍCIO DO JOGO:
-	# Esperamos o frame para o Godot calcular o 'size' dos slots recém-criados
-	await get_tree().process_frame
-	current_index = 0
-	atualizar_destaque_visual()
-	mudar_item(0) # Posiciona a barra
+	# 5. Atualiza o Label que agora está no fundo (TextureRect pai)
+	atualizar_valor_quantidade()
+
+# FUNÇÃO PARA ATUALIZAR O NÚMERO DE ITENS 
+func atualizar_valor_quantidade():
+	var inventario = Inventario.inventario
+	
+	# 1. Verifica se há itens no inventário e se o índice é válido
+	if inventario.size() > 0 and current_index < inventario.size():
+		var dados_item = inventario[current_index]
+		var quantidade = dados_item[1] # O segundo valor do array é a quantidade
+		
+		# 2. Atualiza o texto e garante que ele apareça
+		label_quantidade_total.text = str(quantidade)
+		label_quantidade_total.visible = (quantidade >= 1)
+	else:
+		# 3. Se o inventário estiver vazio, esconde o número
+		label_quantidade_total.visible = false
+
 
 # FUNÇÃO PARA APLICAR O EFEITO DO ITEM
 func aplicar_efeito_item(nome):
@@ -93,20 +134,6 @@ func usar_item_selecionado():
 		# Usa a função que você já tem no seu Inventário Global
 		Inventario.RemoveItem(current_index)
 		
-#FUNÇÃO PARA ATUALIZAR O DESTAQUE DO ITEM
-func atualizar_destaque_visual():
-	for i in range(container.get_child_count()):
-		var slot = container.get_child(i)
-		
-		if i == current_index:
-			# Item selecionado: Aumenta e fica brilhante
-			slot.scale = Vector2(1.0, 1.0)
-			slot.modulate.a = 1.0
-		else:
-			# Itens laterais: Diminui e fica transparente
-			slot.scale = Vector2(0.8, 0.8)
-			slot.modulate.a = 0.5
-			slot.pivot_offset = slot.size / 2
 
 #FUNÇÃO PARA MUDAR O ITEM SELECIONADO
 func mudar_item(direction):
@@ -128,5 +155,3 @@ func mudar_item(direction):
 	var tween = create_tween()
 	tween.tween_property(container, "position:x", target_x, 0.15).set_trans(Tween.TRANS_QUAD).set_ease(Tween.EASE_OUT)
 	
-	# Atualiza o visual dos ícones (opcional, mas fica lindo)
-	atualizar_destaque_visual()

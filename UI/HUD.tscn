@@ -1,9 +1,10 @@
-[gd_scene load_steps=27 format=3 uid="uid://bs5i45df7rwnf"]
+[gd_scene load_steps=28 format=3 uid="uid://bs5i45df7rwnf"]
 
 [ext_resource type="Script" uid="uid://dg1wm8v16vrwl" path="res://Scripts/Componentes/HUD.gd" id="1_yixhe"]
 [ext_resource type="Texture2D" uid="uid://dbohcm7v5pvg4" path="res://Sprites/UI/HUD/Barra_Vida/UIHUD-MAGIA.png" id="2_f2wx0"]
-[ext_resource type="Script" uid="uid://ded3gd0hff7e6" path="res://Scripts/MenuDeCuraRápida/MenuDeCuraRápida.gd" id="2_md4fy"]
+[ext_resource type="Script" uid="uid://ded3gd0hff7e6" path="res://Scripts/ItemRápido/ItemRápido.gd" id="2_md4fy"]
 [ext_resource type="PackedScene" uid="uid://c4qqwpn8wd4aq" path="res://UI/ItemSlot.tscn" id="3_7i7fj"]
+[ext_resource type="Texture2D" uid="uid://dnhrdntc80h37" path="res://Sprites/UI/HUD/Menu_Rapido/UIHUD - SELETOR DE ITEM.png" id="4_rbci0"]
 [ext_resource type="Texture2D" uid="uid://0vn3u6huw3ie" path="res://Sprites/UI/HUD/UIHUDCASH.png" id="4_uk570"]
 [ext_resource type="Texture2D" uid="uid://8tc3pgq3fdi8" path="res://Sprites/UI/HUD/Barra_Vida/UIHUD-MAGIABK.png" id="5_2ptjp"]
 [ext_resource type="PackedScene" uid="uid://kuarj30f8veq" path="res://UI/Inventario.tscn" id="5_f2wx0"]
@@ -148,41 +149,82 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 
-[node name="CuraRápida" type="Control" parent="Corpo"]
+[node name="ItemRápido" type="Control" parent="Corpo"]
+process_mode = 1
 layout_mode = 1
 anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_left = 80.0
+offset_top = 197.0
+offset_right = 120.0
+offset_bottom = 237.0
 script = ExtResource("2_md4fy")
 item_slot_scene = ExtResource("3_7i7fj")
 
-[node name="ItemBar" type="Control" parent="Corpo/CuraRápida"]
+[node name="Seletor" type="TextureRect" parent="Corpo/ItemRápido"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -52.0
+offset_top = -50.5
+offset_right = 52.0
+offset_bottom = 50.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_rbci0")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="Corpo/ItemRápido/Seletor"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.85400003
+anchor_top = 0.67700005
+anchor_right = 0.85400003
+anchor_bottom = 0.67700005
+offset_left = -8.816002
+offset_top = -12.877007
+offset_right = 9.183998
+offset_bottom = 10.122993
+grow_horizontal = 0
+grow_vertical = 2
+horizontal_alignment = 1
+
+[node name="ItemBar" type="Control" parent="Corpo/ItemRápido/Seletor"]
 clip_contents = true
 custom_minimum_size = Vector2(32, 32)
-anchors_preset = 0
-offset_left = 45.0
-offset_top = 166.0
-offset_right = 243.0
-offset_bottom = 303.0
-
-[node name="HBoxContainer" type="HBoxContainer" parent="Corpo/CuraRápida/ItemBar"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_constants/separation = 65
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Corpo/ItemRápido/Seletor/ItemBar"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -80.0
+offset_top = -42.0
+offset_right = 80.0
+offset_bottom = 28.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(0, 41.5)
+theme_override_constants/separation = 20
 alignment = 1
 
-[node name="ItemSlot1" parent="Corpo/CuraRápida/ItemBar/HBoxContainer" instance=ExtResource("3_7i7fj")]
-custom_minimum_size = Vector2(50, 50)
+[node name="ItemSlot1" parent="Corpo/ItemRápido/Seletor/ItemBar/HBoxContainer" instance=ExtResource("3_7i7fj")]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 
-[node name="ItemSlot2" parent="Corpo/CuraRápida/ItemBar/HBoxContainer" instance=ExtResource("3_7i7fj")]
-custom_minimum_size = Vector2(50, 50)
+[node name="ItemSlot2" parent="Corpo/ItemRápido/Seletor/ItemBar/HBoxContainer" instance=ExtResource("3_7i7fj")]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
@@ -289,6 +331,7 @@ horizontal_alignment = 2
 
 [node name="Pause" type="Panel" parent="Corpo"]
 unique_name_in_owner = true
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -559,6 +602,7 @@ vertical_alignment = 1
 
 [node name="MapaSmall" type="PanelContainer" parent="Corpo"]
 unique_name_in_owner = true
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0

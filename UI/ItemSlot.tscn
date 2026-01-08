@@ -1,37 +1,49 @@
 [gd_scene load_steps=2 format=3 uid="uid://c4qqwpn8wd4aq"]
 
-[ext_resource type="Script" uid="uid://dx5jep4ey4po5" path="res://Scripts/MenuDeCuraRápida/ItemSlot.gd" id="1_yshqi"]
+[sub_resource type="GDScript" id="GDScript_a6thq"]
+script/source = "# ItemSlot.gd
+extends Control
+
+@onready var texture_rect = $Icone
+
+var comecar_selecionado: bool = false
+# FUNÇÃO DE ATUALIZAR A IMAGEM DO SLOT
+func atualizar_slot(sprite):
+	$Icone.texture = sprite
+	$Icone.modulate.a = 1.0
+"
 
 [node name="ItemSlot1" type="Control"]
-custom_minimum_size = Vector2(30, 30)
+custom_minimum_size = Vector2(70, 70)
 layout_mode = 3
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -16.0
-offset_top = -16.0
-offset_right = 16.0
-offset_bottom = 16.0
+offset_left = -38.5
+offset_top = -38.5
+offset_right = 31.5
+offset_bottom = 31.5
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_yshqi")
+pivot_offset = Vector2(36.5, 34.5)
+script = SubResource("GDScript_a6thq")
 
-[node name="TextureRect" type="TextureRect" parent="."]
-custom_minimum_size = Vector2(30, 30)
-layout_mode = 0
-offset_left = 4.0
-offset_right = 74.0
-offset_bottom = 70.0
-scale = Vector2(1.2, 1.2)
+[node name="Icone" type="TextureRect" parent="."]
+custom_minimum_size = Vector2(65, 65)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -36.5
+offset_top = -32.5
+offset_right = 28.5
+offset_bottom = 32.5
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(32.5, 32.5)
 expand_mode = 1
 stretch_mode = 5
-
-[node name="Label" type="Label" parent="."]
-layout_mode = 0
-offset_left = 45.0
-offset_top = 60.0
-offset_right = 85.0
-offset_bottom = 83.0
-horizontal_alignment = 2
