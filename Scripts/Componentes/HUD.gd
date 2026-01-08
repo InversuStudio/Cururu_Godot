@@ -5,6 +5,7 @@ const sprite_vazio:Texture2D = preload("res://Sprites/UI/HUD/Barra_Vida/UIHUD-VI
 
 @export var inventario_itens:Control = null
 @export var inventario_amuletos:Control = null
+@export var item_rapido:Control = null
 
 var hud_ativo:int = 0
 var configurado:bool = false
@@ -123,6 +124,7 @@ func IniciaHUD() -> void:
 		%BarraMagia.max_value = GameData.magia_max
 		%BarraMagia.value = GameData.magia_atual
 		UpdateMoeda()
+		item_rapido.IniciaBarra()
 		# Marca como configurado
 		configurado = true
 
@@ -169,3 +171,4 @@ func MostraAmuleto(nome:String, desc:String) -> void:
 func LimpaInv() -> void:
 	inventario_itens.LimpaInv()
 	inventario_amuletos.LimpaAm()
+	item_rapido.IniciaBarra()

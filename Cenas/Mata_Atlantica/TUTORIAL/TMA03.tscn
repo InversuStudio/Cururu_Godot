@@ -2,9 +2,9 @@
 
 [ext_resource type="Texture2D" uid="uid://cqu5scrrmr5n5" path="res://Sprites/Cenário/Mata_Atlantica/Background/Iluminação e Fundo/FUNDOCEU.png" id="1_4e4qg"]
 [ext_resource type="Texture2D" uid="uid://c374cwih425cq" path="res://Sprites/Cenário/Tilemaps/Base.png" id="1_vftmf"]
-[ext_resource type="Texture2D" uid="uid://3g4iv5385ymw" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/arvore_s2.png" id="2_0j414"]
+[ext_resource type="Texture2D" uid="uid://3g4iv5385ymw" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/arvore_S2.png" id="2_0j414"]
 [ext_resource type="Texture2D" uid="uid://ccql65wj55kqf" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/arvore_s3.png" id="4_3fe7p"]
-[ext_resource type="Texture2D" uid="uid://wng7roaj8xu6" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/arvore_s1.png" id="4_l7gx4"]
+[ext_resource type="Texture2D" uid="uid://wng7roaj8xu6" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/arvore_S1.png" id="4_l7gx4"]
 [ext_resource type="Texture2D" uid="uid://dv0q1amqoq168" path="res://Sprites/Cenário/Mata_Atlantica/Background/Mata/mato03.png" id="5_r86pu"]
 [ext_resource type="Texture2D" uid="uid://c8bkav2g3wyeu" path="res://Sprites/Cenário/Mata_Atlantica/Chao/moita2.png" id="6_qclta"]
 [ext_resource type="Texture2D" uid="uid://rbtvfm4m7ft" path="res://Sprites/VFX/Iluminação/SOMBRA2.png" id="7_op0pn"]

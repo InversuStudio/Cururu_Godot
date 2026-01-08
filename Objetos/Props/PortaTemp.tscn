@@ -1,11 +1,10 @@
-[gd_scene load_steps=39 format=3 uid="uid://cdhelg6sloxbj"]
+[gd_scene load_steps=38 format=3 uid="uid://cdhelg6sloxbj"]
 
 [ext_resource type="Script" uid="uid://b0ou3eu3i1sxg" path="res://Scripts/Componentes/PortaTemp.gd" id="1_rixxk"]
 [ext_resource type="Texture2D" uid="uid://clqh4rstgwwgd" path="res://Sprites/Cenário/Miasma/Porta de Miasma/Abrindo/01.png" id="2_cxcld"]
 [ext_resource type="Texture2D" uid="uid://ch3k7gd7vr6vj" path="res://Sprites/Cenário/Miasma/Porta de Miasma/Idle/01.png" id="2_tctdy"]
 [ext_resource type="PackedScene" uid="uid://va5pjd6vuuo2" path="res://Objetos/Funcionalidade/CompHurtBox.tscn" id="3_7ptwx"]
 [ext_resource type="Texture2D" uid="uid://lvtrxxiqe484" path="res://Sprites/Cenário/Miasma/Porta de Miasma/Abrindo/02.png" id="3_br5by"]
-[ext_resource type="Texture2D" uid="uid://bgdktvv3wdxl5" path="res://Sprites/Cenário/Objetos/Portas/MIASMA.png" id="3_h4g8d"]
 [ext_resource type="Texture2D" uid="uid://dbr7hoitduc3h" path="res://Sprites/Cenário/Miasma/Porta de Miasma/Idle/02.png" id="3_viq74"]
 [ext_resource type="PackedScene" uid="uid://pc4mgv2nv8af" path="res://Objetos/Funcionalidade/CompHitBox.tscn" id="4_7ptwx"]
 [ext_resource type="Texture2D" uid="uid://c0lvkftcicofr" path="res://Sprites/Cenário/Miasma/Porta de Miasma/Idle/03.png" id="4_jw3wc"]
@@ -153,11 +152,11 @@ animations = [{
 "speed": 6.0
 }]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_41i4q"]
-size = Vector2(233, 511)
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rixxk"]
 size = Vector2(211, 511)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_41i4q"]
+size = Vector2(233, 511)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7ptwx"]
 size = Vector2(220, 511.69998)
@@ -168,38 +167,86 @@ length = 1.1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Porta/Desab:process_mode")
+tracks/0/path = NodePath("AnimatedSprite2D:animation")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0.5),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [4]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Porta/AnimatedSprite2D:frame")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 1.1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [0, 10]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("Porta/AnimatedSprite2D:animation")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [&"Abre"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("HurtBox:monitoring")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.5),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("HurtBox:monitorable")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.5),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("HitBox:monitoring")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.5),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("HitBox:monitorable")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0.5),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Colisao:collision_layer")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0.5),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("AnimatedSprite2D:frame")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 0.10000001, 0.20000002, 0.3, 0.40000004, 0.5, 0.6, 0.70000005, 0.8000001, 0.90000004, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 }
 
 [sub_resource type="Animation" id="Animation_h4g8d"]
@@ -208,130 +255,142 @@ length = 1.1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Porta/Desab:process_mode")
+tracks/0/path = NodePath("AnimatedSprite2D:animation")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0.5),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [0]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Porta/AnimatedSprite2D:frame")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 1.1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [0, 10]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("Porta/AnimatedSprite2D:animation")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [&"Fecha"]
 }
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("HurtBox:monitoring")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.5),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("HurtBox:monitorable")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.5),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("HitBox:monitoring")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.5),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("HitBox:monitorable")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0.5),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Colisao:collision_layer")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0.5),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("AnimatedSprite2D:frame")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 0.10000001, 0.20000002, 0.3, 0.40000004, 0.5, 0.6, 0.70000005, 0.8000001, 0.90000004, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+}
 
 [sub_resource type="Animation" id="Animation_rixxk"]
 resource_name = "Idle"
-length = 1.8
+length = 1.3
 loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Porta/AnimatedSprite2D:animation")
+tracks/0/path = NodePath("AnimatedSprite2D:animation")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
-"update": 0,
+"update": 1,
 "values": [&"Idle"]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("Porta/AnimatedSprite2D:frame")
+tracks/1/path = NodePath("AnimatedSprite2D:frame")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0, 1.8),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [0, 12]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("Porta:position")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(0, 0)]
+"times": PackedFloat32Array(0, 0.10000001, 0.20000002, 0.3, 0.40000004, 0.5, 0.6, 0.70000005, 0.8000001, 0.90000004, 1, 1.1, 1.2),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
 }
 
-[sub_resource type="Animation" id="Animation_cxcld"]
+[sub_resource type="Animation" id="Animation_q1th7"]
 length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Porta/Desab:process_mode")
+tracks/0/path = NodePath("AnimatedSprite2D:animation")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [0]
+"values": [&"Idle"]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("Porta/AnimatedSprite2D:animation")
+tracks/1/path = NodePath("AnimatedSprite2D:frame")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [&"Abre"]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("Porta/AnimatedSprite2D:frame")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [5]
-}
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("Porta:position")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(0, 0)]
+"values": [1]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_41i4q"]
@@ -339,53 +398,43 @@ _data = {
 &"Abre": SubResource("Animation_41i4q"),
 &"Fecha": SubResource("Animation_h4g8d"),
 &"Idle": SubResource("Animation_rixxk"),
-&"RESET": SubResource("Animation_cxcld")
+&"RESET": SubResource("Animation_q1th7")
 }
 
 [node name="PortaTemp" type="Node2D" groups=["Special"]]
 script = ExtResource("1_rixxk")
 tempo_aberta = 2.0
 
-[node name="Porta" type="Node2D" parent="."]
-
-[node name="Miasma" type="Sprite2D" parent="Porta"]
-visible = false
-show_behind_parent = true
-position = Vector2(7.6293945e-06, -6)
-scale = Vector2(0.7837078, 0.7787574)
-texture = ExtResource("3_h4g8d")
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Porta"]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(-35.999992, -47.999985)
 scale = Vector2(0.53125, 0.56666666)
 sprite_frames = SubResource("SpriteFrames_q52yi")
-animation = &"Abre"
-frame = 5
+animation = &"Idle"
+frame = 1
 
-[node name="Desab" type="Node2D" parent="Porta"]
+[node name="Colisao" type="StaticBody2D" parent="."]
+collision_mask = 0
 
-[node name="HurtBox" parent="Porta/Desab" node_paths=PackedStringArray("sprite") instance=ExtResource("3_7ptwx")]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Colisao"]
+position = Vector2(-0.5, -63.5)
+shape = SubResource("RectangleShape2D_rixxk")
+
+[node name="HurtBox" parent="." node_paths=PackedStringArray("sprite") instance=ExtResource("3_7ptwx")]
 unique_name_in_owner = true
 collision_layer = 16
-sprite = NodePath("../../Miasma")
+sprite = NodePath("../AnimatedSprite2D")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Porta/Desab/HurtBox"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HurtBox"]
 position = Vector2(-0.5, -63.5)
 shape = SubResource("RectangleShape2D_41i4q")
 debug_color = Color(0.99137133, 0, 0.27243033, 0.41960785)
 
-[node name="Colisao" type="StaticBody2D" parent="Porta/Desab"]
-collision_mask = 0
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Porta/Desab/Colisao"]
-position = Vector2(-0.5, -63.5)
-shape = SubResource("RectangleShape2D_rixxk")
-
-[node name="HitBox" parent="Porta/Desab" node_paths=PackedStringArray("ignore") instance=ExtResource("4_7ptwx")]
+[node name="HitBox" parent="." node_paths=PackedStringArray("ignore") instance=ExtResource("4_7ptwx")]
+unique_name_in_owner = true
 collision_layer = 16
 ignore = NodePath("../HurtBox")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Porta/Desab/HitBox"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HitBox"]
 position = Vector2(-1, -62.149994)
 shape = SubResource("RectangleShape2D_7ptwx")
 

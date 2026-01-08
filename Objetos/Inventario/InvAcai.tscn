@@ -1,6 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://cqd7yaq2bpugn"]
+[gd_scene load_steps=6 format=3 uid="uid://cqd7yaq2bpugn"]
 
 [ext_resource type="Texture2D" uid="uid://b4y3bbsuyjaly" path="res://Sprites/UI/Pause/Consumiveis/SELECTED.png" id="2_c41y0"]
+[ext_resource type="Texture2D" uid="uid://2de6nadjv7s5" path="res://Sprites/UI/HUD/Menu_Rapido/Itens/ACAI.png" id="2_m15u2"]
 [ext_resource type="Script" uid="uid://bbpp58wkqoall" path="res://Scripts/Inventario/BaseItemInventario.gd" id="2_tfem3"]
 [ext_resource type="Script" uid="uid://c35dantgjnjxr" path="res://Scripts/Inventario/Acai.gd" id="4_w31ld"]
 [ext_resource type="Texture2D" uid="uid://dgidvgwu85fta" path="res://Sprites/UI/Pause/Consumiveis/AÇAI_SELECT.png" id="5_2msca"]
@@ -11,6 +12,7 @@ ignore_texture_size = true
 stretch_mode = 0
 script = ExtResource("2_tfem3")
 nome_display = "Açaí"
+sprite_display = ExtResource("2_m15u2")
 desc_item = "Um açaí boladão"
 sprite_normal = ExtResource("5_2msca")
 sprite_select = ExtResource("2_c41y0")

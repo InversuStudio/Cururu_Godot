@@ -1,6 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://bwln6o0dfc1qi"]
+[gd_scene load_steps=6 format=3 uid="uid://bwln6o0dfc1qi"]
 
 [ext_resource type="Script" uid="uid://bbpp58wkqoall" path="res://Scripts/Inventario/BaseItemInventario.gd" id="1_1mtks"]
+[ext_resource type="Texture2D" uid="uid://dk4wua1wjthnt" path="res://Sprites/UI/HUD/Menu_Rapido/Itens/GUARA.png" id="2_3qdvi"]
 [ext_resource type="Texture2D" uid="uid://hrl23oqojeqm" path="res://Sprites/UI/Pause/Consumiveis/GUARA_SELECT.png" id="2_yf5b2"]
 [ext_resource type="Texture2D" uid="uid://b4y3bbsuyjaly" path="res://Sprites/UI/Pause/Consumiveis/SELECTED.png" id="3_rffg7"]
 [ext_resource type="Script" uid="uid://dkaj3sjhso5an" path="res://Scripts/Inventario/Guarana.gd" id="4_rffg7"]
@@ -12,6 +13,7 @@ stretch_mode = 0
 script = ExtResource("1_1mtks")
 item = 1
 nome_display = "Guaraná"
+sprite_display = ExtResource("2_3qdvi")
 desc_item = "Aquele que fazem Guaraviton"
 sprite_normal = ExtResource("2_yf5b2")
 sprite_select = ExtResource("3_rffg7")

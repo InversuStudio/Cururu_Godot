@@ -4,8 +4,11 @@ class_name ItemInventario extends TextureButton
 @export var item:Inventario.Itens
 ## Nome que será mostrado no inventário
 @export var nome_display:String
+## Sprite a aparecer na lista de item rápido
+@export var sprite_display:Texture2D
 ## Descrição que irá aparecer no inventário
 @export_multiline var desc_item:String = ""
+
 ## Sprite do item normal
 @export var sprite_normal: Texture2D = null
 ## Sprite do item selecionado

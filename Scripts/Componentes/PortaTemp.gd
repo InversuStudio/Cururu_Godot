@@ -6,6 +6,8 @@ func _ready() -> void:
 	%HurtBox.connect("hurt", _on_hurt)
 	%HurtBox.set_deferred("monitoring", true)
 	%HurtBox.set_deferred("monitorable", true)
+	%HitBox.set_deferred("monitoring", true)
+	%HitBox.set_deferred("monitorable", true)
 
 func _on_hurt(hitbox:Array[HitBox]) -> void:
 	for h:HitBox in hitbox:

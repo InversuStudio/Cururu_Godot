@@ -83,3 +83,14 @@ func LimpaInv() -> void:
 	while n >= 0:
 		%Inv.remove_child(%Inv.get_child(n))
 		n -= 1
+
+func PegaSprite(id:int = 0) -> Texture2D:
+	if %Inv.get_child_count() > 0:
+		return %Inv.get_child(id).sprite_display
+	return null
+
+func UsaItem(id:int) -> void:
+	%Inv.get_child(id).script_logica.Logica()
+
+func PegaNum(id:int) -> int:
+	return %Inv.get_child(id).num_item

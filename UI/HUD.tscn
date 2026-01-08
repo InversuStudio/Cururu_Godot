@@ -132,12 +132,13 @@ _data = {
 &"RESET": SubResource("Animation_uk570")
 }
 
-[node name="HUD" type="CanvasLayer" node_paths=PackedStringArray("inventario_itens", "inventario_amuletos")]
+[node name="HUD" type="CanvasLayer" node_paths=PackedStringArray("inventario_itens", "inventario_amuletos", "item_rapido")]
 process_mode = 3
 layer = 1000
 script = ExtResource("1_yixhe")
 inventario_itens = NodePath("Corpo/Pause/BG/ContainerMenus/Inventario")
 inventario_amuletos = NodePath("Corpo/Pause/BG/ContainerMenus/Amuletos")
+item_rapido = NodePath("Corpo/ItemRapido")
 
 [node name="Corpo" type="Control" parent="."]
 unique_name_in_owner = true
@@ -149,7 +150,7 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 
-[node name="ItemRápido" type="Control" parent="Corpo"]
+[node name="ItemRapido" type="Control" parent="Corpo" node_paths=PackedStringArray("cena_inventario")]
 process_mode = 1
 layout_mode = 1
 anchors_preset = 0
@@ -158,9 +159,9 @@ offset_top = 197.0
 offset_right = 120.0
 offset_bottom = 237.0
 script = ExtResource("2_md4fy")
-item_slot_scene = ExtResource("3_7i7fj")
+cena_inventario = NodePath("../Pause/BG/ContainerMenus/Inventario")
 
-[node name="Seletor" type="TextureRect" parent="Corpo/ItemRápido"]
+[node name="Seletor" type="TextureRect" parent="Corpo/ItemRapido"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -177,7 +178,8 @@ texture = ExtResource("4_rbci0")
 expand_mode = 1
 stretch_mode = 5
 
-[node name="Label" type="Label" parent="Corpo/ItemRápido/Seletor"]
+[node name="NumRap" type="Label" parent="Corpo/ItemRapido/Seletor"]
+unique_name_in_owner = true
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.85400003
@@ -192,7 +194,24 @@ grow_horizontal = 0
 grow_vertical = 2
 horizontal_alignment = 1
 
-[node name="ItemBar" type="Control" parent="Corpo/ItemRápido/Seletor"]
+[node name="IconItem" type="TextureRect" parent="Corpo/ItemRapido/Seletor"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(70, 60)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -39.0
+offset_top = -36.0
+offset_right = 31.0
+offset_bottom = 24.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 1
+
+[node name="ItemBar" type="Control" parent="Corpo/ItemRapido/Seletor"]
 clip_contents = true
 custom_minimum_size = Vector2(32, 32)
 layout_mode = 1
@@ -202,7 +221,8 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="HBoxContainer" type="HBoxContainer" parent="Corpo/ItemRápido/Seletor/ItemBar"]
+[node name="HBoxContainer" type="HBoxContainer" parent="Corpo/ItemRapido/Seletor/ItemBar"]
+visible = false
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -219,12 +239,12 @@ pivot_offset = Vector2(0, 41.5)
 theme_override_constants/separation = 20
 alignment = 1
 
-[node name="ItemSlot1" parent="Corpo/ItemRápido/Seletor/ItemBar/HBoxContainer" instance=ExtResource("3_7i7fj")]
+[node name="ItemSlot1" parent="Corpo/ItemRapido/Seletor/ItemBar/HBoxContainer" instance=ExtResource("3_7i7fj")]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 
-[node name="ItemSlot2" parent="Corpo/ItemRápido/Seletor/ItemBar/HBoxContainer" instance=ExtResource("3_7i7fj")]
+[node name="ItemSlot2" parent="Corpo/ItemRapido/Seletor/ItemBar/HBoxContainer" instance=ExtResource("3_7i7fj")]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
