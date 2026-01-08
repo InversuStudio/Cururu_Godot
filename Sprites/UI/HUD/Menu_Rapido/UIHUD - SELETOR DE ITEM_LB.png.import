@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dk4wua1wjthnt"
-path="res://.godot/imported/GUARA.png-f84e7fd9893f01eb5aff17dc53c5e005.ctex"
+uid="uid://c05b4m0ljqc25"
+path="res://.godot/imported/UIHUD - SELETOR DE ITEM_LB.png-38bf2122762921c98ce644bb4838a599.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Cenário/Objetos/frutos/GUARA.png"
-dest_files=["res://.godot/imported/GUARA.png-f84e7fd9893f01eb5aff17dc53c5e005.ctex"]
+source_file="res://Sprites/UI/HUD/Menu_Rapido/UIHUD - SELETOR DE ITEM_LB.png"
+dest_files=["res://.godot/imported/UIHUD - SELETOR DE ITEM_LB.png-38bf2122762921c98ce644bb4838a599.ctex"]
 
 [params]
 

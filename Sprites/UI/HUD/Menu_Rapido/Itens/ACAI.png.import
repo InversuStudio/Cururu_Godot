@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dbohcm7v5pvg4"
-path="res://.godot/imported/UIHUD-MAGIA.png-b97d78ca3b86d16d49fd7409055196e3.ctex"
+uid="uid://2de6nadjv7s5"
+path="res://.godot/imported/ACAI.png-43a25a623c01d7eb0a51a4d871139b87.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/UI/HUD/UIHUD-MAGIA.png"
-dest_files=["res://.godot/imported/UIHUD-MAGIA.png-b97d78ca3b86d16d49fd7409055196e3.ctex"]
+source_file="res://Sprites/UI/HUD/Menu_Rapido/Itens/ACAI.png"
+dest_files=["res://.godot/imported/ACAI.png-43a25a623c01d7eb0a51a4d871139b87.ctex"]
 
 [params]
 

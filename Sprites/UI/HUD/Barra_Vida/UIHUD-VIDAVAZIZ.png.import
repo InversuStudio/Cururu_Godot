@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dra1jbemluojw"
-path="res://.godot/imported/UIHUD-VIDACHEIA.png-ce77d793c5f2a4123c721896154bdd88.ctex"
+uid="uid://dqsd51tyy3vo4"
+path="res://.godot/imported/UIHUD-VIDAVAZIZ.png-203508b2be80e502bc223c6d9c13fa15.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/UI/HUD/UIHUD-VIDACHEIA.png"
-dest_files=["res://.godot/imported/UIHUD-VIDACHEIA.png-ce77d793c5f2a4123c721896154bdd88.ctex"]
+source_file="res://Sprites/UI/HUD/Barra_Vida/UIHUD-VIDAVAZIZ.png"
+dest_files=["res://.godot/imported/UIHUD-VIDAVAZIZ.png-203508b2be80e502bc223c6d9c13fa15.ctex"]
 
 [params]
 

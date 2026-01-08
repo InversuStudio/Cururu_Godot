@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dqsd51tyy3vo4"
-path="res://.godot/imported/UIHUD-VIDAVAZIZ.png-caf71c130b5fe6f1c61a0928eb458774.ctex"
+uid="uid://bvspij3bvpvgv"
+path="res://.godot/imported/UIHUD - SELETOR DE ITEM_RB.png-cae65669879478c75bad4869cd519083.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/UI/HUD/UIHUD-VIDAVAZIZ.png"
-dest_files=["res://.godot/imported/UIHUD-VIDAVAZIZ.png-caf71c130b5fe6f1c61a0928eb458774.ctex"]
+source_file="res://Sprites/UI/HUD/Menu_Rapido/UIHUD - SELETOR DE ITEM_RB.png"
+dest_files=["res://.godot/imported/UIHUD - SELETOR DE ITEM_RB.png-cae65669879478c75bad4869cd519083.ctex"]
 
 [params]
 

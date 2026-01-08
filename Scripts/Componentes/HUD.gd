@@ -1,7 +1,7 @@
 extends CanvasLayer
 
-const sprite_cheio:Texture2D = preload("res://Sprites/UI/HUD/UIHUD-VIDACHEIA.png")
-const sprite_vazio:Texture2D = preload("res://Sprites/UI/HUD/UIHUD-VIDAVAZIZ.png")
+const sprite_cheio:Texture2D = preload("res://Sprites/UI/HUD/Barra_Vida/UIHUD-VIDACHEIA.png")
+const sprite_vazio:Texture2D = preload("res://Sprites/UI/HUD/Barra_Vida/UIHUD-VIDAVAZIZ.png")
 
 @export var inventario_itens:Control = null
 @export var inventario_amuletos:Control = null

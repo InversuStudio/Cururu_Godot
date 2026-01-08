@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://u48tpl3f3l20"]
 
 [ext_resource type="Script" uid="uid://du13c3vr4mc5k" path="res://Scripts/Componentes/DropItem.gd" id="1_fhqsw"]
-[ext_resource type="Texture2D" uid="uid://dk4wua1wjthnt" path="res://Sprites/Cenário/Objetos/frutos/GUARA.png" id="2_fhqsw"]
+[ext_resource type="Texture2D" uid="uid://dk4wua1wjthnt" path="res://Sprites/UI/HUD/Menu_Rapido/Itens/GUARA.png" id="2_fhqsw"]
 [ext_resource type="PackedScene" uid="uid://ffqi6t0ahbmk" path="res://Objetos/Funcionalidade/OtimizadorSprite.tscn" id="3_ehqyr"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_fhqsw"]

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://8tc3pgq3fdi8"
-path="res://.godot/imported/UIHUD-MAGIABK.png-043621d45843740be336edfd0373e134.ctex"
+uid="uid://dk4wua1wjthnt"
+path="res://.godot/imported/GUARA.png-2bce5925cbc193ccd437da90aa6b139c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/UI/HUD/UIHUD-MAGIABK.png"
-dest_files=["res://.godot/imported/UIHUD-MAGIABK.png-043621d45843740be336edfd0373e134.ctex"]
+source_file="res://Sprites/UI/HUD/Menu_Rapido/Itens/GUARA.png"
+dest_files=["res://.godot/imported/GUARA.png-2bce5925cbc193ccd437da90aa6b139c.ctex"]
 
 [params]
 

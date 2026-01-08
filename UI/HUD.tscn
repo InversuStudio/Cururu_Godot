@@ -1,11 +1,11 @@
 [gd_scene load_steps=27 format=3 uid="uid://bs5i45df7rwnf"]
 
 [ext_resource type="Script" uid="uid://dg1wm8v16vrwl" path="res://Scripts/Componentes/HUD.gd" id="1_yixhe"]
-[ext_resource type="Texture2D" uid="uid://dbohcm7v5pvg4" path="res://Sprites/UI/HUD/UIHUD-MAGIA.png" id="2_f2wx0"]
+[ext_resource type="Texture2D" uid="uid://dbohcm7v5pvg4" path="res://Sprites/UI/HUD/Barra_Vida/UIHUD-MAGIA.png" id="2_f2wx0"]
 [ext_resource type="Script" uid="uid://ded3gd0hff7e6" path="res://Scripts/MenuDeCuraRápida/MenuDeCuraRápida.gd" id="2_md4fy"]
 [ext_resource type="PackedScene" uid="uid://c4qqwpn8wd4aq" path="res://UI/ItemSlot.tscn" id="3_7i7fj"]
 [ext_resource type="Texture2D" uid="uid://0vn3u6huw3ie" path="res://Sprites/UI/HUD/UIHUDCASH.png" id="4_uk570"]
-[ext_resource type="Texture2D" uid="uid://8tc3pgq3fdi8" path="res://Sprites/UI/HUD/UIHUD-MAGIABK.png" id="5_2ptjp"]
+[ext_resource type="Texture2D" uid="uid://8tc3pgq3fdi8" path="res://Sprites/UI/HUD/Barra_Vida/UIHUD-MAGIABK.png" id="5_2ptjp"]
 [ext_resource type="PackedScene" uid="uid://kuarj30f8veq" path="res://UI/Inventario.tscn" id="5_f2wx0"]
 [ext_resource type="PackedScene" uid="uid://ddf8xx25186i" path="res://UI/Amuletos.tscn" id="6_gppie"]
 [ext_resource type="Texture2D" uid="uid://xx7bvsgngiqe" path="res://Sprites/Cenário/Mata_Atlantica/Mapa/MAPA V1.png" id="7_2ptjp"]
@@ -289,7 +289,6 @@ horizontal_alignment = 2
 
 [node name="Pause" type="Panel" parent="Corpo"]
 unique_name_in_owner = true
-z_index = -2
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
