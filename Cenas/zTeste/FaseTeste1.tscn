@@ -1,4 +1,4 @@
-[gd_scene load_steps=35 format=4 uid="uid://driflyxauqbxs"]
+[gd_scene load_steps=34 format=4 uid="uid://driflyxauqbxs"]
 
 [ext_resource type="Texture2D" uid="uid://c374cwih425cq" path="res://Sprites/Cenário/Tilemaps/Base.png" id="1_52y5a"]
 [ext_resource type="Texture2D" uid="uid://dt8o7r2gdnfv3" path="res://Sprites/zTeste_Parellax/ParallaxTeste_2/ParallaxBack3.png" id="1_fjg5v"]
@@ -24,7 +24,6 @@
 [ext_resource type="PackedScene" uid="uid://bnm668fws2641" path="res://Objetos/Props/Armadilha.tscn" id="24_tkd1t"]
 [ext_resource type="Shader" uid="uid://da2wxasx6evg0" path="res://Scripts/Shaders/Grama.gdshader" id="25_vdl7m"]
 [ext_resource type="Texture2D" uid="uid://c8bkav2g3wyeu" path="res://Sprites/Cenário/Mata_Atlantica/Chao/moita2.png" id="26_fjg5v"]
-[ext_resource type="PackedScene" uid="uid://d0l4afitq8qog" path="res://Objetos/NPCs/Cartógrafo.tscn" id="26_vdl7m"]
 [ext_resource type="PackedScene" uid="uid://davj0hqm0kiya" path="res://Objetos/Funcionalidade/TransicaoCameraNeo.tscn" id="27_der3i"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_77bok"]
@@ -212,7 +211,7 @@ position = Vector2(3900, -467)
 tipo_item = 1
 
 [node name="NPC Basico" parent="." instance=ExtResource("18_bp4ag")]
-position = Vector2(-148, -1553)
+position = Vector2(-413, -1546.0001)
 dialogue_start = "mapa"
 
 [node name="PlataformaSome" type="StaticBody2D" parent="."]
@@ -319,10 +318,10 @@ texture = ExtResource("26_fjg5v")
 position = Vector2(-146, -513.9998)
 zoom = Vector2(0.8, 0.8)
 limit_enabled = true
-limit_left = -2759
-limit_top = -1968
-limit_right = 1490
-limit_bottom = 70
+limit_left = -2669
+limit_top = -1983
+limit_right = 1580
+limit_bottom = 55
 target = NodePath("../../Entidades/Player")
 limite_camera = NodePath("../../LimiteCam")
 mostrar_deadzone_no_jogo = true
@@ -342,10 +341,10 @@ drag_horizontal_enabled = true
 drag_vertical_enabled = true
 
 [node name="LimiteCam" type="ReferenceRect" parent="."]
-offset_left = -2759.0
-offset_top = -1968.0
-offset_right = 1490.0
-offset_bottom = 70.0
+offset_left = -2669.0
+offset_top = -1983.0
+offset_right = 1580.0
+offset_bottom = 55.0
 border_width = 5.0
 
 [node name="Salao->Main" parent="." node_paths=PackedStringArray("de", "para") instance=ExtResource("27_der3i")]
@@ -362,8 +361,5 @@ para = NodePath("../Cameras/Salao")
 polygon = PackedVector2Array(4578, -742, 5683, -750, 5655, -369, 4586, -359)
 de = NodePath("../Cameras/Salao")
 para = NodePath("../Cameras/Canto")
-
-[node name="NPC-Basico" parent="." instance=ExtResource("26_vdl7m")]
-position = Vector2(-660, -1520)
 
 [editable path="Props/UpgradeMissil"]

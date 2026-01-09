@@ -93,13 +93,17 @@ func start(dialogue_resource: DialogueResource, title: String, extra_game_states
 func setup_portrait(inverter:bool):
 	if character_label.text == "SACI":
 		character_dialogue_icon.texture = load("res://Sprites/NPCS/Saci/saci01.png")
+		
 	elif character_label.text == "ARARÊ":
 		character_dialogue_icon.texture = load("res://Sprites/NPCS/Cartografo/01.png")
+		
+		character_dialogue_icon.flip_h = inverter
 	elif character_label.text == "NAIÁ":
 		character_dialogue_icon.texture = load("res://Sprites/NPCS/Vitoria Régia/NAIA_01.png")
+		
 	elif character_label.text == "NPC Basico":
 		character_dialogue_icon.texture = load("res://Sprites/NPCS/Saci/saci01.png")
-		character_dialogue_icon.flip_h = inverter
+		
 
 ## Apply any changes to the balloon given a new [DialogueLine].
 func apply_dialogue_line() -> void:
