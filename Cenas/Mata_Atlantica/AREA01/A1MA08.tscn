@@ -890,13 +890,13 @@ position = Vector2(3900, -7424)
 position = Vector2(-5006, 864)
 
 [node name="PortaTemp2" parent="Fundo/0/Props" instance=ExtResource("8_krmto")]
-position = Vector2(-3588, 705)
+position = Vector2(-3588, 715)
 
 [node name="PortaTemp3" parent="Fundo/0/Props" instance=ExtResource("8_krmto")]
-position = Vector2(-1204, 705)
+position = Vector2(-1204, 726)
 
 [node name="PortaTemp4" parent="Fundo/0/Props" instance=ExtResource("8_krmto")]
-position = Vector2(-5007, -706)
+position = Vector2(-5031, -680)
 
 [node name="TileMapLayer" type="TileMapLayer" parent="Fundo/0"]
 position = Vector2(10238, -1536)
@@ -1906,7 +1906,7 @@ scale = Vector2(0.8, 0.8)
 texture = ExtResource("23_esn82")
 
 [node name="MoitaTeste62" type="Sprite2D" parent="Fundo/1/Teto"]
-position = Vector2(-7311, 309.2002)
+position = Vector2(-7311, 319.6094)
 scale = Vector2(0.8, 0.8)
 texture = ExtResource("23_esn82")
 

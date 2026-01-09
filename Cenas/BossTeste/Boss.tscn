@@ -890,7 +890,6 @@ script = ExtResource("77_iqxfe")
 state_idle = NodePath("../Idle")
 
 [node name="UI_BOSS" type="CanvasLayer" parent="."]
-visible = false
 
 [node name="Control" type="Control" parent="UI_BOSS"]
 layout_mode = 3
