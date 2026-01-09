@@ -652,10 +652,10 @@ scale = Vector2(0.40531394, 0.40531394)
 texture = ExtResource("22_7rfnn")
 
 [node name="PortaTemp3" parent="background/0" instance=ExtResource("10_0syxa")]
-position = Vector2(2321, -3081)
+position = Vector2(2349, -3102)
 
 [node name="PortaTemp4" parent="background/0" instance=ExtResource("10_0syxa")]
-position = Vector2(5016, -4676)
+position = Vector2(5016, -4653)
 
 [node name="Espinhos" type="Node2D" parent="background/0"]
 position = Vector2(2359, -124)
