@@ -1,4 +1,4 @@
-[gd_scene load_steps=41 format=4 uid="uid://cubw3i1ch5jq1"]
+[gd_scene load_steps=43 format=4 uid="uid://cubw3i1ch5jq1"]
 
 [ext_resource type="PackedScene" uid="uid://nohq28uk7lfk" path="res://Objetos/Entidades/Player.tscn" id="1_65boa"]
 [ext_resource type="Texture2D" uid="uid://cqu5scrrmr5n5" path="res://Sprites/Cenário/Mata_Atlantica/Background/Iluminação e Fundo/FUNDOCEU.png" id="1_f6ry5"]
@@ -32,6 +32,8 @@
 [ext_resource type="Texture2D" uid="uid://jecy4bfqqqxu" path="res://Sprites/Cenário/Mata_Atlantica/Teto/Moita teste.png" id="25_k6a21"]
 [ext_resource type="Texture2D" uid="uid://d3i6g64tongye" path="res://Sprites/Cenário/Objetos/Savepoint/florlotus.png" id="29_lr7hr"]
 [ext_resource type="Texture2D" uid="uid://dj81ab7fk7ig1" path="res://Sprites/Cenário/Objetos/Savepoint/parte da frente.png" id="30_8clb6"]
+[ext_resource type="Script" uid="uid://dd16yu704x6wt" path="res://Scripts/Componentes/BGM_Player.gd" id="33_6epi5"]
+[ext_resource type="AudioStream" uid="uid://c7qftchbhu6xc" path="res://Audio/SFX/AMBIENTE/Musica_Jogo.mp3" id="34_smmoq"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_32tfj"]
 texture = ExtResource("1_xvyko")
@@ -862,6 +864,12 @@ limit_right = 3692
 limit_bottom = -4044
 target = NodePath("../0/Player")
 limite_camera = NodePath("../LimiteCam")
+
+[node name="BGM_Player" type="Node" parent="."]
+script = ExtResource("33_6epi5")
+musica = ExtResource("34_smmoq")
+volume = -0.5
+metadata/_custom_type_script = "uid://dd16yu704x6wt"
 
 [node name="LimiteCam" type="ReferenceRect" parent="."]
 modulate = Color(0.8901961, 1, 0.6784314, 0.38039216)

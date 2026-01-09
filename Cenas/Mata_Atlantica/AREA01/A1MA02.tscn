@@ -776,7 +776,7 @@ position = Vector2(-22, -253)
 shape = SubResource("RectangleShape2D_n8ivf")
 
 [node name="Portal2" type="Sprite2D" parent="background/0/1-5"]
-position = Vector2(-113, -222)
+position = Vector2(-101, -222)
 scale = Vector2(0.98828125, 1.6250002)
 texture = ExtResource("15_yf878")
 flip_h = true
