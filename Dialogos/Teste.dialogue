@@ -11,16 +11,16 @@ SACI: Mas olho vivo, tem muitos outros segredos que vão ajudar você na jornada
 
 ~ mapa
 if Inventario.tem_mapa == false:
-	CACARTÓGRAFO: Oi.
-	CARTÓGRAFO: Você quer um mapa? Só 3 sementes.
+	NPC Basico: Oi.
+	NPC Basico: Você quer um mapa? Só 3 sementes.
 	- Pô, maneiro. Quero sim.
 		if GameData.moedas >= 3
-			CARTÓGRAFO: [do! DialogoCMD.AddMapa(), GameData.moedas -= 3] Aproveita aí, mestre.
+			NPC Basico: [do! DialogoCMD.AddMapa(), GameData.moedas -= 3] Aproveita aí, mestre.
 		else:
-			CARTÓGRAFO: Desculpe, fi. Eu não posso [b][i]DAR[/i][/b] crédito.
-			CARTÓGRAFO: Volte quande estiver um pouco mais... umm... rico!
+			NPC Basico: Desculpe, fi. Eu não posso [b][i]DAR[/i][/b] crédito.
+			NPC Basico: Volte quande estiver um pouco mais... umm... rico!
 	- Tá achando que eu sou o que?
-		CARTÓGRAFO: Um sapo.
+		NPC Basico: Um sapo.
 else:
-	CARTÓGRAFO: Não tenho mais nada. Você levou tudo.
+	NPC Basico: Não tenho mais nada. Você levou tudo.
 => END!

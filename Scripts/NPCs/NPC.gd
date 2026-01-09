@@ -3,6 +3,7 @@ extends InteractObject
 @export var arquivo_dialogo: DialogueResource = null
 @export var dialogue_start: String = "start"
 @export var interacao: Interacao = null
+@onready var character_sprite = %AnimatedSprite2D
 var balao = preload("res://Dialogos/BalaoFala.tscn")
 var falando:bool = false
 

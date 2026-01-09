@@ -16,7 +16,8 @@ var tempo_mapa:float = 0.0
 # INPUT PAUSE
 func _input(_event: InputEvent) -> void:
 	if Input.is_action_just_pressed("start"):
-		if Mundos.player == null or AvisoItem.ativo: return
+		var dialogo_ativo = get_tree().root.find_child("BalaoFala", true, false)
+		if Mundos.player == null or AvisoItem.ativo or dialogo_ativo != null: return
 		%Pause.visible = true if %Pause.visible == false else false
 	
 	if Input.is_action_just_pressed("ui_cancel"):

@@ -45,6 +45,9 @@ var mutation_cooldown: Timer = Timer.new()
 ## The label showing the name of the currently speaking character
 @onready var character_label: RichTextLabel = %CharacterLabel
 
+## The icon showing the character that is currently speaking
+@onready var character_dialogue_icon: Sprite2D = $Balloon/CharacterIcon
+
 ## The label showing the currently spoken dialogue
 @onready var dialogue_label: DialogueLabel = %DialogueLabel
 
@@ -86,6 +89,17 @@ func start(dialogue_resource: DialogueResource, title: String, extra_game_states
 	resource = dialogue_resource
 	self.dialogue_line = await resource.get_next_dialogue_line(title, temporary_game_states)
 
+## Setup character portrait to appear on dialogue
+func setup_portrait(inverter:bool):
+	if character_label.text == "SACI":
+		character_dialogue_icon.texture = load("res://Sprites/NPCS/Saci/saci01.png")
+	elif character_label.text == "ARARÊ":
+		character_dialogue_icon.texture = load("res://Sprites/NPCS/Cartografo/01.png")
+	elif character_label.text == "NAIÁ":
+		character_dialogue_icon.texture = load("res://Sprites/NPCS/Vitoria Régia/NAIA_01.png")
+	elif character_label.text == "NPC Basico":
+		character_dialogue_icon.texture = load("res://Sprites/NPCS/Saci/saci01.png")
+		character_dialogue_icon.flip_h = inverter
 
 ## Apply any changes to the balloon given a new [DialogueLine].
 func apply_dialogue_line() -> void:
@@ -97,6 +111,8 @@ func apply_dialogue_line() -> void:
 
 	character_label.visible = not dialogue_line.character.is_empty()
 	character_label.text = tr(dialogue_line.character, "dialogue")
+	
+	setup_portrait(true)
 
 	dialogue_label.hide()
 	dialogue_label.dialogue_line = dialogue_line
