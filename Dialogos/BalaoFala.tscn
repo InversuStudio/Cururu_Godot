@@ -1,6 +1,7 @@
-[gd_scene load_steps=13 format=3 uid="uid://36u4axx0kdfy"]
+[gd_scene load_steps=15 format=3 uid="uid://36u4axx0kdfy"]
 
 [ext_resource type="Script" uid="uid://c2ijeforn42qo" path="res://Dialogos/balloon.gd" id="1_w6bav"]
+[ext_resource type="Shader" uid="uid://c1omtsxv04udh" path="res://Scripts/Shaders/blur_shader.gdshader" id="2_lp6v3"]
 [ext_resource type="PackedScene" uid="uid://ckvgyvclnwggo" path="res://addons/dialogue_manager/dialogue_label.tscn" id="2_ow0pn"]
 [ext_resource type="Script" uid="uid://bb52rsfwhkxbn" path="res://addons/dialogue_manager/dialogue_responses_menu.gd" id="3_ifi3v"]
 [ext_resource type="Texture2D" uid="uid://bfige6m1uslss" path="res://Sprites/UI/Dialogo/DIALOGO_DIREITA.png" id="3_uma04"]
@@ -10,6 +11,11 @@
 [ext_resource type="Script" path="res://Dialogos/response_auto_resize.gd" id="9_4bkqv"]
 
 [sub_resource type="Theme" id="Theme_w6bav"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_4bkqv"]
+shader = ExtResource("2_lp6v3")
+shader_parameter/darkness = 0.50000002375
+shader_parameter/lod = 0.800000038
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_lp6v3"]
 content_margin_left = 12.0
@@ -46,6 +52,17 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 theme = SubResource("Theme_w6bav")
+
+[node name="BgOverlay" type="ColorRect" parent="Balloon"]
+modulate = Color(0, 0, 0, 1)
+self_modulate = Color(0, 0, 0, 1)
+material = SubResource("ShaderMaterial_4bkqv")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="CharacterIcon" type="Sprite2D" parent="Balloon"]
 position = Vector2(1779, 941)

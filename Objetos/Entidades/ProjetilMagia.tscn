@@ -52,8 +52,8 @@ script = ExtResource("1_xp004")
 
 [node name="Sprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_hxyyo")
-animation = &"Hit"
 autoplay = "default"
+frame_progress = 0.7859208
 
 [node name="HitBox" parent="." instance=ExtResource("1_hpi2w")]
 unique_name_in_owner = true

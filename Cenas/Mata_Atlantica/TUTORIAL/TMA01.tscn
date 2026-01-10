@@ -1,7 +1,6 @@
-[gd_scene load_steps=57 format=4 uid="uid://dfuswe0wcsy33"]
+[gd_scene load_steps=55 format=4 uid="uid://dfuswe0wcsy33"]
 
 [ext_resource type="Texture2D" uid="uid://c374cwih425cq" path="res://Sprites/Cenário/Tilemaps/Base.png" id="1_axyo6"]
-[ext_resource type="PackedScene" uid="uid://cqyub70sv0ofp" path="res://Objetos/Props/SavePoint.tscn" id="1_kqyhf"]
 [ext_resource type="Texture2D" uid="uid://2x6q1ni8klgv" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/arvore_fundo1.png" id="2_nika8"]
 [ext_resource type="Texture2D" uid="uid://btb3tlxsmx38i" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/arvore_fundo2.png" id="3_5nff6"]
 [ext_resource type="Texture2D" uid="uid://cqu5scrrmr5n5" path="res://Sprites/Cenário/Mata_Atlantica/Background/Iluminação e Fundo/FUNDOCEU.png" id="4_0v3sa"]
@@ -17,7 +16,6 @@
 [ext_resource type="Texture2D" uid="uid://rbtvfm4m7ft" path="res://Sprites/VFX/Iluminação/SOMBRA2.png" id="8_l3w8l"]
 [ext_resource type="Texture2D" uid="uid://d3t6c4pjsosio" path="res://Sprites/Cenário/Mata_Atlantica/Background/Mata/mato01.png" id="8_mcqsr"]
 [ext_resource type="Texture2D" uid="uid://rwmi1ggde5dy" path="res://Sprites/VFX/Iluminação/PORTAL.png" id="9_ogbcg"]
-[ext_resource type="Texture2D" uid="uid://d3vhntxer3hod" path="res://Sprites/VFX/Iluminação/VFX - LUZ.png" id="11_i5sln"]
 [ext_resource type="Texture2D" uid="uid://c2yapafbd3cnf" path="res://Sprites/Cenário/Mata_Atlantica/Foreground/cipó.png" id="13_kwvnc"]
 [ext_resource type="Texture2D" uid="uid://bi1a2quip0tli" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/arvore03.png" id="13_rcn2b"]
 [ext_resource type="Texture2D" uid="uid://b6yel5f58h380" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/arvore05.png" id="14_wmciv"]
@@ -34,12 +32,11 @@
 [ext_resource type="Texture2D" uid="uid://cw2yeg7ynw0kl" path="res://Sprites/Cenário/Mata_Atlantica/Chao/chap_externo.png" id="26_6kvc1"]
 [ext_resource type="PackedScene" uid="uid://dn2kwqjchyumh" path="res://Sprites/Cenário/Mata_Atlantica/Interativos/parede_pedras.tscn" id="27_i5sln"]
 [ext_resource type="Texture2D" uid="uid://ciulkfu83ohwu" path="res://Sprites/Cenário/Mata_Atlantica/Foreground/04.png" id="27_te2fn"]
-[ext_resource type="Texture2D" uid="uid://5crpeva5qkhc" path="res://Sprites/VFX/Iluminação/VFX - LUZ3.png" id="28_rh2pu"]
 [ext_resource type="Texture2D" uid="uid://cgnnux60eiern" path="res://Sprites/Cenário/Mata_Atlantica/Foreground/05.png" id="28_wstxp"]
 [ext_resource type="PackedScene" uid="uid://bxixu84ahcyba" path="res://Objetos/NPCs/Saci.tscn" id="29_qeqrq"]
-[ext_resource type="Texture2D" uid="uid://c26uwd68seub4" path="res://Sprites/VFX/Iluminação/VFX - LUZ2.png" id="29_yyslo"]
 [ext_resource type="Texture2D" uid="uid://5m4b2cn86u3t" path="res://Sprites/Cenário/Mata_Atlantica/Foreground/03.png" id="30_5nff6"]
 [ext_resource type="Script" uid="uid://dd16yu704x6wt" path="res://Scripts/Componentes/BGM_Player.gd" id="30_fgbk1"]
+[ext_resource type="Shader" path="res://Scripts/Shaders/godray.gdshader" id="30_rh2pu"]
 [ext_resource type="AudioStream" uid="uid://c7qftchbhu6xc" path="res://Audio/SFX/AMBIENTE/Musica_Jogo.mp3" id="31_7dakl"]
 [ext_resource type="Texture2D" uid="uid://xjqchtcfdjkn" path="res://Sprites/Cenário/Mata_Atlantica/Foreground/01.png" id="31_ku32q"]
 [ext_resource type="Texture2D" uid="uid://b2pop4ke31d1x" path="res://Sprites/Cenário/Mata_Atlantica/Foreground/02.png" id="32_dglwx"]
@@ -49,6 +46,22 @@
 [ext_resource type="PackedScene" uid="uid://u28e3eudu6ch" path="res://Objetos/Funcionalidade/MainCamera.tscn" id="37_nika8"]
 [ext_resource type="Texture2D" uid="uid://b7hwtujjwy182" path="res://Sprites/UI/Pause/maPEAMENTO.png" id="38_5nff6"]
 [ext_resource type="Texture2D" uid="uid://7msrkwwo018f" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/arvore02.png" id="44_jwima"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_rcn2b"]
+shader = ExtResource("30_rh2pu")
+shader_parameter/angle = -0.3
+shader_parameter/position = 0.0
+shader_parameter/spread = 0.6000000285
+shader_parameter/cutoff = 0.06000005035
+shader_parameter/falloff = 0.6000000285
+shader_parameter/edge_fade = 0.2000000095
+shader_parameter/speed = 1.0
+shader_parameter/ray1_density = 5.0
+shader_parameter/ray2_density = 20.0
+shader_parameter/ray2_intensity = 0.30000001425
+shader_parameter/color = Color(0.9687218, 0.9046197, 0.75688607, 0.8)
+shader_parameter/hdr = false
+shader_parameter/seed = 6.0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ny35b"]
 texture = ExtResource("21_t4v06")
@@ -502,14 +515,6 @@ position = Vector2(865, -1138)
 scale = Vector2(1.2113702, 1.2113702)
 texture = ExtResource("33_ny35b")
 
-[node name="VfxLuz4" type="Sprite2D" parent="0"]
-modulate = Color(0.48537982, 0.6027341, 0.6027341, 1)
-position = Vector2(2071, -1500)
-texture = ExtResource("11_i5sln")
-
-[node name="SavePoint" parent="0" instance=ExtResource("1_kqyhf")]
-position = Vector2(1518, -1147)
-
 [node name="Moitas" type="Node2D" parent="0"]
 light_mask = 2
 position = Vector2(39399, 2158)
@@ -518,17 +523,6 @@ position = Vector2(39399, 2158)
 position = Vector2(-36783, -3508)
 scale = Vector2(0.3895548, 0.3895548)
 texture = ExtResource("20_ny35b")
-
-[node name="Moita5" type="Sprite2D" parent="0/Moitas"]
-visible = false
-position = Vector2(-33885, -3349)
-texture = ExtResource("24_l3w8l")
-
-[node name="Sombra5" type="Sprite2D" parent="0/Moitas"]
-visible = false
-position = Vector2(-33899, -3352.5)
-scale = Vector2(1.7592592, 0.7920354)
-texture = ExtResource("8_l3w8l")
 
 [node name="Moita6" type="Sprite2D" parent="0/Moitas"]
 position = Vector2(-32052, -3390)
@@ -605,32 +599,19 @@ position = Vector2(-35026, -3251)
 rotation = -3.1415925
 texture = ExtResource("23_0v3sa")
 
-[node name="VfxLuz" type="Sprite2D" parent="0"]
-modulate = Color(0.7016299, 0.7016299, 0.5750679, 1)
-position = Vector2(5926.9995, -1834.7434)
-scale = Vector2(2.2188587, 2.2188592)
-texture = ExtResource("11_i5sln")
+[node name="ColorRect" type="ColorRect" parent="0"]
+material = SubResource("ShaderMaterial_rcn2b")
+offset_left = 1096.0
+offset_top = -1891.0
+offset_right = 1876.0
+offset_bottom = -855.0
 
-[node name="VfxLuz3" type="Sprite2D" parent="0"]
-modulate = Color(0.7016299, 0.7016299, 0.5750679, 1)
-position = Vector2(6665, -1802.9999)
-rotation = 0.10068097
-scale = Vector2(1.4943609, 1.4943608)
-texture = ExtResource("28_rh2pu")
-
-[node name="VfxLuz2" type="Sprite2D" parent="0"]
-modulate = Color(0.7016299, 0.7016299, 0.5750679, 1)
-position = Vector2(7015.001, -1676.0001)
-rotation = -0.1809028
-scale = Vector2(3.0629606, 1.6469135)
-texture = ExtResource("29_yyslo")
-
-[node name="VfxLuz5" type="Sprite2D" parent="0"]
-modulate = Color(0.7016299, 0.7016299, 0.5750679, 1)
-position = Vector2(7666.001, -1676.0001)
-rotation = -0.37417936
-scale = Vector2(3.0629606, 1.6469135)
-texture = ExtResource("29_yyslo")
+[node name="ColorRect2" type="ColorRect" parent="0"]
+material = SubResource("ShaderMaterial_rcn2b")
+offset_left = 6869.0
+offset_top = -2519.0
+offset_right = 8166.0
+offset_bottom = -855.0
 
 [node name="MaPeamento" type="Sprite2D" parent="0"]
 position = Vector2(6051.9995, -1823.0001)

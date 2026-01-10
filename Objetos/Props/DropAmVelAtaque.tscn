@@ -16,7 +16,7 @@ descricao_tela = "Todos os seus golpes se tornam mais rápidos"
 imagem_tela = ExtResource("2_e41ni")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(1.6976742, 1.6976742)
+scale = Vector2(0.119140625, 0.11914074)
 texture = ExtResource("3_e41ni")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
