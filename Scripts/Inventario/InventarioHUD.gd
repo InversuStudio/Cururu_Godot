@@ -92,5 +92,7 @@ func PegaSprite(id:int = 0) -> Texture2D:
 func UsaItem(id:int) -> void:
 	%Inv.get_child(id).script_logica.Logica()
 
-func PegaNum(id:int) -> int:
-	return %Inv.get_child(id).num_item
+func PegaNum(id:int = 0) -> String:
+	if %Inv.get_child_count() > 0:
+		return str(%Inv.get_child(id).num_item)
+	return ""

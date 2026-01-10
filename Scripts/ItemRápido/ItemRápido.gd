@@ -46,5 +46,5 @@ func _input(_event: InputEvent) -> void:
 
 func IniciaBarra() -> void:
 	if Inventario.inventario.size() > 0:
-		%IconItem.texture = cena_inventario.PegaSprite(0)
-		%NumRap.text = str(cena_inventario.PegaNum(0))
+		%IconItem.texture = cena_inventario.PegaSprite()
+		%NumRap.text = cena_inventario.PegaNum()
