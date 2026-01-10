@@ -1,4 +1,4 @@
-[gd_scene load_steps=145 format=3 uid="uid://nohq28uk7lfk"]
+[gd_scene load_steps=155 format=3 uid="uid://nohq28uk7lfk"]
 
 [ext_resource type="Script" uid="uid://cfu4ciwll8jcj" path="res://Scripts/Cururu/Cururu.gd" id="1_gwpdq"]
 [ext_resource type="Texture2D" uid="uid://6tjgxsgaflxb" path="res://Sprites/Cururu/Dano/03.png" id="2_0hf88"]
@@ -20,9 +20,14 @@
 [ext_resource type="Texture2D" uid="uid://blnbsfvs4ioph" path="res://Sprites/Cururu/Caminhar/07.png" id="10_33gbk"]
 [ext_resource type="Texture2D" uid="uid://bjhdn7dee4248" path="res://Sprites/Cururu/Dash/04.png" id="11_iqn86"]
 [ext_resource type="Texture2D" uid="uid://c3i6qokpcl81f" path="res://Sprites/Cururu/Dash/05.png" id="12_g3owr"]
+[ext_resource type="Texture2D" uid="uid://bamjpa65phno7" path="res://Sprites/Cururu/Nadando/Boiando/01.png" id="16_ferga"]
+[ext_resource type="Texture2D" uid="uid://b5e61rghenspo" path="res://Sprites/Cururu/Nadando/Boiando/02.png" id="17_yy1dt"]
 [ext_resource type="Texture2D" uid="uid://7e3c0w7t7nqp" path="res://Sprites/Cururu/Dash/06.png" id="18_gjjix"]
+[ext_resource type="Texture2D" uid="uid://u4lomooeqx82" path="res://Sprites/Cururu/Nadando/Boiando/03.png" id="18_o645d"]
 [ext_resource type="Texture2D" uid="uid://danqps42483rq" path="res://Sprites/Cururu/Dash/07.png" id="19_0digr"]
+[ext_resource type="Texture2D" uid="uid://283wip72idbp" path="res://Sprites/Cururu/Nadando/Boiando/04.png" id="19_cyesr"]
 [ext_resource type="Texture2D" uid="uid://by4jepf5vk1mq" path="res://Sprites/Cururu/Pulo/10(loop).png" id="20_0hf88"]
+[ext_resource type="Texture2D" uid="uid://bnk3xbdquf6sd" path="res://Sprites/Cururu/Nadando/Boiando/05.png" id="20_0jkrh"]
 [ext_resource type="Texture2D" uid="uid://oueeifn344de" path="res://Sprites/Cururu/Idle/01.png" id="20_gwpdq"]
 [ext_resource type="Texture2D" uid="uid://g0sntps8nmbd" path="res://Sprites/Cururu/Idle/02.png" id="21_0hf88"]
 [ext_resource type="Texture2D" uid="uid://ditqm67grk0sr" path="res://Sprites/Cururu/Pulo/11(loop).png" id="21_7uoqt"]
@@ -93,13 +98,18 @@
 [ext_resource type="Texture2D" uid="uid://daq05acvf7ldg" path="res://Sprites/Cururu/Levantando/08.png" id="60_jbtm5"]
 [ext_resource type="Texture2D" uid="uid://dpot1mm6audq2" path="res://Sprites/Cururu/Run/06.png" id="61_jpq87"]
 [ext_resource type="Texture2D" uid="uid://c3tl3oddronfh" path="res://icon.svg" id="65_ny8nr"]
+[ext_resource type="Texture2D" uid="uid://blmdyfoltb1bv" path="res://Sprites/Cururu/Nadando/Nado_Superficie/01.png" id="77_1cbmn"]
 [ext_resource type="AudioStream" uid="uid://0svi6tafdid8" path="res://Audio/SFX/CURURU/DANO_PROTAGONISTA.wav" id="77_d7mdf"]
+[ext_resource type="Texture2D" uid="uid://bg6kxp1m2hs3y" path="res://Sprites/Cururu/Nadando/Nado_Superficie/02.png" id="78_1xmj1"]
+[ext_resource type="Texture2D" uid="uid://cxx633jjohbms" path="res://Sprites/Cururu/Nadando/Nado_Superficie/03.png" id="79_1cxd7"]
 [ext_resource type="Texture2D" uid="uid://bhf1ccuw8e518" path="res://Sprites/Cururu/Dash/VFX/06.png" id="79_c8qv2"]
 [ext_resource type="Texture2D" uid="uid://yc4g46w0dltb" path="res://Sprites/Cururu/Dash/VFX/08.png" id="80_1ribx"]
 [ext_resource type="AudioStream" uid="uid://clarwee0wchnk" path="res://Audio/SFX/CURURU/jump_cururu.mp3" id="80_ny8nr"]
+[ext_resource type="Texture2D" uid="uid://cg6hrwgecuy41" path="res://Sprites/Cururu/Nadando/Nado_Superficie/04.png" id="80_p6h8m"]
 [ext_resource type="AudioStream" uid="uid://cuyap2xmus3rf" path="res://Audio/SFX/CURURU/dash_cururu.mp3" id="81_2t31h"]
 [ext_resource type="Texture2D" uid="uid://b3r5os20m6bmk" path="res://Sprites/Cururu/Dash/VFX/10.png" id="81_3s0sn"]
 [ext_resource type="Texture2D" uid="uid://clpqx2aa5gv33" path="res://Sprites/Cururu/Special/10.png" id="81_dvy3r"]
+[ext_resource type="Texture2D" uid="uid://qchxtakyj8j1" path="res://Sprites/Cururu/Nadando/Nado_Superficie/05.png" id="81_vwojg"]
 [ext_resource type="Texture2D" uid="uid://bdt3wwh3lslf" path="res://Sprites/Cururu/Dash/VFX/12.png" id="82_dvy3r"]
 [ext_resource type="Texture2D" uid="uid://dxtsvqjcc8iyp" path="res://Sprites/Cururu/Virada/00.png" id="83_52p8t"]
 [ext_resource type="Texture2D" uid="uid://og30qejxpng8" path="res://Sprites/Cururu/Dash/VFX/14.png" id="83_damx7"]
@@ -164,6 +174,26 @@ animations = [{
 "loop": true,
 "name": &"Andando",
 "speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("16_ferga")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_yy1dt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_o645d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_cyesr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_0jkrh")
+}],
+"loop": true,
+"name": &"Boiando_idle",
+"speed": 5.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -410,6 +440,26 @@ animations = [{
 }],
 "loop": true,
 "name": &"Melee_Up",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("77_1cbmn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("78_1xmj1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("79_1cxd7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("80_p6h8m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("81_vwojg")
+}],
+"loop": true,
+"name": &"Nadando_Simples",
 "speed": 5.0
 }, {
 "frames": [{
@@ -1573,7 +1623,6 @@ position = Vector2(0, -118)
 scale = Vector2(0.375651, 0.375651)
 sprite_frames = SubResource("SpriteFrames_ser7u")
 animation = &"Special"
-frame = 1
 speed_scale = 1.6
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

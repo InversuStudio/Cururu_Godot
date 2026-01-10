@@ -4,10 +4,10 @@
 [ext_resource type="PackedScene" uid="uid://ckvgyvclnwggo" path="res://addons/dialogue_manager/dialogue_label.tscn" id="2_ow0pn"]
 [ext_resource type="Script" uid="uid://bb52rsfwhkxbn" path="res://addons/dialogue_manager/dialogue_responses_menu.gd" id="3_ifi3v"]
 [ext_resource type="Texture2D" uid="uid://bfige6m1uslss" path="res://Sprites/UI/Dialogo/DIALOGO_DIREITA.png" id="3_uma04"]
-[ext_resource type="Script" uid="uid://dvao27av8qjbk" path="res://Dialogos/label_auto_resize.gd" id="5_uma04"]
+[ext_resource type="Script" path="res://Dialogos/label_auto_resize.gd" id="5_uma04"]
 [ext_resource type="Texture2D" uid="uid://dq4d7agyoodbe" path="res://Sprites/UI/Dialogo/SELECAO_OFF.png" id="7_exniy"]
 [ext_resource type="Texture2D" uid="uid://cy8bm8xjdmrfp" path="res://Sprites/UI/Dialogo/SELECAO_ON.png" id="8_4bkqv"]
-[ext_resource type="Script" uid="uid://uli1isfpskjh" path="res://Dialogos/response_auto_resize.gd" id="9_4bkqv"]
+[ext_resource type="Script" path="res://Dialogos/response_auto_resize.gd" id="9_4bkqv"]
 
 [sub_resource type="Theme" id="Theme_w6bav"]
 
@@ -130,9 +130,9 @@ anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
 offset_left = -477.0
-offset_top = -97.0
+offset_top = -125.0
 offset_right = 245.09851
-offset_bottom = -10.0
+offset_bottom = -38.0
 grow_horizontal = 2
 grow_vertical = 0
 size_flags_vertical = 8
