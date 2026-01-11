@@ -1,4 +1,4 @@
-[gd_scene load_steps=55 format=4 uid="uid://dfuswe0wcsy33"]
+[gd_scene load_steps=57 format=4 uid="uid://dfuswe0wcsy33"]
 
 [ext_resource type="Texture2D" uid="uid://c374cwih425cq" path="res://Sprites/Cenário/Tilemaps/Base.png" id="1_axyo6"]
 [ext_resource type="Texture2D" uid="uid://2x6q1ni8klgv" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/arvore_fundo1.png" id="2_nika8"]
@@ -36,10 +36,11 @@
 [ext_resource type="PackedScene" uid="uid://bxixu84ahcyba" path="res://Objetos/NPCs/Saci.tscn" id="29_qeqrq"]
 [ext_resource type="Texture2D" uid="uid://5m4b2cn86u3t" path="res://Sprites/Cenário/Mata_Atlantica/Foreground/03.png" id="30_5nff6"]
 [ext_resource type="Script" uid="uid://dd16yu704x6wt" path="res://Scripts/Componentes/BGM_Player.gd" id="30_fgbk1"]
-[ext_resource type="Shader" path="res://Scripts/Shaders/godray.gdshader" id="30_rh2pu"]
+[ext_resource type="Shader" uid="uid://cete83ldr534" path="res://Scripts/Shaders/godray.gdshader" id="30_rh2pu"]
 [ext_resource type="AudioStream" uid="uid://c7qftchbhu6xc" path="res://Audio/SFX/AMBIENTE/Musica_Jogo.mp3" id="31_7dakl"]
 [ext_resource type="Texture2D" uid="uid://xjqchtcfdjkn" path="res://Sprites/Cenário/Mata_Atlantica/Foreground/01.png" id="31_ku32q"]
 [ext_resource type="Texture2D" uid="uid://b2pop4ke31d1x" path="res://Sprites/Cenário/Mata_Atlantica/Foreground/02.png" id="32_dglwx"]
+[ext_resource type="Shader" uid="uid://bbohkd8d1ljws" path="res://Scripts/Shaders/wavewater.gdshader" id="32_wmciv"]
 [ext_resource type="Texture2D" uid="uid://d18vqjeq586b1" path="res://Sprites/Cenário/Mata_Atlantica/Pedras e Ruinas/pedra_musgo.png" id="32_ym8ms"]
 [ext_resource type="Texture2D" uid="uid://drcemrcpb3ydc" path="res://Sprites/Cenário/Mata_Atlantica/Chao/moita_chao2.png" id="33_ny35b"]
 [ext_resource type="Texture2D" uid="uid://b2f2ppntemt15" path="res://Sprites/Cenário/Mata_Atlantica/Chao/flores.png" id="36_wstxp"]
@@ -49,6 +50,8 @@
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_rcn2b"]
 shader = ExtResource("30_rh2pu")
+shader_parameter/flip_horizontal = false
+shader_parameter/flip_vertical = false
 shader_parameter/angle = -0.3
 shader_parameter/position = 0.0
 shader_parameter/spread = 0.6000000285
@@ -63,6 +66,14 @@ shader_parameter/color = Color(0.9687218, 0.9046197, 0.75688607, 0.8)
 shader_parameter/hdr = false
 shader_parameter/seed = 6.0
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_i5sln"]
+shader = ExtResource("32_wmciv")
+shader_parameter/wave_amplitude = 3.0
+shader_parameter/wave_frequency = 1.0
+shader_parameter/wave_speed = 1.5
+shader_parameter/surface_ratio = 0.15
+shader_parameter/surface_softness = 0.08
+
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ny35b"]
 texture = ExtResource("21_t4v06")
 texture_region_size = Vector2i(128, 128)
@@ -70,7 +81,18 @@ texture_region_size = Vector2i(128, 128)
 1:0/0 = 0
 2:0/0 = 0
 3:0/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+3:3/0 = 0
 0:1/0 = 0
+0:2/0 = 0
+1:1/0 = 0
+1:2/0 = 0
+2:1/0 = 0
+2:2/0 = 0
+3:1/0 = 0
+3:2/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_qeqrq"]
 tile_size = Vector2i(128, 128)
@@ -601,16 +623,23 @@ texture = ExtResource("23_0v3sa")
 
 [node name="ColorRect" type="ColorRect" parent="0"]
 material = SubResource("ShaderMaterial_rcn2b")
-offset_left = 1096.0
-offset_top = -1891.0
+offset_left = 803.0
+offset_top = -2412.0
 offset_right = 1876.0
-offset_bottom = -855.0
+offset_bottom = -806.0
 
 [node name="ColorRect2" type="ColorRect" parent="0"]
 material = SubResource("ShaderMaterial_rcn2b")
 offset_left = 6869.0
 offset_top = -2519.0
 offset_right = 8166.0
+offset_bottom = -855.0
+
+[node name="ColorRect3" type="ColorRect" parent="0"]
+material = SubResource("ShaderMaterial_rcn2b")
+offset_left = 4473.0
+offset_top = -2576.0
+offset_right = 5770.0
 offset_bottom = -855.0
 
 [node name="MaPeamento" type="Sprite2D" parent="0"]
@@ -653,11 +682,11 @@ texture = ExtResource("9_ogbcg")
 flip_h = true
 
 [node name="Agua2" type="TileMapLayer" parent="0"]
-modulate = Color(0, 0.5215811, 0.8861342, 1)
-self_modulate = Color(1, 1, 1, 0.6745098)
+self_modulate = Color(1, 1, 1, 0.7058824)
+material = SubResource("ShaderMaterial_i5sln")
 position = Vector2(-3286.8381, 1919.0046)
 scale = Vector2(0.77247924, 0.7724791)
-tile_map_data = PackedByteArray("AAD9//n/AAAAAAAAAAD9//r/AAAAAAEAAAD+//n/AAAAAAAAAAD+//r/AAABAAEAAAD///n/AAAAAAAAAAD///r/AAACAAEAAAAAAPn/AAAAAAAAAAAAAPr/AAADAAEAAAABAPn/AAAAAAAAAAABAPr/AAAAAAEAAAACAPn/AAAAAAAAAAACAPr/AAABAAEAAAADAPn/AAAAAAAAAAADAPr/AAACAAEAAAAEAPn/AAAAAAAAAAAEAPr/AAADAAEAAAAFAPn/AAAAAAAAAAAFAPr/AAAAAAEAAAAGAPn/AAAAAAAAAAAGAPr/AAABAAEAAAAHAPn/AAAAAAAAAAAHAPr/AAACAAEAAAAIAPn/AAAAAAAAAAAIAPr/AAADAAEAAAAJAPn/AAAAAAAAAAAJAPr/AAAAAAEAAABZAOL/AAAAAAAAAABaAOL/AAABAAAAAABbAOL/AAACAAAAAABcAOL/AAADAAAAAABdAOL/AAAAAAAAAABeAOL/AAABAAAAAABfAOL/AAACAAAAAABgAOL/AAADAAAAAABhAOL/AAAAAAAAAABiAOL/AAABAAAAAABjAOL/AAACAAAAAABkAOL/AAADAAAAAABlAOL/AAAAAAAAAABmAOL/AAABAAAAAABnAOL/AAACAAAAAABoAOL/AAADAAAAAABWAOL/AAABAAAAAABXAOL/AAACAAAAAABYAOL/AAADAAAAAABYAOP/AAAAAAEAAABZAOP/AAAAAAEAAABXAOP/AAAAAAEAAABaAOP/AAAAAAEAAABbAOP/AAAAAAEAAABcAOP/AAAAAAEAAABdAOP/AAAAAAEAAABeAOP/AAAAAAEAAABfAOP/AAAAAAEAAABgAOP/AAAAAAEAAABhAOP/AAAAAAEAAABiAOP/AAAAAAEAAABjAOP/AAAAAAEAAABkAOP/AAAAAAEAAABlAOP/AAAAAAEAAABmAOP/AAAAAAEAAAA=")
+tile_map_data = PackedByteArray("AAD9//n/AAAAAAAAAAD9//r/AAAAAAEAAAD+//n/AAAAAAAAAAD+//r/AAABAAEAAAD///n/AAAAAAAAAAD///r/AAACAAEAAAAAAPn/AAAAAAAAAAAAAPr/AAADAAEAAAABAPn/AAAAAAAAAAABAPr/AAAAAAEAAAACAPn/AAAAAAAAAAACAPr/AAABAAEAAAADAPn/AAAAAAAAAAADAPr/AAACAAEAAAAEAPn/AAAAAAAAAAAEAPr/AAADAAEAAAAFAPn/AAAAAAAAAAAFAPr/AAAAAAEAAAAGAPn/AAAAAAAAAAAGAPr/AAABAAEAAAAHAPn/AAAAAAAAAAAHAPr/AAACAAEAAAAIAPn/AAAAAAAAAAAIAPr/AAADAAEAAAAJAPn/AAAAAAAAAAAJAPr/AAAAAAEAAABZAOL/AAABAAAAAABaAOL/AAACAAAAAABbAOL/AAABAAAAAABcAOL/AAACAAAAAABdAOL/AAABAAAAAABeAOL/AAACAAAAAABfAOL/AAABAAAAAABgAOL/AAACAAAAAABhAOL/AAABAAAAAABiAOL/AAACAAAAAABjAOL/AAABAAAAAABkAOL/AAADAAAAAABlAOL/AAADAAAAAABoAOL/AAADAAAAAABYAOL/AAAAAAAAAABYAOP/AAAAAAEAAABZAOP/AAAAAAEAAABaAOP/AAAAAAEAAABbAOP/AAAAAAEAAABcAOP/AAAAAAEAAABdAOP/AAAAAAEAAABeAOP/AAAAAAEAAABfAOP/AAAAAAEAAABgAOP/AAAAAAEAAABhAOP/AAAAAAEAAABiAOP/AAAAAAEAAABjAOP/AAAAAAEAAABkAOP/AAAAAAEAAABlAOP/AAAAAAEAAABmAOP/AAAAAAEAAABXAOL/AAAAAAAAAABXAOP/AAAAAAEAAABmAOL/AAADAAAAAAA=")
 tile_set = SubResource("TileSet_qeqrq")
 
 [node name="TileMapLayer" type="TileMapLayer" parent="0"]
@@ -1018,6 +1047,12 @@ texture = ExtResource("5_cvdhq")
 position = Vector2(-38674, -4384)
 rotation = 3.14159
 texture = ExtResource("5_cvdhq")
+
+[node name="ArvoreFundo8" type="Sprite2D" parent="2/Foreground/ForegroundTeto"]
+modulate = Color(0.012617188, 0.012617188, 0.012617188, 1)
+position = Vector2(-36039.805, -4035.6191)
+scale = Vector2(1.5997161, 1.5681988)
+texture = ExtResource("2_nika8")
 
 [node name="Foregroundchao" type="Node2D" parent="2"]
 position = Vector2(523, -1104)
