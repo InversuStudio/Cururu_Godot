@@ -74,6 +74,7 @@ var deu_air_dash: bool = false
 
 var input_move: Vector2 = Vector2.ZERO
 var pode_mover: bool = true
+var pode_anim:bool = true
 
 @onready var check_agua_up: RayCast2D = $CheckAguaUp
 @onready var check_agua_down: RayCast2D = $CheckAguaDown
@@ -85,7 +86,10 @@ signal virou
 var input_buffer:Array[float] = [0.0, 0.0]
 
 
-func _ready() -> void:	
+func _ready() -> void:
+	if GameData.game_start == false:
+		GameData.game_start = true
+		state_machine.MudaState(state_machine.find_child("Acorda"))
 	# Desabilita hitboxes
 	for h:Node2D in hitbox_container.get_children():
 		if h is HitBox:

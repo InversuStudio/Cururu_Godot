@@ -1,4 +1,4 @@
-[gd_scene load_steps=155 format=3 uid="uid://nohq28uk7lfk"]
+[gd_scene load_steps=159 format=3 uid="uid://nohq28uk7lfk"]
 
 [ext_resource type="Script" uid="uid://cfu4ciwll8jcj" path="res://Scripts/Cururu/Cururu.gd" id="1_gwpdq"]
 [ext_resource type="Texture2D" uid="uid://6tjgxsgaflxb" path="res://Sprites/Cururu/Dano/03.png" id="2_0hf88"]
@@ -120,6 +120,7 @@
 [ext_resource type="AudioStream" uid="uid://chf637hlgvwxq" path="res://Audio/SFX/Cuica_1.ogg" id="90_s2eek"]
 [ext_resource type="AudioStream" uid="uid://b1e3re8ykc11o" path="res://Audio/SFX/Cuica_2.ogg" id="91_vpyrf"]
 [ext_resource type="Script" uid="uid://b47dm1pnrhmt1" path="res://Scripts/Cururu/Nadando.gd" id="96_0digr"]
+[ext_resource type="Script" uid="uid://cg3i231v8dhoy" path="res://Objetos/Entidades/acorda.gd" id="110_yy1dt"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_k0fov"]
 animations = [{
@@ -148,6 +149,35 @@ animations = [{
 animations = [{
 "frames": [{
 "duration": 1.0,
+"texture": ExtResource("53_0vd0f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("54_mmhjr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("55_o27xl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("56_15js0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("57_7cs7m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("58_pabuw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("59_ujast")
+}, {
+"duration": 1.0,
+"texture": ExtResource("60_jbtm5")
+}],
+"loop": true,
+"name": &"Acorda",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": ExtResource("3_1ribx")
 }, {
 "duration": 1.0,
@@ -174,26 +204,6 @@ animations = [{
 "loop": true,
 "name": &"Andando",
 "speed": 8.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("16_ferga")
-}, {
-"duration": 1.0,
-"texture": ExtResource("17_yy1dt")
-}, {
-"duration": 1.0,
-"texture": ExtResource("18_o645d")
-}, {
-"duration": 1.0,
-"texture": ExtResource("19_cyesr")
-}, {
-"duration": 1.0,
-"texture": ExtResource("20_0jkrh")
-}],
-"loop": true,
-"name": &"Boiando_idle",
-"speed": 5.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -356,35 +366,6 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("53_0vd0f")
-}, {
-"duration": 1.0,
-"texture": ExtResource("54_mmhjr")
-}, {
-"duration": 1.0,
-"texture": ExtResource("55_o27xl")
-}, {
-"duration": 1.0,
-"texture": ExtResource("56_15js0")
-}, {
-"duration": 1.0,
-"texture": ExtResource("57_7cs7m")
-}, {
-"duration": 1.0,
-"texture": ExtResource("58_pabuw")
-}, {
-"duration": 1.0,
-"texture": ExtResource("59_ujast")
-}, {
-"duration": 1.0,
-"texture": ExtResource("60_jbtm5")
-}],
-"loop": true,
-"name": &"Levantando",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
 "texture": ExtResource("53_grb16")
 }, {
 "duration": 1.0,
@@ -444,6 +425,26 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": ExtResource("16_ferga")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_yy1dt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_o645d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_cyesr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_0jkrh")
+}],
+"loop": true,
+"name": &"Nado_Idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": ExtResource("77_1cbmn")
 }, {
 "duration": 1.0,
@@ -459,7 +460,7 @@ animations = [{
 "texture": ExtResource("81_vwojg")
 }],
 "loop": true,
-"name": &"Nadando_Simples",
+"name": &"Nado_Move",
 "speed": 5.0
 }, {
 "frames": [{
@@ -1554,8 +1555,94 @@ tracks/2/keys = {
 }]
 }
 
+[sub_resource type="Animation" id="Animation_ferga"]
+resource_name = "Nado_Idle"
+length = 0.5
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Cururu:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"Nado_Idle"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Cururu:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.10000001, 0.20000002, 0.3, 0.40000004),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4]
+}
+
+[sub_resource type="Animation" id="Animation_yy1dt"]
+resource_name = "Nado_Move"
+length = 0.5
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Cururu:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"Nado_Move"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Cururu:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.10000001, 0.20000002, 0.3, 0.40000004),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4]
+}
+
+[sub_resource type="Animation" id="Animation_o645d"]
+resource_name = "Acorda"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Cururu:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"Acorda"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Cururu:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.19999987, 0.29999992, 0.39999995, 0.49999997, 0.5999999, 0.6999999, 0.8, 0.9),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 0, 0, 1, 2, 3, 4, 5, 6, 7]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_g0l4m"]
 _data = {
+&"Acorda": SubResource("Animation_o645d"),
 &"Dano": SubResource("Animation_aofpm"),
 &"Dash_End": SubResource("Animation_x3lr7"),
 &"Dash_Loop": SubResource("Animation_buhp1"),
@@ -1569,6 +1656,8 @@ _data = {
 &"Melee2": SubResource("Animation_yd0lm"),
 &"Melee_Down": SubResource("Animation_s2eek"),
 &"Melee_Up": SubResource("Animation_2t31h"),
+&"Nado_Idle": SubResource("Animation_ferga"),
+&"Nado_Move": SubResource("Animation_yy1dt"),
 &"RESET": SubResource("Animation_ny8nr"),
 &"Run": SubResource("Animation_prtj7"),
 &"Special": SubResource("Animation_7uoqt"),
@@ -1623,6 +1712,7 @@ position = Vector2(0, -118)
 scale = Vector2(0.375651, 0.375651)
 sprite_frames = SubResource("SpriteFrames_ser7u")
 animation = &"Special"
+frame = 1
 speed_scale = 1.6
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -1822,6 +1912,10 @@ hit_from_inside = true
 unique_name_in_owner = true
 script = ExtResource("49_1ribx")
 start_state = NodePath("Fall")
+
+[node name="Acorda" type="Node" parent="StateMachine" node_paths=PackedStringArray("chao_state")]
+script = ExtResource("110_yy1dt")
+chao_state = NodePath("../Chao")
 
 [node name="Chao" type="Node" parent="StateMachine" node_paths=PackedStringArray("pulo_state", "fall_state", "dash_state", "melee_state", "special_state")]
 script = ExtResource("50_3s0sn")

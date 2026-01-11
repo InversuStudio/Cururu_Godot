@@ -15,8 +15,10 @@ func FixedUpdate(delta : float) -> State:
 	if dir.x:
 		parent.velocity.x = move_toward(
 			parent.velocity.x, dir.x * parent.speed, parent.accel * delta)
+		%Anim.play("Nado_Move")
 	else:
 		parent.velocity.x = move_toward(parent.velocity.x, dir.x, parent.decel * delta)
+		%Anim.play("Nado_Idle")
 	
 	# Aplica movimento vertical
 	if dir.y:
@@ -29,5 +31,15 @@ func FixedUpdate(delta : float) -> State:
 	else:
 		#parent.velocity.y = 0.0
 		parent.velocity.y = move_toward(parent.velocity.y, dir.y, parent.decel * delta)
-		
+	
+	Flip()
+	
 	return null
+
+func Flip() -> void:
+	if parent.input_move.x > 0:
+		%Cururu.flip_h = false
+		parent.hitbox_container.scale.x = 1
+	elif parent.input_move.x < 0:
+		%Cururu.flip_h = true
+		parent.hitbox_container.scale.x = -1

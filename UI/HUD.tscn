@@ -351,7 +351,6 @@ horizontal_alignment = 2
 
 [node name="Pause" type="Panel" parent="Corpo"]
 unique_name_in_owner = true
-visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0

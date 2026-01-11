@@ -14,6 +14,7 @@ func _ready() -> void:
 
 func _on_timer_timeout() -> void:
 	$Sprite.play("Jato")
+	await get_tree().create_timer(0.2).timeout
 	$HitBox/CollisionShape2D.disabled = false
 	#if ativo: queue_free()
 	#else:

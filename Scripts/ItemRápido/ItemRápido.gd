@@ -18,6 +18,8 @@ func _ready() -> void:
 		%NumRap.text = str(Inventario.inventario[id_item][1]))
 
 func _input(_event: InputEvent) -> void:
+	if Input.is_physical_key_pressed(KEY_0):
+		print(Inventario.inventario)
 	if Input.is_action_just_pressed("bumper_direito"):
 		if Inventario.inventario.size() > 0:
 			id_item += 1
@@ -41,10 +43,14 @@ func _input(_event: InputEvent) -> void:
 				%IconItem.texture = cena_inventario.PegaSprite(id_item)
 				%NumRap.text = str(Inventario.inventario[id_item][1])
 			else:
-				%IconItem.texture = null
-				%NumRap.text = ""
+				ResetaBarra()
 
 func IniciaBarra() -> void:
 	if Inventario.inventario.size() > 0:
 		%IconItem.texture = cena_inventario.PegaSprite()
 		%NumRap.text = cena_inventario.PegaNum()
+
+func ResetaBarra() -> void:
+	%IconItem.texture = null
+	%NumRap.text = ""
+	id_item = 0

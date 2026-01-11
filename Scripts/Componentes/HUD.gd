@@ -23,7 +23,7 @@ func _input(_event: InputEvent) -> void:
 	if Input.is_action_just_pressed("ui_cancel"):
 		%Pause.visible = false
 	
-	if Input.is_action_just_pressed("bumper_direito"):
+	if Input.is_action_just_pressed("bumper_direito") and %Pause.visible:
 		if hud_ativo + 1 <= %ContainerAbas.get_child_count() - 1:
 			hud_ativo += 1
 			MudaAba()
@@ -70,7 +70,9 @@ func _ready() -> void:
 	MostraHUD()
 	
 	%BtnContinuar.connect("pressed", func(): %Pause.visible = false)
-	%BtnSair.connect("pressed", func(): Mundos.CarregaFase(Mundos.NomeFase.MenuPrincipal))
+	%BtnSair.connect("pressed", func():
+		Mundos.CarregaFase(Mundos.NomeFase.MenuPrincipal)
+		item_rapido.ResetaBarra())
 	%Opcoes.connect("visibility_changed", func():
 		if %Opcoes.visible: %BtnContinuar.grab_focus())
 	

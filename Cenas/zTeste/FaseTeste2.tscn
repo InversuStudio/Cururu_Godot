@@ -146,6 +146,11 @@ enabled = false
 zoom = Vector2(1.11, 1.11)
 
 [node name="MainCamera" parent="." node_paths=PackedStringArray("target", "limite_camera") instance=ExtResource("9_p6tq3")]
-position = Vector2(0, -79.99995)
+position = Vector2(0, -79.99998)
+limit_enabled = true
+limit_left = -2882
+limit_top = -991
+limit_right = 1152
+limit_bottom = 80
 target = NodePath("../Player")
 limite_camera = NodePath("../LimiteCam")

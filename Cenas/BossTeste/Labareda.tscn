@@ -131,8 +131,6 @@ position = Vector2(0, -422)
 sprite_frames = SubResource("SpriteFrames_u0rk8")
 animation = &"Jato"
 autoplay = "Carga"
-frame = 20
-frame_progress = 1.0
 
 [node name="HitBox" parent="." instance=ExtResource("11_tqvmf")]
 collision_layer = 16

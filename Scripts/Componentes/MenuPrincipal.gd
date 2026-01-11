@@ -3,6 +3,8 @@ extends Control
 var data:String = ""
 
 func _ready() -> void:
+	GameData.game_start = false
+	Inventario.inventario = []
 	await get_tree().physics_frame
 	data = GameData.ChecaData()
 	if data == "":
