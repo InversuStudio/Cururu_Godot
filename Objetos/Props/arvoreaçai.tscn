@@ -31,9 +31,10 @@ animations = [{
 [node name="Bau" type="Node2D"]
 script = ExtResource("1_b7nho")
 
-[node name="HurtBox" parent="." instance=ExtResource("2_etetv")]
+[node name="HurtBox" parent="." node_paths=PackedStringArray("sprite") instance=ExtResource("2_etetv")]
 collision_layer = 16
 hit_sfx = ExtResource("3_r6u0v")
+sprite = NodePath("../Sprite")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HurtBox"]
 position = Vector2(24, -66.5)
