@@ -50,7 +50,7 @@
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_rcn2b"]
 shader = ExtResource("30_rh2pu")
-shader_parameter/flip_horizontal = false
+shader_parameter/flip_horizontal = true
 shader_parameter/flip_vertical = false
 shader_parameter/angle = -0.3
 shader_parameter/position = 0.0
@@ -64,7 +64,7 @@ shader_parameter/ray2_density = 20.0
 shader_parameter/ray2_intensity = 0.30000001425
 shader_parameter/color = Color(0.9687218, 0.9046197, 0.75688607, 0.8)
 shader_parameter/hdr = false
-shader_parameter/seed = 6.0
+shader_parameter/seed = 7.0
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_i5sln"]
 shader = ExtResource("32_wmciv")
@@ -623,24 +623,24 @@ texture = ExtResource("23_0v3sa")
 
 [node name="ColorRect" type="ColorRect" parent="0"]
 material = SubResource("ShaderMaterial_rcn2b")
-offset_left = 803.0
+offset_left = 1249.0
 offset_top = -2412.0
-offset_right = 1876.0
+offset_right = 2322.0
 offset_bottom = -806.0
 
 [node name="ColorRect2" type="ColorRect" parent="0"]
 material = SubResource("ShaderMaterial_rcn2b")
-offset_left = 6869.0
-offset_top = -2519.0
-offset_right = 8166.0
-offset_bottom = -855.0
+offset_left = 7346.0
+offset_top = -2835.0
+offset_right = 8865.0
+offset_bottom = -808.0
 
 [node name="ColorRect3" type="ColorRect" parent="0"]
 material = SubResource("ShaderMaterial_rcn2b")
-offset_left = 4473.0
-offset_top = -2576.0
-offset_right = 5770.0
-offset_bottom = -855.0
+offset_left = 6485.0
+offset_top = -2637.0
+offset_right = 7930.0
+offset_bottom = -646.0
 
 [node name="MaPeamento" type="Sprite2D" parent="0"]
 position = Vector2(6051.9995, -1823.0001)
@@ -671,7 +671,6 @@ scale = Vector2(0.50812995, 0.40720722)
 texture = ExtResource("21_t4v06")
 
 [node name="PAREDE PEDRAS" parent="0" instance=ExtResource("27_i5sln")]
-visible = false
 position = Vector2(711, -1412)
 scale = Vector2(1.28, 1.28)
 
@@ -686,7 +685,7 @@ self_modulate = Color(1, 1, 1, 0.7058824)
 material = SubResource("ShaderMaterial_i5sln")
 position = Vector2(-3286.8381, 1919.0046)
 scale = Vector2(0.77247924, 0.7724791)
-tile_map_data = PackedByteArray("AAD9//n/AAAAAAAAAAD9//r/AAAAAAEAAAD+//n/AAAAAAAAAAD+//r/AAABAAEAAAD///n/AAAAAAAAAAD///r/AAACAAEAAAAAAPn/AAAAAAAAAAAAAPr/AAADAAEAAAABAPn/AAAAAAAAAAABAPr/AAAAAAEAAAACAPn/AAAAAAAAAAACAPr/AAABAAEAAAADAPn/AAAAAAAAAAADAPr/AAACAAEAAAAEAPn/AAAAAAAAAAAEAPr/AAADAAEAAAAFAPn/AAAAAAAAAAAFAPr/AAAAAAEAAAAGAPn/AAAAAAAAAAAGAPr/AAABAAEAAAAHAPn/AAAAAAAAAAAHAPr/AAACAAEAAAAIAPn/AAAAAAAAAAAIAPr/AAADAAEAAAAJAPn/AAAAAAAAAAAJAPr/AAAAAAEAAABZAOL/AAABAAAAAABaAOL/AAACAAAAAABbAOL/AAABAAAAAABcAOL/AAACAAAAAABdAOL/AAABAAAAAABeAOL/AAACAAAAAABfAOL/AAABAAAAAABgAOL/AAACAAAAAABhAOL/AAABAAAAAABiAOL/AAACAAAAAABjAOL/AAABAAAAAABkAOL/AAADAAAAAABlAOL/AAADAAAAAABoAOL/AAADAAAAAABYAOL/AAAAAAAAAABYAOP/AAAAAAEAAABZAOP/AAAAAAEAAABaAOP/AAAAAAEAAABbAOP/AAAAAAEAAABcAOP/AAAAAAEAAABdAOP/AAAAAAEAAABeAOP/AAAAAAEAAABfAOP/AAAAAAEAAABgAOP/AAAAAAEAAABhAOP/AAAAAAEAAABiAOP/AAAAAAEAAABjAOP/AAAAAAEAAABkAOP/AAAAAAEAAABlAOP/AAAAAAEAAABmAOP/AAAAAAEAAABXAOL/AAAAAAAAAABXAOP/AAAAAAEAAABmAOL/AAADAAAAAAA=")
+tile_map_data = PackedByteArray("AABZAOL/AAABAAAAAABaAOL/AAACAAAAAABbAOL/AAABAAAAAABcAOL/AAACAAAAAABdAOL/AAABAAAAAABeAOL/AAACAAAAAABfAOL/AAABAAAAAABgAOL/AAACAAAAAABhAOL/AAABAAAAAABiAOL/AAACAAAAAABjAOL/AAABAAAAAABkAOL/AAADAAAAAABlAOL/AAADAAAAAABoAOL/AAADAAAAAABYAOL/AAAAAAAAAABYAOP/AAAAAAEAAABZAOP/AAAAAAEAAABaAOP/AAAAAAEAAABbAOP/AAAAAAEAAABcAOP/AAAAAAEAAABdAOP/AAAAAAEAAABeAOP/AAAAAAEAAABfAOP/AAAAAAEAAABgAOP/AAAAAAEAAABhAOP/AAAAAAEAAABiAOP/AAAAAAEAAABjAOP/AAAAAAEAAABkAOP/AAAAAAEAAABlAOP/AAAAAAEAAABmAOP/AAAAAAEAAABXAOL/AAAAAAAAAABXAOP/AAAAAAEAAABmAOL/AAADAAAAAAA=")
 tile_set = SubResource("TileSet_qeqrq")
 
 [node name="TileMapLayer" type="TileMapLayer" parent="0"]
@@ -923,7 +922,7 @@ position = Vector2(-38331, -4083)
 texture = ExtResource("23_0v3sa")
 
 [node name="MoitaTeste31" type="Sprite2D" parent="1/Teto"]
-position = Vector2(-37194, -4085)
+position = Vector2(-37157.824, -4085.451)
 texture = ExtResource("23_0v3sa")
 
 [node name="MoitaTeste32" type="Sprite2D" parent="1/Teto"]
@@ -931,7 +930,7 @@ position = Vector2(-38008, -4047)
 texture = ExtResource("23_0v3sa")
 
 [node name="MoitaTeste33" type="Sprite2D" parent="1/Teto"]
-position = Vector2(-37706, -4116)
+position = Vector2(-37742.137, -4115.8433)
 texture = ExtResource("23_0v3sa")
 
 [node name="MoitaTeste29" type="Sprite2D" parent="1/Teto"]

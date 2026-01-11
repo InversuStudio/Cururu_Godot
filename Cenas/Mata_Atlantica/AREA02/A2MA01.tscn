@@ -1,4 +1,4 @@
-[gd_scene load_steps=53 format=4 uid="uid://ba8igbg8v441c"]
+[gd_scene load_steps=55 format=4 uid="uid://ba8igbg8v441c"]
 
 [ext_resource type="Texture2D" uid="uid://cqu5scrrmr5n5" path="res://Sprites/Cenário/Mata_Atlantica/Background/Iluminação e Fundo/FUNDOCEU.png" id="1_hnubh"]
 [ext_resource type="Texture2D" uid="uid://c374cwih425cq" path="res://Sprites/Cenário/Tilemaps/Base.png" id="1_umcgc"]
@@ -35,6 +35,7 @@
 [ext_resource type="PackedScene" uid="uid://bu62qgilsxetf" path="res://Objetos/Entidades/Escorpiao.tscn" id="27_aw4uh"]
 [ext_resource type="PackedScene" uid="uid://u28e3eudu6ch" path="res://Objetos/Funcionalidade/MainCamera.tscn" id="27_ctjy6"]
 [ext_resource type="Script" uid="uid://dd16yu704x6wt" path="res://Scripts/Componentes/BGM_Player.gd" id="27_hdfdg"]
+[ext_resource type="Shader" uid="uid://bbohkd8d1ljws" path="res://Scripts/Shaders/wavewater.gdshader" id="27_mbqr8"]
 [ext_resource type="Texture2D" uid="uid://vbs4iv3kv3am" path="res://Sprites/Cenário/Tilemaps/MIASMA.png" id="28_4xj1r"]
 [ext_resource type="AudioStream" uid="uid://c7qftchbhu6xc" path="res://Audio/SFX/AMBIENTE/Musica_Jogo.mp3" id="28_75oum"]
 [ext_resource type="PackedScene" uid="uid://bgiacv0vndt1q" path="res://Objetos/Props/DropAmVelAtaque.tscn" id="30_75oum"]
@@ -43,6 +44,14 @@
 [ext_resource type="Texture2D" uid="uid://3g4iv5385ymw" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/arvore_S2.png" id="37_0ual7"]
 [ext_resource type="Texture2D" uid="uid://c2yapafbd3cnf" path="res://Sprites/Cenário/Mata_Atlantica/Foreground/cipó.png" id="37_1bo8s"]
 [ext_resource type="Script" uid="uid://1asbq143ewh0" path="res://Scripts/Componentes/empurrar_player_direita.gd" id="37_4xj1r"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_qe8vq"]
+shader = ExtResource("27_mbqr8")
+shader_parameter/wave_amplitude = 8.0
+shader_parameter/wave_frequency = 0.04
+shader_parameter/wave_speed = 1.0
+shader_parameter/surface_ratio = 0.15
+shader_parameter/surface_softness = 0.08
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_mbqr8"]
 texture = ExtResource("27_8261n")
@@ -1019,6 +1028,7 @@ scale = Vector2(0.919994, 0.919994)
 [node name="Agua" type="TileMapLayer" parent="0" groups=["Agua"]]
 modulate = Color(0, 0.5215811, 0.8861342, 1)
 self_modulate = Color(1, 1, 1, 0.6745098)
+material = SubResource("ShaderMaterial_qe8vq")
 position = Vector2(-3286.8381, 1919.0046)
 scale = Vector2(0.77247924, 0.7724791)
 tile_map_data = PackedByteArray("AAD9//n/AAAAAAAAAAD9//r/AAAAAAEAAAD+//n/AAAAAAAAAAD+//r/AAABAAEAAAD///n/AAAAAAAAAAD///r/AAACAAEAAAAAAPn/AAAAAAAAAAAAAPr/AAADAAEAAAABAPn/AAAAAAAAAAABAPr/AAAAAAEAAAACAPn/AAAAAAAAAAACAPr/AAABAAEAAAADAPn/AAAAAAAAAAADAPr/AAACAAEAAAAEAPn/AAAAAAAAAAAEAPr/AAADAAEAAAAFAPn/AAAAAAAAAAAFAPr/AAAAAAEAAAAGAPn/AAAAAAAAAAAGAPr/AAABAAEAAAAHAPn/AAAAAAAAAAAHAPr/AAACAAEAAAAIAPn/AAAAAAAAAAAIAPr/AAADAAEAAAAJAPn/AAAAAAAAAAAJAPr/AAAAAAEAAAA=")

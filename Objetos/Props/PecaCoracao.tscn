@@ -1,22 +1,49 @@
-[gd_scene load_steps=4 format=3 uid="uid://dghxpclnjwg5k"]
+[gd_scene load_steps=7 format=3 uid="uid://dghxpclnjwg5k"]
 
 [ext_resource type="Script" uid="uid://bw12gct11cmhg" path="res://Scripts/Componentes/PecaCoracao.gd" id="1_51aa3"]
 [ext_resource type="Texture2D" uid="uid://b0aq48lamotn8" path="res://Sprites/UI/Amuletos/FLOR_LUNAR.png" id="3_j0ok1"]
+[ext_resource type="Texture2D" uid="uid://0agjwkmg3gef" path="res://Sprites/VFX/Iluminação/luz azul.png" id="3_y75in"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_51aa3"]
 radius = 83.02409
+
+[sub_resource type="Gradient" id="Gradient_5ic1h"]
+colors = PackedColorArray(0.75686276, 0.33333334, 0.99215686, 1, 1.457755, 2.2139845, 3.0292947, 1)
+
+[sub_resource type="Gradient" id="Gradient_3alma"]
+colors = PackedColorArray(0.7271869, 0.49575764, 0.99682707, 1, 1, 1, 1, 1)
 
 [node name="PecaCoracao" type="Area2D" groups=["PecaCoracao"]]
 collision_layer = 0
 collision_mask = 2
 script = ExtResource("1_51aa3")
 nome_tela = "Flor da Lua"
-descricao_tela = "Fortalece a vitalidade. colete 3 para ganhar uma vida."
+descricao_tela = "Fortalece a vitalidade. Colete 3 para ganhar uma vida."
 imagem_tela = ExtResource("3_j0ok1")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 scale = Vector2(0.47999978, 0.47999978)
 shape = SubResource("CircleShape2D_51aa3")
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="."]
+position = Vector2(-2.0000002, -9.999998)
+scale = Vector2(0.8674721, 0.7106077)
+texture = ExtResource("3_y75in")
+lifetime = 0.5
+speed_scale = 0.35
+lifetime_randomness = 0.2
+emission_shape = 3
+emission_rect_extents = Vector2(32, -64)
+gravity = Vector2(0, -980)
+initial_velocity_max = 50.0
+radial_accel_min = -35.05
+radial_accel_max = 29.9
+tangential_accel_max = 100.0
+damping_max = 91.753
+scale_amount_min = 0.0
+color = Color(0.7529412, 0.43529412, 1, 1)
+color_ramp = SubResource("Gradient_5ic1h")
+color_initial_ramp = SubResource("Gradient_3alma")
 
 [node name="Imagem" type="Sprite2D" parent="."]
 scale = Vector2(0.592, 0.592)
