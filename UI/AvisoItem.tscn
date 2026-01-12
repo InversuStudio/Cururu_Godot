@@ -1,18 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://b0dirb8dawr3l"]
+[gd_scene load_steps=8 format=3 uid="uid://b0dirb8dawr3l"]
 
 [ext_resource type="Script" uid="uid://cohtrhiy80jo1" path="res://Scripts/Globais/AvisoItem.gd" id="1_n4c84"]
+[ext_resource type="Texture2D" uid="uid://bu6udw31dg5md" path="res://Sprites/UI/Pause/Pecas/MENU_ABA1.png" id="2_j1nce"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_f2wx0"]
-bg_color = Color(0.20431672, 0.110616, 0, 1)
-border_width_left = 10
-border_width_top = 10
-border_width_right = 10
-border_width_bottom = 10
-border_color = Color(0.3372549, 0.1764706, 0.03137255, 1)
-corner_radius_top_left = 50
-corner_radius_top_right = 50
-corner_radius_bottom_right = 50
-corner_radius_bottom_left = 50
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_n4c84"]
+texture = ExtResource("2_j1nce")
 
 [sub_resource type="Animation" id="Animation_j1nce"]
 length = 0.001
@@ -84,7 +76,7 @@ offset_right = 545.0
 offset_bottom = 308.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_f2wx0")
+theme_override_styles/panel = SubResource("StyleBoxTexture_n4c84")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="AvisoItem"]
 layout_mode = 2
