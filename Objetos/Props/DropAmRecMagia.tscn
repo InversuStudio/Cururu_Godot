@@ -11,8 +11,8 @@ collision_layer = 0
 collision_mask = 2
 script = ExtResource("1_b3dlu")
 tipo_item = 1
-nome_tela = "Amuleto de Golpe Ágil"
-descricao_tela = "Todos os seus golpes se tornam mais rápidos"
+nome_tela = "Amuleto de Regeneração de Mana"
+descricao_tela = "Recarrega as suas energias ao longo do tempo"
 imagem_tela = ExtResource("3_r4sjm")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
