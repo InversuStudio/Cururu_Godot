@@ -600,7 +600,7 @@ toggle_mode = true
 button_group = SubResource("ButtonGroup_f2wx0")
 text = "Amuletos"
 
-[node name="Opcoes" type="Button" parent="Corpo/Pause/BG/Abas/ContainerAbas"]
+[node name="Mapa" type="Button" parent="Corpo/Pause/BG/Abas/ContainerAbas"]
 layout_mode = 2
 size_flags_horizontal = 3
 focus_mode = 0
@@ -610,7 +610,7 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_md4fy")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_7i7fj")
 toggle_mode = true
 button_group = SubResource("ButtonGroup_f2wx0")
-text = "Opções"
+text = "Mapa"
 
 [node name="Audio" type="Button" parent="Corpo/Pause/BG/Abas/ContainerAbas"]
 layout_mode = 2
@@ -625,7 +625,7 @@ button_group = SubResource("ButtonGroup_f2wx0")
 text = "Áudio
 "
 
-[node name="Mapa" type="Button" parent="Corpo/Pause/BG/Abas/ContainerAbas"]
+[node name="Opcoes" type="Button" parent="Corpo/Pause/BG/Abas/ContainerAbas"]
 layout_mode = 2
 size_flags_horizontal = 3
 focus_mode = 0
@@ -635,7 +635,7 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_md4fy")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_7i7fj")
 toggle_mode = true
 button_group = SubResource("ButtonGroup_f2wx0")
-text = "Mapa"
+text = "Opções"
 
 [node name="Comandos" type="PanelContainer" parent="Corpo/Pause/BG"]
 layout_mode = 1
