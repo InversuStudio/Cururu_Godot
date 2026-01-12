@@ -1,18 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://b0dirb8dawr3l"]
+[gd_scene load_steps=8 format=3 uid="uid://b0dirb8dawr3l"]
 
 [ext_resource type="Script" uid="uid://cohtrhiy80jo1" path="res://Scripts/Globais/AvisoItem.gd" id="1_n4c84"]
+[ext_resource type="Texture2D" uid="uid://dxetesue4pk34" path="res://Sprites/UI/Pause/Pecas/COLETA_ITEM.png" id="2_j1nce"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_f2wx0"]
-bg_color = Color(0.20431672, 0.110616, 0, 1)
-border_width_left = 10
-border_width_top = 10
-border_width_right = 10
-border_width_bottom = 10
-border_color = Color(0.3372549, 0.1764706, 0.03137255, 1)
-corner_radius_top_left = 50
-corner_radius_top_right = 50
-corner_radius_bottom_right = 50
-corner_radius_bottom_left = 50
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_7m40o"]
+texture = ExtResource("2_j1nce")
 
 [sub_resource type="Animation" id="Animation_j1nce"]
 length = 0.001
@@ -78,37 +70,48 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -545.0
+offset_left = -655.5
 offset_top = -308.0
-offset_right = 545.0
+offset_right = 655.5
 offset_bottom = 308.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_f2wx0")
+theme_override_styles/panel = SubResource("StyleBoxTexture_7m40o")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="AvisoItem"]
+[node name="Conteudo" type="Control" parent="AvisoItem"]
 layout_mode = 2
-alignment = 1
 
-[node name="NomeItemAviso" type="RichTextLabel" parent="AvisoItem/VBoxContainer"]
+[node name="NomeItemAviso" type="RichTextLabel" parent="AvisoItem/Conteudo"]
 unique_name_in_owner = true
-layout_mode = 2
+layout_mode = 0
+offset_left = 545.5
+offset_top = 79.0
+offset_right = 1151.5
+offset_bottom = 167.0
 size_flags_vertical = 3
 theme_override_font_sizes/normal_font_size = 50
 text = "Nome Item"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="ImgItemAviso" type="TextureRect" parent="AvisoItem/VBoxContainer"]
+[node name="ImgItemAviso" type="TextureRect" parent="AvisoItem/Conteudo"]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(256, 256)
-layout_mode = 2
+layout_mode = 0
+offset_left = 114.5
+offset_top = 182.0
+offset_right = 370.5
+offset_bottom = 438.0
 size_flags_horizontal = 4
 size_flags_vertical = 3
 
-[node name="DescItemAviso" type="RichTextLabel" parent="AvisoItem/VBoxContainer"]
+[node name="DescItemAviso" type="RichTextLabel" parent="AvisoItem/Conteudo"]
 unique_name_in_owner = true
-layout_mode = 2
+layout_mode = 0
+offset_left = 455.5
+offset_top = 184.0
+offset_right = 1245.5
+offset_bottom = 537.0
 size_flags_vertical = 3
 theme_override_font_sizes/normal_font_size = 40
 text = "Descrição Item"
