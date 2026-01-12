@@ -96,10 +96,12 @@ func setup_portrait(inverter:bool):
 		
 	elif character_label.text == "ARARÊ":
 		character_dialogue_icon.texture = load("res://Sprites/NPCS/Cartografo/01.png")
-		
 		character_dialogue_icon.flip_h = inverter
+		
 	elif character_label.text == "NAIÁ":
 		character_dialogue_icon.texture = load("res://Sprites/NPCS/Vitoria Régia/NAIA_01.png")
+		character_dialogue_icon.flip_h = inverter
+
 		
 	elif character_label.text == "NPC Basico":
 		character_dialogue_icon.texture = load("res://Sprites/NPCS/Saci/saci01.png")

@@ -211,7 +211,7 @@ position = Vector2(3900, -467)
 tipo_item = 1
 
 [node name="NPC Basico" parent="." instance=ExtResource("18_bp4ag")]
-position = Vector2(-413, -1546.0001)
+position = Vector2(889, -781)
 dialogue_start = "mapa"
 
 [node name="PlataformaSome" type="StaticBody2D" parent="."]

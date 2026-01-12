@@ -390,10 +390,12 @@ theme_override_constants/margin_bottom = 50
 layout_mode = 2
 
 [node name="Amuletos" parent="Corpo/Pause/BG/ContainerMenus" instance=ExtResource("6_gppie")]
+visible = false
 layout_mode = 2
 
 [node name="Opcoes" type="VBoxContainer" parent="Corpo/Pause/BG/ContainerMenus"]
 unique_name_in_owner = true
+visible = false
 layout_mode = 2
 size_flags_horizontal = 4
 alignment = 1
@@ -503,6 +505,7 @@ step = 0.01
 value = 1.0
 
 [node name="Mapa" type="TextureRect" parent="Corpo/Pause/BG/ContainerMenus"]
+visible = false
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
@@ -524,7 +527,7 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_2ptjp")
 [node name="ContainerAbas" type="HBoxContainer" parent="Corpo/Pause/BG/Abas"]
 unique_name_in_owner = true
 layout_mode = 2
-theme_override_constants/separation = 0
+theme_override_constants/separation = 20
 alignment = 1
 
 [node name="Itens" type="Button" parent="Corpo/Pause/BG/Abas/ContainerAbas"]
@@ -592,6 +595,7 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_2ptjp")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="Corpo/Pause/BG/Comandos"]
 layout_mode = 2
+theme_override_constants/separation = 4
 alignment = 1
 
 [node name="Select" type="HBoxContainer" parent="Corpo/Pause/BG/Comandos/HBoxContainer"]
