@@ -75,6 +75,9 @@ func _ready() -> void:
 		item_rapido.ResetaBarra())
 	%Opcoes.connect("visibility_changed", func():
 		if %Opcoes.visible: %BtnContinuar.grab_focus())
+		
+	%OpcoesAudio.connect("visibility_changed", func():
+		if %OpcoesAudio.visible: %SliderMaster.grab_focus())
 	
 	%SliderMaster.connect("value_changed", func(valor:float):
 		var bus:int = AudioServer.get_bus_index("Master")

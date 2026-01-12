@@ -1,32 +1,20 @@
-[gd_scene load_steps=5 format=3 uid="uid://kuarj30f8veq"]
+[gd_scene load_steps=6 format=3 uid="uid://kuarj30f8veq"]
 
 [ext_resource type="Script" uid="uid://bclpkwuvn4e0r" path="res://Scripts/Inventario/InventarioHUD.gd" id="1_0mgwr"]
+[ext_resource type="Texture2D" uid="uid://ckvwjmjhwpbyd" path="res://Sprites/UI/Pause/Pecas/INFO_ITENS.png" id="3_cr80i"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2ptjp"]
 bg_color = Color(1, 1, 1, 1)
 border_width_top = 1
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_md4fy"]
-bg_color = Color(0.36078432, 0.23529412, 0.2, 1)
-corner_radius_top_left = 50
-corner_radius_top_right = 50
-corner_radius_bottom_right = 50
-corner_radius_bottom_left = 50
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_6dbge"]
+texture = ExtResource("3_cr80i")
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_f2wx0"]
 
 [node name="Inventario" type="VBoxContainer"]
 process_mode = 2
 script = ExtResource("1_0mgwr")
-
-[node name="Titulo" type="RichTextLabel" parent="."]
-layout_mode = 2
-size_flags_vertical = 3
-size_flags_stretch_ratio = 0.5
-theme_override_font_sizes/normal_font_size = 40
-text = "INVENTÁRIO"
-horizontal_alignment = 1
-vertical_alignment = 1
 
 [node name="HSeparator" type="HSeparator" parent="."]
 layout_mode = 2
@@ -47,7 +35,7 @@ size_flags_horizontal = 3
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-theme_override_styles/panel = SubResource("StyleBoxFlat_md4fy")
+theme_override_styles/panel = SubResource("StyleBoxTexture_6dbge")
 
 [node name="MarginContainer" type="MarginContainer" parent="Conteudo/VBoxContainer/AreaDesc"]
 layout_mode = 2
