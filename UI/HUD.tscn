@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=3 uid="uid://bs5i45df7rwnf"]
+[gd_scene load_steps=30 format=3 uid="uid://bs5i45df7rwnf"]
 
 [ext_resource type="Script" uid="uid://dg1wm8v16vrwl" path="res://Scripts/Componentes/HUD.gd" id="1_yixhe"]
 [ext_resource type="Texture2D" uid="uid://dbohcm7v5pvg4" path="res://Sprites/UI/HUD/Barra_Vida/UIHUD-MAGIA.png" id="2_f2wx0"]
@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://kuarj30f8veq" path="res://UI/Inventario.tscn" id="5_f2wx0"]
 [ext_resource type="PackedScene" uid="uid://ddf8xx25186i" path="res://UI/Amuletos.tscn" id="6_gppie"]
 [ext_resource type="Texture2D" uid="uid://xx7bvsgngiqe" path="res://Sprites/Cenário/Mata_Atlantica/Mapa/MAPA V1.png" id="7_2ptjp"]
+[ext_resource type="Shader" uid="uid://c1omtsxv04udh" path="res://Scripts/Shaders/blur_shader.gdshader" id="8_am7sw"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4n7mi"]
 
@@ -20,6 +21,11 @@ bg_color = Color(0.9411892, 1.0049391, 0.89736134, 1)
 font_size = 64
 outline_size = 12
 outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ixkb2"]
+shader = ExtResource("8_am7sw")
+shader_parameter/darkness = 0.6000000285
+shader_parameter/lod = 0.800000038
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gppie"]
 bg_color = Color(0.1518346, 0.10755975, 0.08562317, 1)
@@ -351,6 +357,7 @@ horizontal_alignment = 2
 
 [node name="Pause" type="Panel" parent="Corpo"]
 unique_name_in_owner = true
+material = SubResource("ShaderMaterial_ixkb2")
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
