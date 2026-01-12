@@ -1,4 +1,4 @@
-[gd_scene load_steps=43 format=4 uid="uid://cubw3i1ch5jq1"]
+[gd_scene load_steps=44 format=4 uid="uid://cubw3i1ch5jq1"]
 
 [ext_resource type="PackedScene" uid="uid://nohq28uk7lfk" path="res://Objetos/Entidades/Player.tscn" id="1_65boa"]
 [ext_resource type="Texture2D" uid="uid://cqu5scrrmr5n5" path="res://Sprites/Cenário/Mata_Atlantica/Background/Iluminação e Fundo/FUNDOCEU.png" id="1_f6ry5"]
@@ -19,6 +19,7 @@
 [ext_resource type="Shader" uid="uid://cete83ldr534" path="res://Scripts/Shaders/godray.gdshader" id="12_6epi5"]
 [ext_resource type="Texture2D" uid="uid://cn6a67mc7hffx" path="res://Sprites/Cenário/Mata_Atlantica/Pedras e Ruinas/pedra_lisa.png" id="12_blfcv"]
 [ext_resource type="Texture2D" uid="uid://cw2yeg7ynw0kl" path="res://Sprites/Cenário/Mata_Atlantica/Chao/chap_externo.png" id="12_mxbvc"]
+[ext_resource type="PackedScene" uid="uid://cqyub70sv0ofp" path="res://Objetos/Props/SavePoint.tscn" id="12_smmoq"]
 [ext_resource type="Texture2D" uid="uid://drcemrcpb3ydc" path="res://Sprites/Cenário/Mata_Atlantica/Chao/moita_chao2.png" id="13_08vga"]
 [ext_resource type="Texture2D" uid="uid://c8bkav2g3wyeu" path="res://Sprites/Cenário/Mata_Atlantica/Chao/moita2.png" id="13_bekt5"]
 [ext_resource type="Texture2D" uid="uid://dc4ocn7li3obx" path="res://Sprites/Cenário/Mata_Atlantica/Chao/moita_chao1.png" id="14_50het"]
@@ -366,6 +367,9 @@ texture = ExtResource("12_blfcv")
 position = Vector2(3605.696, -4494)
 scale = Vector2(0.5157233, 0.5157233)
 texture = ExtResource("13_bekt5")
+
+[node name="SavePoint" parent="0" instance=ExtResource("12_smmoq")]
+position = Vector2(2082, -4485)
 
 [node name="NPC-Basico" parent="0" instance=ExtResource("14_qrlbo")]
 position = Vector2(437, -4745.0005)

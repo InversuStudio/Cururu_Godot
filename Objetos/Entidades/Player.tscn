@@ -1839,6 +1839,7 @@ unique_name_in_owner = true
 libraries = {
 &"": SubResource("AnimationLibrary_g0l4m")
 }
+speed_scale = 0.8
 
 [node name="SFX" type="Node" parent="."]
 
