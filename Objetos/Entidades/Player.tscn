@@ -1,4 +1,4 @@
-[gd_scene load_steps=185 format=3 uid="uid://nohq28uk7lfk"]
+[gd_scene load_steps=196 format=3 uid="uid://nohq28uk7lfk"]
 
 [ext_resource type="Script" uid="uid://cfu4ciwll8jcj" path="res://Scripts/Cururu/Cururu.gd" id="1_gwpdq"]
 [ext_resource type="Texture2D" uid="uid://6tjgxsgaflxb" path="res://Sprites/Cururu/Dano/03.png" id="2_0hf88"]
@@ -88,36 +88,46 @@
 [ext_resource type="Texture2D" uid="uid://7slpp6p2awfu" path="res://Sprites/Cururu/Special/05.png" id="49_ny8nr"]
 [ext_resource type="Texture2D" uid="uid://cpkv7mb55k054" path="res://Sprites/Cururu/Special/06.png" id="50_2t31h"]
 [ext_resource type="Script" uid="uid://dmpgwk6x2wyq6" path="res://Scripts/Cururu/Chao.gd" id="50_3s0sn"]
+[ext_resource type="Texture2D" uid="uid://b3njp33njhpel" path="res://Sprites/Cururu/Cura/Cura_parado/01.png" id="50_epadh"]
 [ext_resource type="Texture2D" uid="uid://dlh6ijf8tldxf" path="res://Sprites/Cururu/Melee/09.png" id="51_6iqbf"]
 [ext_resource type="Script" uid="uid://dqm1rg2yvcp87" path="res://Scripts/Cururu/Fall.gd" id="51_dvy3r"]
 [ext_resource type="Texture2D" uid="uid://c2lma5p6xi8mn" path="res://Sprites/Cururu/Special/07.png" id="51_s2eek"]
+[ext_resource type="Texture2D" uid="uid://cg7e0upnhxs8n" path="res://Sprites/Cururu/Cura/Cura_parado/02.png" id="51_tg5tv"]
 [ext_resource type="Texture2D" uid="uid://w6usfm7vcovw" path="res://Sprites/Cururu/Run/07.png" id="52_548ar"]
 [ext_resource type="Script" uid="uid://c1tkv8brk85ke" path="res://Scripts/Cururu/Pulo.gd" id="52_damx7"]
+[ext_resource type="Texture2D" uid="uid://dg5imaixvgv38" path="res://Sprites/Cururu/Cura/Cura_parado/03.png" id="52_oko53"]
 [ext_resource type="Texture2D" uid="uid://b2br0jnttod5e" path="res://Sprites/Cururu/Special/08.png" id="52_vpyrf"]
 [ext_resource type="Texture2D" uid="uid://jrhp2hi1cmop" path="res://Sprites/Cururu/Levantando/01.png" id="53_0vd0f"]
 [ext_resource type="Texture2D" uid="uid://bp8jt5ldm18ou" path="res://Sprites/Cururu/Melee/02.png" id="53_1dbdn"]
 [ext_resource type="Texture2D" uid="uid://hsargowvj610" path="res://Sprites/Cururu/Special/09.png" id="53_7spwe"]
 [ext_resource type="Texture2D" uid="uid://xhaqnu3yj884" path="res://Sprites/Cururu/Melee/00.png" id="53_grb16"]
 [ext_resource type="Script" uid="uid://ctu2e3ln1kydq" path="res://Scripts/Cururu/Dash.gd" id="53_k0fov"]
+[ext_resource type="Texture2D" uid="uid://du8kvhi0twqc2" path="res://Sprites/Cururu/Cura/Cura_parado/04.png" id="53_ra0w4"]
 [ext_resource type="Texture2D" uid="uid://mjo3l6koxn12" path="res://Sprites/Cururu/Melee/01.png" id="53_wjcvp"]
 [ext_resource type="Texture2D" uid="uid://d1v3ex0xexpef" path="res://Sprites/Cururu/Melee/03.png" id="54_0w8y8"]
 [ext_resource type="Script" uid="uid://brymvmxc6n166" path="res://Scripts/Cururu/Dano.gd" id="54_jgcph"]
 [ext_resource type="Texture2D" uid="uid://dr0cp2sh6h7qh" path="res://Sprites/Cururu/Run/08.png" id="54_kmqi2"]
+[ext_resource type="Texture2D" uid="uid://beow5ut1jb2g" path="res://Sprites/Cururu/Cura/Cura_parado/05.png" id="54_m8noy"]
 [ext_resource type="Texture2D" uid="uid://jmtrn70yd4x2" path="res://Sprites/Cururu/Levantando/02.png" id="54_mmhjr"]
 [ext_resource type="Texture2D" uid="uid://cn4bj8b2eog4" path="res://Sprites/Cururu/Run/09.png" id="55_2q4c8"]
 [ext_resource type="Script" uid="uid://biel3i584hg88" path="res://Scripts/Cururu/Melee.gd" id="55_7uoqt"]
 [ext_resource type="Texture2D" uid="uid://canqyijdsj0qa" path="res://Sprites/Cururu/Melee/04.png" id="55_d7mdf"]
 [ext_resource type="Texture2D" uid="uid://bf6lhakaaw7bs" path="res://Sprites/Cururu/Levantando/03.png" id="55_o27xl"]
+[ext_resource type="Texture2D" uid="uid://cc5q5mg6a2uvn" path="res://Sprites/Cururu/Cura/Cura_parado/06.png" id="55_uwn4s"]
 [ext_resource type="Script" uid="uid://twsepycefell" path="res://Scripts/Cururu/Special.gd" id="56_7uoqt"]
 [ext_resource type="Texture2D" uid="uid://crb6ajowqupi4" path="res://Sprites/Cururu/Levantando/04.png" id="56_15js0"]
+[ext_resource type="Texture2D" uid="uid://bm76cvq3aok53" path="res://Sprites/Cururu/Cura/Cura_parado/07.png" id="56_hlvg1"]
 [ext_resource type="Texture2D" uid="uid://vpqiwf03ahgm" path="res://Sprites/Cururu/Melee/05.png" id="56_w1841"]
 [ext_resource type="Texture2D" uid="uid://s7dywbsrphlw" path="res://Sprites/Cururu/Run/01.png" id="56_wq158"]
 [ext_resource type="Texture2D" uid="uid://brcw3gx52yk73" path="res://Sprites/Cururu/Run/02.png" id="57_1mxu7"]
+[ext_resource type="Texture2D" uid="uid://bclpbg1ja457e" path="res://Sprites/Cururu/Cura/Cura_parado/08.png" id="57_4br3t"]
 [ext_resource type="Texture2D" uid="uid://cc51061wquhv4" path="res://Sprites/Cururu/Levantando/05.png" id="57_7cs7m"]
 [ext_resource type="Texture2D" uid="uid://d1ctksgo2tfrn" path="res://Sprites/Cururu/Melee/06.png" id="57_ny8nr"]
 [ext_resource type="Texture2D" uid="uid://c3rk5l2di2igp" path="res://Sprites/Cururu/Melee/07.png" id="58_2t31h"]
+[ext_resource type="Texture2D" uid="uid://l8cj2d08f5kx" path="res://Sprites/Cururu/Cura/Cura_parado/09.png" id="58_713by"]
 [ext_resource type="Texture2D" uid="uid://c8x6cggwvhx64" path="res://Sprites/Cururu/Run/03.png" id="58_lwl7b"]
 [ext_resource type="Texture2D" uid="uid://c43ha18bywnfu" path="res://Sprites/Cururu/Levantando/06.png" id="58_pabuw"]
+[ext_resource type="Texture2D" uid="uid://8ci3q8wkv8hg" path="res://Sprites/Cururu/Cura/Cura_parado/10.png" id="59_6itxo"]
 [ext_resource type="Texture2D" uid="uid://cl48ho610vpku" path="res://Sprites/Cururu/Melee/08.png" id="59_s2eek"]
 [ext_resource type="Texture2D" uid="uid://dx5shib2di2oc" path="res://Sprites/Cururu/Levantando/07.png" id="59_ujast"]
 [ext_resource type="Texture2D" uid="uid://6dnbonxcb2gu" path="res://Sprites/Cururu/Run/05.png" id="60_ga1ek"]
@@ -146,7 +156,7 @@
 [ext_resource type="AudioStream" uid="uid://chf637hlgvwxq" path="res://Audio/SFX/Cuica_1.ogg" id="90_s2eek"]
 [ext_resource type="AudioStream" uid="uid://b1e3re8ykc11o" path="res://Audio/SFX/Cuica_2.ogg" id="91_vpyrf"]
 [ext_resource type="Script" uid="uid://b47dm1pnrhmt1" path="res://Scripts/Cururu/Nadando.gd" id="96_0digr"]
-[ext_resource type="Script" uid="uid://cg3i231v8dhoy" path="res://Objetos/Entidades/acorda.gd" id="110_yy1dt"]
+[ext_resource type="Script" path="res://Objetos/Entidades/acorda.gd" id="110_yy1dt"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_k0fov"]
 animations = [{
@@ -318,6 +328,41 @@ animations = [{
 "loop": true,
 "name": &"Andando",
 "speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("50_epadh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("51_tg5tv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("52_oko53")
+}, {
+"duration": 1.0,
+"texture": ExtResource("53_ra0w4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("54_m8noy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("55_uwn4s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("56_hlvg1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("57_4br3t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("58_713by")
+}, {
+"duration": 1.0,
+"texture": ExtResource("59_6itxo")
+}],
+"loop": true,
+"name": &"Cura_Parado",
+"speed": 5.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -1754,9 +1799,37 @@ tracks/2/keys = {
 }]
 }
 
+[sub_resource type="Animation" id="Animation_toswy"]
+resource_name = "Cura_Parado"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Cururu:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"Cura_Parado"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Cururu:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3023257, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_g0l4m"]
 _data = {
 &"Acorda": SubResource("Animation_o645d"),
+&"Cura_Parado": SubResource("Animation_toswy"),
 &"Dano": SubResource("Animation_aofpm"),
 &"Dash_End": SubResource("Animation_x3lr7"),
 &"Dash_Loop": SubResource("Animation_buhp1"),
@@ -1818,7 +1891,6 @@ visible = false
 position = Vector2(-87.00001, -108)
 scale = Vector2(0.375651, 0.375651)
 sprite_frames = SubResource("SpriteFrames_k0fov")
-animation = &"entrando_agua"
 frame = 1
 
 [node name="Cururu" type="AnimatedSprite2D" parent="."]
