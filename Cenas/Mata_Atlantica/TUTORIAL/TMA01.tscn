@@ -671,7 +671,7 @@ scale = Vector2(0.50812995, 0.40720722)
 texture = ExtResource("21_t4v06")
 
 [node name="PAREDE PEDRAS" parent="0" instance=ExtResource("27_i5sln")]
-position = Vector2(711, -1412)
+position = Vector2(532, -1412)
 scale = Vector2(1.28, 1.28)
 
 [node name="Portal" type="Sprite2D" parent="0"]
@@ -1046,12 +1046,6 @@ texture = ExtResource("5_cvdhq")
 position = Vector2(-38674, -4384)
 rotation = 3.14159
 texture = ExtResource("5_cvdhq")
-
-[node name="ArvoreFundo8" type="Sprite2D" parent="2/Foreground/ForegroundTeto"]
-modulate = Color(0.012617188, 0.012617188, 0.012617188, 1)
-position = Vector2(-36039.805, -4035.6191)
-scale = Vector2(1.5997161, 1.5681988)
-texture = ExtResource("2_nika8")
 
 [node name="Foregroundchao" type="Node2D" parent="2"]
 position = Vector2(523, -1104)

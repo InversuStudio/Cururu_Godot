@@ -11,6 +11,7 @@ radius = 32.0156
 [sub_resource type="CircleShape2D" id="CircleShape2D_0w4hx"]
 
 [node name="Moeda" type="RigidBody2D"]
+z_index = 1001
 collision_layer = 32
 collision_mask = 3
 script = ExtResource("1_c1as6")
@@ -20,6 +21,7 @@ sfx = ExtResource("2_0w4hx")
 shape = SubResource("CircleShape2D_jisbj")
 
 [node name="Imagem" type="Sprite2D" parent="."]
+z_index = 1001
 position = Vector2(0, -5.9999995)
 scale = Vector2(1.4374999, 1.4374999)
 texture = ExtResource("2_soojx")

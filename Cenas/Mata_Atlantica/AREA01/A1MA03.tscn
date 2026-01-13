@@ -1,4 +1,4 @@
-[gd_scene load_steps=44 format=4 uid="uid://cubw3i1ch5jq1"]
+[gd_scene load_steps=49 format=4 uid="uid://cubw3i1ch5jq1"]
 
 [ext_resource type="PackedScene" uid="uid://nohq28uk7lfk" path="res://Objetos/Entidades/Player.tscn" id="1_65boa"]
 [ext_resource type="Texture2D" uid="uid://cqu5scrrmr5n5" path="res://Sprites/Cenário/Mata_Atlantica/Background/Iluminação e Fundo/FUNDOCEU.png" id="1_f6ry5"]
@@ -16,17 +16,22 @@
 [ext_resource type="Texture2D" uid="uid://bykelnwq60jce" path="res://Sprites/Cenário/Mata_Atlantica/Pedras e Ruinas/pilar_templo.png" id="8_5nggk"]
 [ext_resource type="Texture2D" uid="uid://cjl88xeknofui" path="res://Sprites/Cenário/Mata_Atlantica/Chao/grama_reto.png" id="9_10bg8"]
 [ext_resource type="Texture2D" uid="uid://u12dsbd5ebth" path="res://Sprites/Cenário/Mata_Atlantica/Background/Mata/mato00.png" id="9_mhu80"]
+[ext_resource type="Texture2D" uid="uid://boljughq86ddu" path="res://Sprites/Cenário/Mata_Atlantica/Background/casa_naia.png" id="10_5nggk"]
 [ext_resource type="Shader" uid="uid://cete83ldr534" path="res://Scripts/Shaders/godray.gdshader" id="12_6epi5"]
 [ext_resource type="Texture2D" uid="uid://cn6a67mc7hffx" path="res://Sprites/Cenário/Mata_Atlantica/Pedras e Ruinas/pedra_lisa.png" id="12_blfcv"]
 [ext_resource type="Texture2D" uid="uid://cw2yeg7ynw0kl" path="res://Sprites/Cenário/Mata_Atlantica/Chao/chap_externo.png" id="12_mxbvc"]
 [ext_resource type="PackedScene" uid="uid://cqyub70sv0ofp" path="res://Objetos/Props/SavePoint.tscn" id="12_smmoq"]
+[ext_resource type="PackedScene" uid="uid://tvw2ynw76htc" path="res://Objetos/Props/vasosmoeda/vasomoeda_01.tscn" id="13_0n704"]
+[ext_resource type="PackedScene" uid="uid://bktu336s6ruri" path="res://Objetos/Props/Moeda.tscn" id="13_5nggk"]
 [ext_resource type="Texture2D" uid="uid://drcemrcpb3ydc" path="res://Sprites/Cenário/Mata_Atlantica/Chao/moita_chao2.png" id="13_08vga"]
 [ext_resource type="Texture2D" uid="uid://c8bkav2g3wyeu" path="res://Sprites/Cenário/Mata_Atlantica/Chao/moita2.png" id="13_bekt5"]
 [ext_resource type="Texture2D" uid="uid://dc4ocn7li3obx" path="res://Sprites/Cenário/Mata_Atlantica/Chao/moita_chao1.png" id="14_50het"]
 [ext_resource type="PackedScene" uid="uid://2kargcp4546j" path="res://Objetos/NPCs/Naiá.tscn" id="14_qrlbo"]
 [ext_resource type="Texture2D" uid="uid://b8j5k2agch1lh" path="res://Sprites/Cenário/Mata_Atlantica/Chao/moita_teto2.png" id="15_s7jbr"]
 [ext_resource type="Texture2D" uid="uid://cwawjpybgki5u" path="res://Sprites/Cenário/Mata_Atlantica/Chao/moita_teto1.png" id="16_8f8ku"]
+[ext_resource type="PackedScene" uid="uid://bcwi51vmdht5w" path="res://Objetos/Props/vasosmoeda/vasomoeda_04.tscn" id="16_blfcv"]
 [ext_resource type="Texture2D" uid="uid://uq6dbjep5wva" path="res://Sprites/Cenário/Mata_Atlantica/Foreground/frontfolha.png" id="17_f6ry5"]
+[ext_resource type="PackedScene" uid="uid://cppreprc8pa3k" path="res://Objetos/Props/vasosmoeda/vasomoeda_02.tscn" id="17_k6a21"]
 [ext_resource type="Shader" uid="uid://bbohkd8d1ljws" path="res://Scripts/Shaders/wavewater.gdshader" id="17_smmoq"]
 [ext_resource type="Texture2D" uid="uid://c2yapafbd3cnf" path="res://Sprites/Cenário/Mata_Atlantica/Foreground/cipó.png" id="18_bekt5"]
 [ext_resource type="Texture2D" uid="uid://jecy4bfqqqxu" path="res://Sprites/Cenário/Mata_Atlantica/Teto/Moita teste.png" id="25_k6a21"]
@@ -34,11 +39,6 @@
 [ext_resource type="Texture2D" uid="uid://dj81ab7fk7ig1" path="res://Sprites/Cenário/Objetos/Savepoint/parte da frente.png" id="30_8clb6"]
 [ext_resource type="Script" uid="uid://dd16yu704x6wt" path="res://Scripts/Componentes/BGM_Player.gd" id="33_6epi5"]
 [ext_resource type="AudioStream" uid="uid://c7qftchbhu6xc" path="res://Audio/SFX/AMBIENTE/Musica_Jogo.mp3" id="34_smmoq"]
-
-[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_iohfy"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_iohfy"]
-size = Vector2(635.15894, 32.68567)
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_0n704"]
 shader = ExtResource("12_6epi5")
@@ -57,6 +57,11 @@ shader_parameter/ray2_intensity = 0.30000001425
 shader_parameter/color = Color(0.9275552, 0.9086013, 0.8622764, 0.8)
 shader_parameter/hdr = false
 shader_parameter/seed = 5.0
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_iohfy"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_iohfy"]
+size = Vector2(635.15894, 32.68567)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_32tfj"]
 texture = ExtResource("1_xvyko")
@@ -345,6 +350,18 @@ texture = ExtResource("9_mhu80")
 position = Vector2(223, -4322.5)
 texture = ExtResource("9_mhu80")
 
+[node name="ColorRect2" type="ColorRect" parent="-1"]
+material = SubResource("ShaderMaterial_0n704")
+offset_left = 188.42105
+offset_top = -5960.0
+offset_right = 1485.421
+offset_bottom = -4296.0
+
+[node name="CasaNaia" type="Sprite2D" parent="-1"]
+position = Vector2(245.26317, -4788.947)
+scale = Vector2(1.2188973, 1.2188971)
+texture = ExtResource("10_5nggk")
+
 [node name="0" type="CanvasLayer" parent="."]
 follow_viewport_enabled = true
 
@@ -368,12 +385,31 @@ position = Vector2(3605.696, -4494)
 scale = Vector2(0.5157233, 0.5157233)
 texture = ExtResource("13_bekt5")
 
+[node name="ColorRect3" type="ColorRect" parent="0"]
+material = SubResource("ShaderMaterial_0n704")
+offset_left = -793.0
+offset_top = -5960.0
+offset_right = 504.0
+offset_bottom = -4296.0
+
+[node name="Bau" parent="0" instance=ExtResource("13_0n704")]
+position = Vector2(2652, -4499)
+drop_item = Array[PackedScene]([ExtResource("13_5nggk")])
+
+[node name="Bau3" parent="0" instance=ExtResource("16_blfcv")]
+position = Vector2(2529, -4485)
+drop_item = Array[PackedScene]([ExtResource("13_5nggk"), ExtResource("13_5nggk"), ExtResource("13_5nggk")])
+
+[node name="Bau2" parent="0" instance=ExtResource("17_k6a21")]
+position = Vector2(2782, -4486)
+drop_item = Array[PackedScene]([ExtResource("13_5nggk"), ExtResource("13_5nggk")])
+
 [node name="SavePoint" parent="0" instance=ExtResource("12_smmoq")]
 position = Vector2(2082, -4485)
 
 [node name="NPC-Basico" parent="0" instance=ExtResource("14_qrlbo")]
-position = Vector2(437, -4745.0005)
-scale = Vector2(0.8184803, 0.81848043)
+position = Vector2(533.00006, -4691)
+scale = Vector2(0.7016272, 0.7016273)
 
 [node name="Player" parent="0" instance=ExtResource("1_65boa")]
 z_index = 0
@@ -392,20 +428,6 @@ position = Vector2(8.391968, -74.64673)
 scale = Vector2(0.9999999, 0.9999999)
 shape = SubResource("RectangleShape2D_iohfy")
 one_way_collision = true
-
-[node name="ColorRect2" type="ColorRect" parent="0"]
-material = SubResource("ShaderMaterial_0n704")
-offset_left = -41.0
-offset_top = -5960.0
-offset_right = 1256.0
-offset_bottom = -4296.0
-
-[node name="ColorRect3" type="ColorRect" parent="0"]
-material = SubResource("ShaderMaterial_0n704")
-offset_left = -793.0
-offset_top = -5960.0
-offset_right = 504.0
-offset_bottom = -4296.0
 
 [node name="TileMapLayer" type="TileMapLayer" parent="0"]
 position = Vector2(-2, 0)

@@ -42,7 +42,7 @@ shape = SubResource("RectangleShape2D_4vmwf")
 debug_color = Color(0.7753908, 0.38766962, 0.5591627, 0.41960785)
 
 [node name="PosItem" type="Marker2D" parent="."]
-z_index = 1001
+z_index = 1002
 position = Vector2(0, -110)
 
 [node name="Sprite" type="AnimatedSprite2D" parent="."]

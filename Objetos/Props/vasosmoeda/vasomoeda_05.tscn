@@ -1,0 +1,68 @@
+[gd_scene load_steps=11 format=3 uid="uid://cbraq3qrm01h4"]
+
+[ext_resource type="Script" uid="uid://drxk6hwuv2e3i" path="res://Scripts/Componentes/Bau.gd" id="1_nx3am"]
+[ext_resource type="PackedScene" uid="uid://va5pjd6vuuo2" path="res://Objetos/Funcionalidade/CompHurtBox.tscn" id="2_or78x"]
+[ext_resource type="AudioStream" uid="uid://c066nn0lamacq" path="res://Audio/SFX/AMBIENTE/Jarro quebrando.ogg" id="3_nx3am"]
+[ext_resource type="Texture2D" uid="uid://8rbhvq514fp0" path="res://Sprites/Cenário/Objetos/Quabraveis/Vasos/VFX/01.png" id="4_ubblb"]
+[ext_resource type="Texture2D" uid="uid://c2vy8car41yny" path="res://Sprites/Cenário/Objetos/Quabraveis/Vasos/VFX/02.png" id="5_dbjk8"]
+[ext_resource type="Texture2D" uid="uid://bsinyssrgovn0" path="res://Sprites/Cenário/Objetos/Quabraveis/Vasos/VFX/03.png" id="6_3v1o3"]
+[ext_resource type="Texture2D" uid="uid://rmdr5veprlua" path="res://Sprites/Cenário/Objetos/Quabraveis/Vasos/VFX/04.png" id="7_1gmsp"]
+[ext_resource type="Texture2D" uid="uid://dqvigu44b4qmc" path="res://Sprites/Cenário/Objetos/Quabraveis/Vasos/vaso_05.png" id="8_nx3am"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4vmwf"]
+size = Vector2(145, 189)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_5tjap"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_ubblb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_dbjk8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_3v1o3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_1gmsp")
+}],
+"loop": false,
+"name": &"Abre",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_nx3am")
+}],
+"loop": true,
+"name": &"Normal",
+"speed": 5.0
+}]
+
+[node name="Bau" type="Node2D"]
+script = ExtResource("1_nx3am")
+
+[node name="HurtBox" parent="." node_paths=PackedStringArray("sprite") instance=ExtResource("2_or78x")]
+collision_layer = 16
+hit_sfx = ExtResource("3_nx3am")
+sprite = NodePath("../Sprite")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HurtBox"]
+position = Vector2(1.5, -95.5)
+shape = SubResource("RectangleShape2D_4vmwf")
+debug_color = Color(0.7753908, 0.38766962, 0.5591627, 0.41960785)
+
+[node name="Sprite" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -108)
+scale = Vector2(0.2734375, 0.27343756)
+sprite_frames = SubResource("SpriteFrames_5tjap")
+animation = &"Normal"
+autoplay = "Normal"
+speed_scale = 1.5
+
+[node name="PosItem" type="Marker2D" parent="."]
+z_index = 1001
+position = Vector2(0, -110)
+
+[connection signal="hurt" from="HurtBox" to="." method="_on_hurt_box_hurt"]
