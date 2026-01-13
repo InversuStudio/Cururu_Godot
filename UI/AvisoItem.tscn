@@ -1,7 +1,13 @@
-[gd_scene load_steps=8 format=3 uid="uid://b0dirb8dawr3l"]
+[gd_scene load_steps=10 format=3 uid="uid://b0dirb8dawr3l"]
 
 [ext_resource type="Script" uid="uid://cohtrhiy80jo1" path="res://Scripts/Globais/AvisoItem.gd" id="1_n4c84"]
+[ext_resource type="Shader" uid="uid://c1omtsxv04udh" path="res://Scripts/Shaders/blur_shader.gdshader" id="2_7m40o"]
 [ext_resource type="Texture2D" uid="uid://dxetesue4pk34" path="res://Sprites/UI/Pause/Pecas/COLETA_ITEM.png" id="2_j1nce"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_2llkm"]
+shader = ExtResource("2_7m40o")
+shader_parameter/darkness = 0.6000000285
+shader_parameter/lod = 0.800000038
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_7m40o"]
 texture = ExtResource("2_j1nce")
@@ -60,8 +66,17 @@ _data = {
 
 [node name="AvisoItem" type="CanvasLayer"]
 process_mode = 3
-layer = 3
+layer = 1001
 script = ExtResource("1_n4c84")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+unique_name_in_owner = true
+material = SubResource("ShaderMaterial_2llkm")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="AvisoItem" type="PanelContainer" parent="."]
 unique_name_in_owner = true

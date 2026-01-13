@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bubffpix746dw"
-path="res://.godot/imported/BAU.png-33bc6fe4ac689cb46be20c9c5940d6fd.ctex"
+uid="uid://cfkuwdqrn42th"
+path="res://.godot/imported/09.png-30228bcac451ae3f6e7acafec61b3f78.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Cenário/Objetos/Bau/BAU.png"
-dest_files=["res://.godot/imported/BAU.png-33bc6fe4ac689cb46be20c9c5940d6fd.ctex"]
+source_file="res://Sprites/Cururu/Nadando/VFX/Entrando_Agua/09.png"
+dest_files=["res://.godot/imported/09.png-30228bcac451ae3f6e7acafec61b3f78.ctex"]
 
 [params]
 

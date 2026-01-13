@@ -1,4 +1,4 @@
-[gd_scene load_steps=39 format=3 uid="uid://3yqo0l27km55"]
+[gd_scene load_steps=48 format=3 uid="uid://3yqo0l27km55"]
 
 [ext_resource type="Script" uid="uid://dg1wm8v16vrwl" path="res://Scripts/Componentes/HUD.gd" id="1_yixhe"]
 [ext_resource type="Texture2D" uid="uid://dbohcm7v5pvg4" path="res://Sprites/UI/HUD/Barra_Vida/UIHUD-MAGIA.png" id="2_f2wx0"]
@@ -9,10 +9,11 @@
 [ext_resource type="Texture2D" uid="uid://8tc3pgq3fdi8" path="res://Sprites/UI/HUD/Barra_Vida/UIHUD-MAGIABK.png" id="5_2ptjp"]
 [ext_resource type="PackedScene" uid="uid://kuarj30f8veq" path="res://UI/Inventario.tscn" id="5_f2wx0"]
 [ext_resource type="PackedScene" uid="uid://ddf8xx25186i" path="res://UI/Amuletos.tscn" id="6_gppie"]
-[ext_resource type="Shader" path="res://Scripts/Shaders/blur_shader.gdshader" id="8_am7sw"]
+[ext_resource type="Shader" uid="uid://c1omtsxv04udh" path="res://Scripts/Shaders/blur_shader.gdshader" id="8_am7sw"]
 [ext_resource type="Texture2D" uid="uid://c1kcyxqfye0pf" path="res://Sprites/UI/Pause/Pecas/HUD_FUNDO.png" id="9_ixkb2"]
 [ext_resource type="Texture2D" uid="uid://bc2yoaw6bn0kt" path="res://Sprites/UI/Pause/Pecas/MENU_ABA2.png" id="13_281ki"]
 [ext_resource type="Texture2D" uid="uid://bu6udw31dg5md" path="res://Sprites/UI/Pause/Pecas/MENU_ABA1.png" id="13_mms7u"]
+[ext_resource type="Texture2D" uid="uid://duesv7kjq2emm" path="res://Sprites/UI/Pause/Pecas/MENU_ABA3.png" id="14_w37wn"]
 [ext_resource type="Texture2D" uid="uid://ydkqrtapi4fn" path="res://Sprites/UI/Pause/Pecas/MAP.png" id="15_w37wn"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4n7mi"]
@@ -32,30 +33,6 @@ shader_parameter/lod = 0.800000038
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_am7sw"]
 texture = ExtResource("9_ixkb2")
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_mms7u"]
-texture = ExtResource("13_mms7u")
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_w37wn"]
-texture = ExtResource("13_mms7u")
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_kg6a8"]
-texture = ExtResource("13_281ki")
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8ip7y"]
-texture = ExtResource("13_281ki")
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_likdy"]
-texture = ExtResource("13_mms7u")
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_pgems"]
-texture = ExtResource("13_mms7u")
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_rsrlt"]
-texture = ExtResource("13_281ki")
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_lbtxw"]
-texture = ExtResource("13_281ki")
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mms7u"]
 bg_color = Color(0.23137255, 0.1254902, 0.015686275, 1)
@@ -83,16 +60,64 @@ corner_radius_top_right = 10
 corner_radius_bottom_right = 10
 corner_radius_bottom_left = 10
 
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_mms7u"]
+texture = ExtResource("13_mms7u")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_w37wn"]
+texture = ExtResource("13_mms7u")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_kg6a8"]
+texture = ExtResource("13_281ki")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8ip7y"]
+texture = ExtResource("13_281ki")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_likdy"]
+texture = ExtResource("13_mms7u")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_pgems"]
+texture = ExtResource("13_mms7u")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_rsrlt"]
+texture = ExtResource("13_281ki")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_lbtxw"]
+texture = ExtResource("13_281ki")
+
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_281ki"]
 texture = ExtResource("13_mms7u")
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_md4fy"]
-bg_color = Color(0.23921569, 0.16862746, 0.09019608, 1)
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ghl3h"]
+texture = ExtResource("13_mms7u")
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7i7fj"]
-bg_color = Color(0.36078432, 0.2, 0.023529412, 1)
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_qbvrm"]
+texture = ExtResource("13_281ki")
 
 [sub_resource type="ButtonGroup" id="ButtonGroup_f2wx0"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_4hs1h"]
+texture = ExtResource("13_mms7u")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_h8urj"]
+texture = ExtResource("13_281ki")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_dcyds"]
+texture = ExtResource("13_mms7u")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_rc7pm"]
+texture = ExtResource("13_281ki")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_6it0x"]
+texture = ExtResource("13_mms7u")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8ecy4"]
+texture = ExtResource("13_281ki")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_bf46y"]
+texture = ExtResource("13_mms7u")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_v10bk"]
+texture = ExtResource("13_281ki")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_gp2h7"]
 texture = ExtResource("13_mms7u")
@@ -389,11 +414,167 @@ theme_override_constants/margin_top = 50
 theme_override_constants/margin_right = 50
 theme_override_constants/margin_bottom = 50
 
+[node name="Mapa" type="TextureRect" parent="Corpo/Pause/BG/ContainerMenus"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("15_w37wn")
+
 [node name="Inventario" parent="Corpo/Pause/BG/ContainerMenus" instance=ExtResource("5_f2wx0")]
 layout_mode = 2
 
 [node name="Amuletos" parent="Corpo/Pause/BG/ContainerMenus" instance=ExtResource("6_gppie")]
 layout_mode = 2
+
+[node name="OpcoesAudio" type="VBoxContainer" parent="Corpo/Pause/BG/ContainerMenus"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_stretch_ratio = 0.0
+
+[node name="SomMaster" type="Control" parent="Corpo/Pause/BG/ContainerMenus/OpcoesAudio"]
+layout_mode = 2
+size_flags_vertical = 6
+
+[node name="TextureRect" type="TextureRect" parent="Corpo/Pause/BG/ContainerMenus/OpcoesAudio/SomMaster"]
+layout_mode = 0
+offset_left = 180.0
+offset_top = 142.0
+offset_right = 430.0
+offset_bottom = 218.0
+texture = ExtResource("14_w37wn")
+stretch_mode = 4
+
+[node name="Titulo" type="RichTextLabel" parent="Corpo/Pause/BG/ContainerMenus/OpcoesAudio/SomMaster/TextureRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -52.5
+offset_top = -29.500002
+offset_right = 52.5
+offset_bottom = 29.500002
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 3
+theme_override_font_sizes/normal_font_size = 28
+text = "Master"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SliderMaster" type="HSlider" parent="Corpo/Pause/BG/ContainerMenus/OpcoesAudio/SomMaster"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.634
+anchor_right = 0.634
+offset_left = -574.61597
+offset_top = 164.0
+offset_right = 525.38403
+offset_bottom = 201.0
+size_flags_vertical = 2
+theme_override_styles/slider = SubResource("StyleBoxFlat_mms7u")
+theme_override_styles/grabber_area = SubResource("StyleBoxFlat_281ki")
+theme_override_styles/grabber_area_highlight = SubResource("StyleBoxFlat_w37wn")
+max_value = 1.0
+step = 0.01
+value = 1.0
+
+[node name="SomBGM" type="Control" parent="Corpo/Pause/BG/ContainerMenus/OpcoesAudio"]
+layout_mode = 2
+size_flags_vertical = 6
+
+[node name="TextureRect" type="TextureRect" parent="Corpo/Pause/BG/ContainerMenus/OpcoesAudio/SomBGM"]
+layout_mode = 0
+offset_left = 180.0
+offset_top = -10.0
+offset_right = 430.0
+offset_bottom = 66.0
+texture = ExtResource("14_w37wn")
+stretch_mode = 4
+
+[node name="Titulo" type="RichTextLabel" parent="Corpo/Pause/BG/ContainerMenus/OpcoesAudio/SomBGM/TextureRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -52.5
+offset_top = -29.500002
+offset_right = 52.5
+offset_bottom = 29.500002
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 3
+theme_override_font_sizes/normal_font_size = 28
+text = "Música
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SliderBGM" type="HSlider" parent="Corpo/Pause/BG/ContainerMenus/OpcoesAudio/SomBGM"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 455.0
+offset_top = 13.0
+offset_right = 1555.0
+offset_bottom = 43.0
+size_flags_vertical = 2
+theme_override_styles/slider = SubResource("StyleBoxFlat_mms7u")
+theme_override_styles/grabber_area = SubResource("StyleBoxFlat_281ki")
+theme_override_styles/grabber_area_highlight = SubResource("StyleBoxFlat_w37wn")
+max_value = 1.0
+step = 0.01
+value = 1.0
+
+[node name="SomSFX" type="Control" parent="Corpo/Pause/BG/ContainerMenus/OpcoesAudio"]
+layout_mode = 2
+size_flags_vertical = 6
+
+[node name="TextureRect" type="TextureRect" parent="Corpo/Pause/BG/ContainerMenus/OpcoesAudio/SomSFX"]
+layout_mode = 0
+offset_left = 180.0
+offset_top = -160.0
+offset_right = 430.0
+offset_bottom = -84.0
+texture = ExtResource("14_w37wn")
+stretch_mode = 4
+
+[node name="Titulo" type="RichTextLabel" parent="Corpo/Pause/BG/ContainerMenus/OpcoesAudio/SomSFX/TextureRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -52.5
+offset_top = -29.500002
+offset_right = 52.5
+offset_bottom = 29.500002
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 3
+theme_override_font_sizes/normal_font_size = 28
+text = "SFX"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SliderSFX" type="HSlider" parent="Corpo/Pause/BG/ContainerMenus/OpcoesAudio/SomSFX"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 455.0
+offset_top = -138.0
+offset_right = 1555.0
+offset_bottom = -108.0
+size_flags_vertical = 2
+theme_override_styles/slider = SubResource("StyleBoxFlat_mms7u")
+theme_override_styles/grabber_area = SubResource("StyleBoxFlat_281ki")
+theme_override_styles/grabber_area_highlight = SubResource("StyleBoxFlat_w37wn")
+max_value = 1.0
+step = 0.01
+value = 1.0
 
 [node name="Opcoes" type="VBoxContainer" parent="Corpo/Pause/BG/ContainerMenus"]
 unique_name_in_owner = true
@@ -430,142 +611,15 @@ theme_override_styles/hover = SubResource("StyleBoxTexture_rsrlt")
 theme_override_styles/focus = SubResource("StyleBoxTexture_lbtxw")
 text = "Menu Principal"
 
-[node name="OpcoesAudio" type="VBoxContainer" parent="Corpo/Pause/BG/ContainerMenus"]
-unique_name_in_owner = true
-layout_mode = 2
-size_flags_stretch_ratio = 0.0
-
-[node name="SomMaster" type="VBoxContainer" parent="Corpo/Pause/BG/ContainerMenus/OpcoesAudio"]
-layout_mode = 2
-size_flags_vertical = 6
-
-[node name="TextureRect" type="TextureRect" parent="Corpo/Pause/BG/ContainerMenus/OpcoesAudio/SomMaster"]
-layout_mode = 2
-texture = ExtResource("13_mms7u")
-stretch_mode = 4
-
-[node name="Titulo" type="RichTextLabel" parent="Corpo/Pause/BG/ContainerMenus/OpcoesAudio/SomMaster/TextureRect"]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.080000006
-anchor_top = 0.507
-anchor_right = 0.080000006
-anchor_bottom = 0.507
-offset_left = -46.920013
-offset_top = -31.532001
-offset_right = 58.079987
-offset_bottom = 27.467999
-grow_horizontal = 2
-grow_vertical = 2
-size_flags_vertical = 3
-theme_override_font_sizes/normal_font_size = 28
-text = "Master"
-vertical_alignment = 1
-
-[node name="SliderMaster" type="HSlider" parent="Corpo/Pause/BG/ContainerMenus/OpcoesAudio/SomMaster"]
-unique_name_in_owner = true
-layout_mode = 2
-size_flags_vertical = 2
-theme_override_styles/slider = SubResource("StyleBoxFlat_mms7u")
-theme_override_styles/grabber_area = SubResource("StyleBoxFlat_281ki")
-theme_override_styles/grabber_area_highlight = SubResource("StyleBoxFlat_w37wn")
-max_value = 1.0
-step = 0.01
-value = 1.0
-
-[node name="SomBGM" type="VBoxContainer" parent="Corpo/Pause/BG/ContainerMenus/OpcoesAudio"]
-layout_mode = 2
-size_flags_vertical = 6
-
-[node name="TextureRect" type="TextureRect" parent="Corpo/Pause/BG/ContainerMenus/OpcoesAudio/SomBGM"]
-layout_mode = 2
-texture = ExtResource("13_mms7u")
-stretch_mode = 4
-
-[node name="Titulo" type="RichTextLabel" parent="Corpo/Pause/BG/ContainerMenus/OpcoesAudio/SomBGM/TextureRect"]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.080000006
-anchor_top = 0.507
-anchor_right = 0.080000006
-anchor_bottom = 0.507
-offset_left = -46.920013
-offset_top = -31.532001
-offset_right = 58.079987
-offset_bottom = 27.467999
-grow_horizontal = 2
-grow_vertical = 2
-size_flags_vertical = 3
-theme_override_font_sizes/normal_font_size = 28
-text = "Música
-"
-vertical_alignment = 1
-
-[node name="SliderBGM" type="HSlider" parent="Corpo/Pause/BG/ContainerMenus/OpcoesAudio/SomBGM"]
-unique_name_in_owner = true
-layout_mode = 2
-size_flags_vertical = 2
-theme_override_styles/slider = SubResource("StyleBoxFlat_mms7u")
-theme_override_styles/grabber_area = SubResource("StyleBoxFlat_281ki")
-theme_override_styles/grabber_area_highlight = SubResource("StyleBoxFlat_w37wn")
-max_value = 1.0
-step = 0.01
-value = 1.0
-
-[node name="SomSFX" type="VBoxContainer" parent="Corpo/Pause/BG/ContainerMenus/OpcoesAudio"]
-layout_mode = 2
-size_flags_vertical = 6
-
-[node name="TextureRect" type="TextureRect" parent="Corpo/Pause/BG/ContainerMenus/OpcoesAudio/SomSFX"]
-layout_mode = 2
-texture = ExtResource("13_mms7u")
-stretch_mode = 4
-
-[node name="Titulo" type="RichTextLabel" parent="Corpo/Pause/BG/ContainerMenus/OpcoesAudio/SomSFX/TextureRect"]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.080000006
-anchor_top = 0.507
-anchor_right = 0.080000006
-anchor_bottom = 0.507
-offset_left = -46.920013
-offset_top = -31.532001
-offset_right = 58.079987
-offset_bottom = 27.467999
-grow_horizontal = 2
-grow_vertical = 2
-size_flags_vertical = 3
-theme_override_font_sizes/normal_font_size = 28
-text = "Efeitos Sonoros
-"
-vertical_alignment = 1
-
-[node name="SliderSFX" type="HSlider" parent="Corpo/Pause/BG/ContainerMenus/OpcoesAudio/SomSFX"]
-unique_name_in_owner = true
-layout_mode = 2
-size_flags_vertical = 2
-theme_override_styles/slider = SubResource("StyleBoxFlat_mms7u")
-theme_override_styles/grabber_area = SubResource("StyleBoxFlat_281ki")
-theme_override_styles/grabber_area_highlight = SubResource("StyleBoxFlat_w37wn")
-max_value = 1.0
-step = 0.01
-value = 1.0
-
-[node name="Mapa" type="TextureRect" parent="Corpo/Pause/BG/ContainerMenus"]
-layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
-texture = ExtResource("15_w37wn")
-
 [node name="Abas" type="PanelContainer" parent="Corpo/Pause/BG"]
 clip_children = 1
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -331.0
+offset_left = -582.0
 offset_top = -51.0
-offset_right = 331.0
+offset_right = 585.0
 offset_bottom = 46.0
 grow_horizontal = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_281ki")
@@ -576,14 +630,26 @@ layout_mode = 2
 theme_override_constants/separation = 20
 alignment = 1
 
+[node name="Mapa" type="Button" parent="Corpo/Pause/BG/Abas/ContainerAbas"]
+layout_mode = 2
+size_flags_horizontal = 3
+focus_mode = 0
+focus_behavior_recursive = 1
+theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = SubResource("StyleBoxTexture_ghl3h")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_qbvrm")
+toggle_mode = true
+button_group = SubResource("ButtonGroup_f2wx0")
+text = "Mapa"
+
 [node name="Itens" type="Button" parent="Corpo/Pause/BG/Abas/ContainerAbas"]
 layout_mode = 2
 size_flags_horizontal = 3
 focus_mode = 0
 focus_behavior_recursive = 1
 theme_override_font_sizes/font_size = 24
-theme_override_styles/normal = SubResource("StyleBoxFlat_md4fy")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_7i7fj")
+theme_override_styles/normal = SubResource("StyleBoxTexture_4hs1h")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_h8urj")
 toggle_mode = true
 button_group = SubResource("ButtonGroup_f2wx0")
 text = "Inventário"
@@ -594,23 +660,11 @@ size_flags_horizontal = 3
 focus_mode = 0
 focus_behavior_recursive = 1
 theme_override_font_sizes/font_size = 24
-theme_override_styles/normal = SubResource("StyleBoxFlat_md4fy")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_7i7fj")
+theme_override_styles/normal = SubResource("StyleBoxTexture_dcyds")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_rc7pm")
 toggle_mode = true
 button_group = SubResource("ButtonGroup_f2wx0")
 text = "Amuletos"
-
-[node name="Opcoes" type="Button" parent="Corpo/Pause/BG/Abas/ContainerAbas"]
-layout_mode = 2
-size_flags_horizontal = 3
-focus_mode = 0
-focus_behavior_recursive = 1
-theme_override_font_sizes/font_size = 24
-theme_override_styles/normal = SubResource("StyleBoxFlat_md4fy")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_7i7fj")
-toggle_mode = true
-button_group = SubResource("ButtonGroup_f2wx0")
-text = "Opções"
 
 [node name="Audio" type="Button" parent="Corpo/Pause/BG/Abas/ContainerAbas"]
 layout_mode = 2
@@ -618,24 +672,24 @@ size_flags_horizontal = 3
 focus_mode = 0
 focus_behavior_recursive = 1
 theme_override_font_sizes/font_size = 24
-theme_override_styles/normal = SubResource("StyleBoxFlat_md4fy")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_7i7fj")
+theme_override_styles/normal = SubResource("StyleBoxTexture_6it0x")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_8ecy4")
 toggle_mode = true
 button_group = SubResource("ButtonGroup_f2wx0")
 text = "Áudio
 "
 
-[node name="Mapa" type="Button" parent="Corpo/Pause/BG/Abas/ContainerAbas"]
+[node name="Opcoes" type="Button" parent="Corpo/Pause/BG/Abas/ContainerAbas"]
 layout_mode = 2
 size_flags_horizontal = 3
 focus_mode = 0
 focus_behavior_recursive = 1
 theme_override_font_sizes/font_size = 24
-theme_override_styles/normal = SubResource("StyleBoxFlat_md4fy")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_7i7fj")
+theme_override_styles/normal = SubResource("StyleBoxTexture_bf46y")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_v10bk")
 toggle_mode = true
 button_group = SubResource("ButtonGroup_f2wx0")
-text = "Mapa"
+text = "Opções"
 
 [node name="Comandos" type="PanelContainer" parent="Corpo/Pause/BG"]
 layout_mode = 1
@@ -654,7 +708,6 @@ theme_override_styles/panel = SubResource("StyleBoxTexture_gp2h7")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="Corpo/Pause/BG/Comandos"]
 layout_mode = 2
-theme_override_constants/separation = 4
 alignment = 1
 
 [node name="Select" type="HBoxContainer" parent="Corpo/Pause/BG/Comandos/HBoxContainer"]

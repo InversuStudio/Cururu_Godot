@@ -1,4 +1,4 @@
-[gd_scene load_steps=42 format=4 uid="uid://exty4suocudj"]
+[gd_scene load_steps=43 format=4 uid="uid://exty4suocudj"]
 
 [ext_resource type="PackedScene" uid="uid://nohq28uk7lfk" path="res://Objetos/Entidades/Player.tscn" id="1_v83m2"]
 [ext_resource type="Texture2D" uid="uid://2x6q1ni8klgv" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/arvore_fundo1.png" id="2_f8u2d"]
@@ -33,6 +33,7 @@
 [ext_resource type="PackedScene" uid="uid://d0l4afitq8qog" path="res://Objetos/NPCs/Cartógrafo.tscn" id="23_hubad"]
 [ext_resource type="Script" uid="uid://dd16yu704x6wt" path="res://Scripts/Componentes/BGM_Player.gd" id="27_nh2iu"]
 [ext_resource type="AudioStream" uid="uid://c7qftchbhu6xc" path="res://Audio/SFX/AMBIENTE/Musica_Jogo.mp3" id="28_m4yll"]
+[ext_resource type="PackedScene" uid="uid://dnrivdxjrqapm" path="res://Objetos/Props/Vaso.tscn" id="31_1gvhd"]
 [ext_resource type="PackedScene" uid="uid://u28e3eudu6ch" path="res://Objetos/Funcionalidade/MainCamera.tscn" id="31_f8u2d"]
 [ext_resource type="Texture2D" uid="uid://c8t5do0sox8mj" path="res://Sprites/Cenário/Mata_Atlantica/Pedras e Ruinas/pedra_smusgo.png" id="33_5jfld"]
 [ext_resource type="Texture2D" uid="uid://c8tb73qiqhhk8" path="res://Sprites/Cenário/Mata_Atlantica/Background/Galhos/esquerda01.png" id="37_1gvhd"]
@@ -778,6 +779,9 @@ texture = ExtResource("10_5ka01")
 [node name="BancoSave" type="Sprite2D" parent="background/0/Chão"]
 position = Vector2(-4886, 811)
 texture = ExtResource("12_q40bt")
+
+[node name="Vaso" parent="background/0" instance=ExtResource("31_1gvhd")]
+position = Vector2(-3603, 1023)
 
 [node name="1" type="CanvasLayer" parent="background"]
 follow_viewport_enabled = true

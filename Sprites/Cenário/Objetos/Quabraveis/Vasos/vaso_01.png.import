@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b23uvpo1t5txg"
-path="res://.godot/imported/BAU2.png-b24888fc5773ab2941f27082487b0bcc.ctex"
+uid="uid://cpto60ng623tt"
+path="res://.godot/imported/vaso_01.png-0c9475ae07e24b426bb4aa2b777cbfbb.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Cenário/Objetos/Bau/BAU2.png"
-dest_files=["res://.godot/imported/BAU2.png-b24888fc5773ab2941f27082487b0bcc.ctex"]
+source_file="res://Sprites/Cenário/Objetos/Quabraveis/Vasos/vaso_01.png"
+dest_files=["res://.godot/imported/vaso_01.png-0c9475ae07e24b426bb4aa2b777cbfbb.ctex"]
 
 [params]
 
