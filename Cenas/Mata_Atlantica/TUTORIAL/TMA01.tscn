@@ -74,7 +74,7 @@ shader_parameter/wave_speed = 1.5
 shader_parameter/surface_ratio = 0.15
 shader_parameter/surface_softness = 0.08
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ny35b"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wmciv"]
 texture = ExtResource("21_t4v06")
 texture_region_size = Vector2i(128, 128)
 0:0/0 = 0
@@ -96,7 +96,7 @@ texture_region_size = Vector2i(128, 128)
 
 [sub_resource type="TileSet" id="TileSet_qeqrq"]
 tile_size = Vector2i(128, 128)
-sources/0 = SubResource("TileSetAtlasSource_ny35b")
+sources/0 = SubResource("TileSetAtlasSource_wmciv")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0f8ab"]
 texture = ExtResource("1_axyo6")
