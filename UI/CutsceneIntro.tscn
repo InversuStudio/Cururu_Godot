@@ -1,0 +1,62 @@
+[gd_scene load_steps=7 format=3 uid="uid://bmonoqdck6ten"]
+
+[ext_resource type="Texture2D" uid="uid://qaapa6521tp4" path="res://Sprites/UI/HQ/INTRO_P1.jpg" id="1_735ws"]
+[ext_resource type="Script" uid="uid://bc1xu2vyl6ya8" path="res://Scripts/Componentes/Cutscene_Intro.gd" id="1_bhbvs"]
+[ext_resource type="Texture2D" uid="uid://bma4jpkvys0w" path="res://Sprites/UI/HQ/INTRO_P2.jpg" id="3_2r26l"]
+[ext_resource type="AudioStream" uid="uid://w484n11fqypl" path="res://Audio/SFX/MENU INICIAL/selecao_menu.mp3" id="3_wmdw0"]
+[ext_resource type="Script" uid="uid://dd16yu704x6wt" path="res://Scripts/Componentes/BGM_Player.gd" id="4_be5h4"]
+[ext_resource type="AudioStream" uid="uid://cjorej6h7gw75" path="res://Audio/SFX/MENU INICIAL/menu_musica.mp3" id="5_uuu4a"]
+
+[node name="CutsceneIntro" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_bhbvs")
+
+[node name="HQ1" type="Sprite2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(779, 550.00006)
+scale = Vector2(0.4, 0.415)
+texture = ExtResource("1_735ws")
+
+[node name="HQ2" type="Sprite2D" parent="."]
+unique_name_in_owner = true
+visible = false
+position = Vector2(779, 550.00006)
+scale = Vector2(0.4, 0.415)
+texture = ExtResource("3_2r26l")
+
+[node name="HBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 1493.0
+offset_top = 395.0
+offset_right = 1845.0
+offset_bottom = 499.0
+grow_vertical = 2
+theme_override_constants/separation = 20
+
+[node name="Continuar" type="Button" parent="HBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(350, 100)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 40
+text = "A - Continuar"
+
+[node name="BtnSFX" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_wmdw0")
+volume_db = -15.0
+
+[node name="BGM_Player" type="Node" parent="."]
+script = ExtResource("4_be5h4")
+musica = ExtResource("5_uuu4a")
+metadata/_custom_type_script = "uid://dd16yu704x6wt"
+
+[connection signal="pressed" from="HBoxContainer/Continuar" to="." method="_on_main_pressed"]
+[connection signal="pressed" from="HBoxContainer/Continuar" to="." method="_on_continuar_pressed"]

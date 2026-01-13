@@ -22,7 +22,8 @@ func _on_main_pressed() -> void:
 	# Reseta dados do jogo
 	GameData.ResetData()
 	$BtnSFX.play()
-	Mundos.CarregaFase(Mundos.NomeFase.TUTORIAL_1)
+	Mundos.CarregaFase(Mundos.NomeFase.CutsceneIntro)
+	#Mundos.CarregaFase(Mundos.NomeFase.TUTORIAL_1)
 
 func _on_fase_teste_pressed() -> void:
 	$BtnSFX.play()

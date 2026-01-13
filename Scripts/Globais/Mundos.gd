@@ -27,6 +27,7 @@ var arquivo_fase: Array[String] = [
 	"res://Cenas/Mata_Atlantica/AREA02/A2MA07.tscn",
 	"res://Cenas/Mata_Atlantica/AREA03/MA_04.tscn",
 	"res://Cenas/Demo/FinalDemo.tscn",
+	"res://UI/CutsceneIntro.tscn",
 ]
 
 # Enumerador de fases, deve seguir a mesma ordem que a lista
@@ -56,6 +57,7 @@ enum NomeFase {
 	Mata_Atlantica_2_7,
 	Mata_Atlantica_MA_04,
 	FinalDemo,
+	CutsceneIntro,
 }
 
 # Lista que registra que peças de coração foram coletadas
