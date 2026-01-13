@@ -74,7 +74,7 @@ var deu_air_dash: bool = false
 
 var input_move: Vector2 = Vector2.ZERO
 var pode_mover: bool = true
-var pode_anim:bool = true
+#var pode_anim:bool = true
 
 @onready var check_agua_up: RayCast2D = $CheckAguaUp
 @onready var check_agua_down: RayCast2D = $CheckAguaDown
@@ -179,6 +179,7 @@ func VidaMudou(vida_nova, vida_antiga) -> void:
 # COMPORTAMENTO AO MORRER
 func Morte() -> void:
 	print("MORRI")
+	GameData.game_start = false
 	if await GameData.Load() == false:
 		GameData.player_morreu = true
 		Mundos.CarregaFase(Mundos.NomeFase.TUTORIAL_1)

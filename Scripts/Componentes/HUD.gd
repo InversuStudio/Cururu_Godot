@@ -6,6 +6,7 @@ const sprite_vazio:Texture2D = preload("res://Sprites/UI/HUD/Barra_Vida/UIHUD-VI
 @export var inventario_itens:Control = null
 @export var inventario_amuletos:Control = null
 @export var item_rapido:Control = null
+signal usa_item_rapido
 
 var hud_ativo:int = 0
 var configurado:bool = false
@@ -63,6 +64,9 @@ func _ready() -> void:
 	GameData.connect("update_vida_atual", UpdateVida)
 	GameData.connect("update_moeda", UpdateMoeda)
 	Mundos.connect("fase_mudou", MostraHUD)
+	
+	item_rapido.connect("usa_item", usa_item_rapido.emit)
+	
 	%Pause.connect("visibility_changed", func():
 		get_tree().paused = true if %Pause.visible else false)
 	# Organiza visibilidade das abas

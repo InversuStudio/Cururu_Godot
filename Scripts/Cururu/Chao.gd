@@ -16,14 +16,19 @@ var pode_anim: bool = false
 var turn:bool = false
 #variavel temporária para MVP vvv
 var pode_emitir_vfx: bool = true
+var item_cura:bool = false
+var checa_tempo:bool = false
 
 @onready var last_dir:int = -1 if GameData.direcao else 1
 
 func _ready() -> void:
+	HUD.usa_item_rapido.connect(func():
+		item_cura = true
+		)
 	await get_tree().current_scene.ready
 	%RunVFXCooldown.connect("timeout", SpawnFolhasRun)
 	parent.connect("virou", func():
-		if get_parent().current_state == self:#pode_anim:
+		if get_parent().current_state == self and !item_cura:#pode_anim:
 			%Anim.play("Turn")
 			turn = true
 		#if get_parent().current_state == self:
@@ -42,7 +47,7 @@ func Enter() -> void:
 	if GameData.veio_de_baixo:
 		GameData.veio_de_baixo = false
 	var flip:float = -1.0 if parent.sprite.flip_h else 1.0
-	if parent.input_move.x and flip != parent.input_buffer[1]:
+	if parent.input_move.x and flip != parent.input_buffer[1] and !item_cura:
 		%Anim.play("Turn")
 		turn = true
 		Flip()
@@ -108,14 +113,25 @@ func FixedUpdate(delta: float) -> State:
 			parent.velocity.x = move_toward(parent.velocity.x, dir, parent.decel * delta)
 	
 	if pode_anim and !turn:
+		var pos_anim:float = %Anim.current_animation_position if checa_tempo else 0.0
 		if parent.input_move.x:
-			%Anim.play("Run")
+			if item_cura:
+				%Anim.play("Cura_Move")
+				%Anim.seek(pos_anim)
+				Flip()
+			else: %Anim.play("Run")
 			if %RunVFXCooldown.is_stopped():
 				%RunVFXCooldown.start()
 		else:
-			%Anim.play("Idle")
+			if item_cura:
+				%Anim.play("Cura_Parado")
+				%Anim.seek(pos_anim)
+				Flip()
+			else: %Anim.play("Idle")
 			%RunVFXCooldown.stop()
-		
+	
+		checa_tempo = true if item_cura else false
+	
 	# Se não estiver no chão, mudar State
 	if not parent.is_on_floor():
 		parent.is_coyote = true
@@ -125,13 +141,19 @@ func FixedUpdate(delta: float) -> State:
 	return null # Não muda o State
 
 func _on_anim_animation_finished(anim_name: StringName) -> void:
-	if anim_name == "Land":
-		print("Pode Anim")
-		pode_anim = true
-	if anim_name == "Turn":
-		print("Turn acabou")
-		turn = false
-		pode_anim = true
+	match anim_name:
+		"Land":
+			print("Pode Anim")
+			pode_anim = true
+		"Turn":
+			print("Turn acabou")
+			turn = false
+			pode_anim = true
+		"Cura_Parado":
+			item_cura = false
+		"Cura_Move":
+			item_cura = false
+		
 
 func Flip() -> void:
 	if parent.input_move.x > 0:

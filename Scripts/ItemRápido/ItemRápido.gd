@@ -1,6 +1,7 @@
 extends Control
 
 @export var cena_inventario:Control = null
+signal usa_item
 
 var id_item:int = 0:
 	set(valor):
@@ -36,7 +37,7 @@ func _input(_event: InputEvent) -> void:
 	if Input.is_action_just_pressed("usar_item"):
 		if Inventario.inventario.size() > 0:
 			cena_inventario.UsaItem(id_item)
-						
+			usa_item.emit()
 			if id_item > Inventario.inventario.size() - 1:
 				id_item -= 1
 			
