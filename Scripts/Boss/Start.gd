@@ -24,6 +24,7 @@ func Update(_delta : float) -> State:
 
 func _on_anim_animation_finished(anim_name: StringName) -> void:
 	if anim_name == "Surge" and get_parent().current_state == self:
+		%GritoSFX.stream = parent.gritos[0]
 		%Anim.play("Grito")
 		%BarraVida.show()
 		BGM.TocaMusica(parent.musica_luta, -3.)
@@ -32,5 +33,8 @@ func _on_anim_animation_finished(anim_name: StringName) -> void:
 				parent.tween.kill()
 			parent.tween = create_tween()
 			parent.tween.tween_property(%BarraVida, "value", %VidaBoss.vida_max, 2.)
+			
+			var tween:Tween = create_tween()
+			tween.tween_property(%BarraArmor, "value", %VidaMCorpo.vida_max, 2.5)
 	if anim_name == "Grito":
 		inicia_luta = true

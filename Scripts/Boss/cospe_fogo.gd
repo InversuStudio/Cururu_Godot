@@ -10,6 +10,8 @@ const bola_fogo:PackedScene = preload("res://Cenas/BossTeste/BolaDeFogo.tscn")
 
 func Enter() -> void:
 	Console._Print("Cospe Fogo aqui")
+	%GritoSFX.stream = parent.gritos[randi_range(1, 2)]
+	%GritoSFX.play()
 	%Anim.play("CospeFogo")
 	parent.num_vul += 1
 	%TimerIdle.wait_time = parent.tempo_idle_cuspe

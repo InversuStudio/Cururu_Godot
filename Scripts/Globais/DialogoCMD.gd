@@ -1,5 +1,10 @@
 extends Node
 
+const balao:PackedScene = preload("res://Dialogos/BalaoFala.tscn")
+
+func IniciaDialogo(res:DialogueResource) -> void:
+	DialogueManager.show_dialogue_balloon_scene(balao, res)
+
 func AddItem(nome:String, desc:String, img_path:String) -> void:
 	#get_tree().get_first_node_in_group("BalaoFala").hide()
 	var img:Texture2D = null

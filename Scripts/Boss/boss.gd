@@ -29,12 +29,19 @@ var tween:Tween = null
 
 var morreu:bool = false
 
+## Lista de gritos do Boitatá.[br]O primeiro item é o rigido de entrada
+@export var gritos:Array[AudioStream] = []
+
+## Arquivo de diálogo
+@export var dialogo:DialogueResource = null
+
 func ChecaArmor() -> void:
 	if %VidaMCorpo.vida_atual <= 0:
 	#if %VidaMCabeca.vida_atual <= 0 and %VidaMCorpo.vida_atual <= 0:
 		state_machine.MudaState(state_machine.find_child("Nocaute"))
 
 func _ready() -> void:
+	%SpriteMain.material.set_shader_parameter("valor", 0.0)
 	# Sinais de vida
 	%VidaBoss.connect("alterou_vida", TomouDano)
 	%VidaMCabeca.connect("alterou_vida", func(atual:int, _old:int):
@@ -44,7 +51,8 @@ func _ready() -> void:
 			%HurtCabeca.hide()
 			ChecaArmor()
 	)
-	%VidaMCorpo.connect("alterou_vida", func(atual:int, _old:int):
+	%VidaMCorpo.connect("alterou_vida", func(atual:int, old:int):
+		ArmorDano(atual, old)
 		if atual <= 0:
 			#Esconde sprite armadura
 			%HurtCorpo.set_deferred("monitorable", false)
@@ -59,6 +67,8 @@ func _ready() -> void:
 	%BarraVida.max_value = %VidaBoss.vida_max
 	%BarraVida.value = 0.0
 	%BarraVida.hide()
+	%BarraArmor.max_value = %VidaMCorpo.vida_max
+	%BarraArmor.value = 0.0
 	
 	# Conecta sinal para iniciar luta
 	if area_check_player:
@@ -95,8 +105,17 @@ func TomouDano(vida_atual:int, _vida_antiga:int) -> void:
 	if vida_atual == 10:
 		tempo_idle_cuspe /= 2.0
 		tempo_idle_pilar /= 2.0
-		
-	#Console._Print(vida_atual)
+
+func ArmorDano(vida_atual:int, _vida_antiga:int) -> void:
+	if tween:
+		tween.kill()
+	tween = create_tween()
+	tween.tween_property(%BarraArmor, "value", vida_atual, .15)
+	
+	if vida_atual == 10:
+		tempo_idle_cuspe /= 2.0
+		tempo_idle_pilar /= 2.0
+
 
 func ResetArmor() -> void:
 	%VidaMCabeca.RecebeCura(100)
@@ -114,8 +133,8 @@ func Morte() -> void:
 	%BarraVida.hide()
 	%Anim.play("Surge", -1, -1.0, true)
 	morreu = true
-	#BGM.TocaMusica()
-	Mundos.CarregaFase(Mundos.NomeFase.FinalDemo)
+	BGM.TocaMusica()
+	#Mundos.CarregaFase(Mundos.NomeFase.FinalDemo)
 
 # ESSAS FUNÇÕES SÃO TEMPORÁRIAS
 func HidePartes() -> void:

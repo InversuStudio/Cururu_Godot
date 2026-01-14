@@ -33,9 +33,10 @@ func _ready() -> void:
 		if c is CollisionShape2D:
 			col = c
 	if sprite:
-		s_material = ShaderMaterial.new()
-		s_material.shader = hit_shader
-		sprite.material = s_material
+		if sprite.material == null:
+			s_material = ShaderMaterial.new()
+			s_material.shader = hit_shader
+			sprite.material = s_material
 		material_sprite = sprite.material
 
 # FUNÇÃO DE RECEBER DANO

@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://dt1a45lx75dfd"
+path="res://.godot/imported/Boitata.dialogue-1fabce2f3889fb5a1eddb9fc0d99de7e.tres"
+
+[deps]
+
+source_file="res://Dialogos/Boitata.dialogue"
+dest_files=["res://.godot/imported/Boitata.dialogue-1fabce2f3889fb5a1eddb9fc0d99de7e.tres"]
+
+[params]
+
+defaults=true

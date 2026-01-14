@@ -898,6 +898,34 @@ tracks/1/keys = {
 "values": [&"Acorda"]
 }
 
+[sub_resource type="Animation" id="Animation_x4him"]
+resource_name = "Cura_Move"
+length = 0.65
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Cururu:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"Cura_Move"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Cururu:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.06666667, 0.13333334, 0.20000002, 0.26666668, 0.33333334, 0.40000004, 0.4666667, 0.53333336, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+}
+
 [sub_resource type="Animation" id="Animation_toswy"]
 resource_name = "Cura_Parado"
 length = 0.65
@@ -1189,7 +1217,7 @@ tracks/0/loop_wrap = true
 tracks/0/keys = {
 "times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
-"update": 0,
+"update": 1,
 "values": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 }
 tracks/1/type = "value"
@@ -1201,7 +1229,7 @@ tracks/1/loop_wrap = true
 tracks/1/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
-"update": 0,
+"update": 1,
 "values": [&"Idle"]
 }
 tracks/2/type = "method"
@@ -1872,34 +1900,6 @@ tracks/2/keys = {
 }]
 }
 
-[sub_resource type="Animation" id="Animation_x4him"]
-resource_name = "Cura_Move"
-length = 0.65
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Cururu:animation")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [&"Cura_Move"]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Cururu:frame")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.06666667, 0.13333334, 0.20000002, 0.26666668, 0.33333334, 0.40000004, 0.4666667, 0.53333336, 0.6),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
-"update": 1,
-"values": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
-}
-
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_g0l4m"]
 _data = {
 &"Acorda": SubResource("Animation_o645d"),
@@ -1974,6 +1974,7 @@ position = Vector2(0, -118)
 scale = Vector2(0.375651, 0.375651)
 sprite_frames = SubResource("SpriteFrames_ser7u")
 animation = &"Special"
+frame = 1
 speed_scale = 1.6
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -2009,6 +2010,7 @@ position = Vector2(-2, 0)
 collision_mask = 16
 ignore = NodePath("../../HurtContainer/HurtBox")
 parent = NodePath("../..")
+hit_freeze = 0.05
 
 [node name="ColMel1" type="CollisionShape2D" parent="HitContainer/Melee1"]
 position = Vector2(122, -118.99999)
@@ -2021,6 +2023,7 @@ debug_color = Color(0.69455, 0.495447, 0, 0.42)
 collision_mask = 16
 ignore = NodePath("../../HurtContainer/HurtBox")
 parent = NodePath("../..")
+hit_freeze = 0.05
 
 [node name="ColMel2" type="CollisionShape2D" parent="HitContainer/Melee2"]
 position = Vector2(124, -104)
@@ -2140,7 +2143,7 @@ one_shot = true
 
 [node name="MeleeTime" type="Timer" parent="Timers"]
 unique_name_in_owner = true
-wait_time = 0.12
+wait_time = 0.15
 one_shot = true
 ignore_time_scale = true
 

@@ -10,6 +10,8 @@ const pilar:PackedScene = preload("res://Cenas/BossTeste/Labareda.tscn")
 
 func Enter() -> void:
 	Console._Print("Pilar Fogo aqui")
+	%GritoSFX.stream = parent.gritos[randi_range(1, 2)]
+	%GritoSFX.play()
 	%Anim.play("Pilar")
 	parent.num_vul += 1
 	Console._Print(parent.num_vul)

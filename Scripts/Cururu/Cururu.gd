@@ -85,6 +85,7 @@ var detalhe_chao:Array = [false, ""]
 signal virou
 var input_buffer:Array[float] = [0.0, 0.0]
 
+@onready var anim: AnimationPlayer = %Anim
 
 func _ready() -> void:
 	if GameData.game_start == false:

@@ -19,8 +19,6 @@ var pode_emitir_vfx: bool = true
 var item_cura:bool = false
 var checa_tempo:bool = false
 
-@onready var last_dir:int = -1 if GameData.direcao else 1
-
 func _ready() -> void:
 	HUD.usa_item_rapido.connect(func():
 		item_cura = true
@@ -113,21 +111,21 @@ func FixedUpdate(delta: float) -> State:
 			parent.velocity.x = move_toward(parent.velocity.x, dir, parent.decel * delta)
 	
 	if pode_anim and !turn:
-		var pos_anim:float = %Anim.current_animation_position if checa_tempo else 0.0
+		var pos_anim:float = parent.anim.current_animation_position if checa_tempo else 0.0
 		if parent.input_move.x:
 			if item_cura:
-				%Anim.play("Cura_Move")
-				%Anim.seek(pos_anim)
+				parent.anim.play("Cura_Move")
+				parent.anim.seek(pos_anim)
 				Flip()
-			else: %Anim.play("Run")
+			else: parent.anim.play("Run")
 			if %RunVFXCooldown.is_stopped():
 				%RunVFXCooldown.start()
 		else:
 			if item_cura:
-				%Anim.play("Cura_Parado")
-				%Anim.seek(pos_anim)
+				parent.anim.play("Cura_Parado")
+				parent.anim.seek(pos_anim)
 				Flip()
-			else: %Anim.play("Idle")
+			else: parent.anim.play("Idle")
 			%RunVFXCooldown.stop()
 	
 		checa_tempo = true if item_cura else false
