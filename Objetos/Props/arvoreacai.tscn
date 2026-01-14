@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://drxk6hwuv2e3i" path="res://Scripts/Componentes/Bau.gd" id="1_b7nho"]
 [ext_resource type="PackedScene" uid="uid://va5pjd6vuuo2" path="res://Objetos/Funcionalidade/CompHurtBox.tscn" id="2_etetv"]
-[ext_resource type="AudioStream" uid="uid://b3mmkipqf30jd" path="res://Audio/SFX/INIMIGOS/HIT_INIMIGO.wav" id="3_r6u0v"]
+[ext_resource type="AudioStream" uid="uid://42ve7xiilmug" path="res://Audio/SFX/AMBIENTE/Mexendo no Arbusto.wav" id="3_x8dq1"]
 [ext_resource type="Texture2D" uid="uid://dtggowcotioot" path="res://Sprites/Cenário/Objetos/frutos/acai_01.png" id="4_qtac0"]
 [ext_resource type="Texture2D" uid="uid://cy672eb7acjdw" path="res://Sprites/Cenário/Objetos/frutos/acai_02.png" id="5_x8dq1"]
 [ext_resource type="Texture2D" uid="uid://cdtknlx234dq4" path="res://Sprites/Cenário/Objetos/frutos/arvore_acai.png" id="5_xmbds"]
@@ -45,7 +45,7 @@ script = ExtResource("1_b7nho")
 
 [node name="HurtBox" parent="." node_paths=PackedStringArray("sprite") instance=ExtResource("2_etetv")]
 collision_layer = 16
-hit_sfx = ExtResource("3_r6u0v")
+hit_sfx = ExtResource("3_x8dq1")
 sprite = NodePath("../Sprite")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HurtBox"]

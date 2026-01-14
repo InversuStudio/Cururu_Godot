@@ -162,11 +162,12 @@
 [ext_resource type="Texture2D" uid="uid://15c7aidibbn5" path="res://Sprites/Cururu/Virada/01.png" id="84_mm0hc"]
 [ext_resource type="Texture2D" uid="uid://cdy8yt07p7v8" path="res://Sprites/Cururu/Virada/02.png" id="85_0vd0f"]
 [ext_resource type="Texture2D" uid="uid://b73nkcosr250e" path="res://Sprites/VFX/Iluminação/LightCururu.png" id="87_0w8y8"]
-[ext_resource type="AudioStream" uid="uid://d4ghkqb2kyw1m" path="res://Audio/SFX/Ataque_Basico.wav" id="90_2t31h"]
 [ext_resource type="AudioStream" uid="uid://chf637hlgvwxq" path="res://Audio/SFX/Cuica_1.ogg" id="90_s2eek"]
 [ext_resource type="AudioStream" uid="uid://b1e3re8ykc11o" path="res://Audio/SFX/Cuica_2.ogg" id="91_vpyrf"]
 [ext_resource type="Script" uid="uid://b47dm1pnrhmt1" path="res://Scripts/Cururu/Nadando.gd" id="96_0digr"]
 [ext_resource type="Script" uid="uid://cg3i231v8dhoy" path="res://Objetos/Entidades/acorda.gd" id="110_yy1dt"]
+[ext_resource type="AudioStream" uid="uid://cgdpmr71sg21t" path="res://Audio/SFX/CURURU/Ataque basico A.wav" id="163_x4him"]
+[ext_resource type="AudioStream" uid="uid://dump1jmis1jaa" path="res://Audio/SFX/CURURU/Ataque basico B.wav" id="164_lv5tx"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_k0fov"]
 animations = [{
@@ -804,7 +805,7 @@ tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/path = NodePath("Cururu:frame")
-tracks/0/interp = 1
+tracks/0/interp = 0
 tracks/0/loop_wrap = true
 tracks/0/keys = {
 "times": PackedFloat32Array(0, 0.1, 0.19999987, 0.29999992, 0.39999995, 0.49999997, 0.5999999, 0.6999999, 0.8, 0.9),
@@ -816,7 +817,7 @@ tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/path = NodePath("Cururu:animation")
-tracks/1/interp = 1
+tracks/1/interp = 0
 tracks/1/loop_wrap = true
 tracks/1/keys = {
 "times": PackedFloat32Array(0),
@@ -832,7 +833,7 @@ tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/path = NodePath("Cururu:animation")
-tracks/0/interp = 1
+tracks/0/interp = 0
 tracks/0/loop_wrap = true
 tracks/0/keys = {
 "times": PackedFloat32Array(0),
@@ -844,7 +845,7 @@ tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/path = NodePath("Cururu:frame")
-tracks/1/interp = 1
+tracks/1/interp = 0
 tracks/1/loop_wrap = true
 tracks/1/keys = {
 "times": PackedFloat32Array(0, 0.06666667, 0.13333334, 0.20000002, 0.26666668, 0.33333334, 0.40000004, 0.4666667, 0.53333336, 0.6),
@@ -860,7 +861,7 @@ tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/path = NodePath("Cururu:animation")
-tracks/0/interp = 1
+tracks/0/interp = 0
 tracks/0/loop_wrap = true
 tracks/0/keys = {
 "times": PackedFloat32Array(0),
@@ -872,7 +873,7 @@ tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/path = NodePath("Cururu:frame")
-tracks/1/interp = 1
+tracks/1/interp = 0
 tracks/1/loop_wrap = true
 tracks/1/keys = {
 "times": PackedFloat32Array(0, 0.06666667, 0.13333334, 0.20000002, 0.26666668, 0.33333334, 0.40000004, 0.4666667, 0.53333336, 0.6),
@@ -888,7 +889,7 @@ tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/path = NodePath("HitContainer/Melee1/ColMel1:disabled")
-tracks/0/interp = 1
+tracks/0/interp = 0
 tracks/0/loop_wrap = true
 tracks/0/keys = {
 "times": PackedFloat32Array(0),
@@ -900,7 +901,7 @@ tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/path = NodePath("HitContainer/Melee2/ColMel2:disabled")
-tracks/1/interp = 1
+tracks/1/interp = 0
 tracks/1/loop_wrap = true
 tracks/1/keys = {
 "times": PackedFloat32Array(0),
@@ -912,7 +913,7 @@ tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
 tracks/2/path = NodePath("Cururu:frame")
-tracks/2/interp = 1
+tracks/2/interp = 0
 tracks/2/loop_wrap = true
 tracks/2/keys = {
 "times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6),
@@ -924,7 +925,7 @@ tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
 tracks/3/path = NodePath("Cururu:animation")
-tracks/3/interp = 1
+tracks/3/interp = 0
 tracks/3/loop_wrap = true
 tracks/3/keys = {
 "times": PackedFloat32Array(0),
@@ -954,7 +955,7 @@ tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/path = NodePath("Cururu:frame")
-tracks/0/interp = 1
+tracks/0/interp = 0
 tracks/0/loop_wrap = true
 tracks/0/keys = {
 "times": PackedFloat32Array(0, 0.05, 0.1),
@@ -966,7 +967,7 @@ tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/path = NodePath("Cururu:animation")
-tracks/1/interp = 1
+tracks/1/interp = 0
 tracks/1/loop_wrap = true
 tracks/1/keys = {
 "times": PackedFloat32Array(0),
@@ -983,7 +984,7 @@ tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/path = NodePath("Cururu:frame")
-tracks/0/interp = 1
+tracks/0/interp = 0
 tracks/0/loop_wrap = true
 tracks/0/keys = {
 "times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
@@ -995,7 +996,7 @@ tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/path = NodePath("Cururu:animation")
-tracks/1/interp = 1
+tracks/1/interp = 0
 tracks/1/loop_wrap = true
 tracks/1/keys = {
 "times": PackedFloat32Array(0),
@@ -1011,7 +1012,7 @@ tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/path = NodePath("Cururu:frame")
-tracks/0/interp = 1
+tracks/0/interp = 0
 tracks/0/loop_wrap = true
 tracks/0/keys = {
 "times": PackedFloat32Array(0, 0.05, 0.1, 0.15),
@@ -1023,7 +1024,7 @@ tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/path = NodePath("Cururu:animation")
-tracks/1/interp = 1
+tracks/1/interp = 0
 tracks/1/loop_wrap = true
 tracks/1/keys = {
 "times": PackedFloat32Array(0),
@@ -1139,7 +1140,7 @@ tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/path = NodePath("Cururu:frame")
-tracks/0/interp = 1
+tracks/0/interp = 0
 tracks/0/loop_wrap = true
 tracks/0/keys = {
 "times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1),
@@ -1151,7 +1152,7 @@ tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/path = NodePath("Cururu:animation")
-tracks/1/interp = 1
+tracks/1/interp = 0
 tracks/1/loop_wrap = true
 tracks/1/keys = {
 "times": PackedFloat32Array(0),
@@ -1237,7 +1238,7 @@ tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/path = NodePath("HitContainer/Melee1/ColMel1:disabled")
-tracks/0/interp = 1
+tracks/0/interp = 0
 tracks/0/loop_wrap = true
 tracks/0/keys = {
 "times": PackedFloat32Array(0, 0.1, 0.3),
@@ -1263,7 +1264,7 @@ tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
 tracks/2/path = NodePath("Cururu:frame")
-tracks/2/interp = 1
+tracks/2/interp = 0
 tracks/2/loop_wrap = true
 tracks/2/keys = {
 "times": PackedFloat32Array(0.05553951, 0.122215815, 0.1888825, 0.2532066),
@@ -1275,7 +1276,7 @@ tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
 tracks/3/path = NodePath("Cururu:animation")
-tracks/3/interp = 1
+tracks/3/interp = 0
 tracks/3/loop_wrap = true
 tracks/3/keys = {
 "times": PackedFloat32Array(0),
@@ -1305,7 +1306,7 @@ tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/path = NodePath("HitContainer/Melee2/ColMel2:disabled")
-tracks/0/interp = 1
+tracks/0/interp = 0
 tracks/0/loop_wrap = true
 tracks/0/keys = {
 "times": PackedFloat32Array(0, 0.3),
@@ -1331,24 +1332,24 @@ tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
 tracks/2/path = NodePath("Cururu:frame")
-tracks/2/interp = 1
+tracks/2/interp = 0
 tracks/2/loop_wrap = true
 tracks/2/keys = {
 "times": PackedFloat32Array(0, 0.087223545, 0.17426936, 0.25833333),
 "transitions": PackedFloat32Array(1, 1, 1, 1),
-"update": 0,
+"update": 1,
 "values": [0, 1, 2, 3]
 }
 tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
 tracks/3/path = NodePath("Cururu:animation")
-tracks/3/interp = 1
+tracks/3/interp = 0
 tracks/3/loop_wrap = true
 tracks/3/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
-"update": 0,
+"update": 1,
 "values": [&"Melee2"]
 }
 tracks/4/type = "method"
@@ -1373,7 +1374,7 @@ tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/path = NodePath("Cururu:frame")
-tracks/0/interp = 1
+tracks/0/interp = 0
 tracks/0/loop_wrap = true
 tracks/0/keys = {
 "times": PackedFloat32Array(0),
@@ -1385,7 +1386,7 @@ tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/path = NodePath("Cururu:animation")
-tracks/1/interp = 1
+tracks/1/interp = 0
 tracks/1/loop_wrap = true
 tracks/1/keys = {
 "times": PackedFloat32Array(0),
@@ -1397,7 +1398,7 @@ tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
 tracks/2/path = NodePath("HitContainer/MeleeDown/ColMelDown:disabled")
-tracks/2/interp = 1
+tracks/2/interp = 0
 tracks/2/loop_wrap = true
 tracks/2/keys = {
 "times": PackedFloat32Array(0, 0.3),
@@ -1427,31 +1428,31 @@ tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/path = NodePath("Cururu:frame")
-tracks/0/interp = 1
+tracks/0/interp = 0
 tracks/0/loop_wrap = true
 tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
-"update": 0,
+"update": 1,
 "values": [0]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/path = NodePath("Cururu:animation")
-tracks/1/interp = 1
+tracks/1/interp = 0
 tracks/1/loop_wrap = true
 tracks/1/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
-"update": 0,
+"update": 1,
 "values": [&"Melee_Up"]
 }
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
 tracks/2/path = NodePath("HitContainer/MeleeUp/ColMelUp:disabled")
-tracks/2/interp = 1
+tracks/2/interp = 0
 tracks/2/loop_wrap = true
 tracks/2/keys = {
 "times": PackedFloat32Array(0, 0.3),
@@ -1482,7 +1483,7 @@ tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/path = NodePath("Cururu:frame")
-tracks/0/interp = 1
+tracks/0/interp = 0
 tracks/0/loop_wrap = true
 tracks/0/keys = {
 "times": PackedFloat32Array(0, 0.10000001, 0.20000002, 0.3, 0.40000004),
@@ -1494,7 +1495,7 @@ tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/path = NodePath("Cururu:animation")
-tracks/1/interp = 1
+tracks/1/interp = 0
 tracks/1/loop_wrap = true
 tracks/1/keys = {
 "times": PackedFloat32Array(0),
@@ -1511,100 +1512,25 @@ tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/path = NodePath("Cururu:frame")
-tracks/0/interp = 1
+tracks/0/interp = 0
 tracks/0/loop_wrap = true
 tracks/0/keys = {
 "times": PackedFloat32Array(0, 0.10000001, 0.20000002, 0.3, 0.40000004),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1),
-"update": 0,
+"update": 1,
 "values": [0, 1, 2, 3, 4]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/path = NodePath("Cururu:animation")
-tracks/1/interp = 1
+tracks/1/interp = 0
 tracks/1/loop_wrap = true
 tracks/1/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
-"update": 0,
+"update": 1,
 "values": [&"Nado_Move"]
-}
-
-[sub_resource type="Animation" id="Animation_ny8nr"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("HitContainer/MeleeUp/ColMelUp:disabled")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [true]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("HitContainer/MeleeDown/ColMelDown:disabled")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [true]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("Cururu:frame")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [1]
-}
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("Cururu:animation")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [&"Special"]
-}
-tracks/4/type = "value"
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/path = NodePath("HitContainer/SpecialUp/ColSpecialUp:disabled")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [true]
-}
-tracks/5/type = "value"
-tracks/5/imported = false
-tracks/5/enabled = true
-tracks/5/path = NodePath("HitContainer/SpecialDown/ColSpecialDown:disabled")
-tracks/5/interp = 1
-tracks/5/loop_wrap = true
-tracks/5/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [true]
 }
 
 [sub_resource type="Animation" id="Animation_prtj7"]
@@ -1616,7 +1542,7 @@ tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/path = NodePath("Cururu:animation")
-tracks/0/interp = 1
+tracks/0/interp = 0
 tracks/0/loop_wrap = true
 tracks/0/keys = {
 "times": PackedFloat32Array(0),
@@ -1642,7 +1568,7 @@ tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
 tracks/2/path = NodePath("Cururu:frame")
-tracks/2/interp = 1
+tracks/2/interp = 0
 tracks/2/loop_wrap = true
 tracks/2/keys = {
 "times": PackedFloat32Array(0, 0.075, 0.15, 0.22500001, 0.3, 0.375, 0.45000002, 0.525),
@@ -1658,7 +1584,7 @@ tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/path = NodePath("HitContainer/Special/ColSpecial:disabled")
-tracks/0/interp = 1
+tracks/0/interp = 0
 tracks/0/loop_wrap = true
 tracks/0/keys = {
 "times": PackedFloat32Array(0.23333333, 0.26666668),
@@ -1670,24 +1596,24 @@ tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/path = NodePath("Cururu:frame")
-tracks/1/interp = 1
+tracks/1/interp = 0
 tracks/1/loop_wrap = true
 tracks/1/keys = {
 "times": PackedFloat32Array(0, 0.06666667, 0.13333334, 0.2, 0.26666668, 0.33333334, 0.4, 0.46666667, 0.53333336, 0.6),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
-"update": 0,
+"update": 1,
 "values": [0, 1, 2, 3, 4, 5, 6, 7, 8, 0]
 }
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
 tracks/2/path = NodePath("Cururu:animation")
-tracks/2/interp = 1
+tracks/2/interp = 0
 tracks/2/loop_wrap = true
 tracks/2/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
-"update": 0,
+"update": 1,
 "values": [&"Special"]
 }
 tracks/3/type = "method"
@@ -1712,7 +1638,7 @@ tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/path = NodePath("Cururu:frame")
-tracks/0/interp = 1
+tracks/0/interp = 0
 tracks/0/loop_wrap = true
 tracks/0/keys = {
 "times": PackedFloat32Array(0),
@@ -1724,7 +1650,7 @@ tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/path = NodePath("Cururu:animation")
-tracks/1/interp = 1
+tracks/1/interp = 0
 tracks/1/loop_wrap = true
 tracks/1/keys = {
 "times": PackedFloat32Array(0),
@@ -1736,7 +1662,7 @@ tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
 tracks/2/path = NodePath("HitContainer/SpecialDown/ColSpecialDown:disabled")
-tracks/2/interp = 1
+tracks/2/interp = 0
 tracks/2/loop_wrap = true
 tracks/2/keys = {
 "times": PackedFloat32Array(0, 0.7),
@@ -1752,7 +1678,7 @@ tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/path = NodePath("Cururu:frame")
-tracks/0/interp = 1
+tracks/0/interp = 0
 tracks/0/loop_wrap = true
 tracks/0/keys = {
 "times": PackedFloat32Array(0),
@@ -1764,7 +1690,7 @@ tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/path = NodePath("Cururu:animation")
-tracks/1/interp = 1
+tracks/1/interp = 0
 tracks/1/loop_wrap = true
 tracks/1/keys = {
 "times": PackedFloat32Array(0),
@@ -1776,7 +1702,7 @@ tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
 tracks/2/path = NodePath("HitContainer/SpecialUp/ColSpecialUp:disabled")
-tracks/2/interp = 1
+tracks/2/interp = 0
 tracks/2/loop_wrap = true
 tracks/2/keys = {
 "times": PackedFloat32Array(0, 0.7),
@@ -1792,7 +1718,7 @@ tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/path = NodePath("Cururu:frame")
-tracks/0/interp = 1
+tracks/0/interp = 0
 tracks/0/loop_wrap = true
 tracks/0/keys = {
 "times": PackedFloat32Array(0, 0.10000001, 0.20000002),
@@ -1804,7 +1730,7 @@ tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/path = NodePath("Cururu:animation")
-tracks/1/interp = 1
+tracks/1/interp = 0
 tracks/1/loop_wrap = true
 tracks/1/keys = {
 "times": PackedFloat32Array(0),
@@ -1847,7 +1773,6 @@ _data = {
 &"Melee_Up": SubResource("Animation_2t31h"),
 &"Nado_Idle": SubResource("Animation_ferga"),
 &"Nado_Move": SubResource("Animation_yy1dt"),
-&"RESET": SubResource("Animation_ny8nr"),
 &"Run": SubResource("Animation_prtj7"),
 &"Special": SubResource("Animation_7uoqt"),
 &"Special_Down": SubResource("Animation_7spwe"),
@@ -1899,7 +1824,7 @@ unique_name_in_owner = true
 position = Vector2(0, -118)
 scale = Vector2(0.375651, 0.375651)
 sprite_frames = SubResource("SpriteFrames_ser7u")
-animation = &"Special"
+animation = &"Fall_Loop"
 speed_scale = 1.6
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -1954,7 +1879,6 @@ hit_freeze = 0.05
 position = Vector2(124, -104)
 rotation = -1.57079
 shape = SubResource("CapsuleShape2D_gjjix")
-disabled = true
 
 [node name="MeleeUp" parent="HitContainer" node_paths=PackedStringArray("ignore", "parent") instance=ExtResource("47_grb16")]
 collision_mask = 16
@@ -2021,6 +1945,7 @@ unique_name_in_owner = true
 libraries = {
 &"": SubResource("AnimationLibrary_g0l4m")
 }
+autoplay = "Fall_Loop"
 speed_scale = 0.8
 
 [node name="SFX" type="Node" parent="."]
@@ -2141,7 +2066,7 @@ script = ExtResource("55_7uoqt")
 chao_state = NodePath("../Chao")
 fall_state = NodePath("../Fall")
 nado_state = NodePath("../Nadando")
-sfx = ExtResource("90_2t31h")
+sfx = Array[AudioStream]([ExtResource("163_x4him"), ExtResource("164_lv5tx")])
 hitboxes = [NodePath("../../HitContainer/Melee1"), NodePath("../../HitContainer/Melee2"), NodePath("../../HitContainer/MeleeUp"), NodePath("../../HitContainer/MeleeDown")]
 
 [node name="Special" type="Node" parent="StateMachine" node_paths=PackedStringArray("chao_state", "fall_state", "nado_state", "hitboxes")]

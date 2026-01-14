@@ -2,18 +2,28 @@ extends State
 
 @export var jump_state:State = null
 
-const vfx_in:PackedScene = preload("res://Objetos/Funcionalidade/VFX_Agua_In.tscn")
-const vfx_out:PackedScene = preload("res://Objetos/Funcionalidade/VFX_Agua_Out.tscn")
+const vfx:Array[PackedScene] = [
+	preload("res://Objetos/Funcionalidade/VFX_Agua_In.tscn"),
+	preload("res://Objetos/Funcionalidade/VFX_Agua_Out.tscn")
+]
+const sfx:Array[AudioStream] = [
+	preload("res://Audio/SFX/AMBIENTE/Caindo na agua.wav"),
+	preload("res://Audio/SFX/AMBIENTE/Saindo da água.wav")
+]
 
 func Enter() -> void:
-	var v:Node2D = vfx_in.instantiate()
+	var v:Node2D = vfx[0].instantiate()
 	parent.get_parent().add_child(v)
 	v.global_position = parent.global_position
+	%SFX_Extra.stream = sfx[0]
+	%SFX_Extra.play()
 
 func Exit() -> void:
-	var v:Node2D = vfx_out.instantiate()
+	var v:Node2D = vfx[1].instantiate()
 	v.global_position = parent.global_position
 	parent.get_parent().add_child(v)
+	%SFX_Extra.stream = sfx[1]
+	%SFX_Extra.play()
 
 func Update(_delta : float) -> State:
 	if Input.is_action_just_pressed("pulo") and !parent.check_agua_up.is_colliding():

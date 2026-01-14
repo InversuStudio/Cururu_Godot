@@ -1,7 +1,7 @@
 [gd_scene load_steps=23 format=3 uid="uid://2kargcp4546j"]
 
 [ext_resource type="Script" uid="uid://bt5du2sk1ba4i" path="res://Scripts/NPCs/NPC.gd" id="1_wt1eb"]
-[ext_resource type="Resource" uid="uid://cmvq01e801q5x" path="res://Dialogos/Vitoriaregia.dialogue" id="2_f8fjs"]
+[ext_resource type="Resource" uid="uid://ch3y4gcny6835" path="res://Dialogos/Vitoriaregia.dialogue" id="2_f8fjs"]
 [ext_resource type="Texture2D" uid="uid://b3qk3js8vx4jl" path="res://Sprites/NPCS/Vitoria Régia/NAIA_01.png" id="3_f8fjs"]
 [ext_resource type="Texture2D" uid="uid://bm3a0acfnpp5w" path="res://Sprites/NPCS/Vitoria Régia/NAIA_03.png" id="4_wsdq6"]
 [ext_resource type="Texture2D" uid="uid://bgay3vp761mfs" path="res://Sprites/NPCS/Vitoria Régia/NAIA_05.png" id="5_3wyvd"]
@@ -81,7 +81,7 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lqome"]
 size = Vector2(1386.5391, 1034.7305)
 
-[node name="NPC-Basico" type="Sprite2D" node_paths=PackedStringArray("interacao")]
+[node name="Naia" type="Sprite2D" node_paths=PackedStringArray("interacao")]
 scale = Vector2(0.4348958, 0.43489587)
 script = ExtResource("1_wt1eb")
 arquivo_dialogo = ExtResource("2_f8fjs")

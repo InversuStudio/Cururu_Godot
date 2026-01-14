@@ -4,7 +4,7 @@ extends State
 @export var fall_state: State = null
 @export var nado_state: State = null
 
-@export var sfx:AudioStream = null
+@export var sfx:Array[AudioStream] = []
 @export var hitboxes:Array[HitBox] = []
 
 @export_group("Pushback")
@@ -43,7 +43,7 @@ func Enter() -> void:
 	var next_combo = combo_num + 1
 	combo_num = next_combo if next_combo <= combo_limit else 0
 	
-	%SFX_Ataque.stream = sfx
+	%SFX_Ataque.stream = sfx[combo_num]
 	%SFX_Ataque.play()
 
 func Exit() -> void:

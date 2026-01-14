@@ -1,4 +1,4 @@
-[gd_scene load_steps=38 format=3 uid="uid://cdhelg6sloxbj"]
+[gd_scene load_steps=37 format=3 uid="uid://cdhelg6sloxbj"]
 
 [ext_resource type="Script" uid="uid://b0ou3eu3i1sxg" path="res://Scripts/Componentes/PortaTemp.gd" id="1_rixxk"]
 [ext_resource type="Texture2D" uid="uid://clqh4rstgwwgd" path="res://Sprites/Cenário/Miasma/Porta de Miasma/Abrindo/01.png" id="2_cxcld"]
@@ -13,7 +13,6 @@
 [ext_resource type="Texture2D" uid="uid://dnp7x66lqecp" path="res://Sprites/Cenário/Miasma/Porta de Miasma/Idle/04.png" id="5_8tfr7"]
 [ext_resource type="Texture2D" uid="uid://cfwj43iaqbrjn" path="res://Sprites/Cenário/Miasma/Porta de Miasma/Idle/05.png" id="6_7uoca"]
 [ext_resource type="Texture2D" uid="uid://bfwl4to0pbtpd" path="res://Sprites/Cenário/Miasma/Porta de Miasma/Abrindo/05.png" id="6_8snrn"]
-[ext_resource type="AudioStream" uid="uid://c8tt33f71nk6f" path="res://Audio/SFX/AMBIENTE/Som_portaabrindo.ogg" id="6_h4g8d"]
 [ext_resource type="Texture2D" uid="uid://qb7sgid57pvy" path="res://Sprites/Cenário/Miasma/Porta de Miasma/Abrindo/06.png" id="7_g5sf2"]
 [ext_resource type="Texture2D" uid="uid://dvnq27m48kuw8" path="res://Sprites/Cenário/Miasma/Porta de Miasma/Idle/06.png" id="7_lxunt"]
 [ext_resource type="Texture2D" uid="uid://x6sepdicmidt" path="res://Sprites/Cenário/Miasma/Porta de Miasma/Abrindo/07.png" id="8_61daq"]
@@ -451,8 +450,9 @@ libraries = {
 autoplay = "Idle"
 next/Fecha = &"Idle"
 
-[node name="SFX" type="AudioStreamPlayer" parent="."]
+[node name="SFX" type="AudioStreamPlayer2D" parent="."]
 unique_name_in_owner = true
-stream = ExtResource("6_h4g8d")
+pitch_scale = 2.0
+autoplay = true
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

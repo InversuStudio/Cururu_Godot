@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://drxk6hwuv2e3i" path="res://Scripts/Componentes/Bau.gd" id="1_2gxai"]
 [ext_resource type="PackedScene" uid="uid://va5pjd6vuuo2" path="res://Objetos/Funcionalidade/CompHurtBox.tscn" id="2_aoa4p"]
-[ext_resource type="AudioStream" uid="uid://c066nn0lamacq" path="res://Audio/SFX/AMBIENTE/Jarro quebrando.ogg" id="3_2gxai"]
+[ext_resource type="AudioStream" uid="uid://cnv7vp76x4q2x" path="res://Audio/SFX/AMBIENTE/Jarro quebrando.wav" id="3_2gxai"]
 [ext_resource type="Texture2D" uid="uid://8rbhvq514fp0" path="res://Sprites/Cenário/Objetos/Quabraveis/Vasos/VFX/01.png" id="4_ylqsw"]
 [ext_resource type="Texture2D" uid="uid://c2vy8car41yny" path="res://Sprites/Cenário/Objetos/Quabraveis/Vasos/VFX/02.png" id="5_npp6p"]
 [ext_resource type="Texture2D" uid="uid://bsinyssrgovn0" path="res://Sprites/Cenário/Objetos/Quabraveis/Vasos/VFX/03.png" id="6_b41qh"]

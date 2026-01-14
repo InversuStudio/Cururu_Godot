@@ -19,6 +19,7 @@ func _input(_event: InputEvent) -> void:
 
 func Mostra(nome:String, desc:String, img:Texture2D) -> void:
 	get_tree().paused = true
+	%SFX.play()
 	%NomeItemAviso.text = nome
 	%DescItemAviso.text = desc
 	%ImgItemAviso.texture = img

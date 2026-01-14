@@ -22,7 +22,7 @@ func Enter() -> void:
 
 func Update(_delta: float) -> State:
 	# INPUT MELEE
-	if Input.is_action_just_pressed("melee"):
+	if Input.is_action_just_pressed("melee") and parent.pode_ataque:
 		return melee_state
 	# INPUT MAGIA
 	if Input.is_action_just_pressed("magia") and GameData.upgrade_num >= 1:
