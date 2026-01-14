@@ -89,6 +89,7 @@ var input_buffer:Array[float] = [0.0, 0.0]
 
 func _ready() -> void:
 	if GameData.game_start == false:
+		pode_mover = false
 		GameData.game_start = true
 		state_machine.MudaState(state_machine.find_child("Acorda"))
 	# Desabilita hitboxes

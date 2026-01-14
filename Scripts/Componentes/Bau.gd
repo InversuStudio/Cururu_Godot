@@ -21,6 +21,7 @@ func _on_hurt_box_hurt(_h:Array[HitBox]) -> void:
 		else:
 			var rand:int = randi_range(0, drop_item.size() - 1)
 			var item:Node2D = drop_item[rand].instantiate()
-			get_tree().current_scene.add_child(item)
+			get_parent().add_child(item)
+			#get_tree().current_scene.add_child(item)
 			item.global_position = $PosItem.global_position
 		

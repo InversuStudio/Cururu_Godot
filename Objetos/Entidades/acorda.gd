@@ -11,3 +11,6 @@ func Enter() -> void:
 func FixedUpdate(delta : float) -> State:
 	parent.velocity.y += parent.fall_gravity * delta
 	return null
+
+func Exit() -> void:
+	parent.pode_mover = true

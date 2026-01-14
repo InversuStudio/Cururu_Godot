@@ -21,7 +21,7 @@ sfx = ExtResource("2_0w4hx")
 shape = SubResource("CircleShape2D_jisbj")
 
 [node name="Imagem" type="Sprite2D" parent="."]
-z_index = 1001
+z_index = 3
 position = Vector2(0, -5.9999995)
 scale = Vector2(1.4374999, 1.4374999)
 texture = ExtResource("2_soojx")
