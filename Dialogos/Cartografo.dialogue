@@ -1,22 +1,21 @@
 ~ start
 if Inventario.tem_mapa == false:
-	ARARÊ: Salve, caminhante da mata. Como seguem seus passos?
-	ARARÊ: Vejo pelo seu olhar que a floresta anda te confundindo... talvez eu possa guiar.
-	ARARÊ: Me chamo Ararê. Venho de uma família que conhece os caminhos antigos.
-	ARARÊ: Registro cada árvore, cada rio e cada trilha neste mapa.
-	ARARÊ: Leve um com você. A mata respeita quem sabe por onde anda.
-	ARARÊ: Ele custa apenas 10 sementes de [b][i]ybirá[/i][/b]. Vai aceitar?
-	- Sim, antes que a mata me engula.
+	ARARÊ: Olá companheiro, como vai? 
+	ARARÊ: Perdido pela mata? Tem que estar, com essa lama por todo lado. 
+	ARARÊ: Me chamo Ararê, sou de uma família de bicudos exploradores e estou registrando cada árvore nesse mapa.
+	ARARÊ: Talvez você devesse levar um com você para não se perder por Zootanica.
+	ARARÊ: Custa apenas 10 semetes de [b][i]ybirá[/i][/b]. Vai querer um?
+	- Sim, antes que me perca.
 		if GameData.moedas >= 10
-			ARARÊ: [do! DialogoCMD.AddMapa(), GameData.moedas -= 3] Está em boas mãos. Que o mapa conduza seus passos.
+			ARARÊ: [do! DialogoCMD.AddMapa(), GameData.moedas -= 10] Ta na pata, esse mapa é todo seu!.
 		else:
-			ARARÊ: Suas sementes ainda não bastam.
-			ARARÊ: Volte quando o [b][i]ybirá[/i][/b] cantar na sua bolsa.
-	- Não, obrigado. Meus pés conhecem o chão.
-		ARARÊ: Então siga firme. A floresta observa.
+			ARARÊ: Não vendo fiado, amigo.
+			ARARÊ: Sem [b][i]ybirá[/i][/b], sem mapa.
+			ARARÊ: Volte quando precisar de orientações!
+	- Não, obrigado, volto depois.
+		ARARÊ: Beleza então! Boa sorte na sua jornada.
 else:
-	ARARÊ: Caminhante, você retorna.
-	ARARÊ: Seus passos procuram novos caminhos?
-	ARARÊ: Por ora, não tenho outros mapas.
-	ARARÊ: Mas a mata sempre muda. Volte outro dia.
+	ARARÊ: E aí companheiro, tudo bem?
+	ARARÊ: Veio buscar mais mapas?
+	ARARÊ: No momento vou ficar devendo, quem sabe outra hora?
 => END!

@@ -1,4 +1,4 @@
-[gd_scene load_steps=135 format=3 uid="uid://b7m7lb1s11mbw"]
+[gd_scene load_steps=137 format=3 uid="uid://b7m7lb1s11mbw"]
 
 [ext_resource type="Script" uid="uid://bekibpja60hxm" path="res://Scripts/Boss/boss.gd" id="1_s15tt"]
 [ext_resource type="Script" uid="uid://hsdutxxttrp3" path="res://Scripts/Componentes/Vida.gd" id="2_16hqa"]
@@ -112,6 +112,7 @@
 [ext_resource type="Script" uid="uid://c041l8mwrkgsy" path="res://Scripts/Boss/PilarFogo.gd" id="85_fi4f6"]
 [ext_resource type="AudioStream" uid="uid://xpg30gdluf8e" path="res://Audio/SFX/BOITATA/Boitata voice A.wav" id="88_q1nmn"]
 [ext_resource type="Script" path="res://Scripts/Boss/Fim.gd" id="95_q1nmn"]
+[ext_resource type="Shader" uid="uid://c5kmgpt3xfcos" path="res://Scripts/Shaders/Wave.gdshader" id="113_fhomc"]
 [ext_resource type="Texture2D" uid="uid://c8arw41hfnk4n" path="res://Sprites/UI/Boitata/Barra_miasma.png" id="113_iwjnr"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_iwjnr"]
@@ -871,6 +872,13 @@ _data = {
 &"Surge": SubResource("Animation_sgy8v")
 }
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_3l7sv"]
+shader = ExtResource("113_fhomc")
+shader_parameter/wave_speed = 2.50000011875
+shader_parameter/wave_strength = 8.00000038
+shader_parameter/wave_frequency = 2.36800011248
+shader_parameter/top_influence = 0.25
+
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_fhomc"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_3l7sv"]
@@ -930,7 +938,7 @@ animation = &"Idle"
 [node name="VidaBoss" type="Node" parent="."]
 unique_name_in_owner = true
 script = ExtResource("2_16hqa")
-vida_max = 30
+vida_max = 3
 metadata/_custom_type_script = "uid://hsdutxxttrp3"
 
 [node name="HurtBox" parent="." node_paths=PackedStringArray("comp_vida", "sprite") instance=ExtResource("3_fwdqd")]
@@ -1065,15 +1073,16 @@ tint_progress = Color(0.6270837, 0, 0.048433684, 1)
 
 [node name="BarraArmor" type="ProgressBar" parent="UI_BOSS/Control/BarraVida"]
 unique_name_in_owner = true
+material = SubResource("ShaderMaterial_3l7sv")
 layout_mode = 1
 anchors_preset = -1
 anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 0.5
-offset_left = 38.333324
-offset_top = -31.833412
+offset_left = 38.333385
+offset_top = -31.83329
 offset_right = -39.999878
-offset_bottom = 41.50009
+offset_bottom = 44.833466
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/background = SubResource("StyleBoxEmpty_fhomc")

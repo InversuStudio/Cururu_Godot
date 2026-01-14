@@ -1,10 +1,13 @@
-[gd_scene load_steps=8 format=3 uid="uid://1kp2cm82lp4b"]
+[gd_scene load_steps=11 format=3 uid="uid://1kp2cm82lp4b"]
 
 [ext_resource type="Script" uid="uid://drxk6hwuv2e3i" path="res://Scripts/Componentes/Bau.gd" id="1_b7nho"]
 [ext_resource type="PackedScene" uid="uid://va5pjd6vuuo2" path="res://Objetos/Funcionalidade/CompHurtBox.tscn" id="2_etetv"]
 [ext_resource type="AudioStream" uid="uid://b3mmkipqf30jd" path="res://Audio/SFX/INIMIGOS/HIT_INIMIGO.wav" id="3_r6u0v"]
-[ext_resource type="Texture2D" uid="uid://dtggowcotioot" path="res://Sprites/Cenário/Objetos/frutos/arvore sem açai.png" id="4_qtac0"]
+[ext_resource type="Texture2D" uid="uid://dtggowcotioot" path="res://Sprites/Cenário/Objetos/frutos/acai_01.png" id="4_qtac0"]
+[ext_resource type="Texture2D" uid="uid://cy672eb7acjdw" path="res://Sprites/Cenário/Objetos/frutos/acai_02.png" id="5_x8dq1"]
 [ext_resource type="Texture2D" uid="uid://cdtknlx234dq4" path="res://Sprites/Cenário/Objetos/frutos/arvore_acai.png" id="5_xmbds"]
+[ext_resource type="Texture2D" uid="uid://bmjo4diaqpa1j" path="res://Sprites/Cenário/Objetos/frutos/acai_03.png" id="6_jmaun"]
+[ext_resource type="Texture2D" uid="uid://cudd1v7y0vnbv" path="res://Sprites/Cenário/Objetos/frutos/acai_04.png" id="7_o8cyq"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4vmwf"]
 size = Vector2(142, 269)
@@ -14,8 +17,17 @@ animations = [{
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("4_qtac0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_x8dq1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_jmaun")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_o8cyq")
 }],
-"loop": true,
+"loop": false,
 "name": &"Abre",
 "speed": 5.0
 }, {
@@ -48,7 +60,9 @@ position = Vector2(0, -110)
 position = Vector2(-9, -65.5)
 scale = Vector2(0.26464844, 0.26464844)
 sprite_frames = SubResource("SpriteFrames_5tjap")
-animation = &"Normal"
+animation = &"Abre"
 autoplay = "Normal"
+frame = 3
+frame_progress = 1.0
 
 [connection signal="hurt" from="HurtBox" to="." method="_on_hurt_box_hurt"]

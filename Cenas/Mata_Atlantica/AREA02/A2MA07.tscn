@@ -1428,7 +1428,7 @@ volume = null
 metadata/_custom_type_script = "uid://dd16yu704x6wt"
 
 [node name="MainCamera" parent="." node_paths=PackedStringArray("target", "limite_camera") instance=ExtResource("33_giq4m")]
-position = Vector2(-887.00006, -10463.829)
+position = Vector2(-887.00006, -10463.997)
 limit_enabled = true
 limit_left = -6530
 limit_top = -12056

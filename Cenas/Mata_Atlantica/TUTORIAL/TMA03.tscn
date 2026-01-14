@@ -400,8 +400,18 @@ position = Vector2(-13135, 427.99988)
 scale = Vector2(1.5999999, 1.5999988)
 texture = ExtResource("9_t50kr")
 
+[node name="Mato04" type="Sprite2D" parent="Background/-27"]
+position = Vector2(-10435.896, 108.974335)
+scale = Vector2(1.5999999, 1.5999988)
+texture = ExtResource("9_t50kr")
+
 [node name="Mato05" type="Sprite2D" parent="Background/-27"]
 position = Vector2(-11416.996, 331.99994)
+scale = Vector2(1.4, 1.3999994)
+texture = ExtResource("5_r86pu")
+
+[node name="Mato06" type="Sprite2D" parent="Background/-27"]
+position = Vector2(-8807.693, 50.00003)
 scale = Vector2(1.4, 1.3999994)
 texture = ExtResource("5_r86pu")
 
@@ -503,12 +513,27 @@ position = Vector2(-494.9629, 331.00653)
 scale = Vector2(0.5373022, 0.9396903)
 texture = ExtResource("4_3fe7p")
 
+[node name="ArvoreS21" type="Sprite2D" parent="Background/-2/Arvore2"]
+position = Vector2(1002.76685, -175.48727)
+scale = Vector2(0.5373022, 0.9396903)
+texture = ExtResource("4_3fe7p")
+
+[node name="ArvoreS22" type="Sprite2D" parent="Background/-2/Arvore2"]
+position = Vector2(31.5932, -175.48727)
+scale = Vector2(0.5373022, 0.9396903)
+texture = ExtResource("4_3fe7p")
+
 [node name="-15" type="CanvasLayer" parent="Background"]
 follow_viewport_enabled = true
 follow_viewport_scale = 0.85
 
 [node name="Mato04" type="Sprite2D" parent="Background/-15"]
 position = Vector2(-10738, 879)
+scale = Vector2(1.8, 1.7999997)
+texture = ExtResource("20_386eh")
+
+[node name="Mato05" type="Sprite2D" parent="Background/-15"]
+position = Vector2(-9483.529, 295.29413)
 scale = Vector2(1.8, 1.7999997)
 texture = ExtResource("20_386eh")
 
@@ -915,8 +940,8 @@ nome_id = "MA_0_3"
 
 [node name="TransicaoFase2" parent="Background/0" instance=ExtResource("11_gwkgh")]
 position = Vector2(-8002, -278)
-destino = 7
-posicao = Vector2(-8718, -129)
+destino = 12
+posicao = Vector2(5271, -4488)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Background/0/TransicaoFase2"]
 position = Vector2(-214.5, -327)
@@ -1522,6 +1547,9 @@ one_way_collision = true
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Background/0/PlataformaSome2/DestroiPlataforma"]
 position = Vector2(16.5, -36)
 shape = SubResource("RectangleShape2D_qclta")
+
+[node name="Node2D2" type="Node2D" parent="Background/0"]
+position = Vector2(-8488, -262)
 
 [node name="1" type="CanvasLayer" parent="Background"]
 follow_viewport_enabled = true
@@ -2591,7 +2619,7 @@ volume = -0.5
 metadata/_custom_type_script = "uid://dd16yu704x6wt"
 
 [node name="MainCamera" parent="." node_paths=PackedStringArray("target", "limite_camera") instance=ExtResource("37_r86pu")]
-position = Vector2(-18459, -3666.9976)
+position = Vector2(-18459, -3666.9993)
 zoom = Vector2(0.8, 0.8)
 limit_enabled = true
 limit_left = -18893

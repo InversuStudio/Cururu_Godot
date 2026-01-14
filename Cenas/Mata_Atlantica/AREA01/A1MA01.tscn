@@ -667,8 +667,8 @@ drop_item = Array[PackedScene]([ExtResource("22_gr3ec"), ExtResource("26_8tm3t")
 
 [node name="MA_T3" parent="background/0/Transicoes" instance=ExtResource("9_q40bt")]
 position = Vector2(-9071, -92)
-destino = 6
-posicao = Vector2(-8403, -259)
+destino = 12
+posicao = Vector2(9030, -4488)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="background/0/Transicoes/MA_T3"]
 position = Vector2(11.5, -280.5)
@@ -821,6 +821,9 @@ texture = ExtResource("10_5ka01")
 [node name="BancoSave" type="Sprite2D" parent="background/0/Chão"]
 position = Vector2(-4886, 811)
 texture = ExtResource("12_q40bt")
+
+[node name="Node2D" type="Node2D" parent="background/0"]
+position = Vector2(-8905, -136)
 
 [node name="1" type="CanvasLayer" parent="background"]
 follow_viewport_enabled = true

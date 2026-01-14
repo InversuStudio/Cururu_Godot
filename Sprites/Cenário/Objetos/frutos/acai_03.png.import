@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dtggowcotioot"
-path="res://.godot/imported/arvore sem açai.png-1ad3ff63c8a3e111ab052bb83aef2cb6.ctex"
+uid="uid://bmjo4diaqpa1j"
+path="res://.godot/imported/acai_03.png-f04bbc1b89fad480ff50206ac7b8bbcc.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Cenário/Objetos/frutos/arvore sem açai.png"
-dest_files=["res://.godot/imported/arvore sem açai.png-1ad3ff63c8a3e111ab052bb83aef2cb6.ctex"]
+source_file="res://Sprites/Cenário/Objetos/frutos/acai_03.png"
+dest_files=["res://.godot/imported/acai_03.png-f04bbc1b89fad480ff50206ac7b8bbcc.ctex"]
 
 [params]
 

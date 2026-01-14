@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b7osbcusvyx0g"
-path="res://.godot/imported/arvore sem guarana.png-df07cc144385bffef57e1aded81efe20.ctex"
+uid="uid://v6je3iqnukti"
+path="res://.godot/imported/guarana_04.png-8e22582cd42212791db035967673203b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Cenário/Objetos/frutos/arvore sem guarana.png"
-dest_files=["res://.godot/imported/arvore sem guarana.png-df07cc144385bffef57e1aded81efe20.ctex"]
+source_file="res://Sprites/Cenário/Objetos/frutos/guarana_04.png"
+dest_files=["res://.godot/imported/guarana_04.png-8e22582cd42212791db035967673203b.ctex"]
 
 [params]
 

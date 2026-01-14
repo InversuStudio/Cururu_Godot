@@ -1,10 +1,13 @@
-[gd_scene load_steps=8 format=3 uid="uid://1fdx2ie24dh8"]
+[gd_scene load_steps=11 format=3 uid="uid://1fdx2ie24dh8"]
 
 [ext_resource type="Script" uid="uid://drxk6hwuv2e3i" path="res://Scripts/Componentes/Bau.gd" id="1_5tjap"]
-[ext_resource type="Texture2D" uid="uid://b7osbcusvyx0g" path="res://Sprites/Cenário/Objetos/frutos/arvore sem guarana.png" id="4_bha3u"]
+[ext_resource type="Texture2D" uid="uid://b7osbcusvyx0g" path="res://Sprites/Cenário/Objetos/frutos/guarana_01.png" id="4_bha3u"]
+[ext_resource type="Texture2D" uid="uid://bq0sb5m0qpmnf" path="res://Sprites/Cenário/Objetos/frutos/guarana_02.png" id="5_6ojqs"]
 [ext_resource type="Texture2D" uid="uid://csoc5q7br131j" path="res://Sprites/Cenário/Objetos/frutos/guarana.png" id="5_bha3u"]
 [ext_resource type="PackedScene" uid="uid://va5pjd6vuuo2" path="res://Objetos/Funcionalidade/CompHurtBox.tscn" id="5_ku8j8"]
 [ext_resource type="AudioStream" uid="uid://b3mmkipqf30jd" path="res://Audio/SFX/INIMIGOS/HIT_INIMIGO.wav" id="6_6tos4"]
+[ext_resource type="Texture2D" uid="uid://iiue1rna5gao" path="res://Sprites/Cenário/Objetos/frutos/guarana_03.png" id="6_opdnn"]
+[ext_resource type="Texture2D" uid="uid://v6je3iqnukti" path="res://Sprites/Cenário/Objetos/frutos/guarana_04.png" id="7_jcy5v"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4vmwf"]
 size = Vector2(238, 140)
@@ -14,8 +17,17 @@ animations = [{
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("4_bha3u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_6ojqs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_opdnn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_jcy5v")
 }],
-"loop": true,
+"loop": false,
 "name": &"Abre",
 "speed": 5.0
 }, {
@@ -49,8 +61,9 @@ position = Vector2(0, -110)
 position = Vector2(0, -136)
 scale = Vector2(0.37109375, 0.3710938)
 sprite_frames = SubResource("SpriteFrames_5tjap")
-animation = &"Normal"
+animation = &"Abre"
 autoplay = "Normal"
-frame_progress = 0.59634286
+frame = 3
+frame_progress = 1.0
 
 [connection signal="hurt" from="HurtBox" to="." method="_on_hurt_box_hurt"]
