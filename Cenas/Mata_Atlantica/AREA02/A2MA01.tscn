@@ -2145,10 +2145,10 @@ musica = ExtResource("28_75oum")
 volume = -0.5
 metadata/_custom_type_script = "uid://dd16yu704x6wt"
 
-[node name="BGM_Player2" type="Node" parent="."]
-script = ExtResource("27_hdfdg")
-musica = ExtResource("43_mbqr8")
-metadata/_custom_type_script = "uid://dd16yu704x6wt"
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("43_mbqr8")
+volume_db = 5.0
+autoplay = true
 
 [node name="MainCamera" parent="." node_paths=PackedStringArray("target", "limite_camera") instance=ExtResource("27_ctjy6")]
 position = Vector2(512.0005, 1314.0004)

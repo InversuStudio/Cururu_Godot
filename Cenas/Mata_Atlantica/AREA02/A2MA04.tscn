@@ -1,8 +1,7 @@
-[gd_scene load_steps=10 format=4 uid="uid://ctta1hdr8ocdq"]
+[gd_scene load_steps=9 format=4 uid="uid://ctta1hdr8ocdq"]
 
 [ext_resource type="PackedScene" uid="uid://nohq28uk7lfk" path="res://Objetos/Entidades/Player.tscn" id="1_usrra"]
 [ext_resource type="Texture2D" uid="uid://c374cwih425cq" path="res://Sprites/Cenário/Tilemaps/Base.png" id="2_qebi2"]
-[ext_resource type="Script" uid="uid://dd16yu704x6wt" path="res://Scripts/Componentes/BGM_Player.gd" id="5_ajh3t"]
 [ext_resource type="PackedScene" uid="uid://u28e3eudu6ch" path="res://Objetos/Funcionalidade/MainCamera.tscn" id="6_ajh3t"]
 [ext_resource type="AudioStream" uid="uid://b2vi4qav4gk5r" path="res://Audio/SFX/AMBIENTE/Cururu - Soundscape A.ogg" id="6_we3sk"]
 [ext_resource type="PackedScene" uid="uid://1apfpwlqocxn" path="res://Objetos/Funcionalidade/TransicaoFase.tscn" id="7_w1p45"]
@@ -182,7 +181,7 @@ position = Vector2(2616, 1285)
 
 [node name="MainCamera" parent="." node_paths=PackedStringArray("target", "limite_camera") instance=ExtResource("6_ajh3t")]
 position = Vector2(5533.9995, -1871.9995)
-zoom = Vector2(0.80093944, 0.80093944)
+zoom = Vector2(0.80000055, 0.80000055)
 limit_enabled = true
 limit_left = 2438
 limit_top = -4724
@@ -197,7 +196,7 @@ offset_top = -4724.0
 offset_right = 5750.0
 offset_bottom = 1514.0
 
-[node name="BGM_Player2" type="Node" parent="."]
-script = ExtResource("5_ajh3t")
-musica = ExtResource("6_we3sk")
-metadata/_custom_type_script = "uid://dd16yu704x6wt"
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_we3sk")
+volume_db = 5.0
+autoplay = true

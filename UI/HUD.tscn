@@ -9,7 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://8tc3pgq3fdi8" path="res://Sprites/UI/HUD/Barra_Vida/UIHUD-MAGIABK.png" id="5_2ptjp"]
 [ext_resource type="PackedScene" uid="uid://kuarj30f8veq" path="res://UI/Inventario.tscn" id="5_f2wx0"]
 [ext_resource type="PackedScene" uid="uid://ddf8xx25186i" path="res://UI/Amuletos.tscn" id="6_gppie"]
-[ext_resource type="Shader" uid="uid://c1omtsxv04udh" path="res://Scripts/Shaders/blur_shader.gdshader" id="8_am7sw"]
+[ext_resource type="Shader" path="res://Scripts/Shaders/blur_shader.gdshader" id="8_am7sw"]
 [ext_resource type="Texture2D" uid="uid://c1kcyxqfye0pf" path="res://Sprites/UI/Pause/Pecas/HUD_FUNDO.png" id="9_ixkb2"]
 [ext_resource type="Texture2D" uid="uid://bc2yoaw6bn0kt" path="res://Sprites/UI/Pause/Pecas/MENU_ABA2.png" id="13_281ki"]
 [ext_resource type="Texture2D" uid="uid://bu6udw31dg5md" path="res://Sprites/UI/Pause/Pecas/MENU_ABA1.png" id="13_mms7u"]

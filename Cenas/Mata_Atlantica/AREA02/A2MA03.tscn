@@ -1,9 +1,8 @@
-[gd_scene load_steps=12 format=4 uid="uid://vvj50hvchkhj"]
+[gd_scene load_steps=11 format=4 uid="uid://vvj50hvchkhj"]
 
 [ext_resource type="PackedScene" uid="uid://1apfpwlqocxn" path="res://Objetos/Funcionalidade/TransicaoFase.tscn" id="1_5f3ns"]
 [ext_resource type="Texture2D" uid="uid://c374cwih425cq" path="res://Sprites/Cenário/Tilemaps/Base.png" id="2_axx3v"]
 [ext_resource type="PackedScene" uid="uid://nohq28uk7lfk" path="res://Objetos/Entidades/Player.tscn" id="3_fsywm"]
-[ext_resource type="Script" uid="uid://dd16yu704x6wt" path="res://Scripts/Componentes/BGM_Player.gd" id="7_5f3ns"]
 [ext_resource type="PackedScene" uid="uid://bu62qgilsxetf" path="res://Objetos/Entidades/Escorpiao.tscn" id="7_awfgj"]
 [ext_resource type="PackedScene" uid="uid://bjvnm0aydr0vd" path="res://Objetos/Entidades/Morcego.tscn" id="8_5f3ns"]
 [ext_resource type="AudioStream" uid="uid://b2vi4qav4gk5r" path="res://Audio/SFX/AMBIENTE/Cururu - Soundscape A.ogg" id="8_adag1"]
@@ -217,7 +216,7 @@ offset_top = -2926.0
 offset_right = 7288.0
 offset_bottom = 255.0
 
-[node name="BGM_Player2" type="Node" parent="."]
-script = ExtResource("7_5f3ns")
-musica = ExtResource("8_adag1")
-metadata/_custom_type_script = "uid://dd16yu704x6wt"
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_adag1")
+volume_db = 5.0
+autoplay = true

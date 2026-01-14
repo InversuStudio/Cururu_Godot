@@ -680,10 +680,10 @@ musica = ExtResource("35_158ye")
 volume = -0.5
 metadata/_custom_type_script = "uid://dd16yu704x6wt"
 
-[node name="BGM_Player2" type="Node" parent="."]
-script = ExtResource("34_l7lqk")
-musica = ExtResource("36_158ye")
-metadata/_custom_type_script = "uid://dd16yu704x6wt"
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("36_158ye")
+volume_db = 5.0
+autoplay = true
 
 [node name="Limitecam" type="ReferenceRect" parent="."]
 offset_left = -1449.0
