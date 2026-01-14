@@ -2,6 +2,19 @@ extends State
 
 @export var jump_state:State = null
 
+const vfx_in:PackedScene = preload("res://Objetos/Funcionalidade/VFX_Agua_In.tscn")
+const vfx_out:PackedScene = preload("res://Objetos/Funcionalidade/VFX_Agua_Out.tscn")
+
+func Enter() -> void:
+	var v:Node2D = vfx_in.instantiate()
+	v.global_position = parent.global_position
+	parent.get_parent().add_child(v)
+
+func Exit() -> void:
+	var v:Node2D = vfx_out.instantiate()
+	v.global_position = parent.global_position
+	parent.get_parent().add_child(v)
+
 func Update(_delta : float) -> State:
 	if Input.is_action_just_pressed("pulo") and !parent.check_agua_up.is_colliding():
 		#print("VAMOLA")

@@ -2,7 +2,9 @@ class_name Player extends CharacterBody2D
 
 @export_group("Movimento")
 ## Velocidade de movimento terrestre, em m/s
-@export var vel: float = 0.0
+@export var vel_corre: float = 0.0
+## Velocidade reduzida de movimento terrestre, em m/s
+@export var vel_anda:float = 0.0
 ## Velocidade de movimento aéreo, em m/s
 @export var vel_aerea: float = 0.0
 ## Tempo até atingir velocidade máxima, em segundos
@@ -37,13 +39,15 @@ class_name Player extends CharacterBody2D
 @export var magia_max: int = 10
 
 # Velocidade terrestre convertida -> 170 = tamanho tile
-@onready var speed: float = vel  * 128
+@onready var speed_run: float = vel_corre  * 128
+@onready var speed_walk: float = vel_anda * 128
+@onready var speed:float = speed_run
 # Velocidade aérea
 @onready var air_speed: float = vel_aerea * 128
 # Aceleração
-@onready var accel: float = speed / acel_time
+@onready var accel: float = speed_run / acel_time
 # Desaceleração
-@onready var decel: float = speed / decel_time
+@onready var decel: float = speed_run / decel_time
 # Velocidade do dash
 @onready var dash_speed: float = (distancia_dash / tempo_dash) * 128
 # Velocidade do pulo

@@ -114,18 +114,24 @@ func FixedUpdate(delta: float) -> State:
 		var pos_anim:float = parent.anim.current_animation_position if checa_tempo else 0.0
 		if parent.input_move.x:
 			if item_cura:
+				parent.speed = parent.speed_walk
 				parent.anim.play("Cura_Move")
 				parent.anim.seek(pos_anim)
 				Flip()
-			else: parent.anim.play("Run")
+			else:
+				parent.speed = parent.speed_run
+				parent.anim.play("Run")
 			if %RunVFXCooldown.is_stopped():
 				%RunVFXCooldown.start()
 		else:
 			if item_cura:
+				parent.speed = parent.speed_walk
 				parent.anim.play("Cura_Parado")
 				parent.anim.seek(pos_anim)
 				Flip()
-			else: parent.anim.play("Idle")
+			else:
+				parent.speed = parent.speed_run
+				parent.anim.play("Idle")
 			%RunVFXCooldown.stop()
 	
 		checa_tempo = true if item_cura else false

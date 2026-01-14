@@ -1,0 +1,72 @@
+[gd_scene load_steps=16 format=3 uid="uid://bagy73ppajbqp"]
+
+[ext_resource type="Texture2D" uid="uid://ciidwcx2d6i4b" path="res://Sprites/Cururu/Nadando/VFX/Saindo_Agua/01.png" id="1_1badp"]
+[ext_resource type="Texture2D" uid="uid://cbib1k5wtnq6" path="res://Sprites/Cururu/Nadando/VFX/Saindo_Agua/02.png" id="2_x8mp6"]
+[ext_resource type="Texture2D" uid="uid://do6m7ji7ewt7s" path="res://Sprites/Cururu/Nadando/VFX/Saindo_Agua/03.png" id="3_e6ga7"]
+[ext_resource type="Texture2D" uid="uid://c28jyqot51dnp" path="res://Sprites/Cururu/Nadando/VFX/Saindo_Agua/04.png" id="4_w4jwu"]
+[ext_resource type="Texture2D" uid="uid://0em6ibbijv08" path="res://Sprites/Cururu/Nadando/VFX/Saindo_Agua/05.png" id="5_nypy2"]
+[ext_resource type="Texture2D" uid="uid://ikrul2wtu7ha" path="res://Sprites/Cururu/Nadando/VFX/Saindo_Agua/06.png" id="6_jyduu"]
+[ext_resource type="Texture2D" uid="uid://dd83702is0rnk" path="res://Sprites/Cururu/Nadando/VFX/Saindo_Agua/07.png" id="7_fh36c"]
+[ext_resource type="Texture2D" uid="uid://tblhtx7e0hxk" path="res://Sprites/Cururu/Nadando/VFX/Saindo_Agua/08.png" id="8_548p5"]
+[ext_resource type="Texture2D" uid="uid://baksm01t0b382" path="res://Sprites/Cururu/Nadando/VFX/Saindo_Agua/09.png" id="9_p0klt"]
+[ext_resource type="Texture2D" uid="uid://ct863w7vp58js" path="res://Sprites/Cururu/Nadando/VFX/Saindo_Agua/10.png" id="10_isaal"]
+[ext_resource type="Texture2D" uid="uid://c0n5d2j374s0r" path="res://Sprites/Cururu/Nadando/VFX/Saindo_Agua/11.png" id="11_ns4fn"]
+[ext_resource type="Texture2D" uid="uid://dj4qyqh8isxen" path="res://Sprites/Cururu/Nadando/VFX/Saindo_Agua/12.png" id="12_23eq6"]
+[ext_resource type="Texture2D" uid="uid://ci3vmr6e5vjfa" path="res://Sprites/Cururu/Nadando/VFX/Saindo_Agua/13.png" id="13_63aqa"]
+[ext_resource type="Script" uid="uid://c1bl210yhadrx" path="res://Scripts/Componentes/VFX.gd" id="14_pjygv"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_jb41k"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_1badp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_x8mp6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_e6ga7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_w4jwu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_nypy2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_jyduu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_fh36c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_548p5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_p0klt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_isaal")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_ns4fn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_23eq6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_63aqa")
+}],
+"loop": false,
+"name": &"default",
+"speed": 12.0
+}]
+
+[node name="VFX_Agua_Out" type="Node2D"]
+script = ExtResource("14_pjygv")
+
+[node name="VFX_Agua_Out" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -198)
+scale = Vector2(0.3, 0.3)
+sprite_frames = SubResource("SpriteFrames_jb41k")
+autoplay = "default"
