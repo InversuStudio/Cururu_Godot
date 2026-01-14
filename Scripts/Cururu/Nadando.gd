@@ -20,8 +20,8 @@ func Enter() -> void:
 
 func Exit() -> void:
 	var v:Node2D = vfx[1].instantiate()
-	v.global_position = parent.global_position
 	parent.get_parent().add_child(v)
+	v.global_position = parent.global_position
 	%SFX_Extra.stream = sfx[1]
 	%SFX_Extra.play()
 
