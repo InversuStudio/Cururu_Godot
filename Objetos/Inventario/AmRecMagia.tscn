@@ -1,15 +1,16 @@
-[gd_scene load_steps=8 format=3 uid="uid://dvh2mbmjsi2tf"]
+[gd_scene load_steps=9 format=3 uid="uid://dvh2mbmjsi2tf"]
 
 [ext_resource type="Texture2D" uid="uid://c3tl3oddronfh" path="res://icon.svg" id="1_55ki0"]
 [ext_resource type="Script" uid="uid://ca5pbjmacb3t3" path="res://Scripts/Inventario/BaseAmuleto.gd" id="2_w3x0u"]
-[ext_resource type="Texture2D" uid="uid://c7sla3vtxoxqr" path="res://Sprites/UI/Amuletos/START RECOVER.png" id="3_bhjvw"]
-[ext_resource type="Texture2D" uid="uid://b4y3bbsuyjaly" path="res://Sprites/UI/Pause/Consumiveis/SELECTED.png" id="3_bvp63"]
+[ext_resource type="Texture2D" uid="uid://u2k2n2xf5ewt" path="res://Sprites/UI/Pause/Amuletos/amuleto_magia2.png" id="3_bhjvw"]
+[ext_resource type="Texture2D" uid="uid://b4k2u07dt73ox" path="res://Sprites/UI/Pause/Amuletos/ITEM_SELECT.png" id="4_kewo5"]
 [ext_resource type="Script" uid="uid://ekmu0iam4og7" path="res://Scripts/Inventario/AmRecMagia.gd" id="4_w3x0u"]
+[ext_resource type="Texture2D" uid="uid://i5nilelxixwh" path="res://Sprites/UI/Pause/Amuletos/amuleto_magia.png" id="5_bhjvw"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_w3x0u"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bvp63"]
-bg_color = Color(0.34655392, 0.7017016, 0, 1)
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_kewo5"]
+texture = ExtResource("3_bhjvw")
 
 [node name="AmRecMagia" type="TextureButton" node_paths=PackedStringArray("script_logica")]
 custom_minimum_size = Vector2(200, 200)
@@ -20,8 +21,8 @@ script = ExtResource("2_w3x0u")
 item = 1
 nome_display = "Talismã da Seiva Serena"
 desc_item = "Criado a partir de um fragmento de casca de jequitibá e resina purificada, este amuleto pulsa com a calma do coração da floresta. A Seiva Serena nutre a conexão espiritual do Cururu, fortalecendo o canal entre o plano físico e as Águas Lunares. Enquanto equipado, ele sente a energia retornar suavemente, como o gotejar constante das folhas após a chuva."
-sprite_normal = ExtResource("3_bhjvw")
-sprite_select = ExtResource("3_bvp63")
+sprite_normal = ExtResource("5_bhjvw")
+sprite_select = ExtResource("4_kewo5")
 script_logica = NodePath("Script")
 
 [node name="Ativo" type="Button" parent="."]
@@ -33,16 +34,14 @@ anchor_left = 1.0
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -58.0
-offset_top = -58.0
-offset_right = -8.0
-offset_bottom = -8.0
+offset_left = -200.0
+offset_top = -200.0
 grow_horizontal = 0
 grow_vertical = 0
 focus_mode = 0
 focus_behavior_recursive = 1
 theme_override_styles/normal = SubResource("StyleBoxEmpty_w3x0u")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_bvp63")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_kewo5")
 toggle_mode = true
 button_mask = 0
 

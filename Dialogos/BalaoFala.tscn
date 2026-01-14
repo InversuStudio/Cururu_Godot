@@ -1,14 +1,14 @@
 [gd_scene load_steps=15 format=3 uid="uid://36u4axx0kdfy"]
 
 [ext_resource type="Script" uid="uid://c2ijeforn42qo" path="res://Dialogos/balloon.gd" id="1_w6bav"]
-[ext_resource type="Shader" path="res://Scripts/Shaders/blur_shader.gdshader" id="2_lp6v3"]
+[ext_resource type="Shader" uid="uid://c1omtsxv04udh" path="res://Scripts/Shaders/blur_shader.gdshader" id="2_lp6v3"]
 [ext_resource type="PackedScene" uid="uid://ckvgyvclnwggo" path="res://addons/dialogue_manager/dialogue_label.tscn" id="2_ow0pn"]
 [ext_resource type="Script" uid="uid://bb52rsfwhkxbn" path="res://addons/dialogue_manager/dialogue_responses_menu.gd" id="3_ifi3v"]
 [ext_resource type="Texture2D" uid="uid://bfige6m1uslss" path="res://Sprites/UI/Dialogo/DIALOGO_DIREITA.png" id="3_uma04"]
-[ext_resource type="Script" uid="uid://dvao27av8qjbk" path="res://Dialogos/label_auto_resize.gd" id="5_uma04"]
+[ext_resource type="Script" path="res://Dialogos/label_auto_resize.gd" id="5_uma04"]
 [ext_resource type="Texture2D" uid="uid://dq4d7agyoodbe" path="res://Sprites/UI/Dialogo/SELECAO_OFF.png" id="7_exniy"]
 [ext_resource type="Texture2D" uid="uid://cy8bm8xjdmrfp" path="res://Sprites/UI/Dialogo/SELECAO_ON.png" id="8_4bkqv"]
-[ext_resource type="Script" uid="uid://uli1isfpskjh" path="res://Dialogos/response_auto_resize.gd" id="9_4bkqv"]
+[ext_resource type="Script" path="res://Dialogos/response_auto_resize.gd" id="9_4bkqv"]
 
 [sub_resource type="Theme" id="Theme_w6bav"]
 
@@ -65,14 +65,13 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="CharacterIcon" type="Sprite2D" parent="Balloon"]
-position = Vector2(1779, 941)
-scale = Vector2(0.9973958, 0.9973958)
+position = Vector2(1616, 568)
 
 [node name="MainBox" type="NinePatchRect" parent="Balloon"]
 layout_mode = 0
 offset_left = 51.0
-offset_top = 632.0
-offset_right = 1696.0
+offset_top = 666.0
+offset_right = 1799.0
 offset_bottom = 1005.0
 texture = ExtResource("3_uma04")
 
@@ -83,10 +82,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -784.5
-offset_top = -114.5
-offset_right = 717.5
-offset_bottom = 154.5
+offset_left = -788.0
+offset_top = -92.5
+offset_right = 719.0
+offset_bottom = 130.5
 grow_horizontal = 2
 grow_vertical = 2
 
@@ -116,10 +115,8 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 4.0
-offset_top = 3.0
-offset_right = 4.0
-offset_bottom = 3.0
+offset_left = 19.0
+offset_right = 19.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_vertical = 3

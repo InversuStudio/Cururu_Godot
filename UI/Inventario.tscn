@@ -39,7 +39,7 @@ theme_override_styles/panel = SubResource("StyleBoxTexture_6dbge")
 
 [node name="MarginContainer" type="MarginContainer" parent="Conteudo/VBoxContainer/AreaDesc"]
 layout_mode = 2
-theme_override_constants/margin_left = 20
+theme_override_constants/margin_left = 40
 theme_override_constants/margin_top = 20
 theme_override_constants/margin_right = 20
 theme_override_constants/margin_bottom = 20
@@ -78,7 +78,9 @@ alignment = 2
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_vertical = 3
-theme_override_font_sizes/normal_font_size = 24
+size_flags_stretch_ratio = 0.8
+theme_override_constants/line_separation = 4
+theme_override_font_sizes/normal_font_size = 28
 text = "DESCRIÇÃO"
 
 [node name="VSeparator" type="VSeparator" parent="Conteudo"]

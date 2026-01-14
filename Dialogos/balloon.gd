@@ -90,17 +90,18 @@ func start(dialogue_resource: DialogueResource, title: String, extra_game_states
 	self.dialogue_line = await resource.get_next_dialogue_line(title, temporary_game_states)
 
 ## Setup character portrait to appear on dialogue
-func setup_portrait(inverter:bool):
+func setup_portrait():
 	if character_label.text == "SACI":
-		character_dialogue_icon.texture = load("res://Sprites/NPCS/Saci/saci01.png")
+		character_dialogue_icon.texture = load("res://Sprites/UI/Visual_Novel/saci.png")
 		
 	elif character_label.text == "ARARÊ":
-		character_dialogue_icon.texture = load("res://Sprites/NPCS/Cartografo/01.png")
-		character_dialogue_icon.flip_h = inverter
+		character_dialogue_icon.texture = load("res://Sprites/UI/Visual_Novel/arare.png")
 		
 	elif character_label.text == "NAIÁ":
-		character_dialogue_icon.texture = load("res://Sprites/NPCS/Vitoria Régia/NAIA_01.png")
-		character_dialogue_icon.flip_h = inverter
+		character_dialogue_icon.texture = load("res://Sprites/UI/Visual_Novel/vitoria_regia.png")
+		
+	elif character_label.text == "BOITATÁ":
+		character_dialogue_icon.texture = load("res://Sprites/UI/Visual_Novel/boitata.png")
 
 		
 	elif character_label.text == "NPC Basico":
@@ -118,7 +119,7 @@ func apply_dialogue_line() -> void:
 	character_label.visible = not dialogue_line.character.is_empty()
 	character_label.text = tr(dialogue_line.character, "dialogue")
 	
-	setup_portrait(true)
+	setup_portrait()
 
 	dialogue_label.hide()
 	dialogue_label.dialogue_line = dialogue_line

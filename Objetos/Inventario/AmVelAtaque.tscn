@@ -1,15 +1,16 @@
-[gd_scene load_steps=8 format=3 uid="uid://dsutk1ipca856"]
+[gd_scene load_steps=9 format=3 uid="uid://dsutk1ipca856"]
 
 [ext_resource type="Texture2D" uid="uid://c3tl3oddronfh" path="res://icon.svg" id="1_eo0xl"]
 [ext_resource type="Script" uid="uid://ca5pbjmacb3t3" path="res://Scripts/Inventario/BaseAmuleto.gd" id="2_xx80a"]
-[ext_resource type="Texture2D" uid="uid://b616yjld4pd51" path="res://Sprites/UI/Amuletos/START WATER.png" id="3_qith4"]
-[ext_resource type="Texture2D" uid="uid://b4y3bbsuyjaly" path="res://Sprites/UI/Pause/Consumiveis/SELECTED.png" id="3_w4off"]
+[ext_resource type="Texture2D" uid="uid://df4abu7kfak3v" path="res://Sprites/UI/Pause/Amuletos/amuleto_rapido2.png" id="3_qith4"]
+[ext_resource type="Texture2D" uid="uid://b4k2u07dt73ox" path="res://Sprites/UI/Pause/Amuletos/ITEM_SELECT.png" id="4_pv85o"]
 [ext_resource type="Script" uid="uid://df7q8i1vqmhmm" path="res://Scripts/Inventario/AmVelAtaque.gd" id="4_xx80a"]
+[ext_resource type="Texture2D" uid="uid://bdgeokwbvbwve" path="res://Sprites/UI/Pause/Amuletos/amuleto_rapido.png" id="5_qith4"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_e1vo3"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_44xrj"]
-bg_color = Color(0.34655392, 0.7017016, 0, 1)
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_pv85o"]
+texture = ExtResource("5_qith4")
 
 [node name="AmVelAtaque" type="TextureButton" node_paths=PackedStringArray("script_logica")]
 custom_minimum_size = Vector2(200, 200)
@@ -20,7 +21,7 @@ script = ExtResource("2_xx80a")
 nome_display = "Cabaça do Relâmpago das Águas"
 desc_item = "Um pequeno talismã talhado em madeira de jatobá e preso a uma miniatura de cabaça azulada. Dentro dela, vibra uma gota de Água Lunar eletrificada pelo toque da deusa Vitória-Régia. Quando ativado, o fluxo espiritual acelera pelos braços do Cururu, tornando seus disparos e golpes fluidos e rápidos como uma enxurrada repentina."
 sprite_normal = ExtResource("3_qith4")
-sprite_select = ExtResource("3_w4off")
+sprite_select = ExtResource("4_pv85o")
 script_logica = NodePath("Script")
 
 [node name="Ativo" type="Button" parent="."]
@@ -32,16 +33,16 @@ anchor_left = 1.0
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -58.0
-offset_top = -58.0
-offset_right = -8.0
-offset_bottom = -8.0
+offset_left = -200.0
+offset_top = -199.0
+offset_right = 1.0
+offset_bottom = 2.0
 grow_horizontal = 0
 grow_vertical = 0
 focus_mode = 0
 focus_behavior_recursive = 1
 theme_override_styles/normal = SubResource("StyleBoxEmpty_e1vo3")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_44xrj")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_pv85o")
 toggle_mode = true
 button_mask = 0
 

@@ -1,11 +1,25 @@
-[gd_scene load_steps=7 format=3 uid="uid://bmonoqdck6ten"]
+[gd_scene load_steps=17 format=3 uid="uid://bmonoqdck6ten"]
 
-[ext_resource type="Texture2D" uid="uid://qaapa6521tp4" path="res://Sprites/UI/HQ/INTRO_P1.jpg" id="1_735ws"]
 [ext_resource type="Script" uid="uid://bc1xu2vyl6ya8" path="res://Scripts/Componentes/Cutscene_Intro.gd" id="1_bhbvs"]
-[ext_resource type="Texture2D" uid="uid://bma4jpkvys0w" path="res://Sprites/UI/HQ/INTRO_P2.jpg" id="3_2r26l"]
+[ext_resource type="Texture2D" uid="uid://ci0xvvqjll2i3" path="res://Sprites/UI/Visual_Novel/Intro_game/Tela_01.png" id="2_iwqvi"]
+[ext_resource type="Texture2D" uid="uid://ca24hxi6s4b1i" path="res://Sprites/UI/Visual_Novel/Intro_game/Tela_02.png" id="3_1oirj"]
 [ext_resource type="AudioStream" uid="uid://w484n11fqypl" path="res://Audio/SFX/MENU INICIAL/selecao_menu.mp3" id="3_wmdw0"]
+[ext_resource type="Texture2D" uid="uid://ch16kbnxffhyq" path="res://Sprites/UI/Visual_Novel/Intro_game/Tela_03.png" id="4_3ec2c"]
 [ext_resource type="Script" uid="uid://dd16yu704x6wt" path="res://Scripts/Componentes/BGM_Player.gd" id="4_be5h4"]
+[ext_resource type="Texture2D" uid="uid://bc2yoaw6bn0kt" path="res://Sprites/UI/Pause/Pecas/MENU_ABA2.png" id="4_uuu4a"]
+[ext_resource type="Texture2D" uid="uid://bu6udw31dg5md" path="res://Sprites/UI/Pause/Pecas/MENU_ABA1.png" id="5_4q4i6"]
 [ext_resource type="AudioStream" uid="uid://cjorej6h7gw75" path="res://Audio/SFX/MENU INICIAL/menu_musica.mp3" id="5_uuu4a"]
+[ext_resource type="Texture2D" uid="uid://bai4oo20hdtk6" path="res://Sprites/UI/Visual_Novel/Intro_game/Tela_04.png" id="6_pu4bt"]
+[ext_resource type="Texture2D" uid="uid://ueeqhivxg0s4" path="res://Sprites/UI/Visual_Novel/Intro_game/Tela_05.png" id="7_fdg1p"]
+[ext_resource type="Texture2D" uid="uid://c0ewjlssuflxj" path="res://Sprites/UI/Visual_Novel/Intro_game/Tela_06.png" id="8_fjhlr"]
+[ext_resource type="Texture2D" uid="uid://dvln7aukfokcn" path="res://Sprites/UI/Visual_Novel/Intro_game/Tela_07.png" id="9_fv720"]
+[ext_resource type="Texture2D" uid="uid://cncy3gmjiyahb" path="res://Sprites/UI/Visual_Novel/Intro_game/Tela_08.png" id="10_rvfgo"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ajkku"]
+texture = ExtResource("4_uuu4a")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ibt7k"]
+texture = ExtResource("5_4q4i6")
 
 [node name="CutsceneIntro" type="Control"]
 layout_mode = 3
@@ -16,17 +30,54 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_bhbvs")
 
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+color = Color(0, 0, 0, 1)
+
 [node name="HQ1" type="Sprite2D" parent="."]
 unique_name_in_owner = true
 position = Vector2(779, 550.00006)
 scale = Vector2(0.4, 0.415)
-texture = ExtResource("1_735ws")
+
+[node name="Tela01" type="Sprite2D" parent="."]
+position = Vector2(376, 260)
+texture = ExtResource("2_iwqvi")
+
+[node name="Tela02" type="Sprite2D" parent="."]
+position = Vector2(1098, 266.99997)
+texture = ExtResource("3_1oirj")
+
+[node name="Tela03" type="Sprite2D" parent="."]
+position = Vector2(949, 798)
+texture = ExtResource("4_3ec2c")
 
 [node name="HQ2" type="Sprite2D" parent="."]
 unique_name_in_owner = true
+visible = false
 position = Vector2(779, 550.00006)
 scale = Vector2(0.4, 0.415)
-texture = ExtResource("3_2r26l")
+
+[node name="Tela04" type="Sprite2D" parent="."]
+position = Vector2(346, 225)
+texture = ExtResource("6_pu4bt")
+
+[node name="Tela05" type="Sprite2D" parent="."]
+position = Vector2(1008, 227)
+texture = ExtResource("7_fdg1p")
+
+[node name="Tela06" type="Sprite2D" parent="."]
+position = Vector2(1607, 260)
+texture = ExtResource("8_fjhlr")
+
+[node name="Tela07" type="Sprite2D" parent="."]
+position = Vector2(690, 755)
+texture = ExtResource("9_fv720")
+
+[node name="Tela08" type="Sprite2D" parent="."]
+position = Vector2(1451, 772)
+texture = ExtResource("10_rvfgo")
 
 [node name="HBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 1
@@ -35,17 +86,17 @@ anchor_top = 0.5
 anchor_bottom = 0.5
 offset_left = 1493.0
 offset_top = 395.0
-offset_right = 1845.0
-offset_bottom = 499.0
+offset_right = 1843.0
+offset_bottom = 495.0
 grow_vertical = 2
-theme_override_constants/separation = 20
 
 [node name="Continuar" type="Button" parent="HBoxContainer"]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(350, 100)
 layout_mode = 2
-size_flags_horizontal = 3
-theme_override_font_sizes/font_size = 40
+theme_override_font_sizes/font_size = 38
+theme_override_styles/normal = SubResource("StyleBoxTexture_ajkku")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_ibt7k")
 text = "A - Continuar"
 
 [node name="BtnSFX" type="AudioStreamPlayer" parent="."]
@@ -57,5 +108,5 @@ script = ExtResource("4_be5h4")
 musica = ExtResource("5_uuu4a")
 metadata/_custom_type_script = "uid://dd16yu704x6wt"
 
-[connection signal="pressed" from="HBoxContainer/Continuar" to="." method="_on_continuar_pressed"]
 [connection signal="pressed" from="HBoxContainer/Continuar" to="." method="_on_main_pressed"]
+[connection signal="pressed" from="HBoxContainer/Continuar" to="." method="_on_continuar_pressed"]
