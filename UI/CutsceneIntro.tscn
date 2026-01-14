@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://bmonoqdck6ten"]
+[gd_scene load_steps=18 format=3 uid="uid://bmonoqdck6ten"]
 
 [ext_resource type="Script" uid="uid://bc1xu2vyl6ya8" path="res://Scripts/Componentes/Cutscene_Intro.gd" id="1_bhbvs"]
 [ext_resource type="Texture2D" uid="uid://ci0xvvqjll2i3" path="res://Sprites/UI/Visual_Novel/Intro_game/Tela_01.png" id="2_iwqvi"]
@@ -20,6 +20,8 @@ texture = ExtResource("4_uuu4a")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ibt7k"]
 texture = ExtResource("5_4q4i6")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_xqwwo"]
 
 [node name="CutsceneIntro" type="Control"]
 layout_mode = 3
@@ -92,9 +94,9 @@ anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
 offset_left = 647.0001
-offset_top = -96.00006
+offset_top = -92.91998
 offset_right = 997.0001
-offset_bottom = 8.166748
+offset_bottom = 7.080078
 grow_horizontal = 2
 grow_vertical = 0
 scale = Vector2(0.84000003, 0.7392)
@@ -106,6 +108,7 @@ layout_mode = 2
 theme_override_font_sizes/font_size = 38
 theme_override_styles/normal = SubResource("StyleBoxTexture_ajkku")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_ibt7k")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_xqwwo")
 text = "A - Continuar"
 
 [node name="BtnSFX" type="AudioStreamPlayer" parent="."]
