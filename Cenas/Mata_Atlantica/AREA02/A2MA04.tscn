@@ -197,6 +197,7 @@ offset_right = 5750.0
 offset_bottom = 1514.0
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+process_mode = 3
 stream = ExtResource("6_we3sk")
 volume_db = 5.0
 autoplay = true

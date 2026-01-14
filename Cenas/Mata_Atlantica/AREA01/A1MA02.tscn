@@ -2042,6 +2042,7 @@ volume = -0.5
 metadata/_custom_type_script = "uid://dd16yu704x6wt"
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+process_mode = 3
 stream = ExtResource("46_mjou1")
 volume_db = 5.0
 autoplay = true

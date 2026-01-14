@@ -551,6 +551,7 @@ musica = ExtResource("25_3saii")
 metadata/_custom_type_script = "uid://dd16yu704x6wt"
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+process_mode = 3
 stream = ExtResource("26_ogne8")
 volume_db = 5.0
 autoplay = true
