@@ -1,4 +1,4 @@
-[gd_scene load_steps=42 format=4 uid="uid://exty4suocudj"]
+[gd_scene load_steps=48 format=4 uid="uid://exty4suocudj"]
 
 [ext_resource type="PackedScene" uid="uid://nohq28uk7lfk" path="res://Objetos/Entidades/Player.tscn" id="1_v83m2"]
 [ext_resource type="Texture2D" uid="uid://2x6q1ni8klgv" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/arvore_fundo1.png" id="2_f8u2d"]
@@ -9,7 +9,6 @@
 [ext_resource type="Texture2D" uid="uid://wng7roaj8xu6" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/arvore_S1.png" id="4_6d12h"]
 [ext_resource type="Texture2D" uid="uid://dv0q1amqoq168" path="res://Sprites/Cenário/Mata_Atlantica/Background/Mata/mato03.png" id="4_m4yll"]
 [ext_resource type="Texture2D" uid="uid://3g4iv5385ymw" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/arvore_S2.png" id="4_yydn1"]
-[ext_resource type="PackedScene" uid="uid://cqyub70sv0ofp" path="res://Objetos/Props/SavePoint.tscn" id="5_65x72"]
 [ext_resource type="Texture2D" uid="uid://c2yapafbd3cnf" path="res://Sprites/Cenário/Mata_Atlantica/Foreground/cipó.png" id="6_wnjnd"]
 [ext_resource type="Texture2D" uid="uid://uq6dbjep5wva" path="res://Sprites/Cenário/Mata_Atlantica/Foreground/frontfolha.png" id="7_5ka01"]
 [ext_resource type="Texture2D" uid="uid://cjl88xeknofui" path="res://Sprites/Cenário/Mata_Atlantica/Chao/grama_reto.png" id="8_5kxqo"]
@@ -30,7 +29,14 @@
 [ext_resource type="Texture2D" uid="uid://ccy8rilccs3gf" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/arvore06.png" id="16_0daqe"]
 [ext_resource type="Texture2D" uid="uid://u12dsbd5ebth" path="res://Sprites/Cenário/Mata_Atlantica/Background/Mata/mato00.png" id="16_hubad"]
 [ext_resource type="Texture2D" uid="uid://d18vqjeq586b1" path="res://Sprites/Cenário/Mata_Atlantica/Pedras e Ruinas/pedra_musgo.png" id="19_8g6fq"]
+[ext_resource type="PackedScene" uid="uid://tvw2ynw76htc" path="res://Objetos/Props/vasosmoeda/vasomoeda_01.tscn" id="21_v723p"]
+[ext_resource type="PackedScene" uid="uid://bktu336s6ruri" path="res://Objetos/Props/Moeda.tscn" id="22_gr3ec"]
 [ext_resource type="PackedScene" uid="uid://d0l4afitq8qog" path="res://Objetos/NPCs/Cartógrafo.tscn" id="23_hubad"]
+[ext_resource type="PackedScene" uid="uid://cppreprc8pa3k" path="res://Objetos/Props/vasosmoeda/vasomoeda_02.tscn" id="23_ldwfj"]
+[ext_resource type="PackedScene" uid="uid://ejo3gi0g1rk3" path="res://Objetos/Props/vasosmoeda/vasomoeda_03.tscn" id="24_7ywmt"]
+[ext_resource type="PackedScene" uid="uid://bcwi51vmdht5w" path="res://Objetos/Props/vasosmoeda/vasomoeda_04.tscn" id="25_co6lv"]
+[ext_resource type="PackedScene" uid="uid://dny88hy3w52nm" path="res://Objetos/Props/DropAcai.tscn" id="26_8tm3t"]
+[ext_resource type="PackedScene" uid="uid://cbraq3qrm01h4" path="res://Objetos/Props/vasosmoeda/vasomoeda_05.tscn" id="27_auxyl"]
 [ext_resource type="Script" uid="uid://dd16yu704x6wt" path="res://Scripts/Componentes/BGM_Player.gd" id="27_nh2iu"]
 [ext_resource type="AudioStream" uid="uid://c7qftchbhu6xc" path="res://Audio/SFX/AMBIENTE/Musica_Jogo.mp3" id="28_m4yll"]
 [ext_resource type="PackedScene" uid="uid://u28e3eudu6ch" path="res://Objetos/Funcionalidade/MainCamera.tscn" id="31_f8u2d"]
@@ -617,6 +623,46 @@ position = Vector2(-8426.5, -96)
 scale = Vector2(1.8125, 1.1061947)
 texture = ExtResource("9_nh2iu")
 
+[node name="Bau" parent="background/0/Arvores01" instance=ExtResource("21_v723p")]
+position = Vector2(-5386, 1020)
+drop_item = Array[PackedScene]([ExtResource("22_gr3ec"), ExtResource("22_gr3ec")])
+
+[node name="Bau2" parent="background/0/Arvores01" instance=ExtResource("23_ldwfj")]
+position = Vector2(-5256, 1039)
+drop_item = Array[PackedScene]([ExtResource("22_gr3ec")])
+
+[node name="Bau3" parent="background/0/Arvores01" instance=ExtResource("24_7ywmt")]
+position = Vector2(-4390, 1040)
+drop_item = Array[PackedScene]([ExtResource("22_gr3ec"), ExtResource("22_gr3ec"), ExtResource("22_gr3ec")])
+
+[node name="Bau5" parent="background/0/Arvores01" instance=ExtResource("27_auxyl")]
+position = Vector2(-4157, 1028)
+drop_item = Array[PackedScene]([ExtResource("22_gr3ec"), ExtResource("22_gr3ec"), ExtResource("22_gr3ec"), ExtResource("22_gr3ec")])
+
+[node name="Bau4" parent="background/0/Arvores01" instance=ExtResource("25_co6lv")]
+position = Vector2(-4275, 1043)
+drop_item = Array[PackedScene]([ExtResource("22_gr3ec"), ExtResource("26_8tm3t")])
+
+[node name="Bau6" parent="background/0/Arvores01" instance=ExtResource("21_v723p")]
+position = Vector2(-2930, 1020)
+drop_item = Array[PackedScene]([ExtResource("22_gr3ec"), ExtResource("22_gr3ec")])
+
+[node name="Bau7" parent="background/0/Arvores01" instance=ExtResource("23_ldwfj")]
+position = Vector2(-2800, 1039)
+drop_item = Array[PackedScene]([ExtResource("22_gr3ec")])
+
+[node name="Bau8" parent="background/0/Arvores01" instance=ExtResource("24_7ywmt")]
+position = Vector2(-1934, 1040)
+drop_item = Array[PackedScene]([ExtResource("22_gr3ec"), ExtResource("22_gr3ec"), ExtResource("22_gr3ec")])
+
+[node name="Bau9" parent="background/0/Arvores01" instance=ExtResource("27_auxyl")]
+position = Vector2(-1701, 1028)
+drop_item = Array[PackedScene]([ExtResource("22_gr3ec"), ExtResource("22_gr3ec"), ExtResource("22_gr3ec"), ExtResource("22_gr3ec")])
+
+[node name="Bau10" parent="background/0/Arvores01" instance=ExtResource("25_co6lv")]
+position = Vector2(-1819, 1043)
+drop_item = Array[PackedScene]([ExtResource("22_gr3ec"), ExtResource("26_8tm3t")])
+
 [node name="Transicoes" type="Node2D" parent="background/0"]
 
 [node name="MA_T3" parent="background/0/Transicoes" instance=ExtResource("9_q40bt")]
@@ -650,9 +696,6 @@ flip_h = true
 
 [node name="NPC-Basico2" parent="background/0" instance=ExtResource("23_hubad")]
 position = Vector2(1125, 924)
-
-[node name="SavePoint" parent="background/0" instance=ExtResource("5_65x72")]
-position = Vector2(-5009, 1025)
 
 [node name="Cururu" parent="background/0" instance=ExtResource("1_v83m2")]
 z_index = 0

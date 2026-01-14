@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=3 uid="uid://bos2748v4fxwy"]
+
+[ext_resource type="Texture2D" uid="uid://bg3yumuc4n238" path="res://Sprites/Cenário/Objetos/Upgrade/TOTEM01.png" id="1_u26id"]
+[ext_resource type="Texture2D" uid="uid://ethdknx2nxdu" path="res://Sprites/Cenário/Objetos/Upgrade/TOTEM02.png" id="2_jdfm3"]
+[ext_resource type="Texture2D" uid="uid://wo8vmxt085op" path="res://Sprites/Cenário/Objetos/Upgrade/TOTEM03.png" id="3_yrfse"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_js2sf"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_u26id")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_jdfm3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_yrfse")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -205)
+scale = Vector2(0.86328125, 0.86328125)
+sprite_frames = SubResource("SpriteFrames_js2sf")
+autoplay = "default"
+frame_progress = 0.23039985

@@ -49,67 +49,67 @@ animations = [{
 "speed": 10.0
 }, {
 "frames": [{
-"duration": 1.0,
+"duration": 0.8,
 "texture": ExtResource("12_dngjy")
 }, {
-"duration": 1.0,
+"duration": 0.8,
 "texture": ExtResource("13_68fjd")
 }, {
-"duration": 1.0,
+"duration": 0.8,
 "texture": ExtResource("14_oqld0")
 }, {
-"duration": 1.0,
+"duration": 0.8,
 "texture": ExtResource("15_44x64")
 }, {
-"duration": 1.0,
+"duration": 0.8,
 "texture": ExtResource("16_gvu5f")
 }, {
-"duration": 1.0,
+"duration": 0.8,
 "texture": ExtResource("17_fmqfs")
 }, {
-"duration": 1.0,
+"duration": 0.8,
 "texture": ExtResource("18_nqy47")
 }, {
-"duration": 1.0,
+"duration": 0.8,
 "texture": ExtResource("19_lx5ky")
 }, {
-"duration": 1.0,
+"duration": 0.8,
 "texture": ExtResource("20_g4bto")
 }, {
-"duration": 1.0,
+"duration": 0.8,
 "texture": ExtResource("21_mrqum")
 }, {
-"duration": 1.0,
+"duration": 0.8,
 "texture": ExtResource("22_xl6hi")
 }, {
-"duration": 1.0,
+"duration": 0.8,
 "texture": ExtResource("23_6po5d")
 }, {
-"duration": 1.0,
+"duration": 0.8,
 "texture": ExtResource("24_u4l4q")
 }, {
-"duration": 1.0,
+"duration": 0.8,
 "texture": ExtResource("25_uxjyq")
 }, {
-"duration": 1.0,
+"duration": 0.8,
 "texture": ExtResource("26_yowug")
 }, {
-"duration": 1.0,
+"duration": 0.8,
 "texture": ExtResource("27_hbiq0")
 }, {
-"duration": 1.0,
+"duration": 0.8,
 "texture": ExtResource("28_xu7bp")
 }, {
-"duration": 1.0,
+"duration": 0.8,
 "texture": ExtResource("29_jf45a")
 }, {
-"duration": 1.0,
+"duration": 0.8,
 "texture": ExtResource("30_xwv4y")
 }, {
-"duration": 1.0,
+"duration": 0.8,
 "texture": ExtResource("31_8u1mn")
 }, {
-"duration": 1.0,
+"duration": 0.8,
 "texture": ExtResource("32_bmbxo")
 }],
 "loop": false,
@@ -119,7 +119,7 @@ animations = [{
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_e7y2f"]
 radius = 68.0
-height = 576.0
+height = 604.0
 
 [node name="PilarFogo" type="Node2D"]
 script = ExtResource("1_tdbse")
@@ -131,6 +131,9 @@ position = Vector2(0, -422)
 sprite_frames = SubResource("SpriteFrames_u0rk8")
 animation = &"Jato"
 autoplay = "Carga"
+frame = 20
+frame_progress = 1.0
+speed_scale = 1.5
 
 [node name="HitBox" parent="." instance=ExtResource("11_tqvmf")]
 collision_layer = 16

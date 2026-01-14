@@ -22,6 +22,7 @@
 [ext_resource type="Texture2D" uid="uid://cj4rj4oj20ogb" path="res://Sprites/Cenário/Mata_Atlantica/Chao/chap_interno.png" id="10_38a5t"]
 [ext_resource type="PackedScene" uid="uid://bu62qgilsxetf" path="res://Objetos/Entidades/Escorpiao.tscn" id="11_6t3gw"]
 [ext_resource type="Texture2D" uid="uid://cw2yeg7ynw0kl" path="res://Sprites/Cenário/Mata_Atlantica/Chao/chap_externo.png" id="11_dmd0r"]
+[ext_resource type="PackedScene" uid="uid://bos2748v4fxwy" path="res://Objetos/Props/upgrade_vida.tscn" id="15_o4mwd"]
 [ext_resource type="Texture2D" uid="uid://dw42p1qq6njp8" path="res://Sprites/Cenário/Mata_Atlantica/Chao/moita_miasma2.png" id="17_dug7p"]
 [ext_resource type="PackedScene" uid="uid://smwewolvvw6l" path="res://Objetos/Entidades/Escorpiao_Rei.tscn" id="19_1vw3w"]
 [ext_resource type="Texture2D" uid="uid://jecy4bfqqqxu" path="res://Sprites/Cenário/Mata_Atlantica/Teto/Moita teste.png" id="19_ygqbx"]
@@ -34,7 +35,6 @@
 [ext_resource type="Texture2D" uid="uid://bt8vw2o8t62am" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/arvore_miasma.png" id="28_hx3nd"]
 [ext_resource type="PackedScene" uid="uid://u48tpl3f3l20" path="res://Objetos/Props/DropGuarana.tscn" id="28_yk4cc"]
 [ext_resource type="PackedScene" uid="uid://dny88hy3w52nm" path="res://Objetos/Props/DropAcai.tscn" id="29_dug7p"]
-[ext_resource type="Texture2D" uid="uid://bg3yumuc4n238" path="res://Sprites/Cenário/Objetos/Upgrade/TOTEM.png" id="29_yk4cc"]
 [ext_resource type="PackedScene" uid="uid://dghxpclnjwg5k" path="res://Objetos/Props/PecaCoracao.tscn" id="30_dug7p"]
 [ext_resource type="PackedScene" uid="uid://u28e3eudu6ch" path="res://Objetos/Funcionalidade/MainCamera.tscn" id="30_yk4cc"]
 
@@ -501,10 +501,8 @@ scale = Vector2(0.7169811, 0.7169811)
 texture = ExtResource("4_yk4cc")
 flip_h = true
 
-[node name="Totem" type="Sprite2D" parent="ArvoresFrente"]
-position = Vector2(-801.499, -1993.001)
-scale = Vector2(0.8066407, 0.8066407)
-texture = ExtResource("29_yk4cc")
+[node name="Node2D" parent="ArvoresFrente" instance=ExtResource("15_o4mwd")]
+position = Vector2(-799.999, -1795.501)
 
 [node name="SavePoint" parent="." instance=ExtResource("7_g1p7l")]
 position = Vector2(2600, -3804)
@@ -531,7 +529,7 @@ drop_item = Array[PackedScene]([ExtResource("28_yk4cc"), ExtResource("29_dug7p")
 multi_drop = true
 
 [node name="PecaCoracao" parent="." instance=ExtResource("30_dug7p")]
-position = Vector2(5381, -4669)
+position = Vector2(5380, -4700)
 nome_id = "MA_2_5"
 
 [node name="PointLight2D2" type="PointLight2D" parent="PecaCoracao"]

@@ -859,7 +859,6 @@ position = Vector2(4944, -2002)
 texture = ExtResource("12_emg7a")
 
 [node name="ParedeSecreta" parent="background/0" instance=ExtResource("15_78wer")]
-visible = false
 visibility_layer = 7
 position = Vector2(4728, -2544)
 rotation = -3.1415925

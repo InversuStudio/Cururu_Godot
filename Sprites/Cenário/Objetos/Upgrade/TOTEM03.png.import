@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bg3yumuc4n238"
-path="res://.godot/imported/TOTEM.png-577cc23f69deb52575d63cfc63dad1d0.ctex"
+uid="uid://wo8vmxt085op"
+path="res://.godot/imported/TOTEM03.png-e77c64c989f890199fd7a6ab33de8edd.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Cenário/Objetos/Upgrade/TOTEM.png"
-dest_files=["res://.godot/imported/TOTEM.png-577cc23f69deb52575d63cfc63dad1d0.ctex"]
+source_file="res://Sprites/Cenário/Objetos/Upgrade/TOTEM03.png"
+dest_files=["res://.godot/imported/TOTEM03.png-e77c64c989f890199fd7a6ab33de8edd.ctex"]
 
 [params]
 

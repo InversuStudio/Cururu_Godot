@@ -351,6 +351,9 @@ position = Vector2(-3585, -10926.871)
 scale = Vector2(3.1571147, 1.1088231)
 texture = ExtResource("1_xyjrg")
 
+[node name="ArvFundo" type="Parallax2D" parent="."]
+scroll_scale = Vector2(0.6, 1)
+
 [node name="ArvoreFundo1" type="Sprite2D" parent="."]
 position = Vector2(-5866.5, -11043.5)
 scale = Vector2(1.67137, 2.0621922)
@@ -380,10 +383,6 @@ texture = ExtResource("2_giq4m")
 position = Vector2(-845.75, -10746.5)
 scale = Vector2(1.5413622, 1.5076193)
 texture = ExtResource("3_n82pn")
-
-[node name="ArvFundo" type="Parallax2D" parent="."]
-visible = false
-scroll_scale = Vector2(0.6, 1)
 
 [node name="ArvoreS7" type="Sprite2D" parent="."]
 position = Vector2(-5165, -11001)
@@ -660,23 +659,23 @@ blend_mode = 2
 texture = ExtResource("31_s7f4i")
 
 [node name="PosPilar1" type="Marker2D" parent="Cenario"]
-position = Vector2(-3305.7715, 227.22852)
+position = Vector2(-3305.7715, 134.22852)
 gizmo_extents = 143.8
 
 [node name="PosPilar2" type="Marker2D" parent="Cenario"]
-position = Vector2(-2948.5713, 227.22852)
+position = Vector2(-2948.5713, 134.22852)
 gizmo_extents = 143.8
 
 [node name="PosPilar3" type="Marker2D" parent="Cenario"]
-position = Vector2(-2602.9722, 227.22852)
+position = Vector2(-2602.9722, 134.22852)
 gizmo_extents = 143.8
 
 [node name="PosPilar4" type="Marker2D" parent="Cenario"]
-position = Vector2(-2281.9717, 227.22852)
+position = Vector2(-2281.9717, 134.22852)
 gizmo_extents = 143.8
 
 [node name="PosPilar5" type="Marker2D" parent="Cenario"]
-position = Vector2(-1941.9718, 227.22852)
+position = Vector2(-1941.9718, 134.22852)
 gizmo_extents = 143.8
 
 [node name="Agua" type="TileMapLayer" parent="Cenario" groups=["Agua"]]

@@ -24,7 +24,6 @@ texture = ExtResource("1_735ws")
 
 [node name="HQ2" type="Sprite2D" parent="."]
 unique_name_in_owner = true
-visible = false
 position = Vector2(779, 550.00006)
 scale = Vector2(0.4, 0.415)
 texture = ExtResource("3_2r26l")
@@ -58,5 +57,5 @@ script = ExtResource("4_be5h4")
 musica = ExtResource("5_uuu4a")
 metadata/_custom_type_script = "uid://dd16yu704x6wt"
 
-[connection signal="pressed" from="HBoxContainer/Continuar" to="." method="_on_main_pressed"]
 [connection signal="pressed" from="HBoxContainer/Continuar" to="." method="_on_continuar_pressed"]
+[connection signal="pressed" from="HBoxContainer/Continuar" to="." method="_on_main_pressed"]

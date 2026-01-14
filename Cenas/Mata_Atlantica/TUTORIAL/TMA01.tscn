@@ -33,7 +33,6 @@
 [ext_resource type="PackedScene" uid="uid://dn2kwqjchyumh" path="res://Sprites/Cenário/Mata_Atlantica/Interativos/parede_pedras.tscn" id="27_i5sln"]
 [ext_resource type="Texture2D" uid="uid://ciulkfu83ohwu" path="res://Sprites/Cenário/Mata_Atlantica/Foreground/04.png" id="27_te2fn"]
 [ext_resource type="Texture2D" uid="uid://cgnnux60eiern" path="res://Sprites/Cenário/Mata_Atlantica/Foreground/05.png" id="28_wstxp"]
-[ext_resource type="PackedScene" uid="uid://bxixu84ahcyba" path="res://Objetos/NPCs/Saci.tscn" id="29_qeqrq"]
 [ext_resource type="Texture2D" uid="uid://5m4b2cn86u3t" path="res://Sprites/Cenário/Mata_Atlantica/Foreground/03.png" id="30_5nff6"]
 [ext_resource type="Script" uid="uid://dd16yu704x6wt" path="res://Scripts/Componentes/BGM_Player.gd" id="30_fgbk1"]
 [ext_resource type="Shader" uid="uid://cete83ldr534" path="res://Scripts/Shaders/godray.gdshader" id="30_rh2pu"]
@@ -46,6 +45,7 @@
 [ext_resource type="Texture2D" uid="uid://b2f2ppntemt15" path="res://Sprites/Cenário/Mata_Atlantica/Chao/flores.png" id="36_wstxp"]
 [ext_resource type="PackedScene" uid="uid://u28e3eudu6ch" path="res://Objetos/Funcionalidade/MainCamera.tscn" id="37_nika8"]
 [ext_resource type="Texture2D" uid="uid://b7hwtujjwy182" path="res://Sprites/UI/Pause/maPEAMENTO.png" id="38_5nff6"]
+[ext_resource type="Texture2D" uid="uid://ddy77p0xua6jm" path="res://Sprites/Cenário/Mata_Atlantica/Foreground/arv01.png" id="43_wmciv"]
 [ext_resource type="Texture2D" uid="uid://7msrkwwo018f" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/arvore02.png" id="44_jwima"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_rcn2b"]
@@ -647,9 +647,6 @@ position = Vector2(6051.9995, -1823.0001)
 scale = Vector2(0.9335072, 0.93350714)
 texture = ExtResource("38_5nff6")
 
-[node name="NPC-Basico" parent="0" instance=ExtResource("29_qeqrq")]
-position = Vector2(8001, -1290)
-
 [node name="Cururu" parent="0" instance=ExtResource("6_rp2yr")]
 z_index = 0
 position = Vector2(1720, -1159.9999)
@@ -1214,11 +1211,6 @@ rotation = 0.2617994
 scale = Vector2(0.6621559, 0.6621559)
 texture = ExtResource("28_wstxp")
 
-[node name="07" type="Sprite2D" parent="2/Cipó"]
-visible = false
-position = Vector2(-33324, -3550)
-texture = ExtResource("28_wstxp")
-
 [node name="03" type="Sprite2D" parent="2/Cipó"]
 position = Vector2(-30702, -4247)
 scale = Vector2(1.5234375, 1.5234375)
@@ -1233,6 +1225,12 @@ texture = ExtResource("31_ku32q")
 position = Vector2(-31271.5, -4221.5)
 scale = Vector2(1.3789063, 1.3789063)
 texture = ExtResource("32_dglwx")
+
+[node name="Arv01" type="Sprite2D" parent="2/Cipó/02"]
+modulate = Color(0.012617188, 0.012617188, 0.012617188, 1)
+position = Vector2(-3361.7222, 199.76141)
+scale = Vector2(0.31530967, 0.33131817)
+texture = ExtResource("43_wmciv")
 
 [node name="Arvore07" type="Sprite2D" parent="2"]
 modulate = Color(0.012617188, 0.012617188, 0.012617188, 1)

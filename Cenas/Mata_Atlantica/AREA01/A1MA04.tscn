@@ -9,7 +9,6 @@
 [ext_resource type="Texture2D" uid="uid://dv0q1amqoq168" path="res://Sprites/Cenário/Mata_Atlantica/Background/Mata/mato03.png" id="4_15hca"]
 [ext_resource type="Texture2D" uid="uid://rwmi1ggde5dy" path="res://Sprites/VFX/Iluminação/PORTAL.png" id="4_hyhx3"]
 [ext_resource type="PackedScene" uid="uid://nohq28uk7lfk" path="res://Objetos/Entidades/Player.tscn" id="5_gvt1b"]
-[ext_resource type="Texture2D" uid="uid://bg3yumuc4n238" path="res://Sprites/Cenário/Objetos/Upgrade/TOTEM.png" id="6_mhwhk"]
 [ext_resource type="Texture2D" uid="uid://dru600hg8oaty" path="res://Sprites/Cenário/Mata_Atlantica/Background/Mata/mato02.png" id="7_2jjbf"]
 [ext_resource type="Texture2D" uid="uid://d3t6c4pjsosio" path="res://Sprites/Cenário/Mata_Atlantica/Background/Mata/mato01.png" id="9_lsyrr"]
 [ext_resource type="Texture2D" uid="uid://cjl88xeknofui" path="res://Sprites/Cenário/Mata_Atlantica/Chao/grama_reto.png" id="10_uqj5l"]
@@ -25,6 +24,7 @@
 [ext_resource type="Texture2D" uid="uid://u12dsbd5ebth" path="res://Sprites/Cenário/Mata_Atlantica/Background/Mata/mato00.png" id="16_qvxil"]
 [ext_resource type="Texture2D" uid="uid://cdnyx0mqh22t0" path="res://Sprites/Cenário/Mata_Atlantica/Background/copa03.png" id="17_5bp2d"]
 [ext_resource type="Texture2D" uid="uid://c2yapafbd3cnf" path="res://Sprites/Cenário/Mata_Atlantica/Foreground/cipó.png" id="17_l3md2"]
+[ext_resource type="PackedScene" uid="uid://bos2748v4fxwy" path="res://Objetos/Props/upgrade_vida.tscn" id="19_158ye"]
 [ext_resource type="Texture2D" uid="uid://7msrkwwo018f" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/arvore02.png" id="24_faglj"]
 [ext_resource type="PackedScene" uid="uid://dghxpclnjwg5k" path="res://Objetos/Props/PecaCoracao.tscn" id="25_bf5tm"]
 [ext_resource type="PackedScene" uid="uid://u28e3eudu6ch" path="res://Objetos/Funcionalidade/MainCamera.tscn" id="25_mhwhk"]
@@ -364,13 +364,11 @@ scale = Vector2(1, 1.6250002)
 texture = ExtResource("4_hyhx3")
 flip_h = true
 
-[node name="Totem" type="Sprite2D" parent="0"]
-position = Vector2(-765.00006, -2885.0002)
-scale = Vector2(0.8339844, 0.8339844)
-texture = ExtResource("6_mhwhk")
+[node name="Node2D" parent="0" instance=ExtResource("19_158ye")]
+position = Vector2(-764, -2684)
 
 [node name="PecaCoracao" parent="0" instance=ExtResource("25_bf5tm")]
-position = Vector2(-767, -2918)
+position = Vector2(-767, -2940)
 nome_id = "MA_1_4"
 
 [node name="Cururu" parent="0" instance=ExtResource("5_gvt1b")]

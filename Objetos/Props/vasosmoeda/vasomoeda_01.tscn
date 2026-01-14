@@ -62,7 +62,6 @@ autoplay = "Normal"
 speed_scale = 1.5
 
 [node name="PosItem" type="Marker2D" parent="."]
-z_index = 1001
 position = Vector2(0, -110)
 
 [connection signal="hurt" from="HurtBox" to="." method="_on_hurt_box_hurt"]
