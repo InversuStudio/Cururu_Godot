@@ -1,4 +1,4 @@
-[gd_scene load_steps=53 format=4 uid="uid://djvuyfef1wujd"]
+[gd_scene load_steps=54 format=4 uid="uid://djvuyfef1wujd"]
 
 [ext_resource type="PackedScene" uid="uid://1apfpwlqocxn" path="res://Objetos/Funcionalidade/TransicaoFase.tscn" id="1_2ybff"]
 [ext_resource type="PackedScene" uid="uid://bnm668fws2641" path="res://Objetos/Props/Armadilha.tscn" id="1_ja78a"]
@@ -46,6 +46,7 @@
 [ext_resource type="Texture2D" uid="uid://cv4arvcoi1o8j" path="res://Sprites/Cenário/Mata_Atlantica/Chao/A FLOR.png" id="40_kob7j"]
 [ext_resource type="Texture2D" uid="uid://b6yel5f58h380" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/arvore05.png" id="40_x4lte"]
 [ext_resource type="Texture2D" uid="uid://c8tb73qiqhhk8" path="res://Sprites/Cenário/Mata_Atlantica/Background/Galhos/esquerda01.png" id="42_d626j"]
+[ext_resource type="AudioStream" uid="uid://b2vi4qav4gk5r" path="res://Audio/SFX/AMBIENTE/Cururu - Soundscape A.ogg" id="46_mjou1"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0lx4q"]
 size = Vector2(754.5305, 922.58105)
@@ -2038,6 +2039,11 @@ position = Vector2(5324, -4502)
 script = ExtResource("30_78wer")
 musica = ExtResource("31_byk7f")
 volume = -0.5
+metadata/_custom_type_script = "uid://dd16yu704x6wt"
+
+[node name="BGM_Player2" type="Node" parent="."]
+script = ExtResource("30_78wer")
+musica = ExtResource("46_mjou1")
 metadata/_custom_type_script = "uid://dd16yu704x6wt"
 
 [node name="Node2D" type="Node2D" parent="."]

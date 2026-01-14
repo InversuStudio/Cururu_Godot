@@ -1,4 +1,4 @@
-[gd_scene load_steps=48 format=4 uid="uid://exty4suocudj"]
+[gd_scene load_steps=49 format=4 uid="uid://exty4suocudj"]
 
 [ext_resource type="PackedScene" uid="uid://nohq28uk7lfk" path="res://Objetos/Entidades/Player.tscn" id="1_v83m2"]
 [ext_resource type="Texture2D" uid="uid://2x6q1ni8klgv" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/arvore_fundo1.png" id="2_f8u2d"]
@@ -43,6 +43,7 @@
 [ext_resource type="Texture2D" uid="uid://c8t5do0sox8mj" path="res://Sprites/Cenário/Mata_Atlantica/Pedras e Ruinas/pedra_smusgo.png" id="33_5jfld"]
 [ext_resource type="Texture2D" uid="uid://c8tb73qiqhhk8" path="res://Sprites/Cenário/Mata_Atlantica/Background/Galhos/esquerda01.png" id="37_1gvhd"]
 [ext_resource type="PackedScene" uid="uid://bei1s8te3cwko" path="res://Sprites/Cenário/Mata_Atlantica/Interativos/plataforma.tscn" id="38_8g6fq"]
+[ext_resource type="AudioStream" uid="uid://b2vi4qav4gk5r" path="res://Audio/SFX/AMBIENTE/Cururu - Soundscape A.ogg" id="43_gr3ec"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mw8rc"]
 size = Vector2(63, 541)
@@ -1361,6 +1362,12 @@ follow_viewport_enabled = true
 script = ExtResource("27_nh2iu")
 musica = ExtResource("28_m4yll")
 volume = -0.5
+metadata/_custom_type_script = "uid://dd16yu704x6wt"
+
+[node name="BGM_Player2" type="Node" parent="."]
+script = ExtResource("27_nh2iu")
+musica = ExtResource("43_gr3ec")
+volume = 20.0
 metadata/_custom_type_script = "uid://dd16yu704x6wt"
 
 [node name="MainCamera" parent="." node_paths=PackedStringArray("target", "limite_camera") instance=ExtResource("31_f8u2d")]

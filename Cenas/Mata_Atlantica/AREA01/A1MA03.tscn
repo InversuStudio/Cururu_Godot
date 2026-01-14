@@ -1,4 +1,4 @@
-[gd_scene load_steps=49 format=4 uid="uid://cubw3i1ch5jq1"]
+[gd_scene load_steps=50 format=4 uid="uid://cubw3i1ch5jq1"]
 
 [ext_resource type="PackedScene" uid="uid://nohq28uk7lfk" path="res://Objetos/Entidades/Player.tscn" id="1_65boa"]
 [ext_resource type="Texture2D" uid="uid://cqu5scrrmr5n5" path="res://Sprites/Cenário/Mata_Atlantica/Background/Iluminação e Fundo/FUNDOCEU.png" id="1_f6ry5"]
@@ -17,7 +17,7 @@
 [ext_resource type="Texture2D" uid="uid://cjl88xeknofui" path="res://Sprites/Cenário/Mata_Atlantica/Chao/grama_reto.png" id="9_10bg8"]
 [ext_resource type="Texture2D" uid="uid://u12dsbd5ebth" path="res://Sprites/Cenário/Mata_Atlantica/Background/Mata/mato00.png" id="9_mhu80"]
 [ext_resource type="Texture2D" uid="uid://boljughq86ddu" path="res://Sprites/Cenário/Mata_Atlantica/Background/casa_naia.png" id="10_5nggk"]
-[ext_resource type="Shader" uid="uid://cete83ldr534" path="res://Scripts/Shaders/godray.gdshader" id="12_6epi5"]
+[ext_resource type="Shader" path="res://Scripts/Shaders/godray.gdshader" id="12_6epi5"]
 [ext_resource type="Texture2D" uid="uid://cn6a67mc7hffx" path="res://Sprites/Cenário/Mata_Atlantica/Pedras e Ruinas/pedra_lisa.png" id="12_blfcv"]
 [ext_resource type="Texture2D" uid="uid://cw2yeg7ynw0kl" path="res://Sprites/Cenário/Mata_Atlantica/Chao/chap_externo.png" id="12_mxbvc"]
 [ext_resource type="PackedScene" uid="uid://cqyub70sv0ofp" path="res://Objetos/Props/SavePoint.tscn" id="12_smmoq"]
@@ -32,13 +32,14 @@
 [ext_resource type="PackedScene" uid="uid://bcwi51vmdht5w" path="res://Objetos/Props/vasosmoeda/vasomoeda_04.tscn" id="16_blfcv"]
 [ext_resource type="Texture2D" uid="uid://uq6dbjep5wva" path="res://Sprites/Cenário/Mata_Atlantica/Foreground/frontfolha.png" id="17_f6ry5"]
 [ext_resource type="PackedScene" uid="uid://cppreprc8pa3k" path="res://Objetos/Props/vasosmoeda/vasomoeda_02.tscn" id="17_k6a21"]
-[ext_resource type="Shader" uid="uid://bbohkd8d1ljws" path="res://Scripts/Shaders/wavewater.gdshader" id="17_smmoq"]
+[ext_resource type="Shader" path="res://Scripts/Shaders/wavewater.gdshader" id="17_smmoq"]
 [ext_resource type="Texture2D" uid="uid://c2yapafbd3cnf" path="res://Sprites/Cenário/Mata_Atlantica/Foreground/cipó.png" id="18_bekt5"]
 [ext_resource type="Texture2D" uid="uid://jecy4bfqqqxu" path="res://Sprites/Cenário/Mata_Atlantica/Teto/Moita teste.png" id="25_k6a21"]
 [ext_resource type="Texture2D" uid="uid://d3i6g64tongye" path="res://Sprites/Cenário/Objetos/Savepoint/florlotus.png" id="29_lr7hr"]
 [ext_resource type="Texture2D" uid="uid://dj81ab7fk7ig1" path="res://Sprites/Cenário/Objetos/Savepoint/parte da frente.png" id="30_8clb6"]
 [ext_resource type="Script" uid="uid://dd16yu704x6wt" path="res://Scripts/Componentes/BGM_Player.gd" id="33_6epi5"]
 [ext_resource type="AudioStream" uid="uid://c7qftchbhu6xc" path="res://Audio/SFX/AMBIENTE/Musica_Jogo.mp3" id="34_smmoq"]
+[ext_resource type="AudioStream" uid="uid://b2vi4qav4gk5r" path="res://Audio/SFX/AMBIENTE/Cururu - Soundscape A.ogg" id="40_k6a21"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_0n704"]
 shader = ExtResource("12_6epi5")
@@ -714,6 +715,11 @@ limite_camera = NodePath("../LimiteCam")
 script = ExtResource("33_6epi5")
 musica = ExtResource("34_smmoq")
 volume = -0.5
+metadata/_custom_type_script = "uid://dd16yu704x6wt"
+
+[node name="BGM_Player2" type="Node" parent="."]
+script = ExtResource("33_6epi5")
+musica = ExtResource("40_k6a21")
 metadata/_custom_type_script = "uid://dd16yu704x6wt"
 
 [node name="LimiteCam" type="ReferenceRect" parent="."]

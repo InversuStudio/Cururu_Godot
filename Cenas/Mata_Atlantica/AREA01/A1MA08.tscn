@@ -1,4 +1,4 @@
-[gd_scene load_steps=46 format=4 uid="uid://dyxt6ow8l0up5"]
+[gd_scene load_steps=47 format=4 uid="uid://dyxt6ow8l0up5"]
 
 [ext_resource type="Texture2D" uid="uid://cqu5scrrmr5n5" path="res://Sprites/Cenário/Mata_Atlantica/Background/Iluminação e Fundo/FUNDOCEU.png" id="1_cpcvs"]
 [ext_resource type="Texture2D" uid="uid://drsb63225ukvk" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/arvore0.png" id="1_f0sik"]
@@ -38,6 +38,7 @@
 [ext_resource type="AudioStream" uid="uid://c7qftchbhu6xc" path="res://Audio/SFX/AMBIENTE/Musica_Jogo.mp3" id="27_5qn7w"]
 [ext_resource type="PackedScene" uid="uid://bjvnm0aydr0vd" path="res://Objetos/Entidades/Morcego.tscn" id="27_r33ly"]
 [ext_resource type="Texture2D" uid="uid://dc4ocn7li3obx" path="res://Sprites/Cenário/Mata_Atlantica/Chao/moita_chao1.png" id="30_yosc2"]
+[ext_resource type="AudioStream" uid="uid://b2vi4qav4gk5r" path="res://Audio/SFX/AMBIENTE/Cururu - Soundscape A.ogg" id="39_vwb26"]
 [ext_resource type="Texture2D" uid="uid://c2yapafbd3cnf" path="res://Sprites/Cenário/Mata_Atlantica/Foreground/cipó.png" id="42_wy7bf"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8acf8"]
@@ -2519,6 +2520,11 @@ shape = SubResource("RectangleShape2D_krmto")
 script = ExtResource("26_r33ly")
 musica = ExtResource("27_5qn7w")
 volume = -0.5
+metadata/_custom_type_script = "uid://dd16yu704x6wt"
+
+[node name="BGM_Player2" type="Node" parent="."]
+script = ExtResource("26_r33ly")
+musica = ExtResource("39_vwb26")
 metadata/_custom_type_script = "uid://dd16yu704x6wt"
 
 [node name="MainCamera" parent="." node_paths=PackedStringArray("target", "limite_camera") instance=ExtResource("24_bx6hf")]

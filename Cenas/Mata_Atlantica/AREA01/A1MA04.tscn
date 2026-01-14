@@ -1,4 +1,4 @@
-[gd_scene load_steps=40 format=4 uid="uid://cwvi3pve0viqq"]
+[gd_scene load_steps=41 format=4 uid="uid://cwvi3pve0viqq"]
 
 [ext_resource type="Texture2D" uid="uid://c374cwih425cq" path="res://Sprites/Cenário/Tilemaps/Base.png" id="1_mkak3"]
 [ext_resource type="Texture2D" uid="uid://cqu5scrrmr5n5" path="res://Sprites/Cenário/Mata_Atlantica/Background/Iluminação e Fundo/FUNDOCEU.png" id="1_mo78v"]
@@ -35,6 +35,7 @@
 [ext_resource type="Texture2D" uid="uid://3g4iv5385ymw" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/arvore_S2.png" id="29_l7lqk"]
 [ext_resource type="Script" uid="uid://dd16yu704x6wt" path="res://Scripts/Componentes/BGM_Player.gd" id="34_l7lqk"]
 [ext_resource type="AudioStream" uid="uid://c7qftchbhu6xc" path="res://Audio/SFX/AMBIENTE/Musica_Jogo.mp3" id="35_158ye"]
+[ext_resource type="AudioStream" uid="uid://b2vi4qav4gk5r" path="res://Audio/SFX/AMBIENTE/Cururu - Soundscape A.ogg" id="36_158ye"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fgbha"]
 size = Vector2(3621, 1573)
@@ -677,6 +678,11 @@ limite_camera = NodePath("../Limitecam")
 script = ExtResource("34_l7lqk")
 musica = ExtResource("35_158ye")
 volume = -0.5
+metadata/_custom_type_script = "uid://dd16yu704x6wt"
+
+[node name="BGM_Player2" type="Node" parent="."]
+script = ExtResource("34_l7lqk")
+musica = ExtResource("36_158ye")
 metadata/_custom_type_script = "uid://dd16yu704x6wt"
 
 [node name="Limitecam" type="ReferenceRect" parent="."]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=4 uid="uid://b5am6yc3iwy8e"]
+[gd_scene load_steps=25 format=4 uid="uid://b5am6yc3iwy8e"]
 
 [ext_resource type="Texture2D" uid="uid://c374cwih425cq" path="res://Sprites/Cenário/Tilemaps/Base.png" id="1_7yx4j"]
 [ext_resource type="Texture2D" uid="uid://cqu5scrrmr5n5" path="res://Sprites/Cenário/Mata_Atlantica/Background/Iluminação e Fundo/FUNDOCEU.png" id="1_rxhom"]
@@ -19,6 +19,8 @@
 [ext_resource type="Texture2D" uid="uid://cw2yeg7ynw0kl" path="res://Sprites/Cenário/Mata_Atlantica/Chao/chap_externo.png" id="13_11u8x"]
 [ext_resource type="PackedScene" uid="uid://dghxpclnjwg5k" path="res://Objetos/Props/PecaCoracao.tscn" id="14_11u8x"]
 [ext_resource type="Texture2D" uid="uid://cj4rj4oj20ogb" path="res://Sprites/Cenário/Mata_Atlantica/Chao/chap_interno.png" id="14_tkmkl"]
+[ext_resource type="Script" uid="uid://dd16yu704x6wt" path="res://Scripts/Componentes/BGM_Player.gd" id="20_rxhom"]
+[ext_resource type="AudioStream" uid="uid://b2vi4qav4gk5r" path="res://Audio/SFX/AMBIENTE/Cururu - Soundscape A.ogg" id="21_j2hae"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ogowb"]
 texture = ExtResource("1_7yx4j")
@@ -611,3 +613,8 @@ offset_left = 84.0
 offset_top = -1870.0
 offset_right = 11820.0
 offset_bottom = -34.0
+
+[node name="BGM_Player2" type="Node" parent="."]
+script = ExtResource("20_rxhom")
+musica = ExtResource("21_j2hae")
+metadata/_custom_type_script = "uid://dd16yu704x6wt"

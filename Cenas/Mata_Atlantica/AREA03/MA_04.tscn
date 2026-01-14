@@ -1,10 +1,12 @@
-[gd_scene load_steps=9 format=4 uid="uid://bsch3csrjxaua"]
+[gd_scene load_steps=11 format=4 uid="uid://bsch3csrjxaua"]
 
 [ext_resource type="Texture2D" uid="uid://c374cwih425cq" path="res://Sprites/Cenário/Tilemaps/Base.png" id="1_o3hho"]
 [ext_resource type="PackedScene" uid="uid://cqyub70sv0ofp" path="res://Objetos/Props/SavePoint.tscn" id="2_ctw0e"]
 [ext_resource type="PackedScene" uid="uid://nohq28uk7lfk" path="res://Objetos/Entidades/Player.tscn" id="3_gdjfr"]
 [ext_resource type="PackedScene" uid="uid://1apfpwlqocxn" path="res://Objetos/Funcionalidade/TransicaoFase.tscn" id="5_ck3rm"]
 [ext_resource type="Texture2D" uid="uid://cjl88xeknofui" path="res://Sprites/Cenário/Mata_Atlantica/Chao/grama_reto.png" id="6_ctw0e"]
+[ext_resource type="Script" uid="uid://dd16yu704x6wt" path="res://Scripts/Componentes/BGM_Player.gd" id="6_tx4va"]
+[ext_resource type="AudioStream" uid="uid://b2vi4qav4gk5r" path="res://Audio/SFX/AMBIENTE/Cururu - Soundscape A.ogg" id="7_1uek7"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_u3rx3"]
 texture = ExtResource("1_o3hho")
@@ -166,10 +168,8 @@ position = Vector2(5516, -14721)
 [node name="Player" parent="." instance=ExtResource("3_gdjfr")]
 position = Vector2(-6810, 468)
 scale = Vector2(0.959163, 0.959163)
-vel = 12.0
 vel_aerea = 10.0
 altura_pulo = 5.0
-tempo_pulo = 0.4
 tempo_cair = 0.37
 tempo_coyote = 0.15
 tempo_dash = 0.18
@@ -188,7 +188,6 @@ zoom = Vector2(0.7, 0.7)
 position = Vector2(-8043, -278)
 destino = 4
 posicao = Vector2(-8604, -131)
-virado_a_esquerda = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TransicaoFase"]
 position = Vector2(194, -104.5)
@@ -201,3 +200,8 @@ scale = Vector2(0.844631, 0.961002)
 [node name="GramaReto16" type="Sprite2D" parent="Savepoint2"]
 position = Vector2(22710.5, -15982.3)
 texture = ExtResource("6_ctw0e")
+
+[node name="BGM_Player2" type="Node" parent="."]
+script = ExtResource("6_tx4va")
+musica = ExtResource("7_1uek7")
+metadata/_custom_type_script = "uid://dd16yu704x6wt"

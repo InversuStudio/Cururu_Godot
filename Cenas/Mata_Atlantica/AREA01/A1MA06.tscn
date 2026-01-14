@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=4 uid="uid://bxdcby8qi3b35"]
+[gd_scene load_steps=30 format=4 uid="uid://bxdcby8qi3b35"]
 
 [ext_resource type="Texture2D" uid="uid://3g4iv5385ymw" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/arvore_S2.png" id="1_1qw80"]
 [ext_resource type="Texture2D" uid="uid://dc4ocn7li3obx" path="res://Sprites/Cenário/Mata_Atlantica/Chao/moita_chao1.png" id="1_8ft5a"]
@@ -25,6 +25,7 @@
 [ext_resource type="PackedScene" uid="uid://cqyub70sv0ofp" path="res://Objetos/Props/SavePoint.tscn" id="13_3saii"]
 [ext_resource type="Texture2D" uid="uid://c2yapafbd3cnf" path="res://Sprites/Cenário/Mata_Atlantica/Foreground/cipó.png" id="21_8ydvq"]
 [ext_resource type="AudioStream" uid="uid://b18d40g67evyi" path="res://Audio/Musicas/Aparecimento do Saci.ogg" id="25_3saii"]
+[ext_resource type="AudioStream" uid="uid://b2vi4qav4gk5r" path="res://Audio/SFX/AMBIENTE/Cururu - Soundscape A.ogg" id="26_ogne8"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wsgqo"]
 size = Vector2(70, 410)
@@ -547,4 +548,9 @@ offset_bottom = -4102.0
 [node name="BGM_Player" type="Node" parent="."]
 script = ExtResource("10_m47n7")
 musica = ExtResource("25_3saii")
+metadata/_custom_type_script = "uid://dd16yu704x6wt"
+
+[node name="BGM_Player2" type="Node" parent="."]
+script = ExtResource("10_m47n7")
+musica = ExtResource("26_ogne8")
 metadata/_custom_type_script = "uid://dd16yu704x6wt"
