@@ -1,8 +1,8 @@
 extends Control
 
-@onready var pagina = 0;
+@onready var pagina:int = 0;
 
-@onready var telas = [
+@onready var telas:Array[Node2D] = [
 	$Tela0,
 	$Tela1,
 	$Tela2,
@@ -24,13 +24,13 @@ func _on_continuar_pressed() -> void:
 	pagina += 1
 	
 	if pagina <= 2:
-		for i in range(pagina + 1):
+		for i:int in range(pagina + 1):
 			telas[i].visible = true
 	
 	if pagina > 2 and pagina <= 7:
-		for i in range(3):
+		for i:int in range(3):
 			telas[i].visible = false
-		for i in range(3, pagina + 1):
+		for i:int in range(3, pagina + 1):
 			telas[i].visible = true
 	elif pagina > 7:
 		Mundos.CarregaFase(Mundos.NomeFase.TUTORIAL_1)

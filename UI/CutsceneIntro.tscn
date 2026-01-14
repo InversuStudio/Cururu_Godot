@@ -117,5 +117,5 @@ script = ExtResource("4_be5h4")
 musica = ExtResource("14_xqwwo")
 metadata/_custom_type_script = "uid://dd16yu704x6wt"
 
-[connection signal="pressed" from="HBoxContainer/Continuar" to="." method="_on_main_pressed"]
 [connection signal="pressed" from="HBoxContainer/Continuar" to="." method="_on_continuar_pressed"]
+[connection signal="pressed" from="HBoxContainer/Continuar" to="." method="_on_main_pressed"]

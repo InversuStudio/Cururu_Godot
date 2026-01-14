@@ -7,8 +7,8 @@ const vfx_out:PackedScene = preload("res://Objetos/Funcionalidade/VFX_Agua_Out.t
 
 func Enter() -> void:
 	var v:Node2D = vfx_in.instantiate()
-	v.global_position = parent.global_position
 	parent.get_parent().add_child(v)
+	v.global_position = parent.global_position
 
 func Exit() -> void:
 	var v:Node2D = vfx_out.instantiate()
