@@ -16,5 +16,5 @@ func AddItem(nome:String, desc:String, img_path:String) -> void:
 func AddMapa() -> void:
 	#get_tree().get_first_node_in_group("BalaoFala").hide()
 	Inventario.tem_mapa = true
-	AvisoItem.Mostra("Mapa", "Sou um mapa!", load("res://icon.svg"))
+	AvisoItem.Mostra("Mapa", "Você recebeu o mapa da Mata Atlântica. Aperte LT para se guiar.", load("res://Sprites/Cenário/Objetos/Upgrade/MAPA.png"))
 	#get_tree().get_first_node_in_group("BalaoFala").show()

@@ -923,6 +923,7 @@ scale = Vector2(1.5, 1.5)
 sprite_frames = SubResource("SpriteFrames_nkv4g")
 animation = &"Grito"
 autoplay = "Escondido"
+frame = 1
 
 [node name="SpriteCabeca" type="AnimatedSprite2D" parent="."]
 unique_name_in_owner = true
