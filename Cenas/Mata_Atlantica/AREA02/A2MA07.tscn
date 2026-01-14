@@ -351,9 +351,6 @@ position = Vector2(-3585, -10926.871)
 scale = Vector2(3.1571147, 1.1088231)
 texture = ExtResource("1_xyjrg")
 
-[node name="ArvFundo" type="Parallax2D" parent="."]
-scroll_scale = Vector2(0.6, 1)
-
 [node name="ArvoreFundo1" type="Sprite2D" parent="."]
 position = Vector2(-5866.5, -11043.5)
 scale = Vector2(1.67137, 2.0621922)
@@ -1431,7 +1428,7 @@ volume = null
 metadata/_custom_type_script = "uid://dd16yu704x6wt"
 
 [node name="MainCamera" parent="." node_paths=PackedStringArray("target", "limite_camera") instance=ExtResource("33_giq4m")]
-position = Vector2(-887.00006, -10463.997)
+position = Vector2(-887.00006, -10463.829)
 limit_enabled = true
 limit_left = -6530
 limit_top = -12056

@@ -36,7 +36,6 @@
 [ext_resource type="Texture2D" uid="uid://5m4b2cn86u3t" path="res://Sprites/Cenário/Mata_Atlantica/Foreground/03.png" id="30_5nff6"]
 [ext_resource type="Script" uid="uid://dd16yu704x6wt" path="res://Scripts/Componentes/BGM_Player.gd" id="30_fgbk1"]
 [ext_resource type="Shader" uid="uid://cete83ldr534" path="res://Scripts/Shaders/godray.gdshader" id="30_rh2pu"]
-[ext_resource type="AudioStream" uid="uid://c7qftchbhu6xc" path="res://Audio/SFX/AMBIENTE/Musica_Jogo.mp3" id="31_7dakl"]
 [ext_resource type="Texture2D" uid="uid://xjqchtcfdjkn" path="res://Sprites/Cenário/Mata_Atlantica/Foreground/01.png" id="31_ku32q"]
 [ext_resource type="Texture2D" uid="uid://b2pop4ke31d1x" path="res://Sprites/Cenário/Mata_Atlantica/Foreground/02.png" id="32_dglwx"]
 [ext_resource type="Shader" uid="uid://bbohkd8d1ljws" path="res://Scripts/Shaders/wavewater.gdshader" id="32_wmciv"]
@@ -47,6 +46,7 @@
 [ext_resource type="Texture2D" uid="uid://b7hwtujjwy182" path="res://Sprites/UI/Pause/maPEAMENTO.png" id="38_5nff6"]
 [ext_resource type="Texture2D" uid="uid://ddy77p0xua6jm" path="res://Sprites/Cenário/Mata_Atlantica/Foreground/arv01.png" id="43_wmciv"]
 [ext_resource type="Texture2D" uid="uid://7msrkwwo018f" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/arvore02.png" id="44_jwima"]
+[ext_resource type="AudioStream" uid="uid://b2vi4qav4gk5r" path="res://Audio/SFX/AMBIENTE/Cururu - Soundscape A.ogg" id="47_wmciv"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_rcn2b"]
 shader = ExtResource("30_rh2pu")
@@ -1295,7 +1295,7 @@ offset_bottom = -900.0
 
 [node name="BGM_Player" type="Node" parent="."]
 script = ExtResource("30_fgbk1")
-musica = ExtResource("31_7dakl")
+musica = ExtResource("47_wmciv")
 metadata/_custom_type_script = "uid://dd16yu704x6wt"
 
 [connection signal="body_entered" from="2/Foregroundchao/StaticBody2D/AreaPonteVFX" to="0/Cururu" method="_on_area_ponte_vfx_body_entered"]

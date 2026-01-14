@@ -8,12 +8,12 @@
 [ext_resource type="Script" uid="uid://dd16yu704x6wt" path="res://Scripts/Componentes/BGM_Player.gd" id="4_be5h4"]
 [ext_resource type="Texture2D" uid="uid://bc2yoaw6bn0kt" path="res://Sprites/UI/Pause/Pecas/MENU_ABA2.png" id="4_uuu4a"]
 [ext_resource type="Texture2D" uid="uid://bu6udw31dg5md" path="res://Sprites/UI/Pause/Pecas/MENU_ABA1.png" id="5_4q4i6"]
-[ext_resource type="AudioStream" uid="uid://cjorej6h7gw75" path="res://Audio/SFX/MENU INICIAL/menu_musica.mp3" id="5_uuu4a"]
 [ext_resource type="Texture2D" uid="uid://bai4oo20hdtk6" path="res://Sprites/UI/Visual_Novel/Intro_game/Tela_04.png" id="6_pu4bt"]
 [ext_resource type="Texture2D" uid="uid://ueeqhivxg0s4" path="res://Sprites/UI/Visual_Novel/Intro_game/Tela_05.png" id="7_fdg1p"]
 [ext_resource type="Texture2D" uid="uid://c0ewjlssuflxj" path="res://Sprites/UI/Visual_Novel/Intro_game/Tela_06.png" id="8_fjhlr"]
 [ext_resource type="Texture2D" uid="uid://dvln7aukfokcn" path="res://Sprites/UI/Visual_Novel/Intro_game/Tela_07.png" id="9_fv720"]
 [ext_resource type="Texture2D" uid="uid://cncy3gmjiyahb" path="res://Sprites/UI/Visual_Novel/Intro_game/Tela_08.png" id="10_rvfgo"]
+[ext_resource type="AudioStream" uid="uid://bash5t5ceubo" path="res://Audio/Musicas/Cururu - Tema.ogg" id="14_xqwwo"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ajkku"]
 texture = ExtResource("4_uuu4a")
@@ -81,14 +81,18 @@ texture = ExtResource("10_rvfgo")
 
 [node name="HBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 1
-anchors_preset = 4
-anchor_top = 0.5
-anchor_bottom = 0.5
-offset_left = 1493.0
-offset_top = 395.0
-offset_right = 1843.0
-offset_bottom = 495.0
-grow_vertical = 2
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = 647.0001
+offset_top = -96.00006
+offset_right = 997.0001
+offset_bottom = 8.166748
+grow_horizontal = 2
+grow_vertical = 0
+scale = Vector2(0.84000003, 0.7392)
 
 [node name="Continuar" type="Button" parent="HBoxContainer"]
 unique_name_in_owner = true
@@ -105,7 +109,7 @@ volume_db = -15.0
 
 [node name="BGM_Player" type="Node" parent="."]
 script = ExtResource("4_be5h4")
-musica = ExtResource("5_uuu4a")
+musica = ExtResource("14_xqwwo")
 metadata/_custom_type_script = "uid://dd16yu704x6wt"
 
 [connection signal="pressed" from="HBoxContainer/Continuar" to="." method="_on_main_pressed"]

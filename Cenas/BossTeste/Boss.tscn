@@ -112,7 +112,7 @@
 [ext_resource type="Script" uid="uid://c041l8mwrkgsy" path="res://Scripts/Boss/PilarFogo.gd" id="85_fi4f6"]
 [ext_resource type="AudioStream" uid="uid://xpg30gdluf8e" path="res://Audio/SFX/BOITATA/Boitata voice A.wav" id="88_q1nmn"]
 [ext_resource type="Script" path="res://Scripts/Boss/Fim.gd" id="95_q1nmn"]
-[ext_resource type="Texture2D" uid="uid://du6px2jonlioj" path="res://Sprites/UI/Boitata/UI_-_BOITATA2.png" id="113_iwjnr"]
+[ext_resource type="Texture2D" uid="uid://c8arw41hfnk4n" path="res://Sprites/UI/Boitata/Barra_miasma.png" id="113_iwjnr"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_iwjnr"]
 shader = ExtResource("7_q8716")
@@ -875,6 +875,7 @@ _data = {
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_3l7sv"]
 texture = ExtResource("113_iwjnr")
+texture_margin_left = 70.0
 
 [node name="Boss" type="Node2D"]
 script = ExtResource("1_s15tt")
@@ -1065,14 +1066,14 @@ tint_progress = Color(0.6270837, 0, 0.048433684, 1)
 [node name="BarraArmor" type="ProgressBar" parent="UI_BOSS/Control/BarraVida"]
 unique_name_in_owner = true
 layout_mode = 1
-anchors_preset = 14
+anchors_preset = -1
 anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 0.5
 offset_left = 38.333324
-offset_top = 6.499962
+offset_top = -31.833412
 offset_right = -39.999878
-offset_bottom = 46.49997
+offset_bottom = 41.50009
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/background = SubResource("StyleBoxEmpty_fhomc")
