@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://cp14airslpjp0"
+path="res://.godot/imported/Passo 13.wav-2c4525c34d2e3d97e9aceb11a661e5ea.sample"
+
+[deps]
+
+source_file="res://Audio/SFX/CURURU/Passos/Passo 13.wav"
+dest_files=["res://.godot/imported/Passo 13.wav-2c4525c34d2e3d97e9aceb11a661e5ea.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

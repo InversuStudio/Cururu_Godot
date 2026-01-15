@@ -18,6 +18,7 @@ var turn:bool = false
 var pode_emitir_vfx: bool = true
 var item_cura:bool = false
 var checa_tempo:bool = false
+var tempo_ultimo_passo: float = 0.0
 
 func _ready() -> void:
 	HUD.usa_item_rapido.connect(func():
@@ -68,6 +69,7 @@ func SpawnFolhasFall() -> void:
 		var folhas:Node2D = folha.instantiate()
 		parent.add_child(folhas)
 		folhas.global_position = parent.global_position
+		%SFX_Caindo_Chao.play()
 		
 func SpawnFolhasRun() -> void:
 	if pode_emitir_vfx:
@@ -103,6 +105,7 @@ func FixedUpdate(delta: float) -> State:
 	# Aplica movimento
 	if parent.pode_mover:# and !turn:
 		var dir:float = parent.input_move.x
+		
 		if dir != 0.0:
 			parent.velocity.x += parent.accel * dir * delta
 			if abs(parent.velocity.x) > parent.speed:
