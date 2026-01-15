@@ -1585,9 +1585,12 @@ tracks/2/path = NodePath("StateMachine/Nadando")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(0.2),
-"transitions": PackedFloat32Array(1),
+"times": PackedFloat32Array(0.16666667, 0.4),
+"transitions": PackedFloat32Array(1, 1),
 "values": [{
+"args": [],
+"method": &"tocar_som_aleatorio"
+}, {
 "args": [],
 "method": &"tocar_som_aleatorio"
 }]
@@ -1901,7 +1904,7 @@ unique_name_in_owner = true
 position = Vector2(0, -118)
 scale = Vector2(0.375651, 0.375651)
 sprite_frames = SubResource("SpriteFrames_ser7u")
-animation = &"Acorda"
+animation = &"Nado_Move"
 speed_scale = 1.6
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
