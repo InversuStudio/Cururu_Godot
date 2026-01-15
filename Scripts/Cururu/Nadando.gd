@@ -11,6 +11,13 @@ const sfx:Array[AudioStream] = [
 	preload("res://Audio/SFX/AMBIENTE/Saindo da água.wav")
 ]
 
+const sfx_movement:Array[AudioStream] = [
+	preload("res://Audio/SFX/CURURU/Nado/Nadando 1.wav"),
+	preload("res://Audio/SFX/CURURU/Nado/Nadando 2.wav"),
+	preload("res://Audio/SFX/CURURU/Nado/Nadando 3.wav"),
+	preload("res://Audio/SFX/CURURU/Nado/Nadando 4.wav")
+]
+
 func Enter() -> void:
 	var v:Node2D = vfx[0].instantiate()
 	parent.get_parent().add_child(v)
@@ -66,3 +73,11 @@ func Flip() -> void:
 	elif parent.input_move.x < 0:
 		%Cururu.flip_h = true
 		parent.hitbox_container.scale.x = -1
+		
+func tocar_som_aleatorio():
+	if sfx_movement.is_empty():
+		return
+	
+	# O comando pick_random() escolhe um item da lista sorteado
+	%SFX_Extra.stream = sfx_movement.pick_random()
+	%SFX_Extra.play()

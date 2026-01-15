@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dpfhtjdooyuj8"
+path="res://.godot/imported/Nadando 3.wav-2de73a0fc4479403d0f831476c05eaed.sample"
+
+[deps]
+
+source_file="res://Audio/SFX/CURURU/Nado/Nadando 3.wav"
+dest_files=["res://.godot/imported/Nadando 3.wav-2de73a0fc4479403d0f831476c05eaed.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

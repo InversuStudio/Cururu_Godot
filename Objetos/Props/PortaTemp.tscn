@@ -1,4 +1,4 @@
-[gd_scene load_steps=37 format=3 uid="uid://cdhelg6sloxbj"]
+[gd_scene load_steps=40 format=3 uid="uid://cdhelg6sloxbj"]
 
 [ext_resource type="Script" uid="uid://b0ou3eu3i1sxg" path="res://Scripts/Componentes/PortaTemp.gd" id="1_rixxk"]
 [ext_resource type="Texture2D" uid="uid://clqh4rstgwwgd" path="res://Sprites/Cenário/Miasma/Porta de Miasma/Abrindo/01.png" id="2_cxcld"]
@@ -27,6 +27,9 @@
 [ext_resource type="Texture2D" uid="uid://ct8qfkybnoei8" path="res://Sprites/Cenário/Miasma/Porta de Miasma/Idle/11.png" id="12_q1th7"]
 [ext_resource type="Texture2D" uid="uid://b6d5f511qf3mi" path="res://Sprites/Cenário/Miasma/Porta de Miasma/Idle/12.png" id="13_cxcld"]
 [ext_resource type="Texture2D" uid="uid://blj3s26ahh8e4" path="res://Sprites/Cenário/Miasma/Porta de Miasma/Idle/13.png" id="14_br5by"]
+[ext_resource type="AudioStream" uid="uid://dyep51pg2hlt1" path="res://Audio/SFX/AMBIENTE/Porta miasma Abrindo.wav" id="28_q1th7"]
+[ext_resource type="AudioStream" uid="uid://b3imt5fdwrjih" path="res://Audio/SFX/AMBIENTE/Porta miasma fechando.wav" id="29_cxcld"]
+[ext_resource type="Script" uid="uid://dd3rin1mimv8v" path="res://Scripts/SFX/sfx_porta_idle.gd" id="30_br5by"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_q52yi"]
 animations = [{
@@ -247,6 +250,21 @@ tracks/6/keys = {
 "update": 1,
 "values": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 }
+tracks/7/type = "audio"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("SFX")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("28_q1th7")
+}],
+"times": PackedFloat32Array(0)
+}
+tracks/7/use_blend = true
 
 [sub_resource type="Animation" id="Animation_h4g8d"]
 resource_name = "Fecha"
@@ -335,6 +353,21 @@ tracks/6/keys = {
 "update": 1,
 "values": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 }
+tracks/7/type = "audio"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("SFX")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("29_cxcld")
+}],
+"times": PackedFloat32Array(0)
+}
+tracks/7/use_blend = true
 
 [sub_resource type="Animation" id="Animation_rixxk"]
 resource_name = "Idle"
@@ -412,6 +445,7 @@ animation = &"Idle"
 frame = 1
 
 [node name="Colisao" type="StaticBody2D" parent="."]
+collision_layer = 0
 collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Colisao"]
@@ -421,6 +455,8 @@ shape = SubResource("RectangleShape2D_rixxk")
 [node name="HurtBox" parent="." node_paths=PackedStringArray("sprite") instance=ExtResource("3_7ptwx")]
 unique_name_in_owner = true
 collision_layer = 16
+monitoring = false
+monitorable = false
 sprite = NodePath("../AnimatedSprite2D")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HurtBox"]
@@ -431,6 +467,8 @@ debug_color = Color(0.99137133, 0, 0.27243033, 0.41960785)
 [node name="HitBox" parent="." node_paths=PackedStringArray("ignore") instance=ExtResource("4_7ptwx")]
 unique_name_in_owner = true
 collision_layer = 16
+monitoring = false
+monitorable = false
 ignore = NodePath("../HurtBox")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HitBox"]
@@ -452,7 +490,11 @@ next/Fecha = &"Idle"
 
 [node name="SFX" type="AudioStreamPlayer2D" parent="."]
 unique_name_in_owner = true
+volume_db = 2.5
 pitch_scale = 2.0
 autoplay = true
+script = ExtResource("30_br5by")
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="animation_finished" from="Anim" to="SFX" method="_on_anim_animation_finished"]
+[connection signal="animation_started" from="Anim" to="SFX" method="_on_anim_animation_started"]

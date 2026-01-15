@@ -1,4 +1,4 @@
-[gd_scene load_steps=223 format=3 uid="uid://nohq28uk7lfk"]
+[gd_scene load_steps=225 format=3 uid="uid://nohq28uk7lfk"]
 
 [ext_resource type="Script" uid="uid://cfu4ciwll8jcj" path="res://Scripts/Cururu/Cururu.gd" id="1_gwpdq"]
 [ext_resource type="Texture2D" uid="uid://6tjgxsgaflxb" path="res://Sprites/Cururu/Dano/03.png" id="2_0hf88"]
@@ -166,6 +166,7 @@
 [ext_resource type="AudioStream" uid="uid://b1e3re8ykc11o" path="res://Audio/SFX/Cuica_2.ogg" id="91_vpyrf"]
 [ext_resource type="Script" uid="uid://b47dm1pnrhmt1" path="res://Scripts/Cururu/Nadando.gd" id="96_0digr"]
 [ext_resource type="Script" uid="uid://cg3i231v8dhoy" path="res://Objetos/Entidades/acorda.gd" id="110_yy1dt"]
+[ext_resource type="AudioStream" uid="uid://dlp7ijp7u7b4i" path="res://Audio/SFX/Comidinha Hum.wav" id="153_ta3r2"]
 [ext_resource type="AudioStream" uid="uid://betvqt03p81ol" path="res://Audio/SFX/CURURU/dash_cururu.wav" id="154_wxhj3"]
 [ext_resource type="AudioStream" uid="uid://s50orlb3i3jk" path="res://Audio/SFX/CURURU/Caindo.wav" id="155_lv5tx"]
 [ext_resource type="Script" uid="uid://b3wmq1vhw42bm" path="res://Scripts/SFX/sfx_passos.gd" id="156_746bk"]
@@ -187,6 +188,7 @@
 [ext_resource type="AudioStream" uid="uid://boox45jhdf81p" path="res://Audio/SFX/CURURU/Passos/Passo 14.wav" id="172_24i8l"]
 [ext_resource type="AudioStream" uid="uid://dwgqmc5qhqstb" path="res://Audio/SFX/CURURU/Passos/Passo 15.wav" id="173_xgubl"]
 [ext_resource type="AudioStream" uid="uid://dbig0lyde3y74" path="res://Audio/SFX/CURURU/Passos/Passo 16.wav" id="174_2dakj"]
+[ext_resource type="Script" uid="uid://qlpwe7rvuiyp" path="res://Scripts/SFX/sfx_cura.gd" id="175_3h5vl"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_k0fov"]
 animations = [{
@@ -872,6 +874,17 @@ tracks/1/keys = {
 "update": 1,
 "values": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
 }
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("SFX/SFX_Cura")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(),
+"transitions": PackedFloat32Array(),
+"values": []
+}
 
 [sub_resource type="Animation" id="Animation_toswy"]
 resource_name = "Cura_Parado"
@@ -899,6 +912,20 @@ tracks/1/keys = {
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
 "update": 1,
 "values": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+}
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("SFX/SFX_Cura")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"disparar_som"
+}]
 }
 
 [sub_resource type="Animation" id="Animation_aofpm"]
@@ -1551,6 +1578,20 @@ tracks/1/keys = {
 "update": 1,
 "values": [&"Nado_Move"]
 }
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("StateMachine/Nadando")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.2),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"tocar_som_aleatorio"
+}]
+}
 
 [sub_resource type="Animation" id="Animation_prtj7"]
 resource_name = "Run"
@@ -1860,8 +1901,7 @@ unique_name_in_owner = true
 position = Vector2(0, -118)
 scale = Vector2(0.375651, 0.375651)
 sprite_frames = SubResource("SpriteFrames_ser7u")
-animation = &"Andando"
-frame_progress = 0.64201444
+animation = &"Cura_Parado"
 speed_scale = 1.6
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -2016,11 +2056,19 @@ bus = &"SFX"
 unique_name_in_owner = true
 stream = ExtResource("155_lv5tx")
 volume_db = -15.0
+bus = &"SFX"
 
 [node name="SFX_Passos" type="AudioStreamPlayer" parent="SFX"]
 unique_name_in_owner = true
+bus = &"SFX"
 script = ExtResource("156_746bk")
 lista_de_passos = Array[AudioStream]([ExtResource("159_btflu"), ExtResource("160_746bk"), ExtResource("161_wxhj3"), ExtResource("162_ta3r2"), ExtResource("163_3h5vl"), ExtResource("164_ure17"), ExtResource("165_he10h"), ExtResource("166_x76xd"), ExtResource("167_1nw1i"), ExtResource("168_qdgh8"), ExtResource("169_3250u"), ExtResource("170_t4xy6"), ExtResource("171_4gb4y"), ExtResource("172_24i8l"), ExtResource("173_xgubl"), ExtResource("174_2dakj")])
+
+[node name="SFX_Cura" type="AudioStreamPlayer" parent="SFX"]
+unique_name_in_owner = true
+bus = &"SFX"
+script = ExtResource("175_3h5vl")
+som_recurso = ExtResource("153_ta3r2")
 
 [node name="Timers" type="Node" parent="."]
 
