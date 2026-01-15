@@ -54,8 +54,8 @@ shape = SubResource("RectangleShape2D_4vmwf")
 debug_color = Color(0.7753908, 0.38766962, 0.5591627, 0.41960785)
 
 [node name="Sprite" type="AnimatedSprite2D" parent="."]
-position = Vector2(-2, -107)
-scale = Vector2(0.2734375, 0.27343756)
+position = Vector2(-2, -104)
+scale = Vector2(0.27642277, 0.27642265)
 sprite_frames = SubResource("SpriteFrames_5tjap")
 animation = &"Normal"
 autoplay = "Normal"

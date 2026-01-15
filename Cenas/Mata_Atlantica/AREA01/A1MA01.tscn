@@ -22,7 +22,6 @@
 [ext_resource type="Texture2D" uid="uid://cj4rj4oj20ogb" path="res://Sprites/Cenário/Mata_Atlantica/Chao/chap_interno.png" id="10_5ka01"]
 [ext_resource type="Texture2D" uid="uid://b2f2ppntemt15" path="res://Sprites/Cenário/Mata_Atlantica/Chao/flores.png" id="10_57s1j"]
 [ext_resource type="Texture2D" uid="uid://ccql65wj55kqf" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/arvore_s3.png" id="11_hubad"]
-[ext_resource type="Texture2D" uid="uid://nr8tuj0enpia" path="res://Sprites/Cenário/Objetos/Savepoint/banco_save.png" id="12_q40bt"]
 [ext_resource type="Texture2D" uid="uid://7msrkwwo018f" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/arvore02.png" id="13_1gvhd"]
 [ext_resource type="Texture2D" uid="uid://bi1a2quip0tli" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/arvore03.png" id="14_8g6fq"]
 [ext_resource type="Texture2D" uid="uid://b6yel5f58h380" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/arvore05.png" id="15_5jfld"]
@@ -44,6 +43,7 @@
 [ext_resource type="Texture2D" uid="uid://c8t5do0sox8mj" path="res://Sprites/Cenário/Mata_Atlantica/Pedras e Ruinas/pedra_smusgo.png" id="33_5jfld"]
 [ext_resource type="Texture2D" uid="uid://c8tb73qiqhhk8" path="res://Sprites/Cenário/Mata_Atlantica/Background/Galhos/esquerda01.png" id="37_1gvhd"]
 [ext_resource type="PackedScene" uid="uid://bei1s8te3cwko" path="res://Sprites/Cenário/Mata_Atlantica/Interativos/plataforma.tscn" id="38_8g6fq"]
+[ext_resource type="Texture2D" uid="uid://dc4ocn7li3obx" path="res://Sprites/Cenário/Mata_Atlantica/Chao/moita_chao1.png" id="38_co6lv"]
 [ext_resource type="Texture2D" uid="uid://ndcbb0ydrrj5" path="res://Sprites/Cenário/Mata_Atlantica/Foreground/arvore_fundo1.png" id="41_7ywmt"]
 [ext_resource type="Texture2D" uid="uid://cvd3vo5425kva" path="res://Sprites/Cenário/Mata_Atlantica/Foreground/arvore_fundo2.png" id="42_co6lv"]
 [ext_resource type="AudioStream" uid="uid://b2vi4qav4gk5r" path="res://Audio/SFX/AMBIENTE/Cururu - Soundscape A.ogg" id="43_gr3ec"]
@@ -518,10 +518,19 @@ texture = ExtResource("10_57s1j")
 
 [node name="ColorRect2" type="ColorRect" parent="background/-02"]
 material = SubResource("ShaderMaterial_8tm3t")
-offset_left = -4593.8774
-offset_top = -447.95917
-offset_right = -3125.6968
-offset_bottom = 1388.7754
+offset_left = -4752.04
+offset_top = -205.10205
+offset_right = -3283.8594
+offset_bottom = 1631.6326
+rotation = -0.2617994
+
+[node name="ColorRect3" type="ColorRect" parent="background/-02"]
+material = SubResource("ShaderMaterial_8tm3t")
+offset_left = -5458.163
+offset_top = -229.59184
+offset_right = -3989.9824
+offset_bottom = 1607.1428
+rotation = -0.09155919
 
 [node name="82SemTítulo0000253520251125200857" type="Sprite2D" parent="background/-02"]
 modulate = Color(3.2944162, 3.2944162, 3.2944162, 1)
@@ -657,12 +666,12 @@ scale = Vector2(1.8125, 1.1061947)
 texture = ExtResource("9_nh2iu")
 
 [node name="Bau" parent="background/0/Arvores01" instance=ExtResource("21_v723p")]
-position = Vector2(-5386, 1020)
+position = Vector2(-5386, 1029)
 drop_item = Array[PackedScene]([ExtResource("22_gr3ec"), ExtResource("22_gr3ec")])
 multi_drop = true
 
 [node name="Bau2" parent="background/0/Arvores01" instance=ExtResource("23_ldwfj")]
-position = Vector2(-5256, 1039)
+position = Vector2(-5256, 1048)
 drop_item = Array[PackedScene]([ExtResource("22_gr3ec")])
 multi_drop = true
 
@@ -682,11 +691,11 @@ drop_item = Array[PackedScene]([ExtResource("22_gr3ec"), ExtResource("26_8tm3t")
 multi_drop = true
 
 [node name="Bau6" parent="background/0/Arvores01" instance=ExtResource("21_v723p")]
-position = Vector2(-2930, 1020)
+position = Vector2(-2930, 1032)
 drop_item = Array[PackedScene]([ExtResource("22_gr3ec"), ExtResource("22_gr3ec")])
 
 [node name="Bau7" parent="background/0/Arvores01" instance=ExtResource("23_ldwfj")]
-position = Vector2(-2800, 1039)
+position = Vector2(-2800, 1051)
 drop_item = Array[PackedScene]([ExtResource("22_gr3ec")])
 
 [node name="Bau8" parent="background/0/Arvores01" instance=ExtResource("24_7ywmt")]
@@ -759,7 +768,7 @@ rotation = 1.5707964
 texture = ExtResource("8_5kxqo")
 
 [node name="GramaReto2" type="Sprite2D" parent="background/0/Chão/Reto"]
-position = Vector2(-6992, 1073)
+position = Vector2(-6992, 1071)
 texture = ExtResource("8_5kxqo")
 
 [node name="GramaReto15" type="Sprite2D" parent="background/0/Chão/Reto"]
@@ -775,75 +784,75 @@ position = Vector2(-8813, -85)
 texture = ExtResource("8_5kxqo")
 
 [node name="GramaReto3" type="Sprite2D" parent="background/0/Chão/Reto"]
-position = Vector2(-6470, 1070)
+position = Vector2(-6470, 1068)
 texture = ExtResource("8_5kxqo")
 
 [node name="GramaReto4" type="Sprite2D" parent="background/0/Chão/Reto"]
-position = Vector2(-5346, 1071)
+position = Vector2(-5346, 1069)
 texture = ExtResource("8_5kxqo")
 
 [node name="GramaReto24" type="Sprite2D" parent="background/0/Chão/Reto"]
-position = Vector2(-5939, 1067)
+position = Vector2(-5939, 1065)
 texture = ExtResource("8_5kxqo")
 
 [node name="GramaReto5" type="Sprite2D" parent="background/0/Chão/Reto"]
-position = Vector2(-4811, 1072)
+position = Vector2(-4811, 1070)
 texture = ExtResource("8_5kxqo")
 
 [node name="GramaReto6" type="Sprite2D" parent="background/0/Chão/Reto"]
-position = Vector2(-4264, 1074)
+position = Vector2(-4264, 1072)
 texture = ExtResource("8_5kxqo")
 
 [node name="GramaReto7" type="Sprite2D" parent="background/0/Chão/Reto"]
-position = Vector2(-3739, 1074)
+position = Vector2(-3739, 1072)
 texture = ExtResource("8_5kxqo")
 
 [node name="GramaReto8" type="Sprite2D" parent="background/0/Chão/Reto"]
-position = Vector2(-3201, 1072)
+position = Vector2(-3201, 1070)
 texture = ExtResource("8_5kxqo")
 
 [node name="GramaReto9" type="Sprite2D" parent="background/0/Chão/Reto"]
-position = Vector2(-2688, 1075)
+position = Vector2(-2688, 1073)
 texture = ExtResource("8_5kxqo")
 
 [node name="GramaReto10" type="Sprite2D" parent="background/0/Chão/Reto"]
-position = Vector2(-2167, 1075)
+position = Vector2(-2167, 1073)
 texture = ExtResource("8_5kxqo")
 
 [node name="GramaReto11" type="Sprite2D" parent="background/0/Chão/Reto"]
-position = Vector2(-1667, 1076)
+position = Vector2(-1667, 1074)
 texture = ExtResource("8_5kxqo")
 
 [node name="GramaReto12" type="Sprite2D" parent="background/0/Chão/Reto"]
-position = Vector2(-1153, 1075)
+position = Vector2(-1153, 1073)
 texture = ExtResource("8_5kxqo")
 
 [node name="GramaReto13" type="Sprite2D" parent="background/0/Chão/Reto"]
-position = Vector2(-611, 1074)
+position = Vector2(-611, 1072)
 texture = ExtResource("8_5kxqo")
 
 [node name="GramaReto14" type="Sprite2D" parent="background/0/Chão/Reto"]
-position = Vector2(-77, 1073)
+position = Vector2(-77, 1071)
 texture = ExtResource("8_5kxqo")
 
 [node name="GramaReto19" type="Sprite2D" parent="background/0/Chão/Reto"]
-position = Vector2(454, 1073)
+position = Vector2(454, 1071)
 texture = ExtResource("8_5kxqo")
 
 [node name="GramaReto20" type="Sprite2D" parent="background/0/Chão/Reto"]
-position = Vector2(989, 1073)
+position = Vector2(989, 1071)
 texture = ExtResource("8_5kxqo")
 
 [node name="GramaReto21" type="Sprite2D" parent="background/0/Chão/Reto"]
-position = Vector2(1528, 1073)
+position = Vector2(1528, 1071)
 texture = ExtResource("8_5kxqo")
 
 [node name="GramaReto22" type="Sprite2D" parent="background/0/Chão/Reto"]
-position = Vector2(2064, 1073)
+position = Vector2(2064, 1071)
 texture = ExtResource("8_5kxqo")
 
 [node name="GramaReto23" type="Sprite2D" parent="background/0/Chão/Reto"]
-position = Vector2(2300, 1073)
+position = Vector2(2300, 1071)
 texture = ExtResource("8_5kxqo")
 
 [node name="ChapExterno" type="Sprite2D" parent="background/0/Chão/Reto"]
@@ -855,10 +864,6 @@ texture = ExtResource("9_wnjnd")
 position = Vector2(-7373, 970)
 rotation = -1.5707964
 texture = ExtResource("10_5ka01")
-
-[node name="BancoSave" type="Sprite2D" parent="background/0/Chão"]
-position = Vector2(-4886, 811)
-texture = ExtResource("12_q40bt")
 
 [node name="Node2D" type="Node2D" parent="background/0"]
 position = Vector2(-8905, -136)
@@ -1095,14 +1100,29 @@ position = Vector2(1877.0001, 503)
 scale = Vector2(0.6478874, 0.64788735)
 texture = ExtResource("10_57s1j")
 
+[node name="MoitaChao1" type="Sprite2D" parent="background/1/Composição Teto"]
+position = Vector2(-4416.2104, 1093.183)
+scale = Vector2(0.8804264, 0.88042635)
+texture = ExtResource("38_co6lv")
+
+[node name="MoitaChao2" type="Sprite2D" parent="background/1/Composição Teto"]
+position = Vector2(-5861.464, 1093.183)
+scale = Vector2(0.8804264, 0.88042635)
+texture = ExtResource("38_co6lv")
+
+[node name="MoitaChao3" type="Sprite2D" parent="background/1/Composição Teto"]
+position = Vector2(-3176.5854, 1093.183)
+scale = Vector2(0.8804264, 0.88042635)
+texture = ExtResource("38_co6lv")
+
 [node name="2" type="CanvasLayer" parent="background"]
 follow_viewport_enabled = true
 follow_viewport_scale = 1.05
 
 [node name="PedraSmusgo" type="Sprite2D" parent="background/2"]
 modulate = Color(0.012617188, 0.012617188, 0.012617188, 1)
-position = Vector2(-6401.905, 954.2858)
-scale = Vector2(0.68835616, 0.68835616)
+position = Vector2(-6467.224, 1011.95245)
+scale = Vector2(0.589612, 0.58961195)
 texture = ExtResource("33_5jfld")
 flip_h = true
 
@@ -1129,6 +1149,10 @@ texture = ExtResource("7_5ka01")
 
 [node name="Frontfolha4" type="Sprite2D" parent="background/2"]
 position = Vector2(-4533, 1146)
+texture = ExtResource("7_5ka01")
+
+[node name="Frontfolha11" type="Sprite2D" parent="background/2"]
+position = Vector2(-3734.2856, 1146)
 texture = ExtResource("7_5ka01")
 
 [node name="Frontfolha7" type="Sprite2D" parent="background/2"]
@@ -1405,6 +1429,13 @@ flip_h = true
 [node name="ArvoreFundo3" type="Sprite2D" parent="background/2/Teto/Sombra"]
 modulate = Color(0.012617188, 0.012617188, 0.012617188, 1)
 position = Vector2(-5655.9673, 505.32782)
+rotation = 0.10325718
+scale = Vector2(1.0164235, 1.0689989)
+texture = ExtResource("42_co6lv")
+
+[node name="ArvoreFundo4" type="Sprite2D" parent="background/2/Teto/Sombra"]
+modulate = Color(0.012617188, 0.012617188, 0.012617188, 1)
+position = Vector2(-7733.334, -177.14294)
 rotation = 0.10325718
 scale = Vector2(1.0164235, 1.0689989)
 texture = ExtResource("42_co6lv")

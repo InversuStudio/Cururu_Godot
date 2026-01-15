@@ -1,4 +1,4 @@
-[gd_scene load_steps=55 format=4 uid="uid://dfuswe0wcsy33"]
+[gd_scene load_steps=57 format=4 uid="uid://dfuswe0wcsy33"]
 
 [ext_resource type="Texture2D" uid="uid://c374cwih425cq" path="res://Sprites/Cenário/Tilemaps/Base.png" id="1_axyo6"]
 [ext_resource type="Texture2D" uid="uid://2x6q1ni8klgv" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/arvore_fundo1.png" id="2_nika8"]
@@ -43,6 +43,8 @@
 [ext_resource type="Texture2D" uid="uid://b2f2ppntemt15" path="res://Sprites/Cenário/Mata_Atlantica/Chao/flores.png" id="36_wstxp"]
 [ext_resource type="PackedScene" uid="uid://u28e3eudu6ch" path="res://Objetos/Funcionalidade/MainCamera.tscn" id="37_nika8"]
 [ext_resource type="Texture2D" uid="uid://b7hwtujjwy182" path="res://Sprites/UI/Pause/maPEAMENTO.png" id="38_5nff6"]
+[ext_resource type="Texture2D" uid="uid://cvd3vo5425kva" path="res://Sprites/Cenário/Mata_Atlantica/Foreground/arvore_fundo2.png" id="42_rcn2b"]
+[ext_resource type="Texture2D" uid="uid://ndcbb0ydrrj5" path="res://Sprites/Cenário/Mata_Atlantica/Foreground/arvore_fundo1.png" id="43_wmciv"]
 [ext_resource type="Texture2D" uid="uid://7msrkwwo018f" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/arvore02.png" id="44_jwima"]
 [ext_resource type="AudioStream" uid="uid://b2vi4qav4gk5r" path="res://Audio/SFX/AMBIENTE/Cururu - Soundscape A.ogg" id="47_wmciv"]
 
@@ -1218,20 +1220,6 @@ position = Vector2(-31271.5, -4221.5)
 scale = Vector2(1.3789063, 1.3789063)
 texture = ExtResource("32_dglwx")
 
-[node name="Arvore07" type="Sprite2D" parent="2"]
-modulate = Color(0.012617188, 0.012617188, 0.012617188, 1)
-position = Vector2(4666.6665, -1710.4761)
-rotation = 0.08343956
-scale = Vector2(0.6718941, 0.9860546)
-texture = ExtResource("13_rcn2b")
-
-[node name="Arvore08" type="Sprite2D" parent="2"]
-modulate = Color(0.012617188, 0.012617188, 0.012617188, 1)
-position = Vector2(4023.8098, -1710.4761)
-rotation = -0.119472
-scale = Vector2(0.6718941, 0.9860546)
-texture = ExtResource("13_rcn2b")
-
 [node name="PilarTemplo3" type="Sprite2D" parent="2"]
 modulate = Color(0.012617188, 0.012617188, 0.012617188, 1)
 position = Vector2(2403.6409, -1500.7294)
@@ -1244,6 +1232,27 @@ modulate = Color(0.012617188, 0.012617188, 0.012617188, 1)
 position = Vector2(422.85718, -1497.143)
 scale = Vector2(0.687068, 0.8117587)
 texture = ExtResource("20_jwima")
+
+[node name="ArvoreFundo2" type="Sprite2D" parent="2"]
+modulate = Color(0.012617188, 0.012617188, 0.012617188, 1)
+position = Vector2(3371.7954, -1704.8032)
+rotation = -0.17220382
+scale = Vector2(1.6757926, 1.1372727)
+texture = ExtResource("42_rcn2b")
+flip_h = true
+
+[node name="ArvoreFundo3" type="Sprite2D" parent="2"]
+modulate = Color(0.012617188, 0.012617188, 0.012617188, 1)
+position = Vector2(8108.5723, -1695.2384)
+rotation = 0.06136845
+scale = Vector2(1.6757926, 1.1372727)
+texture = ExtResource("42_rcn2b")
+
+[node name="ArvoreFundo1" type="Sprite2D" parent="2"]
+modulate = Color(0.012617188, 0.012617188, 0.012617188, 1)
+position = Vector2(4210.2866, -1893.3335)
+scale = Vector2(1.2987701, 1.2112544)
+texture = ExtResource("43_wmciv")
 
 [node name="3" type="CanvasLayer" parent="."]
 follow_viewport_enabled = true
@@ -1284,7 +1293,7 @@ limite_camera = NodePath("../LimiteCamera")
 offset_left = 243.0
 offset_top = -2910.0
 offset_right = 9305.0
-offset_bottom = -900.0
+offset_bottom = -808.0
 
 [node name="BGM_Player" type="Node" parent="."]
 script = ExtResource("30_fgbk1")
