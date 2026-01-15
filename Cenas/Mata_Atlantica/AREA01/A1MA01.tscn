@@ -1,4 +1,4 @@
-[gd_scene load_steps=49 format=4 uid="uid://exty4suocudj"]
+[gd_scene load_steps=53 format=4 uid="uid://exty4suocudj"]
 
 [ext_resource type="PackedScene" uid="uid://nohq28uk7lfk" path="res://Objetos/Entidades/Player.tscn" id="1_v83m2"]
 [ext_resource type="Texture2D" uid="uid://2x6q1ni8klgv" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/arvore_fundo1.png" id="2_f8u2d"]
@@ -29,6 +29,7 @@
 [ext_resource type="Texture2D" uid="uid://ccy8rilccs3gf" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/arvore06.png" id="16_0daqe"]
 [ext_resource type="Texture2D" uid="uid://u12dsbd5ebth" path="res://Sprites/Cenário/Mata_Atlantica/Background/Mata/mato00.png" id="16_hubad"]
 [ext_resource type="Texture2D" uid="uid://d18vqjeq586b1" path="res://Sprites/Cenário/Mata_Atlantica/Pedras e Ruinas/pedra_musgo.png" id="19_8g6fq"]
+[ext_resource type="Shader" uid="uid://cete83ldr534" path="res://Scripts/Shaders/godray.gdshader" id="20_co6lv"]
 [ext_resource type="PackedScene" uid="uid://tvw2ynw76htc" path="res://Objetos/Props/vasosmoeda/vasomoeda_01.tscn" id="21_v723p"]
 [ext_resource type="PackedScene" uid="uid://bktu336s6ruri" path="res://Objetos/Props/Moeda.tscn" id="22_gr3ec"]
 [ext_resource type="PackedScene" uid="uid://d0l4afitq8qog" path="res://Objetos/NPCs/Cartógrafo.tscn" id="23_hubad"]
@@ -43,7 +44,27 @@
 [ext_resource type="Texture2D" uid="uid://c8t5do0sox8mj" path="res://Sprites/Cenário/Mata_Atlantica/Pedras e Ruinas/pedra_smusgo.png" id="33_5jfld"]
 [ext_resource type="Texture2D" uid="uid://c8tb73qiqhhk8" path="res://Sprites/Cenário/Mata_Atlantica/Background/Galhos/esquerda01.png" id="37_1gvhd"]
 [ext_resource type="PackedScene" uid="uid://bei1s8te3cwko" path="res://Sprites/Cenário/Mata_Atlantica/Interativos/plataforma.tscn" id="38_8g6fq"]
+[ext_resource type="Texture2D" uid="uid://ndcbb0ydrrj5" path="res://Sprites/Cenário/Mata_Atlantica/Foreground/arvore_fundo1.png" id="41_7ywmt"]
+[ext_resource type="Texture2D" uid="uid://cvd3vo5425kva" path="res://Sprites/Cenário/Mata_Atlantica/Foreground/arvore_fundo2.png" id="42_co6lv"]
 [ext_resource type="AudioStream" uid="uid://b2vi4qav4gk5r" path="res://Audio/SFX/AMBIENTE/Cururu - Soundscape A.ogg" id="43_gr3ec"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_8tm3t"]
+shader = ExtResource("20_co6lv")
+shader_parameter/flip_horizontal = true
+shader_parameter/flip_vertical = false
+shader_parameter/angle = -0.3
+shader_parameter/position = 0.0
+shader_parameter/spread = 0.6000000285
+shader_parameter/cutoff = 0.06000005035
+shader_parameter/falloff = 0.6000000285
+shader_parameter/edge_fade = 0.2000000095
+shader_parameter/speed = 1.0
+shader_parameter/ray1_density = 5.0
+shader_parameter/ray2_density = 20.0
+shader_parameter/ray2_intensity = 0.30000001425
+shader_parameter/color = Color(0.9687218, 0.9046197, 0.75688607, 0.8)
+shader_parameter/hdr = false
+shader_parameter/seed = 7.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mw8rc"]
 size = Vector2(63, 541)
@@ -423,6 +444,10 @@ texture = ExtResource("37_1gvhd")
 [node name="Plataforma" parent="background/-05" instance=ExtResource("38_8g6fq")]
 position = Vector2(-591, 155.99998)
 
+[node name="Bau11" parent="background/-05" instance=ExtResource("24_7ywmt")]
+position = Vector2(-594, 75)
+drop_item = Array[PackedScene]([ExtResource("22_gr3ec"), ExtResource("22_gr3ec"), ExtResource("22_gr3ec")])
+
 [node name="-02" type="CanvasLayer" parent="background"]
 follow_viewport_enabled = true
 follow_viewport_scale = 0.98
@@ -490,6 +515,13 @@ flip_h = true
 modulate = Color(3.2944162, 3.2944162, 3.2944162, 1)
 position = Vector2(871, 765)
 texture = ExtResource("10_57s1j")
+
+[node name="ColorRect2" type="ColorRect" parent="background/-02"]
+material = SubResource("ShaderMaterial_8tm3t")
+offset_left = -4593.8774
+offset_top = -447.95917
+offset_right = -3125.6968
+offset_bottom = 1388.7754
 
 [node name="82SemTítulo0000253520251125200857" type="Sprite2D" parent="background/-02"]
 modulate = Color(3.2944162, 3.2944162, 3.2944162, 1)
@@ -833,7 +865,7 @@ position = Vector2(-8905, -136)
 
 [node name="1" type="CanvasLayer" parent="background"]
 follow_viewport_enabled = true
-follow_viewport_scale = 1.05
+follow_viewport_scale = 1.025
 
 [node name="Composição Teto" type="Node2D" parent="background/1"]
 
@@ -1065,12 +1097,14 @@ texture = ExtResource("10_57s1j")
 
 [node name="2" type="CanvasLayer" parent="background"]
 follow_viewport_enabled = true
+follow_viewport_scale = 1.05
 
 [node name="PedraSmusgo" type="Sprite2D" parent="background/2"]
 modulate = Color(0.012617188, 0.012617188, 0.012617188, 1)
-position = Vector2(-6105, 929.00006)
+position = Vector2(-6401.905, 954.2858)
 scale = Vector2(0.68835616, 0.68835616)
 texture = ExtResource("33_5jfld")
+flip_h = true
 
 [node name="PedraSmusgo2" type="Sprite2D" parent="background/2"]
 modulate = Color(0.012617188, 0.012617188, 0.012617188, 1)
@@ -1354,6 +1388,26 @@ texture = ExtResource("7_5ka01")
 position = Vector2(-8645, -757)
 rotation = 3.14159
 texture = ExtResource("7_5ka01")
+
+[node name="ArvoreFundo1" type="Sprite2D" parent="background/2/Teto/Sombra"]
+modulate = Color(0.012617188, 0.012617188, 0.012617188, 1)
+position = Vector2(-4947, 589)
+texture = ExtResource("41_7ywmt")
+
+[node name="ArvoreFundo2" type="Sprite2D" parent="background/2/Teto/Sombra"]
+modulate = Color(0.012617188, 0.012617188, 0.012617188, 1)
+position = Vector2(-3986.875, 507.37506)
+rotation = -0.1250669
+scale = Vector2(1.0164235, 1.0534081)
+texture = ExtResource("42_co6lv")
+flip_h = true
+
+[node name="ArvoreFundo3" type="Sprite2D" parent="background/2/Teto/Sombra"]
+modulate = Color(0.012617188, 0.012617188, 0.012617188, 1)
+position = Vector2(-5655.9673, 505.32782)
+rotation = 0.10325718
+scale = Vector2(1.0164235, 1.0689989)
+texture = ExtResource("42_co6lv")
 
 [node name="3" type="CanvasLayer" parent="background"]
 follow_viewport_enabled = true
