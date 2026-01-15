@@ -14,7 +14,7 @@ extends State
 
 var terminou: bool = false
 
-const sfx:AudioStream = preload("res://Audio/SFX/Ataque_Especial.wav")
+const sfx:AudioStream = preload("res://Audio/SFX/CURURU/Ataque secundário.wav")
 
 func _ready() -> void:
 	for c:HitBox in hitboxes:

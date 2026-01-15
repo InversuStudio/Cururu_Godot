@@ -31,8 +31,8 @@ shape = SubResource("RectangleShape2D_qxje0")
 
 [node name="Script" type="Node" parent="."]
 script = ExtResource("2_hgbl4")
-nome_tela = "Chicote D'agua"
-descricao_tela = "Pressione o B para usar. O ataque anre passagens com Miasma pelo mapa."
+nome_tela = "Pulso D'agua"
+descricao_tela = "Pressione o B para usar o Pulso D'agua, esse  ataque abre passagens com Miasma pelo mapa."
 imagem_tela = ExtResource("3_xtwx5")
 
 [node name="Base" type="Sprite2D" parent="."]

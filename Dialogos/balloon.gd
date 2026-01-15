@@ -97,7 +97,7 @@ func setup_portrait():
 	elif character_label.text == "ARARÊ":
 		character_dialogue_icon.texture = load("res://Sprites/UI/Visual_Novel/arare.png")
 		
-	elif character_label.text == "NAIA":
+	elif character_label.text == "NAIÁ":
 		character_dialogue_icon.texture = load("res://Sprites/UI/Visual_Novel/vitoria_regia.png")
 		
 	elif character_label.text == "BOITATÁ":

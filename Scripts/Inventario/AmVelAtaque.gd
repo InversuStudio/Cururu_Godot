@@ -4,8 +4,8 @@ extends ScriptItemInventario
 
 func _ready() -> void:
 	if Inventario.amuletos[pai.id_inventario][1] == true:
-		GameData.ataque_anim_speed = 1.3
+		GameData.ataque_anim_speed = 1.5
 
 func Logica() -> void:
 	var result:bool = Inventario.SetAmuleto(Inventario.AmuletosString[pai.item])
-	GameData.ataque_anim_speed = 1.3 if result else 1.0
+	GameData.ataque_anim_speed = 1.5 if result else 1.0
