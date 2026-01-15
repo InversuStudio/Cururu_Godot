@@ -10,7 +10,7 @@
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_e1vo3"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_pv85o"]
-texture = ExtResource("5_qith4")
+texture = ExtResource("3_qith4")
 
 [node name="AmVelAtaque" type="TextureButton" node_paths=PackedStringArray("script_logica")]
 custom_minimum_size = Vector2(200, 200)
@@ -18,9 +18,9 @@ texture_normal = ExtResource("1_eo0xl")
 ignore_texture_size = true
 stretch_mode = 0
 script = ExtResource("2_xx80a")
-nome_display = "Cabaça do Relâmpago das Águas"
-desc_item = "Um pequeno talismã talhado em madeira de jatobá e preso a uma miniatura de cabaça azulada. Dentro dela, vibra uma gota de Água Lunar eletrificada pelo toque da deusa Vitória-Régia. Quando ativado, o fluxo espiritual acelera pelos braços do Cururu, tornando seus disparos e golpes fluidos e rápidos como uma enxurrada repentina."
-sprite_normal = ExtResource("3_qith4")
+nome_display = "Lágrima Corrente"
+desc_item = "Talismã talhado em jatobá e preso a uma pequena rocha azulada que abriga uma gota de Água Lunar abençoada pela Vitória-Régia. Ao ser despertado, o amuleto faz a gota vibrar em ressonância com o coração de Cururu, fazendo a energia correr por seus braços como um rio em cheia, acelerando seus golpes, como se o próprio luar guiasse cada movimento."
+sprite_normal = ExtResource("5_qith4")
 sprite_select = ExtResource("4_pv85o")
 script_logica = NodePath("Script")
 
