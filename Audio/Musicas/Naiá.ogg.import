@@ -12,7 +12,7 @@ dest_files=["res://.godot/imported/Naiá.ogg-d60d7285f28cf3a1ef0dd8f26f385ea2.og
 
 [params]
 
-loop=false
+loop=true
 loop_offset=0
 bpm=0
 beat_count=0

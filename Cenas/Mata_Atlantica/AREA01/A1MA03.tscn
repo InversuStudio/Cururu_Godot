@@ -1,4 +1,4 @@
-[gd_scene load_steps=50 format=4 uid="uid://cubw3i1ch5jq1"]
+[gd_scene load_steps=52 format=4 uid="uid://cubw3i1ch5jq1"]
 
 [ext_resource type="PackedScene" uid="uid://nohq28uk7lfk" path="res://Objetos/Entidades/Player.tscn" id="1_65boa"]
 [ext_resource type="Texture2D" uid="uid://cqu5scrrmr5n5" path="res://Sprites/Cenário/Mata_Atlantica/Background/Iluminação e Fundo/FUNDOCEU.png" id="1_f6ry5"]
@@ -38,6 +38,7 @@
 [ext_resource type="Texture2D" uid="uid://d3i6g64tongye" path="res://Sprites/Cenário/Objetos/Savepoint/florlotus.png" id="29_lr7hr"]
 [ext_resource type="Texture2D" uid="uid://dj81ab7fk7ig1" path="res://Sprites/Cenário/Objetos/Savepoint/parte da frente.png" id="30_8clb6"]
 [ext_resource type="Script" uid="uid://dd16yu704x6wt" path="res://Scripts/Componentes/BGM_Player.gd" id="33_6epi5"]
+[ext_resource type="Shader" uid="uid://c5kmgpt3xfcos" path="res://Scripts/Shaders/Wave.gdshader" id="36_lr7hr"]
 [ext_resource type="AudioStream" uid="uid://dg1jv7tsrche4" path="res://Audio/Musicas/Naiá.ogg" id="39_k6a21"]
 [ext_resource type="AudioStream" uid="uid://b2vi4qav4gk5r" path="res://Audio/SFX/AMBIENTE/Cururu - Soundscape A.ogg" id="40_k6a21"]
 
@@ -226,6 +227,13 @@ sources/1 = SubResource("TileSetAtlasSource_iy160")
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_87p3x"]
 size = Vector2(70, 410)
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_8clb6"]
+shader = ExtResource("36_lr7hr")
+shader_parameter/wave_speed = 1.5000000712500001
+shader_parameter/wave_strength = 7.0000003325
+shader_parameter/wave_frequency = 2.0
+shader_parameter/top_influence = 0.15
+
 [node name="MA_1-3" type="Node2D"]
 
 [node name="Fundoceu" type="Sprite2D" parent="."]
@@ -396,14 +404,17 @@ offset_bottom = -4296.0
 [node name="Bau" parent="0" instance=ExtResource("13_0n704")]
 position = Vector2(2652, -4499)
 drop_item = Array[PackedScene]([ExtResource("13_5nggk")])
+multi_drop = true
 
 [node name="Bau3" parent="0" instance=ExtResource("16_blfcv")]
 position = Vector2(2529, -4485)
 drop_item = Array[PackedScene]([ExtResource("13_5nggk"), ExtResource("13_5nggk"), ExtResource("13_5nggk")])
+multi_drop = true
 
 [node name="Bau2" parent="0" instance=ExtResource("17_k6a21")]
 position = Vector2(2782, -4486)
 drop_item = Array[PackedScene]([ExtResource("13_5nggk"), ExtResource("13_5nggk")])
+multi_drop = true
 
 [node name="SavePoint" parent="0" instance=ExtResource("12_smmoq")]
 position = Vector2(2082, -4485)
@@ -681,21 +692,23 @@ position = Vector2(3184, -5025)
 texture = ExtResource("18_bekt5")
 
 [node name="90SemTítulo20251205150914" type="Sprite2D" parent="0/2"]
-position = Vector2(-66, -4424.0005)
+position = Vector2(-66, -4419.0483)
 scale = Vector2(0.2149838, 0.21498378)
 texture = ExtResource("29_lr7hr")
 
 [node name="ParteDaFrente" type="Sprite2D" parent="0/2/90SemTítulo20251205150914"]
+material = SubResource("ShaderMaterial_8clb6")
 position = Vector2(131.73332, 58.932617)
 scale = Vector2(1.9286382, 1.9286385)
 texture = ExtResource("30_8clb6")
 
 [node name="90SemTítulo20251205150915" type="Sprite2D" parent="0/2"]
-position = Vector2(553, -4424.0005)
+position = Vector2(293.33334, -4419.0483)
 scale = Vector2(0.2149838, 0.21498378)
 texture = ExtResource("29_lr7hr")
 
 [node name="ParteDaFrente" type="Sprite2D" parent="0/2/90SemTítulo20251205150915"]
+material = SubResource("ShaderMaterial_8clb6")
 position = Vector2(131.73332, 58.932617)
 scale = Vector2(1.9286382, 1.9286385)
 texture = ExtResource("30_8clb6")
