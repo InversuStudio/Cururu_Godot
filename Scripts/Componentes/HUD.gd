@@ -34,17 +34,17 @@ func _input(_event: InputEvent) -> void:
 			hud_ativo -= 1
 			MudaAba()
 	
-	if !Inventario.tem_mapa: return
-	if Input.is_action_just_pressed("select"):
-		full_mapa = true
-	
-	if Input.is_action_just_released("select"):
-		if %MapaSmall.visible:
-			%MapaSmall.hide()
-		elif tempo_mapa < 1.0 and not %Pause.visible:
-			%MapaSmall.show()
-		full_mapa = false
-		tempo_mapa = 0.0
+	#if !Inventario.tem_mapa: return
+	#if Input.is_action_just_pressed("select"):
+		#full_mapa = true
+	#
+	#if Input.is_action_just_released("select"):
+		#if %MapaSmall.visible:
+			#%MapaSmall.hide()
+		#elif tempo_mapa < 1.0 and not %Pause.visible:
+			#%MapaSmall.show()
+		#full_mapa = false
+		#tempo_mapa = 0.0
 
 func _process(delta: float) -> void:
 	if full_mapa:
@@ -56,6 +56,11 @@ func _process(delta: float) -> void:
 			MudaAba()
 			%MapaSmall.hide()
 			%Pause.show()
+	if !Inventario.tem_mapa: return
+	if Input.is_action_pressed("select") and not %Pause.visible:
+		%MapaSmall.show()
+	else:
+		%MapaSmall.hide()
 
 func _ready() -> void:
 	# Conecta sinais de mudança de valor
