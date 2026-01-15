@@ -80,7 +80,7 @@ func Pushback(pos:Vector2) -> void:
 	%TimerDano.start()
 
 func Morte() -> void:
-	for i in range(3):
+	for i in range(0):
 		Mundos.SpawnMoeda(get_parent(), global_position)
 	call_deferred("queue_free")
 

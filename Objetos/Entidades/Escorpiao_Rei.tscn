@@ -108,7 +108,6 @@ scale = Vector2(2.2352936, 2.2352936)
 collision_layer = 16
 dano = 2
 ignore = NodePath("../HurtBox")
-hit_freeze = 0.12
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="HitBox"]
 position = Vector2(-40.28952, -46)

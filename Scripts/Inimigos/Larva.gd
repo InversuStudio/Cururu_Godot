@@ -35,6 +35,6 @@ func _physics_process(delta: float) -> void:
 	move_and_slide()
 
 func Morte() -> void:
-	for i in range(3):
+	for i in range(0):
 		Mundos.SpawnMoeda(get_parent(), %SpawnMoeda.global_position)
 	call_deferred("queue_free")
