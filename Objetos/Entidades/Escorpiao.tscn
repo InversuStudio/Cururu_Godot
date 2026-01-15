@@ -1,14 +1,21 @@
-[gd_scene load_steps=15 format=3 uid="uid://bu62qgilsxetf"]
+[gd_scene load_steps=22 format=3 uid="uid://bu62qgilsxetf"]
 
 [ext_resource type="Script" uid="uid://bxwx72gohremh" path="res://Scripts/Inimigos/Larva.gd" id="1_mvbia"]
 [ext_resource type="Texture2D" uid="uid://b0g3aehy8v827" path="res://Sprites/Inimigos/Escorpiao/scorpion_FRAME01.png" id="2_dp3os"]
 [ext_resource type="Texture2D" uid="uid://cl6s3a1na1sf7" path="res://Sprites/Inimigos/Escorpiao/scorpion_FRAME02.png" id="3_ket68"]
 [ext_resource type="Texture2D" uid="uid://cq8g6bvidl78b" path="res://Sprites/Inimigos/Escorpiao/scorpion_FRAME03.png" id="4_iq3kk"]
+[ext_resource type="Texture2D" uid="uid://lruqdxr2efim" path="res://Sprites/Inimigos/Animação de morte/1.png" id="5_fl5uk"]
 [ext_resource type="Script" uid="uid://hsdutxxttrp3" path="res://Scripts/Componentes/Vida.gd" id="5_jbocm"]
+[ext_resource type="Texture2D" uid="uid://c87kuuyr2pym0" path="res://Sprites/Inimigos/Animação de morte/2.png" id="6_cusa3"]
 [ext_resource type="PackedScene" uid="uid://va5pjd6vuuo2" path="res://Objetos/Funcionalidade/CompHurtBox.tscn" id="6_ppnp4"]
 [ext_resource type="PackedScene" uid="uid://pc4mgv2nv8af" path="res://Objetos/Funcionalidade/CompHitBox.tscn" id="7_2oopb"]
+[ext_resource type="Texture2D" uid="uid://ddb4clgck30m" path="res://Sprites/Inimigos/Animação de morte/3.png" id="7_buqx5"]
 [ext_resource type="AudioStream" uid="uid://b3mmkipqf30jd" path="res://Audio/SFX/INIMIGOS/HIT_INIMIGO.wav" id="7_mvbia"]
+[ext_resource type="Texture2D" uid="uid://b6lp0on4i181d" path="res://Sprites/Inimigos/Animação de morte/4.png" id="8_rkugu"]
+[ext_resource type="Texture2D" uid="uid://yxi1hdj1bo5o" path="res://Sprites/Inimigos/Animação de morte/5.png" id="9_ciqm2"]
 [ext_resource type="PackedScene" uid="uid://ffqi6t0ahbmk" path="res://Objetos/Funcionalidade/OtimizadorSprite.tscn" id="9_mvbia"]
+[ext_resource type="Texture2D" uid="uid://b88rutgnulrpo" path="res://Sprites/Inimigos/Animação de morte/6.png" id="10_2ylce"]
+[ext_resource type="Texture2D" uid="uid://bdexte3g5lkq7" path="res://Sprites/Inimigos/Animação de morte/7.png" id="11_a5ut6"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ntg74"]
 size = Vector2(180, 106)
@@ -28,6 +35,32 @@ animations = [{
 "loop": true,
 "name": &"default",
 "speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_fl5uk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_cusa3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_buqx5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_rkugu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_ciqm2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_2ylce")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_a5ut6")
+}],
+"loop": false,
+"name": &"morte",
+"speed": 5.0
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_gx8x6"]
@@ -57,6 +90,7 @@ unique_name_in_owner = true
 position = Vector2(2, -89)
 scale = Vector2(0.535156, 0.535156)
 sprite_frames = SubResource("SpriteFrames_tkh53")
+animation = &"morte"
 autoplay = "default"
 offset = Vector2(-4, 0)
 

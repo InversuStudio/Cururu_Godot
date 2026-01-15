@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://bjvnm0aydr0vd"]
+[gd_scene load_steps=23 format=3 uid="uid://bjvnm0aydr0vd"]
 
 [ext_resource type="Script" uid="uid://byqf6bdnsd3m8" path="res://Scripts/Inimigos/Morcego.gd" id="1_j5mvf"]
 [ext_resource type="Texture2D" uid="uid://bicsa1wljjplt" path="res://Sprites/Inimigos/Morcego/iminigo_voador_FRAME01.png" id="2_87fsy"]
@@ -8,7 +8,14 @@
 [ext_resource type="PackedScene" uid="uid://va5pjd6vuuo2" path="res://Objetos/Funcionalidade/CompHurtBox.tscn" id="5_87fsy"]
 [ext_resource type="Script" uid="uid://hsdutxxttrp3" path="res://Scripts/Componentes/Vida.gd" id="5_ohlaa"]
 [ext_resource type="AudioStream" uid="uid://b3mmkipqf30jd" path="res://Audio/SFX/INIMIGOS/HIT_INIMIGO.wav" id="6_87fsy"]
+[ext_resource type="Texture2D" uid="uid://lruqdxr2efim" path="res://Sprites/Inimigos/Animação de morte/1.png" id="6_btk20"]
 [ext_resource type="PackedScene" uid="uid://pc4mgv2nv8af" path="res://Objetos/Funcionalidade/CompHitBox.tscn" id="7_khkaq"]
+[ext_resource type="Texture2D" uid="uid://c87kuuyr2pym0" path="res://Sprites/Inimigos/Animação de morte/2.png" id="7_sf77o"]
+[ext_resource type="Texture2D" uid="uid://ddb4clgck30m" path="res://Sprites/Inimigos/Animação de morte/3.png" id="8_ieo0b"]
+[ext_resource type="Texture2D" uid="uid://b6lp0on4i181d" path="res://Sprites/Inimigos/Animação de morte/4.png" id="9_yac0w"]
+[ext_resource type="Texture2D" uid="uid://yxi1hdj1bo5o" path="res://Sprites/Inimigos/Animação de morte/5.png" id="10_nrmra"]
+[ext_resource type="Texture2D" uid="uid://b88rutgnulrpo" path="res://Sprites/Inimigos/Animação de morte/6.png" id="11_8fb42"]
+[ext_resource type="Texture2D" uid="uid://bdexte3g5lkq7" path="res://Sprites/Inimigos/Animação de morte/7.png" id="12_3nvis"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_63e5l"]
 radius = 139.38911
@@ -31,6 +38,32 @@ animations = [{
 "loop": true,
 "name": &"default",
 "speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_btk20")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_sf77o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_ieo0b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_yac0w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_nrmra")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_8fb42")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_3nvis")
+}],
+"loop": false,
+"name": &"morte",
+"speed": 5.0
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_5qklw"]
@@ -67,8 +100,10 @@ self_modulate = Color(1.0542756, 1.6806661, 1.5060982, 1)
 position = Vector2(-4.3181305, 0.22733307)
 scale = Vector2(0.3648795, 0.3648795)
 sprite_frames = SubResource("SpriteFrames_tkh53")
+animation = &"morte"
 autoplay = "default"
-frame_progress = 0.28055105
+frame = 6
+frame_progress = 1.0
 speed_scale = 1.2
 
 [node name="Vida" type="Node" parent="."]

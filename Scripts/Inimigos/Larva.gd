@@ -37,4 +37,8 @@ func _physics_process(delta: float) -> void:
 func Morte() -> void:
 	for i in range(0):
 		Mundos.SpawnMoeda(get_parent(), %SpawnMoeda.global_position)
-	call_deferred("queue_free")
+	%HurtBox.process_mode = PROCESS_MODE_DISABLED
+	%HitBox.process_mode = PROCESS_MODE_DISABLED
+	%Sprite.play("morte")
+	await %Sprite.animation_finished
+	queue_free()
