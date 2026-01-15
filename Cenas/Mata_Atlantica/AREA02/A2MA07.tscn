@@ -33,7 +33,7 @@
 [ext_resource type="Script" uid="uid://dd16yu704x6wt" path="res://Scripts/Componentes/BGM_Player.gd" id="25_xyjrg"]
 [ext_resource type="Texture2D" uid="uid://b73nkcosr250e" path="res://Sprites/VFX/Iluminação/LightCururu.png" id="31_s7f4i"]
 [ext_resource type="Texture2D" uid="uid://dkvg4f1dg8j0g" path="res://Sprites/Cenário/Tilemaps/AGUA.png" id="32_s7f4i"]
-[ext_resource type="Shader" path="res://Scripts/Shaders/wavewater.gdshader" id="33_co16j"]
+[ext_resource type="Shader" uid="uid://bbohkd8d1ljws" path="res://Scripts/Shaders/wavewater.gdshader" id="33_co16j"]
 [ext_resource type="Texture2D" uid="uid://vbs4iv3kv3am" path="res://Sprites/Cenário/Tilemaps/MIASMA.png" id="33_dgonc"]
 [ext_resource type="PackedScene" uid="uid://u28e3eudu6ch" path="res://Objetos/Funcionalidade/MainCamera.tscn" id="33_giq4m"]
 [ext_resource type="PackedScene" uid="uid://pc4mgv2nv8af" path="res://Objetos/Funcionalidade/CompHitBox.tscn" id="35_5ppts"]

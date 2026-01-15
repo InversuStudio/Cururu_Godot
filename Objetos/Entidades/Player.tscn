@@ -1,4 +1,4 @@
-[gd_scene load_steps=222 format=3 uid="uid://nohq28uk7lfk"]
+[gd_scene load_steps=223 format=3 uid="uid://nohq28uk7lfk"]
 
 [ext_resource type="Script" uid="uid://cfu4ciwll8jcj" path="res://Scripts/Cururu/Cururu.gd" id="1_gwpdq"]
 [ext_resource type="Texture2D" uid="uid://6tjgxsgaflxb" path="res://Sprites/Cururu/Dano/03.png" id="2_0hf88"]
@@ -166,6 +166,7 @@
 [ext_resource type="AudioStream" uid="uid://b1e3re8ykc11o" path="res://Audio/SFX/Cuica_2.ogg" id="91_vpyrf"]
 [ext_resource type="Script" uid="uid://b47dm1pnrhmt1" path="res://Scripts/Cururu/Nadando.gd" id="96_0digr"]
 [ext_resource type="Script" uid="uid://cg3i231v8dhoy" path="res://Objetos/Entidades/acorda.gd" id="110_yy1dt"]
+[ext_resource type="AudioStream" uid="uid://betvqt03p81ol" path="res://Audio/SFX/CURURU/dash_cururu.wav" id="154_wxhj3"]
 [ext_resource type="AudioStream" uid="uid://s50orlb3i3jk" path="res://Audio/SFX/CURURU/Caindo.wav" id="155_lv5tx"]
 [ext_resource type="Script" uid="uid://b3wmq1vhw42bm" path="res://Scripts/SFX/sfx_passos.gd" id="156_746bk"]
 [ext_resource type="AudioStream" uid="uid://cqrbf5wusyf2l" path="res://Audio/SFX/CURURU/Passos/Passo 1.wav" id="159_btflu"]
@@ -688,6 +689,12 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": ExtResource("55_2q4c8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("56_wq158")
+}, {
+"duration": 1.0,
 "texture": ExtResource("57_1mxu7")
 }, {
 "duration": 1.0,
@@ -704,12 +711,6 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": ExtResource("54_kmqi2")
-}, {
-"duration": 1.0,
-"texture": ExtResource("55_2q4c8")
-}, {
-"duration": 1.0,
-"texture": ExtResource("56_wq158")
 }],
 "loop": true,
 "name": &"Run",
@@ -1601,7 +1602,7 @@ tracks/3/path = NodePath("SFX/SFX_Passos")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
-"times": PackedFloat32Array(0.225, 0.525),
+"times": PackedFloat32Array(0.05, 0.35),
 "transitions": PackedFloat32Array(1, 1),
 "values": [{
 "args": [],
@@ -1859,8 +1860,8 @@ unique_name_in_owner = true
 position = Vector2(0, -118)
 scale = Vector2(0.375651, 0.375651)
 sprite_frames = SubResource("SpriteFrames_ser7u")
-animation = &"Run"
-frame = 3
+animation = &"Andando"
+frame_progress = 0.64201444
 speed_scale = 1.6
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -1994,7 +1995,8 @@ bus = &"SFX"
 
 [node name="SFX_Dash" type="AudioStreamPlayer" parent="SFX"]
 unique_name_in_owner = true
-stream = ExtResource("81_2t31h")
+stream = ExtResource("154_wxhj3")
+volume_db = -3.0
 max_polyphony = 100
 bus = &"SFX"
 
