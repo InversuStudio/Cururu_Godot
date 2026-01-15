@@ -12,7 +12,7 @@ dest_files=["res://.godot/imported/Cururu - Soundscape A.ogg-a76eb12c720a1a5c77c
 
 [params]
 
-loop=false
+loop=true
 loop_offset=0
 bpm=0
 beat_count=0
