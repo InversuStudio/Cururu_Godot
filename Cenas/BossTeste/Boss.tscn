@@ -950,7 +950,7 @@ animation = &"Idle"
 [node name="VidaBoss" type="Node" parent="."]
 unique_name_in_owner = true
 script = ExtResource("2_16hqa")
-vida_max = 3
+vida_max = 25
 metadata/_custom_type_script = "uid://hsdutxxttrp3"
 
 [node name="HurtBox" parent="." node_paths=PackedStringArray("comp_vida", "sprite") instance=ExtResource("3_fwdqd")]
