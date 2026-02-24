@@ -3,7 +3,12 @@ extends CharacterBody2D
 @export var velocidade: float = 0.0
 var dir: int = 1
 
+@onready var id:String = str(Mundos.fase_atual) + name
+
 func _ready() -> void:
+	for i:String in Mundos.lista_inimigos:
+		if i == id:
+			queue_free()
 	velocidade *= 128
 	var rand: int = randi_range(0,1)
 	match rand:
@@ -35,6 +40,7 @@ func _physics_process(delta: float) -> void:
 	move_and_slide()
 
 func Morte() -> void:
+	Mundos.lista_inimigos.append(id)
 	for i in range(0):
 		Mundos.SpawnMoeda(get_parent(), %SpawnMoeda.global_position)
 	%HurtBox.process_mode = PROCESS_MODE_DISABLED

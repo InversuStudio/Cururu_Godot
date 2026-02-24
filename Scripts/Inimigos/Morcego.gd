@@ -1,5 +1,7 @@
 extends CharacterBody2D
 
+@onready var id:String = str(Mundos.fase_atual) + name
+
 @export var speed: float = 200
 @export var speedAtaque: float = 1250
 @export var alcanceAtaque: float = 450
@@ -18,6 +20,9 @@ var pode_atacar: bool = true
 var para_ataque:bool = false
 
 func _ready() -> void:
+	for i:String in Mundos.lista_inimigos:
+		if i == id:
+			queue_free()
 	%HurtBox.hurt.connect(RecebeuDano)
 	%HitBox.hit.connect(Pushback)
 
@@ -80,6 +85,7 @@ func Pushback(pos:Vector2) -> void:
 	%TimerDano.start()
 
 func Morte() -> void:
+	Mundos.lista_inimigos.append(id)
 	for i in range(0):
 		Mundos.SpawnMoeda(get_parent(), global_position)
 	%HurtBox.process_mode = PROCESS_MODE_DISABLED

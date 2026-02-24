@@ -1,0 +1,67 @@
+[gd_scene format=3 uid="uid://dr7oj8vguihm0"]
+
+[ext_resource type="Texture2D" uid="uid://dkiah6c1qdwoe" path="res://Sprites/Cururu/Melee/V2/ATAQUE_1_HIT_AGUA/CURURU_ATAQUE_03.png" id="1_hena8"]
+[ext_resource type="Texture2D" uid="uid://dlikf3e84i2kg" path="res://Sprites/Cururu/Melee/V2/ATAQUE_1_HIT_AGUA/CURURU_ATAQUE_05.png" id="2_v4lfw"]
+[ext_resource type="Texture2D" uid="uid://4ux2snne6vti" path="res://Sprites/Cururu/Melee/V2/ATAQUE_1_HIT_AGUA/CURURU_ATAQUE_07.png" id="3_ddfql"]
+[ext_resource type="Texture2D" uid="uid://cdgxma1wf2u25" path="res://Sprites/Cururu/Melee/V2/ATAQUE_1_HIT_AGUA/CURURU_ATAQUE_09.png" id="4_t2u0w"]
+[ext_resource type="Texture2D" uid="uid://sqrh4vieii8t" path="res://Sprites/Cururu/Melee/V2/ATAQUE_1_HIT_AGUA/CURURU_ATAQUE_11.png" id="5_fensd"]
+[ext_resource type="Texture2D" uid="uid://dexpq56mlcv5m" path="res://Sprites/Cururu/Melee/V2/ATAQUE_1_HIT_AGUA/CURURU_ATAQUE_13.png" id="6_1qob1"]
+[ext_resource type="Texture2D" uid="uid://b03gs8133u1u1" path="res://Sprites/Cururu/Melee/V2/ATAQUE_2_HITS_AGUA/CURURU_ATAQUE_23.png" id="7_hat3q"]
+[ext_resource type="Texture2D" uid="uid://ofjwuivnuj0i" path="res://Sprites/Cururu/Melee/V2/ATAQUE_2_HITS_AGUA/CURURU_ATAQUE_25.png" id="8_yfr1s"]
+[ext_resource type="Texture2D" uid="uid://j1fwt1srdi3s" path="res://Sprites/Cururu/Melee/V2/ATAQUE_2_HITS_AGUA/CURURU_ATAQUE_27.png" id="9_vhn8j"]
+[ext_resource type="Texture2D" uid="uid://ccadpupbwhkl4" path="res://Sprites/Cururu/Melee/V2/ATAQUE_2_HITS_AGUA/CURURU_ATAQUE_29.png" id="10_2lgjf"]
+[ext_resource type="Texture2D" uid="uid://cw3cdq4up1xqy" path="res://Sprites/Cururu/Melee/V2/ATAQUE_2_HITS_AGUA/CURURU_ATAQUE_31.png" id="11_1txr8"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_dsijf"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_hena8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_v4lfw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_ddfql")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_t2u0w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_fensd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_1qob1")
+}],
+"loop": false,
+"name": &"1",
+"speed": 12.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_hat3q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_yfr1s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_vhn8j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_2lgjf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_1txr8")
+}],
+"loop": false,
+"name": &"2",
+"speed": 12.0
+}]
+
+[node name="MeleeVFX" type="Node2D" unique_id=42300229]
+
+[node name="Animation" type="AnimatedSprite2D" parent="." unique_id=1976484140]
+position = Vector2(121.00001, -129)
+scale = Vector2(0.37, 0.37)
+sprite_frames = SubResource("SpriteFrames_dsijf")
+animation = &"2"

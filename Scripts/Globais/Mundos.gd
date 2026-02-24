@@ -71,6 +71,9 @@ var fase_atual : NomeFase
 
 signal fase_mudou
 
+# Lista que registra todos os inimigos derrotados
+var lista_inimigos:Array[String] = []
+
 # Função para carregar nova fase
 func CarregaFase(lugar:NomeFase, detalhado:bool = false,
 	pos:Vector2=Vector2.ZERO) -> void:#, virado:bool=false) -> void:

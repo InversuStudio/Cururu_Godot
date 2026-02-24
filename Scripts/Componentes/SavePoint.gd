@@ -11,6 +11,7 @@ func Interact(player:CharacterBody2D) -> void:
 	%SFX.play()
 	%Anim.play("Save")
 	GameData.Save()
+	Mundos.lista_inimigos = []
 
 func Extra(dentro:bool = true) -> void:
 	if dentro:
