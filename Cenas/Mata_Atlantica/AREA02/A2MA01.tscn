@@ -2157,7 +2157,7 @@ zoom = Vector2(0.8, 0.8)
 limit_enabled = true
 limit_left = -4329
 limit_top = -1871
-limit_right = 3161
+limit_right = 3447
 limit_bottom = 1607
 target = NodePath("../0/Entidades/Cururu")
 limite_camera = NodePath("../LimiteCam")
@@ -2165,5 +2165,5 @@ limite_camera = NodePath("../LimiteCam")
 [node name="LimiteCam" type="ReferenceRect" parent="."]
 offset_left = -4329.0
 offset_top = -1871.0
-offset_right = 3161.0
+offset_right = 3448.0
 offset_bottom = 1607.0

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cgojsc8x3iriq"
-path="res://.godot/imported/10.png-e7f486242f1f8e840e5ed0f76dcf2dea.ctex"
+uid="uid://bcbgsvmjp14fg"
+path="res://.godot/imported/85 Sem Título_20260203190415.png-d18fe043583b2083f08c637fb83ef62a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Cururu/Run/10.png"
-dest_files=["res://.godot/imported/10.png-e7f486242f1f8e840e5ed0f76dcf2dea.ctex"]
+source_file="res://Sprites/Cenário/Mata_Atlantica/Pedras e Ruinas/85 Sem Título_20260203190415.png"
+dest_files=["res://.godot/imported/85 Sem Título_20260203190415.png-d18fe043583b2083f08c637fb83ef62a.ctex"]
 
 [params]
 

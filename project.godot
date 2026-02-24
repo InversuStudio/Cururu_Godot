@@ -8,13 +8,17 @@
 
 config_version=5
 
+[animation]
+
+compatibility/default_parent_skeleton_in_mesh_instance_3d=true
+
 [application]
 
 config/name="Cururu"
 run/main_scene="uid://drlbsodypev3g"
 config/use_custom_user_dir=true
 config/custom_user_dir_name="Cururu"
-config/features=PackedStringArray("4.5", "GL Compatibility")
+config/features=PackedStringArray("4.6", "GL Compatibility")
 config/icon="res://icon.svg"
 
 [audio]
@@ -26,7 +30,7 @@ driver/mix_rate=48000
 
 GameData="*res://Scripts/Globais/GameData.gd"
 Mundos="*res://Scripts/Globais/Mundos.gd"
-PhantomCameraManager="*res://addons/phantom_camera/scripts/managers/phantom_camera_manager.gd"
+PhantomCameraManager="*uid://duq6jhf6unyis"
 DialogueManager="*res://addons/dialogue_manager/dialogue_manager.gd"
 Console="*res://Scripts/Globais/Console.gd"
 BGM="*res://Objetos/Funcionalidade/BGM_Global.tscn"
@@ -48,6 +52,7 @@ window/size/initial_position_type=3
 window/size/resizable=false
 window/stretch/mode="canvas_items"
 window/stretch/aspect="ignore"
+window/vsync/vsync_mode=0
 
 [editor_plugins]
 

@@ -1,4 +1,4 @@
-[gd_scene load_steps=40 format=3 uid="uid://cdhelg6sloxbj"]
+[gd_scene format=3 uid="uid://cdhelg6sloxbj"]
 
 [ext_resource type="Script" uid="uid://b0ou3eu3i1sxg" path="res://Scripts/Componentes/PortaTemp.gd" id="1_rixxk"]
 [ext_resource type="Texture2D" uid="uid://clqh4rstgwwgd" path="res://Sprites/Cenário/Miasma/Porta de Miasma/Abrindo/01.png" id="2_cxcld"]
@@ -433,62 +433,65 @@ _data = {
 &"RESET": SubResource("Animation_q1th7")
 }
 
-[node name="PortaTemp" type="Node2D" groups=["Special"]]
+[node name="PortaTemp" type="Node2D" unique_id=1729982889 groups=["Special"]]
 script = ExtResource("1_rixxk")
 tempo_aberta = 2.0
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1975821799]
 position = Vector2(-35.999992, -47.999985)
-scale = Vector2(0.53125, 0.56666666)
+scale = Vector2(0.37340376, 0.56666666)
 sprite_frames = SubResource("SpriteFrames_q52yi")
 animation = &"Idle"
-frame = 1
 
-[node name="Colisao" type="StaticBody2D" parent="."]
+[node name="Colisao" type="StaticBody2D" parent="." unique_id=1147398807]
+position = Vector2(-12, 0)
+scale = Vector2(0.70287764, 1)
 collision_layer = 0
 collision_mask = 0
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Colisao"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Colisao" unique_id=579688351]
 position = Vector2(-0.5, -63.5)
 shape = SubResource("RectangleShape2D_rixxk")
 
-[node name="HurtBox" parent="." node_paths=PackedStringArray("sprite") instance=ExtResource("3_7ptwx")]
+[node name="HurtBox" parent="." unique_id=991220621 node_paths=PackedStringArray("sprite") instance=ExtResource("3_7ptwx")]
 unique_name_in_owner = true
+position = Vector2(-12, 0)
+scale = Vector2(0.70287764, 1)
 collision_layer = 16
 monitoring = false
 monitorable = false
 sprite = NodePath("../AnimatedSprite2D")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="HurtBox"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HurtBox" unique_id=1607001662]
 position = Vector2(-0.5, -63.5)
 shape = SubResource("RectangleShape2D_41i4q")
 debug_color = Color(0.99137133, 0, 0.27243033, 0.41960785)
 
-[node name="HitBox" parent="." node_paths=PackedStringArray("ignore") instance=ExtResource("4_7ptwx")]
+[node name="HitBox" parent="." unique_id=1790758728 node_paths=PackedStringArray("ignore") instance=ExtResource("4_7ptwx")]
 unique_name_in_owner = true
+position = Vector2(-12, 0)
+scale = Vector2(0.70287764, 1)
 collision_layer = 16
 monitoring = false
 monitorable = false
 ignore = NodePath("../HurtBox")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="HitBox"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HitBox" unique_id=1177134349]
 position = Vector2(-1, -62.149994)
 shape = SubResource("RectangleShape2D_7ptwx")
 
-[node name="Timer" type="Timer" parent="."]
+[node name="Timer" type="Timer" parent="." unique_id=1345188586]
 unique_name_in_owner = true
 wait_time = 2.0
 one_shot = true
 
-[node name="Anim" type="AnimationPlayer" parent="."]
+[node name="Anim" type="AnimationPlayer" parent="." unique_id=1098503237]
 unique_name_in_owner = true
-libraries = {
-&"": SubResource("AnimationLibrary_41i4q")
-}
-autoplay = "Idle"
+libraries/ = SubResource("AnimationLibrary_41i4q")
+autoplay = &"Idle"
 next/Fecha = &"Idle"
 
-[node name="SFX" type="AudioStreamPlayer2D" parent="."]
+[node name="SFX" type="AudioStreamPlayer2D" parent="." unique_id=1679681432]
 unique_name_in_owner = true
 volume_db = 2.5
 pitch_scale = 2.0

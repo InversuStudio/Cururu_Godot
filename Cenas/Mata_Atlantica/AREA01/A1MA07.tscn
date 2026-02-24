@@ -1066,15 +1066,15 @@ autoplay = true
 position = Vector2(980.00006, -470.9999)
 zoom = Vector2(0.8, 0.8)
 limit_enabled = true
-limit_left = 510
+limit_left = 512
 limit_top = -4970
-limit_right = 3680
+limit_right = 3710
 limit_bottom = -59
 target = NodePath("../0/Entidades/Cururu")
 limite_camera = NodePath("../LimiteCam")
 
 [node name="LimiteCam" type="ReferenceRect" parent="."]
-offset_left = 510.0
+offset_left = 512.0
 offset_top = -4970.0
-offset_right = 3680.0
+offset_right = 3710.0
 offset_bottom = -59.0
