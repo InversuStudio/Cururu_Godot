@@ -14,6 +14,7 @@ func _ready() -> void:
 	%HurtBox.set_deferred("monitorable", true)
 	%HitBox.set_deferred("monitoring", true)
 	%HitBox.set_deferred("monitorable", true)
+	%Colisao.collision_layer = 1
 	%SFX.stream = sfx[0]
 
 func _on_hurt(hitbox:Array[HitBox]) -> void:
@@ -27,17 +28,17 @@ func _on_timer_timeout() -> void:
 
 func Disable() -> void:
 	%Anim.play("Abre")
-	#%SFX.play()
 	%SFX.stream = sfx[1]
 	%HurtBox.set_deferred("monitoring", false)
 	%HurtBox.set_deferred("monitorable", false)
+	%Colisao.collision_layer = 0
 	%Timer.start(tempo_aberta)
 
 func Enable() -> void:
 	%Anim.play("Fecha")
-	#%SFX.play()
 	%SFX.stream = sfx[2]
 	%HurtBox.set_deferred("monitoring", true)
 	%HurtBox.set_deferred("monitorable", true)
 	await %Anim.animation_finished
+	%Colisao.collision_layer = 1
 	%SFX.stream = sfx[0]

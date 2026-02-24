@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://1fdx2ie24dh8"]
+[gd_scene format=3 uid="uid://1fdx2ie24dh8"]
 
 [ext_resource type="Script" uid="uid://drxk6hwuv2e3i" path="res://Scripts/Componentes/Bau.gd" id="1_5tjap"]
 [ext_resource type="AudioStream" uid="uid://42ve7xiilmug" path="res://Audio/SFX/AMBIENTE/Mexendo no Arbusto.wav" id="3_6ojqs"]
@@ -40,24 +40,24 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="Bau" type="Node2D"]
+[node name="ArvoreGuarana" type="Node2D" unique_id=1939146182]
 script = ExtResource("1_5tjap")
 
-[node name="HurtBox" parent="." node_paths=PackedStringArray("sprite") instance=ExtResource("5_ku8j8")]
+[node name="HurtBox" parent="." unique_id=2147031711 node_paths=PackedStringArray("sprite") instance=ExtResource("5_ku8j8")]
 collision_layer = 16
 hit_sfx = ExtResource("3_6ojqs")
 sprite = NodePath("../Sprite")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="HurtBox"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HurtBox" unique_id=714964957]
 position = Vector2(1, -71)
 shape = SubResource("RectangleShape2D_4vmwf")
 debug_color = Color(0.7753908, 0.38766962, 0.5591627, 0.41960785)
 
-[node name="PosItem" type="Marker2D" parent="."]
+[node name="PosItem" type="Marker2D" parent="." unique_id=517355542]
 z_index = 1002
 position = Vector2(0, -110)
 
-[node name="Sprite" type="AnimatedSprite2D" parent="."]
+[node name="Sprite" type="AnimatedSprite2D" parent="." unique_id=698805628]
 position = Vector2(0, -136)
 scale = Vector2(0.37109375, 0.3710938)
 sprite_frames = SubResource("SpriteFrames_5tjap")

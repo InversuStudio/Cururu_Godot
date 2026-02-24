@@ -83,6 +83,7 @@ func Save() -> void:
 		config.set_value("save", "amuletos", Inventario.amuletos)
 		config.set_value("save", "peca_coracao", peca_coracao)
 		config.set_value("save", "lista_coracao", Mundos.pecas_coracao)
+		config.set_value("save", "areas_secretas", Mundos.areas_secretas)
 		config.set_value("save", "tem_mapa", Inventario.tem_mapa)
 		
 		var save_path:String = OS.get_system_dir(OS.SYSTEM_DIR_DOCUMENTS) + "/SavedGames"
@@ -137,6 +138,7 @@ func Load() -> bool:
 		upgrade_num = config.get_value("save", "upgrades")
 		peca_coracao = config.get_value("save", "peca_coracao")
 		Mundos.pecas_coracao = config.get_value("save", "lista_coracao")
+		Mundos.areas_secretas = config.get_value("save", "areas_secretas")
 		
 		Inventario.inventario = []
 		HUD.LimpaInv()

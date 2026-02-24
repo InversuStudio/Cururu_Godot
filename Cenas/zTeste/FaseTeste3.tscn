@@ -1,23 +1,22 @@
-[gd_scene load_steps=10 format=4 uid="uid://di1jub7im5me4"]
+[gd_scene format=4 uid="uid://di1jub7im5me4"]
 
-[ext_resource type="Texture2D" uid="uid://c374cwih425cq" path="res://Sprites/Cenário/Tilemaps/Base.png" id="1_tjjcd"]
+[ext_resource type="Texture2D" uid="uid://61clqhtbc6ab" path="res://Sprites/Cenário/Tilemaps/Chao.png" id="1_kwcei"]
 [ext_resource type="PackedScene" uid="uid://cqyub70sv0ofp" path="res://Objetos/Props/SavePoint.tscn" id="2_ojfrm"]
 [ext_resource type="PackedScene" uid="uid://nohq28uk7lfk" path="res://Objetos/Entidades/Player.tscn" id="3_14s47"]
 [ext_resource type="PackedScene" uid="uid://1apfpwlqocxn" path="res://Objetos/Funcionalidade/TransicaoFase.tscn" id="4_aug86"]
 [ext_resource type="PackedScene" uid="uid://cex7nla2adui2" path="res://Objetos/Funcionalidade/ProjetaPlayer.tscn" id="5_kwcei"]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gj2pb"]
-texture = ExtResource("1_tjjcd")
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_tjjcd"]
+texture = ExtResource("1_kwcei")
 texture_region_size = Vector2i(128, 128)
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-64, -64, 64, -64, 64, 64, -64, 64)
-1:0/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_nl0uo"]
 tile_size = Vector2i(128, 128)
 physics_layer_0/collision_layer = 1
 physics_layer_0/collision_mask = 0
-sources/0 = SubResource("TileSetAtlasSource_gj2pb")
+sources/1 = SubResource("TileSetAtlasSource_tjjcd")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nl0uo"]
 size = Vector2(530, 52)
@@ -25,32 +24,32 @@ size = Vector2(530, 52)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tjjcd"]
 size = Vector2(502, 89.5)
 
-[node name="FaseTeste3" type="Node2D"]
+[node name="FaseTeste3" type="Node2D" unique_id=2111126710]
 
-[node name="Chao" type="TileMapLayer" parent="."]
+[node name="Chao" type="TileMapLayer" parent="." unique_id=1381017159]
 position = Vector2(0, -1)
-tile_map_data = PackedByteArray("AAD4/wAAAAAAAAAAAAD4/wEAAAAAAAAAAAD5/wAAAAAAAAAAAAD5/wEAAAAAAAAAAAD6/wAAAAAAAAAAAAD6/wEAAAAAAAAAAAD7/wAAAAAAAAAAAAD7/wEAAAAAAAAAAAD8/wAAAAAAAAAAAAD8/wEAAAAAAAAAAAD9/wAAAAAAAAAAAAD9/wEAAAAAAAAAAAACAAAAAAAAAAAAAAACAAEAAAAAAAAAAAADAAAAAAAAAAAAAAADAAEAAAAAAAAAAAAEAAAAAAAAAAAAAAAEAAEAAAAAAAAAAAAFAAAAAAAAAAAAAAAFAAEAAAAAAAAAAAAGAAAAAAAAAAAAAAAGAAEAAAAAAAAAAAAHAAAAAAAAAAAAAAAHAAEAAAAAAAAAAAD4//j/AAAAAAAAAAD4//n/AAAAAAAAAAD4//r/AAAAAAAAAAD4//v/AAAAAAAAAAD4//z/AAAAAAAAAAD4//3/AAAAAAAAAAD4//7/AAAAAAAAAAD4////AAAAAAAAAAAHAPj/AAAAAAAAAAAHAPn/AAAAAAAAAAAHAPr/AAAAAAAAAAAHAPv/AAAAAAAAAAAHAPz/AAAAAAAAAAAHAP3/AAAAAAAAAAAHAP7/AAAAAAAAAAAHAP//AAAAAAAAAAD5//j/AAAAAAAAAAD6//j/AAAAAAAAAAD7//j/AAAAAAAAAAD8//j/AAAAAAAAAAD9//j/AAAAAAAAAAD+//j/AAAAAAAAAAD///j/AAAAAAAAAAAAAPj/AAAAAAAAAAABAPj/AAAAAAAAAAACAPj/AAAAAAAAAAADAPj/AAAAAAAAAAAEAPj/AAAAAAAAAAAFAPj/AAAAAAAAAAAGAPj/AAAAAAAAAAA=")
+tile_map_data = PackedByteArray("AAD4/wAAAQAAAAAAAAD4/wEAAQAAAAAAAAD5/wAAAQAAAAAAAAD5/wEAAQAAAAAAAAD6/wAAAQAAAAAAAAD6/wEAAQAAAAAAAAD7/wAAAQAAAAAAAAD7/wEAAQAAAAAAAAD8/wAAAQAAAAAAAAD8/wEAAQAAAAAAAAD9/wAAAQAAAAAAAAD9/wEAAQAAAAAAAAACAAAAAQAAAAAAAAACAAEAAQAAAAAAAAADAAAAAQAAAAAAAAADAAEAAQAAAAAAAAAEAAAAAQAAAAAAAAAEAAEAAQAAAAAAAAAFAAAAAQAAAAAAAAAFAAEAAQAAAAAAAAAGAAAAAQAAAAAAAAAGAAEAAQAAAAAAAAAHAAAAAQAAAAAAAAAHAAEAAQAAAAAAAAD4//j/AQAAAAAAAAD4//n/AQAAAAAAAAD4//r/AQAAAAAAAAD4//v/AQAAAAAAAAD4//z/AQAAAAAAAAD4//3/AQAAAAAAAAD4//7/AQAAAAAAAAD4////AQAAAAAAAAAHAPj/AQAAAAAAAAAHAPn/AQAAAAAAAAAHAPr/AQAAAAAAAAAHAPv/AQAAAAAAAAAHAPz/AQAAAAAAAAAHAP3/AQAAAAAAAAAHAP7/AQAAAAAAAAAHAP//AQAAAAAAAAD5//j/AQAAAAAAAAD6//j/AQAAAAAAAAD7//j/AQAAAAAAAAD8//j/AQAAAAAAAAD9//j/AQAAAAAAAAD+//j/AQAAAAAAAAD///j/AQAAAAAAAAAAAPj/AQAAAAAAAAABAPj/AQAAAAAAAAACAPj/AQAAAAAAAAADAPj/AQAAAAAAAAAEAPj/AQAAAAAAAAAFAPj/AQAAAAAAAAAGAPj/AQAAAAAAAAA=")
 tile_set = SubResource("TileSet_nl0uo")
 
-[node name="Camera2D" type="Camera2D" parent="."]
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1513135585]
 position = Vector2(0, -384)
 
-[node name="SavePoint" parent="." instance=ExtResource("2_ojfrm")]
+[node name="SavePoint" parent="." unique_id=1547131920 instance=ExtResource("2_ojfrm")]
 position = Vector2(-618, 0)
 
-[node name="Player" parent="." instance=ExtResource("3_14s47")]
+[node name="Player" parent="." unique_id=344164538 instance=ExtResource("3_14s47")]
 position = Vector2(470, -83)
 
-[node name="TransicaoFase" parent="." instance=ExtResource("4_aug86")]
+[node name="TransicaoFase" parent="." unique_id=1362059449 instance=ExtResource("4_aug86")]
 vertical = true
 posicao = Vector2(-497, -1570)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="TransicaoFase"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TransicaoFase" unique_id=93322653]
 position = Vector2(0, 127)
 shape = SubResource("RectangleShape2D_nl0uo")
 
-[node name="ProjetaPlayer" parent="." instance=ExtResource("5_kwcei")]
+[node name="ProjetaPlayer" parent="." unique_id=219669377 instance=ExtResource("5_kwcei")]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="ProjetaPlayer"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ProjetaPlayer" unique_id=1911686990]
 position = Vector2(1, -226.25)
 shape = SubResource("RectangleShape2D_tjjcd")

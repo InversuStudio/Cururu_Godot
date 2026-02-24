@@ -442,8 +442,10 @@ position = Vector2(-35.999992, -47.999985)
 scale = Vector2(0.37340376, 0.56666666)
 sprite_frames = SubResource("SpriteFrames_q52yi")
 animation = &"Idle"
+frame = 1
 
 [node name="Colisao" type="StaticBody2D" parent="." unique_id=1147398807]
+unique_name_in_owner = true
 position = Vector2(-12, 0)
 scale = Vector2(0.70287764, 1)
 collision_layer = 0

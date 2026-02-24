@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://bagy73ppajbqp"]
+[gd_scene format=3 uid="uid://bagy73ppajbqp"]
 
 [ext_resource type="Texture2D" uid="uid://ciidwcx2d6i4b" path="res://Sprites/Cururu/Nadando/VFX/Saindo_Agua/01.png" id="1_1badp"]
 [ext_resource type="Texture2D" uid="uid://cbib1k5wtnq6" path="res://Sprites/Cururu/Nadando/VFX/Saindo_Agua/02.png" id="2_x8mp6"]
@@ -62,10 +62,10 @@ animations = [{
 "speed": 12.0
 }]
 
-[node name="VFX_Agua_Out" type="Node2D"]
+[node name="VFX_Agua_Out" type="Node2D" unique_id=150469296]
 script = ExtResource("14_pjygv")
 
-[node name="VFX_Agua_Out" type="AnimatedSprite2D" parent="."]
+[node name="VFX_Agua_Out" type="AnimatedSprite2D" parent="." unique_id=1974127280]
 position = Vector2(0, -198)
 scale = Vector2(0.3, 0.3)
 sprite_frames = SubResource("SpriteFrames_jb41k")

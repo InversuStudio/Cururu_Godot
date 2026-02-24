@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c374cwih425cq"
-path="res://.godot/imported/Base.png-96772b0756770b1e49ea9e2d53da38c3.ctex"
+uid="uid://61clqhtbc6ab"
+path="res://.godot/imported/Chao.png-4b77f58c9e0dc6929f37c17633664ed9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Cenário/Tilemaps/Base.png"
-dest_files=["res://.godot/imported/Base.png-96772b0756770b1e49ea9e2d53da38c3.ctex"]
+source_file="res://Sprites/Cenário/Tilemaps/Chao.png"
+dest_files=["res://.godot/imported/Chao.png-4b77f58c9e0dc6929f37c17633664ed9.ctex"]
 
 [params]
 
