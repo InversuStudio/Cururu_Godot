@@ -73,6 +73,8 @@ signal fase_mudou
 
 # Lista que registra todos os inimigos derrotados
 var lista_inimigos:Array[String] = []
+# Lista que registra todos os baús abertos
+var lista_baus:Array[String] = []
 
 # Função para carregar nova fase
 func CarregaFase(lugar:NomeFase, detalhado:bool = false,

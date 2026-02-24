@@ -2058,7 +2058,7 @@ unique_name_in_owner = true
 position = Vector2(0, -115)
 scale = Vector2(0.37, 0.37)
 sprite_frames = SubResource("SpriteFrames_ser7u")
-animation = &"MeleeAr2"
+animation = &"Special"
 frame = 1
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=185604391]
@@ -2100,6 +2100,7 @@ hit_freeze = 0.05
 position = Vector2(122, -118.99999)
 rotation = -1.7440166
 shape = SubResource("CapsuleShape2D_7spwe")
+disabled = true
 debug_color = Color(0.69455, 0.495447, 0, 0.42)
 
 [node name="Melee2" parent="HitContainer" unique_id=1138789882 node_paths=PackedStringArray("ignore", "parent") instance=ExtResource("47_grb16")]

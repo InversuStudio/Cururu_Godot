@@ -197,7 +197,8 @@ func OffsetMelee() -> void:
 	sprite.offset.x = -235.0 if sprite.flip_h else 235.0
 
 func OffsetSpecial() -> void:
-	sprite.offset.x = -470.0 if sprite.flip_h else 470.0
+	pass
+	#sprite.offset.x = -470.0 if sprite.flip_h else 470.0
 
 func ResetOffset() -> void:
 	sprite.offset = Vector2.ZERO

@@ -1,0 +1,66 @@
+[gd_scene format=3 uid="uid://c8f5v4s7rxcf4"]
+
+[ext_resource type="Texture2D" uid="uid://sw48l4k22ssv" path="res://Sprites/Cururu/Special/VFX/01.png" id="1_6i7ye"]
+[ext_resource type="Texture2D" uid="uid://utdbo4uvr571" path="res://Sprites/Cururu/Special/VFX/02.png" id="2_xknv4"]
+[ext_resource type="Texture2D" uid="uid://duyd465dvidio" path="res://Sprites/Cururu/Special/VFX/03.png" id="3_fepko"]
+[ext_resource type="Texture2D" uid="uid://bxyd8pn3u6k2i" path="res://Sprites/Cururu/Special/VFX/04.png" id="4_gq7ci"]
+[ext_resource type="Texture2D" uid="uid://bbfudmpbojn2x" path="res://Sprites/Cururu/Special/VFX/05.png" id="5_m71nq"]
+[ext_resource type="Texture2D" uid="uid://cbhqgcmvaele5" path="res://Sprites/Cururu/Special/VFX/06.png" id="6_5gwv0"]
+[ext_resource type="Texture2D" uid="uid://n8b38nldh0vd" path="res://Sprites/Cururu/Special/VFX/07.png" id="7_cnnmh"]
+[ext_resource type="Texture2D" uid="uid://bs4kcx227d8tn" path="res://Sprites/Cururu/Special/VFX/08.png" id="8_updns"]
+[ext_resource type="Texture2D" uid="uid://cqn2gjgrwgm4w" path="res://Sprites/Cururu/Special/VFX/09.png" id="9_8encg"]
+[ext_resource type="Texture2D" uid="uid://dh547yprf8i8g" path="res://Sprites/Cururu/Special/VFX/10.png" id="10_guqj0"]
+[ext_resource type="Texture2D" uid="uid://roe15my11jtb" path="res://Sprites/Cururu/Special/VFX/11.png" id="11_tk7jb"]
+[ext_resource type="Texture2D" uid="uid://dxnb43hflhlbv" path="res://Sprites/Cururu/Special/VFX/12.png" id="12_3plnt"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_dsijf"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_6i7ye")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_xknv4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_fepko")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_gq7ci")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_m71nq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_5gwv0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_cnnmh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_updns")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_8encg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_guqj0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_tk7jb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_3plnt")
+}],
+"loop": false,
+"name": &"ataque",
+"speed": 12.0
+}]
+
+[node name="ChicoteVFX" type="Node2D" unique_id=42300229]
+
+[node name="Animation" type="AnimatedSprite2D" parent="." unique_id=1976484140]
+position = Vector2(276, -129)
+scale = Vector2(0.37, 0.37)
+sprite_frames = SubResource("SpriteFrames_dsijf")
+animation = &"ataque"

@@ -797,7 +797,6 @@ destino = 5
 posicao = Vector2(-29588, -3335)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="0/Tutorial2" unique_id=463097436]
-visible = false
 light_mask = 7
 position = Vector2(-19, 13)
 rotation = 1.5707964

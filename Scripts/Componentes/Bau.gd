@@ -1,5 +1,7 @@
 extends Node2D
 
+@onready var id:String = str(Mundos.fase_atual) + name
+
 ## Itens a serem dropados pelo baú[br]
 ## [b]São as cenas com o prefixo Drop
 @export var drop_item: Array[PackedScene] = []
@@ -9,9 +11,15 @@ extends Node2D
 
 var aberto:bool = false
 
+func _ready() -> void:
+	for i:String in Mundos.lista_baus:
+		if i == id:
+			queue_free()
+
 func _on_hurt_box_hurt(_h:Array[HitBox]) -> void:
 	if not aberto and drop_item.size() > 0:
 		aberto = true
+		Mundos.lista_baus.append(id)
 		$Sprite.play("Abre")
 		if multi_drop:
 			for i:PackedScene in drop_item:
