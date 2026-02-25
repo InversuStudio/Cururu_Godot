@@ -110,7 +110,7 @@ func Reset_Ataque() -> void:
 func _on_melee_timeout() -> void:
 	combo_num = 0
 
-func Hit(_pos_target:Vector2, hit:HitBox) -> void:
-	#hit.CalcPushback(distancia_push, tempo_push, pos_target)
+func Hit(pos_target:Vector2, hit:HitBox) -> void:
+	hit.CalcPushback(distancia_push, tempo_push, pos_target)
 	if !hit.is_in_group("Special"):
 		GameData.magia_atual += 1

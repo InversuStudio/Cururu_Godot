@@ -1861,6 +1861,18 @@ tracks/3/keys = {
 "method": &"OffsetSpecial"
 }]
 }
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("SFX/SFX_Ataque:playing")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0.0666),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
 
 [sub_resource type="Animation" id="Animation_7spwe"]
 resource_name = "Special_Down"
@@ -2146,6 +2158,7 @@ parent = NodePath("../..")
 position = Vector2(207, -79)
 rotation = 1.57079
 shape = SubResource("CapsuleShape2D_1dbdn")
+disabled = true
 
 [node name="SpecialUp" parent="HitContainer" unique_id=198352563 node_paths=PackedStringArray("ignore", "parent") groups=["Special"] instance=ExtResource("47_grb16")]
 collision_mask = 16
@@ -2282,7 +2295,7 @@ pulo_state = NodePath("../Pulo")
 fall_state = NodePath("../Fall")
 dash_state = NodePath("../Dash")
 melee_state = NodePath("../Melee")
-special_state = NodePath("../Special")
+special_state = NodePath("../Chicote")
 
 [node name="Fall" type="Node" parent="StateMachine" unique_id=1802511952 node_paths=PackedStringArray("chao_state", "pulo_state", "dash_state", "melee_state", "special_state", "nado_state")]
 script = ExtResource("51_dvy3r")
@@ -2290,7 +2303,7 @@ chao_state = NodePath("../Chao")
 pulo_state = NodePath("../Pulo")
 dash_state = NodePath("../Dash")
 melee_state = NodePath("../Melee")
-special_state = NodePath("../Special")
+special_state = NodePath("../Chicote")
 nado_state = NodePath("../Nadando")
 
 [node name="Pulo" type="Node" parent="StateMachine" unique_id=128260595 node_paths=PackedStringArray("fall_state", "dash_state", "melee_state", "special_state")]
@@ -2298,7 +2311,7 @@ script = ExtResource("52_damx7")
 fall_state = NodePath("../Fall")
 dash_state = NodePath("../Dash")
 melee_state = NodePath("../Melee")
-special_state = NodePath("../Special")
+special_state = NodePath("../Chicote")
 
 [node name="Dash" type="Node" parent="StateMachine" unique_id=1401359684 node_paths=PackedStringArray("chao_state", "fall_state")]
 script = ExtResource("53_k0fov")
@@ -2320,7 +2333,7 @@ nado_state = NodePath("../Nadando")
 sfx = Array[AudioStream]([ExtResource("163_x4him"), ExtResource("164_lv5tx")])
 hitboxes = [NodePath("../../HitContainer/Melee1"), NodePath("../../HitContainer/Melee2"), NodePath("../../HitContainer/MeleeUp"), NodePath("../../HitContainer/MeleeDown")]
 
-[node name="Special" type="Node" parent="StateMachine" unique_id=712620166 node_paths=PackedStringArray("chao_state", "fall_state", "nado_state", "hitboxes")]
+[node name="Chicote" type="Node" parent="StateMachine" unique_id=712620166 node_paths=PackedStringArray("chao_state", "fall_state", "nado_state", "hitboxes")]
 script = ExtResource("56_7uoqt")
 chao_state = NodePath("../Chao")
 fall_state = NodePath("../Fall")
@@ -2336,7 +2349,7 @@ jump_state = NodePath("../Pulo")
 [connection signal="animation_finished" from="Anim" to="StateMachine/Chao" method="_on_anim_animation_finished"]
 [connection signal="animation_finished" from="Anim" to="StateMachine/Fall" method="_on_anim_animation_finished"]
 [connection signal="animation_finished" from="Anim" to="StateMachine/Dash" method="_on_anim_animation_finished"]
-[connection signal="animation_finished" from="Anim" to="StateMachine/Special" method="_on_anim_animation_finished"]
+[connection signal="animation_finished" from="Anim" to="StateMachine/Chicote" method="_on_anim_animation_finished"]
 [connection signal="timeout" from="Timers/Coyote" to="StateMachine/Fall" method="_on_coyote_timeout"]
 [connection signal="timeout" from="Timers/JumpLag" to="StateMachine/Fall" method="_on_jump_lag_timeout"]
 [connection signal="timeout" from="Timers/MeleeTime" to="StateMachine/Melee" method="_on_melee_timeout"]

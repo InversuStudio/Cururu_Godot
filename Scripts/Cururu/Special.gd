@@ -44,7 +44,7 @@ func Enter() -> void:
 	fx.scale.x = -1 if parent.sprite.flip_h else 1
 	c.play("ataque")
 	%SFX_Ataque.stream = sfx
-	%SFX_Ataque.play()
+	#%SFX_Ataque.play()
 	
 	await c.animation_finished
 	fx.queue_free()
@@ -81,8 +81,8 @@ func _on_anim_animation_finished(anim_name: StringName) -> void:
 		or anim_name == "Special_Down"):
 		terminou = true
 
-func Hit(_pos_target:Vector2, hit:HitBox) -> void:
-	#hit.CalcPushback(distancia_push, tempo_push, pos_target)
+func Hit(pos_target:Vector2, hit:HitBox) -> void:
+	hit.CalcPushback(distancia_push, tempo_push, pos_target)
 	if !hit.is_in_group("Special"):
 		GameData.magia_atual += 1
 
