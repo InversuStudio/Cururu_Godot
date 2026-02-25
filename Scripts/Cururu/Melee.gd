@@ -45,9 +45,9 @@ func Enter() -> void:
 	%Anim.play(combo_anim[combo_num] + state, -1, GameData.ataque_anim_speed)
 	var next_combo = combo_num + 1
 	var fx:Node2D = vfx.instantiate()
+	fx.global_position = parent.global_position
 	parent.get_parent().add_child(fx)
 	vfx_atual = fx
-	fx.global_position = parent.global_position
 	var c:AnimatedSprite2D = fx.get_child(0)
 	fx.scale.x = -1 if parent.sprite.flip_h else 1
 	c.play(str(next_combo))
@@ -110,7 +110,12 @@ func Reset_Ataque() -> void:
 func _on_melee_timeout() -> void:
 	combo_num = 0
 
-func Hit(pos_target:Vector2, hit:HitBox) -> void:
-	hit.CalcPushback(distancia_push, tempo_push, pos_target)
-	if !hit.is_in_group("Special"):
-		GameData.magia_atual += 1
+func Hit(pos_target:Vector2, _hit:HitBox) -> void:
+	var dir:float = -1. if pos_target.x > parent.global_position.x else 1.0
+	var up:float = 0.0 if parent.is_on_floor() else -1280.0
+	var push:float = ((2.0 * distancia_push) / tempo_push) * 128
+	var vel:Vector2 = Vector2(push * dir, up)
+	parent.velocity = vel
+	#hit.CalcPushback(distancia_push, tempo_push, pos_target)
+	#if !hit.is_in_group("Special"):
+	GameData.magia_atual += 1

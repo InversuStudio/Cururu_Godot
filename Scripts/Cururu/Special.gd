@@ -83,8 +83,8 @@ func _on_anim_animation_finished(anim_name: StringName) -> void:
 
 func Hit(pos_target:Vector2, hit:HitBox) -> void:
 	hit.CalcPushback(distancia_push, tempo_push, pos_target)
-	if !hit.is_in_group("Special"):
-		GameData.magia_atual += 1
+	#if !hit.is_in_group("Special"):
+		#GameData.magia_atual += 1
 
 func TocaErro() -> void:
 	if sfx_sem_magia.size() == 0: return
