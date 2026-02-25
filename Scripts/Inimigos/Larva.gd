@@ -5,10 +5,16 @@ var dir: int = 1
 
 @onready var id:String = str(Mundos.fase_atual) + name
 
+var tomou_dano:bool = false
+
 func _ready() -> void:
 	for i:String in Mundos.lista_inimigos:
 		if i == id:
 			queue_free()
+	$Vida.alterou_vida.connect(func(_v_new, _v_old) -> void:
+		tomou_dano = true
+		await get_tree().create_timer(.2).timeout
+		tomou_dano = false)
 	velocidade *= 128
 	var rand: int = randi_range(0,1)
 	match rand:
@@ -23,7 +29,8 @@ func _physics_process(delta: float) -> void:
 	if !is_on_floor():
 		velocity.y += 10 * 128 * delta
 	
-	velocity.x = move_toward(velocity.x, velocidade * dir, velocidade / 8.0)
+	if !tomou_dano:
+		velocity.x = move_toward(velocity.x, velocidade * dir, velocidade / 8.0)
 	
 	if %RayDireita.is_colliding() or !%RayVazioDireita.is_colliding():
 		dir = -1

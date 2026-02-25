@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://bjvnm0aydr0vd"]
+[gd_scene format=3 uid="uid://bjvnm0aydr0vd"]
 
 [ext_resource type="Script" uid="uid://byqf6bdnsd3m8" path="res://Scripts/Inimigos/Morcego.gd" id="1_j5mvf"]
 [ext_resource type="Texture2D" uid="uid://bicsa1wljjplt" path="res://Sprites/Inimigos/Morcego/iminigo_voador_FRAME01.png" id="2_87fsy"]
@@ -78,7 +78,7 @@ radius = 136.6731
 radius = 120.196754
 height = 240.39351
 
-[node name="Morcego" type="CharacterBody2D"]
+[node name="Morcego" type="CharacterBody2D" unique_id=2081584811]
 scale = Vector2(0.88, 0.88)
 collision_layer = 4
 motion_mode = 1
@@ -88,12 +88,12 @@ script = ExtResource("1_j5mvf")
 distancia_push = 0.3
 tempo_push = 1.0
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=96870855]
 position = Vector2(0.22733307, 0.2273407)
 scale = Vector2(0.6818189, 0.6818189)
 shape = SubResource("CircleShape2D_63e5l")
 
-[node name="Sprite" type="AnimatedSprite2D" parent="."]
+[node name="Sprite" type="AnimatedSprite2D" parent="." unique_id=1076170071]
 unique_name_in_owner = true
 modulate = Color(1.5790963, 1.5790963, 1.5790963, 1)
 self_modulate = Color(1.0542756, 1.6806661, 1.5060982, 1)
@@ -106,29 +106,29 @@ frame = 6
 frame_progress = 1.0
 speed_scale = 1.2
 
-[node name="Vida" type="Node" parent="."]
+[node name="Vida" type="Node" parent="." unique_id=1545267907]
 script = ExtResource("5_ohlaa")
 vida_max = 2
 metadata/_custom_type_script = "uid://hsdutxxttrp3"
 
-[node name="AreaVisaoSaida" type="Area2D" parent="."]
+[node name="AreaVisaoSaida" type="Area2D" parent="." unique_id=1719040009]
 collision_layer = 0
 collision_mask = 2
 
-[node name="AreaColisaoVisaoSaida" type="CollisionShape2D" parent="AreaVisaoSaida"]
+[node name="AreaColisaoVisaoSaida" type="CollisionShape2D" parent="AreaVisaoSaida" unique_id=945301940]
 position = Vector2(0, -3.5762787e-07)
 scale = Vector2(125, 125)
 shape = SubResource("CircleShape2D_5qklw")
 debug_color = Color(0.7314883, 0.3718521, 0.7511793, 0.41960785)
 
-[node name="AreaVisaoEntrada" type="Area2D" parent="."]
+[node name="AreaVisaoEntrada" type="Area2D" parent="." unique_id=1304338909]
 collision_layer = 0
 collision_mask = 2
 
-[node name="AreaColisaoVisaoEntrada" type="CollisionShape2D" parent="AreaVisaoEntrada"]
+[node name="AreaColisaoVisaoEntrada" type="CollisionShape2D" parent="AreaVisaoEntrada" unique_id=1986013385]
 shape = SubResource("CircleShape2D_j5mvf")
 
-[node name="HurtBox" parent="." node_paths=PackedStringArray("comp_vida", "parent", "sprite") instance=ExtResource("5_87fsy")]
+[node name="HurtBox" parent="." unique_id=1147275587 node_paths=PackedStringArray("comp_vida", "parent", "sprite") instance=ExtResource("5_87fsy")]
 unique_name_in_owner = true
 position = Vector2(0.22733307, 28.636433)
 scale = Vector2(0.6818189, 0.6818189)
@@ -140,13 +140,13 @@ hit_sfx = ExtResource("6_87fsy")
 parent = NodePath("..")
 sprite = NodePath("../Sprite")
 
-[node name="AreaColisaoHurtBox" type="CollisionShape2D" parent="HurtBox"]
+[node name="AreaColisaoHurtBox" type="CollisionShape2D" parent="HurtBox" unique_id=788034583]
 position = Vector2(1, -42)
 rotation = -1.57079
 shape = SubResource("CircleShape2D_87fsy")
 debug_color = Color(0.99999, 0, 0.0935918, 0.42)
 
-[node name="HitBox" parent="." node_paths=PackedStringArray("ignore", "parent") instance=ExtResource("7_khkaq")]
+[node name="HitBox" parent="." unique_id=1779111691 node_paths=PackedStringArray("ignore", "parent") instance=ExtResource("7_khkaq")]
 unique_name_in_owner = true
 position = Vector2(0.22733307, 27.500069)
 scale = Vector2(0.6818189, 0.6818189)
@@ -154,24 +154,24 @@ collision_layer = 16
 ignore = NodePath("../HurtBox")
 parent = NodePath("..")
 
-[node name="AreaColisaoHitBox" type="CollisionShape2D" parent="HitBox"]
+[node name="AreaColisaoHitBox" type="CollisionShape2D" parent="HitBox" unique_id=1095466206]
 position = Vector2(1.136364, -42.045456)
 rotation = -1.57079
 shape = SubResource("CapsuleShape2D_ujy2f")
 debug_color = Color(0.807155, 0.414602, 3.85046e-07, 0.42)
 
-[node name="TimerDirecaoIdle" type="Timer" parent="."]
+[node name="TimerDirecaoIdle" type="Timer" parent="." unique_id=1901930805]
 autostart = true
 
-[node name="TimerDano" type="Timer" parent="."]
+[node name="TimerDano" type="Timer" parent="." unique_id=1008342669]
 unique_name_in_owner = true
 one_shot = true
 
-[node name="TimerInvestida" type="Timer" parent="."]
+[node name="TimerInvestida" type="Timer" parent="." unique_id=691196239]
 unique_name_in_owner = true
 one_shot = true
 
-[node name="TimerEntreAtaques" type="Timer" parent="."]
+[node name="TimerEntreAtaques" type="Timer" parent="." unique_id=207824819]
 unique_name_in_owner = true
 one_shot = true
 
