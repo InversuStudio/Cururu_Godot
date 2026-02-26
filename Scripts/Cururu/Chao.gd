@@ -83,17 +83,21 @@ func SpawnFolhasRun() -> void:
 func Update(_delta: float) -> State:
 	# INPUT MELEE
 	if Input.is_action_just_pressed("melee") and parent.pode_ataque:
+		if item_cura: return null
 		return melee_state
 	# INPUT MAGIA
 	if Input.is_action_just_pressed("magia") and GameData.upgrade_num >= 1:
+		if item_cura: return null
 		if GameData.magia_atual >= 3:
 			return special_state
-		parent.state_machine.find_child("Special").TocaErro()
+		parent.state_machine.find_child("Chicote").TocaErro()
 	# INPUT DASH
 	if Input.is_action_just_pressed("dash") and parent.pode_dash:
+		if item_cura: return null
 		return dash_state
 	# Ao pressionar input de Pulo, mudar State
 	if Input.is_action_just_pressed("pulo") and parent.pode_mover:
+		if item_cura: return null
 		return pulo_state
 	return null # Não muda o State
 	

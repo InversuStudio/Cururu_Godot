@@ -81,8 +81,12 @@ func _on_anim_animation_finished(anim_name: StringName) -> void:
 		or anim_name == "Special_Down"):
 		terminou = true
 
-func Hit(pos_target:Vector2, hit:HitBox) -> void:
+func Hit(pos_target:Vector2, _layer:int, hit:HitBox) -> void:
 	hit.CalcPushback(distancia_push, tempo_push, pos_target)
+	parent.pode_mover = false
+	parent.input_move = Vector2.ZERO
+	await get_tree().create_timer(.3).timeout
+	parent.pode_mover = true
 	#if !hit.is_in_group("Special"):
 		#GameData.magia_atual += 1
 

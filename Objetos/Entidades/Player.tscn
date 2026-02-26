@@ -192,6 +192,7 @@
 [ext_resource type="AudioStream" uid="uid://dump1jmis1jaa" path="res://Audio/SFX/CURURU/Ataque basico B.wav" id="164_lv5tx"]
 [ext_resource type="AudioStream" uid="uid://8wiha2xiw2rb" path="res://Audio/SFX/CURURU/Passos/Passo 6.wav" id="164_ure17"]
 [ext_resource type="AudioStream" uid="uid://btftie0sgv32s" path="res://Audio/SFX/CURURU/Passos/Passo 7.wav" id="165_he10h"]
+[ext_resource type="PackedScene" uid="uid://tg8x6n8040y8" path="res://Objetos/Funcionalidade/HitVFX.tscn" id="166_pxml6"]
 [ext_resource type="AudioStream" uid="uid://dk2xw41j3xh4o" path="res://Audio/SFX/CURURU/Passos/Passo 8.wav" id="166_x76xd"]
 [ext_resource type="AudioStream" uid="uid://boso147whj30x" path="res://Audio/SFX/CURURU/Passos/Passo 9.wav" id="167_1nw1i"]
 [ext_resource type="AudioStream" uid="uid://cfdfpbmx46x2f" path="res://Audio/SFX/CURURU/Passos/Passo 10.wav" id="168_qdgh8"]
@@ -849,12 +850,8 @@ radius = 43.0
 height = 160.0
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_7spwe"]
-radius = 87.47546
-height = 303.1923
-
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_gjjix"]
-radius = 83.999985
-height = 277.99997
+radius = 105.00001
+height = 286.0
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ny8nr"]
 radius = 76.0
@@ -866,7 +863,7 @@ height = 308.0
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_1dbdn"]
 radius = 71.00001
-height = 326.0
+height = 444.0
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_s2eek"]
 radius = 107.0
@@ -990,7 +987,7 @@ length = 0.7
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("HitContainer/Melee1/ColMel1:disabled")
+tracks/0/path = NodePath("HitContainer/Melee/ColMel:disabled")
 tracks/0/interp = 0
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -1002,46 +999,34 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("HitContainer/Melee2/ColMel2:disabled")
+tracks/1/path = NodePath("Cururu:frame")
 tracks/1/interp = 0
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [true]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("Cururu:frame")
-tracks/2/interp = 0
-tracks/2/loop_wrap = true
-tracks/2/keys = {
 "times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
 "update": 1,
 "values": [0, 1, 2, 3, 4, 5, 6]
 }
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("Cururu:animation")
-tracks/3/interp = 0
-tracks/3/loop_wrap = true
-tracks/3/keys = {
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Cururu:animation")
+tracks/2/interp = 0
+tracks/2/loop_wrap = true
+tracks/2/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [&"Dano"]
 }
-tracks/4/type = "method"
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/path = NodePath(".")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/keys = {
+tracks/3/type = "method"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "values": [{
@@ -1339,7 +1324,7 @@ length = 0.3
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("HitContainer/Melee1/ColMel1:disabled")
+tracks/0/path = NodePath("HitContainer/Melee/ColMel:disabled")
 tracks/0/interp = 0
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -1393,7 +1378,7 @@ length = 0.3
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("HitContainer/Melee1/ColMel1:disabled")
+tracks/0/path = NodePath("HitContainer/Melee/ColMel:disabled")
 tracks/0/interp = 0
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -1447,7 +1432,7 @@ length = 0.25
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("HitContainer/Melee1/ColMel1:disabled")
+tracks/0/path = NodePath("HitContainer/Melee/ColMel:disabled")
 tracks/0/interp = 0
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -1498,25 +1483,13 @@ tracks/3/keys = {
 [sub_resource type="Animation" id="Animation_yd0lm"]
 resource_name = "Melee2Chao"
 length = 0.3
-tracks/0/type = "value"
+tracks/0/type = "method"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("HitContainer/Melee2/ColMel2:disabled")
-tracks/0/interp = 0
+tracks/0/path = NodePath("StateMachine/Melee")
+tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.3),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [false, true]
-}
-tracks/1/type = "method"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("StateMachine/Melee")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
 "times": PackedFloat32Array(0.3),
 "transitions": PackedFloat32Array(1),
 "values": [{
@@ -1524,29 +1497,41 @@ tracks/1/keys = {
 "method": &"Reset_Ataque"
 }]
 }
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("Cururu:animation")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Cururu:animation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [&"MeleeChao2"]
 }
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("Cururu:frame")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Cururu:frame")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
 "times": PackedFloat32Array(0, 0.050000004, 0.10000001, 0.15, 0.20000002, 0.25),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
 "update": 1,
 "values": [0, 1, 2, 3, 4, 5]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("HitContainer/Melee/ColMel:disabled")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.043508194, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [true, false, true]
 }
 
 [sub_resource type="Animation" id="Animation_s2eek"]
@@ -1746,6 +1731,18 @@ tracks/0/keys = {
 "update": 1,
 "values": [1]
 }
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("HitContainer/Melee/ColMel:disabled")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
 
 [sub_resource type="Animation" id="Animation_prtj7"]
 resource_name = "Run"
@@ -1814,7 +1811,7 @@ length = 0.65
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("HitContainer/Special/ColSpecial:disabled")
+tracks/0/path = NodePath("HitContainer/Chicote/ColSpecial:disabled")
 tracks/0/interp = 0
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -2074,7 +2071,7 @@ unique_name_in_owner = true
 position = Vector2(0, -115)
 scale = Vector2(0.37, 0.37)
 sprite_frames = SubResource("SpriteFrames_ser7u")
-animation = &"Special"
+animation = &"MeleeChao2"
 frame = 1
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=185604391]
@@ -2106,29 +2103,18 @@ debug_color = Color(0.92912, 0, 0.16329, 0.42)
 [node name="HitContainer" type="Node2D" parent="." unique_id=1633574407]
 position = Vector2(-2, 0)
 
-[node name="Melee1" parent="HitContainer" unique_id=1979195205 node_paths=PackedStringArray("ignore", "parent") instance=ExtResource("47_grb16")]
+[node name="Melee" parent="HitContainer" unique_id=1979195205 node_paths=PackedStringArray("ignore", "parent") instance=ExtResource("47_grb16")]
 collision_mask = 16
 ignore = NodePath("../../HurtContainer/HurtBox")
 parent = NodePath("../..")
-hit_freeze = 0.05
+hit_freeze = 0.1
+vfx = ExtResource("166_pxml6")
 
-[node name="ColMel1" type="CollisionShape2D" parent="HitContainer/Melee1" unique_id=602963842]
-position = Vector2(122, -118.99999)
-rotation = -1.7440166
+[node name="ColMel" type="CollisionShape2D" parent="HitContainer/Melee" unique_id=602963842]
+position = Vector2(135, -114)
+rotation = -1.5707964
 shape = SubResource("CapsuleShape2D_7spwe")
-disabled = true
 debug_color = Color(0.69455, 0.495447, 0, 0.42)
-
-[node name="Melee2" parent="HitContainer" unique_id=1138789882 node_paths=PackedStringArray("ignore", "parent") instance=ExtResource("47_grb16")]
-collision_mask = 16
-ignore = NodePath("../../HurtContainer/HurtBox")
-parent = NodePath("../..")
-hit_freeze = 0.05
-
-[node name="ColMel2" type="CollisionShape2D" parent="HitContainer/Melee2" unique_id=70898435]
-position = Vector2(124, -104)
-rotation = -1.57079
-shape = SubResource("CapsuleShape2D_gjjix")
 
 [node name="MeleeUp" parent="HitContainer" unique_id=1229607320 node_paths=PackedStringArray("ignore", "parent") instance=ExtResource("47_grb16")]
 collision_mask = 16
@@ -2152,14 +2138,15 @@ rotation = -1.5707964
 shape = SubResource("CapsuleShape2D_2t31h")
 disabled = true
 
-[node name="Special" parent="HitContainer" unique_id=1517723409 node_paths=PackedStringArray("ignore", "parent") groups=["Special"] instance=ExtResource("47_grb16")]
+[node name="Chicote" parent="HitContainer" unique_id=1517723409 node_paths=PackedStringArray("ignore", "parent") groups=["Special"] instance=ExtResource("47_grb16")]
 collision_mask = 16
 dano = 2
 ignore = NodePath("../../HurtContainer/HurtBox")
 parent = NodePath("../..")
+vfx = ExtResource("166_pxml6")
 
-[node name="ColSpecial" type="CollisionShape2D" parent="HitContainer/Special" unique_id=1971500833]
-position = Vector2(207, -79)
+[node name="ColSpecial" type="CollisionShape2D" parent="HitContainer/Chicote" unique_id=1971500833]
+position = Vector2(260, -128)
 rotation = 1.57079
 shape = SubResource("CapsuleShape2D_1dbdn")
 disabled = true
@@ -2254,7 +2241,7 @@ one_shot = true
 
 [node name="MeleeTime" type="Timer" parent="Timers" unique_id=496663416]
 unique_name_in_owner = true
-wait_time = 0.15
+wait_time = 0.2
 one_shot = true
 ignore_time_scale = true
 
@@ -2335,15 +2322,14 @@ chao_state = NodePath("../Chao")
 fall_state = NodePath("../Fall")
 nado_state = NodePath("../Nadando")
 sfx = Array[AudioStream]([ExtResource("163_x4him"), ExtResource("164_lv5tx")])
-hitboxes = [NodePath("../../HitContainer/Melee1"), NodePath("../../HitContainer/Melee2"), NodePath("../../HitContainer/MeleeUp"), NodePath("../../HitContainer/MeleeDown")]
-distancia_push = 0.6
+hitboxes = [NodePath("../../HitContainer/Melee"), NodePath("../../HitContainer/MeleeUp"), NodePath("../../HitContainer/MeleeDown")]
 
 [node name="Chicote" type="Node" parent="StateMachine" unique_id=712620166 node_paths=PackedStringArray("chao_state", "fall_state", "nado_state", "hitboxes")]
 script = ExtResource("56_7uoqt")
 chao_state = NodePath("../Chao")
 fall_state = NodePath("../Fall")
 nado_state = NodePath("../Nadando")
-hitboxes = [NodePath("../../HitContainer/Special"), NodePath("../../HitContainer/SpecialUp"), NodePath("../../HitContainer/SpecialDown")]
+hitboxes = [NodePath("../../HitContainer/Chicote"), NodePath("../../HitContainer/SpecialUp"), NodePath("../../HitContainer/SpecialDown")]
 sfx_sem_magia = Array[AudioStream]([ExtResource("90_s2eek"), ExtResource("91_vpyrf")])
 
 [node name="Nadando" type="Node" parent="StateMachine" unique_id=208640490 node_paths=PackedStringArray("jump_state")]

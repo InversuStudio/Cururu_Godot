@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://tg8x6n8040y8"]
+
+[ext_resource type="Texture2D" uid="uid://blydiq471c4w4" path="res://Sprites/VFX/Partículas/gota.png" id="1_vlrjj"]
+
+[sub_resource type="Curve" id="Curve_hc06y"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(0.48905107, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="CurveTexture" id="CurveTexture_ksuwl"]
+curve = SubResource("Curve_hc06y")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_a2vhi"]
+particle_flag_align_y = true
+particle_flag_disable_z = true
+spread = 180.0
+initial_velocity_min = 1000.0
+initial_velocity_max = 1000.0
+gravity = Vector3(0, 2000, 0)
+scale_min = 0.5
+alpha_curve = SubResource("CurveTexture_ksuwl")
+
+[node name="VFX_Hit" type="GPUParticles2D" unique_id=395771510]
+z_index = 10
+emitting = false
+amount = 5
+texture = ExtResource("1_vlrjj")
+lifetime = 0.25
+one_shot = true
+explosiveness = 1.0
+process_material = SubResource("ParticleProcessMaterial_a2vhi")

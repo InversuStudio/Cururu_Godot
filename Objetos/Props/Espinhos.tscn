@@ -1,7 +1,7 @@
-[gd_scene load_steps=8 format=3 uid="uid://dgfcdht1gifdp"]
+[gd_scene format=3 uid="uid://dgfcdht1gifdp"]
 
 [ext_resource type="Script" uid="uid://davjnwfncyj66" path="res://Scripts/Componentes/Armadilha.gd" id="1_8olkt"]
-[ext_resource type="Texture2D" uid="uid://bpkplb3cgqbco" path="res://Sprites/Cenário/Mata_Atlantica/Interativos/ESPINHOS.PNG" id="2_uwfcm"]
+[ext_resource type="Texture2D" uid="uid://bpkplb3cgqbco" path="res://Sprites/Cenário/Mata_Atlantica/Interativos/ESPINHOS.png" id="2_uwfcm"]
 [ext_resource type="PackedScene" uid="uid://pc4mgv2nv8af" path="res://Objetos/Funcionalidade/CompHitBox.tscn" id="3_xnfjv"]
 [ext_resource type="AudioStream" uid="uid://d0lumxscgbgin" path="res://Audio/SFX/INIMIGOS/inimigo_dead.mp3" id="4_ff3yg"]
 [ext_resource type="Script" uid="uid://b2ls33ys55oyt" path="res://Scripts/Componentes/OtimizadorSprite.gd" id="5_gb73u"]
@@ -21,27 +21,29 @@ animations = [{
 radius = 113.99996
 height = 886.0
 
-[node name="Armadilha" type="Node2D"]
+[node name="Espinhos" type="Node2D" unique_id=2018921236]
 script = ExtResource("1_8olkt")
 
-[node name="Sprite" type="AnimatedSprite2D" parent="."]
+[node name="Sprite" type="AnimatedSprite2D" parent="." unique_id=679433497]
 unique_name_in_owner = true
 position = Vector2(-10.9999695, -126.07029)
 scale = Vector2(0.95366174, 0.9536618)
 sprite_frames = SubResource("SpriteFrames_tkh53")
 autoplay = "default"
 
-[node name="HitBox" parent="." instance=ExtResource("3_xnfjv")]
+[node name="HitBox" parent="." unique_id=2068292197 instance=ExtResource("3_xnfjv")]
 unique_name_in_owner = true
+collision_layer = 24
+collision_mask = 24
 sfx = ExtResource("4_ff3yg")
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="HitBox"]
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="HitBox" unique_id=1594296202]
 position = Vector2(-4, -104)
 rotation = -1.57079
 shape = SubResource("CapsuleShape2D_xnfjv")
 debug_color = Color(0.807155, 0.414602, 3.85046e-07, 0.42)
 
-[node name="OtimizadorSprite" type="VisibleOnScreenNotifier2D" parent="."]
+[node name="OtimizadorSprite" type="VisibleOnScreenNotifier2D" parent="." unique_id=1060772298]
 rect = Rect2(-467, -236, 917, 272)
 script = ExtResource("5_gb73u")
 metadata/_custom_type_script = "uid://b2ls33ys55oyt"

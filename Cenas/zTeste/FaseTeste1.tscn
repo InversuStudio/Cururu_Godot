@@ -8,6 +8,7 @@
 [ext_resource type="TileSet" uid="uid://b0nn6bkolhibj" path="res://TilesetChao.tres" id="5_der3i"]
 [ext_resource type="Texture2D" uid="uid://61clqhtbc6ab" path="res://Sprites/Cenário/Tilemaps/Chao.png" id="5_tkd1t"]
 [ext_resource type="PackedScene" uid="uid://bu62qgilsxetf" path="res://Objetos/Entidades/Escorpiao.tscn" id="7_2vimk"]
+[ext_resource type="Texture2D" uid="uid://cjl88xeknofui" path="res://Sprites/Cenário/Mata_Atlantica/Chao/grama_reto.png" id="7_ixy8u"]
 [ext_resource type="PackedScene" uid="uid://bktu336s6ruri" path="res://Objetos/Props/Moeda.tscn" id="8_fo4t4"]
 [ext_resource type="PackedScene" uid="uid://1apfpwlqocxn" path="res://Objetos/Funcionalidade/TransicaoFase.tscn" id="10_wqlrc"]
 [ext_resource type="PackedScene" uid="uid://d3cks8kri2olw" path="res://Objetos/Props/AreaUpgrade.tscn" id="12_77bok"]
@@ -141,6 +142,22 @@ z_index = 3
 position = Vector2(0, -1)
 tile_map_data = PackedByteArray("AADm//n/AAAAAAAAAADm//r/AAAAAAAAAADm//v/AAAAAAAAAADn//n/AAAAAAAAAADn//r/AAAAAAAAAADn//v/AAAAAAAAAADo//n/AAAAAAAAAADo//r/AAAAAAAAAADo//v/AAAAAAAAAADp//n/AAAAAAAAAADp//r/AAAAAAAAAADp//v/AAAAAAAAAADq//n/AAAAAAAAAADq//r/AAAAAAAAAADq//v/AAAAAAAAAADj//n/AAAAAAAAAADj//r/AAAAAAAAAADj//v/AAAAAAAAAADk//n/AAAAAAAAAADk//r/AAAAAAAAAADk//v/AAAAAAAAAADl//n/AAAAAAAAAADl//r/AAAAAAAAAADl//v/AAAAAAAAAAA=")
 tile_set = SubResource("TileSet_der3i")
+
+[node name="GramaReto" type="Sprite2D" parent="Tilemap" unique_id=236162312]
+z_index = 2
+position = Vector2(1787, -497.99994)
+rotation = 0.4666673
+texture = ExtResource("7_ixy8u")
+
+[node name="GramaReto2" type="Sprite2D" parent="Tilemap" unique_id=1777297595]
+z_index = 2
+position = Vector2(2293, -380)
+texture = ExtResource("7_ixy8u")
+
+[node name="GramaReto3" type="Sprite2D" parent="Tilemap" unique_id=2011386668]
+z_index = 2
+position = Vector2(1286, -616)
+texture = ExtResource("7_ixy8u")
 
 [node name="Transicoes" type="Node" parent="." unique_id=1712968154]
 

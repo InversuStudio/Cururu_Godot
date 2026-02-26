@@ -11,6 +11,8 @@ extends State
 @export var distancia_push:float = 1.0
 @export var tempo_push:float = .2
 
+var hit_col_atual:CollisionShape2D = null
+
 # Armazena número do ataque
 var combo_num: int = 0
 # Lista de animações
@@ -26,7 +28,7 @@ var vfx_atual:Node2D = null
 func _ready() -> void:
 	await get_tree().process_frame
 	for c:HitBox in hitboxes:
-		c.connect("hit", Hit.bind(c))
+		c.connect("hit", Hit)#.bind(c))
 
 # COMPORTAMENTO AO ENTRAR NO STATE
 func Enter() -> void:
@@ -110,12 +112,20 @@ func Reset_Ataque() -> void:
 func _on_melee_timeout() -> void:
 	combo_num = 0
 
-func Hit(pos_target:Vector2, _hit:HitBox) -> void:
+func Hit(pos_target:Vector2, _layer:int) -> void:#_hit:HitBox) -> void:
 	var dir:float = -1. if pos_target.x > parent.global_position.x else 1.0
-	var up:float = 0.0 if parent.is_on_floor() else -1280.0
+	var up:float = 0.0 if parent.is_on_floor() else -1500.0
 	var push:float = ((2.0 * distancia_push) / tempo_push) * 128
 	var vel:Vector2 = Vector2(push * dir, up)
 	parent.velocity = vel
 	#hit.CalcPushback(distancia_push, tempo_push, pos_target)
 	#if !hit.is_in_group("Special"):
 	GameData.magia_atual += 1
+	parent.input_move = Vector2.ZERO
+	parent.pode_mover = false
+	await get_tree().create_timer(.2).timeout
+	parent.pode_mover = true
+
+# Chamada em AnimationPlayer
+func PegaCol(col:CollisionShape2D) -> void:
+	hit_col_atual = col
