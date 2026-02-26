@@ -58,6 +58,7 @@ animations = [{
 }]
 
 [node name="ChicoteVFX" type="Node2D" unique_id=42300229]
+z_index = 1
 
 [node name="Animation" type="AnimatedSprite2D" parent="." unique_id=1976484140]
 position = Vector2(276, -129)
