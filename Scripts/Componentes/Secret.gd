@@ -8,7 +8,7 @@ extends Node2D
 ## Nome da área secreta.[br]Usada na lógica de permanência ao ser destruída.
 @export var nome_id:String = ""
 
-signal ta_na_hora
+var morreu:bool = false
 
 func _ready() -> void:
 	for i:String in Mundos.areas_secretas:
@@ -16,19 +16,29 @@ func _ready() -> void:
 			area_escondida.queue_free()
 			parede_falsa.queue_free()
 			queue_free()
-	if parede_falsa:
-		connect("ta_na_hora", QuebrouParede)
+	#if parede_falsa:
+		#connect("ta_na_hora", QuebrouParede)
 			
-func QuebrouParede() -> void:
-	if nome_id != "":
-		Mundos.areas_secretas.append(nome_id)
-		var tween:Tween = create_tween()
-		tween.tween_property(area_escondida, "modulate", Color(.0,.0,.0,.0), .5)
-		await tween.finished
-		area_escondida.queue_free()
-		queue_free()
+#func QuebrouParede() -> void:
+	#if nome_id != "":
+		#Mundos.areas_secretas.append(nome_id)
+		#var tween:Tween = create_tween()
+		#tween.tween_property(area_escondida, "modulate", Color(.0,.0,.0,.0), .3)
+		#await tween.finished
+		#area_escondida.queue_free()
+		#queue_free()
 
 func _process(_delta: float) -> void:
-	if !is_instance_valid(parede_falsa):
+	var existe:bool = is_instance_valid(parede_falsa)
+	if !existe and !morreu:
 		print_rich("[color=red]ME DEIXOU E FOI EMBORA[/color]")
-		ta_na_hora.emit()
+		morreu = true
+		if nome_id != "":
+			Mundos.areas_secretas.append(nome_id)
+	
+	elif !existe and morreu:
+		area_escondida.queue_free()
+		queue_free()
+		
+	if existe:
+		area_escondida.modulate = parede_falsa.modulate

@@ -7,12 +7,14 @@ var vida_atual : int = 0
 ## Define se chama função de morte quando vida chega a 0
 @export var morre:bool = true
 
+@onready var parent:Node2D = get_parent()
+
 # Sinal emite com 2 valores: vida_antiga, vida_atual
 signal alterou_vida
 
 func _ready() -> void:
 	vida_atual = vida_max
-	if get_parent().is_in_group("Player"):
+	if parent.is_in_group("Player"):
 		# Conecta sinal de aumentar vida_max
 		GameData.update_vida_max.connect(func(_o:int):
 			vida_max = GameData.vida_max
@@ -52,8 +54,11 @@ func RecebeCura(cura:int = 1) -> void:
 
 # FUNÇÃO DE MORRER
 func Morre():
-	print("MORRI")
-	if get_parent().has_method("Morte"):
-		get_parent().Morte()
+	print(parent.name + " morreu.")
+	if parent.has_method("Morte"):
+		parent.Morte()
 	else:
-		get_parent().queue_free()
+		var tween:Tween = create_tween()
+		tween.tween_property(parent, "modulate", Color(.0,.0,.0,.0), .5)
+		await tween.finished
+		parent.queue_free()

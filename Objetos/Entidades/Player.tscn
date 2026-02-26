@@ -2029,6 +2029,8 @@ _data = {
 [node name="Player" type="CharacterBody2D" unique_id=2029638361 node_paths=PackedStringArray("vida", "state_machine", "hitbox_container", "hurtbox_container") groups=["Player"]]
 z_index = 1
 collision_layer = 2
+floor_constant_speed = true
+floor_snap_length = 20.0
 script = ExtResource("1_gwpdq")
 vel_corre = 8.0
 vel_anda = 6.0
@@ -2061,9 +2063,11 @@ texture_scale = 0.3
 
 [node name="VFX" type="AnimatedSprite2D" parent="." unique_id=215998627]
 unique_name_in_owner = true
+z_index = 1
 position = Vector2(-87.00001, -108)
 scale = Vector2(0.375651, 0.375651)
 sprite_frames = SubResource("SpriteFrames_k0fov")
+animation = &"saindo_agua"
 
 [node name="Cururu" type="AnimatedSprite2D" parent="." unique_id=183016390]
 unique_name_in_owner = true
@@ -2332,6 +2336,7 @@ fall_state = NodePath("../Fall")
 nado_state = NodePath("../Nadando")
 sfx = Array[AudioStream]([ExtResource("163_x4him"), ExtResource("164_lv5tx")])
 hitboxes = [NodePath("../../HitContainer/Melee1"), NodePath("../../HitContainer/Melee2"), NodePath("../../HitContainer/MeleeUp"), NodePath("../../HitContainer/MeleeDown")]
+distancia_push = 0.6
 
 [node name="Chicote" type="Node" parent="StateMachine" unique_id=712620166 node_paths=PackedStringArray("chao_state", "fall_state", "nado_state", "hitboxes")]
 script = ExtResource("56_7uoqt")

@@ -27,8 +27,8 @@ const sfx_movement:Array[AudioStream] = [
 func Enter() -> void:
 	# VFX + SFX de entrada na água
 	var v:Node2D = vfx[0].instantiate()
-	parent.get_parent().add_child(v)
 	v.global_position = parent.global_position
+	parent.get_parent().add_child(v)
 
 	%SFX_Extra.stream = sfx[0]
 	%SFX_Extra.play()
@@ -40,8 +40,8 @@ func Enter() -> void:
 func Exit() -> void:
 	# VFX + SFX de saída da água
 	var v:Node2D = vfx[1].instantiate()
-	parent.get_parent().add_child(v)
 	v.global_position = parent.global_position
+	parent.get_parent().add_child(v)
 
 	%SFX_Extra.stream = sfx[1]
 	%SFX_Extra.play()

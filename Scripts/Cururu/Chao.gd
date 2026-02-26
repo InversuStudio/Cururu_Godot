@@ -99,9 +99,6 @@ func Update(_delta: float) -> State:
 	
 # COMPORTAMENTO PHYSICS_PROCESS
 func FixedUpdate(delta: float) -> State:
-	# Aplica gravidade bem fraca
-	parent.velocity.y += 128 * delta
-		
 	# Aplica movimento
 	if parent.pode_mover:# and !turn:
 		var dir:float = parent.input_move.x

@@ -44,6 +44,8 @@ func RecebeDano(dano:int, pos_target:Vector2):
 	# Se houver componente de vida, recebe dano
 	if comp_vida:
 		comp_vida.RecebeDano(dano)
+		if comp_vida.vida_atual <= 0:
+			sprite.material = null
 	# Aplica knockback, se for definido
 	if distancia_knockback > 0.0 and parent != null:
 		CalcKnockback(distancia_knockback, tempo_knockback, pos_target)
@@ -58,6 +60,7 @@ func RecebeDano(dano:int, pos_target:Vector2):
 	if hit_sfx: %SFX.play()
 	# VFX dano
 	if sprite:
+		if sprite.material == null: return
 		material_sprite.set_shader_parameter("valor", 1.0)
 		await get_tree().create_timer(.2).timeout
 		material_sprite.set_shader_parameter("valor", 0.0)
