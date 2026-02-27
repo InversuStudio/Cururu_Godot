@@ -12,6 +12,7 @@ var morreu:bool = false
 
 func _ready() -> void:
 	for i:String in Mundos.areas_secretas:
+		#print("ITEM: " + i)
 		if i == nome_id:
 			area_escondida.queue_free()
 			parede_falsa.queue_free()
@@ -29,16 +30,16 @@ func _ready() -> void:
 		#queue_free()
 
 func _process(_delta: float) -> void:
-	var existe:bool = is_instance_valid(parede_falsa)
-	if !existe and !morreu:
+	#var existe:bool = is_instance_valid(parede_falsa)
+	if parede_falsa == null and !morreu:
 		print_rich("[color=red]ME DEIXOU E FOI EMBORA[/color]")
 		morreu = true
 		if nome_id != "":
 			Mundos.areas_secretas.append(nome_id)
 	
-	elif !existe and morreu:
+	elif parede_falsa == null and morreu:
 		area_escondida.queue_free()
 		queue_free()
 		
-	if existe:
+	if parede_falsa:
 		area_escondida.modulate = parede_falsa.modulate

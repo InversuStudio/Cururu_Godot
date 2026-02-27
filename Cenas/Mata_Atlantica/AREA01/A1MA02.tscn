@@ -552,6 +552,9 @@ position = Vector2(49, -1186)
 [node name="Armadilha6" parent="background/0/Espinhos" unique_id=1373450139 instance=ExtResource("1_ja78a")]
 position = Vector2(2141, -1614)
 
+[node name="HitBox" parent="background/0/Espinhos/Armadilha6" index="1" unique_id=1455573048 node_paths=PackedStringArray("ignore")]
+ignore = NodePath("../../../ParedeSecreta/HurtBox")
+
 [node name="Armadilha7" parent="background/0/Espinhos" unique_id=1861553764 instance=ExtResource("1_ja78a")]
 position = Vector2(2324, -1522)
 
@@ -670,7 +673,7 @@ position = Vector2(2877, -1202.9999)
 position = Vector2(3947, -5637)
 
 [node name="Escorpiao" parent="background/0/Entidades" unique_id=1465642779 instance=ExtResource("10_tj4kc")]
-position = Vector2(3587, -1811)
+position = Vector2(3493, -1813)
 
 [node name="Escorpiao3" parent="background/0/Entidades" unique_id=1506237806 instance=ExtResource("10_tj4kc")]
 position = Vector2(2564, -4747)
@@ -680,7 +683,7 @@ position = Vector2(4485, -2075)
 
 [node name="Cururu" parent="background/0/Entidades" unique_id=2007776644 instance=ExtResource("3_dr2ls")]
 z_index = 0
-position = Vector2(2105.9998, 484.99997)
+position = Vector2(3918.9998, -1615.9999)
 scale = Vector2(0.959163, 0.959163)
 
 [node name="TileMapLayer" type="TileMapLayer" parent="background/0" unique_id=240141709]
@@ -746,7 +749,7 @@ tile_set = SubResource("TileSet_7nelj")
 
 [node name="ParedeSecreta" parent="background/0" unique_id=729610840 instance=ExtResource("15_78wer")]
 visibility_layer = 7
-position = Vector2(4728, -2544)
+position = Vector2(4732, -2512)
 rotation = -3.1415925
 
 [node name="Chao" type="Node2D" parent="background/0" unique_id=712416743]
@@ -1931,7 +1934,7 @@ autoplay = true
 position = Vector2(1951, -4737)
 
 [node name="MainCamera" parent="." unique_id=259690790 node_paths=PackedStringArray("target", "limite_camera") instance=ExtResource("10_3ocar")]
-position = Vector2(2103.9998, 405.00006)
+position = Vector2(3916.9998, -1695.9995)
 zoom = Vector2(0.8, 0.8)
 limit_enabled = true
 limit_left = 1816
@@ -1946,3 +1949,6 @@ offset_left = 1816.0
 offset_top = -5998.0
 offset_right = 5522.0
 offset_bottom = 664.0
+
+[editable path="background/0/Espinhos/Armadilha6"]
+[editable path="background/0/ParedeSecreta"]
