@@ -42,6 +42,7 @@
 [ext_resource type="TileSet" uid="uid://cduyxbkbfj3yd" path="res://TilesetAgua.tres" id="33_qeqrq"]
 [ext_resource type="Texture2D" uid="uid://b73nkcosr250e" path="res://Sprites/VFX/Iluminação/LightCururu.png" id="33_yyslo"]
 [ext_resource type="TileSet" uid="uid://b0nn6bkolhibj" path="res://TilesetChao.tres" id="36_qeqrq"]
+[ext_resource type="Texture2D" uid="uid://cxa4pl0scvs5k" path="res://Sprites/VFX/Partículas/folhastx.png" id="36_rh2pu"]
 [ext_resource type="Texture2D" uid="uid://b2f2ppntemt15" path="res://Sprites/Cenário/Mata_Atlantica/Chao/flores.png" id="36_wstxp"]
 [ext_resource type="PackedScene" uid="uid://u28e3eudu6ch" path="res://Objetos/Funcionalidade/MainCamera.tscn" id="37_nika8"]
 [ext_resource type="Texture2D" uid="uid://b7hwtujjwy182" path="res://Sprites/UI/Pause/maPEAMENTO.png" id="38_5nff6"]
@@ -191,13 +192,42 @@ shader_parameter/surface_softness = 0.08
 particle_flag_disable_z = true
 emission_shape = 3
 emission_box_extents = Vector3(300, 500, 1)
+spread = 20.0
 initial_velocity_min = 1.0
-initial_velocity_max = 10.0
+initial_velocity_max = 5.0
 radial_velocity_min = -10.000022
 radial_velocity_max = 49.999977
 gravity = Vector3(0, -15, 0)
 scale_min = 0.25
 scale_max = 0.5
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_yyslo"]
+particles_animation = true
+particles_anim_h_frames = 7
+particles_anim_v_frames = 1
+particles_anim_loop = false
+
+[sub_resource type="Gradient" id="Gradient_rh2pu"]
+offsets = PackedFloat32Array(0, 0.1958042, 0.74825174, 1)
+colors = PackedColorArray(1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_yyslo"]
+gradient = SubResource("Gradient_rh2pu")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_rh2pu"]
+particle_flag_disable_z = true
+emission_shape = 3
+emission_box_extents = Vector3(7500, 500, 1)
+spread = 20.0
+initial_velocity_min = 0.5
+initial_velocity_max = 2.0
+angular_velocity_min = -1.6093254e-05
+angular_velocity_max = 49.99998
+gravity = Vector3(-20, 80, 0)
+scale_min = 0.19999999
+scale_max = 0.29999998
+color_ramp = SubResource("GradientTexture1D_yyslo")
+anim_offset_max = 1.0
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_74mlv"]
 shader = ExtResource("19_ny35b")
@@ -715,6 +745,15 @@ amount_ratio = 0.7
 texture = ExtResource("38_62810")
 visibility_rect = Rect2(-2000, -500, 4000, 1000)
 process_material = SubResource("ParticleProcessMaterial_8pnaw")
+
+[node name="Folhas" type="GPUParticles2D" parent="0" unique_id=1306196162]
+material = SubResource("CanvasItemMaterial_yyslo")
+position = Vector2(5056, -1743.0001)
+scale = Vector2(4.929097, 1.6426098)
+amount = 500
+texture = ExtResource("36_rh2pu")
+visibility_rect = Rect2(-7500, -500, 15000, 1000)
+process_material = SubResource("ParticleProcessMaterial_rh2pu")
 
 [node name="TileMapLayer" type="TileMapLayer" parent="0" unique_id=873022167]
 light_mask = 2
