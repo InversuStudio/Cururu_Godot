@@ -222,8 +222,8 @@ spread = 20.0
 initial_velocity_min = 0.5
 initial_velocity_max = 2.0
 angular_velocity_min = -1.6093254e-05
-angular_velocity_max = 49.99998
-gravity = Vector3(-20, 80, 0)
+angular_velocity_max = 29.999983
+gravity = Vector3(-20, 30, 0)
 scale_min = 0.19999999
 scale_max = 0.29999998
 color_ramp = SubResource("GradientTexture1D_yyslo")
@@ -748,10 +748,11 @@ process_material = SubResource("ParticleProcessMaterial_8pnaw")
 
 [node name="Folhas" type="GPUParticles2D" parent="0" unique_id=1306196162]
 material = SubResource("CanvasItemMaterial_yyslo")
-position = Vector2(5056, -1743.0001)
+position = Vector2(5056, -1865)
 scale = Vector2(4.929097, 1.6426098)
 amount = 500
 texture = ExtResource("36_rh2pu")
+lifetime = 5.0
 visibility_rect = Rect2(-7500, -500, 15000, 1000)
 process_material = SubResource("ParticleProcessMaterial_rh2pu")
 

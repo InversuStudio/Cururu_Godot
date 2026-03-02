@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://bf14ps13nhknd"]
+[gd_scene format=3 uid="uid://bf14ps13nhknd"]
 
 [ext_resource type="Script" uid="uid://d0c8ovxjudjeb" path="res://Scripts/Componentes/vfx_folha_run.gd" id="1_d1430"]
 [ext_resource type="Texture2D" uid="uid://b84nc2d8gc062" path="res://Sprites/VFX/Partículas/FOLHA_VFX.png" id="2_051e5"]
@@ -7,18 +7,18 @@
 offsets = PackedFloat32Array(0, 0.9931507)
 colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
 
-[node name="VFX_FOLHA_RUN" type="Node2D"]
+[node name="VFX_FOLHA_RUN" type="Node2D" unique_id=217714726]
 script = ExtResource("1_d1430")
 
-[node name="GramaCorre" type="CPUParticles2D" parent="."]
+[node name="GramaCorre" type="CPUParticles2D" parent="." unique_id=1065989136]
 modulate = Color(1.4687854, 1.4687854, 1.4687854, 1)
 show_behind_parent = true
 emitting = false
-amount = 50
 texture = ExtResource("2_051e5")
 lifetime = 0.6
 one_shot = true
-explosiveness = 0.9
+speed_scale = 0.8
+explosiveness = 0.7
 randomness = 1.0
 lifetime_randomness = 0.4
 emission_shape = 1

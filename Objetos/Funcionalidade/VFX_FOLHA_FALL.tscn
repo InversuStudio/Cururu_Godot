@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://prhnhdy7cpg5"]
+[gd_scene format=3 uid="uid://prhnhdy7cpg5"]
 
 [ext_resource type="Texture2D" uid="uid://b84nc2d8gc062" path="res://Sprites/VFX/Partículas/FOLHA_VFX.png" id="1_5s672"]
 [ext_resource type="Script" uid="uid://bkmhtmj4opin" path="res://Scripts/Componentes/vfx_folha_fall.gd" id="1_26h3a"]
@@ -7,18 +7,18 @@
 offsets = PackedFloat32Array(0, 0.9931507)
 colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
 
-[node name="VFX_FOLHA_FALL" type="Node2D"]
+[node name="VFX_FOLHA_FALL" type="Node2D" unique_id=394696967]
 script = ExtResource("1_26h3a")
 
-[node name="GramaQueda" type="CPUParticles2D" parent="."]
+[node name="GramaQueda" type="CPUParticles2D" parent="." unique_id=1283307348]
 modulate = Color(1.4687854, 1.4687854, 1.4687854, 1)
 show_behind_parent = true
 emitting = false
-amount = 50
+amount = 20
 texture = ExtResource("1_5s672")
-lifetime = 0.6
+lifetime = 0.7
 one_shot = true
-explosiveness = 0.9
+explosiveness = 0.7
 randomness = 1.0
 lifetime_randomness = 0.4
 emission_shape = 1

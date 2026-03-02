@@ -65,4 +65,4 @@ z_index = 1
 position = Vector2(121.00001, -129)
 scale = Vector2(0.37, 0.37)
 sprite_frames = SubResource("SpriteFrames_dsijf")
-animation = &"2"
+animation = &"1"
