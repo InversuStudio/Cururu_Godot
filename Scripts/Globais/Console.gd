@@ -1,25 +1,22 @@
 extends Node
 
-const console_file:PackedScene = preload('res://Objetos/Funcionalidade/DebugConsole.tscn')
-var ativo:bool = false
-
 func _ready() -> void:
-	get_tree().scene_changed.connect(AddConsole)
-	AddConsole()
+	%Console.hide()
+	for fase:String in Mundos.NomeFase:
+		%Fase.add_item(fase)
+	%Fase.select(Mundos.fase_atual)
+	%Fase.connect("item_selected", func(id:int):
+		Mundos.CarregaFase(id))
 
-func AddConsole():
-	var canvas: CanvasLayer = CanvasLayer.new()
-	get_tree().current_scene.add_child(canvas)
-	var c:DebugConsole = console_file.instantiate()
-	canvas.add_child(c)
-	c.AddTexto("Cena carregada: " + get_tree().current_scene.name)
+func _input(_event: InputEvent) -> void:
+	if Input.is_action_just_pressed("console"):
+		if %Console.visible:
+			%Console.hide()
+		else:
+			%Console.show()
 
-func _Print(text:Variant) -> void:
-	var console:DebugConsole = get_tree().get_first_node_in_group("Console")
-	if console:
-		console.AddTexto(str(text))
+func _Print(txt:Variant) -> void:
+	%TextoConsole.text += str(txt) + "[br]"
 
 func _State(txt:String) -> void:
-	var console:DebugConsole = get_tree().get_first_node_in_group("Console")
-	if console:
-		console.StatePlayer(txt)
+	%StatePlayer.text += "State: " + txt + "[br]"

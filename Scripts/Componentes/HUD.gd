@@ -14,6 +14,8 @@ var configurado:bool = false
 var full_mapa:bool = false
 var tempo_mapa:float = 0.0
 
+var tipo_input:int = 0
+
 # INPUT PAUSE
 func _input(_event: InputEvent) -> void:
 	if Input.is_action_just_pressed("start"):
@@ -33,6 +35,21 @@ func _input(_event: InputEvent) -> void:
 		if hud_ativo - 1 >= 0:
 			hud_ativo -= 1
 			MudaAba()
+	
+	if tipo_input != GameData.tipo_input[0]:
+		tipo_input = GameData.tipo_input[0]
+		#var img:Array = GameData.GetInputType()
+		if tipo_input < 1:
+			var path:StringName = "res://Sprites/UI/Botoes/TesteBaseInputTeclado.png"
+			%Select.texture = load(path)
+			%Select.get_child(0).text = "X"
+			%Back.texture = load(path)
+			%Back.get_child(0).text = "C"
+		else:
+			%Select.texture = load("res://Sprites/UI/Botoes/TesteInputXboxA.png")
+			%Select.get_child(0).text = ""
+			%Back.texture = load("res://Sprites/UI/Botoes/TesteInputXboxB.png")
+			%Back.get_child(0).text = ""
 	
 	#if !Inventario.tem_mapa: return
 	#if Input.is_action_just_pressed("select"):

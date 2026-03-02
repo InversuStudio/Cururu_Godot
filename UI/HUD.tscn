@@ -1,4 +1,4 @@
-[gd_scene load_steps=48 format=3 uid="uid://3yqo0l27km55"]
+[gd_scene format=3 uid="uid://3yqo0l27km55"]
 
 [ext_resource type="Script" uid="uid://dg1wm8v16vrwl" path="res://Scripts/Componentes/HUD.gd" id="1_yixhe"]
 [ext_resource type="Texture2D" uid="uid://dbohcm7v5pvg4" path="res://Sprites/UI/HUD/Barra_Vida/UIHUD-MAGIA.png" id="2_f2wx0"]
@@ -9,12 +9,13 @@
 [ext_resource type="Texture2D" uid="uid://8tc3pgq3fdi8" path="res://Sprites/UI/HUD/Barra_Vida/UIHUD-MAGIABK.png" id="5_2ptjp"]
 [ext_resource type="PackedScene" uid="uid://kuarj30f8veq" path="res://UI/Inventario.tscn" id="5_f2wx0"]
 [ext_resource type="PackedScene" uid="uid://ddf8xx25186i" path="res://UI/Amuletos.tscn" id="6_gppie"]
-[ext_resource type="Shader" path="res://Scripts/Shaders/blur_shader.gdshader" id="8_am7sw"]
+[ext_resource type="Shader" uid="uid://c1omtsxv04udh" path="res://Scripts/Shaders/blur_shader.gdshader" id="8_am7sw"]
 [ext_resource type="Texture2D" uid="uid://c1kcyxqfye0pf" path="res://Sprites/UI/Pause/Pecas/HUD_FUNDO.png" id="9_ixkb2"]
 [ext_resource type="Texture2D" uid="uid://bc2yoaw6bn0kt" path="res://Sprites/UI/Pause/Pecas/MENU_ABA2.png" id="13_281ki"]
 [ext_resource type="Texture2D" uid="uid://bu6udw31dg5md" path="res://Sprites/UI/Pause/Pecas/MENU_ABA1.png" id="13_mms7u"]
 [ext_resource type="Texture2D" uid="uid://duesv7kjq2emm" path="res://Sprites/UI/Pause/Pecas/MENU_ABA3.png" id="14_w37wn"]
 [ext_resource type="Texture2D" uid="uid://ydkqrtapi4fn" path="res://Sprites/UI/Pause/Pecas/MAP.png" id="15_w37wn"]
+[ext_resource type="Texture2D" uid="uid://c1uwpi576deuf" path="res://Sprites/UI/Botoes/TesteBaseInputTeclado.png" id="16_kg6a8"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4n7mi"]
 
@@ -159,7 +160,7 @@ _data = {
 &"RESET": SubResource("Animation_uk570")
 }
 
-[node name="HUD" type="CanvasLayer" node_paths=PackedStringArray("inventario_itens", "inventario_amuletos", "item_rapido")]
+[node name="HUD" type="CanvasLayer" unique_id=1021729722 node_paths=PackedStringArray("inventario_itens", "inventario_amuletos", "item_rapido")]
 process_mode = 3
 layer = 1000
 script = ExtResource("1_yixhe")
@@ -167,7 +168,7 @@ inventario_itens = NodePath("Corpo/Pause/BG/ContainerMenus/Inventario")
 inventario_amuletos = NodePath("Corpo/Pause/BG/ContainerMenus/Amuletos")
 item_rapido = NodePath("Corpo/ItemRapido")
 
-[node name="Corpo" type="Control" parent="."]
+[node name="Corpo" type="Control" parent="." unique_id=922472296]
 unique_name_in_owner = true
 layout_mode = 3
 anchors_preset = 15
@@ -177,7 +178,7 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 
-[node name="ItemRapido" type="Control" parent="Corpo" node_paths=PackedStringArray("cena_inventario")]
+[node name="ItemRapido" type="Control" parent="Corpo" unique_id=745480697 node_paths=PackedStringArray("cena_inventario")]
 process_mode = 1
 layout_mode = 1
 anchors_preset = 0
@@ -188,7 +189,7 @@ offset_bottom = 237.0
 script = ExtResource("2_md4fy")
 cena_inventario = NodePath("../Pause/BG/ContainerMenus/Inventario")
 
-[node name="Seletor" type="TextureRect" parent="Corpo/ItemRapido"]
+[node name="Seletor" type="TextureRect" parent="Corpo/ItemRapido" unique_id=106487821]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -205,7 +206,7 @@ texture = ExtResource("4_rbci0")
 expand_mode = 1
 stretch_mode = 5
 
-[node name="NumRap" type="Label" parent="Corpo/ItemRapido/Seletor"]
+[node name="NumRap" type="Label" parent="Corpo/ItemRapido/Seletor" unique_id=185213856]
 unique_name_in_owner = true
 layout_mode = 1
 anchors_preset = -1
@@ -221,7 +222,7 @@ grow_horizontal = 0
 grow_vertical = 2
 horizontal_alignment = 1
 
-[node name="IconItem" type="TextureRect" parent="Corpo/ItemRapido/Seletor"]
+[node name="IconItem" type="TextureRect" parent="Corpo/ItemRapido/Seletor" unique_id=1111159519]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(70, 60)
 layout_mode = 1
@@ -238,7 +239,7 @@ grow_horizontal = 2
 grow_vertical = 2
 expand_mode = 1
 
-[node name="ItemBar" type="Control" parent="Corpo/ItemRapido/Seletor"]
+[node name="ItemBar" type="Control" parent="Corpo/ItemRapido/Seletor" unique_id=36420870]
 clip_contents = true
 custom_minimum_size = Vector2(32, 32)
 layout_mode = 1
@@ -248,7 +249,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="HBoxContainer" type="HBoxContainer" parent="Corpo/ItemRapido/Seletor/ItemBar"]
+[node name="HBoxContainer" type="HBoxContainer" parent="Corpo/ItemRapido/Seletor/ItemBar" unique_id=1863275145]
 visible = false
 layout_mode = 1
 anchors_preset = 8
@@ -266,17 +267,17 @@ pivot_offset = Vector2(0, 41.5)
 theme_override_constants/separation = 20
 alignment = 1
 
-[node name="ItemSlot1" parent="Corpo/ItemRapido/Seletor/ItemBar/HBoxContainer" instance=ExtResource("3_7i7fj")]
+[node name="ItemSlot1" parent="Corpo/ItemRapido/Seletor/ItemBar/HBoxContainer" unique_id=1776023585 instance=ExtResource("3_7i7fj")]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 
-[node name="ItemSlot2" parent="Corpo/ItemRapido/Seletor/ItemBar/HBoxContainer" instance=ExtResource("3_7i7fj")]
+[node name="ItemSlot2" parent="Corpo/ItemRapido/Seletor/ItemBar/HBoxContainer" unique_id=1739646018 instance=ExtResource("3_7i7fj")]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 
-[node name="Main" type="TextureRect" parent="Corpo"]
+[node name="Main" type="TextureRect" parent="Corpo" unique_id=40236132]
 layout_mode = 1
 offset_left = 20.0
 offset_top = 24.143318
@@ -286,7 +287,7 @@ scale = Vector2(0.5119974, 0.5119974)
 texture = ExtResource("2_f2wx0")
 expand_mode = 1
 
-[node name="MaskMagia" type="TextureRect" parent="Corpo/Main"]
+[node name="MaskMagia" type="TextureRect" parent="Corpo/Main" unique_id=1708054420]
 clip_children = 2
 z_index = -1
 layout_mode = 0
@@ -297,7 +298,7 @@ offset_bottom = 236.0
 texture = ExtResource("5_2ptjp")
 expand_mode = 1
 
-[node name="BarraMagia" type="ProgressBar" parent="Corpo/Main/MaskMagia"]
+[node name="BarraMagia" type="ProgressBar" parent="Corpo/Main/MaskMagia" unique_id=299614223]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(150, 150)
 layout_mode = 1
@@ -313,7 +314,7 @@ value = 4.0
 fill_mode = 3
 show_percentage = false
 
-[node name="BarraHeart" type="HBoxContainer" parent="Corpo/Main"]
+[node name="BarraHeart" type="HBoxContainer" parent="Corpo/Main" unique_id=1811892292]
 unique_name_in_owner = true
 layout_mode = 1
 offset_left = 326.17352
@@ -322,7 +323,7 @@ offset_right = 835.9984
 offset_bottom = 203.96196
 scale = Vector2(0.85, 0.85)
 
-[node name="Moedas" type="TextureRect" parent="Corpo"]
+[node name="Moedas" type="TextureRect" parent="Corpo" unique_id=899026181]
 layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
@@ -335,7 +336,7 @@ grow_horizontal = 0
 texture = ExtResource("4_uk570")
 expand_mode = 1
 
-[node name="CounterMoeda" type="Label" parent="Corpo/Moedas"]
+[node name="CounterMoeda" type="Label" parent="Corpo/Moedas" unique_id=624115473]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(160, 0)
 layout_mode = 1
@@ -356,7 +357,7 @@ label_settings = SubResource("LabelSettings_yixhe")
 horizontal_alignment = 2
 vertical_alignment = 1
 
-[node name="AvisoSave" type="RichTextLabel" parent="Corpo"]
+[node name="AvisoSave" type="RichTextLabel" parent="Corpo" unique_id=1861828325]
 unique_name_in_owner = true
 self_modulate = Color(1, 1, 1, 0)
 layout_mode = 1
@@ -376,7 +377,7 @@ theme_override_font_sizes/normal_font_size = 40
 text = "Salvando..."
 horizontal_alignment = 2
 
-[node name="Pause" type="Panel" parent="Corpo"]
+[node name="Pause" type="Panel" parent="Corpo" unique_id=2011513613]
 unique_name_in_owner = true
 material = SubResource("ShaderMaterial_ixkb2")
 layout_mode = 1
@@ -386,7 +387,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="BG" type="Panel" parent="Corpo/Pause"]
+[node name="BG" type="Panel" parent="Corpo/Pause" unique_id=774922515]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -401,7 +402,7 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_am7sw")
 
-[node name="ContainerMenus" type="MarginContainer" parent="Corpo/Pause/BG"]
+[node name="ContainerMenus" type="MarginContainer" parent="Corpo/Pause/BG" unique_id=474478173]
 unique_name_in_owner = true
 layout_mode = 1
 anchors_preset = 15
@@ -414,28 +415,28 @@ theme_override_constants/margin_top = 50
 theme_override_constants/margin_right = 50
 theme_override_constants/margin_bottom = 50
 
-[node name="Mapa" type="TextureRect" parent="Corpo/Pause/BG/ContainerMenus"]
+[node name="Mapa" type="TextureRect" parent="Corpo/Pause/BG/ContainerMenus" unique_id=1126428983]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 texture = ExtResource("15_w37wn")
 
-[node name="Inventario" parent="Corpo/Pause/BG/ContainerMenus" instance=ExtResource("5_f2wx0")]
+[node name="Inventario" parent="Corpo/Pause/BG/ContainerMenus" unique_id=1827011368 instance=ExtResource("5_f2wx0")]
 layout_mode = 2
 
-[node name="Amuletos" parent="Corpo/Pause/BG/ContainerMenus" instance=ExtResource("6_gppie")]
+[node name="Amuletos" parent="Corpo/Pause/BG/ContainerMenus" unique_id=270646955 instance=ExtResource("6_gppie")]
 layout_mode = 2
 
-[node name="OpcoesAudio" type="VBoxContainer" parent="Corpo/Pause/BG/ContainerMenus"]
+[node name="OpcoesAudio" type="VBoxContainer" parent="Corpo/Pause/BG/ContainerMenus" unique_id=1523181267]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_stretch_ratio = 0.0
 
-[node name="SomMaster" type="Control" parent="Corpo/Pause/BG/ContainerMenus/OpcoesAudio"]
+[node name="SomMaster" type="Control" parent="Corpo/Pause/BG/ContainerMenus/OpcoesAudio" unique_id=963884011]
 layout_mode = 2
 size_flags_vertical = 6
 
-[node name="TextureRect" type="TextureRect" parent="Corpo/Pause/BG/ContainerMenus/OpcoesAudio/SomMaster"]
+[node name="TextureRect" type="TextureRect" parent="Corpo/Pause/BG/ContainerMenus/OpcoesAudio/SomMaster" unique_id=651821404]
 layout_mode = 0
 offset_left = 180.0
 offset_top = 142.0
@@ -444,7 +445,7 @@ offset_bottom = 218.0
 texture = ExtResource("14_w37wn")
 stretch_mode = 4
 
-[node name="Titulo" type="RichTextLabel" parent="Corpo/Pause/BG/ContainerMenus/OpcoesAudio/SomMaster/TextureRect"]
+[node name="Titulo" type="RichTextLabel" parent="Corpo/Pause/BG/ContainerMenus/OpcoesAudio/SomMaster/TextureRect" unique_id=307389364]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -463,7 +464,7 @@ text = "Master"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="SliderMaster" type="HSlider" parent="Corpo/Pause/BG/ContainerMenus/OpcoesAudio/SomMaster"]
+[node name="SliderMaster" type="HSlider" parent="Corpo/Pause/BG/ContainerMenus/OpcoesAudio/SomMaster" unique_id=925337126]
 unique_name_in_owner = true
 layout_mode = 1
 anchors_preset = -1
@@ -481,11 +482,11 @@ max_value = 1.0
 step = 0.01
 value = 1.0
 
-[node name="SomBGM" type="Control" parent="Corpo/Pause/BG/ContainerMenus/OpcoesAudio"]
+[node name="SomBGM" type="Control" parent="Corpo/Pause/BG/ContainerMenus/OpcoesAudio" unique_id=2085326558]
 layout_mode = 2
 size_flags_vertical = 6
 
-[node name="TextureRect" type="TextureRect" parent="Corpo/Pause/BG/ContainerMenus/OpcoesAudio/SomBGM"]
+[node name="TextureRect" type="TextureRect" parent="Corpo/Pause/BG/ContainerMenus/OpcoesAudio/SomBGM" unique_id=459460810]
 layout_mode = 0
 offset_left = 180.0
 offset_top = -10.0
@@ -494,7 +495,7 @@ offset_bottom = 66.0
 texture = ExtResource("14_w37wn")
 stretch_mode = 4
 
-[node name="Titulo" type="RichTextLabel" parent="Corpo/Pause/BG/ContainerMenus/OpcoesAudio/SomBGM/TextureRect"]
+[node name="Titulo" type="RichTextLabel" parent="Corpo/Pause/BG/ContainerMenus/OpcoesAudio/SomBGM/TextureRect" unique_id=2051611065]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -514,7 +515,7 @@ text = "Música
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="SliderBGM" type="HSlider" parent="Corpo/Pause/BG/ContainerMenus/OpcoesAudio/SomBGM"]
+[node name="SliderBGM" type="HSlider" parent="Corpo/Pause/BG/ContainerMenus/OpcoesAudio/SomBGM" unique_id=1487710125]
 unique_name_in_owner = true
 layout_mode = 0
 offset_left = 455.0
@@ -529,11 +530,11 @@ max_value = 1.0
 step = 0.01
 value = 1.0
 
-[node name="SomSFX" type="Control" parent="Corpo/Pause/BG/ContainerMenus/OpcoesAudio"]
+[node name="SomSFX" type="Control" parent="Corpo/Pause/BG/ContainerMenus/OpcoesAudio" unique_id=1701156848]
 layout_mode = 2
 size_flags_vertical = 6
 
-[node name="TextureRect" type="TextureRect" parent="Corpo/Pause/BG/ContainerMenus/OpcoesAudio/SomSFX"]
+[node name="TextureRect" type="TextureRect" parent="Corpo/Pause/BG/ContainerMenus/OpcoesAudio/SomSFX" unique_id=384834352]
 layout_mode = 0
 offset_left = 180.0
 offset_top = -160.0
@@ -542,7 +543,7 @@ offset_bottom = -84.0
 texture = ExtResource("14_w37wn")
 stretch_mode = 4
 
-[node name="Titulo" type="RichTextLabel" parent="Corpo/Pause/BG/ContainerMenus/OpcoesAudio/SomSFX/TextureRect"]
+[node name="Titulo" type="RichTextLabel" parent="Corpo/Pause/BG/ContainerMenus/OpcoesAudio/SomSFX/TextureRect" unique_id=186071435]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -561,7 +562,7 @@ text = "SFX"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="SliderSFX" type="HSlider" parent="Corpo/Pause/BG/ContainerMenus/OpcoesAudio/SomSFX"]
+[node name="SliderSFX" type="HSlider" parent="Corpo/Pause/BG/ContainerMenus/OpcoesAudio/SomSFX" unique_id=974582845]
 unique_name_in_owner = true
 layout_mode = 0
 offset_left = 455.0
@@ -576,20 +577,20 @@ max_value = 1.0
 step = 0.01
 value = 1.0
 
-[node name="Opcoes" type="VBoxContainer" parent="Corpo/Pause/BG/ContainerMenus"]
+[node name="Opcoes" type="VBoxContainer" parent="Corpo/Pause/BG/ContainerMenus" unique_id=14382140]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Corpo/Pause/BG/ContainerMenus/Opcoes"]
+[node name="VBoxContainer" type="VBoxContainer" parent="Corpo/Pause/BG/ContainerMenus/Opcoes" unique_id=759614710]
 layout_mode = 2
 size_flags_vertical = 3
 size_flags_stretch_ratio = 4.0
 theme_override_constants/separation = 50
 alignment = 1
 
-[node name="BtnContinuar" type="Button" parent="Corpo/Pause/BG/ContainerMenus/Opcoes/VBoxContainer"]
+[node name="BtnContinuar" type="Button" parent="Corpo/Pause/BG/ContainerMenus/Opcoes/VBoxContainer" unique_id=538837351]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(500, 100)
 layout_mode = 2
@@ -600,7 +601,7 @@ theme_override_styles/hover = SubResource("StyleBoxTexture_kg6a8")
 theme_override_styles/focus = SubResource("StyleBoxTexture_8ip7y")
 text = "Continuar"
 
-[node name="BtnSair" type="Button" parent="Corpo/Pause/BG/ContainerMenus/Opcoes/VBoxContainer"]
+[node name="BtnSair" type="Button" parent="Corpo/Pause/BG/ContainerMenus/Opcoes/VBoxContainer" unique_id=72003643]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(500, 100)
 layout_mode = 2
@@ -611,7 +612,7 @@ theme_override_styles/hover = SubResource("StyleBoxTexture_rsrlt")
 theme_override_styles/focus = SubResource("StyleBoxTexture_lbtxw")
 text = "Menu Principal"
 
-[node name="Abas" type="PanelContainer" parent="Corpo/Pause/BG"]
+[node name="Abas" type="PanelContainer" parent="Corpo/Pause/BG" unique_id=662881028]
 clip_children = 1
 layout_mode = 1
 anchors_preset = 5
@@ -624,13 +625,13 @@ offset_bottom = 46.0
 grow_horizontal = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_281ki")
 
-[node name="ContainerAbas" type="HBoxContainer" parent="Corpo/Pause/BG/Abas"]
+[node name="ContainerAbas" type="HBoxContainer" parent="Corpo/Pause/BG/Abas" unique_id=21617101]
 unique_name_in_owner = true
 layout_mode = 2
 theme_override_constants/separation = 20
 alignment = 1
 
-[node name="Mapa" type="Button" parent="Corpo/Pause/BG/Abas/ContainerAbas"]
+[node name="Mapa" type="Button" parent="Corpo/Pause/BG/Abas/ContainerAbas" unique_id=1213326777]
 layout_mode = 2
 size_flags_horizontal = 3
 focus_mode = 0
@@ -642,7 +643,7 @@ toggle_mode = true
 button_group = SubResource("ButtonGroup_f2wx0")
 text = "Mapa"
 
-[node name="Itens" type="Button" parent="Corpo/Pause/BG/Abas/ContainerAbas"]
+[node name="Itens" type="Button" parent="Corpo/Pause/BG/Abas/ContainerAbas" unique_id=729298683]
 layout_mode = 2
 size_flags_horizontal = 3
 focus_mode = 0
@@ -654,7 +655,7 @@ toggle_mode = true
 button_group = SubResource("ButtonGroup_f2wx0")
 text = "Inventário"
 
-[node name="Amuletos" type="Button" parent="Corpo/Pause/BG/Abas/ContainerAbas"]
+[node name="Amuletos" type="Button" parent="Corpo/Pause/BG/Abas/ContainerAbas" unique_id=1969547401]
 layout_mode = 2
 size_flags_horizontal = 3
 focus_mode = 0
@@ -666,7 +667,7 @@ toggle_mode = true
 button_group = SubResource("ButtonGroup_f2wx0")
 text = "Amuletos"
 
-[node name="Audio" type="Button" parent="Corpo/Pause/BG/Abas/ContainerAbas"]
+[node name="Audio" type="Button" parent="Corpo/Pause/BG/Abas/ContainerAbas" unique_id=832345227]
 layout_mode = 2
 size_flags_horizontal = 3
 focus_mode = 0
@@ -679,7 +680,7 @@ button_group = SubResource("ButtonGroup_f2wx0")
 text = "Áudio
 "
 
-[node name="Opcoes" type="Button" parent="Corpo/Pause/BG/Abas/ContainerAbas"]
+[node name="Opcoes" type="Button" parent="Corpo/Pause/BG/Abas/ContainerAbas" unique_id=1968567944]
 layout_mode = 2
 size_flags_horizontal = 3
 focus_mode = 0
@@ -691,7 +692,7 @@ toggle_mode = true
 button_group = SubResource("ButtonGroup_f2wx0")
 text = "Opções"
 
-[node name="Comandos" type="PanelContainer" parent="Corpo/Pause/BG"]
+[node name="Comandos" type="PanelContainer" parent="Corpo/Pause/BG" unique_id=1319601824]
 layout_mode = 1
 anchors_preset = 3
 anchor_left = 1.0
@@ -706,36 +707,89 @@ grow_horizontal = 0
 grow_vertical = 0
 theme_override_styles/panel = SubResource("StyleBoxTexture_gp2h7")
 
-[node name="HBoxContainer" type="HBoxContainer" parent="Corpo/Pause/BG/Comandos"]
+[node name="HBoxContainer" type="HBoxContainer" parent="Corpo/Pause/BG/Comandos" unique_id=1649677553]
 layout_mode = 2
+theme_override_constants/separation = 24
 alignment = 1
 
-[node name="Select" type="HBoxContainer" parent="Corpo/Pause/BG/Comandos/HBoxContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="Corpo/Pause/BG/Comandos/HBoxContainer" unique_id=2003510622]
 layout_mode = 2
 size_flags_horizontal = 3
-size_flags_stretch_ratio = 1.15
 
-[node name="RichTextLabel" type="RichTextLabel" parent="Corpo/Pause/BG/Comandos/HBoxContainer/Select"]
+[node name="Select" type="TextureRect" parent="Corpo/Pause/BG/Comandos/HBoxContainer/HBoxContainer" unique_id=358196428]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(70, 70)
 layout_mode = 2
-size_flags_horizontal = 3
-theme_override_font_sizes/normal_font_size = 24
-text = "A - Selecionar"
+size_flags_vertical = 4
+texture = ExtResource("16_kg6a8")
+expand_mode = 1
+
+[node name="Tecla" type="Label" parent="Corpo/Pause/BG/Comandos/HBoxContainer/HBoxContainer/Select" unique_id=212551601]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -27.5
+offset_right = 20.0
+offset_bottom = 27.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 52
+text = "X"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Voltar" type="HBoxContainer" parent="Corpo/Pause/BG/Comandos/HBoxContainer"]
-layout_mode = 2
-size_flags_horizontal = 3
-
-[node name="RichTextLabel" type="RichTextLabel" parent="Corpo/Pause/BG/Comandos/HBoxContainer/Voltar"]
+[node name="select_txt" type="RichTextLabel" parent="Corpo/Pause/BG/Comandos/HBoxContainer/HBoxContainer" unique_id=765660311]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_font_sizes/normal_font_size = 24
-text = "B - Voltar"
+text = "Selecionar"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="MapaSmall" type="PanelContainer" parent="Corpo"]
+[node name="HBoxContainer2" type="HBoxContainer" parent="Corpo/Pause/BG/Comandos/HBoxContainer" unique_id=2064513966]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Back" type="TextureRect" parent="Corpo/Pause/BG/Comandos/HBoxContainer/HBoxContainer2" unique_id=1184226912]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(70, 70)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("16_kg6a8")
+expand_mode = 1
+
+[node name="Tecla" type="Label" parent="Corpo/Pause/BG/Comandos/HBoxContainer/HBoxContainer2/Back" unique_id=1842745229]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -36.0
+offset_right = 20.0
+offset_bottom = 36.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 52
+text = "C"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="back_txt" type="RichTextLabel" parent="Corpo/Pause/BG/Comandos/HBoxContainer/HBoxContainer2" unique_id=733934260]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/normal_font_size = 24
+text = "Voltar"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MapaSmall" type="PanelContainer" parent="Corpo" unique_id=318422203]
 unique_name_in_owner = true
 visible = false
 layout_mode = 1
@@ -745,14 +799,12 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="MapaImg" type="TextureRect" parent="Corpo/MapaSmall"]
+[node name="MapaImg" type="TextureRect" parent="Corpo/MapaSmall" unique_id=1553218902]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 texture = ExtResource("15_w37wn")
 
-[node name="Anim" type="AnimationPlayer" parent="Corpo"]
+[node name="Anim" type="AnimationPlayer" parent="Corpo" unique_id=1033174811]
 unique_name_in_owner = true
-libraries = {
-&"": SubResource("AnimationLibrary_f2wx0")
-}
+libraries/ = SubResource("AnimationLibrary_f2wx0")

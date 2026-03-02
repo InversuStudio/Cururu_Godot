@@ -95,10 +95,17 @@ size = Vector2(63, 541)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_q40bt"]
 size = Vector2(80, 756)
 
+[sub_resource type="Curve" id="Curve_8tm3t"]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.058394164, 1), 0.0, 0.0, 0, 0, Vector2(0.8686131, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 4
+
+[sub_resource type="CurveTexture" id="CurveTexture_auxyl"]
+curve = SubResource("Curve_8tm3t")
+
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_auxyl"]
 particle_flag_disable_z = true
 emission_shape = 3
-emission_box_extents = Vector3(2000, 500, 1)
+emission_box_extents = Vector3(6000, 1000, 1)
 initial_velocity_min = 1.0
 initial_velocity_max = 10.0
 radial_velocity_min = -10.000022
@@ -106,6 +113,7 @@ radial_velocity_max = 49.999977
 gravity = Vector3(0, -15, 0)
 scale_min = 0.25
 scale_max = 0.5
+alpha_curve = SubResource("CurveTexture_auxyl")
 
 [node name="MA_1-1" type="Node2D" unique_id=61085530]
 position = Vector2(1, 0)
@@ -664,13 +672,13 @@ position = Vector2(-8781.001, -138.00002)
 scale = Vector2(0.919994, 0.919994)
 
 [node name="Particula" type="GPUParticles2D" parent="background/0" unique_id=2060733035]
-position = Vector2(-2805, -24)
+position = Vector2(-3313, 138)
 rotation = 3.1415925
-scale = Vector2(3.479069, -2.6453063)
-amount = 100
+amount = 150
 amount_ratio = 0.7
 texture = ExtResource("33_8tm3t")
-visibility_rect = Rect2(-2000, -500, 4000, 1000)
+lifetime = 5.0
+visibility_rect = Rect2(-6000, -1000, 12000, 2000)
 process_material = SubResource("ParticleProcessMaterial_auxyl")
 
 [node name="TileMapLayer" type="TileMapLayer" parent="background/0" unique_id=1362326394]

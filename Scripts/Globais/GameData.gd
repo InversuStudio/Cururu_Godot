@@ -5,6 +5,17 @@ extends Node
 @onready var leu_data: bool = false
 @onready var game_start:bool = false
 
+# Armazena se está usando teclado ou controller
+# 0 = Mouse/Teclado | 1 = Controller
+var tipo_input:Array = [0, ""]
+
+func _input(event: InputEvent) -> void:
+	if event.is_pressed():
+		if event is InputEventMouseButton or event is InputEventKey:
+			tipo_input[0] = 0
+		elif event is InputEventJoypadButton or event is InputEventJoypadMotion:
+			tipo_input[0] = 1
+
 # Armazena a fase a ser carregada
 var fase: Mundos.NomeFase = Mundos.NomeFase.FaseTeste1
 # Armazena a posição inicial do player

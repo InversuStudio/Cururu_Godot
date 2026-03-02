@@ -12,6 +12,7 @@ extends Node2D
 var aberto:bool = false
 
 func _ready() -> void:
+	# Se já foi aberto antes, se deleta
 	for i:String in Mundos.lista_baus:
 		if i == id:
 			queue_free()
@@ -19,8 +20,8 @@ func _ready() -> void:
 func _on_hurt_box_hurt(_h:Array[HitBox]) -> void:
 	if not aberto and drop_item.size() > 0:
 		aberto = true
-		Mundos.lista_baus.append(id)
 		$Sprite.play("Abre")
+		Mundos.lista_baus.append(id)
 		if multi_drop:
 			for i:PackedScene in drop_item:
 				var item:Node2D = i.instantiate()
@@ -31,4 +32,7 @@ func _on_hurt_box_hurt(_h:Array[HitBox]) -> void:
 			var item:Node2D = drop_item[rand].instantiate()
 			item.global_position = $PosItem.global_position
 			get_parent().add_child(item)
+		# Remove colisão após um curto tempo
+		await get_tree().create_timer(1.0).timeout
+		$HurtBox.call_deferred("queue_free")
 		
