@@ -36,20 +36,15 @@ func _input(_event: InputEvent) -> void:
 			hud_ativo -= 1
 			MudaAba()
 	
-	if tipo_input != GameData.tipo_input[0]:
-		tipo_input = GameData.tipo_input[0]
+	if tipo_input != GameData.tipo_input:
+		tipo_input = GameData.tipo_input
 		#var img:Array = GameData.GetInputType()
-		if tipo_input < 1:
-			var path:StringName = "res://Sprites/UI/Botoes/TesteBaseInputTeclado.png"
-			%Select.texture = load(path)
-			%Select.get_child(0).text = "X"
-			%Back.texture = load(path)
-			%Back.get_child(0).text = "C"
-		else:
-			%Select.texture = load("res://Sprites/UI/Botoes/TesteInputXboxA.png")
-			%Select.get_child(0).text = ""
-			%Back.texture = load("res://Sprites/UI/Botoes/TesteInputXboxB.png")
-			%Back.get_child(0).text = ""
+		var btn_accept:Array[StringName] = GameData.GetUiButtonImage("ui_accept")
+		%Select.texture = load(btn_accept[0])
+		%Select.get_child(0).text = btn_accept[1]
+		var btn_cancel:Array[StringName] = GameData.GetUiButtonImage("ui_cancel")
+		%Back.texture = load(btn_cancel[0])
+		%Back.get_child(0).text = btn_cancel[1]
 	
 	#if !Inventario.tem_mapa: return
 	#if Input.is_action_just_pressed("select"):

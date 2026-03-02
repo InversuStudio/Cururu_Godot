@@ -8,6 +8,8 @@ extends InteractObject
 @export_multiline var descricao_tela:String = ""
 ## Imagem que irá aparecer na tela de item coletado
 @export var imagem_tela:Texture2D = null
+## Nome do Input a ser mostrado.[br] Deixe vazio para não ter Input.
+@export var action:StringName = ""
 
 @onready var parent:Node2D = get_parent()
 @onready var texto: RichTextLabel = $"../Texto"
@@ -22,7 +24,7 @@ func Interact(_player:CharacterBody2D) -> void:
 		texto.hide()
 		GameData.upgrade_num = upgrade + 1
 		%Poder.hide()
-		AvisoItem.Mostra(nome_tela, descricao_tela, imagem_tela)
+		AvisoItem.Mostra(nome_tela, descricao_tela, imagem_tela, action)
 		#await HUD.tela_item
 		GameData.Save()
 
