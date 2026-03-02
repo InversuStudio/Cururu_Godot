@@ -77,11 +77,8 @@
 [ext_resource type="Texture2D" uid="uid://b3lsqr7m6ijwg" path="res://Sprites/Cururu/Pulo/05.png" id="41_6q3px"]
 [ext_resource type="Texture2D" uid="uid://cnp81cndugpg7" path="res://Sprites/Cururu/Pulo/14.png" id="42_d2bxm"]
 [ext_resource type="Texture2D" uid="uid://cvsapry4c5t0j" path="res://Sprites/Cururu/Pulo/15.png" id="43_kbhwl"]
-[ext_resource type="Texture2D" uid="uid://c6dp7nydf5jak" path="res://Sprites/Cururu/Special/01.png" id="45_1dbdn"]
 [ext_resource type="Script" uid="uid://hsdutxxttrp3" path="res://Scripts/Componentes/Vida.gd" id="45_vkjtj"]
-[ext_resource type="Texture2D" uid="uid://plhpgh525orv" path="res://Sprites/Cururu/Special/02.png" id="46_0w8y8"]
 [ext_resource type="PackedScene" uid="uid://va5pjd6vuuo2" path="res://Objetos/Funcionalidade/CompHurtBox.tscn" id="46_wjcvp"]
-[ext_resource type="Texture2D" uid="uid://d0ce5duo1wvp4" path="res://Sprites/Cururu/Special/03.png" id="47_d7mdf"]
 [ext_resource type="PackedScene" uid="uid://pc4mgv2nv8af" path="res://Objetos/Funcionalidade/CompHitBox.tscn" id="47_grb16"]
 [ext_resource type="Texture2D" uid="uid://cw0xqxraq6i" path="res://Sprites/Cururu/Special/04.png" id="48_w1841"]
 [ext_resource type="Script" uid="uid://cerjc6sna0dxs" path="res://Scripts/StateMachine/StateMachine.gd" id="49_1ribx"]
@@ -144,7 +141,6 @@
 [ext_resource type="Texture2D" uid="uid://cg6hrwgecuy41" path="res://Sprites/Cururu/Nadando/Nado_Superficie/04.png" id="80_p6h8m"]
 [ext_resource type="AudioStream" uid="uid://cuyap2xmus3rf" path="res://Audio/SFX/CURURU/dash_cururu.mp3" id="81_2t31h"]
 [ext_resource type="Texture2D" uid="uid://b3r5os20m6bmk" path="res://Sprites/Cururu/Dash/VFX/10.png" id="81_3s0sn"]
-[ext_resource type="Texture2D" uid="uid://clpqx2aa5gv33" path="res://Sprites/Cururu/Special/10.png" id="81_dvy3r"]
 [ext_resource type="Texture2D" uid="uid://qchxtakyj8j1" path="res://Sprites/Cururu/Nadando/Nado_Superficie/05.png" id="81_vwojg"]
 [ext_resource type="Texture2D" uid="uid://bdt3wwh3lslf" path="res://Sprites/Cururu/Dash/VFX/12.png" id="82_dvy3r"]
 [ext_resource type="Texture2D" uid="uid://dxtsvqjcc8iyp" path="res://Sprites/Cururu/Virada/00.png" id="83_52p8t"]
@@ -578,10 +574,10 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("39_cj33d")
+"texture": ExtResource("40_32f06")
 }, {
 "duration": 1.0,
-"texture": ExtResource("40_32f06")
+"texture": ExtResource("39_cj33d")
 }, {
 "duration": 1.0,
 "texture": ExtResource("41_6q3px")
@@ -777,15 +773,6 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("45_1dbdn")
-}, {
-"duration": 1.0,
-"texture": ExtResource("46_0w8y8")
-}, {
-"duration": 1.0,
-"texture": ExtResource("47_d7mdf")
-}, {
-"duration": 1.0,
 "texture": ExtResource("48_w1841")
 }, {
 "duration": 1.0,
@@ -802,11 +789,8 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": ExtResource("53_7spwe")
-}, {
-"duration": 1.0,
-"texture": ExtResource("81_dvy3r")
 }],
-"loop": false,
+"loop": true,
 "name": &"Special",
 "speed": 8.0
 }, {
@@ -2071,8 +2055,7 @@ unique_name_in_owner = true
 position = Vector2(0, -115)
 scale = Vector2(0.37, 0.37)
 sprite_frames = SubResource("SpriteFrames_ser7u")
-animation = &"MeleeChao2"
-frame = 1
+animation = &"Special"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=185604391]
 position = Vector2(0, -79)

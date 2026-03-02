@@ -61,7 +61,9 @@ animations = [{
 z_index = 1
 
 [node name="Animation" type="AnimatedSprite2D" parent="." unique_id=1976484140]
-position = Vector2(276, -129)
+position = Vector2(217.00002, -94.00001)
 scale = Vector2(0.37, 0.37)
 sprite_frames = SubResource("SpriteFrames_dsijf")
 animation = &"ataque"
+frame = 11
+frame_progress = 1.0
