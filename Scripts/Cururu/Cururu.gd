@@ -192,17 +192,6 @@ func Morte() -> void:
 		GameData.player_morreu = true
 		Mundos.CarregaFase(Mundos.NomeFase.TUTORIAL_1)
 
-func OffsetMelee() -> void:
-	sprite.offset.y = 28.0
-	sprite.offset.x = -235.0 if sprite.flip_h else 235.0
-
-func OffsetSpecial() -> void:
-	pass
-	#sprite.offset.x = -470.0 if sprite.flip_h else 470.0
-
-func ResetOffset() -> void:
-	sprite.offset = Vector2.ZERO
-
 #solução temporária para remover o VFX das folhas na ponte
 func _on_area_ponte_vfx_body_entered(body: Node2D) -> void:
 	if body.is_in_group("Player"):

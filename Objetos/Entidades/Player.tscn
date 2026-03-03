@@ -16,13 +16,10 @@
 [ext_resource type="Texture2D" uid="uid://ciu3iyvaxic8e" path="res://Sprites/Cururu/Nadando/VFX/Entrando_Agua/01.png" id="8_apw5m"]
 [ext_resource type="Texture2D" uid="uid://bkdbrpstuuy4u" path="res://Sprites/Cururu/Caminhar/05.png" id="8_jgcph"]
 [ext_resource type="Texture2D" uid="uid://dxupvk38avuo0" path="res://Sprites/Cururu/Caminhar/06.png" id="9_jkcnl"]
-[ext_resource type="Texture2D" uid="uid://dtrqllxfdts32" path="res://Sprites/Cururu/Dash/02.png" id="9_pa0o1"]
 [ext_resource type="Texture2D" uid="uid://m5fvvkblqod8" path="res://Sprites/Cururu/Nadando/VFX/Entrando_Agua/02.png" id="9_twnbh"]
-[ext_resource type="Texture2D" uid="uid://bssjqru2v4vci" path="res://Sprites/Cururu/Dash/03.png" id="10_7odhu"]
 [ext_resource type="Texture2D" uid="uid://blnbsfvs4ioph" path="res://Sprites/Cururu/Caminhar/07.png" id="10_33gbk"]
 [ext_resource type="Texture2D" uid="uid://diggfbjlihl8j" path="res://Sprites/Cururu/Nadando/VFX/Entrando_Agua/03.png" id="10_yjtxj"]
 [ext_resource type="Texture2D" uid="uid://c4tqqp43wwf6r" path="res://Sprites/Cururu/Nadando/VFX/Entrando_Agua/04.png" id="11_i682e"]
-[ext_resource type="Texture2D" uid="uid://bjhdn7dee4248" path="res://Sprites/Cururu/Dash/04.png" id="11_iqn86"]
 [ext_resource type="Texture2D" uid="uid://bht4lhwwsbmr4" path="res://Sprites/Cururu/Nadando/VFX/Entrando_Agua/05.png" id="12_5mf1h"]
 [ext_resource type="Texture2D" uid="uid://c3i6qokpcl81f" path="res://Sprites/Cururu/Dash/05.png" id="12_g3owr"]
 [ext_resource type="Texture2D" uid="uid://d3aupxh0v72rq" path="res://Sprites/Cururu/Nadando/VFX/Entrando_Agua/06.png" id="13_yn8og"]
@@ -469,36 +466,17 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": ExtResource("12_g3owr")
+}, {
+"duration": 1.0,
 "texture": ExtResource("18_gjjix")
 }, {
 "duration": 1.0,
 "texture": ExtResource("19_0digr")
 }],
 "loop": false,
-"name": &"Dash_End",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("10_7odhu")
-}, {
-"duration": 1.0,
-"texture": ExtResource("11_iqn86")
-}, {
-"duration": 1.0,
-"texture": ExtResource("12_g3owr")
-}],
-"loop": true,
-"name": &"Dash_Loop",
-"speed": 8.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("9_pa0o1")
-}],
-"loop": false,
-"name": &"Dash_Start",
-"speed": 8.0
+"name": &"Dash",
+"speed": 12.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -1004,118 +982,34 @@ tracks/2/keys = {
 "update": 1,
 "values": [&"Dano"]
 }
-tracks/3/type = "method"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath(".")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"values": [{
-"args": [],
-"method": &"ResetOffset"
-}]
-}
-
-[sub_resource type="Animation" id="Animation_x3lr7"]
-resource_name = "Dash_End"
-length = 0.15
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Cururu:frame")
-tracks/0/interp = 0
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.05, 0.1),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 1,
-"values": [0, 1, 2]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Cururu:animation")
-tracks/1/interp = 0
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [&"Dash_End"]
-}
 
 [sub_resource type="Animation" id="Animation_buhp1"]
-resource_name = "Dash_Loop"
-length = 0.4
+resource_name = "Dash"
+length = 0.15
 loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Cururu:frame")
-tracks/0/interp = 0
+tracks/0/path = NodePath("Cururu:animation")
+tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [0, 1, 2, 3]
+"values": [&"Dash"]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("Cururu:animation")
-tracks/1/interp = 0
+tracks/1/path = NodePath("Cururu:frame")
+tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
+"times": PackedFloat32Array(0, 0.05, 0.1),
+"transitions": PackedFloat32Array(1, 1, 1),
 "update": 1,
-"values": [&"Dash_Loop"]
-}
-
-[sub_resource type="Animation" id="Animation_wpp42"]
-resource_name = "Dash_Start"
-length = 0.2
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Cururu:frame")
-tracks/0/interp = 0
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.05, 0.1, 0.15),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
-"update": 1,
-"values": [0, 1, 2, 3]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Cururu:animation")
-tracks/1/interp = 0
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [&"Dash_Start"]
-}
-tracks/2/type = "method"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath(".")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"values": [{
-"args": [],
-"method": &"ResetOffset"
-}]
+"values": [0, 1, 2]
 }
 
 [sub_resource type="Animation" id="Animation_6iqbf"]
@@ -1146,24 +1040,10 @@ tracks/1/keys = {
 "update": 1,
 "values": [&"Fall_Loop"]
 }
-tracks/2/type = "method"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath(".")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"values": [{
-"args": [],
-"method": &"ResetOffset"
-}]
-}
 
 [sub_resource type="Animation" id="Animation_rpndr"]
 resource_name = "Fall_Start"
-length = 0.3
+length = 0.2
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -1171,10 +1051,10 @@ tracks/0/path = NodePath("Cururu:frame")
 tracks/0/interp = 0
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2),
-"transitions": PackedFloat32Array(1, 1, 1),
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
 "update": 1,
-"values": [0, 1, 2]
+"values": [0, 1]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -1187,20 +1067,6 @@ tracks/1/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [&"Fall_Start"]
-}
-tracks/2/type = "method"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath(".")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"values": [{
-"args": [],
-"method": &"ResetOffset"
-}]
 }
 
 [sub_resource type="Animation" id="Animation_e7e5s"]
@@ -1230,20 +1096,6 @@ tracks/1/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [&"Idle"]
-}
-tracks/2/type = "method"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath(".")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"values": [{
-"args": [],
-"method": &"ResetOffset"
-}]
 }
 
 [sub_resource type="Animation" id="Animation_8v2dh"]
@@ -1745,39 +1597,25 @@ tracks/0/keys = {
 "update": 1,
 "values": [&"Run"]
 }
-tracks/1/type = "method"
+tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath(".")
-tracks/1/interp = 1
+tracks/1/path = NodePath("Cururu:frame")
+tracks/1/interp = 0
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"values": [{
-"args": [],
-"method": &"ResetOffset"
-}]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("Cururu:frame")
-tracks/2/interp = 0
-tracks/2/loop_wrap = true
-tracks/2/keys = {
 "times": PackedFloat32Array(0, 0.075, 0.15, 0.22500001, 0.3, 0.375, 0.45000002, 0.525),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
 "update": 1,
 "values": [0, 1, 2, 3, 4, 5, 6, 7]
 }
-tracks/3/type = "method"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("SFX/SFX_Passos")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("SFX/SFX_Passos")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
 "times": PackedFloat32Array(0.05, 0.35),
 "transitions": PackedFloat32Array(1, 1),
 "values": [{
@@ -1799,10 +1637,10 @@ tracks/0/path = NodePath("HitContainer/Chicote/ColSpecial:disabled")
 tracks/0/interp = 0
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0.23333333, 0.26666668),
-"transitions": PackedFloat32Array(1, 1),
+"times": PackedFloat32Array(0, 0.2, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1),
 "update": 1,
-"values": [false, true]
+"values": [true, false, true]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -1811,10 +1649,10 @@ tracks/1/path = NodePath("Cururu:frame")
 tracks/1/interp = 0
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.06666667, 0.13333334, 0.2, 0.26666668, 0.33333334, 0.4, 0.46666667, 0.53333336, 0.6),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"times": PackedFloat32Array(0, 0.10000001, 0.20000002, 0.3, 0.40000004, 0.5, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
 "update": 1,
-"values": [0, 1, 2, 3, 4, 5, 6, 7, 8, 0]
+"values": [0, 1, 2, 3, 4, 5, 0]
 }
 tracks/2/type = "value"
 tracks/2/imported = false
@@ -1828,27 +1666,13 @@ tracks/2/keys = {
 "update": 1,
 "values": [&"Special"]
 }
-tracks/3/type = "method"
+tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath(".")
+tracks/3/path = NodePath("SFX/SFX_Ataque:playing")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"values": [{
-"args": [],
-"method": &"OffsetSpecial"
-}]
-}
-tracks/4/type = "value"
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/path = NodePath("SFX/SFX_Ataque:playing")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/keys = {
 "times": PackedFloat32Array(0.0666),
 "transitions": PackedFloat32Array(1),
 "update": 1,
@@ -1962,20 +1786,6 @@ tracks/1/keys = {
 "update": 1,
 "values": [&"Virada"]
 }
-tracks/2/type = "method"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath(".")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"values": [{
-"args": [],
-"method": &"ResetOffset"
-}]
-}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_g0l4m"]
 _data = {
@@ -1983,9 +1793,7 @@ _data = {
 &"Cura_Move": SubResource("Animation_x4him"),
 &"Cura_Parado": SubResource("Animation_toswy"),
 &"Dano": SubResource("Animation_aofpm"),
-&"Dash_End": SubResource("Animation_x3lr7"),
-&"Dash_Loop": SubResource("Animation_buhp1"),
-&"Dash_Start": SubResource("Animation_wpp42"),
+&"Dash": SubResource("Animation_buhp1"),
 &"Fall_Loop": SubResource("Animation_6iqbf"),
 &"Fall_Start": SubResource("Animation_rpndr"),
 &"Idle": SubResource("Animation_e7e5s"),
@@ -2055,7 +1863,8 @@ unique_name_in_owner = true
 position = Vector2(0, -115)
 scale = Vector2(0.37, 0.37)
 sprite_frames = SubResource("SpriteFrames_ser7u")
-animation = &"Special"
+animation = &"Dash"
+frame = 1
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=185604391]
 position = Vector2(0, -79)
@@ -2119,7 +1928,6 @@ parent = NodePath("../..")
 position = Vector2(-8, 81)
 rotation = -1.5707964
 shape = SubResource("CapsuleShape2D_2t31h")
-disabled = true
 
 [node name="Chicote" parent="HitContainer" unique_id=1517723409 node_paths=PackedStringArray("ignore", "parent") groups=["Special"] instance=ExtResource("47_grb16")]
 collision_mask = 16
@@ -2322,7 +2130,6 @@ jump_state = NodePath("../Pulo")
 [connection signal="counter" from="HurtContainer/HurtBox" to="StateMachine/Dano" method="_on_hurt_box_counter"]
 [connection signal="animation_finished" from="Anim" to="StateMachine/Chao" method="_on_anim_animation_finished"]
 [connection signal="animation_finished" from="Anim" to="StateMachine/Fall" method="_on_anim_animation_finished"]
-[connection signal="animation_finished" from="Anim" to="StateMachine/Dash" method="_on_anim_animation_finished"]
 [connection signal="animation_finished" from="Anim" to="StateMachine/Chicote" method="_on_anim_animation_finished"]
 [connection signal="timeout" from="Timers/Coyote" to="StateMachine/Fall" method="_on_coyote_timeout"]
 [connection signal="timeout" from="Timers/JumpLag" to="StateMachine/Fall" method="_on_jump_lag_timeout"]
