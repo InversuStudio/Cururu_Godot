@@ -116,7 +116,6 @@ scale_max = 0.5
 alpha_curve = SubResource("CurveTexture_auxyl")
 
 [node name="MA_1-1" type="Node2D" unique_id=61085530]
-position = Vector2(1, 0)
 
 [node name="background" type="Node2D" parent="." unique_id=961563197]
 light_mask = 2
@@ -1388,7 +1387,7 @@ volume_db = 5.0
 autoplay = true
 
 [node name="MainCamera" parent="." unique_id=1186591248 node_paths=PackedStringArray("target", "limite_camera") instance=ExtResource("31_f8u2d")]
-position = Vector2(-8782.001, -217.99994)
+position = Vector2(-8781.006, -217.99994)
 zoom = Vector2(0.8, 0.8)
 limit_enabled = true
 limit_left = -9067

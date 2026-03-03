@@ -1,7 +1,7 @@
 extends Node
 
 # Lista de fases
-var arquivo_fase: Array[String] = [
+var arquivo_fase: Array[StringName] = [
 	"res://Cenas/zTeste/FaseTeste1.tscn",
 	"res://Cenas/zTeste/FaseTeste2.tscn",
 	"res://Cenas/zTeste/FaseTeste3.tscn",
@@ -60,17 +60,25 @@ enum NomeFase {
 	CutsceneIntro,
 }
 
+# Registra fase atual
+var fase_atual: NomeFase
+@onready var player:Player = get_tree().get_first_node_in_group("Player")
+
+signal fase_mudou
+func _ready() -> void:
+	var cur_wrld:StringName = get_tree().current_scene.scene_file_path
+	var id:int = 0
+	for item:StringName in arquivo_fase:
+		if cur_wrld == item:
+			fase_atual = id as NomeFase
+			break
+		id += 1
+	#fase_atual
+
 # Lista que registra que peças de coração foram coletadas
 var pecas_coracao: Array[String] = []
 # Lista que registra areas secretas desbloqueadas
 var areas_secretas: Array[String] = []
-
-# Registra fase atual
-var fase_atual : NomeFase
-@onready var player:Player = get_tree().get_first_node_in_group("Player")
-
-signal fase_mudou
-
 # Lista que registra todos os inimigos derrotados
 var lista_inimigos:Array[String] = []
 # Lista que registra todos os baús abertos
