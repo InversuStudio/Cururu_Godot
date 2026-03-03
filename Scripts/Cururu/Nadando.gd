@@ -28,6 +28,7 @@ func Enter() -> void:
 	# VFX + SFX de entrada na água
 	var v:Node2D = vfx[0].instantiate()
 	v.global_position = parent.global_position
+	v.z_index = 1
 	parent.get_parent().add_child(v)
 
 	%SFX_Extra.stream = sfx[0]
@@ -41,6 +42,7 @@ func Exit() -> void:
 	# VFX + SFX de saída da água
 	var v:Node2D = vfx[1].instantiate()
 	v.global_position = parent.global_position
+	v.z_index = 1
 	parent.get_parent().add_child(v)
 
 	%SFX_Extra.stream = sfx[1]

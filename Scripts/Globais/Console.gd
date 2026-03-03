@@ -20,3 +20,6 @@ func _Print(txt:Variant) -> void:
 
 func _State(txt:String) -> void:
 	%StatePlayer.text += "State: " + txt + "[br]"
+
+func MudaAbaSelect() -> void:
+	%Fase.select(Mundos.fase_atual)

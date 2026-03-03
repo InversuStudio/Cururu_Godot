@@ -103,6 +103,8 @@ func CarregaFase(lugar:NomeFase, detalhado:bool = false,
 	await get_tree().physics_frame
 	# Inicia Fade In
 	Fade.FadeIn()
+	# Atualiza a barra do console
+	Console.MudaAbaSelect()
 	# Posiciona o player, se houver
 	player = get_tree().get_first_node_in_group("Player")
 	if player and detalhado == true:

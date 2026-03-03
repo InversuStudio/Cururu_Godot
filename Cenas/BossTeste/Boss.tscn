@@ -1,4 +1,4 @@
-[gd_scene load_steps=137 format=3 uid="uid://b7m7lb1s11mbw"]
+[gd_scene format=3 uid="uid://b7m7lb1s11mbw"]
 
 [ext_resource type="Script" uid="uid://bekibpja60hxm" path="res://Scripts/Boss/boss.gd" id="1_s15tt"]
 [ext_resource type="Script" uid="uid://hsdutxxttrp3" path="res://Scripts/Componentes/Vida.gd" id="2_16hqa"]
@@ -897,7 +897,7 @@ shader_parameter/top_influence = 0.25
 texture = ExtResource("113_iwjnr")
 texture_margin_left = 70.0
 
-[node name="Boss" type="Node2D"]
+[node name="Boss" type="Node2D" unique_id=232076307]
 script = ExtResource("1_s15tt")
 dist_para_pilar = 7.0
 tempo_idle_cuspe = 1.0
@@ -906,16 +906,16 @@ musica_luta = ExtResource("2_ojojp")
 gritos = Array[AudioStream]([ExtResource("88_q1nmn"), ExtResource("4_hbr26"), ExtResource("5_ycj6j")])
 dialogo = ExtResource("6_ycj6j")
 
-[node name="TimerIdle" type="Timer" parent="."]
+[node name="TimerIdle" type="Timer" parent="." unique_id=1134409542]
 unique_name_in_owner = true
 one_shot = true
 
-[node name="TimerNocaute" type="Timer" parent="."]
+[node name="TimerNocaute" type="Timer" parent="." unique_id=1074682132]
 unique_name_in_owner = true
 wait_time = 2.8
 one_shot = true
 
-[node name="SpriteMain" type="AnimatedSprite2D" parent="."]
+[node name="SpriteMain" type="AnimatedSprite2D" parent="." unique_id=1002636083]
 unique_name_in_owner = true
 material = SubResource("ShaderMaterial_iwjnr")
 position = Vector2(0, -1020)
@@ -923,16 +923,15 @@ scale = Vector2(1.5, 1.5)
 sprite_frames = SubResource("SpriteFrames_nkv4g")
 animation = &"Grito"
 autoplay = "Escondido"
-frame = 1
 
-[node name="SpriteCabeca" type="AnimatedSprite2D" parent="."]
+[node name="SpriteCabeca" type="AnimatedSprite2D" parent="." unique_id=920534506]
 unique_name_in_owner = true
 position = Vector2(0, -1020)
 scale = Vector2(1.5, 1.5)
 sprite_frames = SubResource("SpriteFrames_n6ujt")
 animation = &"Idle"
 
-[node name="Temp" type="AnimatedSprite2D" parent="."]
+[node name="Temp" type="AnimatedSprite2D" parent="." unique_id=710988105]
 unique_name_in_owner = true
 position = Vector2(0, -1020)
 scale = Vector2(1.5, 1.5)
@@ -940,20 +939,20 @@ sprite_frames = SubResource("SpriteFrames_huafx")
 frame = 4
 frame_progress = 0.24865994
 
-[node name="SpriteCorpo" type="AnimatedSprite2D" parent="."]
+[node name="SpriteCorpo" type="AnimatedSprite2D" parent="." unique_id=517873326]
 unique_name_in_owner = true
 position = Vector2(0, -1020)
 scale = Vector2(1.5, 1.5)
 sprite_frames = SubResource("SpriteFrames_qsydn")
 animation = &"Idle"
 
-[node name="VidaBoss" type="Node" parent="."]
+[node name="VidaBoss" type="Node" parent="." unique_id=1212445150]
 unique_name_in_owner = true
 script = ExtResource("2_16hqa")
 vida_max = 25
 metadata/_custom_type_script = "uid://hsdutxxttrp3"
 
-[node name="HurtBox" parent="." node_paths=PackedStringArray("comp_vida", "sprite") instance=ExtResource("3_fwdqd")]
+[node name="HurtBox" parent="." unique_id=1116069954 node_paths=PackedStringArray("comp_vida", "sprite") instance=ExtResource("3_fwdqd")]
 unique_name_in_owner = true
 collision_layer = 16
 monitorable = false
@@ -961,97 +960,95 @@ comp_vida = NodePath("../VidaBoss")
 hit_sfx = ExtResource("5_b2ig3")
 sprite = NodePath("../SpriteMain")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="HurtBox"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HurtBox" unique_id=1241077229]
 position = Vector2(481, -550)
 rotation = 1.5707964
 shape = SubResource("CapsuleShape2D_fwdqd")
 debug_color = Color(0.9968892, 0, 0.18689972, 0.41960785)
 
-[node name="VidaMCabeca" type="Node" parent="."]
+[node name="VidaMCabeca" type="Node" parent="." unique_id=826151967]
 unique_name_in_owner = true
 script = ExtResource("2_16hqa")
 vida_max = 5
 morre = false
 metadata/_custom_type_script = "uid://hsdutxxttrp3"
 
-[node name="HurtCabeca" parent="." node_paths=PackedStringArray("comp_vida", "sprite") instance=ExtResource("3_fwdqd")]
+[node name="HurtCabeca" parent="." unique_id=830437686 node_paths=PackedStringArray("comp_vida", "sprite") instance=ExtResource("3_fwdqd")]
 unique_name_in_owner = true
 collision_layer = 16
 comp_vida = NodePath("../VidaMCorpo")
 hit_sfx = ExtResource("5_b2ig3")
 sprite = NodePath("../SpriteCabeca")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="HurtCabeca"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HurtCabeca" unique_id=1550534301]
 position = Vector2(24, -1065)
 rotation = 1.5707964
 shape = SubResource("CapsuleShape2D_mjx0v")
 
-[node name="VidaMCorpo" type="Node" parent="."]
+[node name="VidaMCorpo" type="Node" parent="." unique_id=192601500]
 unique_name_in_owner = true
 script = ExtResource("2_16hqa")
 vida_max = 10
 morre = false
 metadata/_custom_type_script = "uid://hsdutxxttrp3"
 
-[node name="HurtCorpo" parent="." node_paths=PackedStringArray("comp_vida", "sprite") instance=ExtResource("3_fwdqd")]
+[node name="HurtCorpo" parent="." unique_id=454590909 node_paths=PackedStringArray("comp_vida", "sprite") instance=ExtResource("3_fwdqd")]
 unique_name_in_owner = true
 collision_layer = 16
 comp_vida = NodePath("../VidaMCorpo")
 hit_sfx = ExtResource("5_b2ig3")
 sprite = NodePath("../SpriteCorpo")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="HurtCorpo"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HurtCorpo" unique_id=855814853]
 position = Vector2(60, -455)
 rotation = -3.1415927
 shape = SubResource("CapsuleShape2D_0w5f0")
 
-[node name="PosTiro" type="Marker2D" parent="."]
+[node name="PosTiro" type="Marker2D" parent="." unique_id=1362764453]
 unique_name_in_owner = true
 position = Vector2(517, -714)
 gizmo_extents = 45.0
 
-[node name="Anim" type="AnimationPlayer" parent="."]
+[node name="Anim" type="AnimationPlayer" parent="." unique_id=1716167178]
 unique_name_in_owner = true
-libraries = {
-&"": SubResource("AnimationLibrary_mjx0v")
-}
+libraries/ = SubResource("AnimationLibrary_mjx0v")
 
-[node name="GritoSFX" type="AudioStreamPlayer" parent="."]
+[node name="GritoSFX" type="AudioStreamPlayer" parent="." unique_id=1024676001]
 unique_name_in_owner = true
 
-[node name="StateMachine" type="Node" parent="." node_paths=PackedStringArray("start_state")]
+[node name="StateMachine" type="Node" parent="." unique_id=9262465 node_paths=PackedStringArray("start_state")]
 script = ExtResource("61_01cui")
 start_state = NodePath("Start")
 
-[node name="Start" type="Node" parent="StateMachine" node_paths=PackedStringArray("state_idle")]
+[node name="Start" type="Node" parent="StateMachine" unique_id=1798609910 node_paths=PackedStringArray("state_idle")]
 script = ExtResource("72_0ddi0")
 state_idle = NodePath("../Idle")
 
-[node name="Idle" type="Node" parent="StateMachine" node_paths=PackedStringArray("state_cospe_fogo", "state_pilar_fogo", "state_nocaute")]
+[node name="Idle" type="Node" parent="StateMachine" unique_id=1804984286 node_paths=PackedStringArray("state_cospe_fogo", "state_pilar_fogo", "state_nocaute")]
 script = ExtResource("62_g25rt")
 state_cospe_fogo = NodePath("../CospeFogo")
 state_pilar_fogo = NodePath("../PilarFogo")
 state_nocaute = NodePath("../Nocaute")
 
-[node name="CospeFogo" type="Node" parent="StateMachine" node_paths=PackedStringArray("idle_state")]
+[node name="CospeFogo" type="Node" parent="StateMachine" unique_id=1716602888 node_paths=PackedStringArray("idle_state")]
 script = ExtResource("75_16hqa")
 idle_state = NodePath("../Idle")
 
-[node name="PilarFogo" type="Node" parent="StateMachine" node_paths=PackedStringArray("idle_state")]
+[node name="PilarFogo" type="Node" parent="StateMachine" unique_id=635259999 node_paths=PackedStringArray("idle_state")]
 script = ExtResource("85_fi4f6")
 idle_state = NodePath("../Idle")
 
-[node name="Nocaute" type="Node" parent="StateMachine" node_paths=PackedStringArray("state_idle", "state_final")]
+[node name="Nocaute" type="Node" parent="StateMachine" unique_id=1843257818 node_paths=PackedStringArray("state_idle", "state_final")]
 script = ExtResource("77_iqxfe")
 state_idle = NodePath("../Idle")
 state_final = NodePath("../Purificado")
 
-[node name="Purificado" type="Node" parent="StateMachine"]
+[node name="Purificado" type="Node" parent="StateMachine" unique_id=2139942620]
 script = ExtResource("95_q1nmn")
 
-[node name="UI_BOSS" type="CanvasLayer" parent="."]
+[node name="UI_BOSS" type="CanvasLayer" parent="." unique_id=745554726]
 
-[node name="Control" type="Control" parent="UI_BOSS"]
+[node name="Control" type="Control" parent="UI_BOSS" unique_id=1274586709]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -1059,7 +1056,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="BarraVida" type="TextureProgressBar" parent="UI_BOSS/Control"]
+[node name="BarraVida" type="TextureProgressBar" parent="UI_BOSS/Control" unique_id=1155627967]
 unique_name_in_owner = true
 layout_mode = 1
 anchors_preset = 7
@@ -1083,7 +1080,7 @@ texture_progress = ExtResource("77_mjx0v")
 tint_under = Color(0.25836357, 0.16748038, 0.20151487, 1)
 tint_progress = Color(0.6270837, 0, 0.048433684, 1)
 
-[node name="BarraArmor" type="ProgressBar" parent="UI_BOSS/Control/BarraVida"]
+[node name="BarraArmor" type="ProgressBar" parent="UI_BOSS/Control/BarraVida" unique_id=1963998257]
 unique_name_in_owner = true
 material = SubResource("ShaderMaterial_3l7sv")
 layout_mode = 1

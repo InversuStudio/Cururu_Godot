@@ -16,7 +16,7 @@ func PlayerEntrou(body:Node2D) -> void:
 		%Anim.play("Surge")
 		parent.rabo.show()
 
-func Update(_delta : float) -> State:
+func Update(_delta: float) -> State:
 	if inicia_luta:
 		player.pode_mover = true
 		return state_idle

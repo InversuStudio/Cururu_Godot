@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://bu62qgilsxetf" path="res://Objetos/Entidades/Escorpiao.tscn" id="7_2vimk"]
 [ext_resource type="Texture2D" uid="uid://cjl88xeknofui" path="res://Sprites/Cenário/Mata_Atlantica/Chao/grama_reto.png" id="7_ixy8u"]
 [ext_resource type="PackedScene" uid="uid://bktu336s6ruri" path="res://Objetos/Props/Moeda.tscn" id="8_fo4t4"]
+[ext_resource type="Texture2D" uid="uid://ch0q0av2e62tu" path="res://Sprites/zWIP/Botata.jpg" id="8_qmn8k"]
 [ext_resource type="PackedScene" uid="uid://1apfpwlqocxn" path="res://Objetos/Funcionalidade/TransicaoFase.tscn" id="10_wqlrc"]
 [ext_resource type="PackedScene" uid="uid://d3cks8kri2olw" path="res://Objetos/Props/AreaUpgrade.tscn" id="12_77bok"]
 [ext_resource type="PackedScene" uid="uid://dghxpclnjwg5k" path="res://Objetos/Props/PecaCoracao.tscn" id="15_fjg5v"]
@@ -158,6 +159,11 @@ texture = ExtResource("7_ixy8u")
 z_index = 2
 position = Vector2(1286, -616)
 texture = ExtResource("7_ixy8u")
+
+[node name="Botata" type="Sprite2D" parent="Tilemap" unique_id=94341686]
+position = Vector2(-709, -547)
+scale = Vector2(2.96875, 2.96875)
+texture = ExtResource("8_qmn8k")
 
 [node name="Transicoes" type="Node" parent="." unique_id=1712968154]
 
@@ -333,7 +339,7 @@ texture = ExtResource("26_fjg5v")
 [node name="Cameras" type="Node" parent="." unique_id=1680847220]
 
 [node name="MainCamera" parent="Cameras" unique_id=1321892263 node_paths=PackedStringArray("target", "limite_camera") instance=ExtResource("22_der3i")]
-position = Vector2(-145.99393, -513.9998)
+position = Vector2(-66.00002, -513.9998)
 zoom = Vector2(0.8, 0.8)
 limit_enabled = true
 limit_left = -2669
