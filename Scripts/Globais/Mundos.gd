@@ -63,6 +63,7 @@ enum NomeFase {
 # Registra fase atual
 var fase_atual: NomeFase
 @onready var player:Player = get_tree().get_first_node_in_group("Player")
+@onready var main_camera:MainCamera = get_tree().get_first_node_in_group("MainCamera")
 
 signal fase_mudou
 func _ready() -> void:
@@ -107,7 +108,8 @@ func CarregaFase(lugar:NomeFase, detalhado:bool = false,
 	if player and detalhado == true:
 		player.global_position = pos
 		player.sprite.flip_h = GameData.direcao#virado
-		
+	# Pega a câmera
+	main_camera = get_tree().get_first_node_in_group("MainCamera")
 	# Registra novo HUD na cena
 	HUD.IniciaHUD()
 	fase_mudou.emit()

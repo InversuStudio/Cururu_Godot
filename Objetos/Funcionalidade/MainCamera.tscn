@@ -1,8 +1,8 @@
-[gd_scene load_steps=2 format=3 uid="uid://u28e3eudu6ch"]
+[gd_scene format=3 uid="uid://u28e3eudu6ch"]
 
 [ext_resource type="Script" uid="uid://cw522wgjoa2p7" path="res://Scripts/Componentes/MainCamera.gd" id="1_tckdd"]
 
-[node name="MainCamera" type="Camera2D" groups=["MainCamera"]]
+[node name="MainCamera" type="Camera2D" unique_id=1984984122 groups=["MainCamera"]]
 physics_interpolation_mode = 1
 zoom = Vector2(0.7999995, 0.7999995)
 process_callback = 0
@@ -10,5 +10,8 @@ limit_enabled = false
 editor_draw_limits = true
 script = ExtResource("1_tckdd")
 offset_target = Vector2(0, -80)
+look_ahead = 80.0
 speed = 8.0
 deadzone = Vector2(100, 300)
+
+[node name="Timer" type="Timer" parent="." unique_id=688448171]

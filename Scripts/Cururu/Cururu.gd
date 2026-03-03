@@ -137,14 +137,10 @@ func _process(delta: float) -> void:
 	input_move.y = Input.get_axis("cima", "baixo")
 	# Armazena último input
 	if input_move.x and input_move.x != input_buffer[1]:
-		#input_buffer.remove_at(0)
 		input_buffer[0] = sign(input_buffer[1])
-		#input_buffer.append(input_move.x)
 		input_buffer[1] = sign(input_move.x)
 		if input_buffer[0] != input_buffer[1]:
 			virou.emit()
-			print(input_buffer)
-	#print(input_buffer)
 	# Aplica PROCESS do StateMachine
 	var col:Object = check_chao.get_collider()
 	if col:
@@ -167,6 +163,8 @@ func _physics_process(delta: float) -> void:
 	# Aplica PHYSICS_PROCESS do StateMachine
 	state_machine.FixedUpdate(delta)
 	velocity.y = clampf(velocity.y, -jump_force, max_fall_vel)
+	Mundos.main_camera.look_ahead = (-abs(Mundos.main_camera.look_ahead) if sprite.flip_h
+									else abs(Mundos.main_camera.look_ahead))
 	move_and_slide()
 
 # Habilita dash após cooldown
@@ -191,12 +189,3 @@ func Morte() -> void:
 	if await GameData.Load() == false:
 		GameData.player_morreu = true
 		Mundos.CarregaFase(Mundos.NomeFase.TUTORIAL_1)
-
-#solução temporária para remover o VFX das folhas na ponte
-func _on_area_ponte_vfx_body_entered(body: Node2D) -> void:
-	if body.is_in_group("Player"):
-		$StateMachine/Chao.pode_emitir_vfx = false
-
-func _on_area_ponte_vfx_body_exited(body: Node2D) -> void:
-	if body.is_in_group("Player"):
-		$StateMachine/Chao.pode_emitir_vfx = true

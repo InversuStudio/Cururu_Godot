@@ -341,35 +341,6 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("3_1ribx")
-}, {
-"duration": 1.0,
-"texture": ExtResource("4_3s0sn")
-}, {
-"duration": 1.0,
-"texture": ExtResource("5_dvy3r")
-}, {
-"duration": 1.0,
-"texture": ExtResource("6_damx7")
-}, {
-"duration": 1.0,
-"texture": ExtResource("7_k0fov")
-}, {
-"duration": 1.0,
-"texture": ExtResource("8_jgcph")
-}, {
-"duration": 1.0,
-"texture": ExtResource("9_jkcnl")
-}, {
-"duration": 1.0,
-"texture": ExtResource("10_33gbk")
-}],
-"loop": true,
-"name": &"Andando",
-"speed": 8.0
-}, {
-"frames": [{
-"duration": 1.0,
 "texture": ExtResource("50_toswy")
 }, {
 "duration": 1.0,
@@ -801,6 +772,35 @@ animations = [{
 "loop": false,
 "name": &"Virada",
 "speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_1ribx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_3s0sn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_dvy3r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_damx7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_k0fov")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_jgcph")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_jkcnl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_33gbk")
+}],
+"loop": true,
+"name": &"Walk",
+"speed": 8.0
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_qakxq"]
@@ -1616,7 +1616,7 @@ tracks/2/path = NodePath("SFX/SFX_Passos")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(0.05, 0.35),
+"times": PackedFloat32Array(0, 0.3),
 "transitions": PackedFloat32Array(1, 1),
 "values": [{
 "args": [],
@@ -1624,6 +1624,23 @@ tracks/2/keys = {
 }, {
 "args": [],
 "method": &"tocar_som_aleatorio"
+}]
+}
+tracks/3/type = "method"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("StateMachine/Chao")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"values": [{
+"args": [],
+"method": &"SpawnFolhasRun"
+}, {
+"args": [],
+"method": &"SpawnFolhasRun"
 }]
 }
 
@@ -1787,6 +1804,70 @@ tracks/1/keys = {
 "values": [&"Virada"]
 }
 
+[sub_resource type="Animation" id="Animation_t4xy6"]
+resource_name = "Walk"
+length = 0.6
+loop_mode = 1
+step = 0.05
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Cururu:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"Walk"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Cururu:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.075, 0.15, 0.22500001, 0.3, 0.375, 0.45000002, 0.525),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 6, 7]
+}
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("SFX/SFX_Passos")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.15, 0.45),
+"transitions": PackedFloat32Array(1, 1),
+"values": [{
+"args": [],
+"method": &"tocar_som_aleatorio"
+}, {
+"args": [],
+"method": &"tocar_som_aleatorio"
+}]
+}
+tracks/3/type = "method"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("StateMachine/Chao")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.15, 0.45),
+"transitions": PackedFloat32Array(1, 1),
+"values": [{
+"args": [],
+"method": &"SpawnFolhasRun"
+}, {
+"args": [],
+"method": &"SpawnFolhasRun"
+}]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_g0l4m"]
 _data = {
 &"Acorda": SubResource("Animation_o645d"),
@@ -1812,7 +1893,8 @@ _data = {
 &"Special": SubResource("Animation_7uoqt"),
 &"Special_Down": SubResource("Animation_7spwe"),
 &"Special_Up": SubResource("Animation_vpyrf"),
-&"Turn": SubResource("Animation_grb16")
+&"Turn": SubResource("Animation_grb16"),
+&"Walk": SubResource("Animation_t4xy6")
 }
 
 [node name="Player" type="CharacterBody2D" unique_id=2029638361 node_paths=PackedStringArray("vida", "state_machine", "hitbox_container", "hurtbox_container") groups=["Player"]]
@@ -1822,7 +1904,7 @@ floor_constant_speed = true
 floor_snap_length = 20.0
 script = ExtResource("1_gwpdq")
 vel_corre = 8.0
-vel_anda = 6.0
+vel_anda = 4.0
 vel_aerea = 6.5
 acel_time = 0.2
 decel_time = 0.1
@@ -1856,14 +1938,14 @@ z_index = 1
 position = Vector2(-87.00001, -108)
 scale = Vector2(0.375651, 0.375651)
 sprite_frames = SubResource("SpriteFrames_k0fov")
-animation = &"saindo_agua"
+animation = &"entrando_agua"
 
 [node name="Cururu" type="AnimatedSprite2D" parent="." unique_id=183016390]
 unique_name_in_owner = true
 position = Vector2(0, -115)
 scale = Vector2(0.37, 0.37)
 sprite_frames = SubResource("SpriteFrames_ser7u")
-animation = &"Dash"
+animation = &"Land"
 frame = 1
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=185604391]
@@ -2043,10 +2125,6 @@ one_shot = true
 [node name="DashCooldown" type="Timer" parent="Timers" unique_id=585419449]
 unique_name_in_owner = true
 one_shot = true
-
-[node name="RunVFXCooldown" type="Timer" parent="Timers" unique_id=808671437]
-unique_name_in_owner = true
-wait_time = 0.2
 
 [node name="CheckAguaUp" type="RayCast2D" parent="." unique_id=327020428]
 position = Vector2(0, -103)

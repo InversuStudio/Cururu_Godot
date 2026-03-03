@@ -194,7 +194,7 @@ position = Vector2(-832, -210)
 [node name="UpgradeMissil" parent="Props" unique_id=1919220430 instance=ExtResource("12_77bok")]
 position = Vector2(2947, -439)
 
-[node name="Script" parent="Props/UpgradeMissil" index="1"]
+[node name="Script" parent="Props/UpgradeMissil" index="1" unique_id=2120107985]
 nome_tela = "Golpe Mágico"
 descricao_tela = "Golpe mágico capaz de purificar miasma"
 
@@ -333,7 +333,7 @@ texture = ExtResource("26_fjg5v")
 [node name="Cameras" type="Node" parent="." unique_id=1680847220]
 
 [node name="MainCamera" parent="Cameras" unique_id=1321892263 node_paths=PackedStringArray("target", "limite_camera") instance=ExtResource("22_der3i")]
-position = Vector2(-146, -513.9998)
+position = Vector2(-145.99393, -513.9998)
 zoom = Vector2(0.8, 0.8)
 limit_enabled = true
 limit_left = -2669

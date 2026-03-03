@@ -14,23 +14,18 @@ extends State
 
 var pode_anim: bool = false
 var turn:bool = false
-#variavel temporária para MVP vvv
-var pode_emitir_vfx: bool = true
 var item_cura:bool = false
 var checa_tempo:bool = false
 var tempo_ultimo_passo: float = 0.0
 
 func _ready() -> void:
 	HUD.usa_item_rapido.connect(func():
-		item_cura = true
-		)
+		item_cura = true)
 	await get_tree().current_scene.ready
-	%RunVFXCooldown.connect("timeout", SpawnFolhasRun)
 	parent.connect("virou", func():
 		if get_parent().current_state == self and !item_cura:#pode_anim:
 			%Anim.play("Turn")
 			turn = true
-		#if get_parent().current_state == self:
 			Flip())
 
 # INICIA O STATE
@@ -52,33 +47,25 @@ func Enter() -> void:
 		Flip()
 
 func Exit() -> void:
-	
-#esse %RunVFXCooldown.stop() tá causando o efeito do VFX quando o personagem para de se mover. dá pra ver se vc estiver andando da direita pra esquerda /
-#não consegui pensar numa maneira de resolver isso sem separar o state de 'CHAO' em IDLE e RUNNING separadamente. 
-#acho que manter tudo jutno pode dar mais problema daqui pra frente tbm
-	%RunVFXCooldown.stop()
 	turn = false
 	pode_anim = false
 
 #AJUSTE TEMPORÁRIO PARA MÚLTIPLOS EFEITOS // QUERIA USAR A MESMA FUNÇÃO E PASSAR UMA STRING DO TIPO DE ANIM QUANDO CHAMAR A FUNÇÃO MAS,
 #NÃO CONSEGUI ISSO FAZER FUNCIONAR COM O %RunVFXCooldown.connect("timeout", SpawnFolhasRun)
-
 func SpawnFolhasFall() -> void:
-	if pode_emitir_vfx:
-		var folha:PackedScene = preload("res://Objetos/Funcionalidade/VFX_FOLHA_FALL.tscn")
-		var folhas:Node2D = folha.instantiate()
-		parent.add_child(folhas)
-		folhas.global_position = parent.global_position
-		%SFX_Caindo_Chao.play()
+	var folha:PackedScene = preload("res://Objetos/Funcionalidade/VFX_FOLHA_FALL.tscn")
+	var folhas:Node2D = folha.instantiate()
+	parent.add_child(folhas)
+	folhas.global_position = parent.global_position
+	%SFX_Caindo_Chao.play()
 		
 func SpawnFolhasRun() -> void:
-	if pode_emitir_vfx:
-		var folha:PackedScene = preload("res://Objetos/Funcionalidade/VFX_FOLHA_RUN.tscn")
-		var folhas:Node2D = folha.instantiate()
-		parent.add_child(folhas)
-		folhas.global_position = parent.global_position
-		if parent.sprite.flip_h : folhas.set_flip(true) 
-		else : folhas.set_flip(false)
+	var folha:PackedScene = preload("res://Objetos/Funcionalidade/VFX_FOLHA_RUN.tscn")
+	var folhas:Node2D = folha.instantiate()
+	parent.add_child(folhas)
+	folhas.global_position = parent.global_position
+	if parent.sprite.flip_h : folhas.set_flip(true) 
+	else : folhas.set_flip(false)
 
 func Update(_delta: float) -> State:
 	# INPUT MELEE
@@ -87,7 +74,7 @@ func Update(_delta: float) -> State:
 		return melee_state
 	# INPUT MAGIA
 	if Input.is_action_just_pressed("magia") and GameData.upgrade_num >= 1:
-		if item_cura: return null
+		if item_cura or !parent.pode_ataque: return null
 		if GameData.magia_atual >= 3:
 			return special_state
 		parent.state_machine.find_child("Chicote").TocaErro()
@@ -104,8 +91,8 @@ func Update(_delta: float) -> State:
 # COMPORTAMENTO PHYSICS_PROCESS
 func FixedUpdate(delta: float) -> State:
 	# Aplica movimento
-	if parent.pode_mover:# and !turn:
-		var dir:float = parent.input_move.x
+	var dir:float = sign(parent.input_move.x)
+	if parent.pode_mover:
 		
 		if dir != 0.0:
 			parent.velocity.x += parent.accel * dir * delta
@@ -123,20 +110,21 @@ func FixedUpdate(delta: float) -> State:
 				parent.anim.seek(pos_anim)
 				Flip()
 			else:
-				parent.speed = parent.speed_run
-				parent.anim.play("Run")
-			if %RunVFXCooldown.is_stopped():
-				%RunVFXCooldown.start()
+				if abs(parent.input_move.x) <= .8:
+					parent.speed = parent.speed_walk
+					parent.anim.play("Walk")
+				else:
+					parent.speed = parent.speed_run
+					parent.anim.play("Run")
 		else:
 			if item_cura:
-				parent.speed = parent.speed_walk
+				#parent.speed = parent.speed_walk
 				parent.anim.play("Cura_Parado")
 				parent.anim.seek(pos_anim)
 				Flip()
 			else:
-				parent.speed = parent.speed_run
+				#parent.speed = parent.speed_run
 				parent.anim.play("Idle")
-			%RunVFXCooldown.stop()
 	
 		checa_tempo = true if item_cura else false
 	
@@ -161,7 +149,6 @@ func _on_anim_animation_finished(anim_name: StringName) -> void:
 			item_cura = false
 		"Cura_Move":
 			item_cura = false
-		
 
 func Flip() -> void:
 	if parent.input_move.x > 0:

@@ -20,8 +20,6 @@ func _ready() -> void:
 		%NumRap.text = str(Inventario.inventario[id_item][1]))
 
 func _input(_event: InputEvent) -> void:
-	if Input.is_physical_key_pressed(KEY_0):
-		print(Inventario.inventario)
 	if Input.is_action_just_pressed("bumper_direito"):
 		if Inventario.inventario.size() > 0:
 			id_item += 1

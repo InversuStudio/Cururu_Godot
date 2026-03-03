@@ -25,7 +25,6 @@ func Enter() -> void:
 	var v:Node2D = vfx.instantiate()
 	parent.add_child(v)
 	v.scale.x = -1 if parent.sprite.flip_h else 1
-	v.z_index = -1
 	
 	parent.pode_dash = false
 	acabou = false

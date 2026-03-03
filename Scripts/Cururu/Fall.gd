@@ -26,6 +26,7 @@ func Update(_delta: float) -> State:
 		return melee_state
 	# INPUT MAGIA
 	if Input.is_action_just_pressed("magia") and GameData.upgrade_num >= 1:
+		if !parent.pode_ataque: return
 		if GameData.magia_atual >= 3:
 			return special_state
 		parent.state_machine.find_child("Chicote").TocaErro()
@@ -50,11 +51,13 @@ func FixedUpdate(delta: float) -> State:
 		return nado_state
 	
 	# Aplica movimento
-	var dir:float = parent.input_move.x
+	var dir:float = sign(parent.input_move.x)
 	if dir:
-		parent.velocity.x += parent.accel * dir * delta
-		if abs(parent.velocity.x) > parent.air_speed:
-			parent.velocity.x = parent.air_speed * dir
+		var speed:float = (parent.air_speed / 2.0 if abs(parent.input_move.x) < .7 
+		else parent.air_speed)
+		parent.velocity.x = speed * dir
+		#if abs(parent.velocity.x) > speed:
+			#parent.velocity.x = speed * dir
 	else:
 		parent.velocity.x = move_toward(parent.velocity.x, dir, parent.decel * delta)
 	#parent.velocity.x = parent.input_move * parent.air_speed

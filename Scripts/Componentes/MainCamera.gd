@@ -8,7 +8,7 @@ class_name MainCamera extends Camera2D
 ## Zoom aplicado à câmera
 @export var zoom_target:float = 0.8
 # Desvio horizontal aplicado quando node se move. Serve para mostrar mais do mapa
-#@export var look_ahead:float = 0.0
+@export var look_ahead:float = 0.0
 ## Velocidade da câmera ao seguir target
 @export var speed:float = 5.0
 var target_pos:Vector2 = Vector2.ZERO
@@ -34,6 +34,8 @@ var shake_intensidade:float = 0.0
 var shake_tempo_resta:float = 0.0
 var shake_ativo:bool = false
 
+var seguindo:bool = false
+
 func _draw() -> void:
 	if mostrar_deadzone_no_jogo or Engine.is_editor_hint():
 		draw_rect(Rect2(-deadzone, deadzone * 2.0), Color.BLUE_VIOLET, false, 5.0)
@@ -52,7 +54,8 @@ func _ready() -> void:
 		limit_bottom = int(limite_camera.global_position.y + limite_camera.size.y)
 
 func Follow(delta:float) -> void:
-	global_position = global_position.lerp(target_pos + offset_target, delta * speed)
+	global_position = global_position.lerp(target_pos + offset_target + Vector2(
+		look_ahead, 0.0), delta * speed)
 
 func _physics_process(delta: float) -> void:
 	if target:
@@ -61,6 +64,14 @@ func _physics_process(delta: float) -> void:
 			target.global_position.x < global_position.x - deadzone.x or
 			target.global_position.y > global_position.y + deadzone.y or
 			target.global_position.y < global_position.y - deadzone.y):
+				seguindo = true
+			else:
+				if $Timer.is_stopped():
+					$Timer.start(1.0)
+					await $Timer.timeout
+					seguindo = false
+			
+			if seguindo:
 				target_pos = target.global_position
 				#if !Engine.is_editor_hint():
 					#target_pos.x += target.input_move.x * look_ahead * 128.0

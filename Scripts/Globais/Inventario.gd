@@ -97,8 +97,8 @@ func Reset() -> void:
 	Inventario.AddItem("Guarana", 1)
 	Inventario.AddAmuleto("RecMagia")
 
-func _input(_event: InputEvent) -> void:
-	if Input.is_physical_key_pressed(KEY_KP_0):
+func _input(event: InputEvent) -> void:
+	if event.is_pressed() and Input.is_physical_key_pressed(KEY_KP_0):
 		AddAmuleto("RecMagia", false)
 		AddAmuleto("VelAtaque")
 		AddItem("Acai", 5)

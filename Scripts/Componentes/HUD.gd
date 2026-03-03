@@ -20,12 +20,16 @@ var tipo_input:int = 0
 func _input(_event: InputEvent) -> void:
 	if Input.is_action_just_pressed("start"):
 		var dialogo_ativo = get_tree().root.find_child("BalaoFala", true, false)
-		if Mundos.player == null or AvisoItem.ativo or dialogo_ativo != null: return
+		if Mundos.player == null or AvisoItem.ativo or dialogo_ativo: return
 		%Pause.visible = true if %Pause.visible == false else false
 	
 	if Input.is_action_just_pressed("ui_cancel"):
-		%Pause.visible = false
-	
+		if %Pause.visible:
+			%Pause.visible = false
+			Mundos.player.pode_ataque = false
+			await get_tree().create_timer(.1).timeout
+			Mundos.player.pode_ataque = true
+		
 	if Input.is_action_just_pressed("bumper_direito") and %Pause.visible:
 		if hud_ativo + 1 <= %ContainerAbas.get_child_count() - 1:
 			hud_ativo += 1
