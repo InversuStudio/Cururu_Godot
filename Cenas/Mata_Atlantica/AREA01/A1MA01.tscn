@@ -41,6 +41,7 @@
 [ext_resource type="PackedScene" uid="uid://u28e3eudu6ch" path="res://Objetos/Funcionalidade/MainCamera.tscn" id="31_f8u2d"]
 [ext_resource type="Texture2D" uid="uid://c8t5do0sox8mj" path="res://Sprites/Cenário/Mata_Atlantica/Pedras e Ruinas/pedra_smusgo.png" id="33_5jfld"]
 [ext_resource type="Texture2D" uid="uid://0agjwkmg3gef" path="res://Sprites/VFX/Iluminação/luz azul.png" id="33_8tm3t"]
+[ext_resource type="Texture2D" uid="uid://cs170t8r7p04l" path="res://Sprites/Cururu/walljump/CURURU_354.png" id="33_auxyl"]
 [ext_resource type="TileSet" uid="uid://b0nn6bkolhibj" path="res://TilesetChao.tres" id="33_co6lv"]
 [ext_resource type="Texture2D" uid="uid://c8tb73qiqhhk8" path="res://Sprites/Cenário/Mata_Atlantica/Background/Galhos/esquerda01.png" id="37_1gvhd"]
 [ext_resource type="PackedScene" uid="uid://bei1s8te3cwko" path="res://Sprites/Cenário/Mata_Atlantica/Interativos/plataforma.tscn" id="38_8g6fq"]
@@ -669,6 +670,12 @@ position = Vector2(1125, 924)
 z_index = 0
 position = Vector2(-8781.001, -138.00002)
 scale = Vector2(0.919994, 0.919994)
+
+[node name="Cururu354" type="Sprite2D" parent="background/0" unique_id=1173417235]
+position = Vector2(-7340, 731)
+scale = Vector2(0.3708984, 0.37089843)
+texture = ExtResource("33_auxyl")
+flip_h = true
 
 [node name="Particula" type="GPUParticles2D" parent="background/0" unique_id=2060733035]
 position = Vector2(-3313, 138)
@@ -1387,7 +1394,7 @@ volume_db = 5.0
 autoplay = true
 
 [node name="MainCamera" parent="." unique_id=1186591248 node_paths=PackedStringArray("target", "limite_camera") instance=ExtResource("31_f8u2d")]
-position = Vector2(-8781.001, -217.99994)
+position = Vector2(-8701.006, -217.99994)
 zoom = Vector2(0.8, 0.8)
 limit_enabled = true
 limit_left = -9068
@@ -1399,7 +1406,7 @@ speed = 6.0
 limite_camera = NodePath("../LimiteCam")
 
 [node name="LimiteCam" type="ReferenceRect" parent="." unique_id=1149907711]
-offset_left = -9068.0
-offset_top = -1278.0
-offset_right = 2407.0
-offset_bottom = 1356.0
+offset_left = -8910.0
+offset_top = -1286.0
+offset_right = 2565.0
+offset_bottom = 1348.0

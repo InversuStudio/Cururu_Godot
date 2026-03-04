@@ -169,8 +169,10 @@
 [ext_resource type="Texture2D" uid="uid://d0q7x1jhnmcgk" path="res://Sprites/Cururu/Melee/V2/ATAQUE_2_HITS_CHAO/CURURU_ATAQUE_31.png" id="117_8vwo5"]
 [ext_resource type="Texture2D" uid="uid://fvwb01o71euv" path="res://Sprites/Cururu/Melee/V2/ATAQUE_2_HITS_CEU/CURURU_ATAQUE_61.png" id="117_yjbv0"]
 [ext_resource type="Texture2D" uid="uid://rq53w40ta035" path="res://Sprites/Cururu/Melee/V2/ATAQUE_2_HITS_CHAO/CURURU_ATAQUE_23.png" id="118_qtftx"]
+[ext_resource type="Texture2D" uid="uid://cgbae75gk5oid" path="res://Sprites/Cururu/Melee/V2/ATAQUE_2_HITS_CEU/CURURU_ATAQUE_51.png" id="119_24i8l"]
 [ext_resource type="Texture2D" uid="uid://3g4t8coqffhd" path="res://Sprites/Cururu/Melee/V2/ATAQUE_2_HITS_CHAO/CURURU_ATAQUE_25.png" id="119_yjbv0"]
 [ext_resource type="Texture2D" uid="uid://ds8cggb4wbvby" path="res://Sprites/Cururu/Melee/V2/ATAQUE_2_HITS_CHAO/CURURU_ATAQUE_27.png" id="120_lypds"]
+[ext_resource type="Texture2D" uid="uid://dmkqecifr50u3" path="res://Sprites/Cururu/Melee/Ataque cima/CURURU_358.png" id="120_xgubl"]
 [ext_resource type="Texture2D" uid="uid://bd4mrdmvfskq6" path="res://Sprites/Cururu/Melee/V2/ATAQUE_2_HITS_CHAO/CURURU_ATAQUE_29.png" id="121_c06e5"]
 [ext_resource type="AudioStream" uid="uid://dlp7ijp7u7b4i" path="res://Audio/SFX/Comidinha Hum.wav" id="153_ta3r2"]
 [ext_resource type="AudioStream" uid="uid://betvqt03p81ol" path="res://Audio/SFX/CURURU/dash_cururu.wav" id="154_wxhj3"]
@@ -637,15 +639,27 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("65_ny8nr")
+"texture": ExtResource("113_hge68")
+}, {
+"duration": 1.0,
+"texture": ExtResource("119_24i8l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("114_pxml6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("115_8vwo5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("117_yjbv0")
 }],
 "loop": false,
 "name": &"Melee_Down",
-"speed": 5.0
+"speed": 8.0
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("65_ny8nr")
+"texture": ExtResource("120_xgubl")
 }],
 "loop": false,
 "name": &"Melee_Up",
@@ -1945,7 +1959,7 @@ unique_name_in_owner = true
 position = Vector2(0, -115)
 scale = Vector2(0.37, 0.37)
 sprite_frames = SubResource("SpriteFrames_ser7u")
-animation = &"Land"
+animation = &"Idle"
 frame = 1
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=185604391]
