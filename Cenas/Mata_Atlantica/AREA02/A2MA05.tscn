@@ -3923,7 +3923,6 @@ shape = SubResource("RectangleShape2D_uw7k4")
 [node name="BGM_Player" type="Node" parent="." unique_id=1367433750]
 script = ExtResource("25_1vw3w")
 musica = ExtResource("26_patjh")
-volume = -0.5
 metadata/_custom_type_script = "uid://dd16yu704x6wt"
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1553781380]
@@ -3939,7 +3938,7 @@ offset_right = 7697.0
 offset_bottom = -95.0
 
 [node name="MainCamera" parent="." unique_id=1498522677 node_paths=PackedStringArray("target", "limite_camera") instance=ExtResource("30_yk4cc")]
-position = Vector2(7348.9995, -433.99988)
+position = Vector2(7428.998, -433.99988)
 zoom = Vector2(0.8, 0.8)
 limit_enabled = true
 limit_left = 674

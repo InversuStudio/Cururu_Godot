@@ -9,6 +9,8 @@ extends State
 @export var melee_state: State = null
 ## State de ataque magico
 @export var special_state: State = null
+## State wall slide
+@export var wall_state:State = null
 
 var nao_move:bool = false
 
@@ -17,7 +19,10 @@ func Enter() -> void:
 	%VFX.visible = false
 	print("JUMP")
 	Console._State(name)
-	parent.velocity.y = -parent.jump_force # Aplica pulo
+	var forca:float = parent.jump_force
+	if get_parent().last_state == wall_state:
+		forca -= wall_state.reducao_pulo
+	parent.velocity.y = -forca # Aplica pulo
 	%Anim.play("Jump") # Animação de pulo
 	%SFX_Pulo.play()
 	if !Input.is_action_pressed("pulo") and parent.pode_mover and !GameData.veio_de_baixo:
@@ -77,5 +82,8 @@ func FixedUpdate(delta: float) -> State:
 	# Se estiver caindo, muda State
 	if parent.velocity.y >= 0.0:
 		return fall_state
+	
+	if parent.is_on_wall_only() and parent.input_move[0] and parent.pode_wall:
+		return wall_state
 		
 	return null # Não muda o State

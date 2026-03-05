@@ -527,7 +527,7 @@ texture = ExtResource("17_l3md2")
 follow_viewport_enabled = true
 
 [node name="MainCamera" parent="." unique_id=1340226637 node_paths=PackedStringArray("target", "limite_camera") instance=ExtResource("25_mhwhk")]
-position = Vector2(1593.9999, -3026.9993)
+position = Vector2(1673.9995, -3026.9993)
 zoom = Vector2(0.8, 0.8)
 limit_enabled = true
 limit_left = -1449
@@ -540,7 +540,6 @@ limite_camera = NodePath("../Limitecam")
 [node name="BGM_Player" type="Node" parent="." unique_id=542569025]
 script = ExtResource("34_l7lqk")
 musica = ExtResource("35_158ye")
-volume = -0.5
 metadata/_custom_type_script = "uid://dd16yu704x6wt"
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=377339994]

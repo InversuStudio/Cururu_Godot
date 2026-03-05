@@ -12,6 +12,8 @@
 [ext_resource type="PackedScene" uid="uid://cqyub70sv0ofp" path="res://Objetos/Props/SavePoint.tscn" id="8_42ak8"]
 [ext_resource type="PackedScene" uid="uid://u28e3eudu6ch" path="res://Objetos/Funcionalidade/MainCamera.tscn" id="9_p6tq3"]
 [ext_resource type="PackedScene" uid="uid://bjvnm0aydr0vd" path="res://Objetos/Entidades/Morcego.tscn" id="12_dvqwq"]
+[ext_resource type="Script" uid="uid://dd16yu704x6wt" path="res://Scripts/Componentes/BGM_Player.gd" id="13_01inf"]
+[ext_resource type="AudioStream" uid="uid://b18d40g67evyi" path="res://Audio/Musicas/Aparecimento do Saci.ogg" id="14_kppoi"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_p6tq3"]
 texture = ExtResource("1_p6tq3")
@@ -168,13 +170,17 @@ enabled = false
 zoom = Vector2(1.11, 1.11)
 
 [node name="MainCamera" parent="." unique_id=1903369210 node_paths=PackedStringArray("target", "limite_camera") instance=ExtResource("9_p6tq3")]
-position = Vector2(80.00002, -79.99998)
+position = Vector2(79.99998, -79.99998)
 limit_enabled = true
 limit_left = -2882
 limit_top = -991
 limit_right = 1152
 limit_bottom = 80
 target = NodePath("../Player")
-look_ahead = 80.0
 limite_camera = NodePath("../LimiteCam")
 mostrar_deadzone_no_jogo = true
+
+[node name="BGM_Player" type="Node" parent="." unique_id=1436743031]
+script = ExtResource("13_01inf")
+musica = ExtResource("14_kppoi")
+metadata/_custom_type_script = "uid://dd16yu704x6wt"

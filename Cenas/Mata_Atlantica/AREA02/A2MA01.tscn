@@ -1872,7 +1872,6 @@ debug_color = Color(0.71713597, 0.46270615, 0.37672725, 0.41960785)
 [node name="BGM_Player" type="Node" parent="." unique_id=2124405473]
 script = ExtResource("27_hdfdg")
 musica = ExtResource("28_75oum")
-volume = -0.5
 metadata/_custom_type_script = "uid://dd16yu704x6wt"
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1823793790]
@@ -1882,7 +1881,7 @@ volume_db = 5.0
 autoplay = true
 
 [node name="MainCamera" parent="." unique_id=1802549890 node_paths=PackedStringArray("target", "limite_camera") instance=ExtResource("27_ctjy6")]
-position = Vector2(512.0005, 1314.0004)
+position = Vector2(592.0003, 1314.0004)
 zoom = Vector2(0.8, 0.8)
 limit_enabled = true
 limit_left = -4329

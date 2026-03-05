@@ -1384,23 +1384,21 @@ follow_viewport_enabled = true
 [node name="BGM_Player" type="Node" parent="." unique_id=1658500375]
 script = ExtResource("27_nh2iu")
 musica = ExtResource("28_m4yll")
-volume = -0.5
 metadata/_custom_type_script = "uid://dd16yu704x6wt"
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=997109402]
 process_mode = 3
 stream = ExtResource("43_gr3ec")
-volume_db = 5.0
 autoplay = true
 
 [node name="MainCamera" parent="." unique_id=1186591248 node_paths=PackedStringArray("target", "limite_camera") instance=ExtResource("31_f8u2d")]
 position = Vector2(-8701.006, -217.99994)
 zoom = Vector2(0.8, 0.8)
 limit_enabled = true
-limit_left = -9068
-limit_top = -1278
-limit_right = 2407
-limit_bottom = 1356
+limit_left = -8910
+limit_top = -1286
+limit_right = 2565
+limit_bottom = 1348
 target = NodePath("../background/0/Cururu")
 speed = 6.0
 limite_camera = NodePath("../LimiteCam")

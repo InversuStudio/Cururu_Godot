@@ -669,7 +669,6 @@ follow_viewport_enabled = true
 [node name="BGM_Player" type="Node" parent="." unique_id=1827029875]
 script = ExtResource("23_8nsrb")
 musica = ExtResource("24_4ft46")
-volume = -0.5
 metadata/_custom_type_script = "uid://dd16yu704x6wt"
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1182077035]
@@ -679,7 +678,7 @@ volume_db = 5.0
 autoplay = true
 
 [node name="MainCamera" parent="." unique_id=403645477 node_paths=PackedStringArray("target", "limite_camera") instance=ExtResource("23_n5d52")]
-position = Vector2(228, -596.4998)
+position = Vector2(307.9999, -596.4998)
 zoom = Vector2(0.8, 0.8)
 limit_enabled = true
 limit_left = 6

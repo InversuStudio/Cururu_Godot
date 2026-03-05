@@ -79,6 +79,7 @@ var deu_air_dash: bool = false
 var input_move: Vector2 = Vector2.ZERO
 var pode_mover: bool = true
 var pode_ataque:bool = true
+var pode_wall:bool = true
 
 #var pode_anim:bool = true
 

@@ -30,6 +30,8 @@
 [ext_resource type="Texture2D" uid="uid://c8bkav2g3wyeu" path="res://Sprites/Cenário/Mata_Atlantica/Chao/moita2.png" id="26_fjg5v"]
 [ext_resource type="PackedScene" uid="uid://davj0hqm0kiya" path="res://Objetos/Funcionalidade/TransicaoCameraNeo.tscn" id="27_der3i"]
 [ext_resource type="PackedScene" uid="uid://va5pjd6vuuo2" path="res://Objetos/Funcionalidade/CompHurtBox.tscn" id="27_ixy8u"]
+[ext_resource type="Script" uid="uid://dd16yu704x6wt" path="res://Scripts/Componentes/BGM_Player.gd" id="31_cq3ie"]
+[ext_resource type="AudioStream" uid="uid://c7qftchbhu6xc" path="res://Audio/SFX/AMBIENTE/Musica_Jogo.mp3" id="32_m8swv"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fjg5v"]
 texture = ExtResource("5_tkd1t")
@@ -403,5 +405,10 @@ sprite = NodePath("..")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AIAIAIAI/HurtBox" unique_id=161370726]
 shape = SubResource("RectangleShape2D_fjg5v")
+
+[node name="BGM_Player" type="Node" parent="." unique_id=1006694824]
+script = ExtResource("31_cq3ie")
+musica = ExtResource("32_m8swv")
+metadata/_custom_type_script = "uid://dd16yu704x6wt"
 
 [editable path="Props/UpgradeMissil"]

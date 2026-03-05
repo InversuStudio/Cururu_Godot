@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://drlbsodypev3g"]
+[gd_scene format=3 uid="uid://drlbsodypev3g"]
 
 [ext_resource type="Script" uid="uid://jrl1634sm6lb" path="res://Scripts/Componentes/MenuPrincipal.gd" id="1_sgs44"]
 [ext_resource type="Texture2D" uid="uid://ciudp1bvjo4s5" path="res://Sprites/UI/Telainicial/01.png" id="2_hkuru"]
@@ -6,7 +6,7 @@
 [ext_resource type="AudioStream" uid="uid://bash5t5ceubo" path="res://Audio/Musicas/Cururu - Tema.ogg" id="5_6y4ar"]
 [ext_resource type="Script" uid="uid://dd16yu704x6wt" path="res://Scripts/Componentes/BGM_Player.gd" id="5_e3fqx"]
 
-[node name="MenuPrincipal" type="Control"]
+[node name="MenuPrincipal" type="Control" unique_id=1104044087]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -15,7 +15,7 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_sgs44")
 
-[node name="Background" type="TextureRect" parent="."]
+[node name="Background" type="TextureRect" parent="." unique_id=1423255837]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -24,7 +24,7 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("2_hkuru")
 
-[node name="HBoxContainer" type="VBoxContainer" parent="."]
+[node name="HBoxContainer" type="VBoxContainer" parent="." unique_id=410967359]
 layout_mode = 1
 anchors_preset = 4
 anchor_top = 0.5
@@ -36,7 +36,7 @@ offset_bottom = 211.0
 grow_vertical = 2
 theme_override_constants/separation = 20
 
-[node name="NovoJogo" type="Button" parent="HBoxContainer"]
+[node name="NovoJogo" type="Button" parent="HBoxContainer" unique_id=1293579081]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(350, 100)
 layout_mode = 2
@@ -44,7 +44,7 @@ size_flags_horizontal = 3
 theme_override_font_sizes/font_size = 40
 text = "Novo Jogo"
 
-[node name="Continuar" type="Button" parent="HBoxContainer"]
+[node name="Continuar" type="Button" parent="HBoxContainer" unique_id=1082075029]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(350, 100)
 layout_mode = 2
@@ -52,18 +52,18 @@ size_flags_horizontal = 3
 theme_override_font_sizes/font_size = 40
 text = "Continuar"
 
-[node name="Sair" type="Button" parent="HBoxContainer"]
+[node name="Sair" type="Button" parent="HBoxContainer" unique_id=1889683076]
 custom_minimum_size = Vector2(350, 100)
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_font_sizes/font_size = 40
 text = "Sair"
 
-[node name="BtnSFX" type="AudioStreamPlayer" parent="."]
+[node name="BtnSFX" type="AudioStreamPlayer" parent="." unique_id=1829523539]
 stream = ExtResource("4_6y4ar")
 volume_db = -15.0
 
-[node name="BGM_Player" type="Node" parent="."]
+[node name="BGM_Player" type="Node" parent="." unique_id=1032708573]
 script = ExtResource("5_e3fqx")
 musica = ExtResource("5_6y4ar")
 metadata/_custom_type_script = "uid://dd16yu704x6wt"

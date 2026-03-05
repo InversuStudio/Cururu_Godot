@@ -1921,7 +1921,6 @@ position = Vector2(5324, -4502)
 [node name="BGM_Player" type="Node" parent="." unique_id=1222702834]
 script = ExtResource("30_78wer")
 musica = ExtResource("31_byk7f")
-volume = -0.5
 metadata/_custom_type_script = "uid://dd16yu704x6wt"
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1574788492]
@@ -1934,7 +1933,7 @@ autoplay = true
 position = Vector2(1951, -4737)
 
 [node name="MainCamera" parent="." unique_id=259690790 node_paths=PackedStringArray("target", "limite_camera") instance=ExtResource("10_3ocar")]
-position = Vector2(3916.9998, -1695.9995)
+position = Vector2(3996.999, -1695.9995)
 zoom = Vector2(0.8, 0.8)
 limit_enabled = true
 limit_left = 1816

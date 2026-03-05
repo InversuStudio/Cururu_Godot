@@ -2,9 +2,49 @@
 
 [ext_resource type="Script" uid="uid://duccqdglv82tj" path="res://Scripts/Globais/BGM.gd" id="1_704en"]
 
+[sub_resource type="Animation" id="Animation_704en"]
+resource_name = "FadeIn"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:volume_db")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [-80.0, 0.0]
+}
+
+[sub_resource type="Animation" id="Animation_hloct"]
+resource_name = "FadeOut"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:volume_db")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, -80.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_hloct"]
+_data = {
+&"FadeIn": SubResource("Animation_704en"),
+&"FadeOut": SubResource("Animation_hloct")
+}
+
 [node name="BGM_Global" type="AudioStreamPlayer" unique_id=1557754073]
 process_mode = 3
-volume_db = -25.0
-pitch_scale = 0.9
+volume_db = -80.0
 bus = &"BGM"
 script = ExtResource("1_704en")
+
+[node name="Anim" type="AnimationPlayer" parent="." unique_id=1784873372]
+libraries/ = SubResource("AnimationLibrary_hloct")

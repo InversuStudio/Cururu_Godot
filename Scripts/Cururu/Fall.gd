@@ -13,6 +13,8 @@ extends State
 @export var special_state: State = null
 ## State nadando
 @export var nado_state:State = null
+## State wall slide
+@export var wall_state:State = null
 
 # INICIA O STATE
 func Enter() -> void:
@@ -78,7 +80,10 @@ func FixedUpdate(delta: float) -> State:
 			parent.is_jump_lag = false
 			return pulo_state
 		return chao_state
-		
+	
+	if parent.is_on_wall_only() and parent.input_move[0] and parent.pode_wall:
+		return wall_state
+	
 	return null # Não muda o State
 
 func _on_coyote_timeout() -> void:

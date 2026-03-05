@@ -1346,7 +1346,7 @@ texture = ExtResource("43_wmciv")
 position = Vector2(39399, 2158)
 
 [node name="MainCamera" parent="." unique_id=1559989611 node_paths=PackedStringArray("target", "limite_camera") instance=ExtResource("37_nika8")]
-position = Vector2(1008.9998, -1239.9993)
+position = Vector2(1088.9993, -1239.9993)
 zoom = Vector2(0.8, 0.8)
 limit_enabled = true
 limit_left = 243

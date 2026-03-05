@@ -3,9 +3,12 @@ extends State
 @export var jump_state:State = null
 
 # Ajustes físicos da água
-@export var entry_damping := 0.25        # quanto da velocidade sobra ao entrar na água
-@export var surface_buoyancy := -64.0    # força de subida da água (mais forte)
-@export var surface_lerp := 0.18         # velocidade de resposta da água
+## Quanto da velocidade sobra ao entrar na água
+@export var entry_damping := 0.25
+## Força de subida da água (mais forte)
+@export var surface_buoyancy := 64.0
+## Velocidade de resposta da água
+@export var surface_lerp := 0.18
 
 const vfx:Array[PackedScene] = [
 	preload("res://Objetos/Funcionalidade/VFX_Agua_In.tscn"),
@@ -25,6 +28,7 @@ const sfx_movement:Array[AudioStream] = [
 ]
 
 func Enter() -> void:
+	parent.pode_wall = false
 	# VFX + SFX de entrada na água
 	var v:Node2D = vfx[0].instantiate()
 	v.global_position = parent.global_position
@@ -47,6 +51,9 @@ func Exit() -> void:
 
 	%SFX_Extra.stream = sfx[1]
 	%SFX_Extra.play()
+	
+	await get_tree().create_timer(.2).timeout
+	parent.pode_wall = true
 
 func Update(_delta : float) -> State:
 	# Transição para pulo se não houver água acima
@@ -90,7 +97,7 @@ func FixedUpdate(delta : float) -> State:
 		# Subida rápida e suave até a superfície
 		parent.velocity.y = lerp(
 			parent.velocity.y,
-			surface_buoyancy,
+			-surface_buoyancy,
 			surface_lerp
 		)
 

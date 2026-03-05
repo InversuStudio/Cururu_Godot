@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://nohq28uk7lfk" path="res://Objetos/Entidades/Player.tscn" id="3_14s47"]
 [ext_resource type="PackedScene" uid="uid://1apfpwlqocxn" path="res://Objetos/Funcionalidade/TransicaoFase.tscn" id="4_aug86"]
 [ext_resource type="PackedScene" uid="uid://cex7nla2adui2" path="res://Objetos/Funcionalidade/ProjetaPlayer.tscn" id="5_kwcei"]
+[ext_resource type="Script" uid="uid://dd16yu704x6wt" path="res://Scripts/Componentes/BGM_Player.gd" id="6_tjjcd"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nl0uo"]
 size = Vector2(530, 52)
@@ -41,3 +42,7 @@ shape = SubResource("RectangleShape2D_nl0uo")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ProjetaPlayer" unique_id=1911686990]
 position = Vector2(1, -226.25)
 shape = SubResource("RectangleShape2D_tjjcd")
+
+[node name="BGM_Player" type="Node" parent="." unique_id=1774235122]
+script = ExtResource("6_tjjcd")
+metadata/_custom_type_script = "uid://dd16yu704x6wt"
