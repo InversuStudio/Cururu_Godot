@@ -36,11 +36,17 @@ var shake_ativo:bool = false
 
 var seguindo:bool = false
 
+@export_group("Olhar")
+@export var distancia_olhar:float = 0.0
+@export var tempo_ate_olhar:float = 1.5
+var comando:float = 0.0
+
 func _draw() -> void:
 	if mostrar_deadzone_no_jogo or Engine.is_editor_hint():
 		draw_rect(Rect2(-deadzone, deadzone * 2.0), Color.BLUE_VIOLET, false, 5.0)
-
+	
 func _ready() -> void:
+	distancia_olhar *= 128
 	await get_tree().physics_frame
 	if target:
 		global_position = target.global_position + offset
@@ -54,8 +60,15 @@ func _ready() -> void:
 		limit_bottom = int(limite_camera.global_position.y + limite_camera.size.y)
 
 func Follow(delta:float) -> void:
+	var look:float = 0.0
+	if target.state_machine.current_state.name == "Chao":
+		if comando >= tempo_ate_olhar:
+			look = -distancia_olhar
+		elif comando <= -tempo_ate_olhar:
+			look = distancia_olhar
+		
 	global_position = global_position.lerp(target_pos + offset_target + Vector2(
-		look_ahead, 0.0), delta * speed)
+		look_ahead, look), delta * speed)
 
 func _physics_process(delta: float) -> void:
 	if target:

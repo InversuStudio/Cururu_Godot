@@ -159,6 +159,14 @@ func _process(delta: float) -> void:
 			GameData.leu_data = false
 			GameData.Load()
 		else: vida.RecebeDano(vida.vida_max)
+	
+	if input_move.y:
+		if input_move.y > 0:
+			Mundos.main_camera.comando -= delta
+		else:
+			Mundos.main_camera.comando += delta
+	else:
+		Mundos.main_camera.comando = 0.0
 
 func _physics_process(delta: float) -> void:
 	# Aplica PHYSICS_PROCESS do StateMachine
