@@ -13,7 +13,6 @@ offset_target = Vector2(0, -80)
 look_ahead = 80.0
 speed = 8.0
 deadzone = Vector2(100, 300)
-distancia_olhar = 3.0
 tempo_ate_olhar = 1.0
 
 [node name="Timer" type="Timer" parent="." unique_id=688448171]
