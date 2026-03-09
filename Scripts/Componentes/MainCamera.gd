@@ -37,7 +37,7 @@ var shake_ativo:bool = false
 var seguindo:bool = false
 
 @export_group("Olhar")
-@export var distancia_olhar:float = 0.0
+@export var distancia_olhar:float = 3.0
 @export var tempo_ate_olhar:float = 1.5
 var comando:float = 0.0
 
