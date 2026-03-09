@@ -926,7 +926,7 @@ volume_db = 5.0
 autoplay = true
 
 [node name="MainCamera" parent="." unique_id=1782270433 node_paths=PackedStringArray("target", "limite_camera") instance=ExtResource("26_v7vqr")]
-position = Vector2(980.00006, -470.9999)
+position = Vector2(1059.9996, -470.9999)
 zoom = Vector2(0.8, 0.8)
 limit_enabled = true
 limit_left = 512

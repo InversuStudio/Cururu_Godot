@@ -1652,7 +1652,7 @@ position = Vector2(17.125, -716.6875)
 shape = SubResource("RectangleShape2D_nj6rs")
 
 [node name="MainCamera" parent="." unique_id=770539483 node_paths=PackedStringArray("target", "limite_camera") instance=ExtResource("1_nutf4")]
-position = Vector2(-29361.998, -3397.9985)
+position = Vector2(-29282.008, -3397.9985)
 zoom = Vector2(0.8, 0.8)
 limit_enabled = true
 limit_left = -29820

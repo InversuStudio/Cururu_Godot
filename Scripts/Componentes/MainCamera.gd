@@ -37,16 +37,17 @@ var shake_ativo:bool = false
 var seguindo:bool = false
 
 @export_group("Olhar")
-@export var distancia_olhar:float = 3.0
+@export var distancia_a_olhar:float = 3.0
 @export var tempo_ate_olhar:float = 1.5
 var comando:float = 0.0
+
+@onready var dist:float = distancia_a_olhar * 128
 
 func _draw() -> void:
 	if mostrar_deadzone_no_jogo or Engine.is_editor_hint():
 		draw_rect(Rect2(-deadzone, deadzone * 2.0), Color.BLUE_VIOLET, false, 5.0)
 	
 func _ready() -> void:
-	distancia_olhar *= 128
 	await get_tree().physics_frame
 	if target:
 		global_position = target.global_position + offset
@@ -62,9 +63,9 @@ func _ready() -> void:
 func Follow(delta:float) -> void:
 	var look:float = 0.0
 	if comando >= tempo_ate_olhar:
-		look = -distancia_olhar
+		look = -dist
 	elif comando <= -tempo_ate_olhar:
-		look = distancia_olhar
+		look = dist
 		
 	global_position = global_position.lerp(target_pos + offset_target + Vector2(
 		look_ahead, look), delta * speed)

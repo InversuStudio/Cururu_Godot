@@ -2498,7 +2498,7 @@ volume_db = 5.0
 autoplay = true
 
 [node name="MainCamera" parent="." unique_id=1558626816 node_paths=PackedStringArray("target", "limite_camera") instance=ExtResource("37_r86pu")]
-position = Vector2(-18459, -3587.0002)
+position = Vector2(-18379.008, -3666.9993)
 zoom = Vector2(0.8, 0.8)
 limit_enabled = true
 limit_left = -18893
@@ -2508,7 +2508,6 @@ limit_bottom = 1296
 target = NodePath("../Background/0/Cururu")
 speed = 7.0
 limite_camera = NodePath("../ReferenceRect")
-distancia_olhar = 49152.0
 
 [node name="ReferenceRect" type="ReferenceRect" parent="." unique_id=1517466278]
 offset_left = -18893.0

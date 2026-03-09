@@ -560,7 +560,7 @@ scale = Vector2(1.9286382, 1.9286385)
 texture = ExtResource("30_8clb6")
 
 [node name="MainCamera" parent="." unique_id=558660038 node_paths=PackedStringArray("target", "limite_camera") instance=ExtResource("6_w3wn0")]
-position = Vector2(3269, -4572.9985)
+position = Vector2(3348.9993, -4572.9985)
 zoom = Vector2(0.8, 0.8)
 limit_enabled = true
 limit_left = -631

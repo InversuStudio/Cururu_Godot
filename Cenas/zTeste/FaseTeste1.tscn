@@ -341,7 +341,7 @@ texture = ExtResource("26_fjg5v")
 [node name="Cameras" type="Node" parent="." unique_id=1680847220]
 
 [node name="MainCamera" parent="Cameras" unique_id=1321892263 node_paths=PackedStringArray("target", "limite_camera") instance=ExtResource("22_der3i")]
-position = Vector2(-146, -434)
+position = Vector2(-66.00002, -513.9998)
 zoom = Vector2(0.8, 0.8)
 limit_enabled = true
 limit_left = -2669
@@ -351,7 +351,6 @@ limit_bottom = 55
 target = NodePath("../../Entidades/Player")
 limite_camera = NodePath("../../LimiteCam")
 mostrar_deadzone_no_jogo = true
-distancia_olhar = 0.0
 tempo_ate_olhar = 1.5
 
 [node name="Salao" type="Camera2D" parent="Cameras" unique_id=1750102280]

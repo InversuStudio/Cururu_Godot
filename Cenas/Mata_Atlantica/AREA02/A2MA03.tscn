@@ -63,7 +63,7 @@ position = Vector2(1317, -2128)
 position = Vector2(435, -1796)
 
 [node name="MainCamera" parent="." unique_id=757867344 node_paths=PackedStringArray("target", "limite_camera") instance=ExtResource("8_awfgj")]
-position = Vector2(6934.0005, -1486.9996)
+position = Vector2(7013.999, -1486.9996)
 zoom = Vector2(0.8, 0.8)
 limit_enabled = true
 limit_left = 256
