@@ -61,11 +61,10 @@ func _ready() -> void:
 
 func Follow(delta:float) -> void:
 	var look:float = 0.0
-	if target.state_machine.current_state.name == "Chao":
-		if comando >= tempo_ate_olhar:
-			look = -distancia_olhar
-		elif comando <= -tempo_ate_olhar:
-			look = distancia_olhar
+	if comando >= tempo_ate_olhar:
+		look = -distancia_olhar
+	elif comando <= -tempo_ate_olhar:
+		look = distancia_olhar
 		
 	global_position = global_position.lerp(target_pos + offset_target + Vector2(
 		look_ahead, look), delta * speed)
