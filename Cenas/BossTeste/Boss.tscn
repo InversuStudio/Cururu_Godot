@@ -112,6 +112,7 @@
 [ext_resource type="Script" uid="uid://c041l8mwrkgsy" path="res://Scripts/Boss/PilarFogo.gd" id="85_fi4f6"]
 [ext_resource type="AudioStream" uid="uid://xpg30gdluf8e" path="res://Audio/SFX/BOITATA/Boitata voice A.wav" id="88_q1nmn"]
 [ext_resource type="Script" uid="uid://csduvsab0hpe3" path="res://Scripts/Boss/Fim.gd" id="95_q1nmn"]
+[ext_resource type="AudioStream" uid="uid://dn437tifqwenk" path="res://Audio/SFX/BOITATA/BossBreak.mp3" id="104_fhomc"]
 [ext_resource type="Texture2D" uid="uid://c8arw41hfnk4n" path="res://Sprites/UI/Boitata/Barra_miasma.png" id="113_iwjnr"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_iwjnr"]
@@ -743,55 +744,55 @@ tracks/2/keys = {
 [sub_resource type="Animation" id="Animation_fwdqd"]
 resource_name = "Pilar"
 length = 1.4
-tracks/0/type = "method"
+tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("StateMachine/PilarFogo")
+tracks/0/path = NodePath("GritoSFX:playing")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0.5),
+"times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
-"values": [{
-"args": [],
-"method": &"CriaPilar"
-}]
+"update": 1,
+"values": [true]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("GritoSFX:playing")
+tracks/1/path = NodePath("SpriteMain:animation")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [true]
+"values": [&"Grito"]
 }
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("SpriteMain:animation")
+tracks/2/path = NodePath("SpriteMain:frame")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [&"Grito"]
-}
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("SpriteMain:frame")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
 "times": PackedFloat32Array(0, 0.10000001, 0.20000002, 0.3, 0.40000004, 0.5, 0.6, 0.70000005, 0.8000001, 0.90000004, 1, 1.1, 1.2, 1.3000001),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
 "update": 1,
 "values": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+}
+tracks/3/type = "method"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("StateMachine/PilarFogo")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.2),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"RandomPilares"
+}]
 }
 
 [sub_resource type="Animation" id="Animation_iqxfe"]
@@ -883,14 +884,6 @@ _data = {
 &"Surge": SubResource("Animation_sgy8v")
 }
 
-[sub_resource type="Animation" id="Animation_iwjnr"]
-resource_name = "1"
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_fhomc"]
-_data = {
-&"1": SubResource("Animation_iwjnr")
-}
-
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_iwjnr"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_3l7sv"]
@@ -950,7 +943,7 @@ animation = &"Idle"
 [node name="VidaBoss" type="Node" parent="." unique_id=1212445150]
 unique_name_in_owner = true
 script = ExtResource("2_16hqa")
-vida_max = 1
+vida_max = 50
 metadata/_custom_type_script = "uid://hsdutxxttrp3"
 
 [node name="HurtBox" parent="." unique_id=1116069954 node_paths=PackedStringArray("comp_vida", "sprite") instance=ExtResource("3_fwdqd")]
@@ -970,7 +963,7 @@ debug_color = Color(0.9968892, 0, 0.18689972, 0.41960785)
 [node name="VidaMCabeca" type="Node" parent="." unique_id=826151967]
 unique_name_in_owner = true
 script = ExtResource("2_16hqa")
-vida_max = 5
+vida_max = 10
 morre = false
 metadata/_custom_type_script = "uid://hsdutxxttrp3"
 
@@ -989,7 +982,7 @@ shape = SubResource("CapsuleShape2D_mjx0v")
 [node name="VidaMCorpo" type="Node" parent="." unique_id=192601500]
 unique_name_in_owner = true
 script = ExtResource("2_16hqa")
-vida_max = 1
+vida_max = 10
 morre = false
 metadata/_custom_type_script = "uid://hsdutxxttrp3"
 
@@ -1007,18 +1000,19 @@ shape = SubResource("CapsuleShape2D_0w5f0")
 
 [node name="PosTiro" type="Marker2D" parent="." unique_id=1362764453]
 unique_name_in_owner = true
-position = Vector2(517, -714)
+position = Vector2(423, -933)
 gizmo_extents = 45.0
 
 [node name="Anim" type="AnimationPlayer" parent="." unique_id=1716167178]
 unique_name_in_owner = true
 libraries/ = SubResource("AnimationLibrary_mjx0v")
 
-[node name="Pilares" type="AnimationPlayer" parent="." unique_id=1022354172]
-libraries/ = SubResource("AnimationLibrary_fhomc")
-
 [node name="GritoSFX" type="AudioStreamPlayer" parent="." unique_id=1024676001]
 unique_name_in_owner = true
+
+[node name="BreakSFX" type="AudioStreamPlayer" parent="." unique_id=330073869]
+unique_name_in_owner = true
+stream = ExtResource("104_fhomc")
 
 [node name="StateMachine" type="Node" parent="." unique_id=9262465 node_paths=PackedStringArray("start_state")]
 script = ExtResource("61_01cui")

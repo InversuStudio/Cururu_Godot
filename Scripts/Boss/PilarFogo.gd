@@ -8,6 +8,10 @@ var prosseguir:bool = false
 
 const pilar:PackedScene = preload("res://Cenas/BossTeste/Labareda.tscn")
 
+func _ready() -> void:
+	await get_tree().current_scene.ready
+	parent.spawn_pilar.connect(SpawnPilar)
+
 func Enter() -> void:
 	Console._Print("Pilar Fogo aqui")
 	%GritoSFX.stream = parent.gritos[randi_range(1, 2)]
@@ -21,6 +25,17 @@ func Update(_delta : float) -> State:
 	if prosseguir:
 		return idle_state
 	return null
+
+# Toca ataque aleatório; chamada no AnimationPlayer
+func RandomPilares() -> void:
+	var n:int = randi_range(1, 2)
+	parent.anim_pilares.play(str(n))
+
+# Instancia os pilares de fogo; chamada no AnimationPlayer
+func SpawnPilar(pos:Vector2) -> void:
+	var p:Node2D = pilar.instantiate()
+	p.global_position = pos
+	parent.get_parent().add_child(p)
 
 # Função chamada no AnimationPlayer
 func CriaPilar() -> void:

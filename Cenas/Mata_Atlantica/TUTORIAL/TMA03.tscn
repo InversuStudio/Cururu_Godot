@@ -2488,7 +2488,6 @@ shape = SubResource("RectangleShape2D_op0pn")
 [node name="BGM_Player" type="Node" parent="." unique_id=1164482962]
 script = ExtResource("31_op0pn")
 musica = ExtResource("32_54dor")
-volume = -0.5
 metadata/_custom_type_script = "uid://dd16yu704x6wt"
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=163959199]

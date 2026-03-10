@@ -1607,7 +1607,6 @@ follow_viewport_enabled = true
 [node name="BGM_Player" type="Node" parent="." unique_id=1396395826]
 script = ExtResource("29_fo7ry")
 musica = ExtResource("30_6d1b1")
-volume = -0.5
 metadata/_custom_type_script = "uid://dd16yu704x6wt"
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1783361981]

@@ -1,11 +1,17 @@
 extends Node2D
 
-@export var speed:Vector2 = Vector2(1,0)
+@export var speed:float = 1.0
+@export var offset_target:Vector2 = Vector2(0.0, -200)
+var target_dir:Vector2 = Vector2.ZERO
 
-func _process(delta: float) -> void:
-	global_position += speed * 128 * delta
+func _ready() -> void:
+	speed *= 128
+	look_at(Mundos.player.global_position + offset_target)
 
-func _on_hit_box_hit(_pos:Vector2) -> void:
+func _physics_process(delta: float) -> void:
+	global_position += target_dir * speed * delta
+	
+func _on_hit_box_hit(_pos:Vector2, _l:int) -> void:
 	Desabilita()
 
 func _on_hit_box_body_entered(_body: Node2D) -> void:

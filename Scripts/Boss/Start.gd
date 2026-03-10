@@ -15,6 +15,7 @@ func PlayerEntrou(body:Node2D) -> void:
 		parent.area_check_player = null
 		%Anim.play("Surge")
 		parent.rabo.show()
+		Mundos.main_camera.usa_look_ahead = false
 
 func Update(_delta: float) -> State:
 	if inicia_luta:

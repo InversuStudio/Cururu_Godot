@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://dct0yu1s5isad"]
+[gd_scene format=3 uid="uid://dct0yu1s5isad"]
 
 [ext_resource type="Script" uid="uid://dbg0osum7dedd" path="res://Scripts/Boss/BolaDeFogo.gd" id="1_qng7f"]
 [ext_resource type="Texture2D" uid="uid://363pc3kisej3" path="res://Sprites/Inimigos/Boitata/Ataques/Bola de Fogo/boitata_91.png" id="2_qng7f"]
@@ -65,41 +65,41 @@ animations = [{
 radius = 67.0
 height = 230.0
 
-[node name="BolaDeFogo" type="Node2D"]
+[node name="BolaDeFogo" type="Node2D" unique_id=1392309426]
 script = ExtResource("1_qng7f")
-speed = Vector2(6, 0.3)
+speed = 7.0
 
-[node name="Sprite" type="AnimatedSprite2D" parent="."]
-position = Vector2(-30, 120)
-scale = Vector2(0.40370366, 0.40370363)
+[node name="Sprite" type="AnimatedSprite2D" parent="." unique_id=1823367063]
+position = Vector2(122, 16.999992)
+scale = Vector2(0.4, 0.4)
 sprite_frames = SubResource("SpriteFrames_u0rk8")
 autoplay = "default"
 frame_progress = 0.033659127
 
-[node name="HitBox" parent="." instance=ExtResource("9_qng7f")]
-position = Vector2(0.125, 77.375)
+[node name="HitBox" parent="Sprite" unique_id=930519873 instance=ExtResource("9_qng7f")]
+position = Vector2(168.4404, -24.770628)
+scale = Vector2(2.4770646, 2.4770646)
 collision_layer = 16
 linear_damp = 1.0
 
-[node name="Col" type="CollisionShape2D" parent="HitBox"]
+[node name="Col" type="CollisionShape2D" parent="Sprite/HitBox" unique_id=1569899352]
 unique_name_in_owner = true
-position = Vector2(45.875, 29.625)
 rotation = 1.5707964
 shape = SubResource("CapsuleShape2D_e7y2f")
 
-[node name="Timer" type="Timer" parent="."]
+[node name="Timer" type="Timer" parent="." unique_id=2115840216]
 wait_time = 3.0
 one_shot = true
 autostart = true
 
-[node name="SFX" type="AudioStreamPlayer2D" parent="."]
+[node name="SFX" type="AudioStreamPlayer2D" parent="." unique_id=1247457200]
 stream = ExtResource("10_u6gje")
 autoplay = true
 
-[node name="SFX_End" type="AudioStreamPlayer2D" parent="."]
+[node name="SFX_End" type="AudioStreamPlayer2D" parent="." unique_id=755103339]
 stream = ExtResource("11_iwi73")
 autoplay = true
 
-[connection signal="body_entered" from="HitBox" to="." method="_on_hit_box_body_entered"]
-[connection signal="hit" from="HitBox" to="." method="_on_hit_box_hit"]
+[connection signal="body_entered" from="Sprite/HitBox" to="." method="_on_hit_box_body_entered"]
+[connection signal="hit" from="Sprite/HitBox" to="." method="_on_hit_box_hit"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

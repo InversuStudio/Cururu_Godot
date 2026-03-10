@@ -1,15 +1,12 @@
 extends Node2D
 
+@export_group("Batalha")
 ## Area2D que checa se player está presente, para iniciar Boss Fight
 @export var area_check_player: Area2D = null
-## Câmera da batalha
-@export var camera_batalha:MainCamera = null
 ## Posição nova da câmera durante batalha
 @export var target_camera_batalha:Node2D = null
-## Posições onde pilares de fogo vão spawnar
-@export var pos_pilares: Array[Node2D] = []
-# Número de ataques até ficar vulnerável
-#@export var num_ate_vulneravel: int = 2
+## AnimationPlayer com os ataques de pilar de fogo
+@export var anim_pilares:AnimationPlayer = null
 ## Distância em que boss usa pilar de fogo
 @export var dist_para_pilar:float = 0.0
 ## Node do rabo
@@ -18,6 +15,10 @@ extends Node2D
 @export var tempo_idle_cuspe:float = 0.0
 ## Tempo parado após pilar de fogo
 @export var tempo_idle_pilar:float = 0.0
+
+signal spawn_pilar
+
+@export_group("Misc.")
 ## Música Boss
 @export var musica_luta:AudioStream = null
 # Número ataques que se passaram
@@ -63,6 +64,9 @@ func _ready() -> void:
 	# Sinais de hurtbox
 	%HurtBox.monitorable = false
 	
+	%HurtCabeca.hurt.connect(TomaDano)
+	%HurtCorpo.hurt.connect(TomaDano)
+	
 	# Inicializa barra de vida
 	%BarraVida.max_value = %VidaBoss.vida_max
 	%BarraVida.value = 0.0
@@ -76,9 +80,8 @@ func _ready() -> void:
 		if start_state:
 			area_check_player.connect("body_entered", func(b:Node2D):
 				start_state.PlayerEntrou(b)
-				camera_batalha.MudaTarget(target_camera_batalha, Vector2.ZERO)
-				camera_batalha.MudaZoom(.6)
-				#camera_batalha.
+				Mundos.main_camera.MudaTarget(target_camera_batalha, Vector2.ZERO)
+				Mundos.main_camera.MudaZoom(.6)
 			)
 	
 	# Inicializa rabo
@@ -89,6 +92,9 @@ func _ready() -> void:
 	rabo.hide()
 	
 	HidePartes()
+
+func TomaDano(hit:Array[HitBox]) -> void:
+	%VidaBoss.RecebeDano(hit[0].dano)
 
 func _process(delta: float) -> void:
 	state_machine.Update(delta)
@@ -116,7 +122,6 @@ func ArmorDano(vida_atual:int, _vida_antiga:int) -> void:
 		tempo_idle_cuspe /= 2.0
 		tempo_idle_pilar /= 2.0
 
-
 func ResetArmor() -> void:
 	%VidaMCabeca.RecebeCura(100)
 	%HurtCabeca.set_deferred("monitorable", true)
@@ -126,15 +131,18 @@ func ResetArmor() -> void:
 	%HurtCorpo.set_deferred("monitorable", true)
 	#%HurtCorpo.show()
 
+func SpawnPilar(pos:NodePath) -> void:
+	var node:Node2D = get_node(pos)
+	spawn_pilar.emit(node.global_position)
+
 func Morte() -> void:
-	%HurtBox.queue_free()
+	%HurtBox.set_deferred("monitorable", false)#queue_free()
 	%TimerNocaute.stop()
 	%TimerIdle.stop()
 	%BarraVida.hide()
 	%Anim.play("Surge", -1, -1.0, true)
 	morreu = true
 	BGM.TocaMusica()
-	#Mundos.CarregaFase(Mundos.NomeFase.FinalDemo)
 
 # ESSAS FUNÇÕES SÃO TEMPORÁRIAS
 func HidePartes() -> void:

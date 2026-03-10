@@ -3,6 +3,8 @@ extends Area2D
 
 ## Componente Vida
 @export var comp_vida : Vida
+## Valor substraído do dano recebido
+@export var defesa:int = 0
 ## Distância do knockback, em metros
 @export var distancia_knockback : float = 0.0
 ## Duração do knockback, em segundos
@@ -43,8 +45,14 @@ func _ready() -> void:
 func RecebeDano(dano:int, pos_target:Vector2):
 	# Se houver componente de vida, recebe dano
 	if comp_vida:
-		comp_vida.RecebeDano(dano)
+		# Rebe dano subtraído da defesa
+		if defesa >= 0:
+			comp_vida.RecebeDano(dano - defesa)
+		# Se defesa for negativa, recebe dano crítico
+		else: comp_vida.RecebeDano(dano * 2)
+		# Se vida chegar a zero, e não houver função de morte especificada...
 		if comp_vida.vida_atual <= 0 and !comp_vida.parent.has_method("Morte"):
+			# ...remove shader para realizar procedimento padrão.
 			sprite.material = null
 	# Aplica knockback, se for definido
 	if distancia_knockback > 0.0 and parent != null:

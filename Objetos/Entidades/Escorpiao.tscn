@@ -156,5 +156,6 @@ unique_name_in_owner = true
 position = Vector2(0, -43)
 
 [node name="OtimizadorSprite" parent="." unique_id=1875718392 instance=ExtResource("9_mvbia")]
-rect = Rect2(-126.47068, -202.94131, 252.94136, 216.17662)
+rect = Rect2(-188.23543, -257.35312, 376.47086, 325.00024)
 follow = true
+disable = true

@@ -24,8 +24,10 @@ func Update(_delta : float) -> State:
 # Função chamada no AnimationPlayer
 func CospeFogo() -> void:
 	var b:Node2D = bola_fogo.instantiate()
-	parent.get_parent().add_child(b)
 	b.global_position = %PosTiro.global_position
+	var pos_player:Vector2 = Mundos.player.global_position + Mundos.main_camera.offset_target
+	b.target_dir = (pos_player - %PosTiro.global_position).normalized()
+	parent.get_parent().add_child(b)
 
 func _on_anim_animation_finished(anim_name: StringName) -> void:
 	if anim_name == "CospeFogo":

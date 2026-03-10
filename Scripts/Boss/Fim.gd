@@ -13,6 +13,7 @@ func Enter() -> void:
 	Mundos.player.pode_mover = false
 	await Mundos.player.anim.animation_finished
 	Mundos.player.anim.play("Idle")
+	Mundos.main_camera.usa_look_ahead = true
 
 func _on_anim_animation_finished(anim_name: StringName) -> void:
 	if get_parent().current_state != self: return

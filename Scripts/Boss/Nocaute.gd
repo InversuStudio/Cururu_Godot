@@ -6,11 +6,19 @@ extends State
 @export var state_final:State = null
 
 var prossegue:bool = false
+var def_original:int = 0
+
+func _ready() -> void:
+	await get_tree().current_scene.ready
+	def_original = %HurtBox.defesa
+	print("DEF: " + str(%HurtBox.defesa))
 
 func Enter() -> void:
 	%Anim.play("NocauteStart")
 	%TimerNocaute.start()
 	prossegue = false
+	%HurtBox.defesa = -1
+	%BreakSFX.play()
 
 func Update(_delta : float) -> State:
 	if prossegue and !parent.morreu:
@@ -26,6 +34,7 @@ func Exit() -> void:
 	prossegue = false
 	%TimerNocaute.stop()
 	parent.ResetArmor()
+	print(%HurtBox)
 
 func _on_anim_animation_finished(anim_name: StringName) -> void:
 	if anim_name == "NocauteEnd":

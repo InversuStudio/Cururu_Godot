@@ -9,6 +9,7 @@ class_name MainCamera extends Camera2D
 @export var zoom_target:float = 0.8
 # Desvio horizontal aplicado quando node se move. Serve para mostrar mais do mapa
 @export var look_ahead:float = 0.0
+var usa_look_ahead:bool = true
 ## Velocidade da câmera ao seguir target
 @export var speed:float = 5.0
 var target_pos:Vector2 = Vector2.ZERO
@@ -66,9 +67,10 @@ func Follow(delta:float) -> void:
 		look = -dist
 	elif comando <= -tempo_ate_olhar:
 		look = dist
-		
+	
+	var la:float = look_ahead if usa_look_ahead else 0.0
 	global_position = global_position.lerp(target_pos + offset_target + Vector2(
-		look_ahead, look), delta * speed)
+		la, look), delta * speed)
 
 func _physics_process(delta: float) -> void:
 	if target:
@@ -86,8 +88,6 @@ func _physics_process(delta: float) -> void:
 			
 			if seguindo:
 				target_pos = target.global_position
-				#if !Engine.is_editor_hint():
-					#target_pos.x += target.input_move.x * look_ahead * 128.0
 		else:
 			target_pos = target.global_position
 	
