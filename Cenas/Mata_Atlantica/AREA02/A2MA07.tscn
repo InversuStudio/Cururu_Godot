@@ -266,10 +266,6 @@ position = Vector2(-3568, -10273.788)
 scale = Vector2(3.1709483, 0.76680833)
 texture = ExtResource("3_eoclm")
 
-[node name="ArvFrente" type="Parallax2D" parent="." unique_id=1949951220]
-visible = false
-scroll_scale = Vector2(0.9, 1)
-
 [node name="ArvoreS1" type="Sprite2D" parent="." unique_id=706239868]
 position = Vector2(-5330.5, -10974.477)
 scale = Vector2(0.85121953, 0.85121953)
@@ -1264,7 +1260,6 @@ shape = SubResource("RectangleShape2D_yhkqu")
 
 [node name="BGM_Player" type="Node" parent="." unique_id=1663845811]
 script = ExtResource("25_xyjrg")
-volume = null
 metadata/_custom_type_script = "uid://dd16yu704x6wt"
 
 [node name="MainCamera" parent="." unique_id=118242403 node_paths=PackedStringArray("target", "limite_camera") instance=ExtResource("33_giq4m")]

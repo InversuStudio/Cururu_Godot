@@ -44,7 +44,7 @@ func RecebeDano(dano:int, pos_target:Vector2):
 	# Se houver componente de vida, recebe dano
 	if comp_vida:
 		comp_vida.RecebeDano(dano)
-		if comp_vida.vida_atual <= 0:
+		if comp_vida.vida_atual <= 0 and !comp_vida.parent.has_method("Morte"):
 			sprite.material = null
 	# Aplica knockback, se for definido
 	if distancia_knockback > 0.0 and parent != null:

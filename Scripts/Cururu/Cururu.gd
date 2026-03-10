@@ -160,7 +160,7 @@ func _process(delta: float) -> void:
 			GameData.Load()
 		else: vida.RecebeDano(vida.vida_max)
 	
-	if input_move.y and state_machine.current_state.name == "Chao":
+	if abs(input_move.y) > .7 and state_machine.current_state.name == "Chao":
 		if input_move.y > 0:
 			Mundos.main_camera.comando -= delta
 		else:

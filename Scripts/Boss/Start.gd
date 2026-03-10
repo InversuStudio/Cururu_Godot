@@ -27,7 +27,7 @@ func _on_anim_animation_finished(anim_name: StringName) -> void:
 		%GritoSFX.stream = parent.gritos[0]
 		%Anim.play("Grito")
 		%BarraVida.show()
-		BGM.TocaMusica(parent.musica_luta, -3.)
+		BGM.TocaMusica(parent.musica_luta)
 		if parent.state_machine.current_state == self:
 			if parent.tween:
 				parent.tween.kill()
