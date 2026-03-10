@@ -2266,7 +2266,7 @@ jump_state = NodePath("../Pulo")
 fall_state = NodePath("../Fall")
 chao_state = NodePath("../Chao")
 velocidade_cair = 2.0
-impulso_horizontal_pulo = 10.0
+impulso_horizontal_pulo = 7.0
 reducao_pulo = 2.0
 
 [connection signal="counter" from="HurtContainer/HurtBox" to="StateMachine/Dano" method="_on_hurt_box_counter"]

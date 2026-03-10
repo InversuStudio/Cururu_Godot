@@ -9,9 +9,10 @@ func _ready() -> void:
 	await get_tree().physics_frame
 	data = GameData.ChecaData()
 	if data == "":
-		%Continuar.hide() #disabled = true
-	#Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
-	%NovoJogo.grab_focus()
+		%Continuar.hide()
+		%NovoJogo.grab_focus()
+	else:
+		%Continuar.grab_focus()
 
 func _on_main_pressed() -> void:
 	# Deleta Save

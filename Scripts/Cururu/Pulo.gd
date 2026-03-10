@@ -29,6 +29,10 @@ func Enter() -> void:
 		parent.velocity.y /= 2.0
 	if GameData.veio_de_baixo:
 		nao_move = true
+	if get_parent().last_state == wall_state:
+		nao_move = true
+		await get_tree().create_timer(.1).timeout
+		nao_move = false
 
 func Exit() -> void:
 	nao_move = false
