@@ -25,6 +25,8 @@ func Update(_delta: float) -> State:
 
 func _on_anim_animation_finished(anim_name: StringName) -> void:
 	if anim_name == "Surge" and get_parent().current_state == self:
+		%Anim.play("Idle")
+		await get_tree().create_timer(.7).timeout
 		%GritoSFX.stream = parent.gritos[0]
 		%Anim.play("Grito")
 		%BarraVida.show()

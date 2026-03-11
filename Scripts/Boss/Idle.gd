@@ -12,11 +12,6 @@ var prosseguir:bool = false
 func Enter() -> void:
 	%Anim.play("Idle")
 	%TimerIdle.start()
-	parent.ShowPartes()
-	#if parent.num_vul >= parent.num_ate_vulneravel:
-		#get_parent().MudaState(state_nocaute)
-		#parent.num_vul = 0
-		#%TimerIdle.stop()
 
 func FixedUpdate(_delta : float) -> State:
 	if prosseguir:
@@ -35,4 +30,3 @@ func _on_timer_idle_timeout() -> void:
 func Exit() -> void:
 	prosseguir = false
 	%TimerIdle.stop()
-	parent.HidePartes()

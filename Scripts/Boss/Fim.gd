@@ -6,7 +6,6 @@ func Enter() -> void:
 	%GritoSFX.stream = parent.gritos[0]
 	%SpriteCabeca.hide()
 	%SpriteCorpo.hide()
-	%Temp.hide()
 	%Anim.play("NocauteEnd")
 	%SpriteMain.material.set_shader_parameter("valor", 0.0)
 	Mundos.player.velocity.x = 0.0
