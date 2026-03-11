@@ -1,24 +1,13 @@
 extends Node2D
 
-## Tempo de animação de carga do pilar
-@export var tempo_carga:float = 1.0
-## Tempo de efeito do pilar
-@export var tempo_ativo:float = 2.0
-# Recebe se pilar está ativo
-#var ativo:bool = false
+# Tempo de animação de carga do pilar
+var tempo_carga:float = 0.0
 
 func _ready() -> void:
-	$HitBox/CollisionShape2D.disabled = true
+	$HitBox.set_deferred("monitoring", false)
 	$Timer.start(tempo_carga)
-	$Sprite.connect("animation_finished", func(): queue_free())
 
 func _on_timer_timeout() -> void:
-	$Sprite.play("Jato")
-	await get_tree().create_timer(0.2).timeout
-	$HitBox/CollisionShape2D.disabled = false
-	#if ativo: queue_free()
-	#else:
-		#ativo = true
-		#$Sprite.play("Jato")
-		#$Timer.start(tempo_ativo)
-		#$HitBox/CollisionShape2D.disabled = false
+	$Anim.play("Sobe")
+	await $Anim.animation_finished
+	queue_free()

@@ -1,20 +1,27 @@
 extends Node2D
 
-@export_group("Batalha")
+@export_group("Config")
 ## Area2D que checa se player está presente, para iniciar Boss Fight
 @export var area_check_player: Area2D = null
 ## Posição nova da câmera durante batalha
 @export var target_camera_batalha:Node2D = null
-## AnimationPlayer com os ataques de pilar de fogo
-@export var anim_pilares:AnimationPlayer = null
-## Distância em que boss usa pilar de fogo
-@export var dist_para_pilar:float = 0.0
+
 ## Node do rabo
 @export var rabo:HitBox = null
 ## Tempo parado após cuspir fogo
 @export var tempo_idle_cuspe:float = 0.0
 ## Tempo parado após pilar de fogo
 @export var tempo_idle_pilar:float = 0.0
+
+@export_group("Pilares de Fogo")
+## Distância em que boss usa pilar de fogo
+@export var dist_para_pilar:float = 7.0
+## Lista contendo os pontos onde os pilares spawnam
+@export var spawn_pilares:Array[Marker2D] = []
+## Tempo que pilar leva para carregar
+@export var tempo_carga_pilar:float = .8
+## Tempo entre spawn de pilares de fogo
+@export var tempo_ate_prox_pilar:float = .5
 
 signal spawn_pilar
 
@@ -28,6 +35,7 @@ var num_vul:int = 0
 
 var tween:Tween = null
 
+var nocaute:bool = false
 var morreu:bool = false
 
 ## Lista de gritos do Boitatá.[br]O primeiro item é o rigido de entrada

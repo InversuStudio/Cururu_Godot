@@ -49,7 +49,7 @@
 [ext_resource type="Texture2D" uid="uid://17gdvg1dt1yf" path="res://Sprites/Inimigos/Boitata/Animacoes/Rabo/boitata_169.png" id="44_rm6pu"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_o607x"]
-size = Vector2(66, 525)
+size = Vector2(66, 912.5)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_hqusl"]
 animations = [{
@@ -92,72 +92,6 @@ animations = [{
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_s7f4i"]
 radius = 209.0
 height = 665.0498
-
-[sub_resource type="Animation" id="Animation_dgonc"]
-resource_name = "1"
-length = 0.8
-tracks/0/type = "method"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
-"values": [{
-"args": [NodePath("PosPilar1")],
-"method": &"SpawnPilar"
-}, {
-"args": [NodePath("PosPilar2")],
-"method": &"SpawnPilar"
-}, {
-"args": [NodePath("PosPilar3")],
-"method": &"SpawnPilar"
-}, {
-"args": [NodePath("PosPilar4")],
-"method": &"SpawnPilar"
-}, {
-"args": [NodePath("PosPilar5")],
-"method": &"SpawnPilar"
-}]
-}
-
-[sub_resource type="Animation" id="Animation_co16j"]
-resource_name = "2"
-length = 0.8
-tracks/0/type = "method"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
-"values": [{
-"args": [NodePath("PosPilar5")],
-"method": &"SpawnPilar"
-}, {
-"args": [NodePath("PosPilar4")],
-"method": &"SpawnPilar"
-}, {
-"args": [NodePath("PosPilar3")],
-"method": &"SpawnPilar"
-}, {
-"args": [NodePath("PosPilar2")],
-"method": &"SpawnPilar"
-}, {
-"args": [NodePath("PosPilar1")],
-"method": &"SpawnPilar"
-}]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_co16j"]
-_data = {
-&"1": SubResource("Animation_dgonc"),
-&"2": SubResource("Animation_co16j")
-}
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_qw0ja"]
 shader = ExtResource("17_gnpt0")
@@ -433,12 +367,12 @@ position = Vector2(-1389.4448, -10415.5)
 scale = Vector2(0.8647799, 0.8647799)
 texture = ExtResource("13_5ppts")
 
-[node name="Boss" parent="." unique_id=1956277941 node_paths=PackedStringArray("area_check_player", "target_camera_batalha", "anim_pilares", "rabo") instance=ExtResource("24_o607x")]
+[node name="Boss" parent="." unique_id=1956277941 node_paths=PackedStringArray("area_check_player", "target_camera_batalha", "rabo", "spawn_pilares") instance=ExtResource("24_o607x")]
 position = Vector2(-5475, -9964)
 area_check_player = NodePath("CheckPlayer")
 target_camera_batalha = NodePath("PosCameraBatalha")
-anim_pilares = NodePath("Pilares")
 rabo = NodePath("Rabo")
+spawn_pilares = [NodePath("PosPilar1"), NodePath("PosPilar2"), NodePath("PosPilar3"), NodePath("PosPilar4"), NodePath("PosPilar5"), NodePath("PosPilar6"), NodePath("PosPilar7"), NodePath("PosPilar8"), NodePath("PosPilar9"), NodePath("PosPilar10")]
 musica_luta = ExtResource("15_dgonc")
 
 [node name="CheckPlayer" type="Area2D" parent="Boss" unique_id=1296495921]
@@ -447,7 +381,7 @@ collision_layer = 0
 collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Boss/CheckPlayer" unique_id=720688723]
-position = Vector2(254, -252)
+position = Vector2(254, -445.75)
 shape = SubResource("RectangleShape2D_o607x")
 
 [node name="Rabo" parent="Boss" unique_id=773282396 instance=ExtResource("35_5ppts")]
@@ -470,27 +404,44 @@ debug_color = Color(0.9866224, 0, 0.3265099, 0.41960785)
 position = Vector2(940, -908)
 
 [node name="PosPilar1" type="Marker2D" parent="Boss" unique_id=2063808765]
-position = Vector2(407.7998, -417.2002)
+position = Vector2(421.7998, -417.2002)
 gizmo_extents = 143.8
 
 [node name="PosPilar2" type="Marker2D" parent="Boss" unique_id=1525414379]
-position = Vector2(765, -417.2002)
+position = Vector2(597, -417.2002)
 gizmo_extents = 143.8
 
 [node name="PosPilar3" type="Marker2D" parent="Boss" unique_id=635308623]
-position = Vector2(1110.5991, -417.2002)
+position = Vector2(783, -417.2002)
 gizmo_extents = 143.8
 
 [node name="PosPilar4" type="Marker2D" parent="Boss" unique_id=1298712985]
-position = Vector2(1431.5996, -417.2002)
+position = Vector2(967, -417.2002)
 gizmo_extents = 143.8
 
 [node name="PosPilar5" type="Marker2D" parent="Boss" unique_id=1926211152]
-position = Vector2(1771.5996, -417.2002)
+position = Vector2(1149, -417.2002)
 gizmo_extents = 143.8
 
-[node name="Pilares" type="AnimationPlayer" parent="Boss" unique_id=1842427183]
-libraries/ = SubResource("AnimationLibrary_co16j")
+[node name="PosPilar6" type="Marker2D" parent="Boss" unique_id=1155443498]
+position = Vector2(1322.7998, -417.2002)
+gizmo_extents = 143.8
+
+[node name="PosPilar7" type="Marker2D" parent="Boss" unique_id=1400083034]
+position = Vector2(1498, -417.2002)
+gizmo_extents = 143.8
+
+[node name="PosPilar8" type="Marker2D" parent="Boss" unique_id=489482062]
+position = Vector2(1684, -417.2002)
+gizmo_extents = 143.8
+
+[node name="PosPilar9" type="Marker2D" parent="Boss" unique_id=1840109622]
+position = Vector2(1868, -417.2002)
+gizmo_extents = 143.8
+
+[node name="PosPilar10" type="Marker2D" parent="Boss" unique_id=2145088933]
+position = Vector2(2050, -417.2002)
+gizmo_extents = 143.8
 
 [node name="Cenario" type="Node2D" parent="." unique_id=760172669]
 position = Vector2(-1761.4286, -10515.429)

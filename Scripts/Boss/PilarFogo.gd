@@ -26,27 +26,19 @@ func Update(_delta : float) -> State:
 		return idle_state
 	return null
 
-# Toca ataque aleatório; chamada no AnimationPlayer
-func RandomPilares() -> void:
-	var n:int = randi_range(1, 2)
-	parent.anim_pilares.play(str(n))
+# Chamado no AnimationPlayer
+func Ataque() -> void:
+	for pos:Marker2D in parent.spawn_pilares:
+		SpawnPilar(pos.global_position)
+		await get_tree().create_timer(parent.tempo_ate_prox_pilar).timeout
+		if parent.nocaute: break
 
-# Instancia os pilares de fogo; chamada no AnimationPlayer
+# Instancia os pilares de fogo
 func SpawnPilar(pos:Vector2) -> void:
 	var p:Node2D = pilar.instantiate()
+	p.tempo_carga = parent.tempo_carga_pilar
 	p.global_position = pos
 	parent.get_parent().add_child(p)
-
-# Função chamada no AnimationPlayer
-func CriaPilar() -> void:
-	# Cospe todos os fogos
-	if parent.pos_pilares.size() > 0:
-		for n:int in parent.pos_pilares.size():
-			if randi_range(0, 1) == 1:
-				var p:Node2D = pilar.instantiate()
-				parent.get_parent().add_child(p)
-				p.global_position = parent.pos_pilares[n-1].global_position
-				Console._Print("[color=red]PILAR SPAWNADO[/color]")
 
 func _on_anim_animation_finished(anim_name: StringName) -> void:
 	if anim_name == "Pilar":

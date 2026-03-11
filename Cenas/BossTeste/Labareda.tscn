@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=3 uid="uid://dppj6i0ifoocp"]
+[gd_scene format=3 uid="uid://dppj6i0ifoocp"]
 
 [ext_resource type="Script" uid="uid://bacf3raoqf4ns" path="res://Scripts/Boss/Pilar.gd" id="1_tdbse"]
 [ext_resource type="Texture2D" uid="uid://csgctbosjole1" path="res://Sprites/Inimigos/Boitata/Ataques/Pilar de Fogo/final-0002.png" id="4_vqjxp"]
@@ -121,34 +121,77 @@ animations = [{
 radius = 68.0
 height = 604.0
 
-[node name="PilarFogo" type="Node2D"]
-script = ExtResource("1_tdbse")
-tempo_carga = 0.5
-tempo_ativo = 1.0
+[sub_resource type="Animation" id="Animation_7506o"]
+resource_name = "Sobe"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"Jato"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.050000004, 0.10000001, 0.15, 0.20000002, 0.25, 0.3, 0.35000002, 0.40000004, 0.45000002, 0.5, 0.55, 0.6, 0.65000004, 0.70000005, 0.75, 0.8000001, 0.8500001, 0.90000004, 0.95000005),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("HitBox:monitoring")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.65),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
 
-[node name="Sprite" type="AnimatedSprite2D" parent="."]
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_lrp0d"]
+_data = {
+&"Sobe": SubResource("Animation_7506o")
+}
+
+[node name="PilarFogo" type="Node2D" unique_id=1052674317]
+script = ExtResource("1_tdbse")
+
+[node name="Sprite" type="AnimatedSprite2D" parent="." unique_id=2093762334]
 position = Vector2(0, -422)
 sprite_frames = SubResource("SpriteFrames_u0rk8")
 animation = &"Jato"
 autoplay = "Carga"
-frame = 20
-frame_progress = 1.0
+frame = 1
 speed_scale = 1.5
 
-[node name="HitBox" parent="." instance=ExtResource("11_tqvmf")]
+[node name="HitBox" parent="." unique_id=1856126841 instance=ExtResource("11_tqvmf")]
 collision_layer = 16
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="HitBox"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HitBox" unique_id=777541534]
 position = Vector2(0, -292)
 shape = SubResource("CapsuleShape2D_e7y2f")
-disabled = true
 
-[node name="Timer" type="Timer" parent="."]
+[node name="Timer" type="Timer" parent="." unique_id=33328194]
 wait_time = 0.5
 one_shot = true
 
-[node name="SFX" type="AudioStreamPlayer2D" parent="."]
+[node name="SFX" type="AudioStreamPlayer2D" parent="." unique_id=1260416041]
 stream = ExtResource("13_petnf")
 autoplay = true
+
+[node name="Anim" type="AnimationPlayer" parent="." unique_id=1341158531]
+libraries/ = SubResource("AnimationLibrary_lrp0d")
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

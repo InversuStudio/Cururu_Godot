@@ -14,6 +14,7 @@ func _ready() -> void:
 	print("DEF: " + str(%HurtBox.defesa))
 
 func Enter() -> void:
+	parent.nocaute = true
 	%Anim.play("NocauteStart")
 	%TimerNocaute.start()
 	prossegue = false
@@ -31,6 +32,7 @@ func _on_timer_nocaute_timeout() -> void:
 	%Anim.play("NocauteEnd")
 
 func Exit() -> void:
+	parent.nocaute = false
 	prossegue = false
 	%TimerNocaute.stop()
 	parent.ResetArmor()

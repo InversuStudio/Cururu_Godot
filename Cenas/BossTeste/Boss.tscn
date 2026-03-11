@@ -787,11 +787,11 @@ tracks/3/path = NodePath("StateMachine/PilarFogo")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
-"times": PackedFloat32Array(0.2),
+"times": PackedFloat32Array(0.4),
 "transitions": PackedFloat32Array(1),
 "values": [{
 "args": [],
-"method": &"RandomPilares"
+"method": &"Ataque"
 }]
 }
 
@@ -893,9 +893,10 @@ axis_stretch_horizontal = 1
 
 [node name="Boss" type="Node2D" unique_id=232076307]
 script = ExtResource("1_s15tt")
-dist_para_pilar = 7.0
 tempo_idle_cuspe = 1.0
-tempo_idle_pilar = 2.0
+tempo_idle_pilar = 2.5
+tempo_carga_pilar = 0.5
+tempo_ate_prox_pilar = 1.0
 musica_luta = ExtResource("2_ojojp")
 gritos = Array[AudioStream]([ExtResource("88_q1nmn"), ExtResource("4_hbr26"), ExtResource("5_ycj6j")])
 dialogo = ExtResource("6_ycj6j")
@@ -917,6 +918,7 @@ scale = Vector2(1.5, 1.5)
 sprite_frames = SubResource("SpriteFrames_nkv4g")
 animation = &"Grito"
 autoplay = "Escondido"
+frame = 1
 
 [node name="SpriteCabeca" type="AnimatedSprite2D" parent="." unique_id=920534506]
 unique_name_in_owner = true
