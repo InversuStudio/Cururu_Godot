@@ -11,12 +11,8 @@
 [ext_resource type="Texture2D" uid="uid://rbtvfm4m7ft" path="res://Sprites/VFX/Iluminação/SOMBRA2.png" id="4_gh6e1"]
 [ext_resource type="Texture2D" uid="uid://cu2i0moccqwij" path="res://Sprites/Cenário/Sertão/Background/cactu_02.png" id="5_7sgb0"]
 [ext_resource type="PackedScene" uid="uid://nohq28uk7lfk" path="res://Objetos/Entidades/Player.tscn" id="5_y3o0g"]
-[ext_resource type="PackedScene" uid="uid://3yqo0l27km55" path="res://UI/HUD.tscn" id="6_88kjv"]
-[ext_resource type="Script" uid="uid://bd046eokvcnu2" path="res://addons/phantom_camera/scripts/phantom_camera_host/phantom_camera_host.gd" id="8_23pwv"]
 [ext_resource type="Texture2D" uid="uid://ds6jml661ja5l" path="res://Sprites/Cenário/Sertão/Chão/40 Sem Título3_20251009200905.png" id="9_23pwv"]
 [ext_resource type="Texture2D" uid="uid://15ruq8j6do4m" path="res://Sprites/Cenário/Sertão/Background/57 Sem Título_20251023170947.png" id="9_nj7uq"]
-[ext_resource type="Script" uid="uid://bhexx6mj1xv3q" path="res://addons/phantom_camera/scripts/phantom_camera/phantom_camera_2d.gd" id="9_y3o0g"]
-[ext_resource type="Script" uid="uid://8umksf8e80fw" path="res://addons/phantom_camera/scripts/resources/tween_resource.gd" id="10_88kjv"]
 [ext_resource type="Texture2D" uid="uid://hh88by02c7gy" path="res://Sprites/Cenário/Sertão/Chão/40 Sem Título3_20251009202055.png" id="10_y3o0g"]
 [ext_resource type="TileSet" uid="uid://b0nn6bkolhibj" path="res://TilesetChao.tres" id="13_hdssx"]
 [ext_resource type="Texture2D" uid="uid://bn5qw1kixrfva" path="res://Sprites/Cenário/Sertão/Background/flor_s01.png" id="14_087nd"]
@@ -34,9 +30,6 @@
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4mh8b"]
 size = Vector2(15600, 1763)
-
-[sub_resource type="Resource" id="Resource_ye0qo"]
-script = ExtResource("10_88kjv")
 
 [node name="AreaVideo" type="Node2D" unique_id=1178327784]
 
@@ -727,40 +720,6 @@ flip_h = true
 z_index = 4
 position = Vector2(2360.9998, 384)
 scale = Vector2(0.959163, 0.959163)
-
-[node name="UIGAME" type="CanvasLayer" parent="." unique_id=1140215945]
-
-[node name="HUD" parent="UIGAME" unique_id=1640058929 instance=ExtResource("6_88kjv")]
-metadata/_edit_use_anchors_ = true
-
-[node name="Camera2D" type="Camera2D" parent="." unique_id=1212296276]
-physics_interpolation_mode = 1
-position = Vector2(3246, 73)
-zoom = Vector2(0.8, 0.8)
-process_callback = 0
-limit_left = 2046
-limit_top = -1015
-limit_right = 17646
-limit_bottom = 748
-editor_draw_limits = true
-
-[node name="PhantomCameraHost" type="Node" parent="Camera2D" unique_id=145677934]
-process_priority = 300
-process_physics_priority = 300
-script = ExtResource("8_23pwv")
-metadata/_custom_type_script = "uid://bd046eokvcnu2"
-
-[node name="PhantomCamera2D" type="Node2D" parent="." unique_id=497622427 node_paths=PackedStringArray("follow_target")]
-top_level = true
-position = Vector2(3246, 73)
-script = ExtResource("9_y3o0g")
-follow_mode = 2
-follow_target = NodePath("../Cururu")
-zoom = Vector2(0.8, 0.8)
-tween_resource = SubResource("Resource_ye0qo")
-draw_limits = true
-limit_target = NodePath("../CollisionShape2D")
-metadata/_custom_type_script = "uid://bhexx6mj1xv3q"
 
 [node name="57SemTítulo20251023170749" type="Sprite2D" parent="." unique_id=1691972216]
 z_index = 4

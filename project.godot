@@ -30,7 +30,6 @@ driver/mix_rate=48000
 
 GameData="*res://Scripts/Globais/GameData.gd"
 Mundos="*res://Scripts/Globais/Mundos.gd"
-PhantomCameraManager="*uid://duq6jhf6unyis"
 DialogueManager="*res://addons/dialogue_manager/dialogue_manager.gd"
 BGM="*res://Objetos/Funcionalidade/BGM_Global.tscn"
 Fade="*res://Objetos/Funcionalidade/CompFade.tscn"
@@ -55,7 +54,7 @@ window/stretch/aspect="ignore"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/dialogue_manager/plugin.cfg", "res://addons/phantom_camera/plugin.cfg")
+enabled=PackedStringArray("res://addons/dialogue_manager/plugin.cfg")
 
 [file_customization]
 
@@ -222,7 +221,7 @@ usar_item={
 
 [internationalization]
 
-locale/translations_pot_files=PackedStringArray("res://Dialogos/Teste.dialogue", "res://Dialogos/Cartografo.dialogue", "res://Vitoria Régia.dialogue", "res://Dialogos/Vitoriaregia.dialogue", "res://Dialogos/Boitata.dialogue")
+locale/translations_pot_files=PackedStringArray("res://Dialogos/Teste.dialogue", "res://Dialogos/Cartografo.dialogue", "res://Dialogos/Boitata.dialogue", "res://Dialogos/VitoriaRegia.dialogue")
 
 [layer_names]
 

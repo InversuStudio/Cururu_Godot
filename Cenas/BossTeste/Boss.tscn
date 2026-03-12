@@ -69,16 +69,16 @@
 [ext_resource type="Texture2D" uid="uid://clwluicfa5wb0" path="res://Sprites/Inimigos/Boitata/Animacoes/Nocaute/boitata_nocaute/boitata_109.png" id="29_16hqa"]
 [ext_resource type="Texture2D" uid="uid://25c2slddxlfo" path="res://Sprites/Inimigos/Boitata/Animacoes/Nocaute/boitata_nocaute/boitata_111.png" id="30_fwdqd"]
 [ext_resource type="Texture2D" uid="uid://dpuh70aam8na" path="res://Sprites/Inimigos/Boitata/Animacoes/Grito/boitata_grito_entrada/boitata_45.png" id="30_t6owj"]
-[ext_resource type="Texture2D" uid="uid://ceo5t72cpq3du" path="res://Sprites/Inimigos/Boitata/Animacoes/Idle/boitata_idle_cabeca/boitata_131.png" id="31_iqxfe"]
-[ext_resource type="Texture2D" uid="uid://y6d3pmh2j120" path="res://Sprites/Inimigos/Boitata/Animacoes/Idle/boitata_idle_cabeca/boitata_133.png" id="32_mjx0v"]
-[ext_resource type="Texture2D" uid="uid://8fe5jqkksvo6" path="res://Sprites/Inimigos/Boitata/Animacoes/Idle/boitata_idle_cabeca/boitata_135.png" id="33_0w5f0"]
-[ext_resource type="Texture2D" uid="uid://bfoxoanadu3tp" path="res://Sprites/Inimigos/Boitata/Animacoes/Idle/boitata_idle_cabeca/boitata_137.png" id="34_uoyl7"]
-[ext_resource type="Texture2D" uid="uid://bt2vl3cnoiyqb" path="res://Sprites/Inimigos/Boitata/Animacoes/Idle/boitata_idle_cabeca/boitata_139.png" id="35_sgy8v"]
-[ext_resource type="Texture2D" uid="uid://cm6lxwdo34jsn" path="res://Sprites/Inimigos/Boitata/Animacoes/Idle/boitata_idle_cabeca/boitata_141.png" id="36_ojojp"]
-[ext_resource type="Texture2D" uid="uid://cxsc5yt8kuqb" path="res://Sprites/Inimigos/Boitata/Animacoes/Idle/boitata_idle_cabeca/boitata_143.png" id="37_b2ig3"]
-[ext_resource type="Texture2D" uid="uid://2ypjmiqywa46" path="res://Sprites/Inimigos/Boitata/Animacoes/Idle/boitata_idle_cabeca/boitata_145.png" id="38_lo6ol"]
-[ext_resource type="Texture2D" uid="uid://boj8k3bwm6b6d" path="res://Sprites/Inimigos/Boitata/Animacoes/Idle/boitata_idle_cabeca/boitata_147.png" id="39_6hkog"]
-[ext_resource type="Texture2D" uid="uid://b4radbc2kre5f" path="res://Sprites/Inimigos/Boitata/Animacoes/Idle/boitata_idle_cabeca/boitata_149.png" id="40_fi4f6"]
+[ext_resource type="Texture2D" uid="uid://b0apf38381apt" path="res://Sprites/Inimigos/Boitata/Animacoes/Idle/boitata_idle_cabeca/boitata_131.png" id="31_iqxfe"]
+[ext_resource type="Texture2D" uid="uid://bf6kme3xqx83r" path="res://Sprites/Inimigos/Boitata/Animacoes/Idle/boitata_idle_cabeca/boitata_133.png" id="32_mjx0v"]
+[ext_resource type="Texture2D" uid="uid://cywwd6uxfkq7f" path="res://Sprites/Inimigos/Boitata/Animacoes/Idle/boitata_idle_cabeca/boitata_135.png" id="33_0w5f0"]
+[ext_resource type="Texture2D" uid="uid://bliqlrg2kme3p" path="res://Sprites/Inimigos/Boitata/Animacoes/Idle/boitata_idle_cabeca/boitata_137.png" id="34_uoyl7"]
+[ext_resource type="Texture2D" uid="uid://di3byuyq0ieww" path="res://Sprites/Inimigos/Boitata/Animacoes/Idle/boitata_idle_cabeca/boitata_139.png" id="35_sgy8v"]
+[ext_resource type="Texture2D" uid="uid://c8xjgrutggts1" path="res://Sprites/Inimigos/Boitata/Animacoes/Idle/boitata_idle_cabeca/boitata_141.png" id="36_ojojp"]
+[ext_resource type="Texture2D" uid="uid://bxpjmwt633m4c" path="res://Sprites/Inimigos/Boitata/Animacoes/Idle/boitata_idle_cabeca/boitata_143.png" id="37_b2ig3"]
+[ext_resource type="Texture2D" uid="uid://buwxhxi8op1p6" path="res://Sprites/Inimigos/Boitata/Animacoes/Idle/boitata_idle_cabeca/boitata_145.png" id="38_lo6ol"]
+[ext_resource type="Texture2D" uid="uid://bp8388u5vy44m" path="res://Sprites/Inimigos/Boitata/Animacoes/Idle/boitata_idle_cabeca/boitata_147.png" id="39_6hkog"]
+[ext_resource type="Texture2D" uid="uid://ve0mvq41l086" path="res://Sprites/Inimigos/Boitata/Animacoes/Idle/boitata_idle_cabeca/boitata_149.png" id="40_fi4f6"]
 [ext_resource type="Texture2D" uid="uid://cal2tkha2ux62" path="res://Sprites/Inimigos/Boitata/Animacoes/Surge/boitata_entrada/boitata_01.png" id="45_xvx5y"]
 [ext_resource type="Texture2D" uid="uid://be5wrevuspep2" path="res://Sprites/Inimigos/Boitata/Animacoes/Surge/boitata_entrada/boitata_03.png" id="46_xq2h5"]
 [ext_resource type="Texture2D" uid="uid://doqtwkg7ts7ri" path="res://Sprites/Inimigos/Boitata/Animacoes/Surge/boitata_entrada/boitata_05.png" id="47_v0ih0"]
@@ -90,111 +90,126 @@
 [ext_resource type="Texture2D" uid="uid://d2m53fthbo5c6" path="res://Sprites/Inimigos/Boitata/Animacoes/Surge/boitata_entrada/boitata_17.png" id="53_hbr26"]
 [ext_resource type="Script" uid="uid://cerjc6sna0dxs" path="res://Scripts/StateMachine/StateMachine.gd" id="61_01cui"]
 [ext_resource type="Script" uid="uid://cragh486tqv72" path="res://Scripts/Boss/Idle.gd" id="62_g25rt"]
-[ext_resource type="Texture2D" uid="uid://cd76thh0iage1" path="res://Sprites/Inimigos/Boitata/Animacoes/Cospe_Fogo/boitata_bola_de_fogo_cabeca/boitata_79.png" id="63_e3enr"]
-[ext_resource type="Texture2D" uid="uid://cxjqf1d3sjb42" path="res://Sprites/Inimigos/Boitata/Animacoes/Cospe_Fogo/boitata_bola_de_fogo_cabeca/boitata_81.png" id="64_y5ilg"]
-[ext_resource type="Texture2D" uid="uid://d2d67ufspj6ln" path="res://Sprites/Inimigos/Boitata/Animacoes/Cospe_Fogo/boitata_bola_de_fogo_cabeca/boitata_83.png" id="65_tift1"]
-[ext_resource type="Texture2D" uid="uid://btc2on4ap40kj" path="res://Sprites/Inimigos/Boitata/Animacoes/Cospe_Fogo/boitata_bola_de_fogo_cabeca/boitata_85.png" id="66_x6621"]
-[ext_resource type="Texture2D" uid="uid://dmcbj33mleiyv" path="res://Sprites/Inimigos/Boitata/Animacoes/Cospe_Fogo/boitata_bola_de_fogo_cabeca/boitata_87.png" id="67_aensq"]
-[ext_resource type="Texture2D" uid="uid://bh2yl0jx2ixf0" path="res://Sprites/Inimigos/Boitata/Animacoes/Cospe_Fogo/boitata_bola_de_fogo_cabeca/boitata_89.png" id="68_e4ef7"]
-[ext_resource type="Texture2D" uid="uid://b13ji18o5723n" path="res://Sprites/Inimigos/Boitata/Animacoes/Cospe_Fogo/boitata_bola_de_fogo_cabeca/boitata_91.png" id="69_osj2x"]
-[ext_resource type="Texture2D" uid="uid://bp53wi8yu6g5y" path="res://Sprites/Inimigos/Boitata/Animacoes/Cospe_Fogo/boitata_bola_de_fogo_cabeca/boitata_93.png" id="70_umvt4"]
-[ext_resource type="Texture2D" uid="uid://bwsj8ypx5j40y" path="res://Sprites/Inimigos/Boitata/Animacoes/Cospe_Fogo/boitata_bola_de_fogo_cabeca/boitata_95.png" id="71_tr0xw"]
+[ext_resource type="Texture2D" uid="uid://qj0madyotxbn" path="res://Sprites/Inimigos/Boitata/Animacoes/Cospe_Fogo/boitata_bola_de_fogo_cabeca/boitata_79.png" id="63_e3enr"]
+[ext_resource type="Texture2D" uid="uid://cgfbrj4fdx7am" path="res://Sprites/Inimigos/Boitata/Animacoes/Cospe_Fogo/boitata_bola_de_fogo_cabeca/boitata_81.png" id="64_y5ilg"]
+[ext_resource type="Texture2D" uid="uid://0cgwknkthdgy" path="res://Sprites/Inimigos/Boitata/Animacoes/Cospe_Fogo/boitata_bola_de_fogo_cabeca/boitata_83.png" id="65_tift1"]
+[ext_resource type="Texture2D" uid="uid://b6kjtlawk0d68" path="res://Sprites/Inimigos/Boitata/Animacoes/Cospe_Fogo/boitata_bola_de_fogo_cabeca/boitata_85.png" id="66_x6621"]
+[ext_resource type="Texture2D" uid="uid://be71ousvdt7ta" path="res://Sprites/Inimigos/Boitata/Animacoes/Cospe_Fogo/boitata_bola_de_fogo_cabeca/boitata_87.png" id="67_aensq"]
+[ext_resource type="Texture2D" uid="uid://ctwgbgb2qv50l" path="res://Sprites/Inimigos/Boitata/Animacoes/Cospe_Fogo/boitata_bola_de_fogo_cabeca/boitata_89.png" id="68_e4ef7"]
+[ext_resource type="Texture2D" uid="uid://c3db8w6s3x3pe" path="res://Sprites/Inimigos/Boitata/Animacoes/Cospe_Fogo/boitata_bola_de_fogo_cabeca/boitata_91.png" id="69_osj2x"]
+[ext_resource type="Texture2D" uid="uid://dkka3qgvjgk6" path="res://Sprites/Inimigos/Boitata/Animacoes/Cospe_Fogo/boitata_bola_de_fogo_cabeca/boitata_93.png" id="70_umvt4"]
+[ext_resource type="Texture2D" uid="uid://blhdhx6q6p7bn" path="res://Sprites/Inimigos/Boitata/Animacoes/Cospe_Fogo/boitata_bola_de_fogo_cabeca/boitata_95.png" id="71_tr0xw"]
 [ext_resource type="Script" uid="uid://cfu466euekcdn" path="res://Scripts/Boss/Start.gd" id="72_0ddi0"]
-[ext_resource type="Texture2D" uid="uid://cbxh0b2khw0oc" path="res://Sprites/Inimigos/Boitata/Animacoes/Pilar/boitata_grito_chamas_cabeca/boitata_47.png" id="73_0epgg"]
-[ext_resource type="Texture2D" uid="uid://sa3tse73d653" path="res://Sprites/Inimigos/Boitata/Animacoes/Idle/boitata_idle_corpo/boitata_131.png" id="73_qhv3i"]
-[ext_resource type="Texture2D" uid="uid://7nt7xslw6di3" path="res://Sprites/Inimigos/Boitata/Animacoes/Idle/boitata_idle_corpo/boitata_133.png" id="74_q1nmn"]
-[ext_resource type="Texture2D" uid="uid://3fatdv72k6c4" path="res://Sprites/Inimigos/Boitata/Animacoes/Pilar/boitata_grito_chamas_cabeca/boitata_49.png" id="74_ut5xs"]
+[ext_resource type="Texture2D" uid="uid://cm3f3kxxq8je3" path="res://Sprites/Inimigos/Boitata/Animacoes/Pilar/boitata_grito_chamas_cabeca/boitata_47.png" id="73_0epgg"]
+[ext_resource type="Texture2D" uid="uid://dqqujukcmkx3l" path="res://Sprites/Inimigos/Boitata/Animacoes/Idle/boitata_idle_corpo/boitata_131.png" id="73_qhv3i"]
+[ext_resource type="Texture2D" uid="uid://cwpbgaqsx0ijr" path="res://Sprites/Inimigos/Boitata/Animacoes/Idle/boitata_idle_corpo/boitata_133.png" id="74_q1nmn"]
+[ext_resource type="Texture2D" uid="uid://bqbqnoipooh1w" path="res://Sprites/Inimigos/Boitata/Animacoes/Pilar/boitata_grito_chamas_cabeca/boitata_49.png" id="74_ut5xs"]
 [ext_resource type="Script" uid="uid://rlmx3hnbiu12" path="res://Scripts/Boss/cospe_fogo.gd" id="75_16hqa"]
-[ext_resource type="Texture2D" uid="uid://cm5ruv0755nmi" path="res://Sprites/Inimigos/Boitata/Animacoes/Pilar/boitata_grito_chamas_cabeca/boitata_51.png" id="75_tev85"]
-[ext_resource type="Texture2D" uid="uid://bih11pktck3q6" path="res://Sprites/Inimigos/Boitata/Animacoes/Idle/boitata_idle_corpo/boitata_135.png" id="75_vsrrx"]
-[ext_resource type="Texture2D" uid="uid://0h1dpf11ug8f" path="res://Sprites/Inimigos/Boitata/Animacoes/Idle/boitata_idle_corpo/boitata_137.png" id="76_hbr26"]
-[ext_resource type="Texture2D" uid="uid://dn1dl4qwqacx6" path="res://Sprites/Inimigos/Boitata/Animacoes/Pilar/boitata_grito_chamas_cabeca/boitata_53.png" id="76_ulty5"]
-[ext_resource type="Texture2D" uid="uid://ckhcp63vrpip4" path="res://Sprites/Inimigos/Boitata/Animacoes/Pilar/boitata_grito_chamas_cabeca/boitata_55.png" id="77_dr8qx"]
+[ext_resource type="Texture2D" uid="uid://dkfoynprwfrey" path="res://Sprites/Inimigos/Boitata/Animacoes/Pilar/boitata_grito_chamas_cabeca/boitata_51.png" id="75_tev85"]
+[ext_resource type="Texture2D" uid="uid://bujry6j016es4" path="res://Sprites/Inimigos/Boitata/Animacoes/Idle/boitata_idle_corpo/boitata_135.png" id="75_vsrrx"]
+[ext_resource type="Texture2D" uid="uid://qqkqw0ouxwq" path="res://Sprites/Inimigos/Boitata/Animacoes/Idle/boitata_idle_corpo/boitata_137.png" id="76_hbr26"]
+[ext_resource type="Texture2D" uid="uid://drbsc22cm7vbd" path="res://Sprites/Inimigos/Boitata/Animacoes/Pilar/boitata_grito_chamas_cabeca/boitata_53.png" id="76_ulty5"]
+[ext_resource type="Texture2D" uid="uid://3konjmd0f8p8" path="res://Sprites/Inimigos/Boitata/Animacoes/Pilar/boitata_grito_chamas_cabeca/boitata_55.png" id="77_dr8qx"]
 [ext_resource type="Script" uid="uid://dmxvedpbqkt7c" path="res://Scripts/Boss/Nocaute.gd" id="77_iqxfe"]
 [ext_resource type="Texture2D" uid="uid://c0j1vjsqgxlo3" path="res://Sprites/UI/Boitata/BarraVidaBoss.png" id="77_mjx0v"]
-[ext_resource type="Texture2D" uid="uid://dwrapf3g381bd" path="res://Sprites/Inimigos/Boitata/Animacoes/Idle/boitata_idle_corpo/boitata_139.png" id="77_ycj6j"]
-[ext_resource type="Texture2D" uid="uid://bx08rornwfdgg" path="res://Sprites/Inimigos/Boitata/Animacoes/Pilar/boitata_grito_chamas_cabeca/boitata_57.png" id="78_go6es"]
-[ext_resource type="Texture2D" uid="uid://nmjan6fvdjvm" path="res://Sprites/Inimigos/Boitata/Animacoes/Idle/boitata_idle_corpo/boitata_141.png" id="78_r12sw"]
-[ext_resource type="Texture2D" uid="uid://bt37m1fmhttd4" path="res://Sprites/Inimigos/Boitata/Animacoes/Idle/boitata_idle_corpo/boitata_143.png" id="79_5irpk"]
-[ext_resource type="Texture2D" uid="uid://c2fdaireyrcab" path="res://Sprites/Inimigos/Boitata/Animacoes/Pilar/boitata_grito_chamas_cabeca/boitata_59.png" id="79_d4lcm"]
-[ext_resource type="Texture2D" uid="uid://bvcq1rubob7op" path="res://Sprites/Inimigos/Boitata/Animacoes/Idle/boitata_idle_corpo/boitata_145.png" id="80_3cfl8"]
-[ext_resource type="Texture2D" uid="uid://j5p3om4xkfkb" path="res://Sprites/Inimigos/Boitata/Animacoes/Pilar/boitata_grito_chamas_cabeca/boitata_61.png" id="80_djwlo"]
-[ext_resource type="Texture2D" uid="uid://buf23gs5im81n" path="res://Sprites/Inimigos/Boitata/Animacoes/Pilar/boitata_grito_chamas_cabeca/boitata_63.png" id="81_0jjh8"]
-[ext_resource type="Texture2D" uid="uid://d263q3oak3eb7" path="res://Sprites/Inimigos/Boitata/Animacoes/Idle/boitata_idle_corpo/boitata_147.png" id="81_bf3fi"]
-[ext_resource type="Texture2D" uid="uid://dvggkx5r5hq0r" path="res://Sprites/Inimigos/Boitata/Animacoes/Pilar/boitata_grito_chamas_cabeca/boitata_65.png" id="82_2gaj7"]
-[ext_resource type="Texture2D" uid="uid://djbt3gil8t3ws" path="res://Sprites/Inimigos/Boitata/Animacoes/Idle/boitata_idle_corpo/boitata_149.png" id="82_kb2t2"]
-[ext_resource type="Texture2D" uid="uid://bfuhltjbdm5bs" path="res://Sprites/Inimigos/Boitata/Animacoes/Pilar/boitata_grito_chamas_cabeca/boitata_67.png" id="83_whjwt"]
+[ext_resource type="Texture2D" uid="uid://bxcymmaqfgpxb" path="res://Sprites/Inimigos/Boitata/Animacoes/Idle/boitata_idle_corpo/boitata_139.png" id="77_ycj6j"]
+[ext_resource type="Texture2D" uid="uid://d06n17ld363iy" path="res://Sprites/Inimigos/Boitata/Animacoes/Pilar/boitata_grito_chamas_cabeca/boitata_57.png" id="78_go6es"]
+[ext_resource type="Texture2D" uid="uid://c0wnfe3tlbp34" path="res://Sprites/Inimigos/Boitata/Animacoes/Idle/boitata_idle_corpo/boitata_141.png" id="78_r12sw"]
+[ext_resource type="Texture2D" uid="uid://bl0xm0mb8kvrv" path="res://Sprites/Inimigos/Boitata/Animacoes/Idle/boitata_idle_corpo/boitata_143.png" id="79_5irpk"]
+[ext_resource type="Texture2D" uid="uid://dncucgsbu22g3" path="res://Sprites/Inimigos/Boitata/Animacoes/Pilar/boitata_grito_chamas_cabeca/boitata_59.png" id="79_d4lcm"]
+[ext_resource type="Texture2D" uid="uid://beaoq7nsfrl85" path="res://Sprites/Inimigos/Boitata/Animacoes/Idle/boitata_idle_corpo/boitata_145.png" id="80_3cfl8"]
+[ext_resource type="Texture2D" uid="uid://dtes6peloh07k" path="res://Sprites/Inimigos/Boitata/Animacoes/Pilar/boitata_grito_chamas_cabeca/boitata_61.png" id="80_djwlo"]
+[ext_resource type="Texture2D" uid="uid://b6yjhjub4j1wt" path="res://Sprites/Inimigos/Boitata/Animacoes/Pilar/boitata_grito_chamas_cabeca/boitata_63.png" id="81_0jjh8"]
+[ext_resource type="Texture2D" uid="uid://dv74t3vp46uwm" path="res://Sprites/Inimigos/Boitata/Animacoes/Idle/boitata_idle_corpo/boitata_147.png" id="81_bf3fi"]
+[ext_resource type="Texture2D" uid="uid://bd7dk08c4u5l8" path="res://Sprites/Inimigos/Boitata/Animacoes/Pilar/boitata_grito_chamas_cabeca/boitata_65.png" id="82_2gaj7"]
+[ext_resource type="Texture2D" uid="uid://b17g6njg4jxkq" path="res://Sprites/Inimigos/Boitata/Animacoes/Idle/boitata_idle_corpo/boitata_149.png" id="82_kb2t2"]
+[ext_resource type="Texture2D" uid="uid://bndei42cof8ie" path="res://Sprites/Inimigos/Boitata/Animacoes/Pilar/boitata_grito_chamas_cabeca/boitata_67.png" id="83_whjwt"]
 [ext_resource type="Texture2D" uid="uid://b4vgc71jojckt" path="res://Sprites/UI/Boitata/UI_-_BOITATA.png" id="84_6hkog"]
-[ext_resource type="Texture2D" uid="uid://cofd5jfkdfniw" path="res://Sprites/Inimigos/Boitata/Animacoes/Pilar/boitata_grito_chamas_cabeca/boitata_69.png" id="84_udcvh"]
+[ext_resource type="Texture2D" uid="uid://ctbjdpqxl57mw" path="res://Sprites/Inimigos/Boitata/Animacoes/Pilar/boitata_grito_chamas_cabeca/boitata_69.png" id="84_udcvh"]
 [ext_resource type="Script" uid="uid://c041l8mwrkgsy" path="res://Scripts/Boss/PilarFogo.gd" id="85_fi4f6"]
-[ext_resource type="Texture2D" uid="uid://dhwddonfjv4a1" path="res://Sprites/Inimigos/Boitata/Animacoes/Pilar/boitata_grito_chamas_cabeca/boitata_71.png" id="85_xklm6"]
-[ext_resource type="Texture2D" uid="uid://byfw1j2wph6gy" path="res://Sprites/Inimigos/Boitata/Animacoes/Pilar/boitata_grito_chamas_cabeca/boitata_73.png" id="86_ude47"]
+[ext_resource type="Texture2D" uid="uid://b402x5r506e2m" path="res://Sprites/Inimigos/Boitata/Animacoes/Pilar/boitata_grito_chamas_cabeca/boitata_71.png" id="85_xklm6"]
+[ext_resource type="Texture2D" uid="uid://cwgswca51kca6" path="res://Sprites/Inimigos/Boitata/Animacoes/Grito/boitata_grito_entrada_cabeca/boitata_19.png" id="86_5jk7r"]
+[ext_resource type="Texture2D" uid="uid://bx0tficfcp4gf" path="res://Sprites/Inimigos/Boitata/Animacoes/Pilar/boitata_grito_chamas_cabeca/boitata_73.png" id="86_ude47"]
+[ext_resource type="Texture2D" uid="uid://c3w8siit478mf" path="res://Sprites/Inimigos/Boitata/Animacoes/Grito/boitata_grito_entrada_cabeca/boitata_21.png" id="87_rqfo5"]
+[ext_resource type="Texture2D" uid="uid://d1t57rmsn2vtl" path="res://Sprites/Inimigos/Boitata/Animacoes/Grito/boitata_grito_entrada_cabeca/boitata_23.png" id="88_of1yv"]
 [ext_resource type="AudioStream" uid="uid://xpg30gdluf8e" path="res://Audio/SFX/BOITATA/Boitata voice A.wav" id="88_q1nmn"]
+[ext_resource type="Texture2D" uid="uid://bapbnm0sh2270" path="res://Sprites/Inimigos/Boitata/Animacoes/Grito/boitata_grito_entrada_cabeca/boitata_25.png" id="89_c6wqk"]
+[ext_resource type="Texture2D" uid="uid://dn7jyqyu618ou" path="res://Sprites/Inimigos/Boitata/Animacoes/Grito/boitata_grito_entrada_cabeca/boitata_27.png" id="90_y3pkt"]
+[ext_resource type="Texture2D" uid="uid://bf4i2d0optau6" path="res://Sprites/Inimigos/Boitata/Animacoes/Grito/boitata_grito_entrada_cabeca/boitata_29.png" id="91_ism5p"]
+[ext_resource type="Texture2D" uid="uid://dcmk40joohg36" path="res://Sprites/Inimigos/Boitata/Animacoes/Grito/boitata_grito_entrada_cabeca/boitata_31.png" id="92_cs207"]
+[ext_resource type="Texture2D" uid="uid://idpyi6neqewo" path="res://Sprites/Inimigos/Boitata/Animacoes/Grito/boitata_grito_entrada_cabeca/boitata_33.png" id="93_njk0s"]
+[ext_resource type="Texture2D" uid="uid://p5ep8i5qsssb" path="res://Sprites/Inimigos/Boitata/Animacoes/Grito/boitata_grito_entrada_cabeca/boitata_35.png" id="94_crtl2"]
 [ext_resource type="Script" uid="uid://csduvsab0hpe3" path="res://Scripts/Boss/Fim.gd" id="95_q1nmn"]
-[ext_resource type="Texture2D" uid="uid://bylrnehmsmyi" path="res://Sprites/Inimigos/Boitata/Animacoes/Nocaute/boitata_nocaute_cabeca/boitata_99.png" id="97_dial2"]
-[ext_resource type="Texture2D" uid="uid://bycepc74lgrs2" path="res://Sprites/Inimigos/Boitata/Animacoes/Nocaute/boitata_nocaute_cabeca/boitata_101.png" id="98_npvs2"]
-[ext_resource type="Texture2D" uid="uid://dsx7rqqwrrpuy" path="res://Sprites/Inimigos/Boitata/Animacoes/Nocaute/boitata_nocaute_cabeca/boitata_103.png" id="99_gapa0"]
-[ext_resource type="Texture2D" uid="uid://c2neks12ot2h1" path="res://Sprites/Inimigos/Boitata/Animacoes/Surge/boitata_entrada_cabeca/boitata_01.png" id="100_omsfd"]
-[ext_resource type="Texture2D" uid="uid://dmhptp4ef0rhj" path="res://Sprites/Inimigos/Boitata/Animacoes/Surge/boitata_entrada_cabeca/boitata_03.png" id="101_w8gnm"]
-[ext_resource type="Texture2D" uid="uid://c4t5srwv2nbo" path="res://Sprites/Inimigos/Boitata/Animacoes/Surge/boitata_entrada_cabeca/boitata_05.png" id="102_aonxl"]
-[ext_resource type="Texture2D" uid="uid://c1g7c6shncdm4" path="res://Sprites/Inimigos/Boitata/Animacoes/Surge/boitata_entrada_cabeca/boitata_07.png" id="103_6cjxh"]
-[ext_resource type="Texture2D" uid="uid://dynn04ctmin5m" path="res://Sprites/Inimigos/Boitata/Animacoes/Surge/boitata_entrada_cabeca/boitata_09.png" id="104_10iv6"]
+[ext_resource type="Texture2D" uid="uid://dxhebbqobjo8j" path="res://Sprites/Inimigos/Boitata/Animacoes/Grito/boitata_grito_entrada_cabeca/boitata_37.png" id="95_s70y7"]
+[ext_resource type="Texture2D" uid="uid://c88yyxj2jwel6" path="res://Sprites/Inimigos/Boitata/Animacoes/Grito/boitata_grito_entrada_cabeca/boitata_39.png" id="96_ggumm"]
+[ext_resource type="Texture2D" uid="uid://d37tqt63in0jt" path="res://Sprites/Inimigos/Boitata/Animacoes/Grito/boitata_grito_entrada_cabeca/boitata_41.png" id="97_5rvlc"]
+[ext_resource type="Texture2D" uid="uid://kx18qu0lmnwb" path="res://Sprites/Inimigos/Boitata/Animacoes/Nocaute/boitata_nocaute_cabeca/boitata_99.png" id="97_dial2"]
+[ext_resource type="Texture2D" uid="uid://dwg4rap5wdqoe" path="res://Sprites/Inimigos/Boitata/Animacoes/Grito/boitata_grito_entrada_cabeca/boitata_43.png" id="98_h8pbu"]
+[ext_resource type="Texture2D" uid="uid://bxwkjnafb70xx" path="res://Sprites/Inimigos/Boitata/Animacoes/Nocaute/boitata_nocaute_cabeca/boitata_101.png" id="98_npvs2"]
+[ext_resource type="Texture2D" uid="uid://dkdqxp1rfrk4j" path="res://Sprites/Inimigos/Boitata/Animacoes/Grito/boitata_grito_entrada_cabeca/boitata_45.png" id="99_dmt1o"]
+[ext_resource type="Texture2D" uid="uid://7a4hug5a0rnq" path="res://Sprites/Inimigos/Boitata/Animacoes/Nocaute/boitata_nocaute_cabeca/boitata_103.png" id="99_gapa0"]
+[ext_resource type="Texture2D" uid="uid://cayrjoo27jdm" path="res://Sprites/Inimigos/Boitata/Animacoes/Surge/boitata_entrada_cabeca/boitata_01.png" id="100_omsfd"]
+[ext_resource type="Texture2D" uid="uid://dokn32e0qprlk" path="res://Sprites/Inimigos/Boitata/Animacoes/Surge/boitata_entrada_cabeca/boitata_03.png" id="101_w8gnm"]
+[ext_resource type="Texture2D" uid="uid://dl4ofmnjvgeo6" path="res://Sprites/Inimigos/Boitata/Animacoes/Surge/boitata_entrada_cabeca/boitata_05.png" id="102_aonxl"]
+[ext_resource type="Texture2D" uid="uid://xdqu2xlgoka3" path="res://Sprites/Inimigos/Boitata/Animacoes/Surge/boitata_entrada_cabeca/boitata_07.png" id="103_6cjxh"]
+[ext_resource type="Texture2D" uid="uid://dnehv4g8wkf0o" path="res://Sprites/Inimigos/Boitata/Animacoes/Surge/boitata_entrada_cabeca/boitata_09.png" id="104_10iv6"]
 [ext_resource type="AudioStream" uid="uid://dn437tifqwenk" path="res://Audio/SFX/BOITATA/BossBreak.mp3" id="104_fhomc"]
-[ext_resource type="Texture2D" uid="uid://botscmxf27d23" path="res://Sprites/Inimigos/Boitata/Animacoes/Surge/boitata_entrada_cabeca/boitata_11.png" id="105_2kdbm"]
-[ext_resource type="Texture2D" uid="uid://d1l1uisdlu2xf" path="res://Sprites/Inimigos/Boitata/Animacoes/Surge/boitata_entrada_cabeca/boitata_13.png" id="106_rd37a"]
-[ext_resource type="Texture2D" uid="uid://cw15tc0ml61ej" path="res://Sprites/Inimigos/Boitata/Animacoes/Surge/boitata_entrada_cabeca/boitata_15.png" id="107_tywr4"]
-[ext_resource type="Texture2D" uid="uid://uwj1uctwwo8e" path="res://Sprites/Inimigos/Boitata/Animacoes/Cospe_Fogo/boitata_bola_de_fogo_corpo/boitata_79.png" id="109_tywr4"]
-[ext_resource type="Texture2D" uid="uid://qfandyhrqmc1" path="res://Sprites/Inimigos/Boitata/Animacoes/Cospe_Fogo/boitata_bola_de_fogo_corpo/boitata_81.png" id="110_anew5"]
-[ext_resource type="Texture2D" uid="uid://d0ralwfuws3qp" path="res://Sprites/Inimigos/Boitata/Animacoes/Cospe_Fogo/boitata_bola_de_fogo_corpo/boitata_83.png" id="111_vno5b"]
-[ext_resource type="Texture2D" uid="uid://cbev0fupgwpqe" path="res://Sprites/Inimigos/Boitata/Animacoes/Cospe_Fogo/boitata_bola_de_fogo_corpo/boitata_85.png" id="112_s3vod"]
-[ext_resource type="Texture2D" uid="uid://djf88og3kuq0g" path="res://Sprites/Inimigos/Boitata/Animacoes/Cospe_Fogo/boitata_bola_de_fogo_corpo/boitata_87.png" id="113_0841q"]
+[ext_resource type="Texture2D" uid="uid://u45m3saxvemx" path="res://Sprites/Inimigos/Boitata/Animacoes/Surge/boitata_entrada_cabeca/boitata_11.png" id="105_2kdbm"]
+[ext_resource type="Texture2D" uid="uid://qipsxyl1ctgc" path="res://Sprites/Inimigos/Boitata/Animacoes/Surge/boitata_entrada_cabeca/boitata_13.png" id="106_rd37a"]
+[ext_resource type="Texture2D" uid="uid://8klfocbs4prx" path="res://Sprites/Inimigos/Boitata/Animacoes/Surge/boitata_entrada_cabeca/boitata_15.png" id="107_tywr4"]
+[ext_resource type="Texture2D" uid="uid://ey4atu013e1e" path="res://Sprites/Inimigos/Boitata/Animacoes/Cospe_Fogo/boitata_bola_de_fogo_corpo/boitata_79.png" id="109_tywr4"]
+[ext_resource type="Texture2D" uid="uid://bj2f7abkqtja6" path="res://Sprites/Inimigos/Boitata/Animacoes/Cospe_Fogo/boitata_bola_de_fogo_corpo/boitata_81.png" id="110_anew5"]
+[ext_resource type="Texture2D" uid="uid://i20ne8a44j0a" path="res://Sprites/Inimigos/Boitata/Animacoes/Cospe_Fogo/boitata_bola_de_fogo_corpo/boitata_83.png" id="111_vno5b"]
+[ext_resource type="Texture2D" uid="uid://b0xijto0sxhbb" path="res://Sprites/Inimigos/Boitata/Animacoes/Cospe_Fogo/boitata_bola_de_fogo_corpo/boitata_85.png" id="112_s3vod"]
+[ext_resource type="Texture2D" uid="uid://du20p5eptas7j" path="res://Sprites/Inimigos/Boitata/Animacoes/Cospe_Fogo/boitata_bola_de_fogo_corpo/boitata_87.png" id="113_0841q"]
 [ext_resource type="Texture2D" uid="uid://c8arw41hfnk4n" path="res://Sprites/UI/Boitata/Barra_miasma.png" id="113_iwjnr"]
-[ext_resource type="Texture2D" uid="uid://g8al0sx3mnwh" path="res://Sprites/Inimigos/Boitata/Animacoes/Cospe_Fogo/boitata_bola_de_fogo_corpo/boitata_89.png" id="114_j4hxb"]
-[ext_resource type="Texture2D" uid="uid://7f8i3k8cpffd" path="res://Sprites/Inimigos/Boitata/Animacoes/Cospe_Fogo/boitata_bola_de_fogo_corpo/boitata_91.png" id="115_8a00u"]
-[ext_resource type="Texture2D" uid="uid://b2ncylh4ubtdk" path="res://Sprites/Inimigos/Boitata/Animacoes/Cospe_Fogo/boitata_bola_de_fogo_corpo/boitata_93.png" id="116_1j8kp"]
-[ext_resource type="Texture2D" uid="uid://joln8ijli1e2" path="res://Sprites/Inimigos/Boitata/Animacoes/Cospe_Fogo/boitata_bola_de_fogo_corpo/boitata_95.png" id="117_idnrn"]
-[ext_resource type="Texture2D" uid="uid://bo3whf254uv0p" path="res://Sprites/Inimigos/Boitata/Animacoes/Nocaute/boitata_nocaute_corpo/boitata_113.png" id="119_vno5b"]
-[ext_resource type="Texture2D" uid="uid://cymywlenuf1ww" path="res://Sprites/Inimigos/Boitata/Animacoes/Nocaute/boitata_nocaute_corpo/boitata_115.png" id="120_s3vod"]
-[ext_resource type="Texture2D" uid="uid://d1e4jamcphype" path="res://Sprites/Inimigos/Boitata/Animacoes/Nocaute/boitata_nocaute_corpo/boitata_117.png" id="121_0841q"]
-[ext_resource type="Texture2D" uid="uid://c1lwm1cqdlep3" path="res://Sprites/Inimigos/Boitata/Animacoes/Nocaute/boitata_nocaute_corpo/boitata_119.png" id="122_j4hxb"]
-[ext_resource type="Texture2D" uid="uid://06kx6nn36vcy" path="res://Sprites/Inimigos/Boitata/Animacoes/Nocaute/boitata_nocaute_corpo/boitata_99.png" id="123_8a00u"]
-[ext_resource type="Texture2D" uid="uid://dc54otk18uiqo" path="res://Sprites/Inimigos/Boitata/Animacoes/Nocaute/boitata_nocaute_corpo/boitata_101.png" id="124_1j8kp"]
-[ext_resource type="Texture2D" uid="uid://cif2yj8k21p77" path="res://Sprites/Inimigos/Boitata/Animacoes/Nocaute/boitata_nocaute_corpo/boitata_103.png" id="125_idnrn"]
-[ext_resource type="Texture2D" uid="uid://dghh13m47ev2p" path="res://Sprites/Inimigos/Boitata/Animacoes/Nocaute/boitata_nocaute_corpo/boitata_105.png" id="126_pdfjf"]
-[ext_resource type="Texture2D" uid="uid://dpq5bgesf547j" path="res://Sprites/Inimigos/Boitata/Animacoes/Surge/boitata_entrada_corpo/boitata_07.png" id="127_7hrj6"]
-[ext_resource type="Texture2D" uid="uid://cjku4jeo7keg0" path="res://Sprites/Inimigos/Boitata/Animacoes/Surge/boitata_entrada_corpo/boitata_09.png" id="128_bkpgm"]
-[ext_resource type="Texture2D" uid="uid://sc87pdievnos" path="res://Sprites/Inimigos/Boitata/Animacoes/Surge/boitata_entrada_corpo/boitata_11.png" id="129_11ha3"]
-[ext_resource type="Texture2D" uid="uid://b2xggs0mcaoxt" path="res://Sprites/Inimigos/Boitata/Animacoes/Surge/boitata_entrada_corpo/boitata_13.png" id="130_08feh"]
-[ext_resource type="Texture2D" uid="uid://hka3a1psnxb6" path="res://Sprites/Inimigos/Boitata/Animacoes/Surge/boitata_entrada_corpo/boitata_15.png" id="131_iun8o"]
-[ext_resource type="Texture2D" uid="uid://ck8tlusg6mmnh" path="res://Sprites/Inimigos/Boitata/Animacoes/Surge/boitata_entrada_corpo/boitata_17.png" id="132_tyvfh"]
-[ext_resource type="Texture2D" uid="uid://bshcolegls4nr" path="res://Sprites/Inimigos/Boitata/Animacoes/Grito/boitata_grito_entrada_corpo/boitata_19.png" id="133_b6c1p"]
-[ext_resource type="Texture2D" uid="uid://dr3wffvjgi8dq" path="res://Sprites/Inimigos/Boitata/Animacoes/Grito/boitata_grito_entrada_corpo/boitata_21.png" id="134_gq5y4"]
-[ext_resource type="Texture2D" uid="uid://wa0u26esx3ls" path="res://Sprites/Inimigos/Boitata/Animacoes/Grito/boitata_grito_entrada_corpo/boitata_23.png" id="135_d8avj"]
-[ext_resource type="Texture2D" uid="uid://kv2mucbhm8j6" path="res://Sprites/Inimigos/Boitata/Animacoes/Grito/boitata_grito_entrada_corpo/boitata_25.png" id="136_c5xsa"]
-[ext_resource type="Texture2D" uid="uid://dh8f8n5gh10by" path="res://Sprites/Inimigos/Boitata/Animacoes/Grito/boitata_grito_entrada_corpo/boitata_27.png" id="137_dfbxx"]
-[ext_resource type="Texture2D" uid="uid://c2b8r1k0c8b8d" path="res://Sprites/Inimigos/Boitata/Animacoes/Grito/boitata_grito_entrada_corpo/boitata_29.png" id="138_0s02g"]
-[ext_resource type="Texture2D" uid="uid://bk2w53ckj261y" path="res://Sprites/Inimigos/Boitata/Animacoes/Grito/boitata_grito_entrada_corpo/boitata_31.png" id="139_ccpsw"]
-[ext_resource type="Texture2D" uid="uid://bfbx7ym1ndcop" path="res://Sprites/Inimigos/Boitata/Animacoes/Grito/boitata_grito_entrada_corpo/boitata_33.png" id="140_0axum"]
-[ext_resource type="Texture2D" uid="uid://77vdc1b5rjjm" path="res://Sprites/Inimigos/Boitata/Animacoes/Grito/boitata_grito_entrada_corpo/boitata_35.png" id="141_r8kh3"]
-[ext_resource type="Texture2D" uid="uid://c8oimec7s2dip" path="res://Sprites/Inimigos/Boitata/Animacoes/Grito/boitata_grito_entrada_corpo/boitata_37.png" id="142_umrhg"]
-[ext_resource type="Texture2D" uid="uid://buphpaymmcg76" path="res://Sprites/Inimigos/Boitata/Animacoes/Grito/boitata_grito_entrada_corpo/boitata_39.png" id="143_kokir"]
-[ext_resource type="Texture2D" uid="uid://ho6k7f6ncrvo" path="res://Sprites/Inimigos/Boitata/Animacoes/Grito/boitata_grito_entrada_corpo/boitata_41.png" id="144_ocyav"]
-[ext_resource type="Texture2D" uid="uid://b33dgaypf26ft" path="res://Sprites/Inimigos/Boitata/Animacoes/Grito/boitata_grito_entrada_corpo/boitata_43.png" id="145_5jk7r"]
-[ext_resource type="Texture2D" uid="uid://bbaeg7rgj4xtn" path="res://Sprites/Inimigos/Boitata/Animacoes/Grito/boitata_grito_entrada_corpo/boitata_45.png" id="146_rqfo5"]
-[ext_resource type="Texture2D" uid="uid://da7s5aomh6jsy" path="res://Sprites/Inimigos/Boitata/Animacoes/Pilar/boitata_grito_chamas_corpo/boitata_47.png" id="151_8k1di"]
-[ext_resource type="Texture2D" uid="uid://cf2yfkxw466g0" path="res://Sprites/Inimigos/Boitata/Animacoes/Pilar/boitata_grito_chamas_corpo/boitata_49.png" id="152_av5fk"]
-[ext_resource type="Texture2D" uid="uid://caxvae0qhmji8" path="res://Sprites/Inimigos/Boitata/Animacoes/Pilar/boitata_grito_chamas_corpo/boitata_51.png" id="153_jwf53"]
-[ext_resource type="Texture2D" uid="uid://c4pdptsujuja5" path="res://Sprites/Inimigos/Boitata/Animacoes/Pilar/boitata_grito_chamas_corpo/boitata_53.png" id="154_esxe0"]
-[ext_resource type="Texture2D" uid="uid://cvqbwit6ovl1q" path="res://Sprites/Inimigos/Boitata/Animacoes/Pilar/boitata_grito_chamas_corpo/boitata_55.png" id="155_5ismo"]
-[ext_resource type="Texture2D" uid="uid://dyrde15jgc7ts" path="res://Sprites/Inimigos/Boitata/Animacoes/Pilar/boitata_grito_chamas_corpo/boitata_57.png" id="156_v5fq0"]
-[ext_resource type="Texture2D" uid="uid://ch88ruv0btimp" path="res://Sprites/Inimigos/Boitata/Animacoes/Pilar/boitata_grito_chamas_corpo/boitata_59.png" id="157_clam1"]
-[ext_resource type="Texture2D" uid="uid://bji0hcih6yhy6" path="res://Sprites/Inimigos/Boitata/Animacoes/Pilar/boitata_grito_chamas_corpo/boitata_61.png" id="158_tcg8y"]
-[ext_resource type="Texture2D" uid="uid://cxs2plqwqt5pd" path="res://Sprites/Inimigos/Boitata/Animacoes/Pilar/boitata_grito_chamas_corpo/boitata_63.png" id="159_4txfj"]
-[ext_resource type="Texture2D" uid="uid://310l3habjxbd" path="res://Sprites/Inimigos/Boitata/Animacoes/Pilar/boitata_grito_chamas_corpo/boitata_65.png" id="160_vwq1j"]
-[ext_resource type="Texture2D" uid="uid://blnljnvmgh83h" path="res://Sprites/Inimigos/Boitata/Animacoes/Pilar/boitata_grito_chamas_corpo/boitata_67.png" id="161_r2xbl"]
-[ext_resource type="Texture2D" uid="uid://bgktoatud0mja" path="res://Sprites/Inimigos/Boitata/Animacoes/Pilar/boitata_grito_chamas_corpo/boitata_69.png" id="162_183op"]
-[ext_resource type="Texture2D" uid="uid://bpqjr2g1wjwt7" path="res://Sprites/Inimigos/Boitata/Animacoes/Pilar/boitata_grito_chamas_corpo/boitata_71.png" id="163_aev7w"]
-[ext_resource type="Texture2D" uid="uid://b108ikocnv8ek" path="res://Sprites/Inimigos/Boitata/Animacoes/Pilar/boitata_grito_chamas_corpo/boitata_73.png" id="164_xraj6"]
+[ext_resource type="Texture2D" uid="uid://c8hgngp2oaxlo" path="res://Sprites/Inimigos/Boitata/Animacoes/Cospe_Fogo/boitata_bola_de_fogo_corpo/boitata_89.png" id="114_j4hxb"]
+[ext_resource type="Texture2D" uid="uid://dl8t0tbfeiorj" path="res://Sprites/Inimigos/Boitata/Animacoes/Cospe_Fogo/boitata_bola_de_fogo_corpo/boitata_91.png" id="115_8a00u"]
+[ext_resource type="Texture2D" uid="uid://dgawxanug4m2m" path="res://Sprites/Inimigos/Boitata/Animacoes/Cospe_Fogo/boitata_bola_de_fogo_corpo/boitata_93.png" id="116_1j8kp"]
+[ext_resource type="Texture2D" uid="uid://clav54vkl217l" path="res://Sprites/Inimigos/Boitata/Animacoes/Cospe_Fogo/boitata_bola_de_fogo_corpo/boitata_95.png" id="117_idnrn"]
+[ext_resource type="Texture2D" uid="uid://bqgyyc4iy7sxc" path="res://Sprites/Inimigos/Boitata/Animacoes/Nocaute/boitata_nocaute_corpo/boitata_113.png" id="119_vno5b"]
+[ext_resource type="Texture2D" uid="uid://dpgna3mvij5hb" path="res://Sprites/Inimigos/Boitata/Animacoes/Nocaute/boitata_nocaute_corpo/boitata_115.png" id="120_s3vod"]
+[ext_resource type="Texture2D" uid="uid://xpk6o5xruogk" path="res://Sprites/Inimigos/Boitata/Animacoes/Nocaute/boitata_nocaute_corpo/boitata_117.png" id="121_0841q"]
+[ext_resource type="Texture2D" uid="uid://b00e7gbvqo30t" path="res://Sprites/Inimigos/Boitata/Animacoes/Nocaute/boitata_nocaute_corpo/boitata_119.png" id="122_j4hxb"]
+[ext_resource type="Texture2D" uid="uid://imxlvmmdbvwp" path="res://Sprites/Inimigos/Boitata/Animacoes/Nocaute/boitata_nocaute_corpo/boitata_99.png" id="123_8a00u"]
+[ext_resource type="Texture2D" uid="uid://bb8w66y3n33t" path="res://Sprites/Inimigos/Boitata/Animacoes/Nocaute/boitata_nocaute_corpo/boitata_101.png" id="124_1j8kp"]
+[ext_resource type="Texture2D" uid="uid://c1pthbkq0m6jt" path="res://Sprites/Inimigos/Boitata/Animacoes/Nocaute/boitata_nocaute_corpo/boitata_103.png" id="125_idnrn"]
+[ext_resource type="Texture2D" uid="uid://d0bmppj1i7c0p" path="res://Sprites/Inimigos/Boitata/Animacoes/Nocaute/boitata_nocaute_corpo/boitata_105.png" id="126_pdfjf"]
+[ext_resource type="Texture2D" uid="uid://g72nyj60m00g" path="res://Sprites/Inimigos/Boitata/Animacoes/Surge/boitata_entrada_corpo/boitata_07.png" id="127_7hrj6"]
+[ext_resource type="Texture2D" uid="uid://dsgb42ridswlf" path="res://Sprites/Inimigos/Boitata/Animacoes/Surge/boitata_entrada_corpo/boitata_09.png" id="128_bkpgm"]
+[ext_resource type="Texture2D" uid="uid://w0dvpssymron" path="res://Sprites/Inimigos/Boitata/Animacoes/Surge/boitata_entrada_corpo/boitata_11.png" id="129_11ha3"]
+[ext_resource type="Texture2D" uid="uid://cded12cs1h6q" path="res://Sprites/Inimigos/Boitata/Animacoes/Surge/boitata_entrada_corpo/boitata_13.png" id="130_08feh"]
+[ext_resource type="Texture2D" uid="uid://byhrqyeen3ptf" path="res://Sprites/Inimigos/Boitata/Animacoes/Surge/boitata_entrada_corpo/boitata_15.png" id="131_iun8o"]
+[ext_resource type="Texture2D" uid="uid://nmt71rp34jrb" path="res://Sprites/Inimigos/Boitata/Animacoes/Surge/boitata_entrada_corpo/boitata_17.png" id="132_tyvfh"]
+[ext_resource type="Texture2D" uid="uid://b606mjtnf78b6" path="res://Sprites/Inimigos/Boitata/Animacoes/Grito/boitata_grito_entrada_corpo/boitata_19.png" id="133_b6c1p"]
+[ext_resource type="Texture2D" uid="uid://xhpqyj65cao8" path="res://Sprites/Inimigos/Boitata/Animacoes/Grito/boitata_grito_entrada_corpo/boitata_21.png" id="134_gq5y4"]
+[ext_resource type="Texture2D" uid="uid://dq1py1palm7ig" path="res://Sprites/Inimigos/Boitata/Animacoes/Grito/boitata_grito_entrada_corpo/boitata_23.png" id="135_d8avj"]
+[ext_resource type="Texture2D" uid="uid://cxmnyywfyv714" path="res://Sprites/Inimigos/Boitata/Animacoes/Surge/boitata_entrada_cabeca/boitata_17.png" id="135_p4rbi"]
+[ext_resource type="Texture2D" uid="uid://c51whjbuawh18" path="res://Sprites/Inimigos/Boitata/Animacoes/Grito/boitata_grito_entrada_corpo/boitata_25.png" id="136_c5xsa"]
+[ext_resource type="Texture2D" uid="uid://di2mh8a4c76i3" path="res://Sprites/Inimigos/Boitata/Animacoes/Grito/boitata_grito_entrada_corpo/boitata_27.png" id="137_dfbxx"]
+[ext_resource type="Texture2D" uid="uid://308won6fh24t" path="res://Sprites/Inimigos/Boitata/Animacoes/Grito/boitata_grito_entrada_corpo/boitata_29.png" id="138_0s02g"]
+[ext_resource type="Texture2D" uid="uid://dk7efa6doqvgm" path="res://Sprites/Inimigos/Boitata/Animacoes/Grito/boitata_grito_entrada_corpo/boitata_31.png" id="139_ccpsw"]
+[ext_resource type="Texture2D" uid="uid://bvatjetrjl4iw" path="res://Sprites/Inimigos/Boitata/Animacoes/Grito/boitata_grito_entrada_corpo/boitata_33.png" id="140_0axum"]
+[ext_resource type="Texture2D" uid="uid://djj06bqhiiqct" path="res://Sprites/Inimigos/Boitata/Animacoes/Grito/boitata_grito_entrada_corpo/boitata_35.png" id="141_r8kh3"]
+[ext_resource type="Texture2D" uid="uid://wgq4ddcw1ofj" path="res://Sprites/Inimigos/Boitata/Animacoes/Grito/boitata_grito_entrada_corpo/boitata_37.png" id="142_umrhg"]
+[ext_resource type="Texture2D" uid="uid://dwg7jv7eb1e6x" path="res://Sprites/Inimigos/Boitata/Animacoes/Grito/boitata_grito_entrada_corpo/boitata_39.png" id="143_kokir"]
+[ext_resource type="Texture2D" uid="uid://b5qbcf62xwrka" path="res://Sprites/Inimigos/Boitata/Animacoes/Grito/boitata_grito_entrada_corpo/boitata_41.png" id="144_ocyav"]
+[ext_resource type="Texture2D" uid="uid://bd6hsclxnwsgj" path="res://Sprites/Inimigos/Boitata/Animacoes/Grito/boitata_grito_entrada_corpo/boitata_43.png" id="145_5jk7r"]
+[ext_resource type="Texture2D" uid="uid://dave6cirasm6w" path="res://Sprites/Inimigos/Boitata/Animacoes/Grito/boitata_grito_entrada_corpo/boitata_45.png" id="146_rqfo5"]
+[ext_resource type="Texture2D" uid="uid://cbwq7xm1u033p" path="res://Sprites/Inimigos/Boitata/Animacoes/Pilar/boitata_grito_chamas_corpo/boitata_47.png" id="151_8k1di"]
+[ext_resource type="Texture2D" uid="uid://d7p2hvabc3xa" path="res://Sprites/Inimigos/Boitata/Animacoes/Pilar/boitata_grito_chamas_corpo/boitata_49.png" id="152_av5fk"]
+[ext_resource type="Texture2D" uid="uid://dlfui6j12l6aq" path="res://Sprites/Inimigos/Boitata/Animacoes/Pilar/boitata_grito_chamas_corpo/boitata_51.png" id="153_jwf53"]
+[ext_resource type="Texture2D" uid="uid://dp3dxi7vwn81l" path="res://Sprites/Inimigos/Boitata/Animacoes/Pilar/boitata_grito_chamas_corpo/boitata_53.png" id="154_esxe0"]
+[ext_resource type="Texture2D" uid="uid://cb84k1as43vuh" path="res://Sprites/Inimigos/Boitata/Animacoes/Pilar/boitata_grito_chamas_corpo/boitata_55.png" id="155_5ismo"]
+[ext_resource type="Texture2D" uid="uid://dvcn73mt0w25c" path="res://Sprites/Inimigos/Boitata/Animacoes/Pilar/boitata_grito_chamas_corpo/boitata_57.png" id="156_v5fq0"]
+[ext_resource type="Texture2D" uid="uid://t03qq1ipcsrl" path="res://Sprites/Inimigos/Boitata/Animacoes/Pilar/boitata_grito_chamas_corpo/boitata_59.png" id="157_clam1"]
+[ext_resource type="Texture2D" uid="uid://bsys77scj37rj" path="res://Sprites/Inimigos/Boitata/Animacoes/Pilar/boitata_grito_chamas_corpo/boitata_61.png" id="158_tcg8y"]
+[ext_resource type="Texture2D" uid="uid://hqivhja2hbt1" path="res://Sprites/Inimigos/Boitata/Animacoes/Pilar/boitata_grito_chamas_corpo/boitata_63.png" id="159_4txfj"]
+[ext_resource type="Texture2D" uid="uid://b3aarsaqcmabq" path="res://Sprites/Inimigos/Boitata/Animacoes/Pilar/boitata_grito_chamas_corpo/boitata_65.png" id="160_vwq1j"]
+[ext_resource type="Texture2D" uid="uid://covi3xf4t7fxy" path="res://Sprites/Inimigos/Boitata/Animacoes/Pilar/boitata_grito_chamas_corpo/boitata_67.png" id="161_r2xbl"]
+[ext_resource type="Texture2D" uid="uid://djw5ivxuoi865" path="res://Sprites/Inimigos/Boitata/Animacoes/Pilar/boitata_grito_chamas_corpo/boitata_69.png" id="162_183op"]
+[ext_resource type="Texture2D" uid="uid://dsmhldn16ouor" path="res://Sprites/Inimigos/Boitata/Animacoes/Pilar/boitata_grito_chamas_corpo/boitata_71.png" id="163_aev7w"]
+[ext_resource type="Texture2D" uid="uid://wni3igc4hbdk" path="res://Sprites/Inimigos/Boitata/Animacoes/Pilar/boitata_grito_chamas_corpo/boitata_73.png" id="164_xraj6"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_iwjnr"]
 shader = ExtResource("7_q8716")
@@ -503,46 +518,46 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("73_0epgg")
+"texture": ExtResource("86_5jk7r")
 }, {
 "duration": 1.0,
-"texture": ExtResource("74_ut5xs")
+"texture": ExtResource("87_rqfo5")
 }, {
 "duration": 1.0,
-"texture": ExtResource("75_tev85")
+"texture": ExtResource("88_of1yv")
 }, {
 "duration": 1.0,
-"texture": ExtResource("76_ulty5")
+"texture": ExtResource("89_c6wqk")
 }, {
 "duration": 1.0,
-"texture": ExtResource("77_dr8qx")
+"texture": ExtResource("90_y3pkt")
 }, {
 "duration": 1.0,
-"texture": ExtResource("78_go6es")
+"texture": ExtResource("91_ism5p")
 }, {
 "duration": 1.0,
-"texture": ExtResource("79_d4lcm")
+"texture": ExtResource("92_cs207")
 }, {
 "duration": 1.0,
-"texture": ExtResource("80_djwlo")
+"texture": ExtResource("93_njk0s")
 }, {
 "duration": 1.0,
-"texture": ExtResource("81_0jjh8")
+"texture": ExtResource("94_crtl2")
 }, {
 "duration": 1.0,
-"texture": ExtResource("82_2gaj7")
+"texture": ExtResource("95_s70y7")
 }, {
 "duration": 1.0,
-"texture": ExtResource("83_whjwt")
+"texture": ExtResource("96_ggumm")
 }, {
 "duration": 1.0,
-"texture": ExtResource("84_udcvh")
+"texture": ExtResource("97_5rvlc")
 }, {
 "duration": 1.0,
-"texture": ExtResource("85_xklm6")
+"texture": ExtResource("98_h8pbu")
 }, {
 "duration": 1.0,
-"texture": ExtResource("86_ude47")
+"texture": ExtResource("99_dmt1o")
 }],
 "loop": false,
 "name": &"Grito",
@@ -668,6 +683,9 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": ExtResource("107_tywr4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("135_p4rbi")
 }],
 "loop": false,
 "name": &"Surgimento",
@@ -1147,15 +1165,6 @@ tracks/3/keys = {
 [sub_resource type="Animation" id="Animation_ojojp"]
 resource_name = "Grito"
 length = 0.9334
-markers = [{
-"color": Color(1, 1, 1, 1),
-"name": &"Peak",
-"time": 0.33296967
-}, {
-"color": Color(1, 1, 1, 1),
-"name": &"Final",
-"time": 0.9303271
-}]
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -1589,15 +1598,6 @@ tracks/6/keys = {
 [sub_resource type="Animation" id="Animation_sgy8v"]
 resource_name = "Surge"
 length = 0.7501
-markers = [{
-"color": Color(1, 1, 1, 1),
-"name": &"Sobe",
-"time": 0.499
-}, {
-"color": Color(1, 1, 1, 1),
-"name": &"Start",
-"time": 0.0
-}]
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
