@@ -64,6 +64,7 @@ func _ready() -> void:
 		if atual <= 0:
 			#Esconde sprite armadura
 			%HurtCabeca.set_deferred("monitorable", false)
+			await get_tree().create_timer(.1).timeout # Só pra ter hit flash
 			%SpriteCabeca.hide()
 			ChecaArmor()
 	)
@@ -72,6 +73,7 @@ func _ready() -> void:
 		if atual <= 0:
 			#Esconde sprite armadura
 			%HurtCorpo.set_deferred("monitorable", false)
+			await get_tree().create_timer(.1).timeout # Só pra ter hit flash
 			%SpriteCorpo.hide()
 			ChecaArmor()
 	)
@@ -109,6 +111,7 @@ func _ready() -> void:
 
 func ChecaArmor() -> void:
 	if vida_miasma_atual <= 0:
+		print("MIASMA DESTRUIDO")
 		state_machine.MudaState(state_machine.find_child("Nocaute"))
 
 func TomaDano(hit:Array[HitBox]) -> void:
@@ -125,10 +128,9 @@ func TomouDano(vida_atual:int, _vida_antiga:int) -> void:
 		tempo_idle_pilar /= 2.0
 
 func ArmorDano() -> void:
-	if tween:
-		tween.kill()
-	tween = create_tween()
-	tween.tween_property(%BarraArmor, "value", vida_miasma_atual, .15)
+	vida_miasma_atual = %VidaMCabeca.vida_atual + %VidaMCorpo.vida_atual
+	var tween_a:Tween = create_tween()
+	tween_a.tween_property(%BarraArmor, "value", vida_miasma_atual, .15)
 	
 	# Deixa ataques mais rápidos
 	#if vida_atual == 10:
@@ -136,13 +138,14 @@ func ArmorDano() -> void:
 		#tempo_idle_pilar /= 2.0
 
 func ResetArmor() -> void:
-	%VidaMCabeca.RecebeCura(100)
+	vida_miasma_atual = vida_miasma_max
+	%VidaMCabeca.RecebeCura(%VidaMCabeca.vida_max)
 	%HurtCabeca.set_deferred("monitorable", true)
-	#%HurtCabeca.show()
+	%SpriteCabeca.show()
 	
-	%VidaMCorpo.RecebeCura(100)
+	%VidaMCorpo.RecebeCura(%VidaMCorpo.vida_max)
 	%HurtCorpo.set_deferred("monitorable", true)
-	#%HurtCorpo.show()
+	%SpriteCorpo.show()
 
 func SpawnPilar(pos:NodePath) -> void:
 	var node:Node2D = get_node(pos)

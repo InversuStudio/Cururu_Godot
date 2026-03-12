@@ -1016,9 +1016,9 @@ tracks/6/keys = {
 "values": [0, 1, 2, 3, 4, 5, 6, 7, 8]
 }
 
-[sub_resource type="Animation" id="Animation_tift1"]
-resource_name = "Final"
-length = 1.4
+[sub_resource type="Animation" id="Animation_183op"]
+resource_name = "Entrada"
+length = 1.26
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -1026,10 +1026,10 @@ tracks/0/path = NodePath("SpriteMain:animation")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
 "update": 1,
-"values": [&"Grito"]
+"values": [&"Surgimento", &"Grito"]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -1038,10 +1038,86 @@ tracks/1/path = NodePath("SpriteMain:frame")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.10000001, 0.20000002, 0.3, 0.40000004, 0.5, 0.6, 0.70000005, 0.8000001, 0.90000004, 1, 1.1, 1.2, 1.3000001),
+"times": PackedFloat32Array(0, 0.083333336, 0.16666667, 0.25000003, 0.3333, 0.4166667, 0.5, 0.5833334, 0.6666668, 0.75000006, 0.8333335, 0.91666675, 1.0000001, 1.0833, 1.1716),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [1, 2, 3, 4, 5, 6, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("SpriteCabeca:animation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [&"Surgimento", &"Grito"]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("SpriteCabeca:frame")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.083333336, 0.1667, 0.25000003, 0.33333334, 0.4166667, 0.5, 0.5833334, 0.6666668, 0.75000006, 0.8333335, 0.91666675, 1.0000001, 1.0833334, 1.1716),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 4, 5, 6, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("SpriteCorpo:animation")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [&"Surgimento", &"Grito"]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("SpriteCorpo:frame")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 0.16666667, 0.24999999, 0.33333337, 0.41666663, 0.5, 0.5833334, 0.6666668, 0.75000006, 0.8333335, 0.91666675, 1.0000001, 1.0833334, 1.1716),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
 "update": 1,
 "values": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+}
+
+[sub_resource type="Animation" id="Animation_xraj6"]
+resource_name = "Final"
+length = 1.26
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("SpriteMain:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [&"Surgimento", &"Grito"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("SpriteMain:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.083333336, 0.16666667, 0.25000003, 0.3333, 0.4166667, 0.5, 0.5833334, 0.6666668, 0.75000006, 0.8333335, 0.91666675, 1.0000001, 1.0833, 1.1716),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [1, 2, 3, 4, 5, 6, 5, 6, 7, 8, 9, 10, 11, 12, 13]
 }
 tracks/2/type = "value"
 tracks/2/imported = false
@@ -1050,10 +1126,10 @@ tracks/2/path = NodePath("SpriteMain:material:shader_parameter/valor")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(0, 0.14988163, 0.3021807, 0.4496449, 0.5995265, 0.7494082, 0.9017073, 0.9887353, 1.0636761),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
+"times": PackedFloat32Array(0, 0.3, 0.6, 0.9, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
 "update": 0,
-"values": [0.0, 0.30000001425, 0.50000002375, 0.800000038, 1.0, 0.800000038, 0.50000002375, 0.30000001425, 0.0]
+"values": [0.0, 0.0, 1.0, 1.0, 0.0]
 }
 tracks/3/type = "value"
 tracks/3/imported = false
@@ -1062,7 +1138,7 @@ tracks/3/path = NodePath("GritoSFX:playing")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
-"times": PackedFloat32Array(0.2),
+"times": PackedFloat32Array(0.33333334),
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [true]
@@ -1070,7 +1146,16 @@ tracks/3/keys = {
 
 [sub_resource type="Animation" id="Animation_ojojp"]
 resource_name = "Grito"
-length = 1.1
+length = 0.9334
+markers = [{
+"color": Color(1, 1, 1, 1),
+"name": &"Peak",
+"time": 0.33296967
+}, {
+"color": Color(1, 1, 1, 1),
+"name": &"Final",
+"time": 0.9303271
+}]
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -1150,7 +1235,7 @@ tracks/6/path = NodePath("SpriteMain:frame")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
 tracks/6/keys = {
-"times": PackedFloat32Array(0, 0.06666667, 0.13333334, 0.20000002, 0.26666668, 0.33333334, 0.40000004, 0.4666667, 0.53333336, 0.6, 0.6666667, 0.73333335, 0.8000001, 0.86666673),
+"times": PackedFloat32Array(0, 0.06666667, 0.13333334, 0.20000002, 0.26666668, 0.33333334, 0.40000004, 0.4666667, 0.53333336, 0.6, 0.6666667, 0.73333335, 0.8000001, 0.8667),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
 "update": 1,
 "values": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
@@ -1414,55 +1499,91 @@ tracks/7/keys = {
 "values": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
 }
 
-[sub_resource type="Animation" id="Animation_b6c1p"]
+[sub_resource type="Animation" id="Animation_aev7w"]
 length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("SpriteMain:frame")
+tracks/0/path = NodePath("SpriteMain:animation")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [1]
+"values": [&"Surgimento"]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("SpriteCabeca:frame")
+tracks/1/path = NodePath("SpriteMain:frame")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [1]
+"values": [5]
 }
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("SpriteCorpo:frame")
+tracks/2/path = NodePath("SpriteCabeca:animation")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [1]
+"values": [&"Grito"]
 }
 tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("SpriteMain:animation")
+tracks/3/path = NodePath("SpriteCabeca:frame")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
+"values": [5]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("SpriteCorpo:animation")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
 "values": [&"Grito"]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("SpriteCorpo:frame")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [5]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("SpriteMain:material:shader_parameter/valor")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
 }
 
 [sub_resource type="Animation" id="Animation_sgy8v"]
@@ -1471,7 +1592,11 @@ length = 0.7501
 markers = [{
 "color": Color(1, 1, 1, 1),
 "name": &"Sobe",
-"time": 0.5
+"time": 0.499
+}, {
+"color": Color(1, 1, 1, 1),
+"name": &"Start",
+"time": 0.0
 }]
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -1492,7 +1617,7 @@ tracks/1/path = NodePath("SpriteMain:frame")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.083333336, 0.16666667, 0.25000003, 0.33333334, 0.4166667, 0.50000006, 0.5833334),
+"times": PackedFloat32Array(0, 0.083333336, 0.16666667, 0.25000003, 0.3333, 0.4166667, 0.50000006, 0.5833334),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
 "update": 1,
 "values": [1, 2, 3, 4, 5, 6, 7, 8]
@@ -1549,13 +1674,14 @@ tracks/5/keys = {
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_mjx0v"]
 _data = {
 &"CospeFogo": SubResource("Animation_16hqa"),
-&"Final": SubResource("Animation_tift1"),
+&"Entrada": SubResource("Animation_183op"),
+&"Final": SubResource("Animation_xraj6"),
 &"Grito": SubResource("Animation_ojojp"),
 &"Idle": SubResource("Animation_0ddi0"),
 &"NocauteEnd": SubResource("Animation_0w5f0"),
 &"NocauteStart": SubResource("Animation_mjx0v"),
 &"Pilar": SubResource("Animation_fwdqd"),
-&"RESET": SubResource("Animation_b6c1p"),
+&"RESET": SubResource("Animation_aev7w"),
 &"Surge": SubResource("Animation_sgy8v")
 }
 
@@ -1582,7 +1708,11 @@ one_shot = true
 
 [node name="TimerNocaute" type="Timer" parent="." unique_id=1074682132]
 unique_name_in_owner = true
-wait_time = 2.8
+wait_time = 3.0
+one_shot = true
+
+[node name="TimerPilar" type="Timer" parent="." unique_id=1776591248]
+unique_name_in_owner = true
 one_shot = true
 
 [node name="SpriteMain" type="AnimatedSprite2D" parent="." unique_id=1002636083]
@@ -1591,8 +1721,9 @@ material = SubResource("ShaderMaterial_iwjnr")
 position = Vector2(0, -1020)
 scale = Vector2(1.5, 1.5)
 sprite_frames = SubResource("SpriteFrames_nkv4g")
-animation = &"Grito"
+animation = &"Surgimento"
 autoplay = "Escondido"
+frame = 5
 
 [node name="SpriteCabeca" type="AnimatedSprite2D" parent="." unique_id=1407401025]
 unique_name_in_owner = true
@@ -1600,9 +1731,9 @@ material = SubResource("ShaderMaterial_183op")
 position = Vector2(0, -1020)
 scale = Vector2(1.5, 1.5)
 sprite_frames = SubResource("SpriteFrames_71r63")
-animation = &"Surgimento"
+animation = &"Grito"
 autoplay = "Escondido"
-frame = 1
+frame = 5
 
 [node name="SpriteCorpo" type="AnimatedSprite2D" parent="." unique_id=1919865204]
 unique_name_in_owner = true
@@ -1610,9 +1741,9 @@ material = SubResource("ShaderMaterial_aev7w")
 position = Vector2(0, -1020)
 scale = Vector2(1.5, 1.5)
 sprite_frames = SubResource("SpriteFrames_tic1h")
-animation = &"Surgimento"
+animation = &"Grito"
 autoplay = "Escondido"
-frame = 1
+frame = 5
 
 [node name="VidaBoss" type="Node" parent="." unique_id=1212445150]
 unique_name_in_owner = true
@@ -1622,14 +1753,13 @@ metadata/_custom_type_script = "uid://hsdutxxttrp3"
 
 [node name="HurtBox" parent="." unique_id=1116069954 node_paths=PackedStringArray("comp_vida", "sprite") instance=ExtResource("3_fwdqd")]
 unique_name_in_owner = true
+position = Vector2(483, -549)
 collision_layer = 16
-monitorable = false
 comp_vida = NodePath("../VidaBoss")
 hit_sfx = ExtResource("5_b2ig3")
 sprite = NodePath("../SpriteMain")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HurtBox" unique_id=1241077229]
-position = Vector2(481, -550)
 rotation = 1.5707964
 shape = SubResource("CapsuleShape2D_fwdqd")
 debug_color = Color(0.9968892, 0, 0.18689972, 0.41960785)
@@ -1643,13 +1773,13 @@ metadata/_custom_type_script = "uid://hsdutxxttrp3"
 
 [node name="HurtCabeca" parent="." unique_id=830437686 node_paths=PackedStringArray("comp_vida", "sprite") instance=ExtResource("3_fwdqd")]
 unique_name_in_owner = true
+position = Vector2(72, -1063)
 collision_layer = 16
 comp_vida = NodePath("../VidaMCabeca")
 hit_sfx = ExtResource("5_b2ig3")
 sprite = NodePath("../SpriteCabeca")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HurtCabeca" unique_id=1550534301]
-position = Vector2(24, -1065)
 rotation = 1.5707964
 shape = SubResource("CapsuleShape2D_mjx0v")
 
@@ -1662,14 +1792,13 @@ metadata/_custom_type_script = "uid://hsdutxxttrp3"
 
 [node name="HurtCorpo" parent="." unique_id=454590909 node_paths=PackedStringArray("comp_vida", "sprite") instance=ExtResource("3_fwdqd")]
 unique_name_in_owner = true
+position = Vector2(114, -497)
 collision_layer = 16
 comp_vida = NodePath("../VidaMCorpo")
 hit_sfx = ExtResource("5_b2ig3")
 sprite = NodePath("../SpriteCorpo")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HurtCorpo" unique_id=855814853]
-position = Vector2(60, -455)
-rotation = -3.1415927
 shape = SubResource("CapsuleShape2D_0w5f0")
 
 [node name="PosTiro" type="Marker2D" parent="." unique_id=1362764453]
@@ -1773,7 +1902,6 @@ show_percentage = false
 
 [connection signal="timeout" from="TimerIdle" to="StateMachine/Idle" method="_on_timer_idle_timeout"]
 [connection signal="timeout" from="TimerNocaute" to="StateMachine/Nocaute" method="_on_timer_nocaute_timeout"]
-[connection signal="animation_finished" from="Anim" to="StateMachine/Start" method="_on_anim_animation_finished"]
 [connection signal="animation_finished" from="Anim" to="StateMachine/CospeFogo" method="_on_anim_animation_finished"]
 [connection signal="animation_finished" from="Anim" to="StateMachine/PilarFogo" method="_on_anim_animation_finished"]
 [connection signal="animation_finished" from="Anim" to="StateMachine/Nocaute" method="_on_anim_animation_finished"]

@@ -12,6 +12,8 @@ func _input(_event: InputEvent) -> void:
 	if Input.is_action_just_pressed("console"):
 		if %Console.visible:
 			%Console.hide()
+			%TextoConsole.text = ""
+			%StatePlayer.text = ""
 		else:
 			%Console.show()
 

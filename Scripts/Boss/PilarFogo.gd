@@ -2,8 +2,7 @@ extends State
 
 ## State de Idle
 @export var idle_state:State = null
-# Tempo que boss ficará em idle após State atual
-#@export var tempo_idle:float = 1.0
+
 var prosseguir:bool = false
 
 const pilar:PackedScene = preload("res://Cenas/BossTeste/Labareda.tscn")
@@ -30,7 +29,8 @@ func Update(_delta : float) -> State:
 func Ataque() -> void:
 	for pos:Marker2D in parent.spawn_pilares:
 		SpawnPilar(pos.global_position)
-		await get_tree().create_timer(parent.tempo_ate_prox_pilar).timeout
+		%TimerPilar.start(parent.tempo_ate_prox_pilar)
+		await %TimerPilar.timeout
 		if parent.nocaute: break
 
 # Instancia os pilares de fogo
@@ -41,6 +41,7 @@ func SpawnPilar(pos:Vector2) -> void:
 	parent.get_parent().add_child(p)
 
 func _on_anim_animation_finished(anim_name: StringName) -> void:
+	if get_parent().current_state != self: return
 	if anim_name == "Pilar":
 		prosseguir = true
 

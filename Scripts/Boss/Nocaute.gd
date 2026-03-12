@@ -39,6 +39,7 @@ func Exit() -> void:
 	print(%HurtBox)
 
 func _on_anim_animation_finished(anim_name: StringName) -> void:
+	if get_parent().current_state != self: return
 	if anim_name == "NocauteEnd":
 		#%Anim.play("Surge")
 		%Anim.play_section_with_markers("Surge", "", "Sobe")

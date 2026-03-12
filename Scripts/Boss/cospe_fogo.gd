@@ -30,6 +30,7 @@ func CospeFogo() -> void:
 	parent.get_parent().add_child(b)
 
 func _on_anim_animation_finished(anim_name: StringName) -> void:
+	if get_parent().current_state != self: return
 	if anim_name == "CospeFogo":
 		prosseguir = true
 

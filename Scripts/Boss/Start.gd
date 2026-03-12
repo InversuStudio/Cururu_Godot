@@ -13,9 +13,11 @@ func PlayerEntrou(body:Node2D) -> void:
 		player.pode_mover = false
 		parent.area_check_player.queue_free()
 		parent.area_check_player = null
-		%Anim.play("Surge")
+		await get_tree().create_timer(.7).timeout
+		%Anim.play("Entrada")
 		parent.rabo.show()
 		Mundos.main_camera.usa_look_ahead = false
+		Start()
 
 func Update(_delta: float) -> State:
 	if inicia_luta:
@@ -23,21 +25,22 @@ func Update(_delta: float) -> State:
 		return state_idle
 	return null
 
-func _on_anim_animation_finished(anim_name: StringName) -> void:
-	if anim_name == "Surge" and get_parent().current_state == self:
-		%Anim.play("Idle")
-		await get_tree().create_timer(.7).timeout
-		%GritoSFX.stream = parent.gritos[0]
-		%Anim.play("Grito")
-		%BarraVida.show()
-		BGM.TocaMusica(parent.musica_luta)
-		if parent.state_machine.current_state == self:
-			if parent.tween:
-				parent.tween.kill()
-			parent.tween = create_tween()
-			parent.tween.tween_property(%BarraVida, "value", %VidaBoss.vida_max, 2.)
-			
-			var tween:Tween = create_tween()
-			tween.tween_property(%BarraArmor, "value", %VidaMCorpo.vida_max, 2.5)
-	if anim_name == "Grito":
-		inicia_luta = true
+func Start() -> void:
+	Console._Print("[color=red]SURGE!!!!!![/color]")
+		
+	%GritoSFX.stream = parent.gritos[0]
+	%GritoSFX.play()
+	%BarraVida.show()
+	
+	BGM.TocaMusica(parent.musica_luta)
+
+	if parent.tween:
+		parent.tween.kill()
+	parent.tween = create_tween()
+	parent.tween.tween_property(%BarraVida, "value", %VidaBoss.vida_max, 2.)
+	
+	var tween:Tween = create_tween()
+	tween.tween_property(%BarraArmor, "value", parent.vida_miasma_max, 2.5)
+		
+	await %Anim.animation_finished
+	inicia_luta = true
