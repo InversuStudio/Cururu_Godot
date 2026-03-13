@@ -83,7 +83,7 @@ func RecebeuDano(_v_new:int, _v_old:int) -> void:#(_h:Array[HitBox]) -> void:
 func _on_timer_dano_timeout() -> void:
 	trava_move = false
 
-func Pushback(pos:Vector2, _layer:int) -> void:
+func Pushback(pos:Vector2, _h:HitBox, _layer:int) -> void:
 	print("PUSH")
 	trava_move = true
 	para_ataque = true
