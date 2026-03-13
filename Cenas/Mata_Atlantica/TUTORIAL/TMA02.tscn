@@ -1659,7 +1659,6 @@ limit_top = -5314
 limit_right = -16129
 limit_bottom = -2407
 target = NodePath("../Background2/0/Cururu")
-speed = 6.0
 limite_camera = NodePath("../LimiteCam")
 
 [node name="LimiteCam" type="ReferenceRect" parent="." unique_id=780850009]

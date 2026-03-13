@@ -5,7 +5,6 @@ extends State
 @export var nado_state: State = null
 
 @export var sfx:Array[AudioStream] = []
-@export var hitboxes:Array[HitBox] = []
 
 @export_group("Pushback")
 @export var distancia_push:float = 1.0
@@ -23,13 +22,7 @@ var combo_anim: Array[String] = [
 var terminou: bool = false
 
 const vfx:PackedScene = preload("res://Objetos/Funcionalidade/VFX_Melee.tscn")
-var vfx_atual:Node2D = null
-
-func _ready() -> void:
-	await get_tree().process_frame
-	for c:HitBox in hitboxes:
-		c.connect("hit", Hit)#.bind(c))
-
+var fx_atual:Node2D = null
 # COMPORTAMENTO AO ENTRAR NO STATE
 func Enter() -> void:
 	print("MELEE")
@@ -47,11 +40,12 @@ func Enter() -> void:
 	%Anim.play(combo_anim[combo_num] + state, -1, GameData.ataque_anim_speed)
 	var next_combo = combo_num + 1
 	var fx:Node2D = vfx.instantiate()
-	fx.global_position = parent.global_position
+	fx.get_child(1).hit.connect(Hit)
+	fx.global_position = %PosMelee.global_position
 	parent.get_parent().add_child(fx)
-	vfx_atual = fx
-	var c:AnimatedSprite2D = fx.get_child(0)
 	fx.scale.x = -1 if parent.sprite.flip_h else 1
+	fx_atual = fx
+	var c:AnimatedSprite2D = fx.get_child(0)
 	c.play(str(next_combo))
 	combo_num = next_combo if next_combo <= combo_limit else 0
 	
@@ -73,7 +67,8 @@ func Update(_delta:float) -> State:
 	return null
 
 func FixedUpdate(delta:float) -> State:
-	if vfx_atual: vfx_atual.global_position = parent.global_position
+	if fx_atual:
+		fx_atual.global_position = %PosMelee.global_position
 	
 	# Gravidade
 	if !parent.is_on_floor():

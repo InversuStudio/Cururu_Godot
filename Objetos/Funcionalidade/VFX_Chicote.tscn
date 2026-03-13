@@ -12,6 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://dh547yprf8i8g" path="res://Sprites/Cururu/Special/VFX/10.png" id="10_guqj0"]
 [ext_resource type="Texture2D" uid="uid://roe15my11jtb" path="res://Sprites/Cururu/Special/VFX/11.png" id="11_tk7jb"]
 [ext_resource type="Texture2D" uid="uid://dxnb43hflhlbv" path="res://Sprites/Cururu/Special/VFX/12.png" id="12_3plnt"]
+[ext_resource type="PackedScene" uid="uid://pc4mgv2nv8af" path="res://Objetos/Funcionalidade/CompHitBox.tscn" id="13_xknv4"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_dsijf"]
 animations = [{
@@ -57,13 +58,24 @@ animations = [{
 "speed": 12.0
 }]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fepko"]
+size = Vector2(278, 90)
+
 [node name="ChicoteVFX" type="Node2D" unique_id=42300229]
 z_index = 1
 
 [node name="Animation" type="AnimatedSprite2D" parent="." unique_id=1976484140]
-position = Vector2(217.00002, -94.00001)
+position = Vector2(133, -16)
 scale = Vector2(0.37, 0.37)
 sprite_frames = SubResource("SpriteFrames_dsijf")
 animation = &"ataque"
+autoplay = "ataque"
 frame = 11
 frame_progress = 1.0
+
+[node name="HitBox" parent="." unique_id=727505384 instance=ExtResource("13_xknv4")]
+collision_mask = 16
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HitBox" unique_id=1739752457]
+position = Vector2(143, 0)
+shape = SubResource("RectangleShape2D_fepko")

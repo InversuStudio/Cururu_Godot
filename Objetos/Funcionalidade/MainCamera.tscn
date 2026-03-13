@@ -2,6 +2,9 @@
 
 [ext_resource type="Script" uid="uid://cw522wgjoa2p7" path="res://Scripts/Componentes/MainCamera.gd" id="1_tckdd"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3adng"]
+size = Vector2(203, 522)
+
 [node name="MainCamera" type="Camera2D" unique_id=1984984122 groups=["MainCamera"]]
 physics_interpolation_mode = 1
 zoom = Vector2(0.7999995, 0.7999995)
@@ -10,9 +13,15 @@ limit_enabled = false
 editor_draw_limits = true
 script = ExtResource("1_tckdd")
 offset_target = Vector2(0, -80)
-look_ahead = 80.0
-speed = 8.0
-deadzone = Vector2(100, 300)
-tempo_ate_olhar = 1.0
+look_ahead = 3.0
+speed = 3.5
 
-[node name="Timer" type="Timer" parent="." unique_id=688448171]
+[node name="Deadzone" type="Area2D" parent="." unique_id=642602411]
+top_level = true
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Deadzone" unique_id=2086161685]
+position = Vector2(-1.5, 0)
+shape = SubResource("RectangleShape2D_3adng")
+debug_color = Color(0.57457477, 0.38604146, 1, 0)

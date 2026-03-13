@@ -172,10 +172,6 @@ func _physics_process(delta: float) -> void:
 	# Aplica PHYSICS_PROCESS do StateMachine
 	state_machine.FixedUpdate(delta)
 	velocity.y = clampf(velocity.y, -jump_force, max_fall_vel)
-	if Mundos.main_camera:
-		Mundos.main_camera.look_ahead = (
-			-abs(Mundos.main_camera.look_ahead) if sprite.flip_h
-			else abs(Mundos.main_camera.look_ahead))
 	move_and_slide()
 
 # Habilita dash após cooldown

@@ -11,15 +11,15 @@ var acabou: bool = false
 
 const vfx:PackedScene = preload("res://Objetos/Funcionalidade/VFX_Dash.tscn")
 
-func _unhandled_input(_event: InputEvent) -> void:
-	if Input.is_physical_key_pressed(KEY_SLASH):
-		if Engine.time_scale != 1.0:
-			Engine.time_scale = 1.0
-		else: Engine.time_scale = .5
+func _ready() -> void:
+	%ColisaoDash.disabled = true#set_deferred("disabled", true)
 
 func Enter() -> void:
 	print("DASH")
 	Console._State(name)
+	
+	%ColisaoMain.disabled = true#set_deferred("disabled", true)
+	%ColisaoDash.disabled = false#set_deferred("disabled", false)
 	
 	# VFX Resolvido (•ω• )
 	var v:Node2D = vfx.instantiate()
@@ -41,6 +41,8 @@ func Exit() -> void:
 	%DashTime.stop()
 	if !parent.is_on_floor():
 		parent.deu_air_dash = true
+	%ColisaoMain.disabled = false#set_deferred("disabled", false)
+	%ColisaoDash.disabled = true#set_deferred("disabled", true)
 	#pode_cair = false
 	
 func FixedUpdate(_delta:float) -> State:

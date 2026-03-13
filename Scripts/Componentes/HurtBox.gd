@@ -25,15 +25,11 @@ var material_sprite: ShaderMaterial= null
 signal hurt
 signal counter
 
-var col:CollisionShape2D = null
-
 func _ready() -> void:
 	if hit_sfx: %SFX.stream = hit_sfx
 	if cooldown_dano > 0.0:
 		%Timer.wait_time = cooldown_dano
-	for c:Node in get_children():
-		if c is CollisionShape2D:
-			col = c
+		
 	if sprite:
 		if sprite.material == null:
 			s_material = ShaderMaterial.new()
@@ -61,7 +57,7 @@ func RecebeDano(dano:int, pos_target:Vector2):
 	call_deferred("AchaHit")
 	if cooldown_dano > 0.0:
 		# Desabilita colisão
-		col.set_deferred("disabled", true)
+		set_deferred("monitorable", false)
 		# Inicia cooldown
 		%Timer.start()
 	# Toca som de dano
@@ -96,4 +92,4 @@ func CalcKnockback(dist:float, time:float, pos_target:Vector2) -> void:
 		counter.emit(c, dir)
 
 func _on_timer_timeout() -> void:
-	col.set_deferred("disabled", false)
+	set_deferred("monitorable", true)

@@ -4,8 +4,6 @@ extends State
 @export var fall_state: State = null
 @export var nado_state: State = null
 
-@export var hitboxes:Array[HitBox] = []
-
 @export var sfx_sem_magia: Array[AudioStream] = []
 
 @export_group("Pushback")
@@ -17,11 +15,7 @@ var terminou: bool = false
 const sfx:AudioStream = preload("res://Audio/SFX/CURURU/Ataque secundário.wav")
 
 const vfx:PackedScene = preload("res://Objetos/Funcionalidade/VFX_Chicote.tscn")
-var vfx_atual:Node2D = null
-
-func _ready() -> void:
-	for c:HitBox in hitboxes:
-		c.connect("hit", Hit.bind(c))
+var fx_atual:Node2D = null
 
 # COMPORTAMENTO AO ENTRAR NO STATE
 func Enter() -> void:
@@ -37,14 +31,13 @@ func Enter() -> void:
 	#else:
 	%Anim.play("Special")
 	var fx:Node2D = vfx.instantiate()
-	parent.get_parent().add_child(fx)
-	vfx_atual = fx
-	fx.global_position = parent.global_position
-	var c:AnimatedSprite2D = fx.get_child(0)
+	fx.get_child(1).hit.connect(Hit)
+	fx.global_position = %PosChicote.global_position
 	fx.scale.x = -1 if parent.sprite.flip_h else 1
-	c.play("ataque")
+	parent.get_parent().add_child(fx)
+	fx_atual = fx
+	var c:AnimatedSprite2D = fx.get_child(0)
 	%SFX_Ataque.stream = sfx
-	#%SFX_Ataque.play()
 	
 	await c.animation_finished
 	fx.queue_free()
@@ -54,7 +47,8 @@ func Exit() -> void:
 	terminou = false
 
 func FixedUpdate(delta:float) -> State:
-	if vfx_atual: vfx_atual.global_position = parent.global_position
+	if fx_atual:
+		fx_atual.global_position = %PosChicote.global_position
 	
 	if Input.is_action_just_released("pulo"):
 		parent.velocity.y /= 2.0

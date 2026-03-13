@@ -1,4 +1,3 @@
-@tool
 class_name MainCamera extends Camera2D
 
 ## Node do Player que a câmera irá seguir
@@ -9,6 +8,7 @@ class_name MainCamera extends Camera2D
 @export var zoom_target:float = 0.8
 # Desvio horizontal aplicado quando node se move. Serve para mostrar mais do mapa
 @export var look_ahead:float = 0.0
+var la:float = 0.0
 var usa_look_ahead:bool = true
 ## Velocidade da câmera ao seguir target
 @export var speed:float = 5.0
@@ -18,16 +18,7 @@ var target_pos:Vector2 = Vector2.ZERO
 ## Node ReferenceRect que demarca limite da área que a c^smera pode se mover
 @export var limite_camera:ReferenceRect = null
 
-@export_group("Deadzone")
-## Habilita deadzone
-@export var usa_deadzone:bool = true
-## Área da deadzone
-@export var deadzone:Vector2:
-	set(valor):
-		deadzone = valor
-		queue_redraw()
-## Denfine se mostra área da deadzone durante o jogo
-@export var mostrar_deadzone_no_jogo:bool = false
+@onready var deadzone: Area2D = $Deadzone
 
 # SCREENSHAKE
 var shake_noise:FastNoiseLite = FastNoiseLite.new()
@@ -39,20 +30,18 @@ var seguindo:bool = false
 
 @export_group("Olhar")
 @export var distancia_a_olhar:float = 3.0
-@export var tempo_ate_olhar:float = 1.5
+@export var tempo_ate_olhar:float = 1.0
 var comando:float = 0.0
 
 @onready var dist:float = distancia_a_olhar * 128
 
-func _draw() -> void:
-	if mostrar_deadzone_no_jogo or Engine.is_editor_hint():
-		draw_rect(Rect2(-deadzone, deadzone * 2.0), Color.BLUE_VIOLET, false, 5.0)
-	
 func _ready() -> void:
+	look_ahead *= 128
 	await get_tree().physics_frame
 	if target:
-		global_position = target.global_position + offset
 		target_pos = target.global_position + offset
+		global_position = target_pos
+		deadzone.global_position = target_pos
 	
 	if limite_camera:
 		limit_enabled = true
@@ -60,6 +49,11 @@ func _ready() -> void:
 		limit_right = int(limite_camera.global_position.x + limite_camera.size.x)
 		limit_top = int(limite_camera.global_position.y)
 		limit_bottom = int(limite_camera.global_position.y + limite_camera.size.y)
+	
+	deadzone.connect("body_entered", func(_b:Node2D):
+		seguindo = false)
+	deadzone.connect("body_exited", func(_b:Node2D):
+		seguindo = true)
 
 func Follow(delta:float) -> void:
 	var look:float = 0.0
@@ -68,29 +62,23 @@ func Follow(delta:float) -> void:
 	elif comando <= -tempo_ate_olhar:
 		look = dist
 	
-	var la:float = look_ahead if usa_look_ahead else 0.0
+	
+	if usa_look_ahead and seguindo:
+		la = lerpf(la, look_ahead * sign(target.input_move.x), .05)
+	else:
+		la = lerpf(la, 0.0, .05)
+	
 	global_position = global_position.lerp(target_pos + offset_target + Vector2(
 		la, look), delta * speed)
+	
+	if seguindo:
+		deadzone.global_position = deadzone.global_position.lerp(target_pos + offset_target, delta * speed)
 
 func _physics_process(delta: float) -> void:
 	if target:
-		if usa_deadzone:
-			if (target.global_position.x > global_position.x + deadzone.x or
-			target.global_position.x < global_position.x - deadzone.x or
-			target.global_position.y > global_position.y + deadzone.y or
-			target.global_position.y < global_position.y - deadzone.y):
-				seguindo = true
-			else:
-				if $Timer.is_stopped():
-					$Timer.start(1.0)
-					await $Timer.timeout
-					seguindo = false
-			
-			if seguindo:
-				target_pos = target.global_position
-		else:
+		if seguindo:
 			target_pos = target.global_position
-	
+			
 		Follow(delta)
 		
 	if shake_ativo:
@@ -104,7 +92,6 @@ func _physics_process(delta: float) -> void:
 	zoom = zoom.lerp(Vector2(zoom_target, zoom_target), 0.05)
 
 func Shake(forca:float, duracao:float = 0.5) -> void:
-	#forca_shake = forca
 	randomize()
 	shake_noise.seed = randi()
 	shake_noise.frequency = 2.0
@@ -120,4 +107,3 @@ func MudaTarget(novo_target:Node2D, novo_offset:Vector2) -> void:
 
 func MudaZoom(novo_zoom:float = 0.8) -> void:
 	zoom_target = novo_zoom
-	

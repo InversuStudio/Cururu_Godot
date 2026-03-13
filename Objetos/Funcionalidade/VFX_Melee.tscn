@@ -11,6 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://j1fwt1srdi3s" path="res://Sprites/Cururu/Melee/V2/ATAQUE_2_HITS_AGUA/CURURU_ATAQUE_27.png" id="9_vhn8j"]
 [ext_resource type="Texture2D" uid="uid://ccadpupbwhkl4" path="res://Sprites/Cururu/Melee/V2/ATAQUE_2_HITS_AGUA/CURURU_ATAQUE_29.png" id="10_2lgjf"]
 [ext_resource type="Texture2D" uid="uid://cw3cdq4up1xqy" path="res://Sprites/Cururu/Melee/V2/ATAQUE_2_HITS_AGUA/CURURU_ATAQUE_31.png" id="11_1txr8"]
+[ext_resource type="PackedScene" uid="uid://pc4mgv2nv8af" path="res://Objetos/Funcionalidade/CompHitBox.tscn" id="12_hena8"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_dsijf"]
 animations = [{
@@ -62,7 +63,15 @@ animations = [{
 z_index = 1
 
 [node name="Animation" type="AnimatedSprite2D" parent="." unique_id=1976484140]
-position = Vector2(121.00001, -129)
 scale = Vector2(0.37, 0.37)
 sprite_frames = SubResource("SpriteFrames_dsijf")
 animation = &"1"
+frame = 2
+frame_progress = 0.023823978
+
+[node name="HitBox" parent="." unique_id=727505384 instance=ExtResource("12_hena8")]
+collision_mask = 16
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="HitBox" unique_id=756496064]
+position = Vector2(-120, 129)
+polygon = PackedVector2Array(178, -214, 265, -135, 197, -46, -7, -48, 56, -109, 24, -192)
