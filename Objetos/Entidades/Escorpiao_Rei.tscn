@@ -1,11 +1,11 @@
-[gd_scene load_steps=24 format=3 uid="uid://smwewolvvw6l"]
+[gd_scene format=3 uid="uid://smwewolvvw6l"]
 
 [ext_resource type="Script" uid="uid://bxwx72gohremh" path="res://Scripts/Inimigos/Larva.gd" id="1_vgqag"]
-[ext_resource type="Texture2D" uid="uid://b0g3aehy8v827" path="res://Sprites/Inimigos/Escorpiao/scorpion_FRAME01.png" id="2_hg8ht"]
-[ext_resource type="Texture2D" uid="uid://cl6s3a1na1sf7" path="res://Sprites/Inimigos/Escorpiao/scorpion_FRAME02.png" id="3_e8asp"]
-[ext_resource type="Texture2D" uid="uid://cq8g6bvidl78b" path="res://Sprites/Inimigos/Escorpiao/scorpion_FRAME03.png" id="4_sh4a1"]
+[ext_resource type="Texture2D" uid="uid://cvn60mjpk1ddi" path="res://Sprites/Inimigos/CobraCoral/quadro0000.png" id="2_ihru7"]
+[ext_resource type="Texture2D" uid="uid://1msr7dxjxifc" path="res://Sprites/Inimigos/CobraCoral/quadro0001.png" id="3_5m7hk"]
+[ext_resource type="Texture2D" uid="uid://doukolsdcaive" path="res://Sprites/Inimigos/CobraCoral/quadro0002.png" id="4_vp05a"]
 [ext_resource type="Script" uid="uid://hsdutxxttrp3" path="res://Scripts/Componentes/Vida.gd" id="5_hcf47"]
-[ext_resource type="Texture2D" uid="uid://dmtjtedxkg4na" path="res://Sprites/Inimigos/Escorpiao/scorpion_FRAME04.png" id="5_hg8ht"]
+[ext_resource type="Texture2D" uid="uid://dt0wwu7nopmsq" path="res://Sprites/Inimigos/CobraCoral/quadro0003.png" id="5_y70wr"]
 [ext_resource type="Texture2D" uid="uid://lruqdxr2efim" path="res://Sprites/Inimigos/Animação de morte/1.png" id="6_ihru7"]
 [ext_resource type="PackedScene" uid="uid://va5pjd6vuuo2" path="res://Objetos/Funcionalidade/CompHurtBox.tscn" id="6_rcu2w"]
 [ext_resource type="Texture2D" uid="uid://c87kuuyr2pym0" path="res://Sprites/Inimigos/Animação de morte/2.png" id="7_5m7hk"]
@@ -25,16 +25,16 @@ size = Vector2(178.28961, 106.579025)
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_hg8ht")
+"texture": ExtResource("2_ihru7")
 }, {
 "duration": 1.0,
-"texture": ExtResource("3_e8asp")
+"texture": ExtResource("3_5m7hk")
 }, {
 "duration": 1.0,
-"texture": ExtResource("4_sh4a1")
+"texture": ExtResource("4_vp05a")
 }, {
 "duration": 1.0,
-"texture": ExtResource("5_hg8ht")
+"texture": ExtResource("5_y70wr")
 }],
 "loop": true,
 "name": &"default",
@@ -68,49 +68,38 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_gx8x6"]
-radius = 59.00001
-height = 177.94754
-
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_buqx5"]
-radius = 44.26277
-height = 176.906
+radius = 71.0527
+height = 222.36864
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ujy2f"]
-radius = 56.631668
-height = 143.42117
+radius = 67.10533
+height = 192.10544
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_hg8ht"]
-radius = 58.17473
-height = 147.95206
-
-[node name="Escorpiao" type="CharacterBody2D"]
+[node name="Escorpiao" type="CharacterBody2D" unique_id=2019109312]
 scale = Vector2(0.67999953, 0.67999953)
 collision_layer = 4
 script = ExtResource("1_vgqag")
 velocidade = 1.6
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1948898497]
 position = Vector2(-9.55883, -117.64714)
 scale = Vector2(2.2352939, 2.2352939)
 shape = SubResource("RectangleShape2D_ntg74")
 
-[node name="Sprite" type="AnimatedSprite2D" parent="."]
+[node name="Sprite" type="AnimatedSprite2D" parent="." unique_id=1555891583]
 unique_name_in_owner = true
-modulate = Color(0.47682214, 0.4575567, 0.5538838, 1)
-self_modulate = Color(0.80079526, 0.25177434, 0, 1)
-position = Vector2(2, -197.05896)
-scale = Vector2(1.1962308, 1.1962308)
+position = Vector2(38.235317, -197.05896)
+scale = Vector2(0.73920083, 0.7392009)
 sprite_frames = SubResource("SpriteFrames_tkh53")
-animation = &"morte"
 autoplay = "default"
-speed_scale = 1.2
+frame_progress = 0.18063547
 
-[node name="Vida" type="Node" parent="."]
+[node name="Vida" type="Node" parent="." unique_id=938649480]
 script = ExtResource("5_hcf47")
 vida_max = 8
 metadata/_custom_type_script = "uid://hsdutxxttrp3"
 
-[node name="HurtBox" parent="." node_paths=PackedStringArray("comp_vida", "parent", "sprite") instance=ExtResource("6_rcu2w")]
+[node name="HurtBox" parent="." unique_id=872149296 node_paths=PackedStringArray("comp_vida", "parent", "sprite") instance=ExtResource("6_rcu2w")]
 unique_name_in_owner = true
 scale = Vector2(2.2352936, 2.2352936)
 collision_layer = 16
@@ -121,20 +110,13 @@ hit_sfx = ExtResource("7_l87yx")
 parent = NodePath("..")
 sprite = NodePath("../Sprite")
 
-[node name="CollisionShape2D3" type="CollisionShape2D" parent="HurtBox"]
-position = Vector2(-30.421087, -46)
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="HurtBox" unique_id=1339135318]
+position = Vector2(4.6052685, -72.368484)
 rotation = -1.57079
 shape = SubResource("CapsuleShape2D_gx8x6")
 debug_color = Color(0.99999, 0, 0.0935918, 0.42)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="HurtBox"]
-position = Vector2(49.500057, -120.394844)
-rotation = -0.7853982
-scale = Vector2(1.342759, 0.9138586)
-shape = SubResource("CapsuleShape2D_buqx5")
-debug_color = Color(0.36072385, 0.58757204, 0.5357076, 0.41960785)
-
-[node name="HitBox" parent="." node_paths=PackedStringArray("ignore") instance=ExtResource("8_dtm3y")]
+[node name="HitBox" parent="." unique_id=598623231 node_paths=PackedStringArray("ignore") instance=ExtResource("8_dtm3y")]
 unique_name_in_owner = true
 position = Vector2(13.58827, 0)
 scale = Vector2(2.2352936, 2.2352936)
@@ -142,46 +124,40 @@ collision_layer = 16
 dano = 2
 ignore = NodePath("../HurtBox")
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="HitBox"]
-position = Vector2(-40.28952, -46)
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="HitBox" unique_id=2094676355]
+position = Vector2(-4.763172, -67.10532)
 rotation = -1.57079
 shape = SubResource("CapsuleShape2D_ujy2f")
 debug_color = Color(0.807155, 0.414602, 3.85046e-07, 0.42)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="HitBox"]
-position = Vector2(45.23687, -118.42116)
-rotation = -0.77731293
-shape = SubResource("CapsuleShape2D_hg8ht")
-debug_color = Color(0.8492885, 0.30828175, 0.5518307, 0.41960785)
-
-[node name="RayDireita" type="RayCast2D" parent="."]
+[node name="RayDireita" type="RayCast2D" parent="." unique_id=1296964799]
 unique_name_in_owner = true
 position = Vector2(286.7649, -60)
 scale = Vector2(2.2352936, 2.2352936)
 target_position = Vector2(20, 0)
 
-[node name="RayVazioDireita" type="RayCast2D" parent="."]
+[node name="RayVazioDireita" type="RayCast2D" parent="." unique_id=2142211602]
 unique_name_in_owner = true
 position = Vector2(286.7649, -24)
 scale = Vector2(2.2352936, 2.2352936)
 
-[node name="RayEsquerda" type="RayCast2D" parent="."]
+[node name="RayEsquerda" type="RayCast2D" parent="." unique_id=1981733015]
 unique_name_in_owner = true
 position = Vector2(-270.58844, -60)
 scale = Vector2(2.2352936, 2.2352936)
 target_position = Vector2(-20, 0)
 
-[node name="RayVazioEsquerda" type="RayCast2D" parent="."]
+[node name="RayVazioEsquerda" type="RayCast2D" parent="." unique_id=1602263692]
 unique_name_in_owner = true
 position = Vector2(-270.58844, -24)
 scale = Vector2(2.2352936, 2.2352936)
 
-[node name="SpawnMoeda" type="Marker2D" parent="."]
+[node name="SpawnMoeda" type="Marker2D" parent="." unique_id=523206188]
 unique_name_in_owner = true
 position = Vector2(0, -43)
 scale = Vector2(2.2352936, 2.2352936)
 
-[node name="OtimizadorSprite" parent="." instance=ExtResource("9_ihru7")]
+[node name="OtimizadorSprite" parent="." unique_id=448696188 instance=ExtResource("9_ihru7")]
 position = Vector2(1.4705893, 36.764732)
 scale = Vector2(2.2352936, 2.2352936)
 rect = Rect2(-126.47068, -202.94131, 252.94136, 216.17662)

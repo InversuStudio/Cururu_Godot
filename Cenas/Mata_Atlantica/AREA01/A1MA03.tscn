@@ -1,9 +1,9 @@
 [gd_scene format=4 uid="uid://cubw3i1ch5jq1"]
 
 [ext_resource type="PackedScene" uid="uid://nohq28uk7lfk" path="res://Objetos/Entidades/Player.tscn" id="1_65boa"]
-[ext_resource type="Texture2D" uid="uid://cqu5scrrmr5n5" path="res://Sprites/Cenário/Mata_Atlantica/Background/Iluminação e Fundo/FUNDOCEU.png" id="1_f6ry5"]
-[ext_resource type="Texture2D" uid="uid://3g4iv5385ymw" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/arvore_S2.png" id="2_bekt5"]
+[ext_resource type="Texture2D" uid="uid://e4138tmbd6ck" path="res://Sprites/Cenário/Mata_Atlantica/Background/110 Sem Título_20260213153415.png" id="1_a1ak7"]
 [ext_resource type="PackedScene" uid="uid://1apfpwlqocxn" path="res://Objetos/Funcionalidade/TransicaoFase.tscn" id="3_bcoor"]
+[ext_resource type="Shader" uid="uid://c1omtsxv04udh" path="res://Scripts/Shaders/blur_shader.gdshader" id="3_j4si4"]
 [ext_resource type="Texture2D" uid="uid://dv0q1amqoq168" path="res://Sprites/Cenário/Mata_Atlantica/Background/Mata/mato03.png" id="3_qrlbo"]
 [ext_resource type="Texture2D" uid="uid://wng7roaj8xu6" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/arvore_S1.png" id="4_iy160"]
 [ext_resource type="Texture2D" uid="uid://dru600hg8oaty" path="res://Sprites/Cenário/Mata_Atlantica/Background/Mata/mato02.png" id="5_6epi5"]
@@ -15,6 +15,7 @@
 [ext_resource type="Texture2D" uid="uid://cjl88xeknofui" path="res://Sprites/Cenário/Mata_Atlantica/Chao/grama_reto.png" id="9_10bg8"]
 [ext_resource type="Texture2D" uid="uid://u12dsbd5ebth" path="res://Sprites/Cenário/Mata_Atlantica/Background/Mata/mato00.png" id="9_mhu80"]
 [ext_resource type="Texture2D" uid="uid://boljughq86ddu" path="res://Sprites/Cenário/Mata_Atlantica/Background/casa_naia.png" id="10_5nggk"]
+[ext_resource type="Shader" uid="uid://dc0bwmy1j0o5i" path="res://Scripts/Shaders/fog.gdshader" id="10_oc6tl"]
 [ext_resource type="Shader" uid="uid://cete83ldr534" path="res://Scripts/Shaders/godray.gdshader" id="12_6epi5"]
 [ext_resource type="Texture2D" uid="uid://cn6a67mc7hffx" path="res://Sprites/Cenário/Mata_Atlantica/Pedras e Ruinas/pedra_lisa.png" id="12_blfcv"]
 [ext_resource type="Texture2D" uid="uid://cw2yeg7ynw0kl" path="res://Sprites/Cenário/Mata_Atlantica/Chao/chap_externo.png" id="12_mxbvc"]
@@ -33,7 +34,9 @@
 [ext_resource type="Shader" uid="uid://bbohkd8d1ljws" path="res://Scripts/Shaders/wavewater.gdshader" id="17_smmoq"]
 [ext_resource type="Texture2D" uid="uid://c2yapafbd3cnf" path="res://Sprites/Cenário/Mata_Atlantica/Foreground/cipó.png" id="18_bekt5"]
 [ext_resource type="TileSet" uid="uid://b0nn6bkolhibj" path="res://TilesetChao.tres" id="22_lr7hr"]
+[ext_resource type="Texture2D" uid="uid://0agjwkmg3gef" path="res://Sprites/VFX/Iluminação/luz azul.png" id="23_hflnh"]
 [ext_resource type="TileSet" uid="uid://cduyxbkbfj3yd" path="res://TilesetAgua.tres" id="24_lr7hr"]
+[ext_resource type="Texture2D" uid="uid://cxa4pl0scvs5k" path="res://Sprites/VFX/Partículas/folhastx.png" id="24_rjp5y"]
 [ext_resource type="Texture2D" uid="uid://jecy4bfqqqxu" path="res://Sprites/Cenário/Mata_Atlantica/Teto/Moita teste.png" id="25_k6a21"]
 [ext_resource type="Texture2D" uid="uid://d3i6g64tongye" path="res://Sprites/Cenário/Objetos/Savepoint/florlotus.png" id="29_lr7hr"]
 [ext_resource type="Texture2D" uid="uid://dj81ab7fk7ig1" path="res://Sprites/Cenário/Objetos/Savepoint/parte da frente.png" id="30_8clb6"]
@@ -41,6 +44,28 @@
 [ext_resource type="Shader" uid="uid://c5kmgpt3xfcos" path="res://Scripts/Shaders/Wave.gdshader" id="36_lr7hr"]
 [ext_resource type="AudioStream" uid="uid://dg1jv7tsrche4" path="res://Audio/Musicas/Naiá.ogg" id="39_k6a21"]
 [ext_resource type="AudioStream" uid="uid://b2vi4qav4gk5r" path="res://Audio/SFX/AMBIENTE/Cururu - Soundscape A.ogg" id="40_k6a21"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_f0ynl"]
+shader = ExtResource("3_j4si4")
+shader_parameter/darkness = 0.30000001425
+shader_parameter/lod = 0.800000038
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_a7fws"]
+shader = ExtResource("3_j4si4")
+shader_parameter/darkness = 0.250000011875
+shader_parameter/lod = 0.70000003325
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_o5i7s"]
+shader = ExtResource("3_j4si4")
+shader_parameter/darkness = 0.050000002375
+shader_parameter/lod = 0.400000019
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_nyrh8"]
+shader = ExtResource("10_oc6tl")
+shader_parameter/fog_color = Color(0.47058824, 0.7411765, 0.54901963, 0.43529412)
+shader_parameter/density = 0.3
+shader_parameter/speed = 0.1
+shader_parameter/scale = 10.0
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_0n704"]
 shader = ExtResource("12_6epi5")
@@ -60,10 +85,52 @@ shader_parameter/color = Color(0.9275552, 0.9086013, 0.8622764, 0.8)
 shader_parameter/hdr = false
 shader_parameter/seed = 5.0
 
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_fm07s"]
+particle_flag_disable_z = true
+emission_shape = 3
+emission_box_extents = Vector3(2000, 500, 1)
+initial_velocity_min = 1.0
+initial_velocity_max = 10.0
+radial_velocity_min = -10.000022
+radial_velocity_max = 49.999977
+gravity = Vector3(0, -15, 0)
+scale_min = 0.25
+scale_max = 0.5
+
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_iohfy"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_iohfy"]
 size = Vector2(635.15894, 32.68567)
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_qb12u"]
+particles_animation = true
+particles_anim_h_frames = 7
+particles_anim_v_frames = 1
+particles_anim_loop = false
+
+[sub_resource type="Gradient" id="Gradient_vq4y1"]
+offsets = PackedFloat32Array(0, 0.1958042, 0.74825174, 1)
+colors = PackedColorArray(1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_rh2pu"]
+gradient = SubResource("Gradient_vq4y1")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_2eao7"]
+particle_flag_disable_z = true
+emission_shape = 3
+emission_box_extents = Vector3(7500, 500, 1)
+spread = 20.0
+initial_velocity_min = 0.5
+initial_velocity_max = 2.0
+angular_velocity_min = -1.6093254e-05
+angular_velocity_max = 9.999984
+gravity = Vector3(-20, 30, 0)
+linear_accel_min = -2.2351742e-06
+linear_accel_max = 9.999997
+scale_min = 0.19999999
+scale_max = 0.29999998
+color_ramp = SubResource("GradientTexture1D_rh2pu")
+anim_offset_max = 1.0
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_5nggk"]
 shader = ExtResource("17_smmoq")
@@ -85,29 +152,14 @@ shader_parameter/top_influence = 0.15
 
 [node name="MA_1-3" type="Node2D" unique_id=2136092184]
 
-[node name="Fundoceu" type="Sprite2D" parent="." unique_id=1397089767]
-position = Vector2(1095.25, -4895)
-scale = Vector2(2.5893118, 1)
-texture = ExtResource("1_f6ry5")
-
 [node name="-4" type="CanvasLayer" parent="." unique_id=182272515]
 follow_viewport_enabled = true
 follow_viewport_scale = 0.8
 
-[node name="ArvoreS2" type="Sprite2D" parent="-4" unique_id=2075887777]
-position = Vector2(857, -4735)
-scale = Vector2(0.6743652, 0.6743652)
-texture = ExtResource("2_bekt5")
-
-[node name="ArvoreS8" type="Sprite2D" parent="-4" unique_id=1334513549]
-position = Vector2(1938.9999, -4735)
-scale = Vector2(0.6743652, 0.6743652)
-texture = ExtResource("2_bekt5")
-
-[node name="ArvoreS9" type="Sprite2D" parent="-4" unique_id=133053282]
-position = Vector2(2909, -4735)
-scale = Vector2(0.6743652, 0.6743652)
-texture = ExtResource("2_bekt5")
+[node name="110SemTítulo20260213153415" type="Sprite2D" parent="-4" unique_id=615716883]
+position = Vector2(1710.6249, -4286.25)
+scale = Vector2(2.0269775, 2.0269778)
+texture = ExtResource("1_a1ak7")
 
 [node name="Mato05" type="Sprite2D" parent="-4" unique_id=1924212481]
 position = Vector2(729, -4311.5)
@@ -116,6 +168,19 @@ texture = ExtResource("3_qrlbo")
 [node name="Mato06" type="Sprite2D" parent="-4" unique_id=1498095121]
 position = Vector2(2842, -4506.5)
 texture = ExtResource("3_qrlbo")
+
+[node name="blur2" type="ColorRect" parent="-4" unique_id=759226125]
+material = SubResource("ShaderMaterial_f0ynl")
+anchors_preset = -1
+anchor_left = -5.8180137
+anchor_top = -2.6416667
+anchor_right = -2.767498
+anchor_bottom = -1.3356177
+offset_left = 9337.586
+offset_top = -3498.0
+offset_right = 9377.587
+offset_bottom = -3458.0002
+scale = Vector2(0.9844004, 1.7800354)
 
 [node name="-3" type="CanvasLayer" parent="." unique_id=1070380835]
 follow_viewport_enabled = true
@@ -144,6 +209,14 @@ texture = ExtResource("5_6epi5")
 position = Vector2(3159, -4361.5)
 texture = ExtResource("5_6epi5")
 
+[node name="Blur" type="ColorRect" parent="-3" unique_id=1532758316]
+material = SubResource("ShaderMaterial_a7fws")
+offset_left = -1417.0591
+offset_top = -6205.0
+offset_right = 4042.162
+offset_bottom = -4853.342
+scale = Vector2(0.9844004, 1.7800354)
+
 [node name="-2" type="CanvasLayer" parent="." unique_id=1132775704]
 follow_viewport_enabled = true
 follow_viewport_scale = 0.9
@@ -171,6 +244,19 @@ texture = ExtResource("6_smmoq")
 [node name="Mato02" type="Sprite2D" parent="-2" unique_id=1415382625]
 position = Vector2(1285, -4250.5)
 texture = ExtResource("7_0n704")
+
+[node name="blur3" type="ColorRect" parent="-2" unique_id=901654337]
+material = SubResource("ShaderMaterial_o5i7s")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -1608.0
+offset_top = -6180.9995
+offset_right = 1908.8125
+offset_bottom = -5963.2725
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.9844004, 1.7800354)
 
 [node name="-1" type="CanvasLayer" parent="." unique_id=1137823630]
 follow_viewport_enabled = true
@@ -207,6 +293,14 @@ texture = ExtResource("9_mhu80")
 [node name="Mato01" type="Sprite2D" parent="-1" unique_id=767057321]
 position = Vector2(223, -4322.5)
 texture = ExtResource("9_mhu80")
+
+[node name="Fog" type="ColorRect" parent="-1" unique_id=1354545432]
+material = SubResource("ShaderMaterial_nyrh8")
+offset_left = -1597.0
+offset_top = -6458.9995
+offset_right = 3993.205
+offset_bottom = -4993.8604
+scale = Vector2(0.9844004, 1.7800354)
 
 [node name="ColorRect2" type="ColorRect" parent="-1" unique_id=474354418]
 material = SubResource("ShaderMaterial_0n704")
@@ -268,6 +362,16 @@ multi_drop = true
 [node name="SavePoint" parent="0" unique_id=487409288 instance=ExtResource("12_smmoq")]
 position = Vector2(2082, -4485)
 
+[node name="Particula" type="GPUParticles2D" parent="0" unique_id=1045883058]
+position = Vector2(1415.9999, -5100)
+rotation = 3.1415925
+scale = Vector2(1.1808327, -3.0152664)
+amount = 250
+amount_ratio = 0.7
+texture = ExtResource("23_hflnh")
+visibility_rect = Rect2(-2000, -500, 4000, 1000)
+process_material = SubResource("ParticleProcessMaterial_fm07s")
+
 [node name="NPC-Basico" parent="0" unique_id=1473609202 instance=ExtResource("14_qrlbo")]
 position = Vector2(533.00006, -4691)
 scale = Vector2(0.7016272, 0.7016273)
@@ -289,6 +393,17 @@ position = Vector2(8.391968, -74.64673)
 scale = Vector2(0.9999999, 0.9999999)
 shape = SubResource("RectangleShape2D_iohfy")
 one_way_collision = true
+
+[node name="Folhas" type="GPUParticles2D" parent="0" unique_id=249472298]
+material = SubResource("CanvasItemMaterial_qb12u")
+position = Vector2(1324, -5097)
+rotation = 3.1415925
+scale = Vector2(2.418031, -2.2412944)
+amount = 200
+texture = ExtResource("24_rjp5y")
+lifetime = 5.0
+visibility_rect = Rect2(-7500, -500, 15000, 1000)
+process_material = SubResource("ParticleProcessMaterial_2eao7")
 
 [node name="TileMapLayer" type="TileMapLayer" parent="0" unique_id=686405471]
 position = Vector2(-2, 0)

@@ -1,31 +1,31 @@
-[gd_scene load_steps=4 format=3 uid="uid://bei1s8te3cwko"]
+[gd_scene format=3 uid="uid://bei1s8te3cwko"]
 
 [ext_resource type="Texture2D" uid="uid://36i4t28uavm" path="res://Sprites/Cenário/Mata_Atlantica/Interativos/plataforma.png" id="1_hnyem"]
 [ext_resource type="Texture2D" uid="uid://b2pop4ke31d1x" path="res://Sprites/Cenário/Mata_Atlantica/Foreground/02.png" id="2_j1l0s"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hnyem"]
-size = Vector2(372.8256, 85.92137)
+size = Vector2(372.8256, 33.140053)
 
-[node name="Plataforma" type="Sprite2D"]
+[node name="Plataforma" type="Sprite2D" unique_id=860876985]
 position = Vector2(1.0000038, 9.536743e-07)
 scale = Vector2(0.965599, 0.9655989)
 texture = ExtResource("1_hnyem")
 
-[node name="02" type="Sprite2D" parent="."]
+[node name="02" type="Sprite2D" parent="." unique_id=2044473014]
 position = Vector2(-130.48895, 86.99264)
 scale = Vector2(0.37054667, 0.37054667)
 texture = ExtResource("2_j1l0s")
 
-[node name="03" type="Sprite2D" parent="."]
+[node name="03" type="Sprite2D" parent="." unique_id=179751476]
 position = Vector2(-1.0356445, 83.885765)
 scale = Vector2(0.37054667, 0.37054667)
 texture = ExtResource("2_j1l0s")
 
-[node name="StaticBody2D" type="StaticBody2D" parent="."]
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1848716833]
 scale = Vector2(0.99999994, 0.99999994)
 constant_angular_velocity = 0.008726646
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(1.1920929e-06, -41.96071)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=40262383]
+position = Vector2(-4.053116e-06, -64.20886)
 shape = SubResource("RectangleShape2D_hnyem")
 debug_color = Color(0, 0.6, 0.69803923, 0)

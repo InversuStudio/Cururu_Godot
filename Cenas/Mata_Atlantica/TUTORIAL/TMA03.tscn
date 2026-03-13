@@ -1,12 +1,14 @@
 [gd_scene format=4 uid="uid://nqosq2wj0auk"]
 
-[ext_resource type="Texture2D" uid="uid://cqu5scrrmr5n5" path="res://Sprites/Cenário/Mata_Atlantica/Background/Iluminação e Fundo/FUNDOCEU.png" id="1_4e4qg"]
+[ext_resource type="Texture2D" uid="uid://e4138tmbd6ck" path="res://Sprites/Cenário/Mata_Atlantica/Background/110 Sem Título_20260213153415.png" id="1_52tak"]
 [ext_resource type="Texture2D" uid="uid://3g4iv5385ymw" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/arvore_S2.png" id="2_0j414"]
+[ext_resource type="Shader" uid="uid://c1omtsxv04udh" path="res://Scripts/Shaders/blur_shader.gdshader" id="2_017t5"]
 [ext_resource type="Texture2D" uid="uid://ccql65wj55kqf" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/arvore_s3.png" id="4_3fe7p"]
 [ext_resource type="Texture2D" uid="uid://wng7roaj8xu6" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/arvore_S1.png" id="4_l7gx4"]
 [ext_resource type="Texture2D" uid="uid://dv0q1amqoq168" path="res://Sprites/Cenário/Mata_Atlantica/Background/Mata/mato03.png" id="5_r86pu"]
 [ext_resource type="Texture2D" uid="uid://c8bkav2g3wyeu" path="res://Sprites/Cenário/Mata_Atlantica/Chao/moita2.png" id="6_qclta"]
 [ext_resource type="Texture2D" uid="uid://rbtvfm4m7ft" path="res://Sprites/VFX/Iluminação/SOMBRA2.png" id="7_op0pn"]
+[ext_resource type="Shader" uid="uid://dc0bwmy1j0o5i" path="res://Scripts/Shaders/fog.gdshader" id="8_l7ekd"]
 [ext_resource type="Texture2D" uid="uid://dru600hg8oaty" path="res://Sprites/Cenário/Mata_Atlantica/Background/Mata/mato02.png" id="9_t50kr"]
 [ext_resource type="Texture2D" uid="uid://b6yel5f58h380" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/arvore05.png" id="10_tssdc"]
 [ext_resource type="Texture2D" uid="uid://bi1a2quip0tli" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/arvore03.png" id="11_52tak"]
@@ -21,6 +23,7 @@
 [ext_resource type="PackedScene" uid="uid://dghxpclnjwg5k" path="res://Objetos/Props/PecaCoracao.tscn" id="17_bu38j"]
 [ext_resource type="Texture2D" uid="uid://jecy4bfqqqxu" path="res://Sprites/Cenário/Mata_Atlantica/Teto/Moita teste.png" id="17_wfqej"]
 [ext_resource type="Texture2D" uid="uid://d18vqjeq586b1" path="res://Sprites/Cenário/Mata_Atlantica/Pedras e Ruinas/pedra_musgo.png" id="18_6xkwf"]
+[ext_resource type="Shader" uid="uid://cete83ldr534" path="res://Scripts/Shaders/godray.gdshader" id="18_017t5"]
 [ext_resource type="Texture2D" uid="uid://d3t6c4pjsosio" path="res://Sprites/Cenário/Mata_Atlantica/Background/Mata/mato01.png" id="20_386eh"]
 [ext_resource type="Texture2D" uid="uid://cj4rj4oj20ogb" path="res://Sprites/Cenário/Mata_Atlantica/Chao/chap_interno.png" id="20_l7gx4"]
 [ext_resource type="Texture2D" uid="uid://uq6dbjep5wva" path="res://Sprites/Cenário/Mata_Atlantica/Foreground/frontfolha.png" id="23_3qqkp"]
@@ -34,17 +37,63 @@
 [ext_resource type="Texture2D" uid="uid://dphhlbwaebgco" path="res://Sprites/Cenário/Mata_Atlantica/Background/Galhos/composição.png" id="29_qclta"]
 [ext_resource type="TileSet" uid="uid://cduyxbkbfj3yd" path="res://TilesetAgua.tres" id="30_3fe7p"]
 [ext_resource type="PackedScene" uid="uid://bei1s8te3cwko" path="res://Sprites/Cenário/Mata_Atlantica/Interativos/plataforma.tscn" id="30_rnx0k"]
+[ext_resource type="Texture2D" uid="uid://0agjwkmg3gef" path="res://Sprites/VFX/Iluminação/luz azul.png" id="31_mo8mq"]
 [ext_resource type="Script" uid="uid://dd16yu704x6wt" path="res://Scripts/Componentes/BGM_Player.gd" id="31_op0pn"]
 [ext_resource type="Texture2D" uid="uid://61clqhtbc6ab" path="res://Sprites/Cenário/Tilemaps/Chao.png" id="32_0j414"]
+[ext_resource type="Texture2D" uid="uid://cxa4pl0scvs5k" path="res://Sprites/VFX/Partículas/folhastx.png" id="32_2aq70"]
 [ext_resource type="AudioStream" uid="uid://c7qftchbhu6xc" path="res://Audio/SFX/AMBIENTE/Musica_Jogo.mp3" id="32_54dor"]
 [ext_resource type="TileSet" uid="uid://b0nn6bkolhibj" path="res://TilesetChao.tres" id="32_tssdc"]
 [ext_resource type="Texture2D" uid="uid://u12dsbd5ebth" path="res://Sprites/Cenário/Mata_Atlantica/Background/Mata/mato00.png" id="33_3fe7p"]
 [ext_resource type="PackedScene" uid="uid://dbp8j3rqvdpna" path="res://Objetos/Funcionalidade/CompSecret.tscn" id="36_0j414"]
 [ext_resource type="PackedScene" uid="uid://u28e3eudu6ch" path="res://Objetos/Funcionalidade/MainCamera.tscn" id="37_r86pu"]
 [ext_resource type="AudioStream" uid="uid://b2vi4qav4gk5r" path="res://Audio/SFX/AMBIENTE/Cururu - Soundscape A.ogg" id="42_65hh7"]
-[ext_resource type="Texture2D" uid="uid://2x6q1ni8klgv" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/arvore_fundo1.png" id="43_2aq70"]
-[ext_resource type="Texture2D" uid="uid://btb3tlxsmx38i" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/arvore_fundo2.png" id="44_uygvq"]
 [ext_resource type="Texture2D" uid="uid://b2f2ppntemt15" path="res://Sprites/Cenário/Mata_Atlantica/Chao/flores.png" id="46_tssdc"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_h4xbm"]
+shader = ExtResource("2_017t5")
+shader_parameter/darkness = 0.30000001425
+shader_parameter/lod = 0.800000038
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_uygvq"]
+shader = ExtResource("2_017t5")
+shader_parameter/darkness = 0.250000011875
+shader_parameter/lod = 0.70000003325
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_sa01y"]
+shader = ExtResource("2_017t5")
+shader_parameter/darkness = 0.050000002375
+shader_parameter/lod = 0.400000019
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_owbt5"]
+shader = ExtResource("8_l7ekd")
+shader_parameter/fog_color = Color(0.47058824, 0.7411765, 0.54901963, 0.43529412)
+shader_parameter/density = 1.0
+shader_parameter/speed = 0.0
+shader_parameter/scale = 6.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rnx0k"]
+size = Vector2(458, 83)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qclta"]
+size = Vector2(459, 28)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_l7ekd"]
+shader = ExtResource("18_017t5")
+shader_parameter/flip_horizontal = true
+shader_parameter/flip_vertical = false
+shader_parameter/angle = -0.3
+shader_parameter/position = 0.0
+shader_parameter/spread = 0.6000000285
+shader_parameter/cutoff = 0.06000005035
+shader_parameter/falloff = 0.6000000285
+shader_parameter/edge_fade = 0.2000000095
+shader_parameter/speed = 2.5
+shader_parameter/ray1_density = 5.0
+shader_parameter/ray2_density = 20.0
+shader_parameter/ray2_intensity = 0.30000001425
+shader_parameter/color = Color(0.9687218, 0.9046197, 0.75688607, 0.8)
+shader_parameter/hdr = false
+shader_parameter/seed = 7.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ti6rg"]
 size = Vector2(135, 708)
@@ -59,6 +108,48 @@ shader_parameter/wave_frequency = 0.04
 shader_parameter/wave_speed = 1.0
 shader_parameter/surface_ratio = 1.0
 shader_parameter/surface_softness = 0.08
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_6avg1"]
+particle_flag_disable_z = true
+emission_shape = 3
+emission_box_extents = Vector3(2000, 500, 1)
+initial_velocity_min = 1.0
+initial_velocity_max = 10.0
+radial_velocity_min = -10.000022
+radial_velocity_max = 49.999977
+gravity = Vector3(0, -15, 0)
+scale_min = 0.25
+scale_max = 0.5
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_fajeu"]
+particles_animation = true
+particles_anim_h_frames = 7
+particles_anim_v_frames = 1
+particles_anim_loop = false
+
+[sub_resource type="Gradient" id="Gradient_wrijj"]
+offsets = PackedFloat32Array(0, 0.1958042, 0.74825174, 1)
+colors = PackedColorArray(1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_rh2pu"]
+gradient = SubResource("Gradient_wrijj")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_alk7d"]
+particle_flag_disable_z = true
+emission_shape = 3
+emission_box_extents = Vector3(7500, 500, 1)
+spread = 20.0
+initial_velocity_min = 0.5
+initial_velocity_max = 2.0
+angular_velocity_min = -1.6093254e-05
+angular_velocity_max = 29.999983
+gravity = Vector3(-60, 50, 0)
+linear_accel_min = -2.2351742e-06
+linear_accel_max = 9.999997
+scale_min = 0.19999999
+scale_max = 0.29999998
+color_ramp = SubResource("GradientTexture1D_rh2pu")
+anim_offset_max = 1.0
 
 [sub_resource type="Gradient" id="Gradient_0j414"]
 offsets = PackedFloat32Array(0.8732877, 1)
@@ -79,12 +170,6 @@ tile_size = Vector2i(128, 128)
 physics_layer_0/collision_layer = 1
 sources/1 = SubResource("TileSetAtlasSource_3fe7p")
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_rnx0k"]
-size = Vector2(458, 83)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_qclta"]
-size = Vector2(459, 28)
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_op0pn"]
 size = Vector2(105, 666)
 
@@ -95,56 +180,19 @@ light_mask = 2
 position = Vector2(-10098.8, -190.75)
 scale = Vector2(1.86115, 1.06418)
 
-[node name="Fundoceu" type="Sprite2D" parent="Background" unique_id=1216322932]
-light_mask = 2
-position = Vector2(-1849.094, -1514.5697)
-scale = Vector2(2.8613157, 2.870583)
-texture = ExtResource("1_4e4qg")
-
 [node name="-4" type="CanvasLayer" parent="Background" unique_id=123978568]
-visible = false
 follow_viewport_enabled = true
 follow_viewport_scale = 0.6
 
-[node name="ArvoreFundo1" type="Sprite2D" parent="Background/-4" unique_id=373022633]
-position = Vector2(-16995.285, -4158.1807)
-scale = Vector2(1.5681307, 1.3603833)
-texture = ExtResource("43_2aq70")
+[node name="110SemTítulo20260213153415" type="Sprite2D" parent="Background/-4" unique_id=1809698023]
+position = Vector2(-18630, -453.33328)
+scale = Vector2(4.811685, 4.811685)
+texture = ExtResource("1_52tak")
 
-[node name="ArvoreFundo3" type="Sprite2D" parent="Background/-4" unique_id=967158874]
-position = Vector2(-18448.285, -4138.1797)
-scale = Vector2(1.5190085, 1.3177689)
-texture = ExtResource("43_2aq70")
-
-[node name="ArvoreFundo2" type="Sprite2D" parent="Background/-4" unique_id=1978690816]
-position = Vector2(-15738.285, -4154.1807)
-scale = Vector2(1.6302286, 1.4142594)
-texture = ExtResource("44_uygvq")
-
-[node name="ArvoreFundo4" type="Sprite2D" parent="Background/-4" unique_id=1494004020]
-position = Vector2(-11306.284, -4108.18)
-scale = Vector2(1.5681307, 1.3603833)
-texture = ExtResource("43_2aq70")
-
-[node name="ArvoreFundo5" type="Sprite2D" parent="Background/-4" unique_id=438750810]
-position = Vector2(-12607.285, -4195.519)
-scale = Vector2(1.5190085, 1.3177689)
-texture = ExtResource("43_2aq70")
-
-[node name="ArvoreFundo6" type="Sprite2D" parent="Background/-4" unique_id=408184269]
-position = Vector2(-9951.285, -4104.1807)
-scale = Vector2(1.6302286, 1.4142594)
-texture = ExtResource("44_uygvq")
-
-[node name="ArvoreFundo7" type="Sprite2D" parent="Background/-4" unique_id=881018663]
-position = Vector2(-10151.285, -566.1803)
-scale = Vector2(2.516566, 2.1831686)
-texture = ExtResource("43_2aq70")
-
-[node name="ArvoreFundo8" type="Sprite2D" parent="Background/-4" unique_id=205992019]
-position = Vector2(-8993.285, -948.18036)
-scale = Vector2(2.285754, 1.9829351)
-texture = ExtResource("44_uygvq")
+[node name="110SemTítulo20260213153416" type="Sprite2D" parent="Background/-4" unique_id=1487386442]
+position = Vector2(-8159.9985, -453.33328)
+scale = Vector2(4.811685, 4.811685)
+texture = ExtResource("1_52tak")
 
 [node name="-3" type="CanvasLayer" parent="Background" unique_id=1549747594]
 follow_viewport_enabled = true
@@ -222,6 +270,20 @@ position = Vector2(745.13086, -3743.9626)
 scale = Vector2(0.5373022, 0.9396905)
 texture = ExtResource("2_0j414")
 
+[node name="ColorRect" type="ColorRect" parent="Background/-3/Arvore3" unique_id=729955182]
+material = SubResource("ShaderMaterial_h4xbm")
+anchors_preset = -1
+anchor_left = -5.8180137
+anchor_top = -3.8148148
+anchor_right = 1.0307384
+anchor_bottom = -0.03703681
+offset_left = -4843.039
+offset_top = -5138.0605
+offset_right = -4803.039
+offset_bottom = -5098.0605
+scale = Vector2(0.9844004, 1.7800354)
+metadata/_edit_use_anchors_ = true
+
 [node name="-25" type="CanvasLayer" parent="Background" unique_id=2118865188]
 follow_viewport_enabled = true
 follow_viewport_scale = 0.75
@@ -257,6 +319,14 @@ position = Vector2(-8620, -214.66666)
 scale = Vector2(1, 0.9999996)
 texture = ExtResource("4_l7gx4")
 
+[node name="Blur" type="ColorRect" parent="Background/-25" unique_id=411606092]
+material = SubResource("ShaderMaterial_uygvq")
+offset_left = -19367.14
+offset_top = -5609.6294
+offset_right = -5672.4727
+offset_bottom = -1512.2964
+scale = Vector2(0.9844004, 1.7800354)
+
 [node name="-27" type="CanvasLayer" parent="Background" unique_id=348170027]
 follow_viewport_enabled = true
 follow_viewport_scale = 0.78
@@ -285,6 +355,19 @@ texture = ExtResource("5_r86pu")
 position = Vector2(-8807.693, 50.00003)
 scale = Vector2(1.4, 1.3999994)
 texture = ExtResource("5_r86pu")
+
+[node name="blur3" type="ColorRect" parent="Background/-27" unique_id=693511983]
+material = SubResource("ShaderMaterial_sa01y")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -19692.309
+offset_top = -5425.6416
+offset_right = -7972.3086
+offset_bottom = -2487.352
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.9844004, 1.7800354)
 
 [node name="-2" type="CanvasLayer" parent="Background" unique_id=1191459296]
 follow_viewport_enabled = true
@@ -393,6 +476,14 @@ texture = ExtResource("4_3fe7p")
 position = Vector2(31.5932, -175.48727)
 scale = Vector2(0.5373022, 0.9396903)
 texture = ExtResource("4_3fe7p")
+
+[node name="Fog" type="ColorRect" parent="Background/-2/Arvore2" unique_id=92069412]
+material = SubResource("ShaderMaterial_owbt5")
+offset_left = -5110.3887
+offset_top = -5637.4404
+offset_right = 1721.19
+offset_bottom = -1451.8081
+scale = Vector2(0.9844004, 1.7800354)
 
 [node name="-15" type="CanvasLayer" parent="Background" unique_id=338495675]
 follow_viewport_enabled = true
@@ -508,6 +599,24 @@ position = Vector2(-1893.5605, -4252.335)
 scale = Vector2(0.5373022, 0.93969053)
 texture = ExtResource("13_l7ekd")
 
+[node name="PlataformaSome2" type="StaticBody2D" parent="Background/-1/Arvore1" unique_id=1465149281]
+position = Vector2(-1915.5898, -3122.8267)
+scale = Vector2(0.5373022, 0.9396906)
+
+[node name="Plataforma3" parent="Background/-1/Arvore1/PlataformaSome2" unique_id=1069666827 instance=ExtResource("30_rnx0k")]
+position = Vector2(12, 43)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Background/-1/Arvore1/PlataformaSome2" unique_id=2095099775]
+position = Vector2(16, 11.5)
+shape = SubResource("RectangleShape2D_rnx0k")
+one_way_collision = true
+
+[node name="DestroiPlataforma" parent="Background/-1/Arvore1/PlataformaSome2" unique_id=1312050446 instance=ExtResource("13_gcn7v")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Background/-1/Arvore1/PlataformaSome2/DestroiPlataforma" unique_id=1445081935]
+position = Vector2(16.5, -36)
+shape = SubResource("RectangleShape2D_qclta")
+
 [node name="Arvore11" type="Sprite2D" parent="Background/-1/Arvore1" unique_id=1418459455]
 position = Vector2(-233.29639, 422.6259)
 scale = Vector2(0.5373022, 0.93969035)
@@ -558,6 +667,27 @@ position = Vector2(-16712.63, 628.18933)
 scale = Vector2(1.3319443, 1.2341709)
 texture = ExtResource("33_3fe7p")
 flip_h = true
+
+[node name="Luz" type="ColorRect" parent="Background/-05" unique_id=1124469410]
+material = SubResource("ShaderMaterial_l7ekd")
+offset_left = -10081.633
+offset_top = -1153.0612
+offset_right = -8341.633
+offset_bottom = 837.93884
+
+[node name="Luz3" type="ColorRect" parent="Background/-05" unique_id=1623916510]
+material = SubResource("ShaderMaterial_l7ekd")
+offset_left = -14227.368
+offset_top = -4750.5264
+offset_right = -12487.368
+offset_bottom = -2759.5264
+
+[node name="Luz2" type="ColorRect" parent="Background/-05" unique_id=285755924]
+material = SubResource("ShaderMaterial_l7ekd")
+offset_left = -12083.674
+offset_top = -795.91833
+offset_right = -10343.674
+offset_bottom = 1195.0817
 
 [node name="-02" type="CanvasLayer" parent="Background" unique_id=97736955]
 follow_viewport_enabled = true
@@ -840,6 +970,27 @@ scale = Vector2(0.919994, 0.919994)
 material = SubResource("ShaderMaterial_on2eu")
 tile_map_data = PackedByteArray("AACP/wYAAQAAAAEAAACP/wcAAQAAAAEAAACP/wgAAQAAAAEAAACQ/wYAAQAAAAEAAACQ/wcAAQAAAAEAAACQ/wgAAQAAAAEAAACR/wYAAQAAAAEAAACR/wcAAQAAAAEAAACR/wgAAQAAAAEAAACS/wYAAQAAAAEAAACS/wcAAQAAAAEAAACS/wgAAQAAAAEAAACT/wYAAQAAAAEAAACT/wcAAQAAAAEAAACT/wgAAQAAAAEAAACU/wYAAQAAAAEAAACU/wcAAQAAAAEAAACU/wgAAQAAAAEAAACV/wYAAQAAAAEAAACV/wcAAQAAAAEAAACV/wgAAQAAAAEAAACW/wYAAQAAAAEAAACW/wcAAQAAAAEAAACW/wgAAQAAAAEAAACX/wYAAQAAAAEAAACX/wcAAQAAAAEAAACX/wgAAQAAAAEAAACY/wYAAQAAAAEAAACY/wcAAQAAAAEAAACY/wgAAQAAAAEAAACZ/wYAAQAAAAEAAACZ/wcAAQAAAAEAAACZ/wgAAQAAAAEAAACa/wYAAQAAAAEAAACa/wcAAQAAAAEAAACa/wgAAQAAAAEAAACP/wUAAQAAAAAAAACQ/wUAAQAAAAAAAACR/wUAAQAAAAAAAACS/wUAAQAAAAAAAACT/wUAAQAAAAAAAACU/wUAAQAAAAAAAACV/wUAAQAAAAAAAACW/wUAAQAAAAAAAACX/wUAAQAAAAAAAACY/wUAAQAAAAAAAACZ/wUAAQAAAAAAAACa/wUAAQAAAAAAAACb/wUAAQAAAAAAAACO/wUAAQAAAAAAAACO/wYAAQAAAAEAAACO/wcAAQAAAAEAAACb/wYAAQAAAAEAAACb/wcAAQAAAAEAAAA=")
 tile_set = ExtResource("30_3fe7p")
+
+[node name="Particula" type="GPUParticles2D" parent="Background/0" unique_id=663122991]
+position = Vector2(-13942.541, -3114.63)
+rotation = 3.1415925
+scale = Vector2(4.5786357, -7.7892065)
+amount = 100
+amount_ratio = 0.7
+texture = ExtResource("31_mo8mq")
+visibility_rect = Rect2(-2000, -500, 4000, 1000)
+process_material = SubResource("ParticleProcessMaterial_6avg1")
+
+[node name="Folhas" type="GPUParticles2D" parent="Background/0" unique_id=717891824]
+material = SubResource("CanvasItemMaterial_fajeu")
+position = Vector2(-13584, -2275)
+rotation = 3.1415925
+scale = Vector2(7.2118926, -7.7775836)
+amount = 1000
+texture = ExtResource("32_2aq70")
+lifetime = 5.0
+visibility_rect = Rect2(-7500, -500, 15000, 1000)
+process_material = SubResource("ParticleProcessMaterial_alk7d")
 
 [node name="TileMapLayer" type="TileMapLayer" parent="Background/0" unique_id=2077420345]
 position = Vector2(-2, 0)
@@ -1403,23 +1554,6 @@ scale = Vector2(1.0405806, 1.183949)
 texture = ExtResource("27_4e4qg")
 flip_h = true
 flip_v = true
-
-[node name="PlataformaSome2" type="StaticBody2D" parent="Background/0" unique_id=1465149281]
-position = Vector2(-13664, -3514)
-
-[node name="Plataforma3" parent="Background/0/PlataformaSome2" unique_id=1069666827 instance=ExtResource("30_rnx0k")]
-position = Vector2(12, 43)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Background/0/PlataformaSome2" unique_id=2095099775]
-position = Vector2(16, 11.5)
-shape = SubResource("RectangleShape2D_rnx0k")
-one_way_collision = true
-
-[node name="DestroiPlataforma" parent="Background/0/PlataformaSome2" unique_id=1312050446 instance=ExtResource("13_gcn7v")]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Background/0/PlataformaSome2/DestroiPlataforma" unique_id=1445081935]
-position = Vector2(16.5, -36)
-shape = SubResource("RectangleShape2D_qclta")
 
 [node name="Node2D2" type="Node2D" parent="Background/0" unique_id=470994382]
 position = Vector2(-8488, -262)

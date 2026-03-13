@@ -20,6 +20,7 @@
 [ext_resource type="Texture2D" uid="uid://b6yel5f58h380" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/arvore05.png" id="14_wmciv"]
 [ext_resource type="Texture2D" uid="uid://ccy8rilccs3gf" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/arvore06.png" id="15_i5sln"]
 [ext_resource type="Texture2D" uid="uid://u12dsbd5ebth" path="res://Sprites/Cenário/Mata_Atlantica/Background/Mata/mato00.png" id="16_ny35b"]
+[ext_resource type="Texture2D" uid="uid://cu8wv0sjkceh0" path="res://Sprites/Cenário/Mata_Atlantica/Background/Mata/mata atlântica.png" id="16_yyslo"]
 [ext_resource type="Texture2D" uid="uid://dujq612hvg603" path="res://Sprites/Cenário/Mata_Atlantica/Pedras e Ruinas/ruinas.png" id="19_6kvc1"]
 [ext_resource type="Shader" uid="uid://da2wxasx6evg0" path="res://Scripts/Shaders/Grama.gdshader" id="19_ny35b"]
 [ext_resource type="Texture2D" uid="uid://dmmwsf5tpgg24" path="res://Sprites/Cenário/Mata_Atlantica/Interativos/ponte exemplo.png" id="20_34afy"]
@@ -477,6 +478,11 @@ texture = ExtResource("13_rcn2b")
 [node name="Arvore05" type="Sprite2D" parent="-02/ArvoresFrente" unique_id=1614852]
 position = Vector2(-3617, 262)
 texture = ExtResource("14_wmciv")
+
+[node name="MataAtlântica" type="Sprite2D" parent="-02/ArvoresFrente" unique_id=78864838]
+position = Vector2(-3621.5098, 398.12256)
+scale = Vector2(1.0042253, 1.0042253)
+texture = ExtResource("16_yyslo")
 
 [node name="Arvore06" type="Sprite2D" parent="-02/ArvoresFrente" unique_id=2027851179]
 position = Vector2(-1905, 230)
@@ -1340,6 +1346,12 @@ texture = ExtResource("42_rcn2b")
 modulate = Color(0.012617188, 0.012617188, 0.012617188, 1)
 position = Vector2(4234.286, -1912.8573)
 scale = Vector2(1.4554528, 1.2868726)
+texture = ExtResource("43_wmciv")
+
+[node name="ArvoreFundo4" type="Sprite2D" parent="2" unique_id=73738936]
+modulate = Color(0.012617188, 0.012617188, 0.012617188, 1)
+position = Vector2(6364.2866, -1831.4287)
+scale = Vector2(1.4957746, 1.4033656)
 texture = ExtResource("43_wmciv")
 
 [node name="Cenario" type="Node2D" parent="." unique_id=1043735198]
