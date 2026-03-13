@@ -49,12 +49,11 @@ size_flags_horizontal = 3
 size_flags_stretch_ratio = 0.0
 text = "Fase:"
 
-[node name="Fase" type="OptionButton" parent="Control/Console/VBoxContainer/MarginContainer2/HBoxContainer" unique_id=1050099108]
+[node name="Fase" type="Label" parent="Control/Console/VBoxContainer/MarginContainer2/HBoxContainer" unique_id=1759516203]
 unique_name_in_owner = true
 z_index = 5
 layout_mode = 2
 size_flags_horizontal = 3
-focus_mode = 0
 
 [node name="MarginContainer" type="MarginContainer" parent="Control/Console/VBoxContainer" unique_id=1836218172]
 layout_mode = 2
@@ -85,3 +84,22 @@ size_flags_horizontal = 3
 size_flags_stretch_ratio = 0.2
 bbcode_enabled = true
 scroll_following = true
+
+[node name="MarginContainer3" type="MarginContainer" parent="Control/Console/VBoxContainer" unique_id=1785487386]
+layout_mode = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control/Console/VBoxContainer/MarginContainer3" unique_id=183385573]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Control/Console/VBoxContainer/MarginContainer3/HBoxContainer" unique_id=731234378]
+layout_mode = 2
+text = "cmd//"
+
+[node name="LinhaComando" type="LineEdit" parent="Control/Console/VBoxContainer/MarginContainer3/HBoxContainer" unique_id=689141791]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3

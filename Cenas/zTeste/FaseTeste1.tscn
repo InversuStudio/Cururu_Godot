@@ -171,7 +171,6 @@ texture = ExtResource("8_qmn8k")
 
 [node name="TransicaoFase" parent="Transicoes" unique_id=1589232219 instance=ExtResource("10_wqlrc")]
 position = Vector2(-2655, -514)
-destino = 1
 posicao = Vector2(300, 0)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Transicoes/TransicaoFase" unique_id=1850170882]
@@ -181,7 +180,6 @@ shape = SubResource("RectangleShape2D_77bok")
 [node name="TransicaoFase2" parent="Transicoes" unique_id=2088442320 instance=ExtResource("10_wqlrc")]
 position = Vector2(-497, -1570)
 vertical = true
-destino = 2
 posicao = Vector2(13, 71)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Transicoes/TransicaoFase2" unique_id=1667583577]

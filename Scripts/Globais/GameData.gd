@@ -42,7 +42,7 @@ func GetUiButtonImage(action:StringName) -> Array[StringName]:
 	return result
 
 # Armazena a fase a ser carregada
-var fase: Mundos.NomeFase = Mundos.NomeFase.FaseTeste1
+var fase:StringName = "res://Cenas/zTeste/FaseTeste1.tscn"
 # Armazena a posição inicial do player
 var posicao: Vector2 = Vector2(0, 0)
 # Define se player inicia olhando para a esquerda(true) ou direita(false)

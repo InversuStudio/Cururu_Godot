@@ -705,7 +705,7 @@ spawn_points = [NodePath("../../../Area2D3"), NodePath("../../../Area2D4"), Node
 
 [node name="Tutorial3" parent="Background2/0" unique_id=1060207142 instance=ExtResource("5_ermhl")]
 position = Vector2(-16271, -4098)
-destino = 6
+destino = &"res://Cenas/aTutorial/Tutorial_3.tscn"
 posicao = Vector2(-18594, -3588)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Background2/0/Tutorial3" unique_id=1056416364]
@@ -721,7 +721,7 @@ flip_h = true
 
 [node name="Tutorial1" parent="Background2/0" unique_id=1088799968 instance=ExtResource("5_ermhl")]
 position = Vector2(-29799, -3297)
-destino = 4
+destino = &"res://Cenas/aTutorial/Tutorial_1.tscn"
 posicao = Vector2(8928, -1182)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Background2/0/Tutorial1" unique_id=643306902]

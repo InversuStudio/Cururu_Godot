@@ -5,7 +5,7 @@ extends State
 
 var prosseguir:bool = false
 
-const pilar:PackedScene = preload("res://Cenas/BossTeste/Labareda.tscn")
+@export var pilar:PackedScene = null
 
 func _ready() -> void:
 	await get_tree().current_scene.ready

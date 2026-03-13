@@ -14,7 +14,7 @@ func _process(_delta: float) -> void:
 		ajustar_tamanho_fonte()
 
 func ajustar_tamanho_fonte() -> void:
-	var tamanho_atual = max_font_size
+	var tamanho_atual:int = max_font_size
 	
 	# Aplica o tamanho máximo inicial
 	add_theme_font_size_override("normal_font_size", tamanho_atual)

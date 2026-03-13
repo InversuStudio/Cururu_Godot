@@ -2,8 +2,8 @@ extends Area2D
 
 ## Define se transição é vertical ou horizontal
 @export var vertical: bool = false
-## Lugar a ser enviado, para ser salvo
-@export var destino: Mundos.NomeFase
+## Caminho do arquivo da fase a ser carregada
+@export var destino:StringName = ""
 ## Posição onde será spawnado na próxima fase
 @export var posicao: Vector2 = Vector2.ZERO
 # Se o Player spawna virado à esquerda
@@ -17,7 +17,6 @@ func _on_body_entered(body: Node2D) -> void:
 		body.pode_mover = false
 		# Armazena direção que player está olhando
 		GameData.direcao = true if body.sprite.flip_h else false
-		#virado_a_esquerda = body.sprite.flip_h
 		# Se for transição vertical
 		if vertical:
 			if body.velocity.y <= 0.0:

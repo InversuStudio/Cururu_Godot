@@ -715,7 +715,7 @@ texture = ExtResource("35_3t3iu")
 
 [node name="1-1" parent="background/0" unique_id=1396063532 instance=ExtResource("1_2ybff")]
 position = Vector2(2006, 531)
-destino = 7
+destino = &"res://Cenas/Mata_Atlantica/MA_1-1.tscn"
 posicao = Vector2(2079, 1004)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="background/0/1-1" unique_id=1334526636]
@@ -729,8 +729,8 @@ texture = ExtResource("15_yf878")
 
 [node name="1-3" parent="background/0" unique_id=2075630784 instance=ExtResource("1_2ybff")]
 position = Vector2(1858, -4668)
-destino = 14
-posicao = Vector2(7879, -7426)
+destino = &"res://Cenas/Mata_Atlantica/MA_1-3.tscn"
+posicao = Vector2(3269, -4493)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="background/0/1-3" unique_id=2065413524]
 position = Vector2(-22, -253)
@@ -743,7 +743,7 @@ texture = ExtResource("15_yf878")
 
 [node name="1-4" parent="background/0" unique_id=1756414431 instance=ExtResource("1_2ybff")]
 position = Vector2(1820, -3089)
-destino = 10
+destino = &"res://Cenas/Mata_Atlantica/MA_1-4.tscn"
 posicao = Vector2(1995, -2946)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="background/0/1-4" unique_id=1960973433]
@@ -756,7 +756,7 @@ texture = ExtResource("15_yf878")
 
 [node name="1-5" parent="background/0" unique_id=196732137 instance=ExtResource("1_2ybff")]
 position = Vector2(5497, -4448)
-destino = 11
+destino = &"res://Cenas/Mata_Atlantica/MA_1-5.tscn"
 posicao = Vector2(222, -659.0003)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="background/0/1-5" unique_id=1203477423]

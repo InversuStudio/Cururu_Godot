@@ -1581,25 +1581,25 @@ texture = ExtResource("24_csesn")
 [node name="TransicoesFase" type="Node2D" parent="0" unique_id=2017598904]
 position = Vector2(-4670, 1575)
 
-[node name="TransicaoFase" parent="0/TransicoesFase" unique_id=722995839 instance=ExtResource("4_aepc8")]
+[node name="MA_1-9" parent="0/TransicoesFase" unique_id=722995839 instance=ExtResource("4_aepc8")]
 position = Vector2(4736, 31)
 scale = Vector2(0.8, 0.8)
 vertical = true
-destino = 15
+destino = &"res://Cenas/Mata_Atlantica/MA_1-9.tscn"
 posicao = Vector2(4280, -1100)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="0/TransicoesFase/TransicaoFase" unique_id=2129243879]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="0/TransicoesFase/MA_1-9" unique_id=2129243879]
 position = Vector2(3.75, 28.525005)
 scale = Vector2(0.79999983, 0.79999983)
 shape = SubResource("RectangleShape2D_x3mff")
 
-[node name="TransicaoFase2" parent="0/TransicoesFase" unique_id=1915671037 instance=ExtResource("4_aepc8")]
+[node name="MA_2-2" parent="0/TransicoesFase" unique_id=1915671037 instance=ExtResource("4_aepc8")]
 position = Vector2(3359, -3684)
 vertical = true
-destino = 17
+destino = &"res://Cenas/Mata_Atlantica/MA_2-2.tscn"
 posicao = Vector2(2870, -599)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="0/TransicoesFase/TransicaoFase2" unique_id=743501806]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="0/TransicoesFase/MA_2-2" unique_id=743501806]
 position = Vector2(84, 221)
 shape = SubResource("RectangleShape2D_x3mff")
 

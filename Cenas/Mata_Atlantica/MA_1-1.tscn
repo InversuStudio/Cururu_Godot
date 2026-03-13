@@ -91,7 +91,7 @@ shader_parameter/hdr = false
 shader_parameter/seed = 7.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mw8rc"]
-size = Vector2(63, 541)
+size = Vector2(170, 541)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_q40bt"]
 size = Vector2(80, 756)
@@ -664,11 +664,11 @@ drop_item = Array[PackedScene]([ExtResource("22_gr3ec"), ExtResource("26_8tm3t")
 
 [node name="MA_T3" parent="background/0/Transicoes" unique_id=1994742552 instance=ExtResource("9_q40bt")]
 position = Vector2(-9071, -92)
-destino = 12
-posicao = Vector2(9030, -4488)
+destino = &"res://Cenas/aTutorial/Tutorial_3.tscn"
+posicao = Vector2(-8481, -273)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="background/0/Transicoes/MA_T3" unique_id=1838593708]
-position = Vector2(11.5, -280.5)
+position = Vector2(65, -280.5)
 shape = SubResource("RectangleShape2D_mw8rc")
 
 [node name="Portal" type="Sprite2D" parent="background/0/Transicoes/MA_T3" unique_id=1320191002]
@@ -678,7 +678,7 @@ texture = ExtResource("4_1ewfi")
 
 [node name="MA_1-2" parent="background/0/Transicoes" unique_id=373410332 instance=ExtResource("9_q40bt")]
 position = Vector2(1895, 1047)
-destino = 8
+destino = &"res://Cenas/Mata_Atlantica/MA_1-2.tscn"
 posicao = Vector2(2109, 509)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="background/0/Transicoes/MA_1-2" unique_id=2058974868]
@@ -696,7 +696,6 @@ position = Vector2(1125, 924)
 
 [node name="Cururu" parent="background/0" unique_id=370155217 instance=ExtResource("1_v83m2")]
 z_index = 0
-position = Vector2(-8781.001, -138.00002)
 scale = Vector2(0.919994, 0.919994)
 
 [node name="Particula" type="GPUParticles2D" parent="background/0" unique_id=2060733035]
@@ -1432,11 +1431,10 @@ limit_top = -1286
 limit_right = 2565
 limit_bottom = 1348
 target = NodePath("../background/0/Cururu")
-speed = 6.0
 limite_camera = NodePath("../LimiteCam")
 
 [node name="LimiteCam" type="ReferenceRect" parent="." unique_id=1149907711]
-offset_left = -8910.0
+offset_left = -8976.0
 offset_top = -1286.0
 offset_right = 2565.0
 offset_bottom = 1348.0

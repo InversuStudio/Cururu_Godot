@@ -33,4 +33,4 @@ func _on_continuar_pressed() -> void:
 		for i:int in range(3, pagina + 1):
 			telas[i].visible = true
 	elif pagina > 7:
-		Mundos.CarregaFase(Mundos.NomeFase.TUTORIAL_1)
+		Mundos.CarregaFase("res://Cenas/aTutorial/Tutorial_1.tscn")

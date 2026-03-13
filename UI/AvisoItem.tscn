@@ -5,6 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://dxetesue4pk34" path="res://Sprites/UI/Pause/Pecas/COLETA_ITEM.png" id="2_j1nce"]
 [ext_resource type="AudioStream" uid="uid://da8j5pkrlvh5y" path="res://Audio/SFX/AMBIENTE/Iten especial.wav" id="4_2llkm"]
 [ext_resource type="Texture2D" uid="uid://c3tl3oddronfh" path="res://icon.svg" id="4_gxman"]
+[ext_resource type="Script" uid="uid://dvao27av8qjbk" path="res://Dialogos/label_auto_resize.gd" id="4_qmy0w"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_2llkm"]
 shader = ExtResource("2_7m40o")
@@ -132,6 +133,8 @@ theme_override_font_sizes/normal_font_size = 50
 text = "Nome Item"
 horizontal_alignment = 1
 vertical_alignment = 1
+script = ExtResource("4_qmy0w")
+max_font_size = 50
 
 [node name="VBoxContainer" type="VBoxContainer" parent="AvisoItem/Conteudo/VBoxContainer" unique_id=1563253648]
 layout_mode = 2

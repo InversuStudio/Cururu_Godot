@@ -160,7 +160,7 @@ follow_viewport_enabled = true
 
 [node name="1-7" parent="0/TransicoesFase" unique_id=1003014993 instance=ExtResource("2_p2dm5")]
 position = Vector2(18, -655)
-destino = 13
+destino = &"res://Cenas/Mata_Atlantica/MA_1-7.tscn"
 posicao = Vector2(3488, -3700)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="0/TransicoesFase/1-7" unique_id=978774608]
@@ -169,7 +169,7 @@ shape = SubResource("RectangleShape2D_xlh4k")
 [node name="2-1" parent="0/TransicoesFase" unique_id=781479557 instance=ExtResource("2_p2dm5")]
 position = Vector2(4284, -1399)
 vertical = true
-destino = 16
+destino = &"res://Cenas/Mata_Atlantica/MA_2-1.tscn"
 posicao = Vector2(67, 1557)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="0/TransicoesFase/2-1" unique_id=2029187536]

@@ -210,6 +210,8 @@
 [ext_resource type="Texture2D" uid="uid://djw5ivxuoi865" path="res://Sprites/Inimigos/Boitata/Animacoes/Pilar/boitata_grito_chamas_corpo/boitata_69.png" id="162_183op"]
 [ext_resource type="Texture2D" uid="uid://dsmhldn16ouor" path="res://Sprites/Inimigos/Boitata/Animacoes/Pilar/boitata_grito_chamas_corpo/boitata_71.png" id="163_aev7w"]
 [ext_resource type="Texture2D" uid="uid://wni3igc4hbdk" path="res://Sprites/Inimigos/Boitata/Animacoes/Pilar/boitata_grito_chamas_corpo/boitata_73.png" id="164_xraj6"]
+[ext_resource type="PackedScene" uid="uid://dct0yu1s5isad" path="res://Objetos/Boss/Boitata/BolaDeFogo.tscn" id="205_ry0yp"]
+[ext_resource type="PackedScene" uid="uid://dppj6i0ifoocp" path="res://Objetos/Boss/Boitata/PilarFogo.tscn" id="206_5xynu"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_iwjnr"]
 shader = ExtResource("7_q8716")
@@ -1834,10 +1836,12 @@ state_nocaute = NodePath("../Nocaute")
 [node name="CospeFogo" type="Node" parent="StateMachine" unique_id=1716602888 node_paths=PackedStringArray("idle_state")]
 script = ExtResource("75_16hqa")
 idle_state = NodePath("../Idle")
+bola_fogo = ExtResource("205_ry0yp")
 
 [node name="PilarFogo" type="Node" parent="StateMachine" unique_id=635259999 node_paths=PackedStringArray("idle_state")]
 script = ExtResource("85_fi4f6")
 idle_state = NodePath("../Idle")
+pilar = ExtResource("206_5xynu")
 
 [node name="Nocaute" type="Node" parent="StateMachine" unique_id=1843257818 node_paths=PackedStringArray("state_idle", "state_final")]
 script = ExtResource("77_iqxfe")

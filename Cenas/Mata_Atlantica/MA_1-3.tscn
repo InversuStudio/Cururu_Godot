@@ -150,7 +150,7 @@ shader_parameter/wave_strength = 7.0000003325
 shader_parameter/wave_frequency = 2.0
 shader_parameter/top_influence = 0.15
 
-[node name="MA_1-3" type="Node2D" unique_id=2136092184]
+[node name="MA_1-2" type="Node2D" unique_id=2136092184]
 
 [node name="-4" type="CanvasLayer" parent="." unique_id=182272515]
 follow_viewport_enabled = true
@@ -376,7 +376,7 @@ process_material = SubResource("ParticleProcessMaterial_fm07s")
 position = Vector2(533.00006, -4691)
 scale = Vector2(0.7016272, 0.7016273)
 
-[node name="Player" parent="0" unique_id=32676309 instance=ExtResource("1_65boa")]
+[node name="Cururu" parent="0" unique_id=32676309 instance=ExtResource("1_65boa")]
 z_index = 0
 position = Vector2(3269, -4493)
 
@@ -451,12 +451,12 @@ flip_v = true
 [node name="Node2D" type="Node2D" parent="0" unique_id=1485368309]
 position = Vector2(3438, -4487)
 
-[node name="TransicaoFase2" parent="0" unique_id=1811308444 instance=ExtResource("3_bcoor")]
+[node name="MA_1-2" parent="0" unique_id=1811308444 instance=ExtResource("3_bcoor")]
 position = Vector2(3696, -4463)
-destino = 13
+destino = &"res://Cenas/Mata_Atlantica/MA_1-2.tscn"
 posicao = Vector2(673, -3737)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="0/TransicaoFase2" unique_id=1420859049]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="0/MA_1-2" unique_id=1420859049]
 position = Vector2(-22, -215)
 shape = SubResource("RectangleShape2D_87p3x")
 
@@ -682,7 +682,7 @@ limit_left = -631
 limit_top = -6018
 limit_right = 3692
 limit_bottom = -4044
-target = NodePath("../0/Player")
+target = NodePath("../0/Cururu")
 limite_camera = NodePath("../LimiteCam")
 
 [node name="BGM_Player" type="Node" parent="." unique_id=634352306]

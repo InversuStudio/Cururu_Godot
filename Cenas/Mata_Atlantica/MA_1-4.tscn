@@ -337,7 +337,7 @@ follow_viewport_enabled = true
 
 [node name="1-2" parent="0" unique_id=742767588 instance=ExtResource("2_botoi")]
 position = Vector2(2159, -2935)
-destino = 8
+destino = &"res://Cenas/Mata_Atlantica/MA_1-2.tscn"
 posicao = Vector2(1983, -2967)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="0/1-2" unique_id=1631938320]

@@ -27,7 +27,7 @@ func _on_main_pressed() -> void:
 	Mundos.lista_baus = []
 	#Mundos.areas_secretas = []
 	$BtnSFX.play()
-	Mundos.CarregaFase(Mundos.NomeFase.CutsceneIntro)
+	Mundos.CarregaFase("res://Cenas/aTutorial/CutsceneIntro.tscn")
 	#Mundos.CarregaFase(Mundos.NomeFase.TUTORIAL_1)
 
 func _on_fase_teste_pressed() -> void:

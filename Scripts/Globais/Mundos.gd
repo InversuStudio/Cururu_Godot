@@ -1,80 +1,29 @@
 extends Node
 
-# Lista de fases
-var arquivo_fase: Array[StringName] = [
-	"res://Cenas/zTeste/FaseTeste1.tscn",
-	"res://Cenas/zTeste/FaseTeste2.tscn",
-	"res://Cenas/zTeste/FaseTeste3.tscn",
-	"res://UI/MenuPrincipal.tscn",
-	"res://Cenas/Mata_Atlantica/TUTORIAL/TMA01.tscn",
-	"res://Cenas/Mata_Atlantica/TUTORIAL/TMA02.tscn",
-	"res://Cenas/Mata_Atlantica/TUTORIAL/TMA03.tscn",
-	"res://Cenas/Mata_Atlantica/AREA01/A1MA01.tscn",
-	"res://Cenas/Mata_Atlantica/AREA01/A1MA02.tscn",
-	"res://Cenas/Mata_Atlantica/AREA01/A1MA03.tscn",
-	"res://Cenas/Mata_Atlantica/AREA01/A1MA04.tscn",
-	"res://Cenas/Mata_Atlantica/AREA01/A1MA05.tscn",
-	"res://Cenas/Mata_Atlantica/AREA01/A1MA06.tscn",
-	"res://Cenas/Mata_Atlantica/AREA01/A1MA07.tscn",
-	"res://Cenas/Mata_Atlantica/AREA01/A1MA08.tscn",
-	"res://Cenas/Mata_Atlantica/AREA01/A1MA09.tscn",
-	"res://Cenas/Mata_Atlantica/AREA02/A2MA01.tscn",
-	"res://Cenas/Mata_Atlantica/AREA02/A2MA02.tscn",
-	"res://Cenas/Mata_Atlantica/AREA02/A2MA03.tscn",
-	"res://Cenas/Mata_Atlantica/AREA02/A2MA04.tscn",
-	"res://Cenas/Mata_Atlantica/AREA02/A2MA05.tscn",
-	"res://Cenas/Mata_Atlantica/AREA02/A2MA06.tscn",
-	"res://Cenas/Mata_Atlantica/AREA02/A2MA07.tscn",
-	"res://Cenas/Mata_Atlantica/AREA03/MA_04.tscn",
-	"res://Cenas/Demo/FinalDemo.tscn",
-	"res://UI/CutsceneIntro.tscn",
-]
-
-# Enumerador de fases, deve seguir a mesma ordem que a lista
-enum NomeFase {
-	FaseTeste1,
-	FaseTeste2,
-	FaseTeste3,
-	MenuPrincipal,
-	TUTORIAL_1,
-	TUTORIAL_2,
-	TUTORIAL_3,
-	Mata_Atlantica_1_1,
-	Mata_Atlantica_1_2,
-	Mata_Atlantica_1_3,
-	Mata_Atlantica_1_4,
-	Mata_Atlantica_1_5,
-	Mata_Atlantica_1_6,
-	Mata_Atlantica_1_7,
-	Mata_Atlantica_1_8,
-	Mata_Atlantica_1_9,
-	Mata_Atlantica_2_1,
-	Mata_Atlantica_2_2,
-	Mata_Atlantica_2_3,
-	Mata_Atlantica_2_4,
-	Mata_Atlantica_2_5,
-	Mata_Atlantica_2_6,
-	Mata_Atlantica_2_7,
-	Mata_Atlantica_MA_04,
-	FinalDemo,
-	CutsceneIntro,
-}
-
+# Registra o nome de todas as fases do jogo
+var lista_fases:Array[PackedStringArray] = []
 # Registra fase atual
-var fase_atual: NomeFase
+var fase_atual:StringName = ""
+# Segura a instância atual do Player
 @onready var player:Player = get_tree().get_first_node_in_group("Player")
+# Segura a instância atual da MainCamera
 @onready var main_camera:MainCamera = get_tree().get_first_node_in_group("MainCamera")
 
 signal fase_mudou
+
 func _ready() -> void:
-	var cur_wrld:StringName = get_tree().current_scene.scene_file_path
-	var id:int = 0
-	for item:StringName in arquivo_fase:
-		if cur_wrld == item:
-			fase_atual = id as NomeFase
-			break
-		id += 1
-	#fase_atual
+	var nome_cena:String = get_tree().current_scene.scene_file_path
+	var slice:PackedStringArray = nome_cena.split("/")
+	nome_cena = slice[slice.size() - 1]
+	nome_cena = nome_cena.get_slice(".", 0)
+	fase_atual = nome_cena
+	Console.MudaAbaSelect()
+	
+	var pastas:PackedStringArray = DirAccess.get_directories_at("res://Cenas/")
+	for p:String in pastas:
+		var files:PackedStringArray = DirAccess.get_files_at("res://Cenas/%s/" % p)
+		for f:String in files:
+			lista_fases.append([p, f])
 
 # Lista que registra que peças de coração foram coletadas
 var pecas_coracao: Array[String] = []
@@ -86,16 +35,18 @@ var lista_inimigos:Array[String] = []
 var lista_baus:Array[String] = []
 
 # Função para carregar nova fase
-func CarregaFase(lugar:NomeFase, detalhado:bool = false,
+func CarregaFase(lugar:StringName, detalhado:bool = false,
 	pos:Vector2=Vector2.ZERO) -> void:#, virado:bool=false) -> void:
 	# Inicia Fade Out e espera a animação terminar
 	Fade.FadeOut()
 	await Fade.terminou
 	# Espera o frame de física terminar e muda a cena
 	await get_tree().physics_frame
-	get_tree().change_scene_to_file(arquivo_fase[lugar])
+	get_tree().change_scene_to_file(lugar)
 	get_tree().paused = false
-	fase_atual = lugar
+	var nome:PackedStringArray = lugar.split("/", false)
+	var n:String = nome[nome.size() - 1]
+	fase_atual = n.get_slice(".", 0)
 	if GameData.ChecaData() == "" and GameData.player_morreu:
 		GameData.moedas = 0
 		GameData.player_morreu = false

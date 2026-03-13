@@ -1,12 +1,9 @@
 extends Node
 
 func _ready() -> void:
+	%LinhaComando.connect("text_submitted", Comando)
 	%Console.hide()
-	for fase:String in Mundos.NomeFase:
-		%Fase.add_item(fase)
-	%Fase.select(Mundos.fase_atual)
-	%Fase.connect("item_selected", func(id:int):
-		Mundos.CarregaFase(id))
+	MudaAbaSelect()
 
 func _input(_event: InputEvent) -> void:
 	if Input.is_action_just_pressed("console"):
@@ -24,4 +21,17 @@ func _State(txt:String) -> void:
 	%StatePlayer.text += "State: " + txt + "[br]"
 
 func MudaAbaSelect() -> void:
-	%Fase.select(Mundos.fase_atual)
+	%Fase.text = Mundos.fase_atual
+
+func Comando(line:String) -> void:
+	var cmd:PackedStringArray = line.split(" ")
+	match cmd[0]:
+		"fase":
+			for p:Array in Mundos.lista_fases:
+				if cmd[1] == p[1].get_slice(".", 0):
+					var place:String = "res://Cenas/%s/%s/" % [p[0], p[1]]
+					Mundos.CarregaFase(place)
+					_Print(
+						"[color=dark_green]Trocou de fase: %s[/color]" % [cmd[1]])
+					break
+	%LinhaComando.text = ""
