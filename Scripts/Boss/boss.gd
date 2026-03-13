@@ -92,16 +92,6 @@ func _ready() -> void:
 	%BarraArmor.max_value = vida_miasma_max
 	%BarraArmor.value = 0.0
 	
-	# Conecta sinal para iniciar luta
-	if area_check_player:
-		var start_state:State = state_machine.find_child("Start")
-		if start_state:
-			area_check_player.connect("body_entered", func(b:Node2D):
-				start_state.PlayerEntrou(b)
-				Mundos.main_camera.MudaTarget(target_camera_batalha, Vector2.ZERO)
-				Mundos.main_camera.MudaZoom(.6)
-			)
-	
 	# Inicializa rabo
 	rabo.visibility_changed.connect(func():
 		var val:bool = true if rabo.visible else false
