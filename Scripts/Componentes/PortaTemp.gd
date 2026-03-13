@@ -10,35 +10,29 @@ const sfx:Array[AudioStream] = [
 
 func _ready() -> void:
 	%HurtBox.connect("hurt", _on_hurt)
-	%HurtBox.set_deferred("monitoring", true)
 	%HurtBox.set_deferred("monitorable", true)
 	%HitBox.set_deferred("monitoring", true)
-	%HitBox.set_deferred("monitorable", true)
-	%Colisao.collision_layer = 1
 	%SFX.stream = sfx[0]
 
 func _on_hurt(hitbox:Array[HitBox]) -> void:
 	for h:HitBox in hitbox:
 		if h.is_in_group("Special"):
-			Console._Print("SPECIAL")
 			Disable()
-
-func _on_timer_timeout() -> void:
-	Enable()
 
 func Disable() -> void:
 	%Anim.play("Abre")
-	%SFX.stream = sfx[1]
-	%HurtBox.set_deferred("monitoring", false)
 	%HurtBox.set_deferred("monitorable", false)
-	%Colisao.collision_layer = 0
+	%HitBox.set_deferred("monitoring", false)
+	%ColFis.set_deferred("disabled", true)
 	%Timer.start(tempo_aberta)
 
+func _on_timer_timeout() -> void:
+	Enable()
+	
 func Enable() -> void:
 	%Anim.play("Fecha")
-	%SFX.stream = sfx[2]
-	%HurtBox.set_deferred("monitoring", true)
 	%HurtBox.set_deferred("monitorable", true)
+	%HitBox.set_deferred("monitoring", true)
+	%ColFis.set_deferred("disabled", false)
 	await %Anim.animation_finished
-	%Colisao.collision_layer = 1
 	%SFX.stream = sfx[0]

@@ -114,42 +114,42 @@ position = Vector2(-1329, -661)
 position = Vector2(0, 1)
 polygon = PackedVector2Array(-2830, 17, -2834, -269, -2794, -269, -2799, 11)
 script = ExtResource("8_17h7x")
-de = NodePath("../CamOculto")
+de = [NodePath("../CamOculto")]
 para = NodePath("../MainCamera")
 metadata/_custom_type_script = "uid://b5hndlauwu1sk"
 
 [node name="Main->Oculto" type="Polygon2D" parent="." unique_id=1958002139 node_paths=PackedStringArray("de", "para")]
 polygon = PackedVector2Array(-2937, 16, -2933, -268, -2892, -271, -2886, 19)
 script = ExtResource("8_17h7x")
-de = NodePath("../MainCamera")
+de = [NodePath("../MainCamera")]
 para = NodePath("../CamOculto")
 metadata/_custom_type_script = "uid://b5hndlauwu1sk"
 
 [node name="L_Agua->Main" type="Polygon2D" parent="." unique_id=671985748 node_paths=PackedStringArray("de", "para")]
 polygon = PackedVector2Array(-2691, -12, -2686, -67, -2427, -63, -2430, -12)
 script = ExtResource("8_17h7x")
-de = NodePath("../CamAgua")
+de = [NodePath("../CamAgua")]
 para = NodePath("../MainCamera")
 metadata/_custom_type_script = "uid://b5hndlauwu1sk"
 
 [node name="R_Agua->Main" type="Polygon2D" parent="." unique_id=2060052227 node_paths=PackedStringArray("de", "para")]
 polygon = PackedVector2Array(-1528, -13, -1530, -62, -1274, -63, -1274, -15)
 script = ExtResource("8_17h7x")
-de = NodePath("../CamAgua")
+de = [NodePath("../CamAgua")]
 para = NodePath("../MainCamera")
 metadata/_custom_type_script = "uid://b5hndlauwu1sk"
 
 [node name="Main->R_Agua" type="Polygon2D" parent="." unique_id=508662601 node_paths=PackedStringArray("de", "para")]
 polygon = PackedVector2Array(-1540, 104, -1535, 48, -1267, 57, -1269, 112)
 script = ExtResource("8_17h7x")
-de = NodePath("../MainCamera")
+de = [NodePath("../MainCamera")]
 para = NodePath("../CamAgua")
 metadata/_custom_type_script = "uid://b5hndlauwu1sk"
 
 [node name="Main->L_Agua" type="Polygon2D" parent="." unique_id=923294557 node_paths=PackedStringArray("de", "para")]
 polygon = PackedVector2Array(-2696, 80, -2689, 27, -2433, 38, -2432, 86)
 script = ExtResource("8_17h7x")
-de = NodePath("../MainCamera")
+de = [NodePath("../MainCamera")]
 para = NodePath("../CamAgua")
 metadata/_custom_type_script = "uid://b5hndlauwu1sk"
 
@@ -178,7 +178,6 @@ limit_right = 1152
 limit_bottom = 80
 target = NodePath("../Player")
 limite_camera = NodePath("../LimiteCam")
-mostrar_deadzone_no_jogo = true
 
 [node name="BGM_Player" type="Node" parent="." unique_id=1436743031]
 script = ExtResource("13_01inf")

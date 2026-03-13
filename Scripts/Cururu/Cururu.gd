@@ -64,10 +64,9 @@ class_name Player extends CharacterBody2D
 @export var vida : Vida = null
 ## Componente StateMachine
 @export var state_machine : StateMachine = null
-## Node container de HIT BOX
-@export var hitbox_container: Node2D = null
-## Node container de HURT BOX
-@export var hurtbox_container: Node2D = null
+
+# Node que segura os Marker2Ds que definem onde os ataques serão instanciados
+@onready var pos_ataques: Node2D = $PosAtaques
 
 var is_coyote: bool = false
 var is_jump_lag: bool = false
@@ -99,11 +98,7 @@ func _ready() -> void:
 		pode_mover = false
 		GameData.game_start = true
 		state_machine.MudaState(state_machine.find_child("Acorda"))
-	# Desabilita hitboxes
-	for h:Node2D in hitbox_container.get_children():
-		if h is HitBox:
-			for c in h.get_children():
-				if c is CollisionShape2D: c.disabled = true
+
 	var ib:Array = [-1.0, -1.0] if GameData.direcao else [1.0, 1.0]
 	input_buffer.assign(ib)
 	
@@ -113,11 +108,10 @@ func _ready() -> void:
 	%DashTime.wait_time = tempo_dash
 	%DashCooldown.wait_time = cooldown_dash
 	%Cururu.flip_h = GameData.direcao
+	
 	# Conecta sinal de dano
 	vida.connect("alterou_vida", VidaMudou)
-	# Aplica flip, se necessário
-	if sprite.flip_h:
-		hitbox_container.scale.x = -1
+	
 	# Seta Magia
 	GameData.magia_max = int(magia_max)
 	if GameData.magia_atual > 0 and GameData.magia_atual < 1:

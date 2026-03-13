@@ -115,10 +115,10 @@ func FixedUpdate(delta : float) -> State:
 func Flip() -> void:
 	if parent.input_move.x > 0:
 		%Cururu.flip_h = false
-		parent.hitbox_container.scale.x = 1
+		parent.pos_ataques.scale.x = 1
 	elif parent.input_move.x < 0:
 		%Cururu.flip_h = true
-		parent.hitbox_container.scale.x = -1
+		parent.pos_ataques.scale.x = -1
 
 func tocar_som_aleatorio():
 	if sfx_movement.is_empty():

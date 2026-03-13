@@ -25,7 +25,7 @@ func _ready() -> void:
 func _on_area_entered(area: Area2D) -> void:
 	if area is HurtBox: # Se a colisão for uma HurtBox
 		if area == ignore: return
-		hit.emit(area.global_position, area.collision_layer)
+		hit.emit(area.global_position, self, area.collision_layer)
 		area.RecebeDano(dano, global_position)
 		var fx:GPUParticles2D = null
 		if vfx:

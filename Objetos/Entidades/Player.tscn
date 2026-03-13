@@ -1793,7 +1793,7 @@ _data = {
 &"Wall": SubResource("Animation_2dakj")
 }
 
-[node name="Player" type="CharacterBody2D" unique_id=2029638361 node_paths=PackedStringArray("vida", "state_machine", "hitbox_container", "hurtbox_container") groups=["Player"]]
+[node name="Player" type="CharacterBody2D" unique_id=2029638361 node_paths=PackedStringArray("vida", "state_machine") groups=["Player"]]
 z_index = 1
 collision_layer = 2
 floor_constant_speed = true
@@ -1815,8 +1815,6 @@ distancia_dash = 2.5
 cooldown_dash = 0.2
 vida = NodePath("Vida")
 state_machine = NodePath("StateMachine")
-hitbox_container = NodePath("HitContainer")
-hurtbox_container = NodePath("HurtContainer")
 
 [node name="Luz" type="PointLight2D" parent="." unique_id=801145679]
 position = Vector2(-28.149544, -83.40631)
@@ -1841,7 +1839,7 @@ unique_name_in_owner = true
 position = Vector2(0, -115)
 scale = Vector2(0.37, 0.37)
 sprite_frames = SubResource("SpriteFrames_ser7u")
-animation = &"Special"
+animation = &"Idle"
 frame = 1
 
 [node name="ColisaoFisica" type="CollisionShape2D" parent="." unique_id=185604391]
@@ -1853,39 +1851,37 @@ script = ExtResource("45_vkjtj")
 vida_max = 5
 metadata/_custom_type_script = "uid://hsdutxxttrp3"
 
-[node name="HurtContainer" type="Node2D" parent="." unique_id=1827413843]
-
-[node name="HurtBox" parent="HurtContainer" unique_id=1078087139 node_paths=PackedStringArray("comp_vida", "parent", "sprite") instance=ExtResource("46_wjcvp")]
+[node name="HurtBox" parent="." unique_id=1078087139 node_paths=PackedStringArray("comp_vida", "parent", "sprite") instance=ExtResource("46_wjcvp")]
 collision_mask = 16
-comp_vida = NodePath("../../Vida")
+comp_vida = NodePath("../Vida")
 distancia_knockback = 1.8
 tempo_knockback = 0.2
 cooldown_dano = 1.35
 hit_sfx = ExtResource("77_d7mdf")
-parent = NodePath("../..")
-sprite = NodePath("../../Cururu")
+parent = NodePath("..")
+sprite = NodePath("../Cururu")
 
-[node name="ColisaoMain" type="CollisionShape2D" parent="HurtContainer/HurtBox" unique_id=314015534]
+[node name="ColisaoMain" type="CollisionShape2D" parent="HurtBox" unique_id=314015534]
 unique_name_in_owner = true
 position = Vector2(0, -79)
 shape = SubResource("RectangleShape2D_2dakj")
 debug_color = Color(0.92912, 0, 0.16329, 0.42)
 
-[node name="ColisaoDash" type="CollisionShape2D" parent="HurtContainer/HurtBox" unique_id=1618109821]
+[node name="ColisaoDash" type="CollisionShape2D" parent="HurtBox" unique_id=1618109821]
 unique_name_in_owner = true
 position = Vector2(0, -79)
 shape = SubResource("RectangleShape2D_ingo5")
 disabled = true
 debug_color = Color(0.92912, 0, 0.16329, 0.42)
 
-[node name="HitContainer" type="Node2D" parent="." unique_id=1633574407]
+[node name="PosAtaques" type="Node2D" parent="." unique_id=1633574407]
 position = Vector2(-2, 0)
 
-[node name="PosMelee" type="Marker2D" parent="HitContainer" unique_id=1527872985]
+[node name="PosMelee" type="Marker2D" parent="PosAtaques" unique_id=1527872985]
 unique_name_in_owner = true
 position = Vector2(135, -92)
 
-[node name="PosChicote" type="Marker2D" parent="HitContainer" unique_id=761845377]
+[node name="PosChicote" type="Marker2D" parent="PosAtaques" unique_id=761845377]
 unique_name_in_owner = true
 position = Vector2(134, -69)
 
@@ -2023,7 +2019,7 @@ script = ExtResource("54_jgcph")
 fall_state = NodePath("../Fall")
 chao_state = NodePath("../Chao")
 nado_state = NodePath("../Nadando")
-hurtbox = NodePath("../../HurtContainer/HurtBox")
+hurtbox = NodePath("../../HurtBox")
 
 [node name="Melee" type="Node" parent="StateMachine" unique_id=119666687 node_paths=PackedStringArray("chao_state", "fall_state", "nado_state")]
 script = ExtResource("55_7uoqt")
@@ -2054,7 +2050,7 @@ velocidade_cair = 2.0
 impulso_horizontal_pulo = 7.0
 reducao_pulo = 2.0
 
-[connection signal="counter" from="HurtContainer/HurtBox" to="StateMachine/Dano" method="_on_hurt_box_counter"]
+[connection signal="counter" from="HurtBox" to="StateMachine/Dano" method="_on_hurt_box_counter"]
 [connection signal="animation_finished" from="Anim" to="StateMachine/Chao" method="_on_anim_animation_finished"]
 [connection signal="animation_finished" from="Anim" to="StateMachine/Fall" method="_on_anim_animation_finished"]
 [connection signal="animation_finished" from="Anim" to="StateMachine/Chicote" method="_on_anim_animation_finished"]
