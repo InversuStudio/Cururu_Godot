@@ -11,20 +11,13 @@ func _input(_event: InputEvent) -> void:
 			%Console.hide()
 			%TextoConsole.text = ""
 			%StatePlayer.text = ""
-			if Mundos.player:
-				Mundos.player.pode_mover = true
-				Mundos.player.pode_ataque = true
-				Mundos.player.pode_dash = true
-				Mundos.player.pode_item = true
+			DisablePlayer(true)
 		else:
 			%Console.show()
 			%LinhaComando.grab_focus()
-			if Mundos.player:
-				Mundos.player.pode_mover = false
-				Mundos.player.pode_ataque = false
-				Mundos.player.pode_dash = false
-				Mundos.player.pode_item = false
-			await get_tree().create_timer(.1).timeout
+			DisablePlayer()
+			$Timer.start(.1)
+			await $Timer.timeout
 			%LinhaComando.text = ""
 
 func _Print(txt:Variant) -> void:
@@ -48,6 +41,8 @@ func Comando(line:String) -> void:
 					Mundos.CarregaFase(place)
 					_Print(
 						"[color=dark_green]Trocou de fase: %s[/color]" % [cmd[1]])
+					await Mundos.fase_mudou
+					DisablePlayer()
 					break
 		
 		"save":
@@ -66,5 +61,14 @@ func Comando(line:String) -> void:
 		"speed":
 			Engine.time_scale = float(cmd[1])
 			
-	
 	%LinhaComando.text = ""
+	%LinhaComando.grab_focus()
+
+func DisablePlayer(val:bool = false) -> void:
+	if Mundos.player == null: return
+	Mundos.player.pode_mover = val
+	Mundos.player.input_move.x = 0.0
+	Mundos.player.velocity.x = 0.0
+	Mundos.player.pode_ataque = val
+	Mundos.player.pode_dash = val
+	Mundos.player.pode_item = val

@@ -793,7 +793,7 @@ position = Vector2(4485, -2075)
 
 [node name="Cururu" parent="background/0/Entidades" unique_id=2007776644 instance=ExtResource("33_rkcmf")]
 z_index = 0
-position = Vector2(2065.9998, -4739)
+position = Vector2(3615.0002, -25.999023)
 scale = Vector2(0.959163, 0.959163)
 
 [node name="Particula" type="GPUParticles2D" parent="background/0" unique_id=1721206644]
