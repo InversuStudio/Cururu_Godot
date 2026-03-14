@@ -19,6 +19,7 @@ func Enter() -> void:
 	parent.num_vul += 1
 	Console._Print(parent.num_vul)
 	%TimerIdle.wait_time = parent.tempo_idle_pilar
+	parent.natl -= 1
 
 func Update(_delta : float) -> State:
 	if prosseguir:
@@ -32,6 +33,16 @@ func Ataque() -> void:
 		%TimerPilar.start(parent.tempo_ate_prox_pilar)
 		await %TimerPilar.timeout
 		if parent.nocaute: break
+
+	#var dir:int = parent.scale.x
+	#var num:int = parent.spawn_pilares.size()
+	#var i:int = 0 if dir > 0 else num - 1
+	#for n:int in num:
+		#SpawnPilar(parent.spawn_pilares[i].global_position)
+		#i += dir
+		#%TimerPilar.start(parent.tempo_ate_prox_pilar)
+		#await %TimerPilar.timeout
+		#if parent.nocaute: break
 
 # Instancia os pilares de fogo
 func SpawnPilar(pos:Vector2) -> void:

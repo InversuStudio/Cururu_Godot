@@ -25,16 +25,13 @@ func _on_main_pressed() -> void:
 	GameData.ResetData()
 	Mundos.lista_inimigos = []
 	Mundos.lista_baus = []
-	#Mundos.areas_secretas = []
 	$BtnSFX.play()
 	Mundos.CarregaFase("res://Cenas/aTutorial/CutsceneIntro.tscn")
-	#Mundos.CarregaFase(Mundos.NomeFase.TUTORIAL_1)
 
 func _on_fase_teste_pressed() -> void:
 	$BtnSFX.play()
 	Mundos.lista_inimigos = []
 	Mundos.lista_baus = []
-	#Mundos.areas_secretas = []
 	if await GameData.Load():
 		print("Jogo carregado")
 		

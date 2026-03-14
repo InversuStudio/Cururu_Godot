@@ -41,8 +41,6 @@ func GetUiButtonImage(action:StringName) -> Array[StringName]:
 	# retorna [imagem_path, tecla]
 	return result
 
-# Armazena a fase a ser carregada
-var fase:StringName = "res://Cenas/zTeste/FaseTeste1.tscn"
 # Armazena a posição inicial do player
 var posicao: Vector2 = Vector2(0, 0)
 # Define se player inicia olhando para a esquerda(true) ou direita(false)
@@ -105,11 +103,10 @@ var config: ConfigFile = ConfigFile.new()
 func Save() -> void:
 	if Mundos.player:
 		# Atualiza dados
-		fase = Mundos.fase_atual
 		posicao = Mundos.player.global_position
 		direcao = Mundos.player.sprite.flip_h
 		# Joga dados no arquivo
-		config.set_value("save", "fase", fase)
+		config.set_value("save", "fase", Mundos.fase_atual)
 		config.set_value("save", "posicao", posicao)
 		config.set_value("save", "direcao", direcao)
 		config.set_value("save", "vida_max", vida_max)
@@ -161,12 +158,22 @@ func Load() -> bool:
 	# Checa se o arquivo de save existe
 	if ChecaData() != "":
 		# Se existir, lê os dados
-		fase = config.get_value("save", "fase")
 		posicao = config.get_value("save", "posicao")
 		direcao = config.get_value("save", "direcao")
 		
+		var trocou:bool = false
 		# Carrega o jogo, com os dados certos
-		Mundos.CarregaFase(fase, true, posicao)#, direcao)
+		var fase:StringName = config.get_value("save", "fase")
+		for f:PackedStringArray in Mundos.lista_fases:
+			if f[1].get_slice(".", 0) == fase:
+				Mundos.CarregaFase("res://Cenas/%s/%s/" % [f[0], f[1]]
+					, true, posicao)#, direcao)
+				trocou = true
+				break
+		if !trocou:
+			printerr("Cena não encontrada ao carregar save")
+			return false
+		
 		await Fade.terminou
 		
 		vida_max = config.get_value("save", "vida_max")
@@ -228,6 +235,3 @@ func ResetData() -> void:
 	
 	peca_coracao = 0
 	Mundos.pecas_coracao = []
-	#for peca:int in Mundos.pecas_coracao.size() - 1:
-		#Mundos.pecas_coracao[peca] = false
-		#peca_coracao = false

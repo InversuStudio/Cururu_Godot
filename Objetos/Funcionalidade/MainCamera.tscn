@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://cw522wgjoa2p7" path="res://Scripts/Componentes/MainCamera.gd" id="1_tckdd"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3adng"]
-size = Vector2(203, 522)
+size = Vector2(133, 474)
 
 [node name="MainCamera" type="Camera2D" unique_id=1984984122 groups=["MainCamera"]]
 physics_interpolation_mode = 1
@@ -13,8 +13,7 @@ limit_enabled = false
 editor_draw_limits = true
 script = ExtResource("1_tckdd")
 offset_target = Vector2(0, -80)
-look_ahead = 3.0
-speed = 3.5
+look_ahead = 0.5
 
 [node name="Deadzone" type="Area2D" parent="." unique_id=642602411]
 top_level = true

@@ -270,28 +270,28 @@ follow_viewport_enabled = true
 
 [node name="TransicoesFase" type="Node2D" parent="0" unique_id=1037179159]
 
-[node name="1-6" parent="0/TransicoesFase" unique_id=1310862478 instance=ExtResource("2_n78ha")]
+[node name="MA_06" parent="0/TransicoesFase" unique_id=1310862478 instance=ExtResource("2_n78ha")]
 position = Vector2(526, -534)
-destino = &"res://Cenas/Mata_Atlantica/MA_1-6.tscn"
+destino = &"res://Cenas/Mata_Atlantica/MA_06.tscn"
 posicao = Vector2(7592.9995, -526)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="0/TransicoesFase/1-6" unique_id=1616617084]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="0/TransicoesFase/MA_06" unique_id=1616617084]
 shape = SubResource("RectangleShape2D_k0m8e")
 
-[node name="1-8" parent="0/TransicoesFase" unique_id=840754512 instance=ExtResource("2_n78ha")]
+[node name="MA_08" parent="0/TransicoesFase" unique_id=840754512 instance=ExtResource("2_n78ha")]
 position = Vector2(523, -3868)
-destino = &"res://Cenas/Mata_Atlantica/MA_1-8.tscn"
+destino = &"res://Cenas/Mata_Atlantica/MA_08.tscn"
 posicao = Vector2(3438, -4487)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="0/TransicoesFase/1-8" unique_id=1995405157]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="0/TransicoesFase/MA_08" unique_id=1995405157]
 shape = SubResource("RectangleShape2D_k0m8e")
 
-[node name="1-9" parent="0/TransicoesFase" unique_id=795766247 instance=ExtResource("2_n78ha")]
+[node name="MA_09" parent="0/TransicoesFase" unique_id=795766247 instance=ExtResource("2_n78ha")]
 position = Vector2(3686, -3889)
-destino = &"res://Cenas/Mata_Atlantica/MA_1-9.tscn"
+destino = &"res://Cenas/Mata_Atlantica/MA_09.tscn"
 posicao = Vector2(228, -516.5)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="0/TransicoesFase/1-9" unique_id=783259188]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="0/TransicoesFase/MA_09" unique_id=783259188]
 shape = SubResource("RectangleShape2D_k0m8e")
 
 [node name="Moitas" type="Node2D" parent="0" unique_id=1208861737]
@@ -394,7 +394,7 @@ position = Vector2(1995, -4065)
 
 [node name="Cururu" parent="0/Entidades" unique_id=1062908552 instance=ExtResource("5_v3esx")]
 z_index = 0
-position = Vector2(980.00006, -391)
+position = Vector2(3385, -3803)
 scale = Vector2(0.919994, 0.919994)
 
 [node name="TileMapLayer" type="TileMapLayer" parent="0" unique_id=1081951793]

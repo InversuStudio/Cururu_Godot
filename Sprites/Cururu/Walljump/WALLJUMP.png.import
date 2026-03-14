@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cs170t8r7p04l"
-path="res://.godot/imported/CURURU_354.png-992eb9635cb2163874c724da97e1b7fb.ctex"
+uid="uid://buxjb8khrvcm7"
+path="res://.godot/imported/WALLJUMP.png-29bf5b995a3330e8c689a4ded192a120.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Cururu/Walljump/CURURU_354.png"
-dest_files=["res://.godot/imported/CURURU_354.png-992eb9635cb2163874c724da97e1b7fb.ctex"]
+source_file="res://Sprites/Cururu/Walljump/WALLJUMP.png"
+dest_files=["res://.godot/imported/WALLJUMP.png-29bf5b995a3330e8c689a4ded192a120.ctex"]
 
 [params]
 

@@ -11,7 +11,7 @@ func _ready() -> void:
 func _physics_process(delta: float) -> void:
 	global_position += target_dir * speed * delta
 	
-func _on_hit_box_hit(_pos:Vector2, _l:int) -> void:
+func _on_hit_box_hit(_pos:Vector2, _h:HitBox, _l:int) -> void:
 	Desabilita()
 
 func _on_hit_box_body_entered(_body: Node2D) -> void:

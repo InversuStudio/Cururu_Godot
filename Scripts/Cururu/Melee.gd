@@ -119,7 +119,3 @@ func Hit(pos_target:Vector2, hit:HitBox, _layer:int) -> void:
 	parent.pode_mover = false
 	await get_tree().create_timer(.2).timeout
 	parent.pode_mover = true
-
-# Chamada em AnimationPlayer
-func PegaCol(col:CollisionShape2D) -> void:
-	hit_col_atual = col

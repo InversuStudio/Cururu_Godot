@@ -367,21 +367,24 @@ position = Vector2(-1389.4448, -10415.5)
 scale = Vector2(0.8647799, 0.8647799)
 texture = ExtResource("13_us20a")
 
-[node name="Boss" parent="." unique_id=1956277941 node_paths=PackedStringArray("area_check_player", "target_camera_batalha", "rabo", "spawn_pilares") instance=ExtResource("14_ktto4")]
+[node name="Boss" parent="." unique_id=1956277941 node_paths=PackedStringArray("area_check_player", "target_camera_batalha", "rabo", "parent_pilares", "spawn_pilares", "flip_node") instance=ExtResource("14_ktto4")]
 position = Vector2(-5475, -9964)
 area_check_player = NodePath("CheckPlayer")
-target_camera_batalha = NodePath("PosCameraBatalha")
+target_camera_batalha = NodePath("../ConfigBoss/PosCameraBatalha")
 rabo = NodePath("Rabo")
-spawn_pilares = [NodePath("PosPilar1"), NodePath("PosPilar2"), NodePath("PosPilar3"), NodePath("PosPilar4"), NodePath("PosPilar5"), NodePath("PosPilar6"), NodePath("PosPilar7"), NodePath("PosPilar8"), NodePath("PosPilar9"), NodePath("PosPilar10")]
+num_ate_trocar_lado = 1
+parent_pilares = NodePath("../ConfigBoss/PaiPilares")
+spawn_pilares = [NodePath("../ConfigBoss/PaiPilares/PosPilar1"), NodePath("../ConfigBoss/PaiPilares/PosPilar2"), NodePath("../ConfigBoss/PaiPilares/PosPilar3"), NodePath("../ConfigBoss/PaiPilares/PosPilar4"), NodePath("../ConfigBoss/PaiPilares/PosPilar5"), NodePath("../ConfigBoss/PaiPilares/PosPilar6"), NodePath("../ConfigBoss/PaiPilares/PosPilar7"), NodePath("../ConfigBoss/PaiPilares/PosPilar8"), NodePath("../ConfigBoss/PaiPilares/PosPilar9")]
 musica_luta = ExtResource("15_bgway")
+flip_node = [NodePath("../ConfigBoss/PosL"), NodePath("../ConfigBoss/PosR")]
 
 [node name="CheckPlayer" type="Area2D" parent="Boss" unique_id=1296495921]
-position = Vector2(576, -430)
+position = Vector2(1205, -430)
 collision_layer = 0
 collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Boss/CheckPlayer" unique_id=720688723]
-position = Vector2(254, -445.75)
+position = Vector2(0, -445.75)
 shape = SubResource("RectangleShape2D_o607x")
 
 [node name="Rabo" parent="Boss" unique_id=773282396 instance=ExtResource("16_6tp3d")]
@@ -398,48 +401,61 @@ position = Vector2(28, 331.57562)
 shape = SubResource("CapsuleShape2D_s7f4i")
 debug_color = Color(0.9866224, 0, 0.3265099, 0.41960785)
 
-[node name="PosCameraBatalha" type="Node2D" parent="Boss" unique_id=1764629636]
-position = Vector2(940, -908)
+[node name="ConfigBoss" type="Node" parent="." unique_id=601089665]
 
-[node name="PosPilar1" type="Marker2D" parent="Boss" unique_id=2063808765]
-position = Vector2(421.7998, -417.2002)
+[node name="PosCameraBatalha" type="Marker2D" parent="ConfigBoss" unique_id=285449328]
+position = Vector2(-4241, -10872)
+
+[node name="PaiPilares" type="Node2D" parent="ConfigBoss" unique_id=521666632]
+position = Vector2(-4241, -10376)
+
+[node name="PosPilar1" type="Marker2D" parent="ConfigBoss/PaiPilares" unique_id=2063808765]
+position = Vector2(-812.2002, -5.2001953)
 gizmo_extents = 143.8
 
-[node name="PosPilar2" type="Marker2D" parent="Boss" unique_id=1525414379]
-position = Vector2(597, -417.2002)
+[node name="PosPilar2" type="Marker2D" parent="ConfigBoss/PaiPilares" unique_id=1525414379]
+position = Vector2(-637, -5.2001953)
 gizmo_extents = 143.8
 
-[node name="PosPilar3" type="Marker2D" parent="Boss" unique_id=635308623]
-position = Vector2(783, -417.2002)
+[node name="PosPilar3" type="Marker2D" parent="ConfigBoss/PaiPilares" unique_id=635308623]
+position = Vector2(-451, -5.2001953)
 gizmo_extents = 143.8
 
-[node name="PosPilar4" type="Marker2D" parent="Boss" unique_id=1298712985]
-position = Vector2(967, -417.2002)
+[node name="PosPilar4" type="Marker2D" parent="ConfigBoss/PaiPilares" unique_id=1298712985]
+position = Vector2(-267, -5.2001953)
 gizmo_extents = 143.8
 
-[node name="PosPilar5" type="Marker2D" parent="Boss" unique_id=1926211152]
-position = Vector2(1149, -417.2002)
+[node name="PosPilar5" type="Marker2D" parent="ConfigBoss/PaiPilares" unique_id=1926211152]
+position = Vector2(-85, -5.2001953)
 gizmo_extents = 143.8
 
-[node name="PosPilar6" type="Marker2D" parent="Boss" unique_id=1155443498]
-position = Vector2(1322.7998, -417.2002)
+[node name="PosPilar6" type="Marker2D" parent="ConfigBoss/PaiPilares" unique_id=1155443498]
+position = Vector2(88.799805, -5.2001953)
 gizmo_extents = 143.8
 
-[node name="PosPilar7" type="Marker2D" parent="Boss" unique_id=1400083034]
-position = Vector2(1498, -417.2002)
+[node name="PosPilar7" type="Marker2D" parent="ConfigBoss/PaiPilares" unique_id=1400083034]
+position = Vector2(264, -5.2001953)
 gizmo_extents = 143.8
 
-[node name="PosPilar8" type="Marker2D" parent="Boss" unique_id=489482062]
-position = Vector2(1684, -417.2002)
+[node name="PosPilar8" type="Marker2D" parent="ConfigBoss/PaiPilares" unique_id=489482062]
+position = Vector2(450, -5.2001953)
 gizmo_extents = 143.8
 
-[node name="PosPilar9" type="Marker2D" parent="Boss" unique_id=1840109622]
-position = Vector2(1868, -417.2002)
+[node name="PosPilar9" type="Marker2D" parent="ConfigBoss/PaiPilares" unique_id=1840109622]
+position = Vector2(634, -5.2001953)
 gizmo_extents = 143.8
 
-[node name="PosPilar10" type="Marker2D" parent="Boss" unique_id=2145088933]
-position = Vector2(2050, -417.2002)
+[node name="PosPilar10" type="Marker2D" parent="ConfigBoss/PaiPilares" unique_id=2145088933]
+position = Vector2(816, -5.2001953)
 gizmo_extents = 143.8
+
+[node name="PosL" type="Marker2D" parent="ConfigBoss" unique_id=1108694409]
+position = Vector2(-5475, -9964)
+scale = Vector2(0.8647799, 0.8647799)
+
+[node name="PosR" type="Marker2D" parent="ConfigBoss" unique_id=2071952799]
+position = Vector2(-2954, -9970)
+scale = Vector2(0.8647799, 0.8647799)
 
 [node name="Cenario" type="Node2D" parent="." unique_id=760172669]
 position = Vector2(-1761.4286, -10515.429)
@@ -1265,13 +1281,13 @@ rotation = -3.1415925
 scale = Vector2(0.65684927, 0.65684927)
 texture = ExtResource("43_0nkb0")
 
-[node name="2-5" parent="." unique_id=932632145 instance=ExtResource("45_ygg14")]
+[node name="MA_14(temp)" parent="." unique_id=932632145 instance=ExtResource("45_ygg14")]
 position = Vector2(-404, -10318.001)
 scale = Vector2(0.919994, 0.919994)
-destino = &"res://Cenas/Mata_Atlantica/MA_2-5.tscn"
+destino = &"res://Cenas/Mata_Atlantica/MA_14.tscn"
 posicao = Vector2(874, -4068)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="2-5" unique_id=560835591]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MA_14(temp)" unique_id=560835591]
 position = Vector2(-20.652308, -254.34895)
 shape = SubResource("RectangleShape2D_yhkqu")
 

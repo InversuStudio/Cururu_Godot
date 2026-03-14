@@ -1,79 +1,79 @@
 [gd_scene format=4 uid="uid://exty4suocudj"]
 
-[ext_resource type="Texture2D" uid="uid://e4138tmbd6ck" path="res://Sprites/Cenário/Mata_Atlantica/Background/110 Sem Título_20260213153415.png" id="1_ldwfj"]
-[ext_resource type="PackedScene" uid="uid://nohq28uk7lfk" path="res://Objetos/Entidades/Player.tscn" id="1_v83m2"]
-[ext_resource type="Texture2D" uid="uid://rwmi1ggde5dy" path="res://Sprites/VFX/Iluminação/PORTAL.png" id="4_1ewfi"]
-[ext_resource type="Texture2D" uid="uid://wng7roaj8xu6" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/arvore_S1.png" id="4_6d12h"]
-[ext_resource type="Shader" uid="uid://c1omtsxv04udh" path="res://Scripts/Shaders/blur_shader.gdshader" id="4_7ywmt"]
-[ext_resource type="Texture2D" uid="uid://dv0q1amqoq168" path="res://Sprites/Cenário/Mata_Atlantica/Background/Mata/mato03.png" id="4_m4yll"]
-[ext_resource type="Texture2D" uid="uid://3g4iv5385ymw" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/arvore_S2.png" id="4_yydn1"]
-[ext_resource type="Texture2D" uid="uid://c2yapafbd3cnf" path="res://Sprites/Cenário/Mata_Atlantica/Foreground/cipó.png" id="6_wnjnd"]
-[ext_resource type="Texture2D" uid="uid://uq6dbjep5wva" path="res://Sprites/Cenário/Mata_Atlantica/Foreground/frontfolha.png" id="7_5ka01"]
-[ext_resource type="Texture2D" uid="uid://cjl88xeknofui" path="res://Sprites/Cenário/Mata_Atlantica/Chao/grama_reto.png" id="8_5kxqo"]
-[ext_resource type="Texture2D" uid="uid://dru600hg8oaty" path="res://Sprites/Cenário/Mata_Atlantica/Background/Mata/mato02.png" id="8_cuc4p"]
-[ext_resource type="Texture2D" uid="uid://c8bkav2g3wyeu" path="res://Sprites/Cenário/Mata_Atlantica/Chao/moita2.png" id="8_meyap"]
-[ext_resource type="Texture2D" uid="uid://jecy4bfqqqxu" path="res://Sprites/Cenário/Mata_Atlantica/Teto/Moita teste.png" id="8_q40bt"]
-[ext_resource type="Shader" uid="uid://dc0bwmy1j0o5i" path="res://Scripts/Shaders/fog.gdshader" id="9_co6lv"]
-[ext_resource type="Texture2D" uid="uid://d3t6c4pjsosio" path="res://Sprites/Cenário/Mata_Atlantica/Background/Mata/mato01.png" id="9_f8u2d"]
-[ext_resource type="Texture2D" uid="uid://rbtvfm4m7ft" path="res://Sprites/VFX/Iluminação/SOMBRA2.png" id="9_nh2iu"]
-[ext_resource type="PackedScene" uid="uid://1apfpwlqocxn" path="res://Objetos/Funcionalidade/TransicaoFase.tscn" id="9_q40bt"]
-[ext_resource type="Texture2D" uid="uid://cw2yeg7ynw0kl" path="res://Sprites/Cenário/Mata_Atlantica/Chao/chap_externo.png" id="9_wnjnd"]
-[ext_resource type="Texture2D" uid="uid://cj4rj4oj20ogb" path="res://Sprites/Cenário/Mata_Atlantica/Chao/chap_interno.png" id="10_5ka01"]
-[ext_resource type="Texture2D" uid="uid://b2f2ppntemt15" path="res://Sprites/Cenário/Mata_Atlantica/Chao/flores.png" id="10_57s1j"]
-[ext_resource type="Texture2D" uid="uid://ccql65wj55kqf" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/arvore_s3.png" id="11_hubad"]
-[ext_resource type="Texture2D" uid="uid://7msrkwwo018f" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/arvore02.png" id="13_1gvhd"]
-[ext_resource type="Texture2D" uid="uid://bi1a2quip0tli" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/arvore03.png" id="14_8g6fq"]
-[ext_resource type="Texture2D" uid="uid://b6yel5f58h380" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/arvore05.png" id="15_5jfld"]
-[ext_resource type="Texture2D" uid="uid://ccy8rilccs3gf" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/arvore06.png" id="16_0daqe"]
-[ext_resource type="Texture2D" uid="uid://u12dsbd5ebth" path="res://Sprites/Cenário/Mata_Atlantica/Background/Mata/mato00.png" id="16_hubad"]
-[ext_resource type="Texture2D" uid="uid://d18vqjeq586b1" path="res://Sprites/Cenário/Mata_Atlantica/Pedras e Ruinas/pedra_musgo.png" id="19_8g6fq"]
-[ext_resource type="Shader" uid="uid://cete83ldr534" path="res://Scripts/Shaders/godray.gdshader" id="20_co6lv"]
-[ext_resource type="PackedScene" uid="uid://tvw2ynw76htc" path="res://Objetos/Props/vasosmoeda/vasomoeda_01.tscn" id="21_v723p"]
-[ext_resource type="PackedScene" uid="uid://bktu336s6ruri" path="res://Objetos/Props/Moeda.tscn" id="22_gr3ec"]
-[ext_resource type="PackedScene" uid="uid://d0l4afitq8qog" path="res://Objetos/NPCs/Cartógrafo.tscn" id="23_hubad"]
-[ext_resource type="PackedScene" uid="uid://cppreprc8pa3k" path="res://Objetos/Props/vasosmoeda/vasomoeda_02.tscn" id="23_ldwfj"]
-[ext_resource type="PackedScene" uid="uid://ejo3gi0g1rk3" path="res://Objetos/Props/vasosmoeda/vasomoeda_03.tscn" id="24_7ywmt"]
-[ext_resource type="PackedScene" uid="uid://bcwi51vmdht5w" path="res://Objetos/Props/vasosmoeda/vasomoeda_04.tscn" id="25_co6lv"]
-[ext_resource type="PackedScene" uid="uid://dny88hy3w52nm" path="res://Objetos/Props/DropAcai.tscn" id="26_8tm3t"]
-[ext_resource type="PackedScene" uid="uid://cbraq3qrm01h4" path="res://Objetos/Props/vasosmoeda/vasomoeda_05.tscn" id="27_auxyl"]
-[ext_resource type="Script" uid="uid://dd16yu704x6wt" path="res://Scripts/Componentes/BGM_Player.gd" id="27_nh2iu"]
-[ext_resource type="AudioStream" uid="uid://c7qftchbhu6xc" path="res://Audio/SFX/AMBIENTE/Musica_Jogo.mp3" id="28_m4yll"]
-[ext_resource type="PackedScene" uid="uid://u28e3eudu6ch" path="res://Objetos/Funcionalidade/MainCamera.tscn" id="31_f8u2d"]
-[ext_resource type="Texture2D" uid="uid://c8t5do0sox8mj" path="res://Sprites/Cenário/Mata_Atlantica/Pedras e Ruinas/pedra_smusgo.png" id="33_5jfld"]
-[ext_resource type="Texture2D" uid="uid://0agjwkmg3gef" path="res://Sprites/VFX/Iluminação/luz azul.png" id="33_8tm3t"]
-[ext_resource type="TileSet" uid="uid://b0nn6bkolhibj" path="res://TilesetChao.tres" id="33_co6lv"]
-[ext_resource type="Texture2D" uid="uid://cxa4pl0scvs5k" path="res://Sprites/VFX/Partículas/folhastx.png" id="35_tid5v"]
-[ext_resource type="Texture2D" uid="uid://c8tb73qiqhhk8" path="res://Sprites/Cenário/Mata_Atlantica/Background/Galhos/esquerda01.png" id="37_1gvhd"]
-[ext_resource type="PackedScene" uid="uid://bei1s8te3cwko" path="res://Sprites/Cenário/Mata_Atlantica/Interativos/plataforma.tscn" id="38_8g6fq"]
-[ext_resource type="Texture2D" uid="uid://dc4ocn7li3obx" path="res://Sprites/Cenário/Mata_Atlantica/Chao/moita_chao1.png" id="38_co6lv"]
-[ext_resource type="Texture2D" uid="uid://ndcbb0ydrrj5" path="res://Sprites/Cenário/Mata_Atlantica/Foreground/arvore_fundo1.png" id="41_7ywmt"]
-[ext_resource type="Texture2D" uid="uid://cvd3vo5425kva" path="res://Sprites/Cenário/Mata_Atlantica/Foreground/arvore_fundo2.png" id="42_co6lv"]
-[ext_resource type="AudioStream" uid="uid://b2vi4qav4gk5r" path="res://Audio/SFX/AMBIENTE/Cururu - Soundscape A.ogg" id="43_gr3ec"]
+[ext_resource type="Texture2D" uid="uid://e4138tmbd6ck" path="res://Sprites/Cenário/Mata_Atlantica/Background/110 Sem Título_20260213153415.png" id="1_u8ai8"]
+[ext_resource type="Texture2D" uid="uid://3g4iv5385ymw" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/arvore_S2.png" id="2_y3rtv"]
+[ext_resource type="Texture2D" uid="uid://dv0q1amqoq168" path="res://Sprites/Cenário/Mata_Atlantica/Background/Mata/mato03.png" id="3_3gc4k"]
+[ext_resource type="Shader" uid="uid://c1omtsxv04udh" path="res://Scripts/Shaders/blur_shader.gdshader" id="4_3863u"]
+[ext_resource type="Texture2D" uid="uid://wng7roaj8xu6" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/arvore_S1.png" id="5_amaw8"]
+[ext_resource type="Texture2D" uid="uid://dru600hg8oaty" path="res://Sprites/Cenário/Mata_Atlantica/Background/Mata/mato02.png" id="6_htopk"]
+[ext_resource type="Texture2D" uid="uid://ccql65wj55kqf" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/arvore_s3.png" id="7_j77bd"]
+[ext_resource type="Texture2D" uid="uid://d3t6c4pjsosio" path="res://Sprites/Cenário/Mata_Atlantica/Background/Mata/mato01.png" id="8_kmkbu"]
+[ext_resource type="Shader" uid="uid://dc0bwmy1j0o5i" path="res://Scripts/Shaders/fog.gdshader" id="9_dm238"]
+[ext_resource type="Texture2D" uid="uid://7msrkwwo018f" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/arvore02.png" id="10_pjgab"]
+[ext_resource type="Texture2D" uid="uid://bi1a2quip0tli" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/arvore03.png" id="11_vabup"]
+[ext_resource type="Texture2D" uid="uid://b6yel5f58h380" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/arvore05.png" id="12_d1yra"]
+[ext_resource type="Texture2D" uid="uid://ccy8rilccs3gf" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/arvore06.png" id="13_0lf4e"]
+[ext_resource type="Texture2D" uid="uid://c8tb73qiqhhk8" path="res://Sprites/Cenário/Mata_Atlantica/Background/Galhos/esquerda01.png" id="14_l51f1"]
+[ext_resource type="PackedScene" uid="uid://bei1s8te3cwko" path="res://Sprites/Cenário/Mata_Atlantica/Interativos/plataforma.tscn" id="15_1e77f"]
+[ext_resource type="PackedScene" uid="uid://ejo3gi0g1rk3" path="res://Objetos/Props/vasosmoeda/vasomoeda_03.tscn" id="16_cfptm"]
+[ext_resource type="PackedScene" uid="uid://bktu336s6ruri" path="res://Objetos/Props/Moeda.tscn" id="17_ksjfn"]
+[ext_resource type="Texture2D" uid="uid://u12dsbd5ebth" path="res://Sprites/Cenário/Mata_Atlantica/Background/Mata/mato00.png" id="18_0l8d6"]
+[ext_resource type="Texture2D" uid="uid://b2f2ppntemt15" path="res://Sprites/Cenário/Mata_Atlantica/Chao/flores.png" id="19_15e74"]
+[ext_resource type="Shader" uid="uid://cete83ldr534" path="res://Scripts/Shaders/godray.gdshader" id="20_ts3dy"]
+[ext_resource type="Texture2D" uid="uid://d18vqjeq586b1" path="res://Sprites/Cenário/Mata_Atlantica/Pedras e Ruinas/pedra_musgo.png" id="21_3awaj"]
+[ext_resource type="Texture2D" uid="uid://c8bkav2g3wyeu" path="res://Sprites/Cenário/Mata_Atlantica/Chao/moita2.png" id="22_uyy7x"]
+[ext_resource type="Texture2D" uid="uid://rbtvfm4m7ft" path="res://Sprites/VFX/Iluminação/SOMBRA2.png" id="23_2ol20"]
+[ext_resource type="PackedScene" uid="uid://tvw2ynw76htc" path="res://Objetos/Props/vasosmoeda/vasomoeda_01.tscn" id="24_xmq1o"]
+[ext_resource type="PackedScene" uid="uid://cppreprc8pa3k" path="res://Objetos/Props/vasosmoeda/vasomoeda_02.tscn" id="25_q3f7y"]
+[ext_resource type="PackedScene" uid="uid://cbraq3qrm01h4" path="res://Objetos/Props/vasosmoeda/vasomoeda_05.tscn" id="26_rccv1"]
+[ext_resource type="PackedScene" uid="uid://bcwi51vmdht5w" path="res://Objetos/Props/vasosmoeda/vasomoeda_04.tscn" id="27_s14rp"]
+[ext_resource type="PackedScene" uid="uid://dny88hy3w52nm" path="res://Objetos/Props/DropAcai.tscn" id="28_wc7fw"]
+[ext_resource type="PackedScene" uid="uid://1apfpwlqocxn" path="res://Objetos/Funcionalidade/TransicaoFase.tscn" id="29_k84l1"]
+[ext_resource type="Texture2D" uid="uid://rwmi1ggde5dy" path="res://Sprites/VFX/Iluminação/PORTAL.png" id="30_cofau"]
+[ext_resource type="PackedScene" uid="uid://d0l4afitq8qog" path="res://Objetos/NPCs/Cartógrafo.tscn" id="31_wepyd"]
+[ext_resource type="PackedScene" uid="uid://nohq28uk7lfk" path="res://Objetos/Entidades/Player.tscn" id="32_o0mc4"]
+[ext_resource type="Texture2D" uid="uid://0agjwkmg3gef" path="res://Sprites/VFX/Iluminação/luz azul.png" id="33_h60bk"]
+[ext_resource type="Texture2D" uid="uid://cxa4pl0scvs5k" path="res://Sprites/VFX/Partículas/folhastx.png" id="34_3eu04"]
+[ext_resource type="TileSet" uid="uid://b0nn6bkolhibj" path="res://TilesetChao.tres" id="35_s5w06"]
+[ext_resource type="Texture2D" uid="uid://cjl88xeknofui" path="res://Sprites/Cenário/Mata_Atlantica/Chao/grama_reto.png" id="36_kfoo2"]
+[ext_resource type="Texture2D" uid="uid://cw2yeg7ynw0kl" path="res://Sprites/Cenário/Mata_Atlantica/Chao/chap_externo.png" id="37_qh6tj"]
+[ext_resource type="Texture2D" uid="uid://cj4rj4oj20ogb" path="res://Sprites/Cenário/Mata_Atlantica/Chao/chap_interno.png" id="38_3axpn"]
+[ext_resource type="Texture2D" uid="uid://jecy4bfqqqxu" path="res://Sprites/Cenário/Mata_Atlantica/Teto/Moita teste.png" id="39_q7kvc"]
+[ext_resource type="Texture2D" uid="uid://dc4ocn7li3obx" path="res://Sprites/Cenário/Mata_Atlantica/Chao/moita_chao1.png" id="40_2isqs"]
+[ext_resource type="Texture2D" uid="uid://c8t5do0sox8mj" path="res://Sprites/Cenário/Mata_Atlantica/Pedras e Ruinas/pedra_smusgo.png" id="41_8bc0w"]
+[ext_resource type="Texture2D" uid="uid://uq6dbjep5wva" path="res://Sprites/Cenário/Mata_Atlantica/Foreground/frontfolha.png" id="42_efdd8"]
+[ext_resource type="Texture2D" uid="uid://c2yapafbd3cnf" path="res://Sprites/Cenário/Mata_Atlantica/Foreground/cipó.png" id="43_yhsfw"]
+[ext_resource type="Texture2D" uid="uid://ndcbb0ydrrj5" path="res://Sprites/Cenário/Mata_Atlantica/Foreground/arvore_fundo1.png" id="44_4gdmh"]
+[ext_resource type="Texture2D" uid="uid://cvd3vo5425kva" path="res://Sprites/Cenário/Mata_Atlantica/Foreground/arvore_fundo2.png" id="45_mlb15"]
+[ext_resource type="Script" uid="uid://dd16yu704x6wt" path="res://Scripts/Componentes/BGM_Player.gd" id="46_nkli7"]
+[ext_resource type="AudioStream" uid="uid://c7qftchbhu6xc" path="res://Audio/SFX/AMBIENTE/Musica_Jogo.mp3" id="47_xn741"]
+[ext_resource type="AudioStream" uid="uid://b2vi4qav4gk5r" path="res://Audio/SFX/AMBIENTE/Cururu - Soundscape A.ogg" id="48_8j56j"]
+[ext_resource type="PackedScene" uid="uid://u28e3eudu6ch" path="res://Objetos/Funcionalidade/MainCamera.tscn" id="49_r2jgk"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_co6lv"]
-shader = ExtResource("4_7ywmt")
+shader = ExtResource("4_3863u")
 shader_parameter/darkness = 0.150000007125
 shader_parameter/lod = 0.800000038
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_7ywmt"]
-shader = ExtResource("4_7ywmt")
+shader = ExtResource("4_3863u")
 shader_parameter/darkness = 0.250000011875
 shader_parameter/lod = 0.06000000285
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_auxyl"]
-shader = ExtResource("4_7ywmt")
+shader = ExtResource("4_3863u")
 shader_parameter/darkness = 0.050000002375
 shader_parameter/lod = 0.400000019
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_tid5v"]
-shader = ExtResource("9_co6lv")
+shader = ExtResource("9_dm238")
 shader_parameter/fog_color = Color(0.47058824, 0.7411765, 0.54901963, 0.43529412)
 shader_parameter/density = 0.7
 shader_parameter/speed = 0.05
 shader_parameter/scale = 6.0
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_8tm3t"]
-shader = ExtResource("20_co6lv")
+shader = ExtResource("20_ts3dy")
 shader_parameter/flip_horizontal = true
 shader_parameter/flip_vertical = false
 shader_parameter/angle = -0.3
@@ -156,17 +156,17 @@ follow_viewport_scale = 0.6
 [node name="110SemTítulo20260213153415" type="Sprite2D" parent="background/-4" unique_id=1935278373]
 position = Vector2(-6841.6665, 1094.9998)
 scale = Vector2(2.3575852, 2.2406497)
-texture = ExtResource("1_ldwfj")
+texture = ExtResource("1_u8ai8")
 
 [node name="110SemTítulo20260213153416" type="Sprite2D" parent="background/-4" unique_id=44600291]
 position = Vector2(-2065.0005, 1094.9998)
 scale = Vector2(2.3575852, 2.2406497)
-texture = ExtResource("1_ldwfj")
+texture = ExtResource("1_u8ai8")
 
 [node name="110SemTítulo20260213153417" type="Sprite2D" parent="background/-4" unique_id=1246371595]
 position = Vector2(183.3335, 1094.9998)
 scale = Vector2(2.3575852, 2.2406497)
-texture = ExtResource("1_ldwfj")
+texture = ExtResource("1_u8ai8")
 
 [node name="-3" type="CanvasLayer" parent="background" unique_id=1829826581]
 follow_viewport_enabled = true
@@ -177,31 +177,31 @@ light_mask = 2
 
 [node name="ArvoreS13" type="Sprite2D" parent="background/-3/Arvores03" unique_id=1032825404]
 position = Vector2(-5824, 288)
-texture = ExtResource("4_yydn1")
+texture = ExtResource("2_y3rtv")
 
 [node name="ArvoreS14" type="Sprite2D" parent="background/-3/Arvores03" unique_id=796392946]
 position = Vector2(-6376, 288)
-texture = ExtResource("4_yydn1")
+texture = ExtResource("2_y3rtv")
 
 [node name="ArvoreS18" type="Sprite2D" parent="background/-3/Arvores03" unique_id=629701102]
 position = Vector2(-7939, -214.52924)
 scale = Vector2(0.8195122, 0.81951225)
-texture = ExtResource("4_yydn1")
+texture = ExtResource("2_y3rtv")
 
 [node name="ArvoreS15" type="Sprite2D" parent="background/-3/Arvores03" unique_id=813414279]
 position = Vector2(-4095, 323)
 scale = Vector2(0.8804878, 0.8804878)
-texture = ExtResource("4_yydn1")
+texture = ExtResource("2_y3rtv")
 
 [node name="ArvoreS16" type="Sprite2D" parent="background/-3/Arvores03" unique_id=1982995637]
 position = Vector2(-2278, -43.010986)
 scale = Vector2(0.8073171, 0.8073171)
-texture = ExtResource("4_yydn1")
+texture = ExtResource("2_y3rtv")
 
 [node name="ArvoreS17" type="Sprite2D" parent="background/-3/Arvores03" unique_id=1032229219]
 position = Vector2(1465, 361)
 scale = Vector2(0.8073171, 0.8073171)
-texture = ExtResource("4_yydn1")
+texture = ExtResource("2_y3rtv")
 
 [node name="-27" type="CanvasLayer" parent="background" unique_id=444751112]
 follow_viewport_enabled = true
@@ -210,17 +210,17 @@ follow_viewport_scale = 0.73
 [node name="Mato03" type="Sprite2D" parent="background/-27" unique_id=866922500]
 position = Vector2(-6185, 825)
 scale = Vector2(1.2, 1.2)
-texture = ExtResource("4_m4yll")
+texture = ExtResource("3_3gc4k")
 
 [node name="Mato04" type="Sprite2D" parent="background/-27" unique_id=1394270202]
 position = Vector2(-2761, 825)
 scale = Vector2(1.2, 1.2)
-texture = ExtResource("4_m4yll")
+texture = ExtResource("3_3gc4k")
 
 [node name="Mato05" type="Sprite2D" parent="background/-27" unique_id=906464564]
 position = Vector2(587, 825)
 scale = Vector2(1.2, 1.2)
-texture = ExtResource("4_m4yll")
+texture = ExtResource("3_3gc4k")
 
 [node name="Blur" type="ColorRect" parent="background/-27" unique_id=1954183448]
 material = SubResource("ShaderMaterial_co6lv")
@@ -238,23 +238,23 @@ light_mask = 2
 
 [node name="ArvoreS1" type="Sprite2D" parent="background/-25/Arvores02" unique_id=1758941216]
 position = Vector2(-7277, 301)
-texture = ExtResource("4_6d12h")
+texture = ExtResource("5_amaw8")
 
 [node name="ArvoreS9" type="Sprite2D" parent="background/-25/Arvores02" unique_id=304456102]
 position = Vector2(-2997, 301)
-texture = ExtResource("4_6d12h")
+texture = ExtResource("5_amaw8")
 
 [node name="ArvoreS10" type="Sprite2D" parent="background/-25/Arvores02" unique_id=113884219]
 position = Vector2(-1797, 77)
-texture = ExtResource("4_6d12h")
+texture = ExtResource("5_amaw8")
 
 [node name="ArvoreS11" type="Sprite2D" parent="background/-25/Arvores02" unique_id=1608423348]
 position = Vector2(153, 77)
-texture = ExtResource("4_6d12h")
+texture = ExtResource("5_amaw8")
 
 [node name="ArvoreS2" type="Sprite2D" parent="background/-25/Arvores02" unique_id=1691880764]
 position = Vector2(-4555, 301)
-texture = ExtResource("4_6d12h")
+texture = ExtResource("5_amaw8")
 
 [node name="-2" type="CanvasLayer" parent="background" unique_id=1958966828]
 follow_viewport_enabled = true
@@ -263,17 +263,17 @@ follow_viewport_scale = 0.8
 [node name="Mato02" type="Sprite2D" parent="background/-2" unique_id=310673255]
 position = Vector2(-7300, 976.0001)
 scale = Vector2(1.4, 1.4)
-texture = ExtResource("8_cuc4p")
+texture = ExtResource("6_htopk")
 
 [node name="Mato03" type="Sprite2D" parent="background/-2" unique_id=1922253712]
 position = Vector2(-4537.001, 1062.9999)
 scale = Vector2(1.4, 1.4)
-texture = ExtResource("8_cuc4p")
+texture = ExtResource("6_htopk")
 
 [node name="Mato04" type="Sprite2D" parent="background/-2" unique_id=528154833]
 position = Vector2(-1005.00024, 1062.9999)
 scale = Vector2(1.4, 1.4)
-texture = ExtResource("8_cuc4p")
+texture = ExtResource("6_htopk")
 
 [node name="ColorRect" type="ColorRect" parent="background/-2" unique_id=615929439]
 material = SubResource("ShaderMaterial_7ywmt")
@@ -294,31 +294,31 @@ follow_viewport_scale = 0.85
 
 [node name="ArvoreS3" type="Sprite2D" parent="background/-15" unique_id=1257255267]
 position = Vector2(-6296, 305)
-texture = ExtResource("11_hubad")
+texture = ExtResource("7_j77bd")
 
 [node name="ArvoreS4" type="Sprite2D" parent="background/-15" unique_id=1258501180]
 position = Vector2(-5375, 305)
-texture = ExtResource("11_hubad")
+texture = ExtResource("7_j77bd")
 
 [node name="ArvoreS5" type="Sprite2D" parent="background/-15" unique_id=2052840790]
 position = Vector2(-3425, 305)
-texture = ExtResource("11_hubad")
+texture = ExtResource("7_j77bd")
 
 [node name="ArvoreS6" type="Sprite2D" parent="background/-15" unique_id=406037347]
 position = Vector2(-1366, 186)
-texture = ExtResource("11_hubad")
+texture = ExtResource("7_j77bd")
 
 [node name="ArvoreS7" type="Sprite2D" parent="background/-15" unique_id=872929243]
 position = Vector2(1039, 186)
-texture = ExtResource("11_hubad")
+texture = ExtResource("7_j77bd")
 
 [node name="ArvoreS12" type="Sprite2D" parent="background/-15" unique_id=554977]
 position = Vector2(-586, 186)
-texture = ExtResource("11_hubad")
+texture = ExtResource("7_j77bd")
 
 [node name="ArvoreS8" type="Sprite2D" parent="background/-15" unique_id=1341641690]
 position = Vector2(-8777, 186)
-texture = ExtResource("11_hubad")
+texture = ExtResource("7_j77bd")
 
 [node name="-1" type="CanvasLayer" parent="background" unique_id=705551983]
 follow_viewport_enabled = true
@@ -327,17 +327,17 @@ follow_viewport_scale = 0.9
 [node name="Mato01" type="Sprite2D" parent="background/-1" unique_id=1013417235]
 position = Vector2(-7044.2227, 1193.0001)
 scale = Vector2(1.6, 1.6)
-texture = ExtResource("9_f8u2d")
+texture = ExtResource("8_kmkbu")
 
 [node name="Mato05" type="Sprite2D" parent="background/-1" unique_id=1624442970]
 position = Vector2(-3255.556, 1193.0001)
 scale = Vector2(1.6, 1.6)
-texture = ExtResource("9_f8u2d")
+texture = ExtResource("8_kmkbu")
 
 [node name="Mato06" type="Sprite2D" parent="background/-1" unique_id=1576759841]
 position = Vector2(-147.77779, 1193.0001)
 scale = Vector2(1.6, 1.6)
-texture = ExtResource("9_f8u2d")
+texture = ExtResource("8_kmkbu")
 
 [node name="blur3" type="ColorRect" parent="background/-1" unique_id=80485525]
 material = SubResource("ShaderMaterial_auxyl")
@@ -364,39 +364,39 @@ follow_viewport_scale = 0.95
 
 [node name="Arvore02" type="Sprite2D" parent="background/-05" unique_id=164492373]
 position = Vector2(-8358, -731)
-texture = ExtResource("13_1gvhd")
+texture = ExtResource("10_pjgab")
 
 [node name="Arvore03" type="Sprite2D" parent="background/-05" unique_id=808720088]
 position = Vector2(-6816, 402.5)
-texture = ExtResource("14_8g6fq")
+texture = ExtResource("11_vabup")
 
 [node name="Arvore05" type="Sprite2D" parent="background/-05" unique_id=123079898]
 position = Vector2(-5072, 326.5)
-texture = ExtResource("15_5jfld")
+texture = ExtResource("12_d1yra")
 
 [node name="Arvore06" type="Sprite2D" parent="background/-05" unique_id=144351817]
 position = Vector2(-2743, 283.5)
-texture = ExtResource("16_0daqe")
+texture = ExtResource("13_0lf4e")
 
 [node name="Arvore07" type="Sprite2D" parent="background/-05" unique_id=1986076410]
 position = Vector2(-164, 55.5)
-texture = ExtResource("15_5jfld")
+texture = ExtResource("12_d1yra")
 
 [node name="Arvore08" type="Sprite2D" parent="background/-05" unique_id=922441035]
 position = Vector2(1993, 499)
-texture = ExtResource("15_5jfld")
+texture = ExtResource("12_d1yra")
 
 [node name="Esquerda01" type="Sprite2D" parent="background/-05" unique_id=1243070428]
 position = Vector2(-450, 316)
 scale = Vector2(0.72317594, 0.72317594)
-texture = ExtResource("37_1gvhd")
+texture = ExtResource("14_l51f1")
 
-[node name="Plataforma" parent="background/-05" unique_id=253779158 instance=ExtResource("38_8g6fq")]
+[node name="Plataforma" parent="background/-05" unique_id=253779158 instance=ExtResource("15_1e77f")]
 position = Vector2(-591, 155.99998)
 
-[node name="Bau11" parent="background/-05" unique_id=556553682 instance=ExtResource("24_7ywmt")]
+[node name="Bau11" parent="background/-05" unique_id=556553682 instance=ExtResource("16_cfptm")]
 position = Vector2(-594, 75)
-drop_item = Array[PackedScene]([ExtResource("22_gr3ec"), ExtResource("22_gr3ec"), ExtResource("22_gr3ec")])
+drop_item = Array[PackedScene]([ExtResource("17_ksjfn"), ExtResource("17_ksjfn"), ExtResource("17_ksjfn")])
 
 [node name="-02" type="CanvasLayer" parent="background" unique_id=1093615248]
 follow_viewport_enabled = true
@@ -404,67 +404,67 @@ follow_viewport_scale = 0.98
 
 [node name="Mato00" type="Sprite2D" parent="background/-02" unique_id=997669490]
 position = Vector2(-6126.531, 993.8775)
-texture = ExtResource("16_hubad")
+texture = ExtResource("18_0l8d6")
 
 [node name="Mato02" type="Sprite2D" parent="background/-02" unique_id=458466355]
 position = Vector2(1012.2451, 993.8775)
-texture = ExtResource("16_hubad")
+texture = ExtResource("18_0l8d6")
 
 [node name="Mato01" type="Sprite2D" parent="background/-02" unique_id=1354439410]
 position = Vector2(-3524.4897, 993.8775)
-texture = ExtResource("16_hubad")
+texture = ExtResource("18_0l8d6")
 flip_h = true
 
 [node name="82SemTítulo0000253520251125200853" type="Sprite2D" parent="background/-02" unique_id=263191948]
 modulate = Color(3.2944162, 3.2944162, 3.2944162, 1)
 position = Vector2(-6024.061, 795.48975)
-texture = ExtResource("10_57s1j")
+texture = ExtResource("19_15e74")
 
 [node name="82SemTítulo0000253520251125200854" type="Sprite2D" parent="background/-02" unique_id=1470504456]
 modulate = Color(3.2944162, 3.2944162, 3.2944162, 1)
 position = Vector2(-5434.061, 870.48975)
-texture = ExtResource("10_57s1j")
+texture = ExtResource("19_15e74")
 flip_h = true
 
 [node name="82SemTítulo0000253520251125200858" type="Sprite2D" parent="background/-02" unique_id=2104625552]
 modulate = Color(3.2944162, 3.2944162, 3.2944162, 1)
 position = Vector2(1725, 921)
-texture = ExtResource("10_57s1j")
+texture = ExtResource("19_15e74")
 
 [node name="82SemTítulo0000253520251125200859" type="Sprite2D" parent="background/-02" unique_id=756674055]
 modulate = Color(3.2944162, 3.2944162, 3.2944162, 1)
 position = Vector2(522.449, 845.91833)
 scale = Vector2(0.7464789, 0.74647886)
-texture = ExtResource("10_57s1j")
+texture = ExtResource("19_15e74")
 
 [node name="82SemTítulo0000253520251125200860" type="Sprite2D" parent="background/-02" unique_id=2137152481]
 modulate = Color(3.2944162, 3.2944162, 3.2944162, 1)
 position = Vector2(-3244.898, 868.36725)
 scale = Vector2(0.7464789, 0.74647886)
-texture = ExtResource("10_57s1j")
+texture = ExtResource("19_15e74")
 flip_h = true
 
 [node name="82SemTítulo0000253520251125200861" type="Sprite2D" parent="background/-02" unique_id=1994088679]
 modulate = Color(3.2944162, 3.2944162, 3.2944162, 1)
 position = Vector2(-4146.5103, 877.87756)
-texture = ExtResource("10_57s1j")
+texture = ExtResource("19_15e74")
 
 [node name="82SemTítulo0000253520251125200862" type="Sprite2D" parent="background/-02" unique_id=1219605860]
 modulate = Color(3.2944162, 3.2944162, 3.2944162, 1)
 position = Vector2(-3423.5103, 764.87756)
-texture = ExtResource("10_57s1j")
+texture = ExtResource("19_15e74")
 
 [node name="82SemTítulo0000253520251125200863" type="Sprite2D" parent="background/-02" unique_id=18072697]
 modulate = Color(3.2944162, 3.2944162, 3.2944162, 1)
 position = Vector2(-1673, 928)
 scale = Vector2(0.87323946, 0.87323946)
-texture = ExtResource("10_57s1j")
+texture = ExtResource("19_15e74")
 flip_h = true
 
 [node name="82SemTítulo0000253520251125200856" type="Sprite2D" parent="background/-02" unique_id=609316411]
 modulate = Color(3.2944162, 3.2944162, 3.2944162, 1)
 position = Vector2(871, 765)
-texture = ExtResource("10_57s1j")
+texture = ExtResource("19_15e74")
 
 [node name="ColorRect2" type="ColorRect" parent="background/-02" unique_id=1986434422]
 material = SubResource("ShaderMaterial_8tm3t")
@@ -485,7 +485,7 @@ rotation = -0.09155919
 [node name="82SemTítulo0000253520251125200857" type="Sprite2D" parent="background/-02" unique_id=1652849236]
 modulate = Color(3.2944162, 3.2944162, 3.2944162, 1)
 position = Vector2(1640.8163, 845.9184)
-texture = ExtResource("10_57s1j")
+texture = ExtResource("19_15e74")
 flip_h = true
 
 [node name="0" type="CanvasLayer" parent="background" unique_id=2063667220]
@@ -494,208 +494,209 @@ follow_viewport_enabled = true
 [node name="PedraMusgo" type="Sprite2D" parent="background/0" unique_id=103865778]
 position = Vector2(-7066, 833)
 scale = Vector2(0.5273973, 0.5273973)
-texture = ExtResource("19_8g6fq")
+texture = ExtResource("21_3awaj")
 
 [node name="PedraMusgo2" type="Sprite2D" parent="background/0" unique_id=182300850]
 position = Vector2(-2853, 750.00006)
 scale = Vector2(0.5273973, 0.5273973)
-texture = ExtResource("19_8g6fq")
+texture = ExtResource("21_3awaj")
 
 [node name="PedraMusgo3" type="Sprite2D" parent="background/0" unique_id=2068499308]
 position = Vector2(241, 786.00006)
 scale = Vector2(0.5273973, 0.5273973)
-texture = ExtResource("19_8g6fq")
+texture = ExtResource("21_3awaj")
 flip_h = true
 
 [node name="Moita11" type="Sprite2D" parent="background/0" unique_id=2093009444]
 position = Vector2(-8234.5, -110)
-texture = ExtResource("8_meyap")
+texture = ExtResource("22_uyy7x")
 flip_h = true
 
 [node name="Sombra7" type="Sprite2D" parent="background/0" unique_id=849003491]
 position = Vector2(-8222.5, -62)
 scale = Vector2(1.8125, 1.1061947)
-texture = ExtResource("9_nh2iu")
+texture = ExtResource("23_2ol20")
 flip_h = true
 
 [node name="Moita12" type="Sprite2D" parent="background/0" unique_id=1960382327]
 position = Vector2(-6767.5, 1004)
-texture = ExtResource("8_meyap")
+texture = ExtResource("22_uyy7x")
 flip_h = true
 
 [node name="Sombra8" type="Sprite2D" parent="background/0" unique_id=140482441]
 position = Vector2(-6755.5, 1052)
 scale = Vector2(1.8125, 1.1061947)
-texture = ExtResource("9_nh2iu")
+texture = ExtResource("23_2ol20")
 flip_h = true
 
 [node name="Moita18" type="Sprite2D" parent="background/0" unique_id=377746348]
 position = Vector2(1889.5, 960)
-texture = ExtResource("8_meyap")
+texture = ExtResource("22_uyy7x")
 
 [node name="Sombra14" type="Sprite2D" parent="background/0" unique_id=1820790504]
 position = Vector2(1901.5, 1008)
 scale = Vector2(1.8125, 1.1061947)
-texture = ExtResource("9_nh2iu")
+texture = ExtResource("23_2ol20")
 
 [node name="Moita19" type="Sprite2D" parent="background/0" unique_id=951253203]
 position = Vector2(-227.5, 1010)
-texture = ExtResource("8_meyap")
+texture = ExtResource("22_uyy7x")
 
 [node name="Sombra15" type="Sprite2D" parent="background/0" unique_id=1205051970]
 position = Vector2(-215.5, 1058)
 scale = Vector2(1.8125, 1.1061947)
-texture = ExtResource("9_nh2iu")
+texture = ExtResource("23_2ol20")
 
 [node name="Moita17" type="Sprite2D" parent="background/0" unique_id=871603254]
 position = Vector2(-2490.5, 1005)
-texture = ExtResource("8_meyap")
+texture = ExtResource("22_uyy7x")
 
 [node name="Sombra13" type="Sprite2D" parent="background/0" unique_id=271667730]
 position = Vector2(-2478.5, 1053)
 scale = Vector2(1.8125, 1.1061947)
-texture = ExtResource("9_nh2iu")
+texture = ExtResource("23_2ol20")
 
 [node name="Moita14" type="Sprite2D" parent="background/0" unique_id=256694039]
 position = Vector2(-5126.5, 1014)
-texture = ExtResource("8_meyap")
+texture = ExtResource("22_uyy7x")
 
 [node name="Sombra10" type="Sprite2D" parent="background/0" unique_id=1560974544]
 position = Vector2(-5114.5, 1062)
 scale = Vector2(1.8125, 1.1061947)
-texture = ExtResource("9_nh2iu")
+texture = ExtResource("23_2ol20")
 
 [node name="Arvores01" type="Node2D" parent="background/0" unique_id=185382775]
 light_mask = 2
 
 [node name="Moita13" type="Sprite2D" parent="background/0/Arvores01" unique_id=1208118620]
 position = Vector2(-6333.5, 977)
-texture = ExtResource("8_meyap")
+texture = ExtResource("22_uyy7x")
 
 [node name="Sombra9" type="Sprite2D" parent="background/0/Arvores01" unique_id=960330109]
 position = Vector2(-6321.5, 1025)
 scale = Vector2(1.8125, 1.1061947)
-texture = ExtResource("9_nh2iu")
+texture = ExtResource("23_2ol20")
 
 [node name="Moita15" type="Sprite2D" parent="background/0/Arvores01" unique_id=1879574806]
 position = Vector2(-3542.5, 1005)
-texture = ExtResource("8_meyap")
+texture = ExtResource("22_uyy7x")
 
 [node name="Sombra11" type="Sprite2D" parent="background/0/Arvores01" unique_id=2126851056]
 position = Vector2(-3530.5, 1053)
 scale = Vector2(1.8125, 1.1061947)
-texture = ExtResource("9_nh2iu")
+texture = ExtResource("23_2ol20")
 
 [node name="Moita16" type="Sprite2D" parent="background/0/Arvores01" unique_id=2128309728]
 position = Vector2(-1561.5, 975)
-texture = ExtResource("8_meyap")
+texture = ExtResource("22_uyy7x")
 
 [node name="Sombra12" type="Sprite2D" parent="background/0/Arvores01" unique_id=314520805]
 position = Vector2(-1549.5, 1023)
 scale = Vector2(1.8125, 1.1061947)
-texture = ExtResource("9_nh2iu")
+texture = ExtResource("23_2ol20")
 
 [node name="Moita20" type="Sprite2D" parent="background/0/Arvores01" unique_id=1178958113]
 position = Vector2(1794.5, 993)
-texture = ExtResource("8_meyap")
+texture = ExtResource("22_uyy7x")
 flip_h = true
 
 [node name="Sombra16" type="Sprite2D" parent="background/0/Arvores01" unique_id=2014791044]
 position = Vector2(1806.5, 1041)
 scale = Vector2(1.8125, 1.1061947)
-texture = ExtResource("9_nh2iu")
+texture = ExtResource("23_2ol20")
 flip_h = true
 
 [node name="Moita10" type="Sprite2D" parent="background/0/Arvores01" unique_id=50792113]
 position = Vector2(-8438.5, -144)
-texture = ExtResource("8_meyap")
+texture = ExtResource("22_uyy7x")
 
 [node name="Sombra6" type="Sprite2D" parent="background/0/Arvores01" unique_id=971177435]
 position = Vector2(-8426.5, -96)
 scale = Vector2(1.8125, 1.1061947)
-texture = ExtResource("9_nh2iu")
+texture = ExtResource("23_2ol20")
 
-[node name="Bau" parent="background/0/Arvores01" unique_id=877064174 instance=ExtResource("21_v723p")]
+[node name="Bau" parent="background/0/Arvores01" unique_id=877064174 instance=ExtResource("24_xmq1o")]
 position = Vector2(-5386, 1029)
-drop_item = Array[PackedScene]([ExtResource("22_gr3ec"), ExtResource("22_gr3ec")])
+drop_item = Array[PackedScene]([ExtResource("17_ksjfn"), ExtResource("17_ksjfn")])
 multi_drop = true
 
-[node name="Bau2" parent="background/0/Arvores01" unique_id=1870294052 instance=ExtResource("23_ldwfj")]
+[node name="Bau2" parent="background/0/Arvores01" unique_id=1870294052 instance=ExtResource("25_q3f7y")]
 position = Vector2(-5256, 1048)
-drop_item = Array[PackedScene]([ExtResource("22_gr3ec")])
+drop_item = Array[PackedScene]([ExtResource("17_ksjfn")])
 multi_drop = true
 
-[node name="Bau3" parent="background/0/Arvores01" unique_id=247092043 instance=ExtResource("24_7ywmt")]
+[node name="Bau3" parent="background/0/Arvores01" unique_id=247092043 instance=ExtResource("16_cfptm")]
 position = Vector2(-4390, 1040)
-drop_item = Array[PackedScene]([ExtResource("22_gr3ec"), ExtResource("22_gr3ec"), ExtResource("22_gr3ec")])
+drop_item = Array[PackedScene]([ExtResource("17_ksjfn"), ExtResource("17_ksjfn"), ExtResource("17_ksjfn")])
 multi_drop = true
 
-[node name="Bau5" parent="background/0/Arvores01" unique_id=203001263 instance=ExtResource("27_auxyl")]
+[node name="Bau5" parent="background/0/Arvores01" unique_id=203001263 instance=ExtResource("26_rccv1")]
 position = Vector2(-4157, 1028)
-drop_item = Array[PackedScene]([ExtResource("22_gr3ec"), ExtResource("22_gr3ec"), ExtResource("22_gr3ec"), ExtResource("22_gr3ec")])
+drop_item = Array[PackedScene]([ExtResource("17_ksjfn"), ExtResource("17_ksjfn"), ExtResource("17_ksjfn"), ExtResource("17_ksjfn")])
 multi_drop = true
 
-[node name="Bau4" parent="background/0/Arvores01" unique_id=1636110820 instance=ExtResource("25_co6lv")]
+[node name="Bau4" parent="background/0/Arvores01" unique_id=1636110820 instance=ExtResource("27_s14rp")]
 position = Vector2(-4275, 1043)
-drop_item = Array[PackedScene]([ExtResource("22_gr3ec"), ExtResource("26_8tm3t")])
+drop_item = Array[PackedScene]([ExtResource("17_ksjfn"), ExtResource("28_wc7fw")])
 multi_drop = true
 
-[node name="Bau6" parent="background/0/Arvores01" unique_id=1944146556 instance=ExtResource("21_v723p")]
+[node name="Bau6" parent="background/0/Arvores01" unique_id=1944146556 instance=ExtResource("24_xmq1o")]
 position = Vector2(-2930, 1032)
-drop_item = Array[PackedScene]([ExtResource("22_gr3ec"), ExtResource("22_gr3ec")])
+drop_item = Array[PackedScene]([ExtResource("17_ksjfn"), ExtResource("17_ksjfn")])
 
-[node name="Bau7" parent="background/0/Arvores01" unique_id=223248533 instance=ExtResource("23_ldwfj")]
+[node name="Bau7" parent="background/0/Arvores01" unique_id=223248533 instance=ExtResource("25_q3f7y")]
 position = Vector2(-2800, 1051)
-drop_item = Array[PackedScene]([ExtResource("22_gr3ec")])
+drop_item = Array[PackedScene]([ExtResource("17_ksjfn")])
 
-[node name="Bau8" parent="background/0/Arvores01" unique_id=1317194439 instance=ExtResource("24_7ywmt")]
+[node name="Bau8" parent="background/0/Arvores01" unique_id=1317194439 instance=ExtResource("16_cfptm")]
 position = Vector2(-1934, 1040)
-drop_item = Array[PackedScene]([ExtResource("22_gr3ec"), ExtResource("22_gr3ec"), ExtResource("22_gr3ec")])
+drop_item = Array[PackedScene]([ExtResource("17_ksjfn"), ExtResource("17_ksjfn"), ExtResource("17_ksjfn")])
 
-[node name="Bau9" parent="background/0/Arvores01" unique_id=198352005 instance=ExtResource("27_auxyl")]
+[node name="Bau9" parent="background/0/Arvores01" unique_id=198352005 instance=ExtResource("26_rccv1")]
 position = Vector2(-1701, 1028)
-drop_item = Array[PackedScene]([ExtResource("22_gr3ec"), ExtResource("22_gr3ec"), ExtResource("22_gr3ec"), ExtResource("22_gr3ec")])
+drop_item = Array[PackedScene]([ExtResource("17_ksjfn"), ExtResource("17_ksjfn"), ExtResource("17_ksjfn"), ExtResource("17_ksjfn")])
 
-[node name="Bau10" parent="background/0/Arvores01" unique_id=2032000348 instance=ExtResource("25_co6lv")]
+[node name="Bau10" parent="background/0/Arvores01" unique_id=2032000348 instance=ExtResource("27_s14rp")]
 position = Vector2(-1819, 1043)
-drop_item = Array[PackedScene]([ExtResource("22_gr3ec"), ExtResource("26_8tm3t")])
+drop_item = Array[PackedScene]([ExtResource("17_ksjfn"), ExtResource("28_wc7fw")])
 
 [node name="Transicoes" type="Node2D" parent="background/0" unique_id=1670998634]
 
-[node name="MA_T3" parent="background/0/Transicoes" unique_id=1994742552 instance=ExtResource("9_q40bt")]
+[node name="MA_01" parent="background/0/Transicoes" unique_id=1994742552 instance=ExtResource("29_k84l1")]
 position = Vector2(-9071, -92)
-destino = &"res://Cenas/aTutorial/Tutorial_3.tscn"
-posicao = Vector2(-8481, -273)
+destino = &"res://Cenas/Mata_Atlantica/MA_01.tscn"
+posicao = Vector2(8937, -4471)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="background/0/Transicoes/MA_T3" unique_id=1838593708]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="background/0/Transicoes/MA_01" unique_id=1838593708]
 position = Vector2(65, -280.5)
 shape = SubResource("RectangleShape2D_mw8rc")
 
-[node name="Portal" type="Sprite2D" parent="background/0/Transicoes/MA_T3" unique_id=1320191002]
+[node name="Portal" type="Sprite2D" parent="background/0/Transicoes/MA_01" unique_id=1320191002]
 position = Vector2(39, -253.961)
 scale = Vector2(0.5028986, 1.8746953)
-texture = ExtResource("4_1ewfi")
+texture = ExtResource("30_cofau")
 
-[node name="MA_1-2" parent="background/0/Transicoes" unique_id=373410332 instance=ExtResource("9_q40bt")]
+[node name="MA_03" parent="background/0/Transicoes" unique_id=373410332 instance=ExtResource("29_k84l1")]
 position = Vector2(1895, 1047)
-destino = &"res://Cenas/Mata_Atlantica/MA_1-2.tscn"
+destino = &"res://Cenas/Mata_Atlantica/MA_03.tscn"
 posicao = Vector2(2109, 509)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="background/0/Transicoes/MA_1-2" unique_id=2058974868]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="background/0/Transicoes/MA_03" unique_id=2058974868]
 position = Vector2(495, -388)
 shape = SubResource("RectangleShape2D_q40bt")
 
-[node name="Portal2" type="Sprite2D" parent="background/0/Transicoes/MA_1-2" unique_id=1028368248]
+[node name="Portal2" type="Sprite2D" parent="background/0/Transicoes/MA_03" unique_id=1028368248]
 position = Vector2(453, -343.76056)
 scale = Vector2(0.67971015, 2.533121)
-texture = ExtResource("4_1ewfi")
+texture = ExtResource("30_cofau")
 flip_h = true
 
-[node name="NPC-Basico2" parent="background/0" unique_id=860132681 instance=ExtResource("23_hubad")]
+[node name="NPC-Basico2" parent="background/0" unique_id=860132681 instance=ExtResource("31_wepyd")]
 position = Vector2(1125, 924)
 
-[node name="Cururu" parent="background/0" unique_id=370155217 instance=ExtResource("1_v83m2")]
+[node name="Cururu" parent="background/0" unique_id=370155217 instance=ExtResource("32_o0mc4")]
 z_index = 0
+position = Vector2(1724, 878)
 scale = Vector2(0.919994, 0.919994)
 
 [node name="Particula" type="GPUParticles2D" parent="background/0" unique_id=2060733035]
@@ -703,7 +704,7 @@ position = Vector2(-3313, 138)
 rotation = 3.1415925
 amount = 150
 amount_ratio = 0.7
-texture = ExtResource("33_8tm3t")
+texture = ExtResource("33_h60bk")
 lifetime = 5.0
 visibility_rect = Rect2(-6000, -1000, 12000, 2000)
 process_material = SubResource("ParticleProcessMaterial_auxyl")
@@ -713,14 +714,14 @@ material = SubResource("CanvasItemMaterial_d7uuq")
 position = Vector2(-3378.998, 175)
 scale = Vector2(6.2917895, -2.8726363)
 amount = 500
-texture = ExtResource("35_tid5v")
+texture = ExtResource("34_3eu04")
 lifetime = 5.0
 visibility_rect = Rect2(-7500, -500, 15000, 1000)
 process_material = SubResource("ParticleProcessMaterial_b1smv")
 
 [node name="TileMapLayer" type="TileMapLayer" parent="background/0" unique_id=1362326394]
 tile_map_data = PackedByteArray("AAC+//D/AQAAAAAAAAC+//H/AQAAAAAAAAC///D/AQAAAAAAAAC///H/AQAAAAAAAADA//D/AQAAAAAAAADA//H/AQAAAAAAAADB//D/AQAAAAAAAADB//H/AQAAAAAAAADC//D/AQAAAAAAAADC//H/AQAAAAAAAADD//D/AQAAAAAAAADD//H/AQAAAAAAAADE//D/AQAAAAAAAADE//H/AQAAAAAAAADF//D/AQAAAAAAAADF//H/AQAAAAAAAADG//D/AQAAAAAAAADG//H/AQAAAAAAAADH//D/AQAAAAAAAADH//H/AQAAAAAAAADI//D/AQAAAAAAAADI//H/AQAAAAAAAADJ//D/AQAAAAAAAADJ//H/AQAAAAAAAADK//D/AQAAAAAAAADK//H/AQAAAAAAAADL//D/AQAAAAAAAADL//H/AQAAAAAAAADM//D/AQAAAAAAAADM//H/AQAAAAAAAADN//D/AQAAAAAAAADN//H/AQAAAAAAAADO//D/AQAAAAAAAADO//H/AQAAAAAAAADP//D/AQAAAAAAAADP//H/AQAAAAAAAADQ//D/AQAAAAAAAADQ//H/AQAAAAAAAADR//D/AQAAAAAAAADR//H/AQAAAAAAAADS//D/AQAAAAAAAADS//H/AQAAAAAAAADT//D/AQAAAAAAAADT//H/AQAAAAAAAADU//D/AQAAAAAAAADU//H/AQAAAAAAAADV//D/AQAAAAAAAADV//H/AQAAAAAAAADW//D/AQAAAAAAAADW//H/AQAAAAAAAADX//D/AQAAAAAAAADX//H/AQAAAAAAAADY//D/AQAAAAAAAADY//H/AQAAAAAAAADZ//D/AQAAAAAAAADZ//H/AQAAAAAAAADa//D/AQAAAAAAAADa//H/AQAAAAAAAADb//D/AQAAAAAAAADb//H/AQAAAAAAAADc//D/AQAAAAAAAADc//H/AQAAAAAAAADd//D/AQAAAAAAAADd//H/AQAAAAAAAADe//D/AQAAAAAAAADe//H/AQAAAAAAAADf//D/AQAAAAAAAADf//H/AQAAAAAAAADg//D/AQAAAAAAAADg//H/AQAAAAAAAADh//D/AQAAAAAAAADh//H/AQAAAAAAAADi//D/AQAAAAAAAADi//H/AQAAAAAAAADj//D/AQAAAAAAAADj//H/AQAAAAAAAADk//D/AQAAAAAAAADk//H/AQAAAAAAAADl//D/AQAAAAAAAADl//H/AQAAAAAAAADm//D/AQAAAAAAAADm//H/AQAAAAAAAADn//D/AQAAAAAAAADn//H/AQAAAAAAAADo//D/AQAAAAAAAADo//H/AQAAAAAAAADp//D/AQAAAAAAAADp//H/AQAAAAAAAADq//D/AQAAAAAAAADq//H/AQAAAAAAAADr//D/AQAAAAAAAADr//H/AQAAAAAAAADs//D/AQAAAAAAAADs//H/AQAAAAAAAADt//D/AQAAAAAAAADt//H/AQAAAAAAAADu//D/AQAAAAAAAADu//H/AQAAAAAAAADv//D/AQAAAAAAAADv//H/AQAAAAAAAADw//D/AQAAAAAAAADw//H/AQAAAAAAAADx//D/AQAAAAAAAADx//H/AQAAAAAAAADy//D/AQAAAAAAAADy//H/AQAAAAAAAADz//D/AQAAAAAAAADz//H/AQAAAAAAAAD0//D/AQAAAAAAAAD0//H/AQAAAAAAAAD1//D/AQAAAAAAAAD1//H/AQAAAAAAAAD2//D/AQAAAAAAAAD2//H/AQAAAAAAAAD3//D/AQAAAAAAAAD3//H/AQAAAAAAAAD4//D/AQAAAAAAAAD4//H/AQAAAAAAAAD5//D/AQAAAAAAAAD5//H/AQAAAAAAAAD6//D/AQAAAAAAAAD6//H/AQAAAAAAAAD7//D/AQAAAAAAAAD7//H/AQAAAAAAAAD8//D/AQAAAAAAAAD8//H/AQAAAAAAAAD9//D/AQAAAAAAAAD9//H/AQAAAAAAAAD+//D/AQAAAAAAAAD+//H/AQAAAAAAAAD///D/AQAAAAAAAAD///H/AQAAAAAAAAAAAPD/AQAAAAAAAAAAAPH/AQAAAAAAAAABAPD/AQAAAAAAAAABAPH/AQAAAAAAAAACAPD/AQAAAAAAAAACAPH/AQAAAAAAAAADAPD/AQAAAAAAAAADAPH/AQAAAAAAAAAEAPD/AQAAAAAAAAAEAPH/AQAAAAAAAAAFAPD/AQAAAAAAAAAFAPH/AQAAAAAAAAAGAPD/AQAAAAAAAAAGAPH/AQAAAAAAAAAHAPD/AQAAAAAAAAAHAPH/AQAAAAAAAAAIAPD/AQAAAAAAAAAIAPH/AQAAAAAAAAAJAPD/AQAAAAAAAAAJAPH/AQAAAAAAAAAKAPD/AQAAAAAAAAAKAPH/AQAAAAAAAAALAPD/AQAAAAAAAAALAPH/AQAAAAAAAAAMAPD/AQAAAAAAAAAMAPH/AQAAAAAAAAANAPD/AQAAAAAAAAANAPH/AQAAAAAAAAAOAPD/AQAAAAAAAAAOAPH/AQAAAAAAAAAPAPD/AQAAAAAAAAAPAPH/AQAAAAAAAAAQAPD/AQAAAAAAAAAQAPH/AQAAAAAAAAARAPD/AQAAAAAAAAARAPH/AQAAAAAAAAASAPD/AQAAAAAAAAASAPH/AQAAAAAAAAASAPL/AQAAAAAAAAASAPP/AQAAAAAAAAASAPT/AQAAAAAAAAASAPX/AQAAAAAAAAASAPb/AQAAAAAAAAASAPf/AQAAAAAAAAASAPj/AQAAAAAAAAASAPn/AQAAAAAAAAASAPr/AQAAAAAAAAASAPv/AQAAAAAAAAASAPz/AQAAAAAAAAASAP3/AQAAAAAAAAASAP7/AQAAAAAAAAASAAgAAQAAAAAAAAASAAkAAQAAAAAAAAASAAoAAQAAAAAAAAC+//X/AQAAAAAAAAC+//b/AQAAAAAAAAC+//f/AQAAAAAAAAC+//j/AQAAAAAAAAC+//n/AQAAAAAAAAC+////AQAAAAAAAAC+/wAAAQAAAAAAAAC+/wEAAQAAAAAAAAC+/wIAAQAAAAAAAAC+/wMAAQAAAAAAAAC+/wQAAQAAAAAAAAC+/wUAAQAAAAAAAAC+/wYAAQAAAAAAAAC+/wcAAQAAAAAAAAC+/wgAAQAAAAAAAAC+/wkAAQAAAAAAAAC+/woAAQAAAAAAAAC///X/AQAAAAAAAAC///b/AQAAAAAAAAC///f/AQAAAAAAAAC///j/AQAAAAAAAAC///n/AQAAAAAAAAC/////AQAAAAAAAAC//wAAAQAAAAAAAAC//wEAAQAAAAAAAAC//wIAAQAAAAAAAAC//wMAAQAAAAAAAAC//wQAAQAAAAAAAAC//wUAAQAAAAAAAAC//wYAAQAAAAAAAAC//wcAAQAAAAAAAAC//wgAAQAAAAAAAAC//wkAAQAAAAAAAAC//woAAQAAAAAAAADA//X/AQAAAAAAAADA//b/AQAAAAAAAADA//f/AQAAAAAAAADA//j/AQAAAAAAAADA//n/AQAAAAAAAADA/wIAAQAAAAAAAADA/wMAAQAAAAAAAADA/wQAAQAAAAAAAADA/wUAAQAAAAAAAADA/wYAAQAAAAAAAADA/wcAAQAAAAAAAADA/wgAAQAAAAAAAADA/wkAAQAAAAAAAADA/woAAQAAAAAAAADB//X/AQAAAAAAAADB//b/AQAAAAAAAADB//f/AQAAAAAAAADB//j/AQAAAAAAAADB//n/AQAAAAAAAADB/wIAAQAAAAAAAADB/wMAAQAAAAAAAADB/wQAAQAAAAAAAADB/wUAAQAAAAAAAADB/wYAAQAAAAAAAADB/wcAAQAAAAAAAADB/wgAAQAAAAAAAADB/wkAAQAAAAAAAADB/woAAQAAAAAAAADC//X/AQAAAAAAAADC//b/AQAAAAAAAADC//f/AQAAAAAAAADC//j/AQAAAAAAAADC//n/AQAAAAAAAADC/wIAAQAAAAAAAADC/wMAAQAAAAAAAADC/wQAAQAAAAAAAADC/wUAAQAAAAAAAADC/wYAAQAAAAAAAADC/wcAAQAAAAAAAADC/wgAAQAAAAAAAADC/wkAAQAAAAAAAADC/woAAQAAAAAAAADD//X/AQAAAAAAAADD//b/AQAAAAAAAADD//f/AQAAAAAAAADD//j/AQAAAAAAAADD//n/AQAAAAAAAADD/wIAAQAAAAAAAADD/wMAAQAAAAAAAADD/wQAAQAAAAAAAADD/wUAAQAAAAAAAADD/wYAAQAAAAAAAADD/wcAAQAAAAAAAADD/wgAAQAAAAAAAADD/wkAAQAAAAAAAADD/woAAQAAAAAAAADE//X/AQAAAAAAAADE//b/AQAAAAAAAADE//f/AQAAAAAAAADE//j/AQAAAAAAAADE//n/AQAAAAAAAADE/wIAAQAAAAAAAADE/wMAAQAAAAAAAADE/wQAAQAAAAAAAADE/wUAAQAAAAAAAADE/wYAAQAAAAAAAADE/wcAAQAAAAAAAADE/wgAAQAAAAAAAADE/wkAAQAAAAAAAADE/woAAQAAAAAAAADF//X/AQAAAAAAAADF//b/AQAAAAAAAADF//f/AQAAAAAAAADF//j/AQAAAAAAAADF//n/AQAAAAAAAADF/wcAAQAAAAAAAADF/wgAAQAAAAAAAADF/wkAAQAAAAAAAADF/woAAQAAAAAAAADG//X/AQAAAAAAAADG//b/AQAAAAAAAADG//f/AQAAAAAAAADG//j/AQAAAAAAAADG//n/AQAAAAAAAADG/wgAAQAAAAAAAADG/wkAAQAAAAAAAADG/woAAQAAAAAAAADH//X/AQAAAAAAAADH//b/AQAAAAAAAADH//f/AQAAAAAAAADH//j/AQAAAAAAAADH//n/AQAAAAAAAADH/wgAAQAAAAAAAADH/wkAAQAAAAAAAADH/woAAQAAAAAAAADI//X/AQAAAAAAAADI//b/AQAAAAAAAADI//f/AQAAAAAAAADI//j/AQAAAAAAAADI//n/AQAAAAAAAADI/wgAAQAAAAAAAADI/wkAAQAAAAAAAADI/woAAQAAAAAAAADJ//X/AQAAAAAAAADJ//b/AQAAAAAAAADJ//f/AQAAAAAAAADJ//j/AQAAAAAAAADJ//n/AQAAAAAAAADJ/wgAAQAAAAAAAADJ/wkAAQAAAAAAAADJ/woAAQAAAAAAAADK//X/AQAAAAAAAADK//b/AQAAAAAAAADK//f/AQAAAAAAAADK//j/AQAAAAAAAADK//n/AQAAAAAAAADK/wgAAQAAAAAAAADK/wkAAQAAAAAAAADK/woAAQAAAAAAAADL//X/AQAAAAAAAADL//b/AQAAAAAAAADL//f/AQAAAAAAAADL//j/AQAAAAAAAADL//n/AQAAAAAAAADL/wgAAQAAAAAAAADL/wkAAQAAAAAAAADL/woAAQAAAAAAAADM//X/AQAAAAAAAADM//b/AQAAAAAAAADM//f/AQAAAAAAAADM//j/AQAAAAAAAADM//n/AQAAAAAAAADM/wgAAQAAAAAAAADM/wkAAQAAAAAAAADM/woAAQAAAAAAAADN//X/AQAAAAAAAADN//b/AQAAAAAAAADN//f/AQAAAAAAAADN//j/AQAAAAAAAADN//n/AQAAAAAAAADN/wgAAQAAAAAAAADN/wkAAQAAAAAAAADN/woAAQAAAAAAAADO//X/AQAAAAAAAADO//b/AQAAAAAAAADO//f/AQAAAAAAAADO//j/AQAAAAAAAADO//n/AQAAAAAAAADO/wgAAQAAAAAAAADO/wkAAQAAAAAAAADO/woAAQAAAAAAAADP//X/AQAAAAAAAADP//b/AQAAAAAAAADP//f/AQAAAAAAAADP//j/AQAAAAAAAADP//n/AQAAAAAAAADP/wgAAQAAAAAAAADP/wkAAQAAAAAAAADP/woAAQAAAAAAAADQ//X/AQAAAAAAAADQ//b/AQAAAAAAAADQ//f/AQAAAAAAAADQ//j/AQAAAAAAAADQ//n/AQAAAAAAAADQ/wgAAQAAAAAAAADQ/wkAAQAAAAAAAADQ/woAAQAAAAAAAADR//X/AQAAAAAAAADR//b/AQAAAAAAAADR//f/AQAAAAAAAADR//j/AQAAAAAAAADR//n/AQAAAAAAAADR//r/AQAAAAAAAADR//v/AQAAAAAAAADR//z/AQAAAAAAAADR//3/AQAAAAAAAADR/wgAAQAAAAAAAADR/wkAAQAAAAAAAADR/woAAQAAAAAAAADS//X/AQAAAAAAAADS//b/AQAAAAAAAADS//f/AQAAAAAAAADS//j/AQAAAAAAAADS//n/AQAAAAAAAADS//r/AQAAAAAAAADS//v/AQAAAAAAAADS//z/AQAAAAAAAADS//3/AQAAAAAAAADS/wgAAQAAAAAAAADS/wkAAQAAAAAAAADS/woAAQAAAAAAAADT//X/AQAAAAAAAADT//b/AQAAAAAAAADT//f/AQAAAAAAAADT//j/AQAAAAAAAADT//n/AQAAAAAAAADT//r/AQAAAAAAAADT//v/AQAAAAAAAADT//z/AQAAAAAAAADT//3/AQAAAAAAAADT/wgAAQAAAAAAAADT/wkAAQAAAAAAAADT/woAAQAAAAAAAADU//X/AQAAAAAAAADU//b/AQAAAAAAAADU//f/AQAAAAAAAADU//j/AQAAAAAAAADU//n/AQAAAAAAAADU//r/AQAAAAAAAADU//v/AQAAAAAAAADU//z/AQAAAAAAAADU//3/AQAAAAAAAADU/wgAAQAAAAAAAADU/wkAAQAAAAAAAADU/woAAQAAAAAAAADV//X/AQAAAAAAAADV//b/AQAAAAAAAADV//f/AQAAAAAAAADV//j/AQAAAAAAAADV//n/AQAAAAAAAADV//r/AQAAAAAAAADV//v/AQAAAAAAAADV//z/AQAAAAAAAADV//3/AQAAAAAAAADV/wgAAQAAAAAAAADV/wkAAQAAAAAAAADV/woAAQAAAAAAAADW//X/AQAAAAAAAADW//b/AQAAAAAAAADW//f/AQAAAAAAAADW//j/AQAAAAAAAADW//n/AQAAAAAAAADW//r/AQAAAAAAAADW//v/AQAAAAAAAADW//z/AQAAAAAAAADW//3/AQAAAAAAAADW/wgAAQAAAAAAAADW/wkAAQAAAAAAAADW/woAAQAAAAAAAADX//X/AQAAAAAAAADX//b/AQAAAAAAAADX//f/AQAAAAAAAADX//j/AQAAAAAAAADX//n/AQAAAAAAAADX//r/AQAAAAAAAADX//v/AQAAAAAAAADX//z/AQAAAAAAAADX//3/AQAAAAAAAADX/wgAAQAAAAAAAADX/wkAAQAAAAAAAADX/woAAQAAAAAAAADY//X/AQAAAAAAAADY//b/AQAAAAAAAADY//f/AQAAAAAAAADY//j/AQAAAAAAAADY//n/AQAAAAAAAADY//r/AQAAAAAAAADY//v/AQAAAAAAAADY//z/AQAAAAAAAADY//3/AQAAAAAAAADY/wgAAQAAAAAAAADY/wkAAQAAAAAAAADY/woAAQAAAAAAAADZ//X/AQAAAAAAAADZ//b/AQAAAAAAAADZ//f/AQAAAAAAAADZ//j/AQAAAAAAAADZ//n/AQAAAAAAAADZ//r/AQAAAAAAAADZ//v/AQAAAAAAAADZ//z/AQAAAAAAAADZ//3/AQAAAAAAAADZ/wgAAQAAAAAAAADZ/wkAAQAAAAAAAADZ/woAAQAAAAAAAADa//X/AQAAAAAAAADa//b/AQAAAAAAAADa//f/AQAAAAAAAADa//j/AQAAAAAAAADa//n/AQAAAAAAAADa//r/AQAAAAAAAADa//v/AQAAAAAAAADa//z/AQAAAAAAAADa//3/AQAAAAAAAADa/wgAAQAAAAAAAADa/wkAAQAAAAAAAADa/woAAQAAAAAAAADb//X/AQAAAAAAAADb//b/AQAAAAAAAADb//f/AQAAAAAAAADb//j/AQAAAAAAAADb//n/AQAAAAAAAADb//r/AQAAAAAAAADb//v/AQAAAAAAAADb//z/AQAAAAAAAADb//3/AQAAAAAAAADb/wgAAQAAAAAAAADb/wkAAQAAAAAAAADb/woAAQAAAAAAAADc//X/AQAAAAAAAADc//b/AQAAAAAAAADc//f/AQAAAAAAAADc//j/AQAAAAAAAADc//n/AQAAAAAAAADc//r/AQAAAAAAAADc//v/AQAAAAAAAADc//z/AQAAAAAAAADc//3/AQAAAAAAAADc/wgAAQAAAAAAAADc/wkAAQAAAAAAAADc/woAAQAAAAAAAADd//X/AQAAAAAAAADd//b/AQAAAAAAAADd//f/AQAAAAAAAADd//j/AQAAAAAAAADd//n/AQAAAAAAAADd//r/AQAAAAAAAADd//v/AQAAAAAAAADd//z/AQAAAAAAAADd//3/AQAAAAAAAADd/wgAAQAAAAAAAADd/wkAAQAAAAAAAADd/woAAQAAAAAAAADe//X/AQAAAAAAAADe//b/AQAAAAAAAADe//f/AQAAAAAAAADe//j/AQAAAAAAAADe//n/AQAAAAAAAADe//r/AQAAAAAAAADe//v/AQAAAAAAAADe//z/AQAAAAAAAADe//3/AQAAAAAAAADe/wgAAQAAAAAAAADe/wkAAQAAAAAAAADe/woAAQAAAAAAAADf//X/AQAAAAAAAADf//b/AQAAAAAAAADf//f/AQAAAAAAAADf//j/AQAAAAAAAADf//n/AQAAAAAAAADf//r/AQAAAAAAAADf//v/AQAAAAAAAADf//z/AQAAAAAAAADf//3/AQAAAAAAAADf/wgAAQAAAAAAAADf/wkAAQAAAAAAAADf/woAAQAAAAAAAADg//X/AQAAAAAAAADg//b/AQAAAAAAAADg//f/AQAAAAAAAADg//j/AQAAAAAAAADg//n/AQAAAAAAAADg//r/AQAAAAAAAADg//v/AQAAAAAAAADg//z/AQAAAAAAAADg//3/AQAAAAAAAADg/wgAAQAAAAAAAADg/wkAAQAAAAAAAADg/woAAQAAAAAAAADh//X/AQAAAAAAAADh//b/AQAAAAAAAADh//f/AQAAAAAAAADh//j/AQAAAAAAAADh//n/AQAAAAAAAADh//r/AQAAAAAAAADh//v/AQAAAAAAAADh//z/AQAAAAAAAADh//3/AQAAAAAAAADh/wgAAQAAAAAAAADh/wkAAQAAAAAAAADh/woAAQAAAAAAAADi//X/AQAAAAAAAADi//b/AQAAAAAAAADi//f/AQAAAAAAAADi//j/AQAAAAAAAADi//n/AQAAAAAAAADi//r/AQAAAAAAAADi//v/AQAAAAAAAADi/wgAAQAAAAAAAADi/wkAAQAAAAAAAADi/woAAQAAAAAAAADj//X/AQAAAAAAAADj//b/AQAAAAAAAADj//f/AQAAAAAAAADj//j/AQAAAAAAAADj//n/AQAAAAAAAADj//r/AQAAAAAAAADj//v/AQAAAAAAAADj/wgAAQAAAAAAAADj/wkAAQAAAAAAAADj/woAAQAAAAAAAADk//X/AQAAAAAAAADk//b/AQAAAAAAAADk//f/AQAAAAAAAADk//j/AQAAAAAAAADk//n/AQAAAAAAAADk//r/AQAAAAAAAADk/wgAAQAAAAAAAADk/wkAAQAAAAAAAADk/woAAQAAAAAAAADl//X/AQAAAAAAAADl//b/AQAAAAAAAADl//f/AQAAAAAAAADl/wgAAQAAAAAAAADl/wkAAQAAAAAAAADl/woAAQAAAAAAAADm//X/AQAAAAAAAADm//b/AQAAAAAAAADm//f/AQAAAAAAAADm/wgAAQAAAAAAAADm/wkAAQAAAAAAAADm/woAAQAAAAAAAADn//X/AQAAAAAAAADn//b/AQAAAAAAAADn//f/AQAAAAAAAADn/wgAAQAAAAAAAADn/wkAAQAAAAAAAADn/woAAQAAAAAAAADo//X/AQAAAAAAAADo//b/AQAAAAAAAADo/wgAAQAAAAAAAADo/wkAAQAAAAAAAADo/woAAQAAAAAAAADp/wgAAQAAAAAAAADp/wkAAQAAAAAAAADp/woAAQAAAAAAAADq/wgAAQAAAAAAAADq/wkAAQAAAAAAAADq/woAAQAAAAAAAADr/wgAAQAAAAAAAADr/wkAAQAAAAAAAADr/woAAQAAAAAAAADs/wgAAQAAAAAAAADs/wkAAQAAAAAAAADs/woAAQAAAAAAAADt/wgAAQAAAAAAAADt/wkAAQAAAAAAAADt/woAAQAAAAAAAADu/wgAAQAAAAAAAADu/wkAAQAAAAAAAADu/woAAQAAAAAAAADv/wgAAQAAAAAAAADv/wkAAQAAAAAAAADv/woAAQAAAAAAAADw/wgAAQAAAAAAAADw/wkAAQAAAAAAAADw/woAAQAAAAAAAADx/wgAAQAAAAAAAADx/wkAAQAAAAAAAADx/woAAQAAAAAAAADy/wgAAQAAAAAAAADy/wkAAQAAAAAAAADy/woAAQAAAAAAAADz/wgAAQAAAAAAAADz/wkAAQAAAAAAAADz/woAAQAAAAAAAAD0/wgAAQAAAAAAAAD0/wkAAQAAAAAAAAD0/woAAQAAAAAAAAD1/wgAAQAAAAAAAAD1/wkAAQAAAAAAAAD1/woAAQAAAAAAAAD2/wgAAQAAAAAAAAD2/wkAAQAAAAAAAAD2/woAAQAAAAAAAAD3/wgAAQAAAAAAAAD3/wkAAQAAAAAAAAD3/woAAQAAAAAAAAD4/wgAAQAAAAAAAAD4/wkAAQAAAAAAAAD4/woAAQAAAAAAAAD5/wgAAQAAAAAAAAD5/wkAAQAAAAAAAAD5/woAAQAAAAAAAAD6/wgAAQAAAAAAAAD6/wkAAQAAAAAAAAD6/woAAQAAAAAAAAD7/wgAAQAAAAAAAAD7/wkAAQAAAAAAAAD7/woAAQAAAAAAAAD8/wgAAQAAAAAAAAD8/wkAAQAAAAAAAAD8/woAAQAAAAAAAAD9/wgAAQAAAAAAAAD9/wkAAQAAAAAAAAD9/woAAQAAAAAAAAD+/wgAAQAAAAAAAAD+/wkAAQAAAAAAAAD+/woAAQAAAAAAAAD//wgAAQAAAAAAAAD//wkAAQAAAAAAAAD//woAAQAAAAAAAAAAAAgAAQAAAAAAAAAAAAkAAQAAAAAAAAAAAAoAAQAAAAAAAAABAAgAAQAAAAAAAAABAAkAAQAAAAAAAAABAAoAAQAAAAAAAAACAAgAAQAAAAAAAAACAAkAAQAAAAAAAAACAAoAAQAAAAAAAAADAAgAAQAAAAAAAAADAAkAAQAAAAAAAAADAAoAAQAAAAAAAAAEAAgAAQAAAAAAAAAEAAkAAQAAAAAAAAAEAAoAAQAAAAAAAAAFAAgAAQAAAAAAAAAFAAkAAQAAAAAAAAAFAAoAAQAAAAAAAAAGAAgAAQAAAAAAAAAGAAkAAQAAAAAAAAAGAAoAAQAAAAAAAAAHAAgAAQAAAAAAAAAHAAkAAQAAAAAAAAAHAAoAAQAAAAAAAAAIAAgAAQAAAAAAAAAIAAkAAQAAAAAAAAAIAAoAAQAAAAAAAAAJAAgAAQAAAAAAAAAJAAkAAQAAAAAAAAAJAAoAAQAAAAAAAAAKAPX/AQAAAAAAAAAKAAgAAQAAAAAAAAAKAAkAAQAAAAAAAAAKAAoAAQAAAAAAAAALAPX/AQAAAAAAAAALAAgAAQAAAAAAAAALAAkAAQAAAAAAAAALAAoAAQAAAAAAAAAMAPX/AQAAAAAAAAAMAPb/AQAAAAAAAAAMAPf/AQAAAAAAAAAMAPj/AQAAAAAAAAAMAAgAAQAAAAAAAAAMAAkAAQAAAAAAAAAMAAoAAQAAAAAAAAANAPX/AQAAAAAAAAANAPb/AQAAAAAAAAANAPf/AQAAAAAAAAANAPj/AQAAAAAAAAANAAgAAQAAAAAAAAANAAkAAQAAAAAAAAANAAoAAQAAAAAAAAAOAPX/AQAAAAAAAAAOAPb/AQAAAAAAAAAOAPf/AQAAAAAAAAAOAPj/AQAAAAAAAAAOAPn/AQAAAAAAAAAOAPr/AQAAAAAAAAAOAPv/AQAAAAAAAAAOAAgAAQAAAAAAAAAOAAkAAQAAAAAAAAAOAAoAAQAAAAAAAAAPAPX/AQAAAAAAAAAPAPb/AQAAAAAAAAAPAPf/AQAAAAAAAAAPAPj/AQAAAAAAAAAPAPn/AQAAAAAAAAAPAPr/AQAAAAAAAAAPAPv/AQAAAAAAAAAPAPz/AQAAAAAAAAAPAP3/AQAAAAAAAAAPAAgAAQAAAAAAAAAPAAkAAQAAAAAAAAAPAAoAAQAAAAAAAAAQAPX/AQAAAAAAAAAQAPb/AQAAAAAAAAAQAPf/AQAAAAAAAAAQAPj/AQAAAAAAAAAQAPn/AQAAAAAAAAAQAPr/AQAAAAAAAAAQAPv/AQAAAAAAAAAQAPz/AQAAAAAAAAAQAP3/AQAAAAAAAAAQAAgAAQAAAAAAAAAQAAkAAQAAAAAAAAAQAAoAAQAAAAAAAAC+//L/AQAAAAAAAAC+//P/AQAAAAAAAAC+//T/AQAAAAAAAAC///L/AQAAAAAAAAC///P/AQAAAAAAAAC///T/AQAAAAAAAADA//L/AQAAAAAAAADA//P/AQAAAAAAAADA//T/AQAAAAAAAADA////AQAAAAAAAADA/wAAAQAAAAAAAADA/wEAAQAAAAAAAADB//L/AQAAAAAAAADB//P/AQAAAAAAAADB//T/AQAAAAAAAADB////AQAAAAAAAADB/wAAAQAAAAAAAADB/wEAAQAAAAAAAADC//L/AQAAAAAAAADC//P/AQAAAAAAAADC//T/AQAAAAAAAADC////AQAAAAAAAADC/wAAAQAAAAAAAADC/wEAAQAAAAAAAADD//L/AQAAAAAAAADD//P/AQAAAAAAAADD//T/AQAAAAAAAADD////AQAAAAAAAADD/wAAAQAAAAAAAADD/wEAAQAAAAAAAADE//L/AQAAAAAAAADE//P/AQAAAAAAAADE//T/AQAAAAAAAADE////AQAAAAAAAADE/wAAAQAAAAAAAADE/wEAAQAAAAAAAADF//L/AQAAAAAAAADF//P/AQAAAAAAAADF//T/AQAAAAAAAADF////AQAAAAAAAADF/wAAAQAAAAAAAADF/wEAAQAAAAAAAADF/wIAAQAAAAAAAADF/wMAAQAAAAAAAADF/wQAAQAAAAAAAADF/wUAAQAAAAAAAADF/wYAAQAAAAAAAADG//L/AQAAAAAAAADG//P/AQAAAAAAAADG//T/AQAAAAAAAADH//L/AQAAAAAAAADH//P/AQAAAAAAAADH//T/AQAAAAAAAADI//L/AQAAAAAAAADI//P/AQAAAAAAAADI//T/AQAAAAAAAADJ//L/AQAAAAAAAADJ//P/AQAAAAAAAADJ//T/AQAAAAAAAADK//L/AQAAAAAAAADK//P/AQAAAAAAAADK//T/AQAAAAAAAADL//L/AQAAAAAAAADL//P/AQAAAAAAAADL//T/AQAAAAAAAADM//L/AQAAAAAAAADM//P/AQAAAAAAAADM//T/AQAAAAAAAADN//L/AQAAAAAAAADN//P/AQAAAAAAAADN//T/AQAAAAAAAADO//L/AQAAAAAAAADO//P/AQAAAAAAAADO//T/AQAAAAAAAADP//L/AQAAAAAAAADP//P/AQAAAAAAAADP//T/AQAAAAAAAADQ//L/AQAAAAAAAADQ//P/AQAAAAAAAADQ//T/AQAAAAAAAADR//L/AQAAAAAAAADR//P/AQAAAAAAAADR//T/AQAAAAAAAADS//L/AQAAAAAAAADS//P/AQAAAAAAAADS//T/AQAAAAAAAADT//L/AQAAAAAAAADT//P/AQAAAAAAAADT//T/AQAAAAAAAADU//L/AQAAAAAAAADU//P/AQAAAAAAAADU//T/AQAAAAAAAADV//L/AQAAAAAAAADV//P/AQAAAAAAAADV//T/AQAAAAAAAADW//L/AQAAAAAAAADW//P/AQAAAAAAAADW//T/AQAAAAAAAADX//L/AQAAAAAAAADX//P/AQAAAAAAAADX//T/AQAAAAAAAADY//L/AQAAAAAAAADY//P/AQAAAAAAAADY//T/AQAAAAAAAADZ//L/AQAAAAAAAADZ//P/AQAAAAAAAADZ//T/AQAAAAAAAADa//L/AQAAAAAAAADa//P/AQAAAAAAAADa//T/AQAAAAAAAADb//L/AQAAAAAAAADb//P/AQAAAAAAAADb//T/AQAAAAAAAADc//L/AQAAAAAAAADc//P/AQAAAAAAAADc//T/AQAAAAAAAADd//L/AQAAAAAAAADd//P/AQAAAAAAAADd//T/AQAAAAAAAADe//L/AQAAAAAAAADe//P/AQAAAAAAAADe//T/AQAAAAAAAADf//L/AQAAAAAAAADf//P/AQAAAAAAAADf//T/AQAAAAAAAADg//L/AQAAAAAAAADg//P/AQAAAAAAAADg//T/AQAAAAAAAADh//L/AQAAAAAAAADh//P/AQAAAAAAAADh//T/AQAAAAAAAADi//L/AQAAAAAAAADi//P/AQAAAAAAAADi//T/AQAAAAAAAADj//L/AQAAAAAAAADj//P/AQAAAAAAAADj//T/AQAAAAAAAADk//L/AQAAAAAAAADk//P/AQAAAAAAAADk//T/AQAAAAAAAADk//v/AQAAAAAAAADl//L/AQAAAAAAAADl//P/AQAAAAAAAADl//T/AQAAAAAAAADm//L/AQAAAAAAAADm//P/AQAAAAAAAADm//T/AQAAAAAAAADn//L/AQAAAAAAAADn//P/AQAAAAAAAADn//T/AQAAAAAAAADo//L/AQAAAAAAAADo//P/AQAAAAAAAADo//T/AQAAAAAAAADo//f/AQAAAAAAAADp//L/AQAAAAAAAADp//P/AQAAAAAAAADq//L/AQAAAAAAAADq//P/AQAAAAAAAADr//L/AQAAAAAAAADr//P/AQAAAAAAAADs//L/AQAAAAAAAADs//P/AQAAAAAAAADt//L/AQAAAAAAAADt//P/AQAAAAAAAADu//L/AQAAAAAAAADu//P/AQAAAAAAAADv//L/AQAAAAAAAADv//P/AQAAAAAAAADw//L/AQAAAAAAAADw//P/AQAAAAAAAADx//L/AQAAAAAAAADx//P/AQAAAAAAAADy//L/AQAAAAAAAADy//P/AQAAAAAAAADz//L/AQAAAAAAAADz//P/AQAAAAAAAAD0//L/AQAAAAAAAAD0//P/AQAAAAAAAAD1//L/AQAAAAAAAAD1//P/AQAAAAAAAAD2//L/AQAAAAAAAAD2//P/AQAAAAAAAAD3//L/AQAAAAAAAAD3//P/AQAAAAAAAAD4//L/AQAAAAAAAAD4//P/AQAAAAAAAAD5//L/AQAAAAAAAAD5//P/AQAAAAAAAAD6//L/AQAAAAAAAAD6//P/AQAAAAAAAAD7//L/AQAAAAAAAAD7//P/AQAAAAAAAAD8//L/AQAAAAAAAAD8//P/AQAAAAAAAAD9//L/AQAAAAAAAAD9//P/AQAAAAAAAAD+//L/AQAAAAAAAAD+//P/AQAAAAAAAAD///L/AQAAAAAAAAD///P/AQAAAAAAAAAAAPL/AQAAAAAAAAAAAPP/AQAAAAAAAAABAPL/AQAAAAAAAAABAPP/AQAAAAAAAAACAPL/AQAAAAAAAAACAPP/AQAAAAAAAAADAPL/AQAAAAAAAAADAPP/AQAAAAAAAAAEAPL/AQAAAAAAAAAEAPP/AQAAAAAAAAAFAPL/AQAAAAAAAAAFAPP/AQAAAAAAAAAGAPL/AQAAAAAAAAAGAPP/AQAAAAAAAAAHAPL/AQAAAAAAAAAHAPP/AQAAAAAAAAAIAPL/AQAAAAAAAAAIAPP/AQAAAAAAAAAJAPL/AQAAAAAAAAAJAPP/AQAAAAAAAAAKAPL/AQAAAAAAAAAKAPP/AQAAAAAAAAAKAPT/AQAAAAAAAAALAPL/AQAAAAAAAAALAPP/AQAAAAAAAAALAPT/AQAAAAAAAAAMAPL/AQAAAAAAAAAMAPP/AQAAAAAAAAAMAPT/AQAAAAAAAAANAPL/AQAAAAAAAAANAPP/AQAAAAAAAAANAPT/AQAAAAAAAAAOAPL/AQAAAAAAAAAOAPP/AQAAAAAAAAAOAPT/AQAAAAAAAAAPAPL/AQAAAAAAAAAPAPP/AQAAAAAAAAAPAPT/AQAAAAAAAAAQAPL/AQAAAAAAAAAQAPP/AQAAAAAAAAAQAPT/AQAAAAAAAAARAPL/AQAAAAAAAAARAPP/AQAAAAAAAAARAPT/AQAAAAAAAAARAPX/AQAAAAAAAAARAPb/AQAAAAAAAAARAPf/AQAAAAAAAAARAPj/AQAAAAAAAAARAPn/AQAAAAAAAAARAPr/AQAAAAAAAAARAPv/AQAAAAAAAAARAPz/AQAAAAAAAAARAP3/AQAAAAAAAAARAP7/AQAAAAAAAAARAAgAAQAAAAAAAAARAAkAAQAAAAAAAAARAAoAAQAAAAAAAAARAP//AQAAAAAAAAARAAAAAQAAAAAAAAASAP//AQAAAAAAAAASAAAAAQAAAAAAAADR//7/AQAAAAAAAADR////AQAAAAAAAADR/wAAAQAAAAAAAADS//7/AQAAAAAAAADS////AQAAAAAAAADS/wAAAQAAAAAAAADT//7/AQAAAAAAAADT////AQAAAAAAAADT/wAAAQAAAAAAAADU//7/AQAAAAAAAADU////AQAAAAAAAADU/wAAAQAAAAAAAADV//7/AQAAAAAAAADV////AQAAAAAAAADV/wAAAQAAAAAAAADW//7/AQAAAAAAAADW////AQAAAAAAAADW/wAAAQAAAAAAAADX//7/AQAAAAAAAADX////AQAAAAAAAADX/wAAAQAAAAAAAADY//7/AQAAAAAAAADY////AQAAAAAAAADY/wAAAQAAAAAAAADZ//7/AQAAAAAAAADZ////AQAAAAAAAADZ/wAAAQAAAAAAAADa//7/AQAAAAAAAADa////AQAAAAAAAADa/wAAAQAAAAAAAADb//7/AQAAAAAAAADb////AQAAAAAAAADb/wAAAQAAAAAAAADc//7/AQAAAAAAAADc////AQAAAAAAAADc/wAAAQAAAAAAAADd//7/AQAAAAAAAADd////AQAAAAAAAADd/wAAAQAAAAAAAADe//7/AQAAAAAAAADe////AQAAAAAAAADe/wAAAQAAAAAAAADf//7/AQAAAAAAAADf////AQAAAAAAAADf/wAAAQAAAAAAAADg//7/AQAAAAAAAADg////AQAAAAAAAADg/wAAAQAAAAAAAADh//7/AQAAAAAAAADh////AQAAAAAAAADh/wAAAQAAAAAAAADi//z/AQAAAAAAAADi//3/AQAAAAAAAADj//z/AQAAAAAAAADj//3/AQAAAAAAAADk//z/AQAAAAAAAADk//3/AQAAAAAAAAAFAPT/AQAAAAAAAAAFAPX/AQAAAAAAAAAFAPb/AQAAAAAAAAAGAPT/AQAAAAAAAAAGAPX/AQAAAAAAAAAGAPb/AQAAAAAAAAAHAPT/AQAAAAAAAAAHAPX/AQAAAAAAAAAHAPb/AQAAAAAAAAAIAPT/AQAAAAAAAAAIAPX/AQAAAAAAAAAIAPb/AQAAAAAAAAAJAPT/AQAAAAAAAAAJAPX/AQAAAAAAAAAJAPb/AQAAAAAAAAAKAPb/AQAAAAAAAAALAPb/AQAAAAAAAAAIAPf/AQAAAAAAAAAIAPj/AQAAAAAAAAAIAPn/AQAAAAAAAAAJAPf/AQAAAAAAAAAJAPj/AQAAAAAAAAAJAPn/AQAAAAAAAAAKAPf/AQAAAAAAAAAKAPj/AQAAAAAAAAAKAPn/AQAAAAAAAAALAPf/AQAAAAAAAAALAPj/AQAAAAAAAAALAPn/AQAAAAAAAAAMAPn/AQAAAAAAAAANAPn/AQAAAAAAAAALAPr/AQAAAAAAAAALAPv/AQAAAAAAAAAMAPr/AQAAAAAAAAAMAPv/AQAAAAAAAAAMAPz/AQAAAAAAAAANAPr/AQAAAAAAAAANAPv/AQAAAAAAAAANAPz/AQAAAAAAAAAOAPz/AQAAAAAAAAAOAP3/AQAAAAAAAAAOAP7/AQAAAAAAAAAOAP//AQAAAAAAAAAPAP7/AQAAAAAAAAAPAP//AQAAAAAAAAAPAAAAAQAAAAAAAAAQAP7/AQAAAAAAAAAQAP//AQAAAAAAAAAQAAAAAQAAAAAAAADp//T/AQAAAAAAAADp//X/AQAAAAAAAADp//b/AQAAAAAAAADq//T/AQAAAAAAAADq//X/AQAAAAAAAADq//b/AQAAAAAAAADr//T/AQAAAAAAAADr//X/AQAAAAAAAADr//b/AQAAAAAAAADs//T/AQAAAAAAAADs//X/AQAAAAAAAADs//b/AQAAAAAAAADt//T/AQAAAAAAAADt//X/AQAAAAAAAADt//b/AQAAAAAAAADu//T/AQAAAAAAAADu//X/AQAAAAAAAADu//b/AQAAAAAAAADv//T/AQAAAAAAAADv//X/AQAAAAAAAADv//b/AQAAAAAAAADw//T/AQAAAAAAAADw//X/AQAAAAAAAADw//b/AQAAAAAAAADx//T/AQAAAAAAAADx//X/AQAAAAAAAADx//b/AQAAAAAAAADy//T/AQAAAAAAAADy//X/AQAAAAAAAADy//b/AQAAAAAAAADz//T/AQAAAAAAAADz//X/AQAAAAAAAADz//b/AQAAAAAAAAD0//T/AQAAAAAAAAD0//X/AQAAAAAAAAD0//b/AQAAAAAAAAD1//T/AQAAAAAAAAD1//X/AQAAAAAAAAD1//b/AQAAAAAAAAD2//T/AQAAAAAAAAD2//X/AQAAAAAAAAD2//b/AQAAAAAAAAD3//T/AQAAAAAAAAD3//X/AQAAAAAAAAD3//b/AQAAAAAAAAD4//T/AQAAAAAAAAD4//X/AQAAAAAAAAD4//b/AQAAAAAAAAD5//T/AQAAAAAAAAD5//X/AQAAAAAAAAD5//b/AQAAAAAAAAD6//T/AQAAAAAAAAD6//X/AQAAAAAAAAD6//b/AQAAAAAAAAD7//T/AQAAAAAAAAD7//X/AQAAAAAAAAD7//b/AQAAAAAAAAD8//T/AQAAAAAAAAD8//X/AQAAAAAAAAD8//b/AQAAAAAAAAD9//T/AQAAAAAAAAD9//X/AQAAAAAAAAD9//b/AQAAAAAAAAD+//T/AQAAAAAAAAD+//X/AQAAAAAAAAD+//b/AQAAAAAAAAD///T/AQAAAAAAAAD///X/AQAAAAAAAAD///b/AQAAAAAAAAAAAPT/AQAAAAAAAAAAAPX/AQAAAAAAAAAAAPb/AQAAAAAAAAABAPT/AQAAAAAAAAABAPX/AQAAAAAAAAABAPb/AQAAAAAAAAACAPT/AQAAAAAAAAACAPX/AQAAAAAAAAACAPb/AQAAAAAAAAADAPT/AQAAAAAAAAADAPX/AQAAAAAAAAADAPb/AQAAAAAAAAAEAPT/AQAAAAAAAAAEAPX/AQAAAAAAAAAEAPb/AQAAAAAAAADp//f/AQAAAAAAAADq//f/AQAAAAAAAADr//f/AQAAAAAAAADs//f/AQAAAAAAAADt//f/AQAAAAAAAADu//f/AQAAAAAAAADv//f/AQAAAAAAAADw//f/AQAAAAAAAADx//f/AQAAAAAAAADy//f/AQAAAAAAAADz//f/AQAAAAAAAAD0//f/AQAAAAAAAAD1//f/AQAAAAAAAAD2//f/AQAAAAAAAAD3//f/AQAAAAAAAAD4//f/AQAAAAAAAAD5//f/AQAAAAAAAAD6//f/AQAAAAAAAAD7//f/AQAAAAAAAAD8//f/AQAAAAAAAAD9//f/AQAAAAAAAAD+//f/AQAAAAAAAAD///f/AQAAAAAAAAAAAPf/AQAAAAAAAAABAPf/AQAAAAAAAAACAPf/AQAAAAAAAAADAPf/AQAAAAAAAAAEAPf/AQAAAAAAAAAFAPf/AQAAAAAAAAAGAPf/AQAAAAAAAAAHAPf/AQAAAAAAAADl//j/AQAAAAAAAADl//n/AQAAAAAAAADm//j/AQAAAAAAAADm//n/AQAAAAAAAADn//j/AQAAAAAAAADn//n/AQAAAAAAAADo//j/AQAAAAAAAADo//n/AQAAAAAAAADl//r/AQAAAAAAAADl//v/AQAAAAAAAADl//z/AQAAAAAAAADl//3/AQAAAAAAAADP//r/AQAAAAAAAADP//v/AQAAAAAAAADP//z/AQAAAAAAAADP//3/AQAAAAAAAADQ//r/AQAAAAAAAADQ//v/AQAAAAAAAADQ//z/AQAAAAAAAADQ//3/AQAAAAAAAADO//r/AQAAAAAAAADO//v/AQAAAAAAAADm//r/AQAAAAAAAADm//v/AQAAAAAAAADm//z/AQAAAAAAAADk//7/AQAAAAAAAADj//7/AQAAAAAAAADp//j/AQAAAAAAAADq//j/AQAAAAAAAADr//j/AQAAAAAAAADs//j/AQAAAAAAAADt//j/AQAAAAAAAADq//n/AQAAAAAAAAC+/wsAAQAAAAAAAAC+/wwAAQAAAAAAAAC+/w0AAQAAAAAAAAC//wsAAQAAAAAAAAC//wwAAQAAAAAAAAC//w0AAQAAAAAAAADA/wsAAQAAAAAAAADA/wwAAQAAAAAAAADA/w0AAQAAAAAAAADB/wsAAQAAAAAAAADB/wwAAQAAAAAAAADB/w0AAQAAAAAAAADC/wsAAQAAAAAAAADC/wwAAQAAAAAAAADC/w0AAQAAAAAAAADD/wsAAQAAAAAAAADD/wwAAQAAAAAAAADD/w0AAQAAAAAAAADE/wsAAQAAAAAAAADE/wwAAQAAAAAAAADE/w0AAQAAAAAAAADF/wsAAQAAAAAAAADF/wwAAQAAAAAAAADF/w0AAQAAAAAAAADG/wsAAQAAAAAAAADG/wwAAQAAAAAAAADG/w0AAQAAAAAAAADH/wsAAQAAAAAAAADH/wwAAQAAAAAAAADH/w0AAQAAAAAAAADI/wsAAQAAAAAAAADI/wwAAQAAAAAAAADI/w0AAQAAAAAAAADJ/wsAAQAAAAAAAADJ/wwAAQAAAAAAAADJ/w0AAQAAAAAAAADK/wsAAQAAAAAAAADK/wwAAQAAAAAAAADK/w0AAQAAAAAAAADL/wsAAQAAAAAAAADL/wwAAQAAAAAAAADL/w0AAQAAAAAAAADM/wsAAQAAAAAAAADM/wwAAQAAAAAAAADM/w0AAQAAAAAAAADN/wsAAQAAAAAAAADN/wwAAQAAAAAAAADN/w0AAQAAAAAAAADO/wsAAQAAAAAAAADO/wwAAQAAAAAAAADO/w0AAQAAAAAAAADP/wsAAQAAAAAAAADP/wwAAQAAAAAAAADP/w0AAQAAAAAAAADQ/wsAAQAAAAAAAADQ/wwAAQAAAAAAAADQ/w0AAQAAAAAAAADR/wsAAQAAAAAAAADR/wwAAQAAAAAAAADR/w0AAQAAAAAAAADS/wsAAQAAAAAAAADS/wwAAQAAAAAAAADS/w0AAQAAAAAAAADT/wsAAQAAAAAAAADT/wwAAQAAAAAAAADT/w0AAQAAAAAAAADU/wsAAQAAAAAAAADU/wwAAQAAAAAAAADU/w0AAQAAAAAAAADV/wsAAQAAAAAAAADV/wwAAQAAAAAAAADV/w0AAQAAAAAAAADW/wsAAQAAAAAAAADW/wwAAQAAAAAAAADW/w0AAQAAAAAAAADX/wsAAQAAAAAAAADX/wwAAQAAAAAAAADX/w0AAQAAAAAAAADY/wsAAQAAAAAAAADY/wwAAQAAAAAAAADY/w0AAQAAAAAAAADZ/wsAAQAAAAAAAADZ/wwAAQAAAAAAAADZ/w0AAQAAAAAAAADa/wsAAQAAAAAAAADa/wwAAQAAAAAAAADa/w0AAQAAAAAAAADb/wsAAQAAAAAAAADb/wwAAQAAAAAAAADb/w0AAQAAAAAAAADc/wsAAQAAAAAAAADc/wwAAQAAAAAAAADc/w0AAQAAAAAAAADd/wsAAQAAAAAAAADd/wwAAQAAAAAAAADd/w0AAQAAAAAAAADe/wsAAQAAAAAAAADe/wwAAQAAAAAAAADe/w0AAQAAAAAAAADf/wsAAQAAAAAAAADf/wwAAQAAAAAAAADf/w0AAQAAAAAAAADg/wsAAQAAAAAAAADg/wwAAQAAAAAAAADg/w0AAQAAAAAAAADh/wsAAQAAAAAAAADh/wwAAQAAAAAAAADh/w0AAQAAAAAAAADi/wsAAQAAAAAAAADi/wwAAQAAAAAAAADi/w0AAQAAAAAAAADj/wsAAQAAAAAAAADj/wwAAQAAAAAAAADj/w0AAQAAAAAAAADk/wsAAQAAAAAAAADk/wwAAQAAAAAAAADk/w0AAQAAAAAAAADl/wsAAQAAAAAAAADl/wwAAQAAAAAAAADl/w0AAQAAAAAAAADm/wsAAQAAAAAAAADm/wwAAQAAAAAAAADm/w0AAQAAAAAAAADn/wsAAQAAAAAAAADn/wwAAQAAAAAAAADn/w0AAQAAAAAAAADo/wsAAQAAAAAAAADo/wwAAQAAAAAAAADo/w0AAQAAAAAAAADp/wsAAQAAAAAAAADp/wwAAQAAAAAAAADp/w0AAQAAAAAAAADq/wsAAQAAAAAAAADq/wwAAQAAAAAAAADq/w0AAQAAAAAAAADr/wsAAQAAAAAAAADr/wwAAQAAAAAAAADr/w0AAQAAAAAAAADs/wsAAQAAAAAAAADs/wwAAQAAAAAAAADs/w0AAQAAAAAAAADt/wsAAQAAAAAAAADt/wwAAQAAAAAAAADt/w0AAQAAAAAAAADu/wsAAQAAAAAAAADu/wwAAQAAAAAAAADu/w0AAQAAAAAAAADv/wsAAQAAAAAAAADv/wwAAQAAAAAAAADv/w0AAQAAAAAAAADw/wsAAQAAAAAAAADw/wwAAQAAAAAAAADw/w0AAQAAAAAAAADx/wsAAQAAAAAAAADx/wwAAQAAAAAAAADx/w0AAQAAAAAAAADy/wsAAQAAAAAAAADy/wwAAQAAAAAAAADy/w0AAQAAAAAAAADz/wsAAQAAAAAAAADz/wwAAQAAAAAAAADz/w0AAQAAAAAAAAD0/wsAAQAAAAAAAAD0/wwAAQAAAAAAAAD0/w0AAQAAAAAAAAD1/wsAAQAAAAAAAAD1/wwAAQAAAAAAAAD1/w0AAQAAAAAAAAD2/wsAAQAAAAAAAAD2/wwAAQAAAAAAAAD2/w0AAQAAAAAAAAD3/wsAAQAAAAAAAAD3/wwAAQAAAAAAAAD3/w0AAQAAAAAAAAD4/wsAAQAAAAAAAAD4/wwAAQAAAAAAAAD4/w0AAQAAAAAAAAD5/wsAAQAAAAAAAAD5/wwAAQAAAAAAAAD5/w0AAQAAAAAAAAD6/wsAAQAAAAAAAAD6/wwAAQAAAAAAAAD6/w0AAQAAAAAAAAD7/wsAAQAAAAAAAAD7/wwAAQAAAAAAAAD7/w0AAQAAAAAAAAD8/wsAAQAAAAAAAAD8/wwAAQAAAAAAAAD8/w0AAQAAAAAAAAD9/wsAAQAAAAAAAAD9/wwAAQAAAAAAAAD9/w0AAQAAAAAAAAD+/wsAAQAAAAAAAAD+/wwAAQAAAAAAAAD+/w0AAQAAAAAAAAD//wsAAQAAAAAAAAD//wwAAQAAAAAAAAD//w0AAQAAAAAAAAAAAAsAAQAAAAAAAAAAAAwAAQAAAAAAAAAAAA0AAQAAAAAAAAABAAsAAQAAAAAAAAABAAwAAQAAAAAAAAABAA0AAQAAAAAAAAACAAsAAQAAAAAAAAACAAwAAQAAAAAAAAACAA0AAQAAAAAAAAADAAsAAQAAAAAAAAADAAwAAQAAAAAAAAADAA0AAQAAAAAAAAAEAAsAAQAAAAAAAAAEAAwAAQAAAAAAAAAEAA0AAQAAAAAAAAAFAAsAAQAAAAAAAAAFAAwAAQAAAAAAAAAFAA0AAQAAAAAAAAAGAAsAAQAAAAAAAAAGAAwAAQAAAAAAAAAGAA0AAQAAAAAAAAAHAAsAAQAAAAAAAAAHAAwAAQAAAAAAAAAHAA0AAQAAAAAAAAAIAAsAAQAAAAAAAAAIAAwAAQAAAAAAAAAIAA0AAQAAAAAAAAAJAAsAAQAAAAAAAAAJAAwAAQAAAAAAAAAJAA0AAQAAAAAAAAAKAAsAAQAAAAAAAAAKAAwAAQAAAAAAAAAKAA0AAQAAAAAAAAALAAsAAQAAAAAAAAALAAwAAQAAAAAAAAALAA0AAQAAAAAAAAAMAAsAAQAAAAAAAAAMAAwAAQAAAAAAAAAMAA0AAQAAAAAAAAANAAsAAQAAAAAAAAANAAwAAQAAAAAAAAANAA0AAQAAAAAAAAAOAAsAAQAAAAAAAAAOAAwAAQAAAAAAAAAOAA0AAQAAAAAAAAAPAAsAAQAAAAAAAAAPAAwAAQAAAAAAAAAPAA0AAQAAAAAAAAAQAAsAAQAAAAAAAAAQAAwAAQAAAAAAAAAQAA0AAQAAAAAAAAARAAsAAQAAAAAAAAARAAwAAQAAAAAAAAARAA0AAQAAAAAAAAASAAsAAQAAAAAAAAASAAwAAQAAAAAAAAASAA0AAQAAAAAAAAC6////AQAAAAAAAAC6/wAAAQAAAAAAAAC6/wEAAQAAAAAAAAC6/wIAAQAAAAAAAAC6/wMAAQAAAAAAAAC6/wQAAQAAAAAAAAC6/wUAAQAAAAAAAAC6/wYAAQAAAAAAAAC6/wcAAQAAAAAAAAC6/wgAAQAAAAAAAAC6/wkAAQAAAAAAAAC6/woAAQAAAAAAAAC6/wsAAQAAAAAAAAC6/wwAAQAAAAAAAAC6/w0AAQAAAAAAAAC7////AQAAAAAAAAC7/wAAAQAAAAAAAAC7/wEAAQAAAAAAAAC7/wIAAQAAAAAAAAC7/wMAAQAAAAAAAAC7/wQAAQAAAAAAAAC7/wUAAQAAAAAAAAC7/wYAAQAAAAAAAAC7/wcAAQAAAAAAAAC7/wgAAQAAAAAAAAC7/wkAAQAAAAAAAAC7/woAAQAAAAAAAAC7/wsAAQAAAAAAAAC7/wwAAQAAAAAAAAC7/w0AAQAAAAAAAAC8////AQAAAAAAAAC8/wAAAQAAAAAAAAC8/wEAAQAAAAAAAAC8/wIAAQAAAAAAAAC8/wMAAQAAAAAAAAC8/wQAAQAAAAAAAAC8/wUAAQAAAAAAAAC8/wYAAQAAAAAAAAC8/wcAAQAAAAAAAAC8/wgAAQAAAAAAAAC8/wkAAQAAAAAAAAC8/woAAQAAAAAAAAC8/wsAAQAAAAAAAAC8/wwAAQAAAAAAAAC8/w0AAQAAAAAAAAC9////AQAAAAAAAAC9/wAAAQAAAAAAAAC9/wEAAQAAAAAAAAC9/wIAAQAAAAAAAAC9/wMAAQAAAAAAAAC9/wQAAQAAAAAAAAC9/wUAAQAAAAAAAAC9/wYAAQAAAAAAAAC9/wcAAQAAAAAAAAC9/wgAAQAAAAAAAAC9/wkAAQAAAAAAAAC9/woAAQAAAAAAAAC9/wsAAQAAAAAAAAC9/wwAAQAAAAAAAAC9/w0AAQAAAAAAAAC5//D/AQAAAAAAAAC5//H/AQAAAAAAAAC5//L/AQAAAAAAAAC5//P/AQAAAAAAAAC5//T/AQAAAAAAAAC5//X/AQAAAAAAAAC5//b/AQAAAAAAAAC5//f/AQAAAAAAAAC5//j/AQAAAAAAAAC6//D/AQAAAAAAAAC6//H/AQAAAAAAAAC6//L/AQAAAAAAAAC6//P/AQAAAAAAAAC6//T/AQAAAAAAAAC6//X/AQAAAAAAAAC6//b/AQAAAAAAAAC6//f/AQAAAAAAAAC6//j/AQAAAAAAAAC7//D/AQAAAAAAAAC7//H/AQAAAAAAAAC7//L/AQAAAAAAAAC7//P/AQAAAAAAAAC7//T/AQAAAAAAAAC7//X/AQAAAAAAAAC7//b/AQAAAAAAAAC7//f/AQAAAAAAAAC7//j/AQAAAAAAAAC8//D/AQAAAAAAAAC8//H/AQAAAAAAAAC8//L/AQAAAAAAAAC8//P/AQAAAAAAAAC8//T/AQAAAAAAAAC8//X/AQAAAAAAAAC8//b/AQAAAAAAAAC8//f/AQAAAAAAAAC8//j/AQAAAAAAAAC9//D/AQAAAAAAAAC9//H/AQAAAAAAAAC9//L/AQAAAAAAAAC9//P/AQAAAAAAAAC9//T/AQAAAAAAAAC9//X/AQAAAAAAAAC9//b/AQAAAAAAAAC9//f/AQAAAAAAAAC9//j/AQAAAAAAAAC5////AQAAAAAAAAC5/wAAAQAAAAAAAAC5/wEAAQAAAAAAAAC5/wIAAQAAAAAAAAC5/wMAAQAAAAAAAAC5/wQAAQAAAAAAAAC5/wUAAQAAAAAAAAC5/wYAAQAAAAAAAAC5/wcAAQAAAAAAAAC5/wgAAQAAAAAAAAC5/wkAAQAAAAAAAAC5/woAAQAAAAAAAAC5/wsAAQAAAAAAAAC5/wwAAQAAAAAAAAC5/w0AAQAAAAAAAAC5//n/AQAAAAAAAAC5//r/AQAAAAAAAAC6//n/AQAAAAAAAAC6//r/AQAAAAAAAAC7//n/AQAAAAAAAAC7//r/AQAAAAAAAAC8//n/AQAAAAAAAAC8//r/AQAAAAAAAAC9//n/AQAAAAAAAAC9//r/AQAAAAAAAAC+//r/AQAAAAAAAAC///r/AQAAAAAAAADA//r/AQAAAAAAAADB//r/AQAAAAAAAADC//r/AQAAAAAAAADD//r/AQAAAAAAAADE//r/AQAAAAAAAADF//r/AQAAAAAAAADG//r/AQAAAAAAAADH//r/AQAAAAAAAADI//r/AQAAAAAAAADJ//r/AQAAAAAAAADK//r/AQAAAAAAAADL//r/AQAAAAAAAADM//r/AQAAAAAAAADN//r/AQAAAAAAAAAQAAEAAQAAAAAAAAAQAAIAAQAAAAAAAAAQAAMAAQAAAAAAAAARAAEAAQAAAAAAAAARAAIAAQAAAAAAAAARAAMAAQAAAAAAAAASAAEAAQAAAAAAAAASAAIAAQAAAAAAAAASAAMAAQAAAAAAAAAOAAAAAQAAAAAAAAAOAAEAAQAAAAAAAAAOAAIAAQAAAAAAAAAPAAEAAQAAAAAAAAAPAAIAAQAAAAAAAAATAAgAAQAAAAAAAAAUAAgAAQAAAAAAAAAVAAgAAQAAAAAAAAAWAAgAAQAAAAAAAAAWAAkAAQAAAAAAAAAVAAkAAQAAAAAAAAAUAAkAAQAAAAAAAAATAAkAAQAAAAAAAAAXAAkAAQAAAAAAAAAXAAgAAQAAAAAAAAC4////AQAAAAAAAAC3////AQAAAAAAAAC2////AQAAAAAAAAC1////AQAAAAAAAAC1/wAAAQAAAAAAAAC2/wAAAQAAAAAAAAC3/wAAAQAAAAAAAAC4/wAAAQAAAAAAAAATAAoAAQAAAAAAAAATAAsAAQAAAAAAAAATAAwAAQAAAAAAAAATAA0AAQAAAAAAAAC4/wEAAQAAAAAAAAC4/wIAAQAAAAAAAAC4/wMAAQAAAAAAAAC4/wQAAQAAAAAAAAC4//f/AQAAAAAAAAC4//j/AQAAAAAAAAC4/wUAAQAAAAAAAAC4/wYAAQAAAAAAAAC4/wcAAQAAAAAAAAC4/wgAAQAAAAAAAAC4/wkAAQAAAAAAAAC4/woAAQAAAAAAAAC4/wsAAQAAAAAAAAC4/wwAAQAAAAAAAAC4/w0AAQAAAAAAAAA=")
-tile_set = ExtResource("33_co6lv")
+tile_set = ExtResource("35_s5w06")
 
 [node name="Chão" type="Node2D" parent="background/0" unique_id=1319544048]
 
@@ -729,110 +730,110 @@ tile_set = ExtResource("33_co6lv")
 [node name="GramaReto" type="Sprite2D" parent="background/0/Chão/Reto" unique_id=1790655414]
 position = Vector2(-7473, 441)
 rotation = 1.5707964
-texture = ExtResource("8_5kxqo")
+texture = ExtResource("36_kfoo2")
 
 [node name="GramaReto18" type="Sprite2D" parent="background/0/Chão/Reto" unique_id=742466749]
 position = Vector2(-7473, 627)
 rotation = 1.5707964
-texture = ExtResource("8_5kxqo")
+texture = ExtResource("36_kfoo2")
 
 [node name="GramaReto2" type="Sprite2D" parent="background/0/Chão/Reto" unique_id=1064658042]
 position = Vector2(-6992, 1071)
-texture = ExtResource("8_5kxqo")
+texture = ExtResource("36_kfoo2")
 
 [node name="GramaReto15" type="Sprite2D" parent="background/0/Chão/Reto" unique_id=1226027037]
 position = Vector2(-8278, -79)
-texture = ExtResource("8_5kxqo")
+texture = ExtResource("36_kfoo2")
 
 [node name="GramaReto17" type="Sprite2D" parent="background/0/Chão/Reto" unique_id=1208236994]
 position = Vector2(-7778, -79)
-texture = ExtResource("8_5kxqo")
+texture = ExtResource("36_kfoo2")
 
 [node name="GramaReto16" type="Sprite2D" parent="background/0/Chão/Reto" unique_id=458925751]
 position = Vector2(-8813, -85)
-texture = ExtResource("8_5kxqo")
+texture = ExtResource("36_kfoo2")
 
 [node name="GramaReto3" type="Sprite2D" parent="background/0/Chão/Reto" unique_id=1328985926]
 position = Vector2(-6470, 1068)
-texture = ExtResource("8_5kxqo")
+texture = ExtResource("36_kfoo2")
 
 [node name="GramaReto4" type="Sprite2D" parent="background/0/Chão/Reto" unique_id=1234119683]
 position = Vector2(-5346, 1069)
-texture = ExtResource("8_5kxqo")
+texture = ExtResource("36_kfoo2")
 
 [node name="GramaReto24" type="Sprite2D" parent="background/0/Chão/Reto" unique_id=1174245126]
 position = Vector2(-5939, 1065)
-texture = ExtResource("8_5kxqo")
+texture = ExtResource("36_kfoo2")
 
 [node name="GramaReto5" type="Sprite2D" parent="background/0/Chão/Reto" unique_id=186757592]
 position = Vector2(-4811, 1070)
-texture = ExtResource("8_5kxqo")
+texture = ExtResource("36_kfoo2")
 
 [node name="GramaReto6" type="Sprite2D" parent="background/0/Chão/Reto" unique_id=483609196]
 position = Vector2(-4264, 1072)
-texture = ExtResource("8_5kxqo")
+texture = ExtResource("36_kfoo2")
 
 [node name="GramaReto7" type="Sprite2D" parent="background/0/Chão/Reto" unique_id=1710447255]
 position = Vector2(-3739, 1072)
-texture = ExtResource("8_5kxqo")
+texture = ExtResource("36_kfoo2")
 
 [node name="GramaReto8" type="Sprite2D" parent="background/0/Chão/Reto" unique_id=484211215]
 position = Vector2(-3201, 1070)
-texture = ExtResource("8_5kxqo")
+texture = ExtResource("36_kfoo2")
 
 [node name="GramaReto9" type="Sprite2D" parent="background/0/Chão/Reto" unique_id=499747115]
 position = Vector2(-2688, 1073)
-texture = ExtResource("8_5kxqo")
+texture = ExtResource("36_kfoo2")
 
 [node name="GramaReto10" type="Sprite2D" parent="background/0/Chão/Reto" unique_id=1785470166]
 position = Vector2(-2167, 1073)
-texture = ExtResource("8_5kxqo")
+texture = ExtResource("36_kfoo2")
 
 [node name="GramaReto11" type="Sprite2D" parent="background/0/Chão/Reto" unique_id=12365460]
 position = Vector2(-1667, 1074)
-texture = ExtResource("8_5kxqo")
+texture = ExtResource("36_kfoo2")
 
 [node name="GramaReto12" type="Sprite2D" parent="background/0/Chão/Reto" unique_id=85843717]
 position = Vector2(-1153, 1073)
-texture = ExtResource("8_5kxqo")
+texture = ExtResource("36_kfoo2")
 
 [node name="GramaReto13" type="Sprite2D" parent="background/0/Chão/Reto" unique_id=2013929914]
 position = Vector2(-611, 1072)
-texture = ExtResource("8_5kxqo")
+texture = ExtResource("36_kfoo2")
 
 [node name="GramaReto14" type="Sprite2D" parent="background/0/Chão/Reto" unique_id=1600961349]
 position = Vector2(-77, 1071)
-texture = ExtResource("8_5kxqo")
+texture = ExtResource("36_kfoo2")
 
 [node name="GramaReto19" type="Sprite2D" parent="background/0/Chão/Reto" unique_id=1441687925]
 position = Vector2(454, 1071)
-texture = ExtResource("8_5kxqo")
+texture = ExtResource("36_kfoo2")
 
 [node name="GramaReto20" type="Sprite2D" parent="background/0/Chão/Reto" unique_id=1727035760]
 position = Vector2(989, 1071)
-texture = ExtResource("8_5kxqo")
+texture = ExtResource("36_kfoo2")
 
 [node name="GramaReto21" type="Sprite2D" parent="background/0/Chão/Reto" unique_id=1841879667]
 position = Vector2(1528, 1071)
-texture = ExtResource("8_5kxqo")
+texture = ExtResource("36_kfoo2")
 
 [node name="GramaReto22" type="Sprite2D" parent="background/0/Chão/Reto" unique_id=1565523858]
 position = Vector2(2064, 1071)
-texture = ExtResource("8_5kxqo")
+texture = ExtResource("36_kfoo2")
 
 [node name="GramaReto23" type="Sprite2D" parent="background/0/Chão/Reto" unique_id=1348994502]
 position = Vector2(2300, 1071)
-texture = ExtResource("8_5kxqo")
+texture = ExtResource("36_kfoo2")
 
 [node name="ChapExterno" type="Sprite2D" parent="background/0/Chão/Reto" unique_id=1616638535]
 position = Vector2(-7565, 27)
 rotation = -1.5707954
-texture = ExtResource("9_wnjnd")
+texture = ExtResource("37_qh6tj")
 
 [node name="ChapInterno" type="Sprite2D" parent="background/0/Chão/Reto" unique_id=990440423]
 position = Vector2(-7373, 970)
 rotation = -1.5707964
-texture = ExtResource("10_5ka01")
+texture = ExtResource("38_3axpn")
 
 [node name="Node2D" type="Node2D" parent="background/0" unique_id=1839340673]
 position = Vector2(-8905, -136)
@@ -845,244 +846,244 @@ follow_viewport_scale = 1.025
 
 [node name="MoitaTeste" type="Sprite2D" parent="background/1/Composição Teto" unique_id=228365258]
 position = Vector2(-8221, -658)
-texture = ExtResource("8_q40bt")
+texture = ExtResource("39_q7kvc")
 
 [node name="MoitaTeste50" type="Sprite2D" parent="background/1/Composição Teto" unique_id=885543789]
 position = Vector2(-8760, -723)
-texture = ExtResource("8_q40bt")
+texture = ExtResource("39_q7kvc")
 
 [node name="MoitaTeste49" type="Sprite2D" parent="background/1/Composição Teto" unique_id=678942185]
 position = Vector2(-8494, -730)
-texture = ExtResource("8_q40bt")
+texture = ExtResource("39_q7kvc")
 
 [node name="MoitaTeste51" type="Sprite2D" parent="background/1/Composição Teto" unique_id=518740522]
 position = Vector2(-8949, -695)
-texture = ExtResource("8_q40bt")
+texture = ExtResource("39_q7kvc")
 
 [node name="MoitaTeste2" type="Sprite2D" parent="background/1/Composição Teto" unique_id=19796197]
 position = Vector2(-7903, -585)
-texture = ExtResource("8_q40bt")
+texture = ExtResource("39_q7kvc")
 
 [node name="MoitaTeste3" type="Sprite2D" parent="background/1/Composição Teto" unique_id=860155380]
 position = Vector2(-7548, -640)
-texture = ExtResource("8_q40bt")
+texture = ExtResource("39_q7kvc")
 
 [node name="MoitaTeste4" type="Sprite2D" parent="background/1/Composição Teto" unique_id=406003206]
 position = Vector2(-7322, -591)
-texture = ExtResource("8_q40bt")
+texture = ExtResource("39_q7kvc")
 
 [node name="MoitaTeste5" type="Sprite2D" parent="background/1/Composição Teto" unique_id=360207802]
 position = Vector2(-7060, -696)
-texture = ExtResource("8_q40bt")
+texture = ExtResource("39_q7kvc")
 
 [node name="MoitaTeste10" type="Sprite2D" parent="background/1/Composição Teto" unique_id=2027683533]
 position = Vector2(-6891, -697)
-texture = ExtResource("8_q40bt")
+texture = ExtResource("39_q7kvc")
 
 [node name="MoitaTeste6" type="Sprite2D" parent="background/1/Composição Teto" unique_id=1597362787]
 position = Vector2(-6652, -650)
-texture = ExtResource("8_q40bt")
+texture = ExtResource("39_q7kvc")
 
 [node name="MoitaTeste11" type="Sprite2D" parent="background/1/Composição Teto" unique_id=1475066599]
 position = Vector2(-6350, -521)
-texture = ExtResource("8_q40bt")
+texture = ExtResource("39_q7kvc")
 
 [node name="MoitaTeste13" type="Sprite2D" parent="background/1/Composição Teto" unique_id=1162983500]
 position = Vector2(-6125, -429)
-texture = ExtResource("8_q40bt")
+texture = ExtResource("39_q7kvc")
 
 [node name="MoitaTeste14" type="Sprite2D" parent="background/1/Composição Teto" unique_id=2139765725]
 position = Vector2(-6267, -329)
-texture = ExtResource("8_q40bt")
+texture = ExtResource("39_q7kvc")
 
 [node name="MoitaTeste7" type="Sprite2D" parent="background/1/Composição Teto" unique_id=681716006]
 position = Vector2(-6423, -714)
-texture = ExtResource("8_q40bt")
+texture = ExtResource("39_q7kvc")
 
 [node name="MoitaTeste8" type="Sprite2D" parent="background/1/Composição Teto" unique_id=1413221148]
 position = Vector2(-5874, 84)
-texture = ExtResource("8_q40bt")
+texture = ExtResource("39_q7kvc")
 
 [node name="MoitaTeste16" type="Sprite2D" parent="background/1/Composição Teto" unique_id=1378584905]
 position = Vector2(-5424, 119)
-texture = ExtResource("8_q40bt")
+texture = ExtResource("39_q7kvc")
 
 [node name="MoitaTeste17" type="Sprite2D" parent="background/1/Composição Teto" unique_id=2100843895]
 position = Vector2(-5075, 99)
-texture = ExtResource("8_q40bt")
+texture = ExtResource("39_q7kvc")
 
 [node name="MoitaTeste18" type="Sprite2D" parent="background/1/Composição Teto" unique_id=449690492]
 position = Vector2(-4736, 144)
-texture = ExtResource("8_q40bt")
+texture = ExtResource("39_q7kvc")
 
 [node name="MoitaTeste20" type="Sprite2D" parent="background/1/Composição Teto" unique_id=609128407]
 position = Vector2(-4215, 122)
-texture = ExtResource("8_q40bt")
+texture = ExtResource("39_q7kvc")
 
 [node name="MoitaTeste22" type="Sprite2D" parent="background/1/Composição Teto" unique_id=1131118469]
 position = Vector2(-3709, -134)
-texture = ExtResource("8_q40bt")
+texture = ExtResource("39_q7kvc")
 
 [node name="MoitaTeste24" type="Sprite2D" parent="background/1/Composição Teto" unique_id=417863141]
 position = Vector2(-3295, -426)
-texture = ExtResource("8_q40bt")
+texture = ExtResource("39_q7kvc")
 
 [node name="MoitaTeste25" type="Sprite2D" parent="background/1/Composição Teto" unique_id=1228905862]
 position = Vector2(-3086, -606)
-texture = ExtResource("8_q40bt")
+texture = ExtResource("39_q7kvc")
 
 [node name="MoitaTeste27" type="Sprite2D" parent="background/1/Composição Teto" unique_id=1342236581]
 position = Vector2(-2636, -862)
-texture = ExtResource("8_q40bt")
+texture = ExtResource("39_q7kvc")
 
 [node name="MoitaTeste30" type="Sprite2D" parent="background/1/Composição Teto" unique_id=1595591577]
 position = Vector2(-2070, -943)
-texture = ExtResource("8_q40bt")
+texture = ExtResource("39_q7kvc")
 
 [node name="MoitaTeste31" type="Sprite2D" parent="background/1/Composição Teto" unique_id=1345468436]
 position = Vector2(-1812, -1004)
-texture = ExtResource("8_q40bt")
+texture = ExtResource("39_q7kvc")
 
 [node name="MoitaTeste34" type="Sprite2D" parent="background/1/Composição Teto" unique_id=1012915111]
 position = Vector2(-892, -948)
-texture = ExtResource("8_q40bt")
+texture = ExtResource("39_q7kvc")
 
 [node name="MoitaTeste35" type="Sprite2D" parent="background/1/Composição Teto" unique_id=706431457]
 position = Vector2(-629, -1049)
-texture = ExtResource("8_q40bt")
+texture = ExtResource("39_q7kvc")
 
 [node name="MoitaTeste37" type="Sprite2D" parent="background/1/Composição Teto" unique_id=536803301]
 position = Vector2(-38, -988)
-texture = ExtResource("8_q40bt")
+texture = ExtResource("39_q7kvc")
 
 [node name="MoitaTeste39" type="Sprite2D" parent="background/1/Composição Teto" unique_id=210724851]
 position = Vector2(555, -982)
-texture = ExtResource("8_q40bt")
+texture = ExtResource("39_q7kvc")
 
 [node name="MoitaTeste40" type="Sprite2D" parent="background/1/Composição Teto" unique_id=333601965]
 position = Vector2(849, -896)
-texture = ExtResource("8_q40bt")
+texture = ExtResource("39_q7kvc")
 
 [node name="MoitaTeste42" type="Sprite2D" parent="background/1/Composição Teto" unique_id=136341634]
 position = Vector2(1308, -668)
-texture = ExtResource("8_q40bt")
+texture = ExtResource("39_q7kvc")
 
 [node name="MoitaTeste44" type="Sprite2D" parent="background/1/Composição Teto" unique_id=121064579]
 position = Vector2(1732, -265)
-texture = ExtResource("8_q40bt")
+texture = ExtResource("39_q7kvc")
 
 [node name="MoitaTeste47" type="Sprite2D" parent="background/1/Composição Teto" unique_id=921251926]
 position = Vector2(2045, 449)
-texture = ExtResource("8_q40bt")
+texture = ExtResource("39_q7kvc")
 
 [node name="MoitaTeste45" type="Sprite2D" parent="background/1/Composição Teto" unique_id=524561588]
 position = Vector2(1889, 289)
-texture = ExtResource("8_q40bt")
+texture = ExtResource("39_q7kvc")
 
 [node name="MoitaTeste53" type="Sprite2D" parent="background/1/Composição Teto" unique_id=830490183]
 position = Vector2(1750, 133)
 rotation = 0.785398
-texture = ExtResource("8_q40bt")
+texture = ExtResource("39_q7kvc")
 
 [node name="MoitaTeste54" type="Sprite2D" parent="background/1/Composição Teto" unique_id=61028255]
 position = Vector2(1689, -50)
 rotation = 0.785398
-texture = ExtResource("8_q40bt")
+texture = ExtResource("39_q7kvc")
 
 [node name="MoitaTeste48" type="Sprite2D" parent="background/1/Composição Teto" unique_id=1631906069]
 position = Vector2(2280, 475)
-texture = ExtResource("8_q40bt")
+texture = ExtResource("39_q7kvc")
 
 [node name="MoitaTeste43" type="Sprite2D" parent="background/1/Composição Teto" unique_id=777011866]
 position = Vector2(1619, -418)
-texture = ExtResource("8_q40bt")
+texture = ExtResource("39_q7kvc")
 
 [node name="MoitaTeste46" type="Sprite2D" parent="background/1/Composição Teto" unique_id=454175586]
 position = Vector2(1471, -554)
-texture = ExtResource("8_q40bt")
+texture = ExtResource("39_q7kvc")
 
 [node name="MoitaTeste32" type="Sprite2D" parent="background/1/Composição Teto" unique_id=514737672]
 position = Vector2(-1504, -908)
-texture = ExtResource("8_q40bt")
+texture = ExtResource("39_q7kvc")
 
 [node name="MoitaTeste36" type="Sprite2D" parent="background/1/Composição Teto" unique_id=2047969264]
 position = Vector2(-367, -953)
-texture = ExtResource("8_q40bt")
+texture = ExtResource("39_q7kvc")
 
 [node name="MoitaTeste38" type="Sprite2D" parent="background/1/Composição Teto" unique_id=1681910948]
 position = Vector2(275, -1075)
-texture = ExtResource("8_q40bt")
+texture = ExtResource("39_q7kvc")
 
 [node name="MoitaTeste41" type="Sprite2D" parent="background/1/Composição Teto" unique_id=2081343260]
 position = Vector2(1076, -806)
-texture = ExtResource("8_q40bt")
+texture = ExtResource("39_q7kvc")
 
 [node name="MoitaTeste33" type="Sprite2D" parent="background/1/Composição Teto" unique_id=1757895080]
 position = Vector2(-1201, -994)
-texture = ExtResource("8_q40bt")
+texture = ExtResource("39_q7kvc")
 
 [node name="MoitaTeste26" type="Sprite2D" parent="background/1/Composição Teto" unique_id=1500770878]
 position = Vector2(-2918, -746)
-texture = ExtResource("8_q40bt")
+texture = ExtResource("39_q7kvc")
 
 [node name="MoitaTeste28" type="Sprite2D" parent="background/1/Composição Teto" unique_id=943291890]
 position = Vector2(-2352, -978)
-texture = ExtResource("8_q40bt")
+texture = ExtResource("39_q7kvc")
 
 [node name="MoitaTeste23" type="Sprite2D" parent="background/1/Composição Teto" unique_id=135999055]
 position = Vector2(-3459, -234)
-texture = ExtResource("8_q40bt")
+texture = ExtResource("39_q7kvc")
 
 [node name="MoitaTeste19" type="Sprite2D" parent="background/1/Composição Teto" unique_id=1020482045]
 position = Vector2(-4462, 82)
-texture = ExtResource("8_q40bt")
+texture = ExtResource("39_q7kvc")
 
 [node name="MoitaTeste21" type="Sprite2D" parent="background/1/Composição Teto" unique_id=887820432]
 position = Vector2(-3949, 46)
-texture = ExtResource("8_q40bt")
+texture = ExtResource("39_q7kvc")
 
 [node name="MoitaTeste9" type="Sprite2D" parent="background/1/Composição Teto" unique_id=371817245]
 position = Vector2(-6044, -47)
-texture = ExtResource("8_q40bt")
+texture = ExtResource("39_q7kvc")
 flip_h = true
 
 [node name="MoitaTeste52" type="Sprite2D" parent="background/1/Composição Teto" unique_id=172955390]
 position = Vector2(-6044, -47)
-texture = ExtResource("8_q40bt")
+texture = ExtResource("39_q7kvc")
 flip_h = true
 
 [node name="MoitaTeste12" type="Sprite2D" parent="background/1/Composição Teto" unique_id=1685065726]
 position = Vector2(-5656, 45)
-texture = ExtResource("8_q40bt")
+texture = ExtResource("39_q7kvc")
 
 [node name="MoitaTeste15" type="Sprite2D" parent="background/1/Composição Teto" unique_id=924479439]
 position = Vector2(-5656, 45)
-texture = ExtResource("8_q40bt")
+texture = ExtResource("39_q7kvc")
 
 [node name="MoitaTeste29" type="Sprite2D" parent="background/1/Composição Teto" unique_id=2014749570]
 position = Vector2(-6163, -199)
-texture = ExtResource("8_q40bt")
+texture = ExtResource("39_q7kvc")
 
 [node name="82SemTítulo0000253520251125200859" type="Sprite2D" parent="background/1/Composição Teto" unique_id=635104932]
 modulate = Color(3.2944162, 3.2944162, 3.2944162, 1)
 position = Vector2(1877.0001, 503)
 scale = Vector2(0.6478874, 0.64788735)
-texture = ExtResource("10_57s1j")
+texture = ExtResource("19_15e74")
 
 [node name="MoitaChao1" type="Sprite2D" parent="background/1/Composição Teto" unique_id=1329470306]
 position = Vector2(-4416.2104, 1093.183)
 scale = Vector2(0.8804264, 0.88042635)
-texture = ExtResource("38_co6lv")
+texture = ExtResource("40_2isqs")
 
 [node name="MoitaChao2" type="Sprite2D" parent="background/1/Composição Teto" unique_id=1148838663]
 position = Vector2(-5861.464, 1093.183)
 scale = Vector2(0.8804264, 0.88042635)
-texture = ExtResource("38_co6lv")
+texture = ExtResource("40_2isqs")
 
 [node name="MoitaChao3" type="Sprite2D" parent="background/1/Composição Teto" unique_id=1634810201]
 position = Vector2(-3176.5854, 1093.183)
 scale = Vector2(0.8804264, 0.88042635)
-texture = ExtResource("38_co6lv")
+texture = ExtResource("40_2isqs")
 
 [node name="2" type="CanvasLayer" parent="background" unique_id=519210984]
 follow_viewport_enabled = true
@@ -1092,62 +1093,62 @@ follow_viewport_scale = 1.05
 modulate = Color(0.012617188, 0.012617188, 0.012617188, 1)
 position = Vector2(-6467.224, 1011.95245)
 scale = Vector2(0.589612, 0.58961195)
-texture = ExtResource("33_5jfld")
+texture = ExtResource("41_8bc0w")
 flip_h = true
 
 [node name="PedraSmusgo2" type="Sprite2D" parent="background/2" unique_id=1999970720]
 modulate = Color(0.012617188, 0.012617188, 0.012617188, 1)
 position = Vector2(-1681.9999, 956)
 scale = Vector2(0.65453774, 0.65453774)
-texture = ExtResource("33_5jfld")
+texture = ExtResource("41_8bc0w")
 flip_h = true
 
 [node name="Frontfolha2" type="Sprite2D" parent="background/2" unique_id=1219200441]
 position = Vector2(-6768, 1152)
-texture = ExtResource("7_5ka01")
+texture = ExtResource("42_efdd8")
 
 [node name="PedraSmusgo3" type="Sprite2D" parent="background/2" unique_id=717286608]
 modulate = Color(0.012617188, 0.012617188, 0.012617188, 1)
 position = Vector2(-7980, -191.00002)
 scale = Vector2(0.567637, 0.567637)
-texture = ExtResource("33_5jfld")
+texture = ExtResource("41_8bc0w")
 
 [node name="Frontfolha10" type="Sprite2D" parent="background/2" unique_id=1383584591]
 position = Vector2(-8475, -35)
-texture = ExtResource("7_5ka01")
+texture = ExtResource("42_efdd8")
 
 [node name="Frontfolha4" type="Sprite2D" parent="background/2" unique_id=620813531]
 position = Vector2(-4533, 1146)
-texture = ExtResource("7_5ka01")
+texture = ExtResource("42_efdd8")
 
 [node name="Frontfolha11" type="Sprite2D" parent="background/2" unique_id=1155211021]
 position = Vector2(-3734.2856, 1146)
-texture = ExtResource("7_5ka01")
+texture = ExtResource("42_efdd8")
 
 [node name="Frontfolha7" type="Sprite2D" parent="background/2" unique_id=1554285593]
 position = Vector2(1598, 1144)
-texture = ExtResource("7_5ka01")
+texture = ExtResource("42_efdd8")
 
 [node name="Frontfolha8" type="Sprite2D" parent="background/2" unique_id=1884666621]
 position = Vector2(357, 1132)
-texture = ExtResource("7_5ka01")
+texture = ExtResource("42_efdd8")
 
 [node name="Frontfolha9" type="Sprite2D" parent="background/2" unique_id=713788850]
 position = Vector2(-1006, 1086)
-texture = ExtResource("7_5ka01")
+texture = ExtResource("42_efdd8")
 
 [node name="Frontfolha3" type="Sprite2D" parent="background/2" unique_id=550620463]
 position = Vector2(-5828, 1123)
-texture = ExtResource("7_5ka01")
+texture = ExtResource("42_efdd8")
 flip_h = true
 
 [node name="Frontfolha5" type="Sprite2D" parent="background/2" unique_id=1597396794]
 position = Vector2(-3284, 1097)
-texture = ExtResource("7_5ka01")
+texture = ExtResource("42_efdd8")
 
 [node name="Frontfolha6" type="Sprite2D" parent="background/2" unique_id=467630543]
 position = Vector2(-2150, 1128)
-texture = ExtResource("7_5ka01")
+texture = ExtResource("42_efdd8")
 flip_h = true
 
 [node name="Teto" type="Node2D" parent="background/2" unique_id=2065028826]
@@ -1156,243 +1157,243 @@ flip_h = true
 
 [node name="Cipó" type="Sprite2D" parent="background/2/Teto/Sombra" unique_id=2068711003]
 position = Vector2(-5467, 179)
-texture = ExtResource("6_wnjnd")
+texture = ExtResource("43_yhsfw")
 
 [node name="Cipó3" type="Sprite2D" parent="background/2/Teto/Sombra" unique_id=213161824]
 position = Vector2(-4402, 166)
-texture = ExtResource("6_wnjnd")
+texture = ExtResource("43_yhsfw")
 
 [node name="Cipó4" type="Sprite2D" parent="background/2/Teto/Sombra" unique_id=1338531589]
 position = Vector2(-2426, -816)
-texture = ExtResource("6_wnjnd")
+texture = ExtResource("43_yhsfw")
 
 [node name="Cipó6" type="Sprite2D" parent="background/2/Teto/Sombra" unique_id=1365249411]
 position = Vector2(-2904, -634)
-texture = ExtResource("6_wnjnd")
+texture = ExtResource("43_yhsfw")
 
 [node name="Cipó7" type="Sprite2D" parent="background/2/Teto/Sombra" unique_id=1062125988]
 position = Vector2(-1476, -778)
-texture = ExtResource("6_wnjnd")
+texture = ExtResource("43_yhsfw")
 
 [node name="Cipó8" type="Sprite2D" parent="background/2/Teto/Sombra" unique_id=1399981158]
 position = Vector2(-1103, -870)
-texture = ExtResource("6_wnjnd")
+texture = ExtResource("43_yhsfw")
 
 [node name="Cipó9" type="Sprite2D" parent="background/2/Teto/Sombra" unique_id=133266016]
 position = Vector2(-63, -795)
-texture = ExtResource("6_wnjnd")
+texture = ExtResource("43_yhsfw")
 
 [node name="Cipó10" type="Sprite2D" parent="background/2/Teto/Sombra" unique_id=1235538657]
 position = Vector2(1215, -594)
-texture = ExtResource("6_wnjnd")
+texture = ExtResource("43_yhsfw")
 
 [node name="Cipó11" type="Sprite2D" parent="background/2/Teto/Sombra" unique_id=1556044035]
 position = Vector2(810, -799)
-texture = ExtResource("6_wnjnd")
+texture = ExtResource("43_yhsfw")
 
 [node name="Cipó12" type="Sprite2D" parent="background/2/Teto/Sombra" unique_id=1371633281]
 position = Vector2(1554, -357)
-texture = ExtResource("6_wnjnd")
+texture = ExtResource("43_yhsfw")
 
 [node name="Cipó13" type="Sprite2D" parent="background/2/Teto/Sombra" unique_id=1189945554]
 position = Vector2(2302, 478)
-texture = ExtResource("6_wnjnd")
+texture = ExtResource("43_yhsfw")
 
 [node name="Cipó14" type="Sprite2D" parent="background/2/Teto/Sombra" unique_id=1644199404]
 position = Vector2(1776, -126)
-texture = ExtResource("6_wnjnd")
+texture = ExtResource("43_yhsfw")
 
 [node name="Cipó2" type="Sprite2D" parent="background/2/Teto/Sombra" unique_id=347436730]
 position = Vector2(-7055, -629)
-texture = ExtResource("6_wnjnd")
+texture = ExtResource("43_yhsfw")
 
 [node name="Cipó17" type="Sprite2D" parent="background/2/Teto/Sombra" unique_id=228911773]
 position = Vector2(-6844, -532)
-texture = ExtResource("6_wnjnd")
+texture = ExtResource("43_yhsfw")
 
 [node name="Cipó5" type="Sprite2D" parent="background/2/Teto/Sombra" unique_id=1319380584]
 position = Vector2(-7608, -496)
-texture = ExtResource("6_wnjnd")
+texture = ExtResource("43_yhsfw")
 
 [node name="Cipó15" type="Sprite2D" parent="background/2/Teto/Sombra" unique_id=186587987]
 position = Vector2(-8296, -541)
-texture = ExtResource("6_wnjnd")
+texture = ExtResource("43_yhsfw")
 
 [node name="Cipó16" type="Sprite2D" parent="background/2/Teto/Sombra" unique_id=1521974978]
 position = Vector2(-8665, -605)
-texture = ExtResource("6_wnjnd")
+texture = ExtResource("43_yhsfw")
 
 [node name="Frontfolha" type="Sprite2D" parent="background/2/Teto/Sombra" unique_id=1393455569]
 position = Vector2(-5842, -216)
 rotation = 3.14159
-texture = ExtResource("7_5ka01")
+texture = ExtResource("42_efdd8")
 
 [node name="Frontfolha8" type="Sprite2D" parent="background/2/Teto/Sombra" unique_id=1220561998]
 position = Vector2(-5504, -45)
 rotation = 3.14159
-texture = ExtResource("7_5ka01")
+texture = ExtResource("42_efdd8")
 
 [node name="Frontfolha9" type="Sprite2D" parent="background/2/Teto/Sombra" unique_id=1905461882]
 position = Vector2(-4876, 61)
 rotation = 3.14159
-texture = ExtResource("7_5ka01")
+texture = ExtResource("42_efdd8")
 
 [node name="Frontfolha10" type="Sprite2D" parent="background/2/Teto/Sombra" unique_id=1300903800]
 position = Vector2(-4226, -14)
 rotation = 3.14159
-texture = ExtResource("7_5ka01")
+texture = ExtResource("42_efdd8")
 
 [node name="Frontfolha11" type="Sprite2D" parent="background/2/Teto/Sombra" unique_id=2141951376]
 position = Vector2(-4025, -162)
 rotation = 3.14159
-texture = ExtResource("7_5ka01")
+texture = ExtResource("42_efdd8")
 
 [node name="Frontfolha12" type="Sprite2D" parent="background/2/Teto/Sombra" unique_id=1239651159]
 position = Vector2(-3695, -338)
 rotation = 3.14159
-texture = ExtResource("7_5ka01")
+texture = ExtResource("42_efdd8")
 
 [node name="Frontfolha13" type="Sprite2D" parent="background/2/Teto/Sombra" unique_id=187509034]
 position = Vector2(-3566, -523)
 rotation = 3.14159
-texture = ExtResource("7_5ka01")
+texture = ExtResource("42_efdd8")
 
 [node name="Frontfolha14" type="Sprite2D" parent="background/2/Teto/Sombra" unique_id=370411323]
 position = Vector2(-3346, -708)
 rotation = 3.14159
-texture = ExtResource("7_5ka01")
+texture = ExtResource("42_efdd8")
 
 [node name="Frontfolha15" type="Sprite2D" parent="background/2/Teto/Sombra" unique_id=284434327]
 position = Vector2(-2869, -921)
 rotation = 3.14159
-texture = ExtResource("7_5ka01")
+texture = ExtResource("42_efdd8")
 
 [node name="Frontfolha16" type="Sprite2D" parent="background/2/Teto/Sombra" unique_id=1360329085]
 position = Vector2(-2251, -1018)
 rotation = 3.14159
-texture = ExtResource("7_5ka01")
+texture = ExtResource("42_efdd8")
 
 [node name="Frontfolha17" type="Sprite2D" parent="background/2/Teto/Sombra" unique_id=1352153394]
 position = Vector2(-1474, -963)
 rotation = 3.14159
-texture = ExtResource("7_5ka01")
+texture = ExtResource("42_efdd8")
 
 [node name="Frontfolha18" type="Sprite2D" parent="background/2/Teto/Sombra" unique_id=1026298698]
 position = Vector2(-752, -1073)
 rotation = 3.14159
-texture = ExtResource("7_5ka01")
+texture = ExtResource("42_efdd8")
 
 [node name="Frontfolha19" type="Sprite2D" parent="background/2/Teto/Sombra" unique_id=15564266]
 position = Vector2(-59, -1002)
 rotation = 3.14159
-texture = ExtResource("7_5ka01")
+texture = ExtResource("42_efdd8")
 
 [node name="Frontfolha20" type="Sprite2D" parent="background/2/Teto/Sombra" unique_id=1637844086]
 position = Vector2(434, -1086)
 rotation = 3.14159
-texture = ExtResource("7_5ka01")
+texture = ExtResource("42_efdd8")
 
 [node name="Frontfolha21" type="Sprite2D" parent="background/2/Teto/Sombra" unique_id=928473866]
 position = Vector2(1207, -852)
 rotation = 3.14159
-texture = ExtResource("7_5ka01")
+texture = ExtResource("42_efdd8")
 
 [node name="Frontfolha22" type="Sprite2D" parent="background/2/Teto/Sombra" unique_id=1883931013]
 position = Vector2(1833, -563)
 rotation = 3.14159
-texture = ExtResource("7_5ka01")
+texture = ExtResource("42_efdd8")
 
 [node name="Frontfolha24" type="Sprite2D" parent="background/2/Teto/Sombra" unique_id=2106275354]
 position = Vector2(1768, -500)
 rotation = 3.14159
-texture = ExtResource("7_5ka01")
+texture = ExtResource("42_efdd8")
 
 [node name="Frontfolha23" type="Sprite2D" parent="background/2/Teto/Sombra" unique_id=1691199641]
 position = Vector2(1573, -704)
 rotation = 3.14159
-texture = ExtResource("7_5ka01")
+texture = ExtResource("42_efdd8")
 
 [node name="Frontfolha28" type="Sprite2D" parent="background/2/Teto/Sombra" unique_id=794807944]
 position = Vector2(2007, -222)
 rotation = 3.14159
-texture = ExtResource("7_5ka01")
+texture = ExtResource("42_efdd8")
 
 [node name="Frontfolha29" type="Sprite2D" parent="background/2/Teto/Sombra" unique_id=1506840753]
 position = Vector2(1907, -362)
 rotation = 3.14159
-texture = ExtResource("7_5ka01")
+texture = ExtResource("42_efdd8")
 
 [node name="Frontfolha26" type="Sprite2D" parent="background/2/Teto/Sombra" unique_id=1670680997]
 position = Vector2(2110, 4)
 rotation = 3.14159
-texture = ExtResource("7_5ka01")
+texture = ExtResource("42_efdd8")
 
 [node name="Frontfolha30" type="Sprite2D" parent="background/2/Teto/Sombra" unique_id=1613698309]
 position = Vector2(2059, -106)
 rotation = 3.14159
-texture = ExtResource("7_5ka01")
+texture = ExtResource("42_efdd8")
 
 [node name="Frontfolha27" type="Sprite2D" parent="background/2/Teto/Sombra" unique_id=594628997]
 position = Vector2(2164, 110)
 rotation = 3.14159
-texture = ExtResource("7_5ka01")
+texture = ExtResource("42_efdd8")
 
 [node name="Frontfolha31" type="Sprite2D" parent="background/2/Teto/Sombra" unique_id=669746850]
 position = Vector2(2357, 193)
 rotation = 3.14159
-texture = ExtResource("7_5ka01")
+texture = ExtResource("42_efdd8")
 
 [node name="Frontfolha32" type="Sprite2D" parent="background/2/Teto/Sombra" unique_id=1348077750]
 position = Vector2(2376.3633, 347)
 rotation = 3.14159
-texture = ExtResource("7_5ka01")
+texture = ExtResource("42_efdd8")
 
 [node name="Frontfolha2" type="Sprite2D" parent="background/2/Teto/Sombra" unique_id=238940641]
 position = Vector2(-6030, -386)
 rotation = 3.14159
-texture = ExtResource("7_5ka01")
+texture = ExtResource("42_efdd8")
 
 [node name="Frontfolha3" type="Sprite2D" parent="background/2/Teto/Sombra" unique_id=1624997753]
 position = Vector2(-6164, -522)
 rotation = 3.14159
-texture = ExtResource("7_5ka01")
+texture = ExtResource("42_efdd8")
 
 [node name="Frontfolha4" type="Sprite2D" parent="background/2/Teto/Sombra" unique_id=2108200851]
 position = Vector2(-6376, -708)
 rotation = 3.14159
-texture = ExtResource("7_5ka01")
+texture = ExtResource("42_efdd8")
 
 [node name="Frontfolha5" type="Sprite2D" parent="background/2/Teto/Sombra" unique_id=1597675348]
 position = Vector2(-6810, -705)
 rotation = 3.14159
-texture = ExtResource("7_5ka01")
+texture = ExtResource("42_efdd8")
 
 [node name="Frontfolha6" type="Sprite2D" parent="background/2/Teto/Sombra" unique_id=257657776]
 position = Vector2(-7661, -656)
 rotation = 3.14159
-texture = ExtResource("7_5ka01")
+texture = ExtResource("42_efdd8")
 
 [node name="Frontfolha7" type="Sprite2D" parent="background/2/Teto/Sombra" unique_id=2142048967]
 position = Vector2(-7903, -788)
 rotation = 3.14159
-texture = ExtResource("7_5ka01")
+texture = ExtResource("42_efdd8")
 
 [node name="Frontfolha25" type="Sprite2D" parent="background/2/Teto/Sombra" unique_id=225257775]
 position = Vector2(-8645, -757)
 rotation = 3.14159
-texture = ExtResource("7_5ka01")
+texture = ExtResource("42_efdd8")
 
 [node name="ArvoreFundo1" type="Sprite2D" parent="background/2/Teto/Sombra" unique_id=1172048662]
 modulate = Color(0.012617188, 0.012617188, 0.012617188, 1)
 position = Vector2(-4947, 589)
-texture = ExtResource("41_7ywmt")
+texture = ExtResource("44_4gdmh")
 
 [node name="ArvoreFundo2" type="Sprite2D" parent="background/2/Teto/Sombra" unique_id=1761674995]
 modulate = Color(0.012617188, 0.012617188, 0.012617188, 1)
 position = Vector2(-3986.875, 507.37506)
 rotation = -0.1250669
 scale = Vector2(1.0164235, 1.0534081)
-texture = ExtResource("42_co6lv")
+texture = ExtResource("45_mlb15")
 flip_h = true
 
 [node name="ArvoreFundo3" type="Sprite2D" parent="background/2/Teto/Sombra" unique_id=1757370523]
@@ -1400,29 +1401,29 @@ modulate = Color(0.012617188, 0.012617188, 0.012617188, 1)
 position = Vector2(-5655.9673, 505.32782)
 rotation = 0.10325718
 scale = Vector2(1.0164235, 1.0689989)
-texture = ExtResource("42_co6lv")
+texture = ExtResource("45_mlb15")
 
 [node name="ArvoreFundo4" type="Sprite2D" parent="background/2/Teto/Sombra" unique_id=1389864795]
 modulate = Color(0.012617188, 0.012617188, 0.012617188, 1)
 position = Vector2(-7733.334, -177.14294)
 rotation = 0.10325718
 scale = Vector2(1.0164235, 1.0689989)
-texture = ExtResource("42_co6lv")
+texture = ExtResource("45_mlb15")
 
 [node name="3" type="CanvasLayer" parent="background" unique_id=1953598573]
 follow_viewport_enabled = true
 
 [node name="BGM_Player" type="Node" parent="." unique_id=1658500375]
-script = ExtResource("27_nh2iu")
-musica = ExtResource("28_m4yll")
+script = ExtResource("46_nkli7")
+musica = ExtResource("47_xn741")
 metadata/_custom_type_script = "uid://dd16yu704x6wt"
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=997109402]
 process_mode = 3
-stream = ExtResource("43_gr3ec")
+stream = ExtResource("48_8j56j")
 autoplay = true
 
-[node name="MainCamera" parent="." unique_id=1186591248 node_paths=PackedStringArray("target", "limite_camera") instance=ExtResource("31_f8u2d")]
+[node name="MainCamera" parent="." unique_id=1186591248 node_paths=PackedStringArray("target", "limite_camera") instance=ExtResource("49_r2jgk")]
 position = Vector2(-8701.006, -217.99994)
 zoom = Vector2(0.8, 0.8)
 limit_enabled = true

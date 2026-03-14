@@ -30,7 +30,7 @@ func _on_area_entered(area: Area2D) -> void:
 		var fx:GPUParticles2D = null
 		if vfx:
 			fx = vfx.instantiate()
-			parent.get_parent().add_child(fx)
+			get_parent().add_child(fx)
 			fx.global_position = area.get_child(0).global_position
 			fx.restart()
 		Mundos.HitFreeze(hit_freeze)

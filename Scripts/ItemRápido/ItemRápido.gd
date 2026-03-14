@@ -32,7 +32,8 @@ func _input(_event: InputEvent) -> void:
 			%IconItem.texture = cena_inventario.PegaSprite(id_item)
 			%NumRap.text = str(Inventario.inventario[id_item][1])
 			
-	if Input.is_action_just_pressed("usar_item"):
+	if Input.is_action_just_pressed("usar_item") and Mundos.player:
+		if !Mundos.player.pode_item: return
 		if Inventario.inventario.size() > 0:
 			cena_inventario.UsaItem(id_item)
 			usa_item.emit()

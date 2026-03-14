@@ -1,6 +1,5 @@
 [gd_scene format=4 uid="uid://dfuswe0wcsy33"]
 
-[ext_resource type="Texture2D" uid="uid://cqu5scrrmr5n5" path="res://Sprites/Cenário/Mata_Atlantica/Background/Iluminação e Fundo/FUNDOCEU.png" id="1_biqkp"]
 [ext_resource type="Texture2D" uid="uid://e4138tmbd6ck" path="res://Sprites/Cenário/Mata_Atlantica/Background/110 Sem Título_20260213153415.png" id="2_ev0np"]
 [ext_resource type="Shader" uid="uid://c1omtsxv04udh" path="res://Scripts/Shaders/blur_shader.gdshader" id="3_3sctc"]
 [ext_resource type="Texture2D" uid="uid://3g4iv5385ymw" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/arvore_S2.png" id="4_8whvt"]
@@ -249,13 +248,6 @@ size = Vector2(1417, 141)
 size = Vector2(1449, 44)
 
 [node name="Tutorial_1" type="Node2D" unique_id=1617733573]
-
-[node name="FundoCeu" type="Sprite2D" parent="." unique_id=1282532367]
-visible = false
-light_mask = 2
-position = Vector2(4670.9995, -1626.7612)
-scale = Vector2(4.775989, 1.0387884)
-texture = ExtResource("1_biqkp")
 
 [node name="-4" type="CanvasLayer" parent="." unique_id=2045436367]
 follow_viewport_enabled = true

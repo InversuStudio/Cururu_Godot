@@ -212,6 +212,7 @@
 [ext_resource type="Texture2D" uid="uid://wni3igc4hbdk" path="res://Sprites/Inimigos/Boitata/Animacoes/Pilar/boitata_grito_chamas_corpo/boitata_73.png" id="164_xraj6"]
 [ext_resource type="PackedScene" uid="uid://dct0yu1s5isad" path="res://Objetos/Boss/Boitata/BolaDeFogo.tscn" id="205_ry0yp"]
 [ext_resource type="PackedScene" uid="uid://dppj6i0ifoocp" path="res://Objetos/Boss/Boitata/PilarFogo.tscn" id="206_5xynu"]
+[ext_resource type="Script" uid="uid://c4x7bs5levrly" path="res://Scripts/Boss/TrocaLado.gd" id="210_72l2h"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_iwjnr"]
 shader = ExtResource("7_q8716")
@@ -946,6 +947,9 @@ height = 568.0
 radius = 214.0
 height = 606.0
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_72l2h"]
+size = Vector2(144, 1529)
+
 [sub_resource type="Animation" id="Animation_16hqa"]
 resource_name = "CospeFogo"
 length = 0.9
@@ -1110,6 +1114,82 @@ tracks/5/keys = {
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
 "update": 1,
 "values": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+}
+
+[sub_resource type="Animation" id="Animation_72l2h"]
+resource_name = "Escondido"
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("SpriteMain:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"Escondido"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("SpriteMain:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("SpriteCabeca:animation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.0009999999),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"Escondido"]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("SpriteCabeca:frame")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.0009999999),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("SpriteCorpo:animation")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0.0009999999),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"Escondido"]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("SpriteCorpo:frame")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0.0009999999),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
 }
 
 [sub_resource type="Animation" id="Animation_xraj6"]
@@ -1510,8 +1590,9 @@ tracks/7/keys = {
 "values": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
 }
 
-[sub_resource type="Animation" id="Animation_aev7w"]
-length = 0.001
+[sub_resource type="Animation" id="Animation_r4nid"]
+resource_name = "Some"
+length = 0.7501
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -1531,10 +1612,10 @@ tracks/1/path = NodePath("SpriteMain:frame")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
+"times": PackedFloat32Array(0, 0.08333331, 0.16666669, 0.25003338, 0.33333334, 0.4166667, 0.50000006, 0.5833334),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
 "update": 1,
-"values": [5]
+"values": [8, 7, 6, 5, 4, 3, 2, 1]
 }
 tracks/2/type = "value"
 tracks/2/imported = false
@@ -1546,7 +1627,7 @@ tracks/2/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [&"Grito"]
+"values": [&"Surgimento"]
 }
 tracks/3/type = "value"
 tracks/3/imported = false
@@ -1555,10 +1636,10 @@ tracks/3/path = NodePath("SpriteCabeca:frame")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
+"times": PackedFloat32Array(0.08333331, 0.16666669, 0.25000003, 0.33333334, 0.41663337, 0.50000006, 0.5833334),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
 "update": 1,
-"values": [5]
+"values": [7, 6, 5, 4, 2, 1, 0]
 }
 tracks/4/type = "value"
 tracks/4/imported = false
@@ -1570,7 +1651,7 @@ tracks/4/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [&"Grito"]
+"values": [&"Surgimento"]
 }
 tracks/5/type = "value"
 tracks/5/imported = false
@@ -1579,22 +1660,10 @@ tracks/5/path = NodePath("SpriteCorpo:frame")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
+"times": PackedFloat32Array(0, 0.08333337, 0.16666675, 0.25, 0.33333337, 0.4166667, 0.5833334),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
 "update": 1,
-"values": [5]
-}
-tracks/6/type = "value"
-tracks/6/imported = false
-tracks/6/enabled = true
-tracks/6/path = NodePath("SpriteMain:material:shader_parameter/valor")
-tracks/6/interp = 1
-tracks/6/loop_wrap = true
-tracks/6/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [0.0]
+"values": [6, 5, 4, 3, 2, 1, 0]
 }
 
 [sub_resource type="Animation" id="Animation_sgy8v"]
@@ -1677,13 +1746,14 @@ tracks/5/keys = {
 _data = {
 &"CospeFogo": SubResource("Animation_16hqa"),
 &"Entrada": SubResource("Animation_183op"),
+&"Escondido": SubResource("Animation_72l2h"),
 &"Final": SubResource("Animation_xraj6"),
 &"Grito": SubResource("Animation_ojojp"),
 &"Idle": SubResource("Animation_0ddi0"),
 &"NocauteEnd": SubResource("Animation_0w5f0"),
 &"NocauteStart": SubResource("Animation_mjx0v"),
 &"Pilar": SubResource("Animation_fwdqd"),
-&"RESET": SubResource("Animation_aev7w"),
+&"Some": SubResource("Animation_r4nid"),
 &"Surge": SubResource("Animation_sgy8v")
 }
 
@@ -1698,9 +1768,9 @@ axis_stretch_horizontal = 1
 script = ExtResource("1_s15tt")
 tempo_idle_cuspe = 1.0
 tempo_idle_pilar = 2.5
-tempo_carga_pilar = 0.5
-tempo_ate_prox_pilar = 1.0
+tempo_carga_pilar = 0.2
 musica_luta = ExtResource("2_ojojp")
+zoom = 0.5
 gritos = Array[AudioStream]([ExtResource("88_q1nmn"), ExtResource("4_hbr26"), ExtResource("5_ycj6j")])
 dialogo = ExtResource("6_ycj6j")
 
@@ -1724,8 +1794,7 @@ position = Vector2(0, -1020)
 scale = Vector2(1.5, 1.5)
 sprite_frames = SubResource("SpriteFrames_nkv4g")
 animation = &"Surgimento"
-autoplay = "Escondido"
-frame = 5
+frame = 1
 
 [node name="SpriteCabeca" type="AnimatedSprite2D" parent="." unique_id=1407401025]
 unique_name_in_owner = true
@@ -1733,9 +1802,7 @@ material = SubResource("ShaderMaterial_183op")
 position = Vector2(0, -1020)
 scale = Vector2(1.5, 1.5)
 sprite_frames = SubResource("SpriteFrames_71r63")
-animation = &"Grito"
-autoplay = "Escondido"
-frame = 5
+animation = &"Surgimento"
 
 [node name="SpriteCorpo" type="AnimatedSprite2D" parent="." unique_id=1919865204]
 unique_name_in_owner = true
@@ -1743,9 +1810,7 @@ material = SubResource("ShaderMaterial_aev7w")
 position = Vector2(0, -1020)
 scale = Vector2(1.5, 1.5)
 sprite_frames = SubResource("SpriteFrames_tic1h")
-animation = &"Grito"
-autoplay = "Escondido"
-frame = 5
+animation = &"Surgimento"
 
 [node name="VidaBoss" type="Node" parent="." unique_id=1212445150]
 unique_name_in_owner = true
@@ -1808,9 +1873,17 @@ unique_name_in_owner = true
 position = Vector2(423, -933)
 gizmo_extents = 45.0
 
+[node name="ParedeCostas" type="StaticBody2D" parent="." unique_id=1341593828]
+unique_name_in_owner = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ParedeCostas" unique_id=1789736655]
+position = Vector2(-414, -865.5)
+shape = SubResource("RectangleShape2D_72l2h")
+
 [node name="Anim" type="AnimationPlayer" parent="." unique_id=1716167178]
 unique_name_in_owner = true
 libraries/ = SubResource("AnimationLibrary_mjx0v")
+autoplay = &"Escondido"
 
 [node name="GritoSFX" type="AudioStreamPlayer" parent="." unique_id=1024676001]
 unique_name_in_owner = true
@@ -1827,11 +1900,12 @@ start_state = NodePath("Start")
 script = ExtResource("72_0ddi0")
 state_idle = NodePath("../Idle")
 
-[node name="Idle" type="Node" parent="StateMachine" unique_id=1804984286 node_paths=PackedStringArray("state_cospe_fogo", "state_pilar_fogo", "state_nocaute")]
+[node name="Idle" type="Node" parent="StateMachine" unique_id=1804984286 node_paths=PackedStringArray("state_cospe_fogo", "state_pilar_fogo", "state_nocaute", "state_troca")]
 script = ExtResource("62_g25rt")
 state_cospe_fogo = NodePath("../CospeFogo")
 state_pilar_fogo = NodePath("../PilarFogo")
 state_nocaute = NodePath("../Nocaute")
+state_troca = NodePath("../TrocaLado")
 
 [node name="CospeFogo" type="Node" parent="StateMachine" unique_id=1716602888 node_paths=PackedStringArray("idle_state")]
 script = ExtResource("75_16hqa")
@@ -1842,6 +1916,10 @@ bola_fogo = ExtResource("205_ry0yp")
 script = ExtResource("85_fi4f6")
 idle_state = NodePath("../Idle")
 pilar = ExtResource("206_5xynu")
+
+[node name="TrocaLado" type="Node" parent="StateMachine" unique_id=159534355 node_paths=PackedStringArray("idle_state")]
+script = ExtResource("210_72l2h")
+idle_state = NodePath("../Idle")
 
 [node name="Nocaute" type="Node" parent="StateMachine" unique_id=1843257818 node_paths=PackedStringArray("state_idle", "state_final")]
 script = ExtResource("77_iqxfe")

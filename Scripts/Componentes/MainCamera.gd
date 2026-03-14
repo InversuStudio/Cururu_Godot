@@ -64,9 +64,9 @@ func Follow(delta:float) -> void:
 	
 	
 	if usa_look_ahead and seguindo:
-		la = lerpf(la, look_ahead * sign(target.input_move.x), .05)
-	else:
 		la = lerpf(la, 0.0, .05)
+	else:
+		la = lerpf(la, look_ahead * target.input_buffer[1], .05)
 	
 	global_position = global_position.lerp(target_pos + offset_target + Vector2(
 		la, look), delta * speed)

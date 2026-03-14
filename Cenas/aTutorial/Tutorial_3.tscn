@@ -932,16 +932,16 @@ position = Vector2(-15734, -1269)
 position = Vector2(-15739, -1525)
 nome_id = "MA_0_3"
 
-[node name="MA_1-1" parent="Background/0" unique_id=131704512 instance=ExtResource("28_fhn4p")]
+[node name="MA_01" parent="Background/0" unique_id=131704512 instance=ExtResource("28_fhn4p")]
 position = Vector2(-8002, -278)
-destino = &"res://Cenas/Mata_Atlantica/MA_1-1.tscn"
-posicao = Vector2(-8686, -142)
+destino = &"res://Cenas/Mata_Atlantica/MA_01.tscn"
+posicao = Vector2(5489, -4468.9995)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Background/0/MA_1-1" unique_id=235120184]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Background/0/MA_01" unique_id=235120184]
 position = Vector2(-214.5, -327)
 shape = SubResource("RectangleShape2D_ti6rg")
 
-[node name="Portal2" type="Sprite2D" parent="Background/0/MA_1-1/CollisionShape2D" unique_id=1776390214]
+[node name="Portal2" type="Sprite2D" parent="Background/0/MA_01/CollisionShape2D" unique_id=1776390214]
 position = Vector2(-66.5, 7.9999695)
 scale = Vector2(1, 2.847656)
 texture = ExtResource("29_qprck")
@@ -949,7 +949,7 @@ flip_h = true
 
 [node name="Tutorial_2" parent="Background/0" unique_id=143999190 instance=ExtResource("28_fhn4p")]
 position = Vector2(-18937, -3595)
-destino = &"res://Cenas/Mata_Atlantica/MA_1-2.tscn"
+destino = &"res://Cenas/aTutorial/Tutorial_2.tscn"
 posicao = Vector2(-16453, -4087)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Background/0/Tutorial_2" unique_id=606113050]
@@ -963,7 +963,7 @@ texture = ExtResource("29_qprck")
 
 [node name="Cururu" parent="Background/0" unique_id=1638125701 instance=ExtResource("30_est77")]
 z_index = 0
-position = Vector2(-8481, -273)
+position = Vector2(-18487, -3635)
 scale = Vector2(0.919994, 0.919994)
 
 [node name="Agua3" type="TileMapLayer" parent="Background/0" unique_id=1253382976 groups=["Agua"]]

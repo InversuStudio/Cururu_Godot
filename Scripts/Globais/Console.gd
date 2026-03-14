@@ -11,14 +11,29 @@ func _input(_event: InputEvent) -> void:
 			%Console.hide()
 			%TextoConsole.text = ""
 			%StatePlayer.text = ""
+			if Mundos.player:
+				Mundos.player.pode_mover = true
+				Mundos.player.pode_ataque = true
+				Mundos.player.pode_dash = true
+				Mundos.player.pode_item = true
 		else:
 			%Console.show()
+			%LinhaComando.grab_focus()
+			if Mundos.player:
+				Mundos.player.pode_mover = false
+				Mundos.player.pode_ataque = false
+				Mundos.player.pode_dash = false
+				Mundos.player.pode_item = false
+			await get_tree().create_timer(.1).timeout
+			%LinhaComando.text = ""
 
 func _Print(txt:Variant) -> void:
-	%TextoConsole.text += str(txt) + "[br]"
+	if %Console.visible:
+		%TextoConsole.text += str(txt) + "[br]"
 
 func _State(txt:String) -> void:
-	%StatePlayer.text += "State: " + txt + "[br]"
+	if %Console.visible:
+		%StatePlayer.text += "State: " + txt + "[br]"
 
 func MudaAbaSelect() -> void:
 	%Fase.text = Mundos.fase_atual
@@ -34,4 +49,22 @@ func Comando(line:String) -> void:
 					_Print(
 						"[color=dark_green]Trocou de fase: %s[/color]" % [cmd[1]])
 					break
+		
+		"save":
+			GameData.Save()
+		
+		"load":
+			GameData.leu_data = false
+			if await GameData.Load():
+				Console._Print("[color=dark_green]Save carregado[/color]")
+			else:
+				Console._Print("[color=dark_red]Save não encontrado[/color]")
+		
+		"kill":
+			Mundos.player.vida.RecebeDano(Mundos.player.vida.vida_max)
+		
+		"speed":
+			Engine.time_scale = float(cmd[1])
+			
+	
 	%LinhaComando.text = ""

@@ -79,8 +79,7 @@ var input_move: Vector2 = Vector2.ZERO
 var pode_mover: bool = true
 var pode_ataque:bool = true
 var pode_wall:bool = true
-
-#var pode_anim:bool = true
+var pode_item:bool = true
 
 @onready var check_agua_up: RayCast2D = $CheckAguaUp
 @onready var check_agua_down: RayCast2D = $CheckAguaDown
@@ -147,13 +146,6 @@ func _process(delta: float) -> void:
 		detalhe_chao = [false, ""]
 	state_machine.Update(delta)
 	
-	# !!!!!!!!DEBUG - TIRAR DEPOIS!!!!!!!!!!!
-	if Input.is_physical_key_pressed(KEY_ENTER):
-		if Input.is_physical_key_pressed(KEY_SPACE):
-			GameData.leu_data = false
-			GameData.Load()
-		else: vida.RecebeDano(vida.vida_max)
-	
 	if abs(input_move.y) > .7 and state_machine.current_state.name == "Chao":
 		if input_move.y > 0:
 			Mundos.main_camera.comando -= delta
@@ -189,4 +181,4 @@ func Morte() -> void:
 	GameData.game_start = false
 	if await GameData.Load() == false:
 		GameData.player_morreu = true
-		Mundos.CarregaFase(Mundos.NomeFase.TUTORIAL_1)
+		Mundos.CarregaFase("res://Cenas/aTutorial/Tutorial_1.tscn")

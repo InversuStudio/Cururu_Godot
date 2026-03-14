@@ -13,6 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://roe15my11jtb" path="res://Sprites/Cururu/Special/VFX/11.png" id="11_tk7jb"]
 [ext_resource type="Texture2D" uid="uid://dxnb43hflhlbv" path="res://Sprites/Cururu/Special/VFX/12.png" id="12_3plnt"]
 [ext_resource type="PackedScene" uid="uid://pc4mgv2nv8af" path="res://Objetos/Funcionalidade/CompHitBox.tscn" id="13_xknv4"]
+[ext_resource type="PackedScene" uid="uid://tg8x6n8040y8" path="res://Objetos/Funcionalidade/HitVFX.tscn" id="14_fepko"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_dsijf"]
 animations = [{
@@ -75,6 +76,7 @@ frame_progress = 1.0
 
 [node name="HitBox" parent="." unique_id=727505384 groups=["Special"] instance=ExtResource("13_xknv4")]
 collision_mask = 16
+vfx = ExtResource("14_fepko")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HitBox" unique_id=1739752457]
 position = Vector2(143, 0)

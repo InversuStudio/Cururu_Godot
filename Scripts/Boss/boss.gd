@@ -12,8 +12,13 @@ extends Node2D
 @export var tempo_idle_cuspe:float = 0.0
 ## Tempo parado após pilar de fogo
 @export var tempo_idle_pilar:float = 0.0
+## Número de ataques até trocar de lado
+@export var num_ate_trocar_lado:int = 3
+@onready var natl:int = num_ate_trocar_lado
 
 @export_group("Pilares de Fogo")
+## Node que carrega os pilares no cenário
+@export var parent_pilares:Node2D = null
 ## Distância em que boss usa pilar de fogo
 @export var dist_para_pilar:float = 7.0
 ## Lista contendo os pontos onde os pilares spawnam
@@ -32,6 +37,10 @@ signal spawn_pilar
 var num_vul:int = 0
 # Componente StateMachine
 @onready var state_machine: StateMachine = $StateMachine
+## Node de posição do Boss, para quando ele for trocar de lado
+@export var flip_node:Array[Marker2D] = []
+## Zoom aplicado à câmera ao iniciar batalha
+@export var zoom:float = .6
 
 var tween:Tween = null
 

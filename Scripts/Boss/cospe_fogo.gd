@@ -14,6 +14,7 @@ func Enter() -> void:
 	%Anim.play("CospeFogo")
 	parent.num_vul += 1
 	%TimerIdle.wait_time = parent.tempo_idle_cuspe
+	parent.natl -= 1
 
 func Update(_delta : float) -> State:
 	if prosseguir:

@@ -3,6 +3,7 @@ extends State
 # COMPORTAMENTO AO ENTRAR NO STATE
 func Enter() -> void:
 	#BGM.TocaMusica()
+	%ParedeCostas.queue_free()
 	%GritoSFX.stream = parent.gritos[0]
 	%SpriteCabeca.hide()
 	%SpriteCorpo.hide()

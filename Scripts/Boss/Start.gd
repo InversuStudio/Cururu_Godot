@@ -20,7 +20,7 @@ func PlayerEntrou(body:Node2D) -> void:
 		parent.area_check_player = null
 		Mundos.main_camera.usa_look_ahead = false
 		Mundos.main_camera.MudaTarget(parent.target_camera_batalha, Vector2.ZERO)
-		Mundos.main_camera.MudaZoom(.6)
+		Mundos.main_camera.MudaZoom(parent.zoom)
 		await get_tree().create_timer(.7).timeout
 		%Anim.play("Entrada")
 		parent.rabo.show()
