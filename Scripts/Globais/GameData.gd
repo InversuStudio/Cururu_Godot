@@ -166,7 +166,8 @@ func Load() -> bool:
 		var fase:StringName = config.get_value("save", "fase")
 		for f:PackedStringArray in Mundos.lista_fases:
 			if f[1].get_slice(".", 0) == fase:
-				Mundos.CarregaFase("res://Cenas/%s/%s/" % [f[0], f[1]]
+				var dest:PackedStringArray = f[1].split(".")
+				Mundos.CarregaFase("res://Cenas/%s/%s" % [f[0], dest[0]+"."+dest[1]]
 					, true, posicao)#, direcao)
 				trocou = true
 				break
