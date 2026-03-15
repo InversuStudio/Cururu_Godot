@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://cw522wgjoa2p7" path="res://Scripts/Componentes/MainCamera.gd" id="1_tckdd"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3adng"]
-size = Vector2(133, 474)
+size = Vector2(151, 355)
 
 [node name="MainCamera" type="Camera2D" unique_id=1984984122 groups=["MainCamera"]]
 physics_interpolation_mode = 1
@@ -21,6 +21,6 @@ collision_layer = 0
 collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Deadzone" unique_id=2086161685]
-position = Vector2(-1.5, 0)
+position = Vector2(-1.5, -102.5)
 shape = SubResource("RectangleShape2D_3adng")
 debug_color = Color(0.57457477, 0.38604146, 1, 0)

@@ -1921,12 +1921,11 @@ pilar = ExtResource("206_5xynu")
 script = ExtResource("210_72l2h")
 idle_state = NodePath("../Idle")
 
-[node name="Nocaute" type="Node" parent="StateMachine" unique_id=1843257818 node_paths=PackedStringArray("state_idle", "state_final")]
+[node name="Nocaute" type="Node" parent="StateMachine" unique_id=1843257818 node_paths=PackedStringArray("state_idle")]
 script = ExtResource("77_iqxfe")
 state_idle = NodePath("../Idle")
-state_final = NodePath("../Purificado")
 
-[node name="Purificado" type="Node" parent="StateMachine" unique_id=2139942620]
+[node name="Final" type="Node" parent="StateMachine" unique_id=2139942620]
 script = ExtResource("95_q1nmn")
 
 [node name="UI_BOSS" type="CanvasLayer" parent="." unique_id=745554726]
@@ -1987,4 +1986,4 @@ show_percentage = false
 [connection signal="animation_finished" from="Anim" to="StateMachine/CospeFogo" method="_on_anim_animation_finished"]
 [connection signal="animation_finished" from="Anim" to="StateMachine/PilarFogo" method="_on_anim_animation_finished"]
 [connection signal="animation_finished" from="Anim" to="StateMachine/Nocaute" method="_on_anim_animation_finished"]
-[connection signal="animation_finished" from="Anim" to="StateMachine/Purificado" method="_on_anim_animation_finished"]
+[connection signal="animation_finished" from="Anim" to="StateMachine/Final" method="_on_anim_animation_finished"]

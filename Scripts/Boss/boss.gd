@@ -45,7 +45,6 @@ var num_vul:int = 0
 var tween:Tween = null
 
 var nocaute:bool = false
-var morreu:bool = false
 
 var vida_miasma_max:int = 0
 var vida_miasma_atual:int = 0
@@ -109,7 +108,7 @@ func _ready() -> void:
 	rabo.hide()
 
 func ChecaArmor() -> void:
-	if vida_miasma_atual <= 0:
+	if vida_miasma_atual <= 0 and %VidaBoss.vida_atual > 0:
 		print("MIASMA DESTRUIDO")
 		state_machine.MudaState(state_machine.find_child("Nocaute"))
 
@@ -137,6 +136,7 @@ func ArmorDano() -> void:
 		#tempo_idle_pilar /= 2.0
 
 func ResetArmor() -> void:
+	if %VidaBoss.vida_atual <= 0: return
 	vida_miasma_atual = vida_miasma_max
 	%VidaMCabeca.RecebeCura(%VidaMCabeca.vida_max)
 	%HurtCabeca.set_deferred("monitorable", true)
@@ -151,10 +151,12 @@ func SpawnPilar(pos:NodePath) -> void:
 	spawn_pilar.emit(node.global_position)
 
 func Morte() -> void:
-	%HurtBox.set_deferred("monitorable", false)#queue_free()
+	await get_tree().physics_frame
+	#%HurtBox.set_deferred("monitorable", false)
+	#%HurtCabeca.set_deferred("monitorable", false)
+	#%HurtCorpo.set_deferred("monitorable", false)
 	%TimerNocaute.stop()
 	%TimerIdle.stop()
 	%BarraVida.hide()
-	%Anim.play("Surge", -1, -1.0, true)
-	morreu = true
 	BGM.TocaMusica()
+	state_machine.MudaState(state_machine.find_child("Final"))

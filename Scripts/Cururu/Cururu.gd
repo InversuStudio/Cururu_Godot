@@ -101,6 +101,8 @@ func _ready() -> void:
 	var ib:Array = [-1.0, -1.0] if GameData.direcao else [1.0, 1.0]
 	input_buffer.assign(ib)
 	
+	pos_ataques.scale.x = -1 if GameData.direcao else 1
+	
 	# Configura Timers
 	%Coyote.wait_time = tempo_coyote
 	%JumpLag.wait_time = lag_pulo

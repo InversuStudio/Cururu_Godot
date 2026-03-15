@@ -33,6 +33,7 @@ func _input(_event: InputEvent) -> void:
 	if Input.is_action_just_pressed("bumper_direito") and %Pause.visible:
 		if hud_ativo + 1 <= %ContainerAbas.get_child_count() - 1:
 			hud_ativo += 1
+			print("É, MEU BOM. A VIDA É TRISTE")
 			MudaAba()
 	
 	if Input.is_action_just_pressed("bumper_esquerdo") and %Pause.visible:

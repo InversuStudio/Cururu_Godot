@@ -31,7 +31,8 @@ func FixedUpdate(_delta : float) -> State:
 	return null
 	
 func _on_timer_idle_timeout() -> void:
-	prosseguir = true
+	if get_parent().current_state == self:
+		prosseguir = true
 
 func Exit() -> void:
 	prosseguir = false

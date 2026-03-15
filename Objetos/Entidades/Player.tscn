@@ -155,7 +155,7 @@
 [ext_resource type="Texture2D" uid="uid://cnra58hoeuwa3" path="res://Sprites/Cururu/Melee/V2/ATAQUE_1_HIT_CEU/CURURU_ATAQUE_37.png" id="109_xgubl"]
 [ext_resource type="Texture2D" uid="uid://c8hqfeinpyrwt" path="res://Sprites/Cururu/Melee/V2/ATAQUE_1_HIT_CEU/CURURU_ATAQUE_39.png" id="110_2dakj"]
 [ext_resource type="Texture2D" uid="uid://d83hmryt68jq" path="res://Sprites/Cururu/Melee/V2/ATAQUE_1_HIT_CHÃO/CURURU_ATAQUE_09.png" id="110_4gb4y"]
-[ext_resource type="Script" uid="uid://cg3i231v8dhoy" path="res://Objetos/Entidades/acorda.gd" id="110_yy1dt"]
+[ext_resource type="Script" uid="uid://cg3i231v8dhoy" path="res://Scripts/Cururu/Acorda.gd" id="110_yy1dt"]
 [ext_resource type="Texture2D" uid="uid://ct3jpbyh1ve2p" path="res://Sprites/Cururu/Melee/V2/ATAQUE_1_HIT_CHÃO/CURURU_ATAQUE_11.png" id="111_24i8l"]
 [ext_resource type="Texture2D" uid="uid://cj2s8pb5cjmv4" path="res://Sprites/Cururu/Melee/V2/ATAQUE_1_HIT_CEU/CURURU_ATAQUE_41.png" id="111_ingo5"]
 [ext_resource type="Texture2D" uid="uid://gdiit7424akm" path="res://Sprites/Cururu/Melee/V2/ATAQUE_1_HIT_CEU/CURURU_ATAQUE_43.png" id="112_hge68"]

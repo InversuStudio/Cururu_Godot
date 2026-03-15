@@ -2,8 +2,6 @@ extends State
 
 ## State de Idle
 @export var state_idle:State = null
-## State final
-@export var state_final:State = null
 
 var prossegue:bool = false
 var def_original:int = 0
@@ -22,10 +20,8 @@ func Enter() -> void:
 	%BreakSFX.play()
 
 func Update(_delta : float) -> State:
-	if prossegue and !parent.morreu:
+	if prossegue:
 		return state_idle
-	elif parent.morreu:
-		return state_final
 	return null
 
 func _on_timer_nocaute_timeout() -> void:

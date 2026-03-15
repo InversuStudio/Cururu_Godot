@@ -19,12 +19,10 @@ func Interact(player:CharacterBody2D) -> void:
 	player.pode_mover = false
 	player.pode_ataque = false
 	DialogueManager.show_dialogue_balloon_scene(balao, arquivo_dialogo, dialogue_start)
-	await DialogueManager.dialogue_ended
-	await get_tree().create_timer(.5).timeout
-	player.pode_ataque = true
 
 func PodeInteragir(_res:DialogueResource) -> void:
 	%Texto.show()
+	await get_tree().create_timer(.5).timeout
 	interacao.pode_interagir = true
 	interacao.target.pode_mover = true
 
