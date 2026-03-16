@@ -30,8 +30,7 @@ func Enter() -> void:
 	acabou = false
 	parent.velocity.y = 0.0
 	%Anim.play("Dash")
-	%DashCooldown.start()
-	%DashTime.start()
+	%DashTime.start(parent.tempo_dash)
 	var mult:int = -1 if %Cururu.flip_h == true else 1
 	parent.velocity.x = parent.dash_speed * mult
 	%SFX_Dash.play()
@@ -39,6 +38,7 @@ func Enter() -> void:
 func Exit() -> void:
 	acabou = true
 	%DashTime.stop()
+	%DashCooldown.start(parent.cooldown_dash)
 	if !parent.is_on_floor():
 		parent.deu_air_dash = true
 	%ColisaoMain.disabled = false#set_deferred("disabled", false)

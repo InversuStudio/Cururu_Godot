@@ -93,6 +93,12 @@ var input_buffer:Array[float] = [0.0, 0.0]
 @onready var anim: AnimationPlayer = %Anim
 
 func _ready() -> void:
+	# Registra referência global
+	Mundos.player = self
+	if Mundos.usa_pos_player:
+		global_position = Mundos.pos_player
+		sprite.flip_h = GameData.direcao
+	
 	if GameData.game_start == false:
 		pode_mover = false
 		GameData.game_start = true
@@ -102,13 +108,6 @@ func _ready() -> void:
 	input_buffer.assign(ib)
 	
 	pos_ataques.scale.x = -1 if GameData.direcao else 1
-	
-	# Configura Timers
-	%Coyote.wait_time = tempo_coyote
-	%JumpLag.wait_time = lag_pulo
-	%DashTime.wait_time = tempo_dash
-	%DashCooldown.wait_time = cooldown_dash
-	%Cururu.flip_h = GameData.direcao
 	
 	# Conecta sinal de dano
 	vida.connect("alterou_vida", VidaMudou)

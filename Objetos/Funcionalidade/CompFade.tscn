@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://phfxidwhdpy7"]
+[gd_scene format=3 uid="uid://phfxidwhdpy7"]
 
 [ext_resource type="Script" uid="uid://cviskiwh21kxe" path="res://Scripts/Componentes/Fade.gd" id="1_aeedw"]
 
@@ -56,12 +56,12 @@ _data = {
 &"RESET": SubResource("Animation_aeedw")
 }
 
-[node name="Fade" type="CanvasLayer"]
+[node name="Fade" type="CanvasLayer" unique_id=1649533829]
 process_mode = 3
 layer = 8000
 script = ExtResource("1_aeedw")
 
-[node name="Color" type="ColorRect" parent="."]
+[node name="Color" type="ColorRect" parent="." unique_id=1300706918]
 process_mode = 3
 self_modulate = Color(1, 1, 1, 0)
 z_index = 7
@@ -73,10 +73,8 @@ grow_vertical = 2
 mouse_filter = 2
 color = Color(0, 0, 0, 1)
 
-[node name="Anim" type="AnimationPlayer" parent="."]
+[node name="Anim" type="AnimationPlayer" parent="." unique_id=39580032]
 unique_name_in_owner = true
 root_node = NodePath("../Color")
-libraries = {
-&"": SubResource("AnimationLibrary_0e6u7")
-}
-autoplay = "FadeIn"
+libraries/ = SubResource("AnimationLibrary_0e6u7")
+autoplay = &"FadeIn"

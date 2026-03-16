@@ -1,0 +1,153 @@
+[gd_scene format=3 uid="uid://dd7i1mvmig6qg"]
+
+[ext_resource type="Script" uid="uid://qclimmg1om0s" path="res://Scripts/Componentes/TelaCarregando.gd" id="1_hy14j"]
+[ext_resource type="Texture2D" uid="uid://ciu3iyvaxic8e" path="res://Sprites/Cururu/Nadando/VFX/Entrando_Agua/01.png" id="2_euq6v"]
+[ext_resource type="Texture2D" uid="uid://m5fvvkblqod8" path="res://Sprites/Cururu/Nadando/VFX/Entrando_Agua/02.png" id="3_jol1h"]
+[ext_resource type="Texture2D" uid="uid://diggfbjlihl8j" path="res://Sprites/Cururu/Nadando/VFX/Entrando_Agua/03.png" id="4_qep4y"]
+[ext_resource type="Texture2D" uid="uid://c4tqqp43wwf6r" path="res://Sprites/Cururu/Nadando/VFX/Entrando_Agua/04.png" id="5_jtuxn"]
+[ext_resource type="Texture2D" uid="uid://bht4lhwwsbmr4" path="res://Sprites/Cururu/Nadando/VFX/Entrando_Agua/05.png" id="6_61oju"]
+[ext_resource type="Texture2D" uid="uid://d3aupxh0v72rq" path="res://Sprites/Cururu/Nadando/VFX/Entrando_Agua/06.png" id="7_c20b6"]
+[ext_resource type="Texture2D" uid="uid://droggyx4nannp" path="res://Sprites/Cururu/Nadando/VFX/Entrando_Agua/07.png" id="8_ya40r"]
+[ext_resource type="Texture2D" uid="uid://8njse34ik7nb" path="res://Sprites/Cururu/Nadando/VFX/Entrando_Agua/08.png" id="9_lrcnl"]
+[ext_resource type="Texture2D" uid="uid://cfkuwdqrn42th" path="res://Sprites/Cururu/Nadando/VFX/Entrando_Agua/09.png" id="10_g1ftv"]
+[ext_resource type="Texture2D" uid="uid://dbrn1gi2dneey" path="res://Sprites/Cururu/Nadando/VFX/Entrando_Agua/10.png" id="11_pqyd8"]
+[ext_resource type="Texture2D" uid="uid://cijt6lakcb557" path="res://Sprites/Cururu/Nadando/VFX/Entrando_Agua/11.png" id="12_6r84s"]
+[ext_resource type="Texture2D" uid="uid://5cnw6cy4rosa" path="res://Sprites/Cururu/Nadando/VFX/Entrando_Agua/12.png" id="13_5fpbb"]
+[ext_resource type="Texture2D" uid="uid://e4d8t1sjgr8i" path="res://Sprites/Cururu/Nadando/VFX/Entrando_Agua/13.png" id="14_qmw1u"]
+[ext_resource type="Texture2D" uid="uid://ciidwcx2d6i4b" path="res://Sprites/Cururu/Nadando/VFX/Saindo_Agua/01.png" id="15_o7wft"]
+[ext_resource type="Texture2D" uid="uid://cbib1k5wtnq6" path="res://Sprites/Cururu/Nadando/VFX/Saindo_Agua/02.png" id="16_kmmiy"]
+[ext_resource type="Texture2D" uid="uid://do6m7ji7ewt7s" path="res://Sprites/Cururu/Nadando/VFX/Saindo_Agua/03.png" id="17_4x6xs"]
+[ext_resource type="Texture2D" uid="uid://c28jyqot51dnp" path="res://Sprites/Cururu/Nadando/VFX/Saindo_Agua/04.png" id="18_pxvy6"]
+[ext_resource type="Texture2D" uid="uid://0em6ibbijv08" path="res://Sprites/Cururu/Nadando/VFX/Saindo_Agua/05.png" id="19_55k2f"]
+[ext_resource type="Texture2D" uid="uid://ikrul2wtu7ha" path="res://Sprites/Cururu/Nadando/VFX/Saindo_Agua/06.png" id="20_4m2wf"]
+[ext_resource type="Texture2D" uid="uid://dd83702is0rnk" path="res://Sprites/Cururu/Nadando/VFX/Saindo_Agua/07.png" id="21_ntg65"]
+[ext_resource type="Texture2D" uid="uid://tblhtx7e0hxk" path="res://Sprites/Cururu/Nadando/VFX/Saindo_Agua/08.png" id="22_ig3ry"]
+[ext_resource type="Texture2D" uid="uid://baksm01t0b382" path="res://Sprites/Cururu/Nadando/VFX/Saindo_Agua/09.png" id="23_kdpqh"]
+[ext_resource type="Texture2D" uid="uid://ct863w7vp58js" path="res://Sprites/Cururu/Nadando/VFX/Saindo_Agua/10.png" id="24_n8pji"]
+[ext_resource type="Texture2D" uid="uid://c0n5d2j374s0r" path="res://Sprites/Cururu/Nadando/VFX/Saindo_Agua/11.png" id="25_r5o1x"]
+[ext_resource type="Texture2D" uid="uid://dj4qyqh8isxen" path="res://Sprites/Cururu/Nadando/VFX/Saindo_Agua/12.png" id="26_mq6gy"]
+[ext_resource type="Texture2D" uid="uid://ci3vmr6e5vjfa" path="res://Sprites/Cururu/Nadando/VFX/Saindo_Agua/13.png" id="27_qloto"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_1spru"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_euq6v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_jol1h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_qep4y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_jtuxn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_61oju")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_c20b6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_ya40r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_lrcnl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_g1ftv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_pqyd8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_6r84s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_5fpbb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_qmw1u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_o7wft")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_kmmiy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_4x6xs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_pxvy6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_55k2f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_4m2wf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_ntg65")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_ig3ry")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_kdpqh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_n8pji")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_r5o1x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_mq6gy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_qloto")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
+
+[node name="TelaCarregando" type="Control" unique_id=704717007]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_hy14j")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=2128386861]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="Control" type="Control" parent="." unique_id=2117669021]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -40.0
+offset_top = -40.0
+grow_horizontal = 0
+grow_vertical = 0
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Control" unique_id=148687907]
+position = Vector2(-129.99998, -102.99999)
+scale = Vector2(0.23425926, 0.23425926)
+sprite_frames = SubResource("SpriteFrames_1spru")
+autoplay = "default"
+frame = 8
+frame_progress = 0.04929068

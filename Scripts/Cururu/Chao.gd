@@ -131,7 +131,7 @@ func FixedUpdate(delta: float) -> State:
 	# Se não estiver no chão, mudar State
 	if not parent.is_on_floor():
 		parent.is_coyote = true
-		%Coyote.start()
+		%Coyote.start(parent.tempo_coyote)
 		return fall_state
 		
 	return null # Não muda o State

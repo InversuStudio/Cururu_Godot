@@ -4,8 +4,14 @@ extends Node
 var lista_fases:Array[PackedStringArray] = [] # [PASTA, ARQUIVO]
 # Registra fase atual
 var fase_atual:StringName = ""
+# Armazena a próxima fase a ser carregada
+var prox_fase_path:StringName = ""
 # Segura a instância atual do Player
 @onready var player:Player = get_tree().get_first_node_in_group("Player")
+# Recebe a posição que o player deve estar na próxima fase
+var pos_player:Vector2 = Vector2.ZERO
+# Recebe se pos_player deve ser usada
+var usa_pos_player:bool = false
 # Segura a instância atual da MainCamera
 @onready var main_camera:MainCamera = get_tree().get_first_node_in_group("MainCamera")
 
@@ -36,36 +42,31 @@ var lista_baus:Array[String] = []
 
 # Função para carregar nova fase
 func CarregaFase(lugar:StringName, detalhado:bool = false,
-	pos:Vector2=Vector2.ZERO) -> void:#, virado:bool=false) -> void:
+	pos:Vector2=Vector2.ZERO) -> void:
+	# Registra o caminho da próxima cena
+	prox_fase_path = lugar
+	# Registra posição do player
+	usa_pos_player = detalhado
+	pos_player = pos
 	# Inicia Fade Out e espera a animação terminar
 	Fade.FadeOut()
 	await Fade.terminou
-	# Espera o frame de física terminar e muda a cena
+	# Espera o frame de física terminar e vai para a tela de carregamento
 	await get_tree().physics_frame
-	get_tree().change_scene_to_file(lugar)
-	get_tree().paused = false
+	get_tree().change_scene_to_file("res://UI/TelaCarregando.tscn")
+	
 	var nome:PackedStringArray = lugar.split("/", false)
 	var n:String = nome[nome.size() - 1]
 	fase_atual = n.get_slice(".", 0)
+	
 	if GameData.ChecaData() == "" and GameData.player_morreu:
 		GameData.moedas = 0
 		GameData.player_morreu = false
-	# Espera um frame de física, para o jogo carregar
-	await get_tree().physics_frame
-	# Inicia Fade In
-	Fade.FadeIn()
+	
 	# Atualiza a barra do console
 	Console.MudaAbaSelect()
-	# Posiciona o player, se houver
-	player = get_tree().get_first_node_in_group("Player")
-	if player and detalhado == true:
-		player.global_position = pos
-		player.sprite.flip_h = GameData.direcao#virado
-	# Pega a câmera
-	main_camera = get_tree().get_first_node_in_group("MainCamera")
-	# Registra novo HUD na cena
-	HUD.IniciaHUD()
-	fase_mudou.emit()
+	
+	# LÓGICA CONTINUA NO SCRIPT DA TELA DE CARREGAMENTO
 
 # Função para recarregar fase ativa
 func Reload() -> void:

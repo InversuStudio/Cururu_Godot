@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://buxjb8khrvcm7"
-path="res://.godot/imported/WALLJUMP.png-45062312e1853a43a5a7e6f869e11947.ctex"
+path="res://.godot/imported/WALLJUMP.png-29bf5b995a3330e8c689a4ded192a120.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Cururu/walljump/WALLJUMP.png"
-dest_files=["res://.godot/imported/WALLJUMP.png-45062312e1853a43a5a7e6f869e11947.ctex"]
+source_file="res://Sprites/Cururu/Walljump/WALLJUMP.png"
+dest_files=["res://.godot/imported/WALLJUMP.png-29bf5b995a3330e8c689a4ded192a120.ctex"]
 
 [params]
 

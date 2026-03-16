@@ -37,7 +37,7 @@ func Update(_delta: float) -> State:
 		if parent.is_coyote:
 			return pulo_state
 		parent.is_jump_lag = true
-		%JumpLag.start()
+		%JumpLag.start(parent.lag_pulo)
 	# INPUT DASH
 	if Input.is_action_just_pressed("dash") and parent.pode_dash:
 		if parent.deu_air_dash == false:

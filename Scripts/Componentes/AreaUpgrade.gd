@@ -19,7 +19,7 @@ func _ready() -> void:
 		%Poder.hide()
 	texto.hide()
 
-func Interact(_player:CharacterBody2D) -> void:
+func Interact() -> void:
 	if GameData.upgrade_num < upgrade + 1:
 		texto.hide()
 		GameData.upgrade_num = upgrade + 1

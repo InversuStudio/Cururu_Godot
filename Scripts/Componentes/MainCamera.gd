@@ -36,6 +36,7 @@ var comando:float = 0.0
 @onready var dist:float = distancia_a_olhar * 128
 
 func _ready() -> void:
+	Mundos.main_camera = self
 	look_ahead *= 128
 	await get_tree().physics_frame
 	if target:

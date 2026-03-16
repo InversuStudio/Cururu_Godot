@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://cqyub70sv0ofp"]
+[gd_scene format=3 uid="uid://cqyub70sv0ofp"]
 
 [ext_resource type="Script" uid="uid://dvol8qmgk0lx8" path="res://Scripts/Componentes/SavePoint.gd" id="1_hntd5"]
 [ext_resource type="Script" uid="uid://dd7svcu8l7fxu" path="res://Scripts/Componentes/Interacao.gd" id="1_xf6ij"]
@@ -55,7 +55,7 @@ animations = [{
 "speed": 30.0
 }]
 
-[node name="SavePoint" type="Area2D" node_paths=PackedStringArray("objeto_interacao")]
+[node name="SavePoint" type="Area2D" unique_id=1926155856 node_paths=PackedStringArray("objeto_interacao")]
 light_mask = 2
 collision_layer = 0
 collision_mask = 2
@@ -63,11 +63,11 @@ script = ExtResource("1_xf6ij")
 objeto_interacao = NodePath("Script")
 metadata/_custom_type_script = "uid://dd7svcu8l7fxu"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=162338084]
 position = Vector2(6.5, -185.75)
 shape = SubResource("RectangleShape2D_hntd5")
 
-[node name="Anim" type="AnimatedSprite2D" parent="."]
+[node name="Anim" type="AnimatedSprite2D" parent="." unique_id=1558566416]
 unique_name_in_owner = true
 position = Vector2(54, -217)
 sprite_frames = SubResource("SpriteFrames_7viry")
@@ -76,10 +76,10 @@ autoplay = "Idle"
 speed_scale = 0.5
 script = ExtResource("1_hntd5")
 
-[node name="Script" type="Node" parent="."]
+[node name="Script" type="Node" parent="." unique_id=1966243427]
 script = ExtResource("1_hntd5")
 
-[node name="Texto" type="RichTextLabel" parent="."]
+[node name="Texto" type="RichTextLabel" parent="." unique_id=695476358]
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -97,16 +97,16 @@ text = "DESCANSAR"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="LogoV1Steam" type="Sprite2D" parent="Texto"]
+[node name="LogoV1Steam" type="Sprite2D" parent="Texto" unique_id=456346128]
 position = Vector2(190, 86.00002)
 scale = Vector2(0.2038632, 0.20386322)
 texture = ExtResource("8_7viry")
 
-[node name="SFX" type="AudioStreamPlayer" parent="."]
+[node name="SFX" type="AudioStreamPlayer" parent="." unique_id=71295665]
 unique_name_in_owner = true
 stream = ExtResource("7_ti6fj")
 volume_db = 1.0
 bus = &"SFX"
 
-[node name="OtimizadorSprite" parent="." instance=ExtResource("7_7viry")]
+[node name="OtimizadorSprite" parent="." unique_id=429525949 instance=ExtResource("7_7viry")]
 rect = Rect2(-195, -428, 399, 438)
