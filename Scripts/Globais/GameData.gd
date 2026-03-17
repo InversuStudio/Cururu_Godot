@@ -2,7 +2,7 @@
 extends Node
 
 # Armazena se os dados já foram lidos alguma vez
-@onready var leu_data: bool = false
+@onready var leu_data:bool = false
 @onready var game_start:bool = false
 
 # Armazena se está usando teclado ou controller

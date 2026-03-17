@@ -19,10 +19,10 @@ func Load(lugar:StringName, detalhado:bool=false, pos:Vector2=Vector2.ZERO) -> v
 	# Espera frame de física e troca para tela de loading
 	await get_tree().physics_frame
 	get_tree().change_scene_to_file("res://UI/TelaCarregando.tscn")
-	await get_tree().scene_changed
+	#await get_tree().scene_changed
 	# Aplica Fade In
-	Fade.FadeIn()
-	await Fade.terminou
+	#Fade.FadeIn()
+	#await Fade.terminou
 	# Carrega nova fase
 	ResourceLoader.load_threaded_request(next_path)
 	is_load = true
@@ -42,8 +42,8 @@ func _process(_delta: float) -> void:
 
 func FazCoisa() -> void:
 	# Aplica Fade Out
-	Fade.FadeOut()
-	await Fade.terminou
+	#Fade.FadeOut()
+	#await Fade.terminou
 	# Muda a cena para o arquivo carregado
 	var cena:PackedScene = ResourceLoader.load_threaded_get(next_path)
 	get_tree().change_scene_to_packed(cena)
