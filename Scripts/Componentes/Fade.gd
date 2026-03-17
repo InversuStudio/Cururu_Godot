@@ -4,12 +4,13 @@ extends CanvasLayer
 # durante troca de cena
 signal terminou
 
+func _ready() -> void:
+	%Anim.connect("animation_finished", func(_an:StringName)->void:
+		terminou.emit())
+	FadeIn()
+
 func FadeOut() -> void:
 	%Anim.play("FadeOut")
-	await %Anim.animation_finished
-	terminou.emit()
 
 func FadeIn() -> void:
 	%Anim.play("FadeIn")
-	await %Anim.animation_finished
-	terminou.emit()

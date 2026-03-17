@@ -359,7 +359,6 @@ position = Vector2(8334, -4607)
 [node name="Cururu" parent="0" unique_id=1093154945 instance=ExtResource("3_2e63t")]
 z_index = 0
 position = Vector2(5489, -4468.9995)
-scale = Vector2(0.959163, 0.959163)
 
 [node name="Tutorial_3" parent="0" unique_id=1405558404 instance=ExtResource("2_hl1ji")]
 position = Vector2(5178, -4461)

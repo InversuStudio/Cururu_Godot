@@ -633,7 +633,6 @@ position = Vector2(1726, -6916)
 [node name="Cururu" parent="Fundo/0/Entidades" unique_id=253463539 instance=ExtResource("22_8a6rq")]
 z_index = 0
 position = Vector2(7555, -7421.0005)
-scale = Vector2(0.919994, 0.919994)
 
 [node name="Props" type="Node2D" parent="Fundo/0" unique_id=1011977509]
 position = Vector2(3900, -7424)

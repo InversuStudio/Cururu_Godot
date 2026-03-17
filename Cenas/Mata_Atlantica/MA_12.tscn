@@ -15,7 +15,6 @@ size = Vector2(70, 399)
 
 [node name="TransicaoFase2" parent="." unique_id=1775559211 instance=ExtResource("1_5f3ns")]
 position = Vector2(7275, -1346)
-destino = 17
 posicao = Vector2(982, -637)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TransicaoFase2" unique_id=1774254004]
@@ -24,7 +23,6 @@ shape = SubResource("RectangleShape2D_ynw3k")
 
 [node name="TransicaoFase3" parent="." unique_id=387751759 instance=ExtResource("1_5f3ns")]
 position = Vector2(310, -1735)
-destino = 19
 posicao = Vector2(5617, -1791)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TransicaoFase3" unique_id=1849104842]
@@ -34,7 +32,6 @@ shape = SubResource("RectangleShape2D_ynw3k")
 [node name="Cururu" parent="." unique_id=472945313 instance=ExtResource("3_fsywm")]
 z_index = 0
 position = Vector2(6934.0005, -1407)
-scale = Vector2(0.919994, 0.919994)
 
 [node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=190374581]
 position = Vector2(-2, 0)

@@ -493,7 +493,6 @@ position = Vector2(5813.0005, -648.00024)
 [node name="Cururu" parent="0/Entidades" unique_id=702764334 instance=ExtResource("2_l4p3j")]
 z_index = 0
 position = Vector2(635.00006, -652)
-scale = Vector2(0.959163, 0.959163)
 
 [node name="Folhas" type="GPUParticles2D" parent="0/Entidades" unique_id=1808009348]
 material = SubResource("CanvasItemMaterial_67q44")

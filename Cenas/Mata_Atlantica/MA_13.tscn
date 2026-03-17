@@ -14,7 +14,6 @@ size = Vector2(70, 399)
 [node name="Cururu" parent="." unique_id=397478055 instance=ExtResource("1_usrra")]
 z_index = 0
 position = Vector2(5533.9995, -1791.9999)
-scale = Vector2(0.959163, 0.959163)
 
 [node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=799146183]
 position = Vector2(-2, 0)
@@ -23,7 +22,6 @@ tile_set = ExtResource("2_u28hf")
 
 [node name="TransicaoFase2" parent="." unique_id=411223099 instance=ExtResource("7_w1p45")]
 position = Vector2(5745, -1733)
-destino = 18
 posicao = Vector2(435, -1796)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TransicaoFase2" unique_id=1578252101]
@@ -32,7 +30,6 @@ shape = SubResource("RectangleShape2D_bt7f3")
 
 [node name="TransicaoFase3" parent="." unique_id=175881653 instance=ExtResource("7_w1p45")]
 position = Vector2(2493, 1339)
-destino = 20
 posicao = Vector2(7493, -355)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TransicaoFase3" unique_id=753891078]

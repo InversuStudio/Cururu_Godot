@@ -26,13 +26,13 @@ func _on_main_pressed() -> void:
 	Mundos.lista_inimigos = []
 	Mundos.lista_baus = []
 	$BtnSFX.play()
-	Mundos.CarregaFase("res://Cenas/aTutorial/CutsceneIntro.tscn")
+	LoadCena.Load("res://Cenas/aTutorial/CutsceneIntro.tscn")
 
 func _on_fase_teste_pressed() -> void:
 	$BtnSFX.play()
 	Mundos.lista_inimigos = []
 	Mundos.lista_baus = []
-	if await GameData.Load():
+	if GameData.Load():
 		print("Jogo carregado")
 		
 func _on_sair_pressed() -> void:

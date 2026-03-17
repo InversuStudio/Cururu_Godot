@@ -1,6 +1,5 @@
 [gd_scene format=3 uid="uid://dd7i1mvmig6qg"]
 
-[ext_resource type="Script" uid="uid://qclimmg1om0s" path="res://Scripts/Componentes/TelaCarregando.gd" id="1_hy14j"]
 [ext_resource type="Texture2D" uid="uid://ciu3iyvaxic8e" path="res://Sprites/Cururu/Nadando/VFX/Entrando_Agua/01.png" id="2_euq6v"]
 [ext_resource type="Texture2D" uid="uid://m5fvvkblqod8" path="res://Sprites/Cururu/Nadando/VFX/Entrando_Agua/02.png" id="3_jol1h"]
 [ext_resource type="Texture2D" uid="uid://diggfbjlihl8j" path="res://Sprites/Cururu/Nadando/VFX/Entrando_Agua/03.png" id="4_qep4y"]
@@ -121,7 +120,6 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_hy14j")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=2128386861]
 layout_mode = 1

@@ -556,7 +556,6 @@ texture = ExtResource("31_ss1nv")
 [node name="Cururu" parent="0/Cenario" unique_id=809203339 instance=ExtResource("32_fdwrl")]
 z_index = 0
 position = Vector2(874.4285, 131.42871)
-scale = Vector2(0.919994, 0.919994)
 
 [node name="PointLight2D" type="PointLight2D" parent="0/Cenario/Cururu" unique_id=1816164189]
 position = Vector2(6.5218506, -133.15332)

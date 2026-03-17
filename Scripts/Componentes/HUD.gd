@@ -85,7 +85,7 @@ func _ready() -> void:
 	GameData.connect("update_vida_max", AdicionaCoracao)
 	GameData.connect("update_vida_atual", UpdateVida)
 	GameData.connect("update_moeda", UpdateMoeda)
-	Mundos.connect("fase_mudou", MostraHUD)
+	get_tree().scene_changed.connect(MostraHUD)
 	
 	item_rapido.connect("usa_item", usa_item_rapido.emit)
 	
@@ -118,7 +118,7 @@ func _ready() -> void:
 		AudioServer.set_bus_volume_db(bus, linear_to_db(valor)))
 	
 	# Lógica para evitar bugs durante testes
-	await get_tree().physics_frame
+	await get_tree().scene_changed
 	if Mundos.player and GameData.vida_max > 0:
 		IniciaHUD()
 
@@ -131,8 +131,6 @@ func MudaAba() -> void:
 
 func MostraHUD() -> void:
 	%Pause.hide()
-	#%AvisoItem.modulate.a = 0.0
-	#%AvisoItem.show()
 	%AvisoSave.self_modulate.a = 0.0
 	%MapaSmall.hide()
 	if Mundos.player: %Corpo.show()

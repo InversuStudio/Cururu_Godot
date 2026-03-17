@@ -68,35 +68,34 @@ class_name Player extends CharacterBody2D
 # Node que segura os Marker2Ds que definem onde os ataques serão instanciados
 @onready var pos_ataques: Node2D = $PosAtaques
 
+# Variáveis controladoras
 var is_coyote: bool = false
 var is_jump_lag: bool = false
-var pode_dash: bool = true
 var deu_air_dash: bool = false
-
-@onready var sprite: AnimatedSprite2D = %Cururu
-
 var input_move: Vector2 = Vector2.ZERO
 var pode_mover: bool = true
 var pode_ataque:bool = true
+var pode_dash: bool = true
 var pode_wall:bool = true
 var pode_item:bool = true
 
 @onready var check_agua_up: RayCast2D = $CheckAguaUp
 @onready var check_agua_down: RayCast2D = $CheckAguaDown
 @onready var check_chao: RayCast2D = $CheckChao
+@onready var sprite: AnimatedSprite2D = %Cururu
+@onready var anim: AnimationPlayer = %Anim
 
 var detalhe_chao:Array = [false, ""]
 
 signal virou
 var input_buffer:Array[float] = [0.0, 0.0]
 
-@onready var anim: AnimationPlayer = %Anim
-
 func _ready() -> void:
 	# Registra referência global
 	Mundos.player = self
-	if Mundos.usa_pos_player:
-		global_position = Mundos.pos_player
+	if LoadCena.usa_pos:
+		print("MUDEI DE POS")
+		global_position = LoadCena.next_pos
 		sprite.flip_h = GameData.direcao
 	
 	if GameData.game_start == false:
@@ -136,7 +135,6 @@ func _process(delta: float) -> void:
 		input_buffer[1] = sign(input_move.x)
 		if input_buffer[0] != input_buffer[1]:
 			virou.emit()
-	# Aplica PROCESS do StateMachine
 	var col:Object = check_chao.get_collider()
 	if col:
 		var grupo:String = ""
@@ -145,6 +143,8 @@ func _process(delta: float) -> void:
 		detalhe_chao = [true, grupo]
 	else:
 		detalhe_chao = [false, ""]
+		
+	# Aplica PROCESS do StateMachine
 	state_machine.Update(delta)
 	
 	if abs(input_move.y) > .7 and state_machine.current_state.name == "Chao":
@@ -180,6 +180,6 @@ func VidaMudou(vida_nova, vida_antiga) -> void:
 func Morte() -> void:
 	print("MORRI")
 	GameData.game_start = false
-	if await GameData.Load() == false:
+	if GameData.Load() == false:
 		GameData.player_morreu = true
-		Mundos.CarregaFase("res://Cenas/aTutorial/Tutorial_1.tscn")
+		LoadCena.Load("res://Cenas/aTutorial/Tutorial_1.tscn")

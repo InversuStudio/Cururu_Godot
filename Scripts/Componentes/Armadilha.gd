@@ -11,12 +11,11 @@ func _ready() -> void:
 		for sp:Area2D in spawn_points:
 			sp.collision_layer = 0
 			sp.collision_mask = 2
-			sp.body_entered.connect(func(body:Node2D):
+			sp.body_entered.connect(func(body:Node2D) -> void:
 				if body.is_in_group("Player"):
 					ponto = sp.global_position)
 	
 func _on_hit_box_hit(_p:Vector2, _h:HitBox, layer:int) -> void:
-	print_rich("[color=yellow]Collision Layer: %s[/color]" % [layer])
 	# Os IDs das collision layers são múltiplos de 2
 	# O ID 8 é a camada da Hit/Hurt do Player
 	if layer != 8: return

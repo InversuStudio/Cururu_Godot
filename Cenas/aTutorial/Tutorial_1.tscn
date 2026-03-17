@@ -687,7 +687,6 @@ texture = ExtResource("28_thr42")
 [node name="Cururu" parent="0" unique_id=1710397734 instance=ExtResource("29_q2ysr")]
 z_index = 0
 position = Vector2(1008.9998, -1159.9999)
-scale = Vector2(0.959163, 0.959163)
 cooldown_dash = 0.3
 
 [node name="PonteExemplo" type="Sprite2D" parent="0" unique_id=417236551]
@@ -720,7 +719,7 @@ collision_layer = 1
 collision_priority = 0.0
 linear_damp = 0.145
 destino = &"res://Cenas/aTutorial/Tutorial_2.tscn"
-posicao = Vector2(-29588, -3335)
+posicao = Vector2(-29463, -3338.9998)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="0/Tutorial2" unique_id=463097436]
 light_mask = 7

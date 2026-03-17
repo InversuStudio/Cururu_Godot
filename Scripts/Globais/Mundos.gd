@@ -4,18 +4,10 @@ extends Node
 var lista_fases:Array[PackedStringArray] = [] # [PASTA, ARQUIVO]
 # Registra fase atual
 var fase_atual:StringName = ""
-# Armazena a próxima fase a ser carregada
-var prox_fase_path:StringName = ""
 # Segura a instância atual do Player
-@onready var player:Player = get_tree().get_first_node_in_group("Player")
-# Recebe a posição que o player deve estar na próxima fase
-var pos_player:Vector2 = Vector2.ZERO
-# Recebe se pos_player deve ser usada
-var usa_pos_player:bool = false
+var player:Player = null
 # Segura a instância atual da MainCamera
-@onready var main_camera:MainCamera = get_tree().get_first_node_in_group("MainCamera")
-
-signal fase_mudou
+var main_camera:MainCamera = null
 
 func _ready() -> void:
 	var nome_cena:String = get_tree().current_scene.scene_file_path
@@ -39,38 +31,6 @@ var areas_secretas: Array[String] = []
 var lista_inimigos:Array[String] = []
 # Lista que registra todos os baús abertos
 var lista_baus:Array[String] = []
-
-# Função para carregar nova fase
-func CarregaFase(lugar:StringName, detalhado:bool = false,
-	pos:Vector2=Vector2.ZERO) -> void:
-	# Registra o caminho da próxima cena
-	prox_fase_path = lugar
-	# Registra posição do player
-	usa_pos_player = detalhado
-	pos_player = pos
-	# Inicia Fade Out e espera a animação terminar
-	Fade.FadeOut()
-	await Fade.terminou
-	# Espera o frame de física terminar e vai para a tela de carregamento
-	await get_tree().physics_frame
-	get_tree().change_scene_to_file("res://UI/TelaCarregando.tscn")
-	
-	var nome:PackedStringArray = lugar.split("/", false)
-	var n:String = nome[nome.size() - 1]
-	fase_atual = n.get_slice(".", 0)
-	
-	if GameData.ChecaData() == "" and GameData.player_morreu:
-		GameData.moedas = 0
-		GameData.player_morreu = false
-	
-	# Atualiza a barra do console
-	Console.MudaAbaSelect()
-	
-	# LÓGICA CONTINUA NO SCRIPT DA TELA DE CARREGAMENTO
-
-# Função para recarregar fase ativa
-func Reload() -> void:
-	get_tree().reload_current_scene()
 
 var moeda: PackedScene = preload("res://Objetos/Props/Moeda.tscn")
 func SpawnMoeda(parent:Node, pos:Vector2) -> void:

@@ -697,7 +697,6 @@ position = Vector2(1125, 924)
 [node name="Cururu" parent="background/0" unique_id=370155217 instance=ExtResource("32_o0mc4")]
 z_index = 0
 position = Vector2(1724, 878)
-scale = Vector2(0.919994, 0.919994)
 
 [node name="Particula" type="GPUParticles2D" parent="background/0" unique_id=2060733035]
 position = Vector2(-3313, 138)

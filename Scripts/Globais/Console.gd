@@ -35,13 +35,13 @@ func Comando(line:String) -> void:
 	var cmd:PackedStringArray = line.split(" ")
 	match cmd[0]:
 		"fase":
-			for p:Array in Mundos.lista_fases:
+			for p:PackedStringArray in Mundos.lista_fases:
 				if cmd[1] == p[1].get_slice(".", 0):
 					var place:String = "res://Cenas/%s/%s/" % [p[0], p[1]]
-					Mundos.CarregaFase(place)
+					LoadCena.Load(place)
 					_Print(
 						"[color=dark_green]Trocou de fase: %s[/color]" % [cmd[1]])
-					await Mundos.fase_mudou
+					await get_tree().scene_changed
 					DisablePlayer()
 					break
 		
@@ -50,7 +50,7 @@ func Comando(line:String) -> void:
 		
 		"load":
 			GameData.leu_data = false
-			if await GameData.Load():
+			if GameData.Load():
 				Console._Print("[color=dark_green]Save carregado[/color]")
 			else:
 				Console._Print("[color=dark_red]Save não encontrado[/color]")

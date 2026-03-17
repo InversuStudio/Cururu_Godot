@@ -9,6 +9,10 @@ extends Area2D
 # Se o Player spawna virado à esquerda
 var virado_a_esquerda: bool = false
 
+func _ready() -> void:
+	collision_layer = 0
+	collision_mask = 2
+
 func _on_body_entered(body: Node2D) -> void:
 	if body.is_in_group("Player"):
 		# Não faz transição se player estiver morto
@@ -30,4 +34,4 @@ func _on_body_entered(body: Node2D) -> void:
 				true:
 					body.input_move.x = -1.0
 				
-		Mundos.CarregaFase(destino, true, posicao)#, virado_a_esquerda)
+		LoadCena.Load(destino, true, posicao)

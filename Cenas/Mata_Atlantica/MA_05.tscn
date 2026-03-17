@@ -360,7 +360,6 @@ nome_id = "MA_05"
 [node name="Cururu" parent="0" unique_id=1802978607 instance=ExtResource("5_gvt1b")]
 z_index = 0
 position = Vector2(1593.9999, -2947)
-scale = Vector2(0.959163, 0.959163)
 
 [node name="ColorRect3" type="ColorRect" parent="0" unique_id=1341124482]
 material = SubResource("ShaderMaterial_b8vui")

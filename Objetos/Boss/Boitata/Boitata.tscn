@@ -441,6 +441,9 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": null
+}, {
+"duration": 1.0,
 "texture": ExtResource("45_xvx5y")
 }, {
 "duration": 1.0,
@@ -663,6 +666,9 @@ animations = [{
 "speed": 10.0
 }, {
 "frames": [{
+"duration": 1.0,
+"texture": null
+}, {
 "duration": 1.0,
 "texture": ExtResource("100_omsfd")
 }, {
@@ -1590,9 +1596,36 @@ tracks/7/keys = {
 "values": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
 }
 
+[sub_resource type="Animation" id="Animation_7f6q5"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("SpriteMain:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [7]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("SpriteCabeca:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [6]
+}
+
 [sub_resource type="Animation" id="Animation_r4nid"]
 resource_name = "Some"
-length = 0.7501
+length = 0.8334
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -1612,10 +1645,10 @@ tracks/1/path = NodePath("SpriteMain:frame")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.08333331, 0.16666669, 0.25003338, 0.33333334, 0.4166667, 0.50000006, 0.5833334),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"times": PackedFloat32Array(0, 0.083299994, 0.16659999, 0.24989992, 0.3332333, 0.4166, 0.49989995, 0.5832333, 0.66656667, 0.7499),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
 "update": 1,
-"values": [8, 7, 6, 5, 4, 3, 2, 1]
+"values": [9, 8, 7, 6, 5, 4, 3, 2, 1, 0]
 }
 tracks/2/type = "value"
 tracks/2/imported = false
@@ -1636,10 +1669,10 @@ tracks/3/path = NodePath("SpriteCabeca:frame")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
-"times": PackedFloat32Array(0.08333331, 0.16666669, 0.25000003, 0.33333334, 0.41663337, 0.50000006, 0.5833334),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"times": PackedFloat32Array(0, 0.083299994, 0.16659999, 0.24989992, 0.3332333, 0.41656664, 0.49989995, 0.5832, 0.66656667, 0.7499),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
 "update": 1,
-"values": [7, 6, 5, 4, 2, 1, 0]
+"values": [9, 8, 7, 6, 5, 4, 3, 2, 1, 0]
 }
 tracks/4/type = "value"
 tracks/4/imported = false
@@ -1668,7 +1701,7 @@ tracks/5/keys = {
 
 [sub_resource type="Animation" id="Animation_sgy8v"]
 resource_name = "Surge"
-length = 0.7501
+length = 0.8334
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -1688,10 +1721,10 @@ tracks/1/path = NodePath("SpriteMain:frame")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.083333336, 0.16666667, 0.25000003, 0.3333, 0.4166667, 0.50000006, 0.5833334),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"times": PackedFloat32Array(0, 0.083333336, 0.16666667, 0.25000003, 0.3333, 0.4166667, 0.50000006, 0.5833, 0.6666, 0.7499),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
 "update": 1,
-"values": [1, 2, 3, 4, 5, 6, 7, 8]
+"values": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
 }
 tracks/2/type = "value"
 tracks/2/imported = false
@@ -1712,10 +1745,10 @@ tracks/3/path = NodePath("SpriteCabeca:frame")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
-"times": PackedFloat32Array(0, 0.083333336, 0.1667, 0.25000003, 0.33333334, 0.4166667, 0.50000006),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"times": PackedFloat32Array(0, 0.083333336, 0.1667, 0.25000003, 0.33333334, 0.4166667, 0.50000006, 0.5833, 0.6666, 0.7499),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
 "update": 1,
-"values": [0, 1, 2, 4, 5, 6, 7]
+"values": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
 }
 tracks/4/type = "value"
 tracks/4/imported = false
@@ -1753,6 +1786,7 @@ _data = {
 &"NocauteEnd": SubResource("Animation_0w5f0"),
 &"NocauteStart": SubResource("Animation_mjx0v"),
 &"Pilar": SubResource("Animation_fwdqd"),
+&"RESET": SubResource("Animation_7f6q5"),
 &"Some": SubResource("Animation_r4nid"),
 &"Surge": SubResource("Animation_sgy8v")
 }
@@ -1768,8 +1802,8 @@ axis_stretch_horizontal = 1
 script = ExtResource("1_s15tt")
 tempo_idle_cuspe = 1.0
 tempo_idle_pilar = 2.5
-tempo_carga_pilar = 0.18
-tempo_ate_prox_pilar = 0.3
+tempo_carga_pilar = 0.7
+tempo_ate_prox_pilar = 0.1
 musica_luta = ExtResource("2_ojojp")
 zoom = 0.5
 gritos = Array[AudioStream]([ExtResource("88_q1nmn"), ExtResource("4_hbr26"), ExtResource("5_ycj6j")])
@@ -1795,7 +1829,7 @@ position = Vector2(0, -1020)
 scale = Vector2(1.5, 1.5)
 sprite_frames = SubResource("SpriteFrames_nkv4g")
 animation = &"Surgimento"
-frame = 1
+frame = 7
 
 [node name="SpriteCabeca" type="AnimatedSprite2D" parent="." unique_id=1407401025]
 unique_name_in_owner = true
@@ -1804,6 +1838,7 @@ position = Vector2(0, -1020)
 scale = Vector2(1.5, 1.5)
 sprite_frames = SubResource("SpriteFrames_71r63")
 animation = &"Surgimento"
+frame = 6
 
 [node name="SpriteCorpo" type="AnimatedSprite2D" parent="." unique_id=1919865204]
 unique_name_in_owner = true
@@ -1812,6 +1847,7 @@ position = Vector2(0, -1020)
 scale = Vector2(1.5, 1.5)
 sprite_frames = SubResource("SpriteFrames_tic1h")
 animation = &"Surgimento"
+frame = 6
 
 [node name="VidaBoss" type="Node" parent="." unique_id=1212445150]
 unique_name_in_owner = true

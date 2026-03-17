@@ -439,7 +439,6 @@ position = Vector2(1819, -2927)
 [node name="Cururu" parent="Entidades" unique_id=348528437 instance=ExtResource("2_oho8c")]
 z_index = 0
 position = Vector2(7348.9995, -353.99997)
-scale = Vector2(0.959163, 0.959163)
 
 [node name="PointLight2D" type="PointLight2D" parent="Entidades/Cururu" unique_id=789518366]
 light_mask = 2

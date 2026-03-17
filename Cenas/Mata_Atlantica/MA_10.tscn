@@ -536,7 +536,6 @@ position = Vector2(3620, -1855)
 [node name="Cururu" parent="0/Entidades" unique_id=1764927139 instance=ExtResource("2_4lf50")]
 z_index = 0
 position = Vector2(5182.0005, -180.00003)
-scale = Vector2(0.919994, 0.919994)
 
 [node name="Agua" type="TileMapLayer" parent="0" unique_id=1044972219 groups=["Agua"]]
 material = SubResource("ShaderMaterial_qe8vq")

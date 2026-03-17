@@ -4,7 +4,7 @@ if Inventario.tem_mapa == false:
 	ARARÊ: Perdido pela mata? Tem que estar, com essa lama por todo lado. 
 	ARARÊ: Me chamo Ararê, sou de uma família de bicudos exploradores e estou registrando cada árvore nesse mapa.
 	ARARÊ: Talvez você devesse levar um com você para não se perder por Zootanica.
-	ARARÊ: Custa apenas 10 semetes de [b][i]ybirá[/i][/b]. Vai querer um?
+	ARARÊ: Custa apenas 10 sementes de [b][i]ybirá[/i][/b]. Vai querer um?
 	- Sim, antes que me perca.
 		if GameData.moedas >= 10
 			ARARÊ: [do! DialogoCMD.AddMapa(), GameData.moedas -= 10] Ta na pata, esse mapa é todo seu!.

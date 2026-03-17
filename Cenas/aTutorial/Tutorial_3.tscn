@@ -964,7 +964,6 @@ texture = ExtResource("29_qprck")
 [node name="Cururu" parent="Background/0" unique_id=1638125701 instance=ExtResource("30_est77")]
 z_index = 0
 position = Vector2(-18487, -3635)
-scale = Vector2(0.919994, 0.919994)
 
 [node name="Agua3" type="TileMapLayer" parent="Background/0" unique_id=1253382976 groups=["Agua"]]
 material = SubResource("ShaderMaterial_on2eu")

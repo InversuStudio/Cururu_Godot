@@ -38,6 +38,7 @@ HUD="*res://UI/HUD.tscn"
 DialogoCMD="*res://Scripts/Globais/DialogoCMD.gd"
 AvisoItem="*res://UI/AvisoItem.tscn"
 Console="*uid://b1muyegh71wmp"
+LoadCena="*uid://qclimmg1om0s"
 
 [dialogue_manager]
 
