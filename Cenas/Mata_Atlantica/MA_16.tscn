@@ -318,7 +318,7 @@ texture = ExtResource("9_hqaqg")
 
 [node name="-1" type="CanvasLayer" parent="." unique_id=1863905597]
 follow_viewport_enabled = true
-follow_viewport_scale = 0.97
+follow_viewport_scale = 0.96
 
 [node name="Mato01" type="Sprite2D" parent="-1" unique_id=1767362015]
 position = Vector2(-6486, -10190.2)
@@ -337,7 +337,7 @@ texture = ExtResource("10_7rmnr")
 
 [node name="-0,5" type="CanvasLayer" parent="." unique_id=86798231]
 follow_viewport_enabled = true
-follow_viewport_scale = 0.98
+follow_viewport_scale = 0.97
 
 [node name="ArvoreMiasma" type="Sprite2D" parent="-0,5" unique_id=1773855822]
 position = Vector2(-6188, -10907.001)
@@ -366,25 +366,25 @@ texture = ExtResource("12_w6tf2")
 
 [node name="-0,2" type="CanvasLayer" parent="." unique_id=1250855717]
 follow_viewport_enabled = true
-follow_viewport_scale = 0.9
+follow_viewport_scale = 0.98
 
 [node name="MoitaMiasma1" type="Sprite2D" parent="-0,2" unique_id=58110580]
-position = Vector2(-4203.8335, -10394.167)
+position = Vector2(-4203.8335, -10375.278)
 texture = ExtResource("13_us20a")
 
 [node name="MoitaMiasma7" type="Sprite2D" parent="-0,2" unique_id=214529537]
-position = Vector2(-2217.954, -10397.667)
+position = Vector2(-2217.954, -10378.778)
 scale = Vector2(0.90251577, 0.9025157)
 texture = ExtResource("13_us20a")
 flip_h = true
 
 [node name="MoitaMiasma8" type="Sprite2D" parent="-0,2" unique_id=626442860]
-position = Vector2(-1389.2781, -10415.667)
+position = Vector2(-1389.2781, -10396.778)
 scale = Vector2(0.8647799, 0.8647799)
 texture = ExtResource("13_us20a")
 
 [node name="MoitaChao3" type="Sprite2D" parent="-0,2" unique_id=1963045245]
-position = Vector2(-3630.833, -10415.167)
+position = Vector2(-3630.833, -10396.278)
 texture = ExtResource("27_iruwy")
 
 [node name="0" type="CanvasLayer" parent="." unique_id=1047624151]
@@ -408,7 +408,7 @@ collision_layer = 0
 collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="0/Boss/CheckPlayer" unique_id=720688723]
-position = Vector2(0, -445.75)
+position = Vector2(-238, -445.75)
 shape = SubResource("RectangleShape2D_o607x")
 
 [node name="Rabo" parent="0/Boss" unique_id=773282396 instance=ExtResource("16_6tp3d")]
