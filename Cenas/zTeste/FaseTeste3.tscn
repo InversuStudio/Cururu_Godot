@@ -31,6 +31,7 @@ position = Vector2(470, -83)
 
 [node name="TransicaoFase" parent="." unique_id=1362059449 instance=ExtResource("4_aug86")]
 vertical = true
+destino = &"res://Cenas/zTeste/FaseTeste1.tscn"
 posicao = Vector2(-497, -1570)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TransicaoFase" unique_id=93322653]

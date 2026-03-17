@@ -96,6 +96,7 @@ position = Vector2(-2871, 8)
 
 [node name="TransicaoFase" parent="." unique_id=1554524353 instance=ExtResource("6_sf0m0")]
 position = Vector2(446, 0)
+destino = &"res://Cenas/zTeste/FaseTeste1.tscn"
 posicao = Vector2(-2500, -514)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TransicaoFase" unique_id=659067067]

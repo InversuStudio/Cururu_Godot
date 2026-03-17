@@ -118,9 +118,10 @@ func _ready() -> void:
 		AudioServer.set_bus_volume_db(bus, linear_to_db(valor)))
 	
 	# Lógica para evitar bugs durante testes
-	await get_tree().scene_changed
+	await get_tree().physics_frame
 	if Mundos.player and GameData.vida_max > 0:
 		IniciaHUD()
+		MostraHUD()
 
 func MudaAba() -> void:
 	for c:Control in %ContainerMenus.get_children():
