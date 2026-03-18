@@ -1,7 +1,6 @@
 [gd_scene format=4 uid="uid://c4rls1pfwei2e"]
 
-[ext_resource type="Texture2D" uid="uid://2x6q1ni8klgv" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/arvore_fundo1.png" id="2_himde"]
-[ext_resource type="Texture2D" uid="uid://btb3tlxsmx38i" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/arvore_fundo2.png" id="3_tklss"]
+[ext_resource type="Texture2D" uid="uid://e4138tmbd6ck" path="res://Sprites/Cenário/Mata_Atlantica/Background/110 Sem Título_20260213153415.png" id="1_s7kye"]
 [ext_resource type="Texture2D" uid="uid://3g4iv5385ymw" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/arvore_S2.png" id="4_4882g"]
 [ext_resource type="Texture2D" uid="uid://dv0q1amqoq168" path="res://Sprites/Cenário/Mata_Atlantica/Background/Mata/mato03.png" id="5_l6p7n"]
 [ext_resource type="Texture2D" uid="uid://wng7roaj8xu6" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/arvore_S1.png" id="7_ty1hn"]
@@ -19,6 +18,7 @@
 [ext_resource type="Texture2D" uid="uid://bv355g2kjbpf2" path="res://Sprites/Inimigos/Boitata/Animacoes/Rabo/boitata_159.png" id="21_dfjqd"]
 [ext_resource type="Texture2D" uid="uid://bfetn2xgsxtse" path="res://Sprites/Inimigos/Boitata/Animacoes/Rabo/boitata_161.png" id="22_uyrp1"]
 [ext_resource type="Texture2D" uid="uid://ddo34f6u1n17b" path="res://Sprites/Inimigos/Boitata/Animacoes/Rabo/boitata_163.png" id="23_dqa24"]
+[ext_resource type="PackedScene" uid="uid://18e8pqawhowp" path="res://Sprites/Cenário/Mata_Atlantica/Interativos/chama_iluminacao.tscn" id="24_2ajv4"]
 [ext_resource type="Texture2D" uid="uid://dburljfs4utwt" path="res://Sprites/Inimigos/Boitata/Animacoes/Rabo/boitata_165.png" id="24_rppi7"]
 [ext_resource type="Texture2D" uid="uid://dx1lfugnv6um7" path="res://Sprites/Inimigos/Boitata/Animacoes/Rabo/boitata_167.png" id="25_1fff3"]
 [ext_resource type="Texture2D" uid="uid://ftcnbw8cqyxj" path="res://Sprites/Inimigos/Boitata/Animacoes/Rabo/boitata_169.png" id="26_crkp4"]
@@ -178,39 +178,40 @@ shader_parameter/offset = 0.0
 
 [node name="MA_2-7" type="Node2D" unique_id=226357128]
 
+[node name="-5" type="CanvasLayer" parent="." unique_id=137825394]
+visible = false
+follow_viewport_enabled = true
+follow_viewport_scale = 0.65
+
+[node name="CanvasModulate" type="CanvasModulate" parent="-5" unique_id=163524635]
+visible = false
+position = Vector2(-4830418, -558429.06)
+scale = Vector2(30888.035, 1551.4684)
+color = Color(0, 0, 0, 1)
+
 [node name="-4" type="CanvasLayer" parent="." unique_id=759908728]
 follow_viewport_enabled = true
 follow_viewport_scale = 0.7
 
-[node name="ArvoreFundo1" type="Sprite2D" parent="-4" unique_id=1490792901]
-position = Vector2(-5866.5, -11043.5)
-scale = Vector2(1.67137, 2.0621922)
-texture = ExtResource("2_himde")
+[node name="110SemTítulo20260213153415" type="Sprite2D" parent="-4" unique_id=1797171006]
+position = Vector2(-5695.385, -10852.5)
+scale = Vector2(1.0913086, 1.0913086)
+texture = ExtResource("1_s7kye")
 
-[node name="ArvoreFundo2" type="Sprite2D" parent="-4" unique_id=862673849]
-position = Vector2(-4856.25, -11012.5)
-scale = Vector2(1.5413622, 1.5076193)
-texture = ExtResource("3_tklss")
+[node name="110SemTítulo20260213153416" type="Sprite2D" parent="-4" unique_id=1094450257]
+position = Vector2(-3315.3848, -10852.5)
+scale = Vector2(1.0913086, 1.0913086)
+texture = ExtResource("1_s7kye")
 
-[node name="ArvoreFundo3" type="Sprite2D" parent="-4" unique_id=1623503071]
-position = Vector2(-3735, -11043.5)
-scale = Vector2(1.67137, 2.0621922)
-texture = ExtResource("2_himde")
+[node name="110SemTítulo20260213153417" type="Sprite2D" parent="-4" unique_id=1003032646]
+position = Vector2(-1600.0001, -10852.5)
+scale = Vector2(1.0913086, 1.0913086)
+texture = ExtResource("1_s7kye")
 
-[node name="ArvoreFundo4" type="Sprite2D" parent="-4" unique_id=2101160257]
-position = Vector2(-2669, -10857)
-scale = Vector2(1.8126519, 1.8038099)
-texture = ExtResource("3_tklss")
-
-[node name="ArvoreFundo5" type="Sprite2D" parent="-4" unique_id=463505917]
-position = Vector2(-1856, -10777.5)
-scale = Vector2(1.67137, 2.0621922)
-texture = ExtResource("2_himde")
-
-[node name="ArvoreFundo6" type="Sprite2D" parent="-4" unique_id=193035253]
-position = Vector2(-845.75, -10746.5)
-scale = Vector2(1.5413622, 1.5076193)
-texture = ExtResource("3_tklss")
+[node name="CanvasModulate" type="CanvasModulate" parent="-4" unique_id=1715928177]
+position = Vector2(-27329.11, -13826.375)
+scale = Vector2(175.74992, 39.388683)
+color = Color(0, 0, 0, 1)
 
 [node name="-3,5" type="CanvasLayer" parent="." unique_id=568571791]
 follow_viewport_enabled = true
@@ -241,6 +242,11 @@ position = Vector2(-1349.0001, -11001)
 scale = Vector2(0.8219512, 0.82195127)
 texture = ExtResource("4_4882g")
 
+[node name="CanvasModulate" type="CanvasModulate" parent="-3,5" unique_id=1532007632]
+position = Vector2(-27329.11, -13826.375)
+scale = Vector2(175.74992, 39.388683)
+color = Color(0, 0, 0, 1)
+
 [node name="-3" type="CanvasLayer" parent="." unique_id=2117157649]
 follow_viewport_enabled = true
 follow_viewport_scale = 0.8
@@ -260,6 +266,11 @@ position = Vector2(-987.9999, -10722.8)
 scale = Vector2(0.8, 0.8)
 texture = ExtResource("5_l6p7n")
 
+[node name="CanvasModulate" type="CanvasModulate" parent="-3" unique_id=1528275518]
+position = Vector2(-27329.11, -13826.375)
+scale = Vector2(175.74992, 39.388683)
+color = Color(0, 0, 0, 1)
+
 [node name="-2,5" type="CanvasLayer" parent="." unique_id=1554661304]
 follow_viewport_enabled = true
 follow_viewport_scale = 0.85
@@ -273,6 +284,11 @@ texture = ExtResource("7_ty1hn")
 position = Vector2(-1735, -10858.001)
 scale = Vector2(0.7902439, 0.79024386)
 texture = ExtResource("7_ty1hn")
+
+[node name="CanvasModulate" type="CanvasModulate" parent="-2,5" unique_id=1898742926]
+position = Vector2(-27329.11, -13826.375)
+scale = Vector2(175.74992, 39.388683)
+color = Color(0, 0, 0, 1)
 
 [node name="-2" type="CanvasLayer" parent="." unique_id=443703700]
 follow_viewport_enabled = true
@@ -292,6 +308,11 @@ texture = ExtResource("8_acroo")
 position = Vector2(-348.00012, -10473.8)
 scale = Vector2(0.99999994, 0.99999994)
 texture = ExtResource("8_acroo")
+
+[node name="CanvasModulate" type="CanvasModulate" parent="-2" unique_id=1542988746]
+position = Vector2(-27329.11, -13826.375)
+scale = Vector2(175.74992, 39.388683)
+color = Color(0, 0, 0, 1)
 
 [node name="-1,5" type="CanvasLayer" parent="." unique_id=72141677]
 follow_viewport_enabled = true
@@ -313,6 +334,11 @@ texture = ExtResource("9_hqaqg")
 position = Vector2(-903, -10896)
 texture = ExtResource("9_hqaqg")
 
+[node name="CanvasModulate" type="CanvasModulate" parent="-1,5" unique_id=859431440]
+position = Vector2(-27329.11, -13826.375)
+scale = Vector2(175.74992, 39.388683)
+color = Color(0, 0, 0, 1)
+
 [node name="-1" type="CanvasLayer" parent="." unique_id=1863905597]
 follow_viewport_enabled = true
 follow_viewport_scale = 0.96
@@ -331,6 +357,11 @@ texture = ExtResource("10_7rmnr")
 position = Vector2(-1696.9995, -10190.2)
 scale = Vector2(1.2, 1.2)
 texture = ExtResource("10_7rmnr")
+
+[node name="CanvasModulate" type="CanvasModulate" parent="-1" unique_id=919153298]
+position = Vector2(-27329.11, -13826.375)
+scale = Vector2(175.74992, 39.388683)
+color = Color(0, 0, 0, 1)
 
 [node name="-0,5" type="CanvasLayer" parent="." unique_id=86798231]
 follow_viewport_enabled = true
@@ -361,6 +392,11 @@ position = Vector2(-1257.0002, -10907.001)
 scale = Vector2(1.1458104, 0.8139577)
 texture = ExtResource("12_w6tf2")
 
+[node name="CanvasModulate" type="CanvasModulate" parent="-0,5" unique_id=1937717558]
+position = Vector2(-27329.11, -13826.375)
+scale = Vector2(175.74992, 39.388683)
+color = Color(0, 0, 0, 1)
+
 [node name="-0,2" type="CanvasLayer" parent="." unique_id=1250855717]
 follow_viewport_enabled = true
 follow_viewport_scale = 0.98
@@ -384,6 +420,11 @@ texture = ExtResource("13_us20a")
 position = Vector2(-3630.833, -10396.278)
 texture = ExtResource("27_iruwy")
 
+[node name="CanvasModulate" type="CanvasModulate" parent="-0,2" unique_id=1830517515]
+position = Vector2(-27329.11, -13826.375)
+scale = Vector2(175.74992, 39.388683)
+color = Color(0, 0, 0, 1)
+
 [node name="0" type="CanvasLayer" parent="." unique_id=1047624151]
 follow_viewport_enabled = true
 
@@ -398,6 +439,15 @@ parent_pilares = NodePath("../ConfigBoss/PaiPilares")
 spawn_pilares = [NodePath("../ConfigBoss/PaiPilares/PosPilar1"), NodePath("../ConfigBoss/PaiPilares/PosPilar2"), NodePath("../ConfigBoss/PaiPilares/PosPilar3"), NodePath("../ConfigBoss/PaiPilares/PosPilar4"), NodePath("../ConfigBoss/PaiPilares/PosPilar5"), NodePath("../ConfigBoss/PaiPilares/PosPilar6"), NodePath("../ConfigBoss/PaiPilares/PosPilar7"), NodePath("../ConfigBoss/PaiPilares/PosPilar8"), NodePath("../ConfigBoss/PaiPilares/PosPilar9")]
 musica_luta = ExtResource("15_bgway")
 flip_node = [NodePath("../ConfigBoss/PosL"), NodePath("../ConfigBoss/PosR")]
+
+[node name="PointLight2D2" type="PointLight2D" parent="0/Boss" unique_id=654765117]
+light_mask = 2
+visibility_layer = 2
+position = Vector2(-299, -1102)
+scale = Vector2(2.5647385, 2.5573776)
+energy = 1.3
+range_layer_max = 1
+texture = ExtResource("31_ss1nv")
 
 [node name="CheckPlayer" type="Area2D" parent="0/Boss" unique_id=1296495921]
 position = Vector2(1205, -430)
@@ -414,14 +464,34 @@ scale = Vector2(1.6255717, 1.6255717)
 collision_layer = 16
 
 [node name="Rabo" type="AnimatedSprite2D" parent="0/Boss/Rabo" unique_id=286775902]
+position = Vector2(62.904602, -54.135056)
+scale = Vector2(0.9161272, 0.91612715)
 sprite_frames = SubResource("SpriteFrames_hqusl")
 autoplay = "default"
 frame_progress = 0.45953846
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="0/Boss/Rabo" unique_id=1024456315]
-position = Vector2(28, 331.57562)
+position = Vector2(28, 192.54762)
 shape = SubResource("CapsuleShape2D_s7f4i")
 debug_color = Color(0.9866224, 0, 0.3265099, 0.41960785)
+
+[node name="PointLight2D3" type="PointLight2D" parent="0/Boss/Rabo" unique_id=1125440749]
+light_mask = 2
+visibility_layer = 2
+position = Vector2(65.20764, 117.49707)
+scale = Vector2(1.1625491, 1.1592126)
+energy = 1.3
+range_layer_max = 1
+texture = ExtResource("31_ss1nv")
+
+[node name="PointLight2D" type="PointLight2D" parent="0/Boss" unique_id=498025673]
+light_mask = 2
+visibility_layer = 2
+position = Vector2(1134.4999, -878.49976)
+scale = Vector2(7.979338, 7.056473)
+energy = 1.3
+range_layer_max = 1
+texture = ExtResource("31_ss1nv")
 
 [node name="ConfigBoss" type="Node" parent="0" unique_id=601089665]
 
@@ -478,6 +548,15 @@ scale = Vector2(0.8647799, 0.8647799)
 [node name="PosR" type="Marker2D" parent="0/ConfigBoss" unique_id=2071952799]
 position = Vector2(-2954, -9970)
 scale = Vector2(0.8647799, 0.8647799)
+
+[node name="Node2D" parent="0" unique_id=1613074283 instance=ExtResource("24_2ajv4")]
+position = Vector2(-999, -10506)
+
+[node name="Node2D2" parent="0" unique_id=63894290 instance=ExtResource("24_2ajv4")]
+position = Vector2(-1650, -10506)
+
+[node name="Node2D3" parent="0" unique_id=281579050 instance=ExtResource("24_2ajv4")]
+position = Vector2(-2266, -10506)
 
 [node name="Cenario" type="Node2D" parent="0" unique_id=760172669]
 position = Vector2(-1761.4286, -10515.429)
@@ -543,23 +622,10 @@ position = Vector2(0.43255615, -522)
 scale = Vector2(0.9999999, 0.9999997)
 shape = SubResource("RectangleShape2D_xyjrg")
 
-[node name="PointLight2D" type="PointLight2D" parent="0/Cenario" unique_id=718389085]
-position = Vector2(-2349.5713, -359.57117)
-scale = Vector2(9.236914, 7.0578523)
-energy = 2.05
-blend_mode = 2
-texture = ExtResource("31_ss1nv")
-
 [node name="Cururu" parent="0/Cenario" unique_id=809203339 instance=ExtResource("32_fdwrl")]
 z_index = 0
+z_as_relative = false
 position = Vector2(874.4285, 131.42871)
-
-[node name="PointLight2D" type="PointLight2D" parent="0/Cenario/Cururu" unique_id=1816164189]
-position = Vector2(6.5218506, -133.15332)
-scale = Vector2(1.8325667, 1.8325676)
-energy = 1.3
-blend_mode = 2
-texture = ExtResource("31_ss1nv")
 
 [node name="Agua" type="TileMapLayer" parent="0/Cenario" unique_id=608737215 groups=["Agua"]]
 self_modulate = Color(1.7445444, 3.1984727, 4.3813295, 1)
@@ -731,6 +797,11 @@ position = Vector2(-335.5714, -817.5713)
 texture = ExtResource("39_e6ktp")
 flip_h = true
 flip_v = true
+
+[node name="CanvasModulate" type="CanvasModulate" parent="0/Cenario" unique_id=124732364]
+position = Vector2(-1793.3334, -455.04785)
+scale = Vector2(13.257071, 6.2760406)
+color = Color(0, 0, 0, 1)
 
 [node name="MA_14(temp)" parent="0/Cenario" unique_id=932632145 instance=ExtResource("45_ygg14")]
 position = Vector2(1357.4286, 197.42773)
@@ -1325,14 +1396,14 @@ rotation = -3.1415925
 scale = Vector2(0.65684927, 0.65684927)
 texture = ExtResource("43_0nkb0")
 
-[node name="2" type="CanvasLayer" parent="." unique_id=137825394]
+[node name="CanvasModulate" type="CanvasModulate" parent="1" unique_id=530854593]
+position = Vector2(-27329.11, -13826.375)
+scale = Vector2(175.74992, 39.388683)
+color = Color(0, 0, 0, 1)
 
 [node name="3" type="CanvasLayer" parent="." unique_id=1158125993]
 
 [node name="4" type="CanvasLayer" parent="." unique_id=610410012]
-
-[node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=842843546]
-color = Color(0.012617188, 0.012617188, 0.012617188, 1)
 
 [node name="BGM_Player" type="Node" parent="." unique_id=1663845811]
 script = ExtResource("46_4nae2")

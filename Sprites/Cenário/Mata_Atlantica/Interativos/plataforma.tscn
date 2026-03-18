@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://b2pop4ke31d1x" path="res://Sprites/Cenário/Mata_Atlantica/Foreground/02.png" id="2_j1l0s"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hnyem"]
-size = Vector2(372.8256, 33.140053)
+size = Vector2(372.8256, 8.285015)
 
 [node name="Plataforma" type="Sprite2D" unique_id=860876985]
 position = Vector2(1.0000038, 9.536743e-07)
@@ -26,6 +26,7 @@ scale = Vector2(0.99999994, 0.99999994)
 constant_angular_velocity = 0.008726646
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=40262383]
-position = Vector2(-4.053116e-06, -64.20886)
+position = Vector2(-4.053116e-06, -76.63638)
 shape = SubResource("RectangleShape2D_hnyem")
+one_way_collision_margin = 2.0
 debug_color = Color(0, 0.6, 0.69803923, 0)
