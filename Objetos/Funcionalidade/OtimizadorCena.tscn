@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://c6hglvets6hgp"]
+
+[ext_resource type="Script" uid="uid://dnbmoy0om0dur" path="res://Scripts/Componentes/OtimizadorCena.gd" id="1_vtcng"]
+
+[node name="OtimizadorCena" type="VisibleOnScreenNotifier2D" unique_id=728809620]
+script = ExtResource("1_vtcng")

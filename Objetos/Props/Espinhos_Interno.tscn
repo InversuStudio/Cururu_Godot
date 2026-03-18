@@ -1,10 +1,10 @@
-[gd_scene load_steps=8 format=3 uid="uid://cwiylj5l44l1n"]
+[gd_scene format=3 uid="uid://cwiylj5l44l1n"]
 
 [ext_resource type="Script" uid="uid://davjnwfncyj66" path="res://Scripts/Componentes/Armadilha.gd" id="1_07vi5"]
 [ext_resource type="Texture2D" uid="uid://xnsjixxwsec7" path="res://Sprites/Cenário/Mata_Atlantica/Interativos/ESPINHOS_INTERNO.png" id="2_07vi5"]
 [ext_resource type="PackedScene" uid="uid://pc4mgv2nv8af" path="res://Objetos/Funcionalidade/CompHitBox.tscn" id="3_1yjau"]
 [ext_resource type="AudioStream" uid="uid://d0lumxscgbgin" path="res://Audio/SFX/INIMIGOS/inimigo_dead.mp3" id="4_87kjq"]
-[ext_resource type="Script" uid="uid://b2ls33ys55oyt" path="res://Scripts/Componentes/OtimizadorSprite.gd" id="5_y48u4"]
+[ext_resource type="Script" uid="uid://b2ls33ys55oyt" path="res://Scripts/Componentes/OtimizadorObjeto.gd" id="5_y48u4"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_tkh53"]
 animations = [{

@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://ffqi6t0ahbmk"]
+
+[ext_resource type="Script" uid="uid://b2ls33ys55oyt" path="res://Scripts/Componentes/OtimizadorObjeto.gd" id="1_lcjxr"]
+
+[node name="OtimizadorObjeto" type="VisibleOnScreenNotifier2D" unique_id=728809620]
+script = ExtResource("1_lcjxr")

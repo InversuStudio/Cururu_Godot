@@ -7,7 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://ljpyamxivemq" path="res://Sprites/UI/HUD/CHICOTE.png" id="3_xtwx5"]
 [ext_resource type="Texture2D" uid="uid://brkgsnwq1lnov" path="res://Sprites/Cenário/Mata_Atlantica/Interativos/pedestal_pedra_recorte.png" id="5_beg2k"]
 [ext_resource type="AudioStream" uid="uid://b3q8f2bgu746y" path="res://Audio/SFX/AMBIENTE/som_upgrade.wav" id="7_rm14k"]
-[ext_resource type="Script" uid="uid://b2ls33ys55oyt" path="res://Scripts/Componentes/OtimizadorSprite.gd" id="7_xtwx5"]
+[ext_resource type="Script" uid="uid://b2ls33ys55oyt" path="res://Scripts/Componentes/OtimizadorObjeto.gd" id="7_xtwx5"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qxje0"]
 size = Vector2(84, 220)

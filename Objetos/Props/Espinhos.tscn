@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://bpkplb3cgqbco" path="res://Sprites/Cenário/Mata_Atlantica/Interativos/ESPINHOS.png" id="2_uwfcm"]
 [ext_resource type="PackedScene" uid="uid://pc4mgv2nv8af" path="res://Objetos/Funcionalidade/CompHitBox.tscn" id="3_xnfjv"]
 [ext_resource type="AudioStream" uid="uid://d0lumxscgbgin" path="res://Audio/SFX/INIMIGOS/inimigo_dead.mp3" id="4_ff3yg"]
-[ext_resource type="Script" uid="uid://b2ls33ys55oyt" path="res://Scripts/Componentes/OtimizadorSprite.gd" id="5_gb73u"]
+[ext_resource type="Script" uid="uid://b2ls33ys55oyt" path="res://Scripts/Componentes/OtimizadorObjeto.gd" id="5_gb73u"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_tkh53"]
 animations = [{

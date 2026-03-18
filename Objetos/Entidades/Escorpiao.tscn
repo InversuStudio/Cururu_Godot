@@ -13,7 +13,7 @@
 [ext_resource type="AudioStream" uid="uid://b3mmkipqf30jd" path="res://Audio/SFX/INIMIGOS/HIT_INIMIGO.wav" id="7_mvbia"]
 [ext_resource type="Texture2D" uid="uid://b6lp0on4i181d" path="res://Sprites/Inimigos/Animação de morte/4.png" id="8_rkugu"]
 [ext_resource type="Texture2D" uid="uid://yxi1hdj1bo5o" path="res://Sprites/Inimigos/Animação de morte/5.png" id="9_ciqm2"]
-[ext_resource type="PackedScene" uid="uid://ffqi6t0ahbmk" path="res://Objetos/Funcionalidade/OtimizadorSprite.tscn" id="9_mvbia"]
+[ext_resource type="PackedScene" uid="uid://ffqi6t0ahbmk" path="res://Objetos/Funcionalidade/OtimizadorObjeto.tscn" id="9_mvbia"]
 [ext_resource type="Texture2D" uid="uid://b88rutgnulrpo" path="res://Sprites/Inimigos/Animação de morte/6.png" id="10_2ylce"]
 [ext_resource type="Texture2D" uid="uid://bdexte3g5lkq7" path="res://Sprites/Inimigos/Animação de morte/7.png" id="11_a5ut6"]
 

@@ -1,4 +1,4 @@
-class_name OtimizadorSprite
+class_name OtimizadorObjeto
 extends VisibleOnScreenNotifier2D
 
 var parent: Node2D = null
@@ -10,7 +10,7 @@ var parent: Node2D = null
 func _ready() -> void:
 	parent = get_parent() # Recebe o node pai original
 	name = "OPT_" + parent.name # Muda seu nome (para debug)
-	call_deferred("reparent", get_tree().current_scene) # Vira filho da cena
+	call_deferred("reparent", parent.get_parent()) # Vira filho da cena
 	#enable_node_path = parent.get_path() # Atualiza caminho até pai original
 	connect("screen_entered", Aparece) # Conecta funções de entrada/saída
 	connect("screen_exited", Some)

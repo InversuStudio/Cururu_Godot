@@ -29,4 +29,4 @@ func _on_anim_animation_finished(anim_name: StringName) -> void:
 			await get_tree().create_timer(1.5).timeout
 			DialogoCMD.IniciaDialogo(parent.dialogo)
 			await DialogueManager.dialogue_ended
-			Mundos.CarregaFase("res://Cenas/zDemo/FinalDemo.tscn")
+			LoadCena.Load("res://Cenas/zDemo/FinalDemo.tscn")

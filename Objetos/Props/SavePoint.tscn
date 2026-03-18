@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://bf0q4vuc2s0md" path="res://Sprites/Cenário/Objetos/Savepoint/apagado.png" id="2_3f5lj"]
 [ext_resource type="Texture2D" uid="uid://bqe80obttjb82" path="res://Sprites/Cenário/Objetos/Savepoint/save_meio_termo.png" id="4_j20lk"]
 [ext_resource type="Texture2D" uid="uid://byyty8fw4cjjd" path="res://Sprites/Cenário/Objetos/Savepoint/save_ativado.png" id="5_41v7y"]
-[ext_resource type="PackedScene" uid="uid://ffqi6t0ahbmk" path="res://Objetos/Funcionalidade/OtimizadorSprite.tscn" id="7_7viry"]
+[ext_resource type="PackedScene" uid="uid://ffqi6t0ahbmk" path="res://Objetos/Funcionalidade/OtimizadorObjeto.tscn" id="7_7viry"]
 [ext_resource type="AudioStream" uid="uid://ny7q34ehan6u" path="res://Audio/SFX/AMBIENTE/Save.wav" id="7_ti6fj"]
 [ext_resource type="Texture2D" uid="uid://3fndwwvknj3j" path="res://Sprites/Cenário/Objetos/Savepoint/LOGO V1 STEAM.png" id="8_7viry"]
 

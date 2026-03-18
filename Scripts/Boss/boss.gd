@@ -73,6 +73,7 @@ func _ready() -> void:
 			#Esconde sprite armadura
 			#%HurtCabeca.set_deferred("monitorable", false)
 			%HurtCabeca.comp_vida = %VidaBoss
+			%HurtCabeca.sprite = %SpriteMain
 			await get_tree().create_timer(.1).timeout # Só pra ter hit flash
 			%SpriteCabeca.hide()
 			ChecaArmor()
@@ -83,6 +84,7 @@ func _ready() -> void:
 			#Esconde sprite armadura
 			#%HurtCorpo.set_deferred("monitorable", false)
 			%HurtCorpo.comp_vida = %VidaBoss
+			%HurtCorpo.sprite = %SpriteMain
 			await get_tree().create_timer(.1).timeout # Só pra ter hit flash
 			%SpriteCorpo.hide()
 			ChecaArmor()
@@ -137,12 +139,15 @@ func ArmorDano() -> void:
 func ResetArmor() -> void:
 	if %VidaBoss.vida_atual <= 0: return
 	vida_miasma_atual = vida_miasma_max
+	
 	%HurtCabeca.comp_vida = %VidaMCabeca
+	%HurtCabeca.sprite = %SpriteCabeca
 	%VidaMCabeca.RecebeCura(%VidaMCabeca.vida_max)
 	%HurtCabeca.set_deferred("monitorable", true)
 	%SpriteCabeca.show()
 	
 	%HurtCorpo.comp_vida = %VidaMCorpo
+	%HurtCorpo.sprite = %SpriteCorpo
 	%VidaMCorpo.RecebeCura(%VidaMCorpo.vida_max)
 	%HurtCorpo.set_deferred("monitorable", true)
 	%SpriteCorpo.show()
@@ -152,12 +157,12 @@ func SpawnPilar(pos:NodePath) -> void:
 	spawn_pilar.emit(node.global_position)
 
 func Morte() -> void:
-	await get_tree().physics_frame
-	#%HurtBox.set_deferred("monitorable", false)
-	#%HurtCabeca.set_deferred("monitorable", false)
-	#%HurtCorpo.set_deferred("monitorable", false)
+	%HurtBox.set_deferred("monitorable", false)
+	%HurtCabeca.set_deferred("monitorable", false)
+	%HurtCorpo.set_deferred("monitorable", false)
 	%TimerNocaute.stop()
 	%TimerIdle.stop()
 	%BarraVida.hide()
 	BGM.TocaMusica()
+	await get_tree().physics_frame
 	state_machine.MudaState(state_machine.find_child("Final"))
