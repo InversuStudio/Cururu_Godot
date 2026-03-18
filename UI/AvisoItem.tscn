@@ -4,7 +4,6 @@
 [ext_resource type="Shader" uid="uid://c1omtsxv04udh" path="res://Scripts/Shaders/blur_shader.gdshader" id="2_7m40o"]
 [ext_resource type="Texture2D" uid="uid://dxetesue4pk34" path="res://Sprites/UI/Pause/Pecas/COLETA_ITEM.png" id="2_j1nce"]
 [ext_resource type="AudioStream" uid="uid://da8j5pkrlvh5y" path="res://Audio/SFX/AMBIENTE/Iten especial.wav" id="4_2llkm"]
-[ext_resource type="Texture2D" uid="uid://c3tl3oddronfh" path="res://icon.svg" id="4_gxman"]
 [ext_resource type="Script" uid="uid://dvao27av8qjbk" path="res://Dialogos/label_auto_resize.gd" id="4_qmy0w"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_2llkm"]
@@ -145,41 +144,8 @@ unique_name_in_owner = true
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_font_sizes/normal_font_size = 40
-text = "Descrição Item"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="Comando" type="HBoxContainer" parent="AvisoItem/Conteudo/VBoxContainer/VBoxContainer" unique_id=677572502]
-unique_name_in_owner = true
-layout_mode = 2
-size_flags_vertical = 3
-size_flags_stretch_ratio = 0.25
-alignment = 1
-
-[node name="ComandItemAviso" type="RichTextLabel" parent="AvisoItem/Conteudo/VBoxContainer/VBoxContainer/Comando" unique_id=827595105]
-unique_name_in_owner = true
-custom_minimum_size = Vector2(300, 0)
-layout_mode = 2
-size_flags_vertical = 3
-theme_override_font_sizes/normal_font_size = 40
-text = "Pressione"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="ImgBtn" type="TextureRect" parent="AvisoItem/Conteudo/VBoxContainer/VBoxContainer/Comando" unique_id=281414140]
-unique_name_in_owner = true
-layout_mode = 2
-texture = ExtResource("4_gxman")
-expand_mode = 2
-
-[node name="tecla" type="Label" parent="AvisoItem/Conteudo/VBoxContainer/VBoxContainer/Comando/ImgBtn" unique_id=1686836116]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_font_sizes/font_size = 52
+bbcode_enabled = true
+text = "Descrição Item labubu"
 horizontal_alignment = 1
 vertical_alignment = 1
 

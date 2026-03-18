@@ -10,33 +10,54 @@ extends Node
 var tipo_input:int = 0
 
 func _input(event: InputEvent) -> void:
+	if event is InputEventMouseMotion:
+		tipo_input = 0
+		Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 	if event.is_pressed():
-		if event is InputEventMouseButton or event is InputEventKey:
+		if (event is InputEventMouseButton or event is InputEventKey
+		or event is InputEventMouseButton):
 			tipo_input = 0
+			Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
+			
 		elif event is InputEventJoypadButton or event is InputEventJoypadMotion:
 			tipo_input = 1
+			Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 
 func GetUiButtonImage(action:StringName) -> Array[StringName]:
 	var result:Array[StringName] = ["", ""]
 	var comandos:Array = InputMap.action_get_events(action)
 	
 	if tipo_input < 1:
-		result[0] = "res://Sprites/UI/Botoes/TesteBaseInputTeclado.png"
+		var key:String = ""
 		for ie:InputEvent in comandos:
 			if ie is InputEventKey:
-				result[1] = OS.get_keycode_string(ie.physical_keycode)
+				key = OS.get_keycode_string(ie.physical_keycode)
 				break
+				
+		result[0] = "res://Sprites/UI/Botoes/TesteTeclado" + key + ".png"
+		
 	else:
 		var botao:int = 0
+		var is_axis:bool = false
 		for ie:InputEvent in comandos:
 			if ie is InputEventJoypadButton:
 				botao = ie.button_index
 				break
-		match botao:
-			0:
-				result[0] = "res://Sprites/UI/Botoes/TesteInputXboxA.png"
-			1: 
-				result[0] = "res://Sprites/UI/Botoes/TesteInputXboxB.png"
+			if ie is InputEventJoypadMotion:
+				botao = ie.axis
+				is_axis = true
+				break
+		
+		if is_axis:
+			match botao:
+				4:
+					result[0] = "res://Sprites/UI/Botoes/TesteInputXboxLT.png"
+		else:
+			match botao:
+				0:
+					result[0] = "res://Sprites/UI/Botoes/TesteInputXboxA.png"
+				1: 
+					result[0] = "res://Sprites/UI/Botoes/TesteInputXboxB.png"
 		
 	# retorna [imagem_path, tecla]
 	return result

@@ -48,8 +48,7 @@ func _physics_process(delta: float) -> void:
 
 func Morte() -> void:
 	Mundos.lista_inimigos.append(id)
-	for i in range(0):
-		Mundos.SpawnMoeda(get_parent(), %SpawnMoeda.global_position)
+	Mundos.SpawnMoeda(get_parent(), %SpawnMoeda.global_position)
 	%HurtBox.process_mode = PROCESS_MODE_DISABLED
 	%HitBox.process_mode = PROCESS_MODE_DISABLED
 	%Sprite.play("morte")

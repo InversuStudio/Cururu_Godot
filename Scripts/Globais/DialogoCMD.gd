@@ -15,5 +15,6 @@ func AddMapa() -> void:
 	Inventario.tem_mapa = true
 	AvisoItem.Mostra(
 		"Mapa",
-		"Você recebeu o mapa da Mata Atlântica! Pressione LT para abrí-lo.",
-		load("res://Sprites/Cenário/Objetos/Upgrade/MAPA.png"))
+		"Você recebeu o mapa da Mata Atlântica! Pressione BTN para abrí-lo.",
+		load("res://Sprites/Cenário/Objetos/Upgrade/MAPA.png"),
+		"select")

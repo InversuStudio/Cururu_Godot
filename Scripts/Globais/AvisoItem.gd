@@ -24,16 +24,15 @@ func Mostra(nome:String, desc:String, img:Texture2D, action:StringName = "") -> 
 	get_tree().paused = true
 	%SFX.play()
 	%NomeItemAviso.text = nome
-	%DescItemAviso.text = desc
 	%ImgItemAviso.texture = img
+	
 	if action != "":
-		var btn:Array[StringName] = GameData.GetUiButtonImage(action)
-		%ImgBtn.texture = load(btn[0])
-		%ImgBtn.get_child(0).text = btn[1]
-		%Comando.show()
+		var path:StringName = GameData.GetUiButtonImage(action)[0]
+		print("Path: " + path)
+		desc = desc.replace("BTN", "[img]%s[/img]" % path)
+	
+	%DescItemAviso.text = desc
 
-	else: %Comando.hide()
-			
 	%Anim.play("TelaOn")
 	%ColorRect.visible = true
 	await %Anim.animation_finished
