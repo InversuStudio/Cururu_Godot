@@ -4,12 +4,12 @@ importer="dialogue_manager"
 importer_version=15
 type="Resource"
 uid="uid://ch3y4gcny6835"
-path="res://.godot/imported/VitoriaRegia.dialogue-414571006b4bb1a8955fbf2c4cc401f9.tres"
+path="res://.godot/imported/Vitoriaregia.dialogue-8ed484a50587d96ac9771b3c94713962.tres"
 
 [deps]
 
-source_file="res://Dialogos/VitoriaRegia.dialogue"
-dest_files=["res://.godot/imported/VitoriaRegia.dialogue-414571006b4bb1a8955fbf2c4cc401f9.tres"]
+source_file="res://Dialogos/Vitoriaregia.dialogue"
+dest_files=["res://.godot/imported/Vitoriaregia.dialogue-8ed484a50587d96ac9771b3c94713962.tres"]
 
 [params]
 

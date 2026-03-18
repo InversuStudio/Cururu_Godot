@@ -77,6 +77,12 @@ size = Vector2(458, 83)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qclta"]
 size = Vector2(459, 28)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ti6rg"]
+size = Vector2(135, 708)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yftf5"]
+size = Vector2(155, 626)
+
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_l7ekd"]
 shader = ExtResource("19_cdlqy")
 shader_parameter/flip_horizontal = true
@@ -94,12 +100,6 @@ shader_parameter/ray2_intensity = 0.30000001425
 shader_parameter/color = Color(0.9687218, 0.9046197, 0.75688607, 0.8)
 shader_parameter/hdr = false
 shader_parameter/seed = 7.0
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_ti6rg"]
-size = Vector2(135, 708)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_yftf5"]
-size = Vector2(155, 626)
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_on2eu"]
 shader = ExtResource("31_g3aq2")
@@ -668,27 +668,6 @@ scale = Vector2(1.3319443, 1.2341709)
 texture = ExtResource("18_qqu0f")
 flip_h = true
 
-[node name="Luz" type="ColorRect" parent="Background/-05" unique_id=1124469410]
-material = SubResource("ShaderMaterial_l7ekd")
-offset_left = -10081.633
-offset_top = -1153.0612
-offset_right = -8341.633
-offset_bottom = 837.93884
-
-[node name="Luz3" type="ColorRect" parent="Background/-05" unique_id=1623916510]
-material = SubResource("ShaderMaterial_l7ekd")
-offset_left = -14227.368
-offset_top = -4750.5264
-offset_right = -12487.368
-offset_bottom = -2759.5264
-
-[node name="Luz2" type="ColorRect" parent="Background/-05" unique_id=285755924]
-material = SubResource("ShaderMaterial_l7ekd")
-offset_left = -12083.674
-offset_top = -795.91833
-offset_right = -10343.674
-offset_bottom = 1195.0817
-
 [node name="-02" type="CanvasLayer" parent="Background" unique_id=97736955]
 follow_viewport_enabled = true
 follow_viewport_scale = 0.98
@@ -964,6 +943,27 @@ texture = ExtResource("29_qprck")
 [node name="Cururu" parent="Background/0" unique_id=1638125701 instance=ExtResource("30_est77")]
 z_index = 0
 position = Vector2(-18487, -3635)
+
+[node name="Luz" type="ColorRect" parent="Background/0" unique_id=1124469410]
+material = SubResource("ShaderMaterial_l7ekd")
+offset_left = -10009.265
+offset_top = -1499.5348
+offset_right = -8269.265
+offset_bottom = 491.4652
+
+[node name="Luz3" type="ColorRect" parent="Background/0" unique_id=1623916510]
+material = SubResource("ShaderMaterial_l7ekd")
+offset_left = -14155.0
+offset_top = -4953.0
+offset_right = -12415.0
+offset_bottom = -2962.0
+
+[node name="Luz2" type="ColorRect" parent="Background/0" unique_id=285755924]
+material = SubResource("ShaderMaterial_l7ekd")
+offset_left = -12011.306
+offset_top = -1142.392
+offset_right = -10271.306
+offset_bottom = 848.60803
 
 [node name="Agua3" type="TileMapLayer" parent="Background/0" unique_id=1253382976 groups=["Agua"]]
 material = SubResource("ShaderMaterial_on2eu")

@@ -65,24 +65,6 @@ shader_parameter/density = 0.7
 shader_parameter/speed = 0.05
 shader_parameter/scale = 6.0
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_q1edg"]
-shader = ExtResource("19_04dap")
-shader_parameter/flip_horizontal = true
-shader_parameter/flip_vertical = false
-shader_parameter/angle = -0.3
-shader_parameter/position = 0.0
-shader_parameter/spread = 0.6810000323475
-shader_parameter/cutoff = 0.06000005035
-shader_parameter/falloff = 0.6000000285
-shader_parameter/edge_fade = 0.2000000095
-shader_parameter/speed = 2.5
-shader_parameter/ray1_density = 5.0
-shader_parameter/ray2_density = 20.0
-shader_parameter/ray2_intensity = 0.30000001425
-shader_parameter/color = Color(0.9687218, 0.9046197, 0.75688607, 0.8)
-shader_parameter/hdr = false
-shader_parameter/seed = 7.0
-
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_ay7ko"]
 shader = ExtResource("22_cii1e")
 shader_parameter/speed = 1.0
@@ -100,6 +82,24 @@ size = Vector2(112.5, 645.75)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_t5n3b"]
 size = Vector2(118, 803)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_q1edg"]
+shader = ExtResource("19_04dap")
+shader_parameter/flip_horizontal = true
+shader_parameter/flip_vertical = false
+shader_parameter/angle = -0.3
+shader_parameter/position = 0.0
+shader_parameter/spread = 0.6810000323475
+shader_parameter/cutoff = 0.06000005035
+shader_parameter/falloff = 0.6000000285
+shader_parameter/edge_fade = 0.2000000095
+shader_parameter/speed = 2.5
+shader_parameter/ray1_density = 5.0
+shader_parameter/ray2_density = 20.0
+shader_parameter/ray2_intensity = 0.30000001425
+shader_parameter/color = Color(0.9687218, 0.9046197, 0.75688607, 0.8)
+shader_parameter/hdr = false
+shader_parameter/seed = 7.0
 
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_04dap"]
 particle_flag_disable_z = true
@@ -430,13 +430,6 @@ texture = ExtResource("19_w0qus")
 position = Vector2(-416.47266, -52.48413)
 scale = Vector2(0.965599, 0.9153008)
 
-[node name="luz2" type="ColorRect" parent="Background2/-02/Arvores01/Arvore04" unique_id=1294842204]
-material = SubResource("ShaderMaterial_q1edg")
-offset_left = -1723.4531
-offset_top = -1170.6697
-offset_right = 588.78906
-offset_bottom = 1913.0039
-
 [node name="Arvore07" type="Sprite2D" parent="Background2/-02/Arvores01" unique_id=879524200]
 position = Vector2(-1789, 86)
 scale = Vector2(1, 1.0549525)
@@ -467,13 +460,6 @@ texture = ExtResource("19_w0qus")
 
 [node name="plato2" parent="Background2/-02/Arvores01/Arvore05" unique_id=298253779 instance=ExtResource("14_p37rg")]
 position = Vector2(-448.47266, 183.63184)
-
-[node name="luz" type="ColorRect" parent="Background2/-02/Arvores01" unique_id=2142448052]
-material = SubResource("ShaderMaterial_q1edg")
-offset_left = -6744.3706
-offset_top = -991.8579
-offset_right = -5097.025
-offset_bottom = 1368.3462
 
 [node name="Arvore06" type="Sprite2D" parent="Background2/-02/Arvores01" unique_id=588248343]
 position = Vector2(-9252, 222)
@@ -758,6 +744,27 @@ position = Vector2(7094, -1216)
 [node name="Cururu" parent="Background2/0" unique_id=1430620079 instance=ExtResource("4_rnfct")]
 z_index = 0
 position = Vector2(-29463, -3338.9998)
+
+[node name="luz2" type="ColorRect" parent="Background2/0" unique_id=1294842204]
+material = SubResource("ShaderMaterial_q1edg")
+offset_left = -20004.0
+offset_top = -5818.0
+offset_right = -17691.758
+offset_bottom = -2734.3264
+
+[node name="luz3" type="ColorRect" parent="Background2/0" unique_id=364269910]
+material = SubResource("ShaderMaterial_q1edg")
+offset_left = -23341.0
+offset_top = -5818.0
+offset_right = -21028.758
+offset_bottom = -2734.3264
+
+[node name="luz" type="ColorRect" parent="Background2/0" unique_id=2142448052]
+material = SubResource("ShaderMaterial_q1edg")
+offset_left = -26594.898
+offset_top = -5195.857
+offset_right = -24947.553
+offset_bottom = -2835.6528
 
 [node name="Particula" type="GPUParticles2D" parent="Background2/0" unique_id=302445686]
 position = Vector2(-24636, -3389)
