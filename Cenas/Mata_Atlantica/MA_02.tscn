@@ -72,6 +72,12 @@ shader_parameter/density = 0.7
 shader_parameter/speed = 0.05
 shader_parameter/scale = 6.0
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mw8rc"]
+size = Vector2(170, 541)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_q40bt"]
+size = Vector2(80, 756)
+
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_8tm3t"]
 shader = ExtResource("20_ts3dy")
 shader_parameter/flip_horizontal = true
@@ -89,12 +95,6 @@ shader_parameter/ray2_intensity = 0.30000001425
 shader_parameter/color = Color(0.9687218, 0.9046197, 0.75688607, 0.8)
 shader_parameter/hdr = false
 shader_parameter/seed = 7.0
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_mw8rc"]
-size = Vector2(170, 541)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_q40bt"]
-size = Vector2(80, 756)
 
 [sub_resource type="Curve" id="Curve_8tm3t"]
 _data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.058394164, 1), 0.0, 0.0, 0, 0, Vector2(0.8686131, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
@@ -466,22 +466,6 @@ modulate = Color(3.2944162, 3.2944162, 3.2944162, 1)
 position = Vector2(871, 765)
 texture = ExtResource("19_15e74")
 
-[node name="ColorRect2" type="ColorRect" parent="background/-02" unique_id=1986434422]
-material = SubResource("ShaderMaterial_8tm3t")
-offset_left = -4752.04
-offset_top = -205.10205
-offset_right = -3283.8594
-offset_bottom = 1631.6326
-rotation = -0.2617994
-
-[node name="ColorRect3" type="ColorRect" parent="background/-02" unique_id=1044713521]
-material = SubResource("ShaderMaterial_8tm3t")
-offset_left = -5458.163
-offset_top = -229.59184
-offset_right = -3989.9824
-offset_bottom = 1607.1428
-rotation = -0.09155919
-
 [node name="82SemTítulo0000253520251125200857" type="Sprite2D" parent="background/-02" unique_id=1652849236]
 modulate = Color(3.2944162, 3.2944162, 3.2944162, 1)
 position = Vector2(1640.8163, 845.9184)
@@ -697,6 +681,22 @@ position = Vector2(1125, 924)
 [node name="Cururu" parent="background/0" unique_id=370155217 instance=ExtResource("32_o0mc4")]
 z_index = 0
 position = Vector2(1724, 878)
+
+[node name="ColorRect2" type="ColorRect" parent="background/0" unique_id=1986434422]
+material = SubResource("ShaderMaterial_8tm3t")
+offset_left = -4752.04
+offset_top = -205.10205
+offset_right = -3283.8594
+offset_bottom = 1631.6326
+rotation = -0.2617994
+
+[node name="ColorRect3" type="ColorRect" parent="background/0" unique_id=1044713521]
+material = SubResource("ShaderMaterial_8tm3t")
+offset_left = -5458.163
+offset_top = -229.59184
+offset_right = -3989.9824
+offset_bottom = 1607.1428
+rotation = -0.09155919
 
 [node name="Particula" type="GPUParticles2D" parent="background/0" unique_id=2060733035]
 position = Vector2(-3313, 138)

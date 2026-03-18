@@ -111,7 +111,6 @@
 [ext_resource type="Texture2D" uid="uid://drbsc22cm7vbd" path="res://Sprites/Inimigos/Boitata/Animacoes/Pilar/boitata_grito_chamas_cabeca/boitata_53.png" id="76_ulty5"]
 [ext_resource type="Texture2D" uid="uid://3konjmd0f8p8" path="res://Sprites/Inimigos/Boitata/Animacoes/Pilar/boitata_grito_chamas_cabeca/boitata_55.png" id="77_dr8qx"]
 [ext_resource type="Script" uid="uid://dmxvedpbqkt7c" path="res://Scripts/Boss/Nocaute.gd" id="77_iqxfe"]
-[ext_resource type="Texture2D" uid="uid://c0j1vjsqgxlo3" path="res://Sprites/UI/Boitata/BarraVidaBoss.png" id="77_mjx0v"]
 [ext_resource type="Texture2D" uid="uid://bxcymmaqfgpxb" path="res://Sprites/Inimigos/Boitata/Animacoes/Idle/boitata_idle_corpo/boitata_139.png" id="77_ycj6j"]
 [ext_resource type="Texture2D" uid="uid://d06n17ld363iy" path="res://Sprites/Inimigos/Boitata/Animacoes/Pilar/boitata_grito_chamas_cabeca/boitata_57.png" id="78_go6es"]
 [ext_resource type="Texture2D" uid="uid://c0wnfe3tlbp34" path="res://Sprites/Inimigos/Boitata/Animacoes/Idle/boitata_idle_corpo/boitata_141.png" id="78_r12sw"]
@@ -124,7 +123,6 @@
 [ext_resource type="Texture2D" uid="uid://bd7dk08c4u5l8" path="res://Sprites/Inimigos/Boitata/Animacoes/Pilar/boitata_grito_chamas_cabeca/boitata_65.png" id="82_2gaj7"]
 [ext_resource type="Texture2D" uid="uid://b17g6njg4jxkq" path="res://Sprites/Inimigos/Boitata/Animacoes/Idle/boitata_idle_corpo/boitata_149.png" id="82_kb2t2"]
 [ext_resource type="Texture2D" uid="uid://bndei42cof8ie" path="res://Sprites/Inimigos/Boitata/Animacoes/Pilar/boitata_grito_chamas_cabeca/boitata_67.png" id="83_whjwt"]
-[ext_resource type="Texture2D" uid="uid://b4vgc71jojckt" path="res://Sprites/UI/Boitata/UI_-_BOITATA.png" id="84_6hkog"]
 [ext_resource type="Texture2D" uid="uid://ctbjdpqxl57mw" path="res://Sprites/Inimigos/Boitata/Animacoes/Pilar/boitata_grito_chamas_cabeca/boitata_69.png" id="84_udcvh"]
 [ext_resource type="Script" uid="uid://c041l8mwrkgsy" path="res://Scripts/Boss/PilarFogo.gd" id="85_fi4f6"]
 [ext_resource type="Texture2D" uid="uid://b402x5r506e2m" path="res://Sprites/Inimigos/Boitata/Animacoes/Pilar/boitata_grito_chamas_cabeca/boitata_71.png" id="85_xklm6"]
@@ -162,7 +160,6 @@
 [ext_resource type="Texture2D" uid="uid://i20ne8a44j0a" path="res://Sprites/Inimigos/Boitata/Animacoes/Cospe_Fogo/boitata_bola_de_fogo_corpo/boitata_83.png" id="111_vno5b"]
 [ext_resource type="Texture2D" uid="uid://b0xijto0sxhbb" path="res://Sprites/Inimigos/Boitata/Animacoes/Cospe_Fogo/boitata_bola_de_fogo_corpo/boitata_85.png" id="112_s3vod"]
 [ext_resource type="Texture2D" uid="uid://du20p5eptas7j" path="res://Sprites/Inimigos/Boitata/Animacoes/Cospe_Fogo/boitata_bola_de_fogo_corpo/boitata_87.png" id="113_0841q"]
-[ext_resource type="Texture2D" uid="uid://c8arw41hfnk4n" path="res://Sprites/UI/Boitata/Barra_miasma.png" id="113_iwjnr"]
 [ext_resource type="Texture2D" uid="uid://c8hgngp2oaxlo" path="res://Sprites/Inimigos/Boitata/Animacoes/Cospe_Fogo/boitata_bola_de_fogo_corpo/boitata_89.png" id="114_j4hxb"]
 [ext_resource type="Texture2D" uid="uid://dl8t0tbfeiorj" path="res://Sprites/Inimigos/Boitata/Animacoes/Cospe_Fogo/boitata_bola_de_fogo_corpo/boitata_91.png" id="115_8a00u"]
 [ext_resource type="Texture2D" uid="uid://dgawxanug4m2m" path="res://Sprites/Inimigos/Boitata/Animacoes/Cospe_Fogo/boitata_bola_de_fogo_corpo/boitata_93.png" id="116_1j8kp"]
@@ -213,6 +210,11 @@
 [ext_resource type="PackedScene" uid="uid://dct0yu1s5isad" path="res://Objetos/Boss/Boitata/BolaDeFogo.tscn" id="205_ry0yp"]
 [ext_resource type="PackedScene" uid="uid://dppj6i0ifoocp" path="res://Objetos/Boss/Boitata/PilarFogo.tscn" id="206_5xynu"]
 [ext_resource type="Script" uid="uid://c4x7bs5levrly" path="res://Scripts/Boss/TrocaLado.gd" id="210_72l2h"]
+[ext_resource type="Texture2D" uid="uid://bednmsrsaaxw2" path="res://Sprites/UI/Boitata/V2/VIDAF.png" id="211_7f6q5"]
+[ext_resource type="Texture2D" uid="uid://bvsqr6hhfh0da" path="res://Sprites/UI/Boitata/V2/MODURA.png" id="212_0kp2o"]
+[ext_resource type="Texture2D" uid="uid://ic0br8q65c0i" path="res://Sprites/UI/Boitata/V2/VIDA.png" id="213_l7pve"]
+[ext_resource type="Texture2D" uid="uid://c7qbo0y6c2o7r" path="res://Sprites/UI/Boitata/V2/MIASMA.png" id="214_lx522"]
+[ext_resource type="Texture2D" uid="uid://2ktrden52s17" path="res://Sprites/UI/Boitata/V2/MIASMAAGUA.png" id="215_t22i8"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_iwjnr"]
 shader = ExtResource("7_q8716")
@@ -1791,10 +1793,11 @@ _data = {
 &"Surge": SubResource("Animation_sgy8v")
 }
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_iwjnr"]
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2fxlb"]
+texture = ExtResource("214_lx522")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_3l7sv"]
-texture = ExtResource("113_iwjnr")
+texture = ExtResource("215_t22i8")
 texture_margin_left = 70.0
 axis_stretch_horizontal = 1
 
@@ -1982,19 +1985,19 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -593.0
-offset_top = -158.0
-offset_right = 1282.0
-offset_bottom = 39.0
+offset_left = -563.0
+offset_top = -131.0
+offset_right = 1312.0
+offset_bottom = 66.0
 grow_horizontal = 2
 grow_vertical = 0
 scale = Vector2(0.59999996, 0.59999996)
 max_value = 15.0
 step = 0.01
 value = 12.4
-texture_under = ExtResource("77_mjx0v")
-texture_over = ExtResource("84_6hkog")
-texture_progress = ExtResource("77_mjx0v")
+texture_under = ExtResource("211_7f6q5")
+texture_over = ExtResource("212_0kp2o")
+texture_progress = ExtResource("213_l7pve")
 tint_under = Color(0.25836357, 0.16748038, 0.20151487, 1)
 tint_progress = Color(0.6270837, 0, 0.048433684, 1)
 
@@ -2006,13 +2009,13 @@ anchors_preset = -1
 anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 0.5
-offset_left = 38.333385
-offset_top = -135.16666
-offset_right = -39.999878
-offset_bottom = -105.16654
+offset_left = 164.99997
+offset_top = -33.500023
+offset_right = -351.66663
+offset_bottom = 1.4999771
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_styles/background = SubResource("StyleBoxEmpty_iwjnr")
+theme_override_styles/background = SubResource("StyleBoxTexture_2fxlb")
 theme_override_styles/fill = SubResource("StyleBoxTexture_3l7sv")
 value = 100.0
 show_percentage = false
