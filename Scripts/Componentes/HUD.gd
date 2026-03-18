@@ -97,7 +97,7 @@ func _ready() -> void:
 	
 	%BtnContinuar.connect("pressed", func(): %Pause.visible = false)
 	%BtnSair.connect("pressed", func():
-		Mundos.CarregaFase("res://UI/MenuPrincipal.tscn")
+		LoadCena.Load("res://UI/MenuPrincipal.tscn")
 		item_rapido.ResetaBarra())
 	%Opcoes.connect("visibility_changed", func():
 		if %Opcoes.visible: %BtnContinuar.grab_focus())

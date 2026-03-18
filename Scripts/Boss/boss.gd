@@ -71,7 +71,8 @@ func _ready() -> void:
 		ArmorDano()
 		if atual <= 0:
 			#Esconde sprite armadura
-			%HurtCabeca.set_deferred("monitorable", false)
+			#%HurtCabeca.set_deferred("monitorable", false)
+			%HurtCabeca.comp_vida = %VidaBoss
 			await get_tree().create_timer(.1).timeout # Só pra ter hit flash
 			%SpriteCabeca.hide()
 			ChecaArmor()
@@ -80,7 +81,8 @@ func _ready() -> void:
 		ArmorDano()
 		if atual <= 0:
 			#Esconde sprite armadura
-			%HurtCorpo.set_deferred("monitorable", false)
+			#%HurtCorpo.set_deferred("monitorable", false)
+			%HurtCorpo.comp_vida = %VidaBoss
 			await get_tree().create_timer(.1).timeout # Só pra ter hit flash
 			%SpriteCorpo.hide()
 			ChecaArmor()
@@ -89,8 +91,6 @@ func _ready() -> void:
 	vida_miasma_atual = vida_miasma_max
 	
 	# Sinais de hurtbox
-	%HurtCabeca.hurt.connect(TomaDano)
-	%HurtCorpo.hurt.connect(TomaDano)
 	%HurtBox.monitorable = false
 	
 	# Inicializa barra de vida
@@ -110,10 +110,9 @@ func _ready() -> void:
 func ChecaArmor() -> void:
 	if vida_miasma_atual <= 0 and %VidaBoss.vida_atual > 0:
 		print("MIASMA DESTRUIDO")
+		%HurtCabeca.set_deferred("monitorable", false)
+		%HurtCorpo.set_deferred("monitorable", false)
 		state_machine.MudaState(state_machine.find_child("Nocaute"))
-
-func TomaDano(hit:Array[HitBox]) -> void:
-	%VidaBoss.RecebeDano(hit[0].dano)
 
 func TomouDano(vida_atual:int, _vida_antiga:int) -> void:
 	if tween:
@@ -138,10 +137,12 @@ func ArmorDano() -> void:
 func ResetArmor() -> void:
 	if %VidaBoss.vida_atual <= 0: return
 	vida_miasma_atual = vida_miasma_max
+	%HurtCabeca.comp_vida = %VidaMCabeca
 	%VidaMCabeca.RecebeCura(%VidaMCabeca.vida_max)
 	%HurtCabeca.set_deferred("monitorable", true)
 	%SpriteCabeca.show()
 	
+	%HurtCorpo.comp_vida = %VidaMCorpo
 	%VidaMCorpo.RecebeCura(%VidaMCorpo.vida_max)
 	%HurtCorpo.set_deferred("monitorable", true)
 	%SpriteCorpo.show()

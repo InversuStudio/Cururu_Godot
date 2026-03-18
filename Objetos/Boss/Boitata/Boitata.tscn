@@ -1828,7 +1828,7 @@ material = SubResource("ShaderMaterial_iwjnr")
 position = Vector2(0, -1020)
 scale = Vector2(1.5, 1.5)
 sprite_frames = SubResource("SpriteFrames_nkv4g")
-animation = &"Surgimento"
+animation = &"Idle"
 frame = 7
 
 [node name="SpriteCabeca" type="AnimatedSprite2D" parent="." unique_id=1407401025]
@@ -1837,7 +1837,7 @@ material = SubResource("ShaderMaterial_183op")
 position = Vector2(0, -1020)
 scale = Vector2(1.5, 1.5)
 sprite_frames = SubResource("SpriteFrames_71r63")
-animation = &"Surgimento"
+animation = &"Idle"
 frame = 6
 
 [node name="SpriteCorpo" type="AnimatedSprite2D" parent="." unique_id=1919865204]
@@ -1846,8 +1846,7 @@ material = SubResource("ShaderMaterial_aev7w")
 position = Vector2(0, -1020)
 scale = Vector2(1.5, 1.5)
 sprite_frames = SubResource("SpriteFrames_tic1h")
-animation = &"Surgimento"
-frame = 6
+animation = &"Idle"
 
 [node name="VidaBoss" type="Node" parent="." unique_id=1212445150]
 unique_name_in_owner = true
