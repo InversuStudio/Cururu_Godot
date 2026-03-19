@@ -25,6 +25,7 @@
 [ext_resource type="Texture2D" uid="uid://bdexte3g5lkq7" path="res://Sprites/Inimigos/Animação de morte/7.png" id="12_6t08x"]
 [ext_resource type="Texture2D" uid="uid://clw7r8vhm3pnn" path="res://Sprites/Inimigos/CobraCoral/coralVirada01.png" id="13_a8b1x"]
 [ext_resource type="Texture2D" uid="uid://b7bah6s2awj4i" path="res://Sprites/Inimigos/CobraCoral/coralVirada02.png" id="14_ybhk0"]
+[ext_resource type="AudioStream" uid="uid://deqw7rxc5hhfh" path="res://Audio/SFX/INIMIGOS/Inimigo morrendo.wav" id="26_sybt8"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ntg74"]
 size = Vector2(223.68439, 105.921135)
@@ -246,5 +247,9 @@ position = Vector2(1.4705893, 36.764732)
 scale = Vector2(2.2352936, 2.2352936)
 rect = Rect2(-146.05276, -175.00017, 286.18445, 158.55278)
 follow = true
+
+[node name="SomMorte" type="AudioStreamPlayer2D" parent="." unique_id=1033857000]
+unique_name_in_owner = true
+stream = ExtResource("26_sybt8")
 
 [connection signal="body_entered" from="Flip/AreaRangeAtaque" to="." method="_on_area_range_ataque_body_entered"]

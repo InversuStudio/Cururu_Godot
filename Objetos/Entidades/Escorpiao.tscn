@@ -16,6 +16,7 @@
 [ext_resource type="PackedScene" uid="uid://ffqi6t0ahbmk" path="res://Objetos/Funcionalidade/OtimizadorObjeto.tscn" id="9_mvbia"]
 [ext_resource type="Texture2D" uid="uid://b88rutgnulrpo" path="res://Sprites/Inimigos/Animação de morte/6.png" id="10_2ylce"]
 [ext_resource type="Texture2D" uid="uid://bdexte3g5lkq7" path="res://Sprites/Inimigos/Animação de morte/7.png" id="11_a5ut6"]
+[ext_resource type="AudioStream" uid="uid://deqw7rxc5hhfh" path="res://Audio/SFX/INIMIGOS/Inimigo morrendo.wav" id="17_cusa3"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ntg74"]
 size = Vector2(180, 106)
@@ -158,3 +159,7 @@ position = Vector2(0, -43)
 rect = Rect2(-188.23543, -257.35312, 376.47086, 325.00024)
 follow = true
 disable = true
+
+[node name="SomMorte" type="AudioStreamPlayer2D" parent="." unique_id=222743729]
+unique_name_in_owner = true
+stream = ExtResource("17_cusa3")

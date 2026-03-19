@@ -91,6 +91,7 @@ func Pushback(pos:Vector2, _h:HitBox, _layer:int) -> void:
 	%TimerDano.start()
 
 func Morte() -> void:
+	%SomMorte.play()
 	Mundos.lista_inimigos.append(id)
 	#Mundos.SpawnMoeda(get_parent(), global_position)
 	trava_move = true

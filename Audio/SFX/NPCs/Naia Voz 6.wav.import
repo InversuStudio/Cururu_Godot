@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://cpejcq420kpkp"
+path="res://.godot/imported/Naia Voz 6.wav-42535cf9b26d388f7cc7d0704dd380b2.sample"
+
+[deps]
+
+source_file="res://Audio/SFX/NPCs/Naia Voz 6.wav"
+dest_files=["res://.godot/imported/Naia Voz 6.wav-42535cf9b26d388f7cc7d0704dd380b2.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

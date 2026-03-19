@@ -47,6 +47,7 @@ func _physics_process(delta: float) -> void:
 	move_and_slide()
 
 func Morte() -> void:
+	%SomMorte.play()
 	Mundos.lista_inimigos.append(id)
 	#Mundos.SpawnMoeda(get_parent(), %SpawnMoeda.global_position)
 	%HurtBox.process_mode = PROCESS_MODE_DISABLED

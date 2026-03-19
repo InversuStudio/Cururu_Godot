@@ -2,13 +2,20 @@
 
 [ext_resource type="Script" uid="uid://bt5du2sk1ba4i" path="res://Scripts/NPCs/NPC.gd" id="1_kc0n5"]
 [ext_resource type="Resource" uid="uid://ch3y4gcny6835" path="res://Dialogos/Vitoriaregia.dialogue" id="2_eqxke"]
+[ext_resource type="AudioStream" uid="uid://hubnm2b1m1mh" path="res://Audio/SFX/NPCs/Naia Voz 1.wav" id="3_lxroo"]
 [ext_resource type="Texture2D" uid="uid://b3qk3js8vx4jl" path="res://Sprites/NPCS/Vitoria Régia/NAIA_01.png" id="3_rwdyo"]
+[ext_resource type="AudioStream" uid="uid://dev23ubebdo57" path="res://Audio/SFX/NPCs/Naia Voz 2.wav" id="4_n4lol"]
 [ext_resource type="Texture2D" uid="uid://bm3a0acfnpp5w" path="res://Sprites/NPCS/Vitoria Régia/NAIA_03.png" id="4_rv43u"]
+[ext_resource type="AudioStream" uid="uid://6o4w165vlf33" path="res://Audio/SFX/NPCs/Naia Voz 3.wav" id="5_40p12"]
 [ext_resource type="Texture2D" uid="uid://bgay3vp761mfs" path="res://Sprites/NPCS/Vitoria Régia/NAIA_05.png" id="5_hmr3h"]
+[ext_resource type="AudioStream" uid="uid://cmc3xqx6pavv6" path="res://Audio/SFX/NPCs/Naia Voz 4.wav" id="6_02sup"]
 [ext_resource type="Texture2D" uid="uid://b20ieis2l84x0" path="res://Sprites/NPCS/Vitoria Régia/NAIA_07.png" id="6_undef"]
 [ext_resource type="Texture2D" uid="uid://urb4djcm1akb" path="res://Sprites/NPCS/Vitoria Régia/NAIA_09.png" id="7_3kl87"]
+[ext_resource type="AudioStream" uid="uid://cjy0513ljxfr8" path="res://Audio/SFX/NPCs/Naia Voz 5.wav" id="7_ftu61"]
 [ext_resource type="Texture2D" uid="uid://s27ejh3vnb43" path="res://Sprites/NPCS/Vitoria Régia/NAIA_11.png" id="8_lxroo"]
+[ext_resource type="AudioStream" uid="uid://cpejcq420kpkp" path="res://Audio/SFX/NPCs/Naia Voz 6.wav" id="8_thw4m"]
 [ext_resource type="Texture2D" uid="uid://dtjvxb585xu7c" path="res://Sprites/NPCS/Vitoria Régia/NAIA_13.png" id="9_n4lol"]
+[ext_resource type="AudioStream" uid="uid://d35fdbptxifl" path="res://Audio/SFX/NPCs/Naia Voz 7.wav" id="9_prhrs"]
 [ext_resource type="Texture2D" uid="uid://20nvruhslr1a" path="res://Sprites/NPCS/Vitoria Régia/NAIA_15.png" id="10_40p12"]
 [ext_resource type="Texture2D" uid="uid://bl4s7ulgidgga" path="res://Sprites/NPCS/Vitoria Régia/NAIA_17.png" id="11_02sup"]
 [ext_resource type="Texture2D" uid="uid://b1gt2gef8gn3g" path="res://Sprites/NPCS/Vitoria Régia/NAIA_19.png" id="12_ftu61"]
@@ -81,11 +88,12 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lqome"]
 size = Vector2(1386.5391, 1034.7305)
 
-[node name="Naia" type="Sprite2D" unique_id=1689421134 node_paths=PackedStringArray("interacao")]
+[node name="Naia" type="Node2D" unique_id=1048948790 node_paths=PackedStringArray("interacao")]
 scale = Vector2(0.4348958, 0.43489587)
 script = ExtResource("1_kc0n5")
 arquivo_dialogo = ExtResource("2_eqxke")
 interacao = NodePath("Interacao")
+vozes = Array[AudioStream]([ExtResource("3_lxroo"), ExtResource("4_n4lol"), ExtResource("5_40p12"), ExtResource("6_02sup"), ExtResource("7_ftu61"), ExtResource("8_thw4m"), ExtResource("9_prhrs")])
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1612304861]
 position = Vector2(-16.09581, 129.91617)

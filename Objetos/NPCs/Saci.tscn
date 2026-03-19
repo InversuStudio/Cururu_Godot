@@ -3,8 +3,12 @@
 [ext_resource type="Script" uid="uid://bt5du2sk1ba4i" path="res://Scripts/NPCs/NPC.gd" id="1_idat7"]
 [ext_resource type="Resource" uid="uid://cnhau31dn3hpf" path="res://Dialogos/Teste.dialogue" id="2_1gb7q"]
 [ext_resource type="Texture2D" uid="uid://bodj2vgif6qp5" path="res://Sprites/NPCS/Saci/saci01.png" id="3_4j0gj"]
+[ext_resource type="AudioStream" uid="uid://bg0tag8kte5sv" path="res://Audio/SFX/NPCs/Saci Voz 1.wav" id="3_wfxoe"]
 [ext_resource type="Texture2D" uid="uid://uxhlpik4jue" path="res://Sprites/NPCS/Saci/saci03.png" id="4_6bhmt"]
+[ext_resource type="AudioStream" uid="uid://bkxaax2al2qgg" path="res://Audio/SFX/NPCs/Saci Voz 2.wav" id="4_8ryo0"]
+[ext_resource type="AudioStream" uid="uid://d3geotu51l07k" path="res://Audio/SFX/NPCs/Saci Voz 3.wav" id="5_3ylgr"]
 [ext_resource type="Texture2D" uid="uid://61lbm47kannr" path="res://Sprites/NPCS/Saci/saci05.png" id="5_wfxoe"]
+[ext_resource type="AudioStream" uid="uid://br2ndhbvx7ykl" path="res://Audio/SFX/NPCs/Saci Voz 4.wav" id="6_1bheo"]
 [ext_resource type="Texture2D" uid="uid://bn1u6nja3y3t1" path="res://Sprites/NPCS/Saci/saci07.png" id="6_8ryo0"]
 [ext_resource type="Texture2D" uid="uid://clfrhtnjk3viy" path="res://Sprites/NPCS/Saci/saci09.png" id="7_3ylgr"]
 [ext_resource type="Texture2D" uid="uid://cchrj6diua8rb" path="res://Sprites/NPCS/Saci/saci11.png" id="8_1bheo"]
@@ -66,11 +70,12 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lqome"]
 size = Vector2(1027.8323, 631.75165)
 
-[node name="NPC-Basico" type="Sprite2D" unique_id=604859283 node_paths=PackedStringArray("interacao")]
+[node name="Saci" type="Node2D" unique_id=1986691402 node_paths=PackedStringArray("interacao")]
 scale = Vector2(0.4348958, 0.43489587)
 script = ExtResource("1_idat7")
 arquivo_dialogo = ExtResource("2_1gb7q")
 interacao = NodePath("Interacao")
+vozes = Array[AudioStream]([ExtResource("3_wfxoe"), ExtResource("4_8ryo0"), ExtResource("5_3ylgr"), ExtResource("6_1bheo")])
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1222604687]
 unique_name_in_owner = true

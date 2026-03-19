@@ -32,6 +32,7 @@ func _on_hurt_box_hurt(_h:Array[HitBox]) -> void:
 			var item:Node2D = drop_item[rand].instantiate()
 			item.global_position = $PosItem.global_position
 			get_parent().add_child(item)
+		$HurtBox.set_deferred("monitorable", false)
 		# Remove colisão após um curto tempo
 		await get_tree().create_timer(1.0).timeout
 		$HurtBox.call_deferred("queue_free")
