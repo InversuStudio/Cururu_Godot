@@ -10,6 +10,9 @@ func _ready() -> void:
 		parent.area_check_player.connect("body_entered", func(b:Node2D) -> void:
 			PlayerEntrou(b)
 		)
+	%TimerTitulo.connect("timeout", func() -> void:
+		var tween_title:Tween = create_tween()
+		tween_title.tween_property(%Titulo, "modulate", Color.TRANSPARENT, .2))
 
 func PlayerEntrou(body:Node2D) -> void:
 	if body.is_in_group("Player"):
@@ -51,7 +54,10 @@ func Start() -> void:
 	var tween_rabo:Tween = create_tween()
 	tween_rabo.tween_property(parent.rabo, "global_position",
 		parent.pos_rabo[1].global_position, .5)
-	#tween.tween_property(%BarraArmor, "value", parent.vida_miasma_max, 2.5)
+	
+	var tween_title:Tween = create_tween()
+	tween_title.tween_property(%Titulo, "modulate", Color.WHITE, .2)
+	%TimerTitulo.start(2)
 		
 	await %Anim.animation_finished
 	inicia_luta = true

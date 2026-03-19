@@ -67,6 +67,7 @@ func _physics_process(delta: float) -> void:
 func _ready() -> void:
 	# Reseta shader hit flash
 	%SpriteMain.material.set_shader_parameter("valor", 0.0)
+	%Titulo.modulate.a = 0.0
 	
 	DialogueManager.connect("got_dialogue", func(_l:DialogueLine) -> void:
 		var id:int = randi_range(0, vozes_fala.size() - 1)

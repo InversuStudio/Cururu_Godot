@@ -219,6 +219,7 @@
 [ext_resource type="Texture2D" uid="uid://c7qbo0y6c2o7r" path="res://Sprites/UI/Boitata/V2/MIASMA.png" id="214_lx522"]
 [ext_resource type="Texture2D" uid="uid://tb4y0vlf7ewc" path="res://Sprites/UI/Boitata/V2/AGUA (1).png" id="214_r4nid"]
 [ext_resource type="PackedScene" uid="uid://pc4mgv2nv8af" path="res://Objetos/Funcionalidade/CompHitBox.tscn" id="215_7f6q5"]
+[ext_resource type="Texture2D" uid="uid://cfgly2223sde2" path="res://Sprites/UI/Dialogo/BOITATA.png" id="220_2fxlb"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_iwjnr"]
 shader = ExtResource("7_q8716")
@@ -1889,6 +1890,10 @@ one_shot = true
 unique_name_in_owner = true
 one_shot = true
 
+[node name="TimerTitulo" type="Timer" parent="." unique_id=2140339544]
+unique_name_in_owner = true
+one_shot = true
+
 [node name="SpriteMain" type="AnimatedSprite2D" parent="." unique_id=1002636083]
 unique_name_in_owner = true
 material = SubResource("ShaderMaterial_iwjnr")
@@ -2043,6 +2048,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 
 [node name="Moldura" type="TextureRect" parent="UI_BOSS/Control" unique_id=663322444]
 layout_mode = 1
@@ -2068,6 +2074,7 @@ offset_left = 9.0
 offset_top = 11.0
 offset_right = 1683.0
 offset_bottom = 60.0
+mouse_filter = 2
 step = 0.1
 value = 31.0
 texture_progress = ExtResource("213_l7pve")
@@ -2080,11 +2087,29 @@ offset_left = 165.0
 offset_top = 66.0
 offset_right = 1528.0
 offset_bottom = 100.0
+mouse_filter = 2
 step = 0.1
 value = 27.4
 fill_mode = 6
 texture_under = ExtResource("214_lx522")
 texture_progress = ExtResource("214_r4nid")
+
+[node name="Titulo" type="TextureRect" parent="UI_BOSS/Control" unique_id=831597548]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -392.5
+offset_top = -123.5
+offset_right = 392.5
+offset_bottom = 123.5
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("220_2fxlb")
 
 [connection signal="timeout" from="TimerIdle" to="StateMachine/Idle" method="_on_timer_idle_timeout"]
 [connection signal="timeout" from="TimerNocaute" to="StateMachine/Nocaute" method="_on_timer_nocaute_timeout"]

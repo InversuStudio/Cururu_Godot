@@ -181,9 +181,9 @@ func VidaMudou(vida_nova, vida_antiga) -> void:
 		print("RECEBI DANO")
 		pode_mover = false
 		%StateMachine.call_deferred("MudaState", %StateMachine.find_child("Dano"))
-		HUD.AplicaRed(vida_nova)
 	else:
 		print("RECEBI CURA")
+	HUD.AplicaRed(vida_nova)
 
 func PlayExtra(som:AudioStream) -> void:
 	%SFX_Extra.stream = som
