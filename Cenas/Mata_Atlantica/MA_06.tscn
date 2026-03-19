@@ -29,6 +29,7 @@
 [ext_resource type="Texture2D" uid="uid://jecy4bfqqqxu" path="res://Sprites/Cenário/Mata_Atlantica/Teto/Moita teste.png" id="23_6h0de"]
 [ext_resource type="Texture2D" uid="uid://0agjwkmg3gef" path="res://Sprites/VFX/Iluminação/luz azul.png" id="23_gl4lj"]
 [ext_resource type="Texture2D" uid="uid://uq6dbjep5wva" path="res://Sprites/Cenário/Mata_Atlantica/Foreground/frontfolha.png" id="24_fovgr"]
+[ext_resource type="PackedScene" uid="uid://smwewolvvw6l" path="res://Objetos/Entidades/Cobra.tscn" id="24_or7d7"]
 [ext_resource type="PackedScene" uid="uid://u28e3eudu6ch" path="res://Objetos/Funcionalidade/MainCamera.tscn" id="25_dm3g1"]
 [ext_resource type="TileSet" uid="uid://b0nn6bkolhibj" path="res://TilesetChao.tres" id="25_teql2"]
 [ext_resource type="Script" uid="uid://dd16yu704x6wt" path="res://Scripts/Componentes/BGM_Player.gd" id="26_31oht"]
@@ -493,8 +494,8 @@ process_material = SubResource("ParticleProcessMaterial_3j13e")
 
 [node name="Entidades" type="Node2D" parent="0" unique_id=1574774170]
 
-[node name="Escorpiao" parent="0/Entidades" unique_id=788915873 instance=ExtResource("27_2wc60")]
-position = Vector2(2783.0002, -915.00006)
+[node name="Cobra" parent="0/Entidades" unique_id=2019109312 instance=ExtResource("24_or7d7")]
+position = Vector2(2880, -908)
 
 [node name="Escorpiao2" parent="0/Entidades" unique_id=1329564963 instance=ExtResource("27_2wc60")]
 position = Vector2(5813.0005, -648.00024)
