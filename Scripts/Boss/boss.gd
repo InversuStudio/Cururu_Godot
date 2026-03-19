@@ -42,6 +42,8 @@ var num_vul:int = 0
 @export var flip_node:Array[Marker2D] = []
 ## Zoom aplicado à câmera ao iniciar batalha
 @export var zoom:float = .6
+## Arquivos de áudio contendo as vozes de fala
+@export var vozes_fala:Array[AudioStream] = []
 
 var tween:Tween = null
 
@@ -65,6 +67,10 @@ func _physics_process(delta: float) -> void:
 func _ready() -> void:
 	# Reseta shader hit flash
 	%SpriteMain.material.set_shader_parameter("valor", 0.0)
+	
+	DialogueManager.connect("got_dialogue", func(_l:DialogueLine) -> void:
+		var id:int = randi_range(0, vozes_fala.size() - 1)
+		if id >= 0: DialogoCMD.voz = vozes_fala[id])
 	
 	# Sinais de vida
 	%VidaBoss.connect("alterou_vida", TomouDano)

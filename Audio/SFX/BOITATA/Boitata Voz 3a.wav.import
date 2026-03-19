@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://cr16bjm4l5t2d"
+path="res://.godot/imported/Boitata Voz 3a.wav-074f04fa1a69541308c6f0a17c5b924d.sample"
+
+[deps]
+
+source_file="res://Audio/SFX/BOITATA/Boitata Voz 3a.wav"
+dest_files=["res://.godot/imported/Boitata Voz 3a.wav-074f04fa1a69541308c6f0a17c5b924d.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

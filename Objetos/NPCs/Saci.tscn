@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://bxixu84ahcyba"]
+[gd_scene format=3 uid="uid://bxixu84ahcyba"]
 
 [ext_resource type="Script" uid="uid://bt5du2sk1ba4i" path="res://Scripts/NPCs/NPC.gd" id="1_idat7"]
 [ext_resource type="Resource" uid="uid://cnhau31dn3hpf" path="res://Dialogos/Teste.dialogue" id="2_1gb7q"]
@@ -66,13 +66,13 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lqome"]
 size = Vector2(1027.8323, 631.75165)
 
-[node name="NPC-Basico" type="Sprite2D" node_paths=PackedStringArray("interacao")]
+[node name="NPC-Basico" type="Sprite2D" unique_id=604859283 node_paths=PackedStringArray("interacao")]
 scale = Vector2(0.4348958, 0.43489587)
 script = ExtResource("1_idat7")
 arquivo_dialogo = ExtResource("2_1gb7q")
 interacao = NodePath("Interacao")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1222604687]
 unique_name_in_owner = true
 position = Vector2(6.8982077, 0)
 sprite_frames = SubResource("SpriteFrames_rmtcg")
@@ -81,20 +81,20 @@ autoplay = "idle"
 frame_progress = 0.6539317
 speed_scale = 0.8
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1951320636]
 root_node = NodePath("../AnimatedSprite2D")
 
-[node name="Interacao" type="Area2D" parent="."]
+[node name="Interacao" type="Area2D" parent="." unique_id=1417230434]
 collision_layer = 0
 collision_mask = 2
 script = ExtResource("10_x2w2l")
 metadata/_custom_type_script = "uid://dd7svcu8l7fxu"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Interacao"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Interacao" unique_id=773796425]
 position = Vector2(-198.89821, 17.537334)
 shape = SubResource("RectangleShape2D_lqome")
 
-[node name="Texto" type="RichTextLabel" parent="."]
+[node name="Texto" type="RichTextLabel" parent="." unique_id=24064107]
 unique_name_in_owner = true
 anchors_preset = 5
 anchor_left = 0.5
@@ -109,7 +109,11 @@ text = "CONVERSAR"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="LogoV1Steam" type="Sprite2D" parent="Texto"]
+[node name="LogoV1Steam" type="Sprite2D" parent="Texto" unique_id=561569843]
 position = Vector2(315.01794, 115.688644)
 scale = Vector2(0.2987412, 0.29874122)
 texture = ExtResource("11_qeabn")
+
+[node name="Voz" type="AudioStreamPlayer" parent="." unique_id=696712502]
+unique_name_in_owner = true
+max_polyphony = 10

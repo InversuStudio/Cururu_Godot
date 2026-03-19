@@ -17,7 +17,9 @@
 [ext_resource type="PackedScene" uid="uid://bgiacv0vndt1q" path="res://Objetos/Props/DropAmVelAtaque.tscn" id="16_der3i"]
 [ext_resource type="PackedScene" uid="uid://b4fpjefuik8mq" path="res://Objetos/Props/DropAmRecMagia.tscn" id="17_der3i"]
 [ext_resource type="PackedScene" uid="uid://bxixu84ahcyba" path="res://Objetos/NPCs/Saci.tscn" id="18_bp4ag"]
+[ext_resource type="AudioStream" uid="uid://d06ge4skt1uy1" path="res://Audio/SFX/BOITATA/Boitata Voz 1a.wav" id="21_cmcod"]
 [ext_resource type="Texture2D" uid="uid://c3tl3oddronfh" path="res://icon.svg" id="21_lqome"]
+[ext_resource type="AudioStream" uid="uid://cre5ku0dd6058" path="res://Audio/SFX/BOITATA/Boitata Voz 2a.wav" id="22_1t5b2"]
 [ext_resource type="PackedScene" uid="uid://1fdx2ie24dh8" path="res://Objetos/Props/arvoreguarana.tscn" id="22_b4qhl"]
 [ext_resource type="PackedScene" uid="uid://u28e3eudu6ch" path="res://Objetos/Funcionalidade/MainCamera.tscn" id="22_der3i"]
 [ext_resource type="PackedScene" uid="uid://cdhelg6sloxbj" path="res://Objetos/Props/PortaTemp.tscn" id="23_u25g5"]
@@ -239,6 +241,7 @@ position = Vector2(3900, -467)
 [node name="NPC Basico" parent="." unique_id=951986583 instance=ExtResource("18_bp4ag")]
 position = Vector2(889, -781)
 dialogue_start = "mapa"
+vozes = Array[AudioStream]([ExtResource("21_cmcod"), ExtResource("22_1t5b2")])
 
 [node name="PlataformaSome" type="StaticBody2D" parent="." unique_id=523668121]
 position = Vector2(-1216, -665)

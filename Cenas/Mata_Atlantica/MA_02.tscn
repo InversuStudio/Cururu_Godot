@@ -43,7 +43,7 @@
 [ext_resource type="PackedScene" uid="uid://1apfpwlqocxn" path="res://Objetos/Funcionalidade/TransicaoFase.tscn" id="29_k84l1"]
 [ext_resource type="Texture2D" uid="uid://lqbfgf2a7311" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/Arvoresv2/mata atlântica_0_20260313104333.PNG" id="30_wepyd"]
 [ext_resource type="Texture2D" uid="uid://dm5myg2w8njv6" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/Arvoresv2/mata atlântica_0_20260313104058.PNG" id="31_o0mc4"]
-[ext_resource type="PackedScene" uid="uid://d0l4afitq8qog" path="res://Objetos/NPCs/Cartógrafo.tscn" id="31_wepyd"]
+[ext_resource type="PackedScene" uid="uid://d0l4afitq8qog" path="res://Objetos/NPCs/Cartografo.tscn" id="31_wepyd"]
 [ext_resource type="Texture2D" uid="uid://yfr8jwjcydfu" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/Arvoresv2/mata atlântica_0_20260313104035.PNG" id="32_h60bk"]
 [ext_resource type="PackedScene" uid="uid://nohq28uk7lfk" path="res://Objetos/Entidades/Player.tscn" id="32_o0mc4"]
 [ext_resource type="Texture2D" uid="uid://dcvpyin402ndg" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/Arvoresv2/mata atlântica_0_20260313104439.PNG" id="33_3eu04"]

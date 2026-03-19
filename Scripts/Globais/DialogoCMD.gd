@@ -1,6 +1,7 @@
 extends Node
 
 const balao:PackedScene = preload("res://Dialogos/BalaoFala.tscn")
+var voz:AudioStream = null
 
 func IniciaDialogo(res:DialogueResource) -> void:
 	DialogueManager.show_dialogue_balloon_scene(balao, res)
