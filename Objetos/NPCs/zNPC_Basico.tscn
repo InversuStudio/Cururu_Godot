@@ -66,7 +66,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="LogoV1Steam" type="Sprite2D" parent="Texto" unique_id=561569843]
-position = Vector2(296.62277, 115.688644)
+position = Vector2(296.62277, 96.574875)
 scale = Vector2(0.2987412, 0.29874122)
 texture = ExtResource("11_63wgk")
 

@@ -380,7 +380,6 @@ horizontal_alignment = 2
 
 [node name="Pause" type="Panel" parent="Corpo" unique_id=2011513613]
 unique_name_in_owner = true
-visible = false
 material = SubResource("ShaderMaterial_ixkb2")
 layout_mode = 1
 anchors_preset = 15

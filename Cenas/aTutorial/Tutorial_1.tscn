@@ -75,6 +75,7 @@
 [ext_resource type="Texture2D" uid="uid://ndcbb0ydrrj5" path="res://Sprites/Cenário/Mata_Atlantica/Foreground/arvore_fundo1.png" id="50_s5uib"]
 [ext_resource type="PackedScene" uid="uid://u28e3eudu6ch" path="res://Objetos/Funcionalidade/MainCamera.tscn" id="51_ibmem"]
 [ext_resource type="Script" uid="uid://dd16yu704x6wt" path="res://Scripts/Componentes/BGM_Player.gd" id="52_x8j6d"]
+[ext_resource type="Texture2D" uid="uid://cdoeovi1pkiyo" path="res://Sprites/Cenário/Mata_Atlantica/Interativos/amosatrra 2.png" id="53_idg5b"]
 [ext_resource type="AudioStream" uid="uid://b2vi4qav4gk5r" path="res://Audio/SFX/AMBIENTE/Cururu - Soundscape A.ogg" id="53_sje6b"]
 [ext_resource type="Texture2D" uid="uid://bu66so2bkubke" path="res://Sprites/VFX/Iluminação/LightCururu2.png" id="55_sxmps"]
 
@@ -174,6 +175,18 @@ shader_parameter/minStrength = 0.0800000038
 shader_parameter/maxStrength = 0.01
 shader_parameter/strengthScale = 100.0
 shader_parameter/interval = 3.5
+shader_parameter/detail = 1.0
+shader_parameter/heightOffset = 0.0
+shader_parameter/flip_wind = false
+shader_parameter/offset = 0.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ytcj4"]
+shader = ExtResource("10_hxoyl")
+shader_parameter/speed = 1.5
+shader_parameter/minStrength = 0.10000000475
+shader_parameter/maxStrength = 0.30000001425
+shader_parameter/strengthScale = 80.0
+shader_parameter/interval = 2.0
 shader_parameter/detail = 1.0
 shader_parameter/heightOffset = 0.0
 shader_parameter/flip_wind = false
@@ -960,6 +973,12 @@ visible = false
 position = Vector2(6051.9995, -1823.0001)
 scale = Vector2(0.9335072, 0.93350714)
 texture = ExtResource("28_thr42")
+
+[node name="Amosatrra2" type="Sprite2D" parent="0" unique_id=834061133]
+material = SubResource("ShaderMaterial_ytcj4")
+position = Vector2(4269, -1411)
+scale = Vector2(0.5371097, 0.5371097)
+texture = ExtResource("53_idg5b")
 
 [node name="Cururu" parent="0" unique_id=1710397734 instance=ExtResource("29_q2ysr")]
 z_index = 0
