@@ -174,8 +174,16 @@ position = Vector2(0, -422)
 sprite_frames = SubResource("SpriteFrames_u0rk8")
 animation = &"Jato"
 autoplay = "Carga"
-frame = 1
+frame = 20
+frame_progress = 1.0
 speed_scale = 1.5
+
+[node name="PointLight2D" type="PointLight2D" parent="Sprite" unique_id=1940313112]
+position = Vector2(-3.4999924, 287.5)
+scale = Vector2(0.5041841, 1.9718614)
+color = Color(0.48001462, 1.0234983, 1.3269993, 1)
+energy = 1.92
+texture = ExtResource("29_lotv7")
 
 [node name="HitBox" parent="." unique_id=1856126841 instance=ExtResource("11_tqvmf")]
 collision_layer = 16
@@ -194,12 +202,5 @@ autoplay = true
 
 [node name="Anim" type="AnimationPlayer" parent="." unique_id=1341158531]
 libraries/ = SubResource("AnimationLibrary_lrp0d")
-
-[node name="PointLight2D" type="PointLight2D" parent="." unique_id=1940313112]
-position = Vector2(-3.4999924, -134.5)
-scale = Vector2(0.3368201, 1.9718614)
-color = Color(0.48001462, 1.0234983, 1.3269993, 1)
-energy = 1.92
-texture = ExtResource("29_lotv7")
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

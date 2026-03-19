@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dmnjnllwsbx7v"
-path="res://.godot/imported/15C395C3-E018-4024-8335-CF325DCC4278.JPG-48908404646ea8a9c47e9685bd8cc849.ctex"
+uid="uid://cimhroq71ngla"
+path="res://.godot/imported/queimada01.PNG-b398bb89099088c44f6aa09bff1b9483.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/Arvoresv2/15C395C3-E018-4024-8335-CF325DCC4278.JPG"
-dest_files=["res://.godot/imported/15C395C3-E018-4024-8335-CF325DCC4278.JPG-48908404646ea8a9c47e9685bd8cc849.ctex"]
+source_file="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/Arvoresv2/queimada01.PNG"
+dest_files=["res://.godot/imported/queimada01.PNG-b398bb89099088c44f6aa09bff1b9483.ctex"]
 
 [params]
 

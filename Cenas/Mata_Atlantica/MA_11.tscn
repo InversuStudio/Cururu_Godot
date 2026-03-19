@@ -1,31 +1,33 @@
 [gd_scene format=4 uid="uid://chmrn5p1wbo0m"]
 
-[ext_resource type="Texture2D" uid="uid://cqu5scrrmr5n5" path="res://Sprites/Cenário/Mata_Atlantica/Background/Iluminação e Fundo/FUNDOCEU.png" id="1_dk80r"]
+[ext_resource type="Texture2D" uid="uid://e4138tmbd6ck" path="res://Sprites/Cenário/Mata_Atlantica/Background/110 Sem Título_20260213153415.png" id="1_jghho"]
 [ext_resource type="PackedScene" uid="uid://nohq28uk7lfk" path="res://Objetos/Entidades/Player.tscn" id="2_4gt3v"]
-[ext_resource type="Texture2D" uid="uid://3g4iv5385ymw" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/arvore_S2.png" id="2_jxgqo"]
-[ext_resource type="Texture2D" uid="uid://wng7roaj8xu6" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/arvore_S1.png" id="2_obipb"]
-[ext_resource type="Texture2D" uid="uid://dv0q1amqoq168" path="res://Sprites/Cenário/Mata_Atlantica/Background/Mata/mato03.png" id="2_xqsk0"]
+[ext_resource type="Shader" uid="uid://c1omtsxv04udh" path="res://Scripts/Shaders/blur_shader.gdshader" id="2_fk4lg"]
+[ext_resource type="Texture2D" uid="uid://cs5tclcq8xish" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/arvore_S2.png" id="2_jxgqo"]
+[ext_resource type="Texture2D" uid="uid://cc6yes0bp2w0y" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/arvore_S1.png" id="2_obipb"]
+[ext_resource type="Texture2D" uid="uid://yln77sy1ylrp" path="res://Sprites/Cenário/Mata_Atlantica/Background/Mata/mato03.png" id="2_xqsk0"]
 [ext_resource type="Texture2D" uid="uid://dyv700lptbkyq" path="res://Sprites/Cenário/Mata_Atlantica/Background/Galhos/composição2.png" id="4_omrxv"]
 [ext_resource type="Texture2D" uid="uid://dphhlbwaebgco" path="res://Sprites/Cenário/Mata_Atlantica/Background/Galhos/composição.png" id="5_b78wb"]
 [ext_resource type="PackedScene" uid="uid://1apfpwlqocxn" path="res://Objetos/Funcionalidade/TransicaoFase.tscn" id="5_fwuoy"]
-[ext_resource type="Texture2D" uid="uid://b1sv0car32gha" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/arvore_s3.png" id="7_8aryp"]
+[ext_resource type="Texture2D" uid="uid://b1sv0car32gha" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/arvore_S3.png" id="7_8aryp"]
 [ext_resource type="Texture2D" uid="uid://ctar30vsktrrb" path="res://Sprites/Cenário/Mata_Atlantica/Background/Iluminação e Fundo/FUNDONEVOA2.png" id="7_jb1wv"]
-[ext_resource type="Texture2D" uid="uid://dru600hg8oaty" path="res://Sprites/Cenário/Mata_Atlantica/Background/Mata/mato02.png" id="9_g8olc"]
-[ext_resource type="Texture2D" uid="uid://bt8vw2o8t62am" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/arvore_miasma.png" id="9_ir41t"]
+[ext_resource type="Texture2D" uid="uid://i664886fdh55" path="res://Sprites/Cenário/Mata_Atlantica/Background/Mata/mato02.png" id="9_g8olc"]
+[ext_resource type="Texture2D" uid="uid://x1ar0khlrujj" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/arvore_miasma.png" id="9_ir41t"]
 [ext_resource type="PackedScene" uid="uid://bjvnm0aydr0vd" path="res://Objetos/Entidades/Morcego.tscn" id="10_jb1wv"]
-[ext_resource type="Texture2D" uid="uid://7msrkwwo018f" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/arvore02.png" id="10_n7put"]
+[ext_resource type="Texture2D" uid="uid://cd0k6180rqklv" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/arvore02.png" id="10_n7put"]
 [ext_resource type="Texture2D" uid="uid://cjl88xeknofui" path="res://Sprites/Cenário/Mata_Atlantica/Chao/grama_reto.png" id="10_rrc73"]
 [ext_resource type="Texture2D" uid="uid://cj4rj4oj20ogb" path="res://Sprites/Cenário/Mata_Atlantica/Chao/chap_interno.png" id="11_bkuxo"]
-[ext_resource type="Texture2D" uid="uid://d3t6c4pjsosio" path="res://Sprites/Cenário/Mata_Atlantica/Background/Mata/mato01.png" id="11_ysdsg"]
+[ext_resource type="Texture2D" uid="uid://yrshunpt0tr8" path="res://Sprites/Cenário/Mata_Atlantica/Background/Mata/mato01.png" id="11_ysdsg"]
 [ext_resource type="Texture2D" uid="uid://cw2yeg7ynw0kl" path="res://Sprites/Cenário/Mata_Atlantica/Chao/chap_externo.png" id="12_noowx"]
 [ext_resource type="PackedScene" uid="uid://bei1s8te3cwko" path="res://Sprites/Cenário/Mata_Atlantica/Interativos/plataforma.tscn" id="13_h3gev"]
 [ext_resource type="PackedScene" uid="uid://smwewolvvw6l" path="res://Objetos/Entidades/Escorpiao_Rei.tscn" id="14_jb1wv"]
 [ext_resource type="Texture2D" uid="uid://fsecg0kdmjx7" path="res://Sprites/Cenário/Mata_Atlantica/Background/Galhos/central.png" id="14_ygge3"]
 [ext_resource type="Texture2D" uid="uid://c8tb73qiqhhk8" path="res://Sprites/Cenário/Mata_Atlantica/Background/Galhos/esquerda01.png" id="15_66bak"]
 [ext_resource type="PackedScene" uid="uid://1fdx2ie24dh8" path="res://Objetos/Props/arvoreguarana.tscn" id="16_yk7fv"]
-[ext_resource type="Texture2D" uid="uid://u12dsbd5ebth" path="res://Sprites/Cenário/Mata_Atlantica/Background/Mata/mato00.png" id="17_g3wcl"]
+[ext_resource type="Texture2D" uid="uid://d0w6r04nxo1a2" path="res://Sprites/Cenário/Mata_Atlantica/Background/Mata/mato00.png" id="17_g3wcl"]
 [ext_resource type="PackedScene" uid="uid://dny88hy3w52nm" path="res://Objetos/Props/DropAcai.tscn" id="17_sjxar"]
 [ext_resource type="Texture2D" uid="uid://6xmqb8rst36e" path="res://Sprites/Cenário/Mata_Atlantica/Chao/moita_miasma1.png" id="18_ir41t"]
+[ext_resource type="Shader" uid="uid://dc0bwmy1j0o5i" path="res://Scripts/Shaders/fog.gdshader" id="18_oqbam"]
 [ext_resource type="PackedScene" uid="uid://u48tpl3f3l20" path="res://Objetos/Props/DropGuarana.tscn" id="18_p7mcf"]
 [ext_resource type="Texture2D" uid="uid://rbtvfm4m7ft" path="res://Sprites/VFX/Iluminação/SOMBRA2.png" id="19_yk7fv"]
 [ext_resource type="Texture2D" uid="uid://b6f4rmw8i4g77" path="res://Sprites/Inimigos/Boitata/PropCorpoBoitata.png" id="20_sjxar"]
@@ -39,14 +41,39 @@
 [ext_resource type="Script" uid="uid://dd16yu704x6wt" path="res://Scripts/Componentes/BGM_Player.gd" id="26_jb1wv"]
 [ext_resource type="AudioStream" uid="uid://c7qftchbhu6xc" path="res://Audio/SFX/AMBIENTE/Musica_Jogo.mp3" id="27_vgqnr"]
 [ext_resource type="TileSet" uid="uid://b0nn6bkolhibj" path="res://TilesetChao.tres" id="30_n7put"]
+[ext_resource type="Texture2D" uid="uid://cxa4pl0scvs5k" path="res://Sprites/VFX/Partículas/folhastx.png" id="34_8r8hw"]
 [ext_resource type="PackedScene" uid="uid://u28e3eudu6ch" path="res://Objetos/Funcionalidade/MainCamera.tscn" id="34_xqsk0"]
 [ext_resource type="Texture2D" uid="uid://0agjwkmg3gef" path="res://Sprites/VFX/Iluminação/luz azul.png" id="37_1fg2t"]
 [ext_resource type="Texture2D" uid="uid://b73nkcosr250e" path="res://Sprites/VFX/Iluminação/LightCururu.png" id="38_pfcst"]
 [ext_resource type="AudioStream" uid="uid://b2vi4qav4gk5r" path="res://Audio/SFX/AMBIENTE/Cururu - Soundscape A.ogg" id="40_n7put"]
 [ext_resource type="Script" uid="uid://1asbq143ewh0" path="res://Scripts/Componentes/empurrar_player_direita.gd" id="43_ygge3"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_ic43t"]
-size = Vector2(4204, 3665)
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_8r8hw"]
+shader = ExtResource("2_fk4lg")
+shader_parameter/darkness = 0.10000000475
+shader_parameter/lod = 0.6000000285
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_nf0t0"]
+shader = ExtResource("2_fk4lg")
+shader_parameter/darkness = 0.10000000475
+shader_parameter/lod = 0.6000000285
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_himbn"]
+shader = ExtResource("2_fk4lg")
+shader_parameter/darkness = 0.10000000475
+shader_parameter/lod = 0.6000000285
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ihk82"]
+shader = ExtResource("2_fk4lg")
+shader_parameter/darkness = 0.10000000475
+shader_parameter/lod = 0.550000026125
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_pwipa"]
+shader = ExtResource("18_oqbam")
+shader_parameter/fog_color = Color(0.646029, 0.646029, 0.646029, 0.7921569)
+shader_parameter/density = 0.6
+shader_parameter/speed = 0.2
+shader_parameter/scale = 0.5
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_k1v02"]
 size = Vector2(444, 68)
@@ -66,24 +93,75 @@ shader_parameter/heightOffset = 0.0
 shader_parameter/flip_wind = false
 shader_parameter/offset = 0.0
 
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_nf0t0"]
+particle_flag_disable_z = true
+emission_shape = 3
+emission_box_extents = Vector3(300, 500, 1)
+spread = 20.0
+initial_velocity_min = 1.0
+initial_velocity_max = 5.0
+radial_velocity_min = -10.000022
+radial_velocity_max = 49.999977
+gravity = Vector3(-10, -50, 0)
+scale_min = 0.25
+scale_max = 0.5
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_himbn"]
+particles_animation = true
+particles_anim_h_frames = 7
+particles_anim_v_frames = 1
+particles_anim_loop = false
+
+[sub_resource type="Gradient" id="Gradient_ihk82"]
+offsets = PackedFloat32Array(0, 0.1958042, 0.74825174, 1)
+colors = PackedColorArray(1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_yyslo"]
+gradient = SubResource("Gradient_ihk82")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_pwipa"]
+particle_flag_disable_z = true
+emission_shape = 3
+emission_box_extents = Vector3(7500, 500, 1)
+spread = 20.0
+initial_velocity_min = 0.5
+initial_velocity_max = 2.0
+angular_velocity_min = -1.6093254e-05
+angular_velocity_max = 29.999983
+gravity = Vector3(-20, 30, 0)
+scale_min = 0.19999999
+scale_max = 0.29999998
+color_ramp = SubResource("GradientTexture1D_yyslo")
+anim_offset_max = 1.0
+
 [sub_resource type="CircleShape2D" id="CircleShape2D_66bak"]
 
 [node name="MA_2-2" type="Node2D" unique_id=1428089634]
 
-[node name="LimiteCamera" type="CollisionShape2D" parent="." unique_id=1246828831]
-z_index = 5
-position = Vector2(2881, -2218.5)
-shape = SubResource("RectangleShape2D_ic43t")
-debug_color = Color(0, 0.6, 0.69803923, 0)
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1373499900]
+follow_viewport_enabled = true
+follow_viewport_scale = 0.6
 
-[node name="FundoCeu" type="Sprite2D" parent="." unique_id=1203280699]
-position = Vector2(2829.5, -2368.4)
-scale = Vector2(2.0874505, 2.0529647)
-texture = ExtResource("1_dk80r")
+[node name="110SemTítulo20260213153415" type="Sprite2D" parent="CanvasLayer" unique_id=836932957]
+position = Vector2(2861.666, -1415.3335)
+scale = Vector2(2.5670571, 2.5670571)
+texture = ExtResource("1_jghho")
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer" unique_id=366114110]
+material = SubResource("ShaderMaterial_8r8hw")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 315.0
+offset_top = -4343.333
+offset_right = 4838.333
+offset_bottom = -1619.1272
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="-4" type="CanvasLayer" parent="." unique_id=368307024]
 follow_viewport_enabled = true
-follow_viewport_scale = 0.6
+follow_viewport_scale = 0.65
 
 [node name="ArvoreS13" type="Sprite2D" parent="-4" unique_id=1128648850]
 position = Vector2(1567, -3745)
@@ -125,6 +203,18 @@ texture = ExtResource("2_xqsk0")
 position = Vector2(1355.0007, -677.9004)
 scale = Vector2(0.650859, 0.650859)
 texture = ExtResource("2_xqsk0")
+
+[node name="ColorRect2" type="ColorRect" parent="-3" unique_id=102133392]
+material = SubResource("ShaderMaterial_nf0t0")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 337.1427
+offset_top = -4661.4287
+offset_right = 4829.9995
+offset_bottom = -1355.7148
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="CanvasModulate" type="CanvasModulate" parent="-3" unique_id=84636346]
 position = Vector2(-21272.857, -19224.287)
@@ -191,6 +281,18 @@ position = Vector2(2131, -616.00006)
 scale = Vector2(0.6600226, 0.6600226)
 texture = ExtResource("9_g8olc")
 
+[node name="ColorRect3" type="ColorRect" parent="-2" unique_id=2052182092]
+material = SubResource("ShaderMaterial_himbn")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 649.99976
+offset_top = -4346.25
+offset_right = 4080.0
+offset_bottom = -1213.7505
+grow_horizontal = 2
+grow_vertical = 2
+
 [node name="CanvasModulate" type="CanvasModulate" parent="-2" unique_id=288920772]
 position = Vector2(-21272.857, -19224.287)
 scale = Vector2(175.74992, 39.388683)
@@ -256,6 +358,20 @@ texture = ExtResource("11_ysdsg")
 position = Vector2(824.9995, -580)
 scale = Vector2(0.79999983, 0.79999983)
 texture = ExtResource("11_ysdsg")
+
+[node name="ColorRect4" type="ColorRect" parent="-1" unique_id=249440352]
+material = SubResource("ShaderMaterial_ihk82")
+offset_left = 473.33325
+offset_top = -4320.0
+offset_right = 5931.1113
+offset_bottom = -405.20898
+
+[node name="Fog" type="ColorRect" parent="-1" unique_id=126082008]
+material = SubResource("ShaderMaterial_pwipa")
+offset_left = 462.24487
+offset_top = -3860.204
+offset_right = 5478.5713
+offset_bottom = -337.75513
 
 [node name="CanvasModulate" type="CanvasModulate" parent="-1" unique_id=344967010]
 position = Vector2(-21272.857, -19224.287)
@@ -400,6 +516,28 @@ color = Color(0.13333334, 0.13333334, 0.13333334, 1)
 [node name="0" type="CanvasLayer" parent="." unique_id=1762580841]
 follow_viewport_enabled = true
 
+[node name="PointLight2D" type="PointLight2D" parent="0" unique_id=1066138392]
+position = Vector2(3363.81, -944.76196)
+scale = Vector2(5.976453, 6.1865416)
+blend_mode = 2
+range_layer_max = 1
+texture = ExtResource("38_pfcst")
+
+[node name="PointLight2D3" type="PointLight2D" parent="0" unique_id=1755740110]
+position = Vector2(3157.143, -2822.8574)
+scale = Vector2(5.976453, 6.1865416)
+blend_mode = 2
+range_layer_max = 1
+texture = ExtResource("38_pfcst")
+
+[node name="PointLight2D2" type="PointLight2D" parent="0" unique_id=1958234185]
+position = Vector2(1287, -3447.6191)
+scale = Vector2(5.8898067, 5.970238)
+blend_mode = 2
+range_layer_min = -1
+range_layer_max = 1
+texture = ExtResource("38_pfcst")
+
 [node name="Transicoes" type="Node2D" parent="0" unique_id=256678392]
 
 [node name="MA_10" parent="0/Transicoes" unique_id=789685631 instance=ExtResource("5_fwuoy")]
@@ -466,21 +604,37 @@ position = Vector2(2022, -794)
 position = Vector2(1230, -2940)
 drop_item = Array[PackedScene]([ExtResource("17_sjxar"), ExtResource("18_p7mcf")])
 
-[node name="Entidades" type="Node2D" parent="0" unique_id=2095727882]
-position = Vector2(982, -637)
+[node name="Escorpiao" parent="0" unique_id=999671053 instance=ExtResource("14_jb1wv")]
+position = Vector2(2161, -2944)
 
-[node name="Escorpiao" parent="0/Entidades" unique_id=999671053 instance=ExtResource("14_jb1wv")]
-position = Vector2(1179, -2307)
+[node name="Morcego" parent="0" unique_id=129332109 instance=ExtResource("10_jb1wv")]
+position = Vector2(2484, -1949)
 
-[node name="Morcego" parent="0/Entidades" unique_id=129332109 instance=ExtResource("10_jb1wv")]
-position = Vector2(1502, -1312)
-
-[node name="Morcego2" parent="0/Entidades" unique_id=2108874331 instance=ExtResource("10_jb1wv")]
-position = Vector2(2909, -2706)
+[node name="Morcego2" parent="0" unique_id=2108874331 instance=ExtResource("10_jb1wv")]
+position = Vector2(3891, -3343)
 
 [node name="Cururu" parent="0" unique_id=1770906858 instance=ExtResource("2_4gt3v")]
 z_index = 0
 position = Vector2(2588.0002, -646)
+
+[node name="Particula" type="GPUParticles2D" parent="0" unique_id=769110414]
+position = Vector2(3485, -2407.9998)
+scale = Vector2(24.456299, 7.56237)
+amount = 200
+amount_ratio = 0.7
+texture = ExtResource("37_1fg2t")
+visibility_rect = Rect2(-2000, -500, 4000, 1000)
+process_material = SubResource("ParticleProcessMaterial_nf0t0")
+
+[node name="Folhas" type="GPUParticles2D" parent="0" unique_id=497644535]
+material = SubResource("CanvasItemMaterial_himbn")
+position = Vector2(4427, -2690)
+scale = Vector2(6.622835, 5.4080343)
+amount = 1000
+texture = ExtResource("34_8r8hw")
+lifetime = 5.0
+visibility_rect = Rect2(-7500, -500, 15000, 1000)
+process_material = SubResource("ParticleProcessMaterial_pwipa")
 
 [node name="TileMapLayer" type="TileMapLayer" parent="0" unique_id=1014421929]
 tile_map_data = PackedByteArray("AAAGAOL/AQAAAAAAAAAGAOP/AQAAAAAAAAAGAOT/AQAAAAAAAAAGAOX/AQAAAAAAAAAGAOb/AQAAAAAAAAAGAOf/AQAAAAAAAAAGAOj/AQAAAAAAAAAGAPL/AQAAAAAAAAAGAPP/AQAAAAAAAAAHAOL/AQAAAAAAAAAHAOP/AQAAAAAAAAAHAOT/AQAAAAAAAAAHAOX/AQAAAAAAAAAHAOb/AQAAAAAAAAAHAOf/AQAAAAAAAAAHAOj/AQAAAAAAAAAHAPL/AQAAAAAAAAAHAPP/AQAAAAAAAAAIAPL/AQAAAAAAAAAIAPP/AQAAAAAAAAAJAPL/AQAAAAAAAAAJAPP/AQAAAAAAAAAKAPL/AQAAAAAAAAAKAPP/AQAAAAAAAAAKAPv/AQAAAAAAAAALAPL/AQAAAAAAAAALAPP/AQAAAAAAAAALAPv/AQAAAAAAAAAMAPL/AQAAAAAAAAAMAPP/AQAAAAAAAAAMAPT/AQAAAAAAAAAMAPX/AQAAAAAAAAAMAPb/AQAAAAAAAAAMAPv/AQAAAAAAAAANAPL/AQAAAAAAAAANAPP/AQAAAAAAAAANAPT/AQAAAAAAAAANAPX/AQAAAAAAAAANAPb/AQAAAAAAAAANAPv/AQAAAAAAAAAOAPL/AQAAAAAAAAAOAPP/AQAAAAAAAAAOAPT/AQAAAAAAAAAOAPX/AQAAAAAAAAAOAPb/AQAAAAAAAAAOAPv/AQAAAAAAAAAPAN3/AQAAAAAAAAAPAN7/AQAAAAAAAAAPAOn/AQAAAAAAAAAPAOr/AQAAAAAAAAAPAOv/AQAAAAAAAAAPAOz/AQAAAAAAAAAPAO3/AQAAAAAAAAAPAO7/AQAAAAAAAAAPAO//AQAAAAAAAAAPAPD/AQAAAAAAAAAPAPH/AQAAAAAAAAAPAPL/AQAAAAAAAAAPAPP/AQAAAAAAAAAPAPT/AQAAAAAAAAAPAPX/AQAAAAAAAAAPAPb/AQAAAAAAAAAPAPv/AQAAAAAAAAAQAN3/AQAAAAAAAAAQAN7/AQAAAAAAAAAQAOn/AQAAAAAAAAAQAOr/AQAAAAAAAAAQAOv/AQAAAAAAAAAQAOz/AQAAAAAAAAAQAO3/AQAAAAAAAAAQAO7/AQAAAAAAAAAQAO//AQAAAAAAAAAQAPD/AQAAAAAAAAAQAPH/AQAAAAAAAAAQAPL/AQAAAAAAAAAQAPP/AQAAAAAAAAAQAPT/AQAAAAAAAAAQAPX/AQAAAAAAAAAQAPb/AQAAAAAAAAAQAPv/AQAAAAAAAAARAPv/AQAAAAAAAAASAPv/AQAAAAAAAAATAN3/AQAAAAAAAAATAN7/AQAAAAAAAAATAOr/AQAAAAAAAAATAOv/AQAAAAAAAAAUAN3/AQAAAAAAAAAUAN7/AQAAAAAAAAAVAN3/AQAAAAAAAAAVAN7/AQAAAAAAAAAVAN//AQAAAAAAAAAVAOD/AQAAAAAAAAAWAN3/AQAAAAAAAAAWAN7/AQAAAAAAAAAWAN//AQAAAAAAAAAWAOD/AQAAAAAAAAAXAN3/AQAAAAAAAAAXAN7/AQAAAAAAAAAXAN//AQAAAAAAAAAXAOD/AQAAAAAAAAAYAN3/AQAAAAAAAAAYAN7/AQAAAAAAAAAYAN//AQAAAAAAAAAYAOD/AQAAAAAAAAAZAN3/AQAAAAAAAAAZAN7/AQAAAAAAAAAZAN//AQAAAAAAAAAZAOD/AQAAAAAAAAAaAN3/AQAAAAAAAAAaAN7/AQAAAAAAAAAaAN//AQAAAAAAAAAaAOD/AQAAAAAAAAAbAN3/AQAAAAAAAAAbAN7/AQAAAAAAAAAbAN//AQAAAAAAAAAbAOD/AQAAAAAAAAAbAPv/AQAAAAAAAAAcAN3/AQAAAAAAAAAcAN7/AQAAAAAAAAAcAN//AQAAAAAAAAAcAOD/AQAAAAAAAAAcAPv/AQAAAAAAAAAdAN3/AQAAAAAAAAAdAN7/AQAAAAAAAAAdAN//AQAAAAAAAAAdAOD/AQAAAAAAAAAdAPv/AQAAAAAAAAAeAN3/AQAAAAAAAAAeAN7/AQAAAAAAAAAeAN//AQAAAAAAAAAeAOD/AQAAAAAAAAAeAPv/AQAAAAAAAAAfAN3/AQAAAAAAAAAfAN7/AQAAAAAAAAAfAN//AQAAAAAAAAAfAOD/AQAAAAAAAAAfAPv/AQAAAAAAAAAgAN3/AQAAAAAAAAAgAN7/AQAAAAAAAAAgAN//AQAAAAAAAAAgAOD/AQAAAAAAAAAgAPv/AQAAAAAAAAAhAN3/AQAAAAAAAAAhAN7/AQAAAAAAAAAhAN//AQAAAAAAAAAhAOD/AQAAAAAAAAAhAPv/AQAAAAAAAAAiAN3/AQAAAAAAAAAiAN7/AQAAAAAAAAAiAN//AQAAAAAAAAAiAOD/AQAAAAAAAAAiAOH/AQAAAAAAAAAiAOL/AQAAAAAAAAAiAOP/AQAAAAAAAAAiAOT/AQAAAAAAAAAiAOX/AQAAAAAAAAAiAOb/AQAAAAAAAAAiAOf/AQAAAAAAAAAiAOj/AQAAAAAAAAAiAOn/AQAAAAAAAAAiAOr/AQAAAAAAAAAiAOv/AQAAAAAAAAAiAOz/AQAAAAAAAAAiAO3/AQAAAAAAAAAiAO7/AQAAAAAAAAAiAO//AQAAAAAAAAAiAPD/AQAAAAAAAAAiAPv/AQAAAAAAAAAjAN3/AQAAAAAAAAAjAN7/AQAAAAAAAAAjAN//AQAAAAAAAAAjAOD/AQAAAAAAAAAjAOH/AQAAAAAAAAAjAOL/AQAAAAAAAAAjAOP/AQAAAAAAAAAjAOT/AQAAAAAAAAAjAOX/AQAAAAAAAAAjAOb/AQAAAAAAAAAjAOf/AQAAAAAAAAAjAOj/AQAAAAAAAAAjAOn/AQAAAAAAAAAjAOr/AQAAAAAAAAAjAOv/AQAAAAAAAAAjAOz/AQAAAAAAAAAjAO3/AQAAAAAAAAAjAO7/AQAAAAAAAAAjAO//AQAAAAAAAAAjAPD/AQAAAAAAAAAjAPv/AQAAAAAAAAAkAN3/AQAAAAAAAAAkAN7/AQAAAAAAAAAkAN//AQAAAAAAAAAkAOD/AQAAAAAAAAAkAOH/AQAAAAAAAAAkAOL/AQAAAAAAAAAkAOP/AQAAAAAAAAAkAOT/AQAAAAAAAAAkAOX/AQAAAAAAAAAkAOb/AQAAAAAAAAAkAOf/AQAAAAAAAAAkAOj/AQAAAAAAAAAkAOn/AQAAAAAAAAAkAOr/AQAAAAAAAAAkAOv/AQAAAAAAAAAkAOz/AQAAAAAAAAAkAO3/AQAAAAAAAAAkAO7/AQAAAAAAAAAkAO//AQAAAAAAAAAkAPD/AQAAAAAAAAAkAPH/AQAAAAAAAAAkAPL/AQAAAAAAAAAkAPP/AQAAAAAAAAAkAPT/AQAAAAAAAAAkAPX/AQAAAAAAAAAkAPb/AQAAAAAAAAAkAPf/AQAAAAAAAAAkAPv/AQAAAAAAAAAlAPH/AQAAAAAAAAAlAPL/AQAAAAAAAAAlAPP/AQAAAAAAAAAlAPT/AQAAAAAAAAAlAPX/AQAAAAAAAAAlAPb/AQAAAAAAAAAlAPf/AQAAAAAAAAAlAPv/AQAAAAAAAAATAPv/AQAAAAAAAAAUAPv/AQAAAAAAAAAlAO7/AQAAAAAAAAAlAO//AQAAAAAAAAAlAPD/AQAAAAAAAAAlAN3/AQAAAAAAAAAlAN7/AQAAAAAAAAAlAN//AQAAAAAAAAAlAOD/AQAAAAAAAAAlAOH/AQAAAAAAAAAlAOL/AQAAAAAAAAAlAOP/AQAAAAAAAAAlAOT/AQAAAAAAAAAlAOX/AQAAAAAAAAAlAOb/AQAAAAAAAAAlAOf/AQAAAAAAAAAlAOj/AQAAAAAAAAAlAOn/AQAAAAAAAAAlAOr/AQAAAAAAAAAlAOv/AQAAAAAAAAAlAOz/AQAAAAAAAAAlAO3/AQAAAAAAAAAGAN3/AQAAAAAAAAAGAN7/AQAAAAAAAAAGAN//AQAAAAAAAAAGAOD/AQAAAAAAAAAGAOH/AQAAAAAAAAAHAN3/AQAAAAAAAAAHAN7/AQAAAAAAAAAHAN//AQAAAAAAAAAHAOD/AQAAAAAAAAAHAOH/AQAAAAAAAAAIAN3/AQAAAAAAAAAIAN7/AQAAAAAAAAAJAN3/AQAAAAAAAAAJAN7/AQAAAAAAAAAKAN3/AQAAAAAAAAAKAN7/AQAAAAAAAAAOAN3/AQAAAAAAAAAOAN7/AQAAAAAAAAAGAOn/AQAAAAAAAAAGAOr/AQAAAAAAAAAGAOv/AQAAAAAAAAAGAOz/AQAAAAAAAAAGAO3/AQAAAAAAAAAGAO7/AQAAAAAAAAAGAO//AQAAAAAAAAAGAPD/AQAAAAAAAAAGAPH/AQAAAAAAAAAHAOn/AQAAAAAAAAAHAOr/AQAAAAAAAAAHAOv/AQAAAAAAAAAHAOz/AQAAAAAAAAAHAO3/AQAAAAAAAAAHAO7/AQAAAAAAAAAHAO//AQAAAAAAAAAHAPD/AQAAAAAAAAAHAPH/AQAAAAAAAAAIAOn/AQAAAAAAAAAIAOr/AQAAAAAAAAAIAOv/AQAAAAAAAAAIAOz/AQAAAAAAAAAIAO3/AQAAAAAAAAAIAO7/AQAAAAAAAAAIAO//AQAAAAAAAAAIAPD/AQAAAAAAAAAIAPH/AQAAAAAAAAAJAOn/AQAAAAAAAAAJAOr/AQAAAAAAAAAJAOv/AQAAAAAAAAAJAOz/AQAAAAAAAAAJAO3/AQAAAAAAAAAJAO7/AQAAAAAAAAAJAO//AQAAAAAAAAAJAPD/AQAAAAAAAAAJAPH/AQAAAAAAAAAKAOn/AQAAAAAAAAAKAOr/AQAAAAAAAAAKAOv/AQAAAAAAAAAKAOz/AQAAAAAAAAAKAO3/AQAAAAAAAAAKAO7/AQAAAAAAAAAKAO//AQAAAAAAAAAKAPD/AQAAAAAAAAAKAPH/AQAAAAAAAAALAOn/AQAAAAAAAAALAOr/AQAAAAAAAAALAOv/AQAAAAAAAAALAOz/AQAAAAAAAAALAO3/AQAAAAAAAAALAO7/AQAAAAAAAAALAO//AQAAAAAAAAALAPD/AQAAAAAAAAALAPH/AQAAAAAAAAAMAOn/AQAAAAAAAAAMAOr/AQAAAAAAAAAMAOv/AQAAAAAAAAAMAOz/AQAAAAAAAAAMAO3/AQAAAAAAAAAMAO7/AQAAAAAAAAAMAO//AQAAAAAAAAAMAPD/AQAAAAAAAAAMAPH/AQAAAAAAAAANAOn/AQAAAAAAAAANAOr/AQAAAAAAAAANAOv/AQAAAAAAAAANAOz/AQAAAAAAAAANAO3/AQAAAAAAAAANAO7/AQAAAAAAAAANAO//AQAAAAAAAAANAPD/AQAAAAAAAAANAPH/AQAAAAAAAAAOAOn/AQAAAAAAAAAOAOr/AQAAAAAAAAAOAOv/AQAAAAAAAAAOAOz/AQAAAAAAAAAOAO3/AQAAAAAAAAAOAO7/AQAAAAAAAAAOAO//AQAAAAAAAAAOAPD/AQAAAAAAAAAOAPH/AQAAAAAAAAAGAPT/AQAAAAAAAAAGAPX/AQAAAAAAAAAGAPb/AQAAAAAAAAAHAPT/AQAAAAAAAAAHAPX/AQAAAAAAAAAHAPb/AQAAAAAAAAAIAPT/AQAAAAAAAAAIAPX/AQAAAAAAAAAIAPb/AQAAAAAAAAAJAPT/AQAAAAAAAAAJAPX/AQAAAAAAAAAJAPb/AQAAAAAAAAAKAPT/AQAAAAAAAAAKAPX/AQAAAAAAAAAKAPb/AQAAAAAAAAALAPT/AQAAAAAAAAALAPX/AQAAAAAAAAALAPb/AQAAAAAAAAAGAPv/AQAAAAAAAAAHAPv/AQAAAAAAAAAIAPv/AQAAAAAAAAAJAPv/AQAAAAAAAAASAOr/AQAAAAAAAAASAOv/AQAAAAAAAAARAOr/AQAAAAAAAAARAOv/AQAAAAAAAAAfAOT/AQAAAAAAAAAgAOT/AQAAAAAAAAAhAOT/AQAAAAAAAAAGAPz/AQAAAAAAAAAHAPz/AQAAAAAAAAAIAPz/AQAAAAAAAAAJAPz/AQAAAAAAAAAKAPz/AQAAAAAAAAALAPz/AQAAAAAAAAAMAPz/AQAAAAAAAAANAPz/AQAAAAAAAAAOAPz/AQAAAAAAAAAPAPz/AQAAAAAAAAAQAPz/AQAAAAAAAAARAPz/AQAAAAAAAAASAPz/AQAAAAAAAAATAPz/AQAAAAAAAAAUAPz/AQAAAAAAAAAbAPz/AQAAAAAAAAAcAPz/AQAAAAAAAAAdAPz/AQAAAAAAAAAeAPz/AQAAAAAAAAAfAPz/AQAAAAAAAAAgAPz/AQAAAAAAAAAhAPz/AQAAAAAAAAAiAPz/AQAAAAAAAAAjAPz/AQAAAAAAAAAkAPz/AQAAAAAAAAAlAPz/AQAAAAAAAAARAOz/AQAAAAAAAAARAO3/AQAAAAAAAAARAO7/AQAAAAAAAAARAO//AQAAAAAAAAARAPD/AQAAAAAAAAARAPH/AQAAAAAAAAARAPL/AQAAAAAAAAARAPP/AQAAAAAAAAARAPT/AQAAAAAAAAARAPX/AQAAAAAAAAARAPb/AQAAAAAAAAAkAPj/AQAAAAAAAAAkAPn/AQAAAAAAAAAkAPr/AQAAAAAAAAAlAPj/AQAAAAAAAAAlAPn/AQAAAAAAAAAlAPr/AQAAAAAAAAAZAPv/AQAAAAAAAAAZAPz/AQAAAAAAAAAaAPv/AQAAAAAAAAAaAPz/AQAAAAAAAAAfAOH/AQAAAAAAAAAfAOL/AQAAAAAAAAAfAOP/AQAAAAAAAAAgAOH/AQAAAAAAAAAgAOL/AQAAAAAAAAAgAOP/AQAAAAAAAAAhAOH/AQAAAAAAAAAhAOL/AQAAAAAAAAAhAOP/AQAAAAAAAAAGAPf/AQAAAAAAAAAHAPf/AQAAAAAAAAAIAPf/AQAAAAAAAAAJAPf/AQAAAAAAAAAKAPf/AQAAAAAAAAALAPf/AQAAAAAAAAAMAPf/AQAAAAAAAAANAPf/AQAAAAAAAAAOAPf/AQAAAAAAAAAPAPf/AQAAAAAAAAAQAPf/AQAAAAAAAAARAPf/AQAAAAAAAAAKAOH/AQAAAAAAAAAKAOL/AQAAAAAAAAALAOH/AQAAAAAAAAALAOL/AQAAAAAAAAAMAOH/AQAAAAAAAAAMAOL/AQAAAAAAAAANAOH/AQAAAAAAAAANAOL/AQAAAAAAAAAOAOH/AQAAAAAAAAAOAOL/AQAAAAAAAAAPAOH/AQAAAAAAAAAPAOL/AQAAAAAAAAAQAOH/AQAAAAAAAAAQAOL/AQAAAAAAAAARAN3/AQAAAAAAAAARAN7/AQAAAAAAAAASAN3/AQAAAAAAAAASAN7/AQAAAAAAAAAYAPv/AQAAAAAAAAAYAPz/AQAAAAAAAAALAN3/AQAAAAAAAAALAN7/AQAAAAAAAAAMAN3/AQAAAAAAAAAMAN7/AQAAAAAAAAANAN3/AQAAAAAAAAANAN7/AQAAAAAAAAARAOL/AQAAAAAAAAASAOL/AQAAAAAAAAATAOL/AQAAAAAAAAAUAOL/AQAAAAAAAAAVAOL/AQAAAAAAAAAWAOL/AQAAAAAAAAAXAOL/AQAAAAAAAAAYAOL/AQAAAAAAAAAZAOL/AQAAAAAAAAAaAOL/AQAAAAAAAAAbAOL/AQAAAAAAAAAcAOL/AQAAAAAAAAAdAOL/AQAAAAAAAAAeAOL/AQAAAAAAAAAIAOH/AQAAAAAAAAAIAOL/AQAAAAAAAAAJAOH/AQAAAAAAAAAJAOL/AQAAAAAAAAARAOn/AQAAAAAAAAASAOn/AQAAAAAAAAATAOn/AQAAAAAAAAAfAOX/AQAAAAAAAAAgAOX/AQAAAAAAAAAhAOX/AQAAAAAAAAAmAOL/AQAAAAAAAAAmAOP/AQAAAAAAAAAmAOT/AQAAAAAAAAAmAOX/AQAAAAAAAAAmAOb/AQAAAAAAAAAmAOf/AQAAAAAAAAAmAOj/AQAAAAAAAAAmAOn/AQAAAAAAAAAmAOr/AQAAAAAAAAAmAOv/AQAAAAAAAAAmAOz/AQAAAAAAAAAmAO3/AQAAAAAAAAAmAO7/AQAAAAAAAAAmAO//AQAAAAAAAAAmAPD/AQAAAAAAAAAmAPH/AQAAAAAAAAAmAPL/AQAAAAAAAAAmAPP/AQAAAAAAAAAmAPT/AQAAAAAAAAAmAPX/AQAAAAAAAAAmAPb/AQAAAAAAAAAmAPf/AQAAAAAAAAAmAPj/AQAAAAAAAAAmAPn/AQAAAAAAAAAmAPr/AQAAAAAAAAAmAPv/AQAAAAAAAAAmAPz/AQAAAAAAAAARAOH/AQAAAAAAAAASAOH/AQAAAAAAAAATAOH/AQAAAAAAAAAUAOH/AQAAAAAAAAAVAOH/AQAAAAAAAAAWAOH/AQAAAAAAAAAXAOH/AQAAAAAAAAAYAOH/AQAAAAAAAAAZAOH/AQAAAAAAAAAaAOH/AQAAAAAAAAAbAOH/AQAAAAAAAAAcAOH/AQAAAAAAAAAdAOH/AQAAAAAAAAAeAOH/AQAAAAAAAAAIAN//AQAAAAAAAAAIAOD/AQAAAAAAAAAJAN//AQAAAAAAAAAJAOD/AQAAAAAAAAAKAN//AQAAAAAAAAAKAOD/AQAAAAAAAAALAN//AQAAAAAAAAALAOD/AQAAAAAAAAAMAN//AQAAAAAAAAAMAOD/AQAAAAAAAAANAN//AQAAAAAAAAANAOD/AQAAAAAAAAAOAN//AQAAAAAAAAAOAOD/AQAAAAAAAAAPAN//AQAAAAAAAAAPAOD/AQAAAAAAAAAQAN//AQAAAAAAAAAQAOD/AQAAAAAAAAARAN//AQAAAAAAAAARAOD/AQAAAAAAAAASAN//AQAAAAAAAAASAOD/AQAAAAAAAAATAN//AQAAAAAAAAATAOD/AQAAAAAAAAAUAN//AQAAAAAAAAAUAOD/AQAAAAAAAAAmAN3/AQAAAAAAAAAmAN7/AQAAAAAAAAAmAN//AQAAAAAAAAAmAOD/AQAAAAAAAAAmAOH/AQAAAAAAAAAAAPz/AQAAAAAAAAABAPz/AQAAAAAAAAACAPz/AQAAAAAAAAADAPz/AQAAAAAAAAAEAPz/AQAAAAAAAAAFAPz/AQAAAAAAAAAAAPj/AQAAAAAAAAAAAPn/AQAAAAAAAAAAAPr/AQAAAAAAAAAAAPv/AQAAAAAAAAABAPv/AQAAAAAAAAACAPv/AQAAAAAAAAADAPv/AQAAAAAAAAAEAPv/AQAAAAAAAAAFAPv/AQAAAAAAAAAAAPf/AQAAAAAAAAA=")
@@ -934,28 +1088,6 @@ texture = ExtResource("24_lj4g0")
 position = Vector2(-21272.857, -19224.287)
 scale = Vector2(175.74992, 39.388683)
 color = Color(0.13333334, 0.13333334, 0.13333334, 1)
-
-[node name="PointLight2D" type="PointLight2D" parent="2" unique_id=1066138392]
-position = Vector2(3363.81, -944.76196)
-scale = Vector2(5.976453, 6.1865416)
-blend_mode = 2
-range_layer_max = 1
-texture = ExtResource("38_pfcst")
-
-[node name="PointLight2D3" type="PointLight2D" parent="2" unique_id=1755740110]
-position = Vector2(3157.143, -2822.8574)
-scale = Vector2(5.976453, 6.1865416)
-blend_mode = 2
-range_layer_max = 1
-texture = ExtResource("38_pfcst")
-
-[node name="PointLight2D2" type="PointLight2D" parent="2" unique_id=1958234185]
-position = Vector2(1016.1905, -3447.6191)
-scale = Vector2(53.67618, 54.409203)
-blend_mode = 2
-range_layer_min = -1
-range_layer_max = 1
-texture = ExtResource("37_1fg2t")
 
 [node name="3" type="CanvasLayer" parent="." unique_id=144137811]
 follow_viewport_enabled = true

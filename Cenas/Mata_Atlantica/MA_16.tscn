@@ -2,18 +2,20 @@
 
 [ext_resource type="Texture2D" uid="uid://e4138tmbd6ck" path="res://Sprites/Cenário/Mata_Atlantica/Background/110 Sem Título_20260213153415.png" id="1_s7kye"]
 [ext_resource type="Shader" uid="uid://c1omtsxv04udh" path="res://Scripts/Shaders/blur_shader.gdshader" id="2_s7kye"]
-[ext_resource type="Texture2D" uid="uid://dy4ijmjmean6p" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/arvore_S2.png" id="4_4882g"]
+[ext_resource type="Texture2D" uid="uid://cs5tclcq8xish" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/arvore_S2.png" id="4_4882g"]
 [ext_resource type="Texture2D" uid="uid://yln77sy1ylrp" path="res://Sprites/Cenário/Mata_Atlantica/Background/Mata/mato03.png" id="5_l6p7n"]
-[ext_resource type="Texture2D" uid="uid://ygubbnruuhaw" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/arvore_S1.png" id="7_ty1hn"]
+[ext_resource type="Texture2D" uid="uid://cc6yes0bp2w0y" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/arvore_S1.png" id="7_ty1hn"]
 [ext_resource type="Texture2D" uid="uid://i664886fdh55" path="res://Sprites/Cenário/Mata_Atlantica/Background/Mata/mato02.png" id="8_acroo"]
-[ext_resource type="Texture2D" uid="uid://ga665js0jsci" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/arvore_S3.png" id="9_hqaqg"]
+[ext_resource type="Texture2D" uid="uid://b1sv0car32gha" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/arvore_S3.png" id="9_hqaqg"]
 [ext_resource type="Shader" uid="uid://dc0bwmy1j0o5i" path="res://Scripts/Shaders/fog.gdshader" id="9_maupx"]
 [ext_resource type="Texture2D" uid="uid://yrshunpt0tr8" path="res://Sprites/Cenário/Mata_Atlantica/Background/Mata/mato01.png" id="10_7rmnr"]
-[ext_resource type="Texture2D" uid="uid://7hahb728ibli" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/arvore_miasma.png" id="12_w6tf2"]
+[ext_resource type="Texture2D" uid="uid://x1ar0khlrujj" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/arvore_miasma.png" id="12_w6tf2"]
 [ext_resource type="Texture2D" uid="uid://0agjwkmg3gef" path="res://Sprites/VFX/Iluminação/luz azul.png" id="13_6qvld"]
 [ext_resource type="Texture2D" uid="uid://6xmqb8rst36e" path="res://Sprites/Cenário/Mata_Atlantica/Chao/moita_miasma1.png" id="13_us20a"]
+[ext_resource type="Texture2D" uid="uid://cimhroq71ngla" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/Arvoresv2/queimada01.PNG" id="14_8ogo1"]
 [ext_resource type="PackedScene" uid="uid://b7m7lb1s11mbw" path="res://Objetos/Boss/Boitata/Boitata.tscn" id="14_ktto4"]
 [ext_resource type="AudioStream" uid="uid://bw1sgrrx8pvit" path="res://Audio/SFX/AMBIENTE/Musica_Boss_Boitata.ogg" id="15_bgway"]
+[ext_resource type="Texture2D" uid="uid://cnv4q6nfl2p11" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/Arvoresv2/queimada02.PNG" id="15_qp27v"]
 [ext_resource type="PackedScene" uid="uid://pc4mgv2nv8af" path="res://Objetos/Funcionalidade/CompHitBox.tscn" id="16_6tp3d"]
 [ext_resource type="Texture2D" uid="uid://brbp12vbymbmc" path="res://Sprites/Inimigos/Boitata/Animacoes/Rabo/boitata_151.png" id="17_nv0h6"]
 [ext_resource type="Texture2D" uid="uid://c3bybehhx3j3b" path="res://Sprites/Inimigos/Boitata/Animacoes/Rabo/boitata_155.png" id="19_0omf7"]
@@ -63,28 +65,30 @@ shader = ExtResource("2_s7kye")
 shader_parameter/darkness = 0.10000000475
 shader_parameter/lod = 0.6000000285
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_wl1nf"]
+shader = ExtResource("9_maupx")
+shader_parameter/fog_color = Color(0.18717614, 0.18717614, 0.18717614, 0.7921569)
+shader_parameter/density = 1.3
+shader_parameter/speed = 0.4
+shader_parameter/scale = 1.5
+
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_6qvld"]
 shader = ExtResource("2_s7kye")
 shader_parameter/darkness = 0.10000000475
 shader_parameter/lod = 0.550000026125
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_wl1nf"]
-shader = ExtResource("9_maupx")
-shader_parameter/fog_color = Color(0.18717614, 0.18717614, 0.18717614, 0.7921569)
-shader_parameter/density = 1.0
-shader_parameter/speed = 0.4
-shader_parameter/scale = 2.5
-
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_8ogo1"]
 particle_flag_disable_z = true
 emission_shape = 3
 emission_box_extents = Vector3(300, 500, 1)
-spread = 20.0
+spread = 5.0
 initial_velocity_min = 1.0
-initial_velocity_max = 5.0
+initial_velocity_max = 6.0
 radial_velocity_min = -10.000022
 radial_velocity_max = 49.999977
-gravity = Vector3(-10, -100, 0)
+gravity = Vector3(-10, -150, 0)
+tangential_accel_min = -2.2351742e-06
+tangential_accel_max = -2.2351742e-06
 scale_min = 0.25
 scale_max = 0.5
 
@@ -455,10 +459,12 @@ position = Vector2(-1696.9995, -10190.2)
 scale = Vector2(1.2, 1.2)
 texture = ExtResource("10_7rmnr")
 
-[node name="CanvasModulate" type="CanvasModulate" parent="-1" unique_id=919153298]
-position = Vector2(-27329.11, -13826.375)
-scale = Vector2(175.74992, 39.388683)
-color = Color(0.13333334, 0.13333334, 0.13333334, 1)
+[node name="Fog" type="ColorRect" parent="-1" unique_id=885992687]
+material = SubResource("ShaderMaterial_wl1nf")
+offset_left = -8005.1694
+offset_top = -12229.527
+offset_right = 1380.852
+offset_bottom = -9848.846
 
 [node name="ColorRect" type="ColorRect" parent="-1" unique_id=125376101]
 material = SubResource("ShaderMaterial_6qvld")
@@ -467,12 +473,10 @@ offset_top = -12596.875
 offset_right = 1634.8306
 offset_bottom = -9194.653
 
-[node name="Fog" type="ColorRect" parent="-1" unique_id=885992687]
-material = SubResource("ShaderMaterial_wl1nf")
-offset_left = -8005.1694
-offset_top = -12229.527
-offset_right = 1380.852
-offset_bottom = -9848.846
+[node name="CanvasModulate" type="CanvasModulate" parent="-1" unique_id=919153298]
+position = Vector2(-27329.11, -13826.375)
+scale = Vector2(175.74992, 39.388683)
+color = Color(0.13333334, 0.13333334, 0.13333334, 1)
 
 [node name="-0,5" type="CanvasLayer" parent="." unique_id=86798231]
 follow_viewport_enabled = true
@@ -484,8 +488,9 @@ scale = Vector2(1.1458104, 0.8139577)
 texture = ExtResource("12_w6tf2")
 
 [node name="ArvoreMiasma2" type="Sprite2D" parent="-0,5" unique_id=1832928789]
-position = Vector2(-4437.0005, -10907.001)
-scale = Vector2(1.1458104, 0.8139577)
+self_modulate = Color(0.4982797, 0.51821995, 0.5182186, 1)
+position = Vector2(-4394.8457, -11004.143)
+scale = Vector2(0.6889605, 0.59128064)
 texture = ExtResource("12_w6tf2")
 
 [node name="ArvoreMiasma3" type="Sprite2D" parent="-0,5" unique_id=870146683]
@@ -512,9 +517,38 @@ color = Color(0.13333334, 0.13333334, 0.13333334, 1)
 follow_viewport_enabled = true
 follow_viewport_scale = 0.98
 
-[node name="MoitaMiasma1" type="Sprite2D" parent="-0,2" unique_id=58110580]
-position = Vector2(-4203.8335, -10375.278)
-texture = ExtResource("13_us20a")
+[node name="Queimada01" type="Sprite2D" parent="-0,2" unique_id=88525946]
+position = Vector2(-3683, -10825)
+rotation = 0.18876353
+texture = ExtResource("14_8ogo1")
+
+[node name="Queimada02" type="Sprite2D" parent="-0,2" unique_id=2012557057]
+position = Vector2(-3958, -10787)
+texture = ExtResource("15_qp27v")
+
+[node name="Queimada04" type="Sprite2D" parent="-0,2" unique_id=1466464726]
+position = Vector2(-5231, -10831)
+texture = ExtResource("15_qp27v")
+
+[node name="Queimada05" type="Sprite2D" parent="-0,2" unique_id=632948773]
+position = Vector2(-1519.5, -10825)
+texture = ExtResource("14_8ogo1")
+
+[node name="Queimada06" type="Sprite2D" parent="-0,2" unique_id=1081309465]
+position = Vector2(-2112, -10716)
+texture = ExtResource("15_qp27v")
+
+[node name="Queimada03" type="Sprite2D" parent="-0,2" unique_id=68262916]
+position = Vector2(-4775.5103, -10825)
+texture = ExtResource("14_8ogo1")
+
+[node name="MoitaChao3" type="Sprite2D" parent="-0,2" unique_id=1963045245]
+position = Vector2(-3621.4287, -10396.278)
+texture = ExtResource("27_iruwy")
+
+[node name="MoitaChao2" type="Sprite2D" parent="-0,2" unique_id=1284409863]
+position = Vector2(-4526.531, -10415)
+texture = ExtResource("27_iruwy")
 
 [node name="MoitaMiasma7" type="Sprite2D" parent="-0,2" unique_id=214529537]
 position = Vector2(-2217.954, -10378.778)
@@ -527,9 +561,9 @@ position = Vector2(-1389.2781, -10396.778)
 scale = Vector2(0.8647799, 0.8647799)
 texture = ExtResource("13_us20a")
 
-[node name="MoitaChao3" type="Sprite2D" parent="-0,2" unique_id=1963045245]
-position = Vector2(-3630.833, -10396.278)
-texture = ExtResource("27_iruwy")
+[node name="MoitaMiasma1" type="Sprite2D" parent="-0,2" unique_id=58110580]
+position = Vector2(-4076.5305, -10375.278)
+texture = ExtResource("13_us20a")
 
 [node name="CanvasModulate" type="CanvasModulate" parent="-0,2" unique_id=1830517515]
 position = Vector2(-27329.11, -13826.375)
@@ -543,7 +577,7 @@ follow_viewport_enabled = true
 self_modulate = Color(0.33417645, 0.7147162, 0.9012643, 1)
 position = Vector2(-2912, -10871)
 scale = Vector2(13.239998, 1.747371)
-amount = 200
+amount = 100
 amount_ratio = 0.7
 texture = ExtResource("13_6qvld")
 visibility_rect = Rect2(-2000, -500, 4000, 1000)
@@ -561,16 +595,6 @@ spawn_pilares = [NodePath("../ConfigBoss/PaiPilares/PosPilar1"), NodePath("../Co
 musica_luta = ExtResource("15_bgway")
 flip_node = [NodePath("../ConfigBoss/PosL"), NodePath("../ConfigBoss/PosR")]
 
-[node name="PointLight2D2" type="PointLight2D" parent="0/Boss" unique_id=654765117]
-light_mask = 2
-visibility_layer = 2
-position = Vector2(-347.9998, -1102)
-scale = Vector2(2.093664, 2.5573776)
-color = Color(0.48001462, 1.0234983, 1.3269993, 1)
-energy = 1.3
-range_layer_max = 1
-texture = ExtResource("31_ss1nv")
-
 [node name="CheckPlayer" type="Area2D" parent="0/Boss" unique_id=1296495921]
 position = Vector2(1205, -430)
 collision_layer = 0
@@ -579,6 +603,16 @@ collision_mask = 2
 [node name="CollisionShape2D" type="CollisionShape2D" parent="0/Boss/CheckPlayer" unique_id=720688723]
 position = Vector2(-238, -445.75)
 shape = SubResource("RectangleShape2D_o607x")
+
+[node name="PointLight2D2" type="PointLight2D" parent="0/Boss/CheckPlayer" unique_id=654765117]
+light_mask = 2
+visibility_layer = 2
+position = Vector2(-1553, -672)
+scale = Vector2(2.093664, 2.5573776)
+color = Color(0.48001462, 1.0234983, 1.3269993, 1)
+energy = 1.3
+range_layer_max = 1
+texture = ExtResource("31_ss1nv")
 
 [node name="Rabo" parent="0/Boss" unique_id=773282396 instance=ExtResource("16_6tp3d")]
 position = Vector2(2475.0002, -1030)
@@ -607,10 +641,10 @@ energy = 1.3
 range_layer_max = 1
 texture = ExtResource("31_ss1nv")
 
-[node name="PointLight2D" type="PointLight2D" parent="0/Boss" unique_id=498025673]
+[node name="PointLight2D" type="PointLight2D" parent="0" unique_id=498025673]
 light_mask = 2
 visibility_layer = 2
-position = Vector2(1134.4999, -878.4993)
+position = Vector2(-4188, -11004)
 scale = Vector2(6.389806, 5.6507816)
 energy = 1.3
 range_layer_max = 1
@@ -761,11 +795,6 @@ tile_map_data = PackedByteArray("AADL/6T/AQAAAAAAAADM/6T/AQAAAAAAAADR/7P/AQAAAAA
 tile_set = ExtResource("35_26l3j")
 
 [node name="Chao" type="Node2D" parent="0/Cenario" unique_id=1120031141]
-
-[node name="MoitaChao2" type="Sprite2D" parent="0/Cenario/Chao" unique_id=1284409863]
-z_index = -1
-position = Vector2(-2614.5713, 100.42871)
-texture = ExtResource("27_iruwy")
 
 [node name="ChapExterno" type="Sprite2D" parent="0/Cenario/Chao" unique_id=1775112383]
 position = Vector2(-1705.5714, 292.4287)
@@ -1525,8 +1554,7 @@ color = Color(0.13333334, 0.13333334, 0.13333334, 1)
 self_modulate = Color(0.0011461669, 0.0059021167, 0.009983954, 1)
 position = Vector2(-2912, -10871)
 scale = Vector2(13.239998, 1.747371)
-amount = 100
-amount_ratio = 0.7
+amount = 200
 texture = ExtResource("13_6qvld")
 visibility_rect = Rect2(-2000, -500, 4000, 1000)
 process_material = SubResource("ParticleProcessMaterial_8ogo1")
