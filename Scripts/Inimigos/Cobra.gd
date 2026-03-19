@@ -1,0 +1,56 @@
+extends CharacterBody2D
+
+@export var velocidade: float = 0.0
+var dir: int = 1
+
+@onready var id:String = str(Mundos.fase_atual) + name
+
+var tomou_dano:bool = false
+
+func _ready() -> void:
+	for i:String in Mundos.lista_inimigos:
+		if i == id:
+			queue_free()
+	$Vida.alterou_vida.connect(func(_v_new, _v_old) -> void:
+		tomou_dano = true
+		await get_tree().create_timer(.2).timeout
+		tomou_dano = false)
+	velocidade *= 128
+	var rand: int = randi_range(0,1)
+	match rand:
+		0:
+			dir = -1
+			%Sprite.flip_h = false
+		1:
+			dir = 1
+			%Sprite.flip_h = true
+
+func _physics_process(delta: float) -> void:
+	if !is_on_floor():
+		velocity.y += 10 * 128 * delta
+	
+	if !tomou_dano:
+		velocity.x = move_toward(velocity.x, velocidade * dir, velocidade / 8.0)
+	
+	if %RayDireita.is_colliding() or !%RayVazioDireita.is_colliding():
+		dir = -1
+		%Sprite.flip_h = false
+		%HitBox.scale.x = 1
+		#%HurtBox.scale.x = 1
+	
+	if %RayEsquerda.is_colliding() or !%RayVazioEsquerda.is_colliding():
+		dir = 1
+		%Sprite.flip_h = true
+		%HitBox.scale.x = -1
+		#%HurtBox.scale.x = -1
+	
+	move_and_slide()
+
+func Morte() -> void:
+	Mundos.lista_inimigos.append(id)
+	#Mundos.SpawnMoeda(get_parent(), %SpawnMoeda.global_position)
+	%HurtBox.process_mode = PROCESS_MODE_DISABLED
+	%HitBox.process_mode = PROCESS_MODE_DISABLED
+	%Sprite.play("morte")
+	await %Sprite.animation_finished
+	queue_free()
