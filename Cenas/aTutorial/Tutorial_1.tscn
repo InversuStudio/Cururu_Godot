@@ -66,6 +66,7 @@
 [ext_resource type="Texture2D" uid="uid://c2yapafbd3cnf" path="res://Sprites/Cenário/Mata_Atlantica/Foreground/cipó.png" id="43_84f4m"]
 [ext_resource type="Texture2D" uid="uid://ciulkfu83ohwu" path="res://Sprites/Cenário/Mata_Atlantica/Foreground/04.png" id="44_sanrq"]
 [ext_resource type="Texture2D" uid="uid://cgnnux60eiern" path="res://Sprites/Cenário/Mata_Atlantica/Foreground/05.png" id="45_otl4a"]
+[ext_resource type="Texture2D" uid="uid://dw8fyyfj1fx1e" path="res://Sprites/Cenário/Mata_Atlantica/Pedras e Ruinas/arvore_flor.png" id="45_uepkw"]
 [ext_resource type="Texture2D" uid="uid://5m4b2cn86u3t" path="res://Sprites/Cenário/Mata_Atlantica/Foreground/03.png" id="46_qoj05"]
 [ext_resource type="Texture2D" uid="uid://xjqchtcfdjkn" path="res://Sprites/Cenário/Mata_Atlantica/Foreground/01.png" id="47_1lqui"]
 [ext_resource type="Texture2D" uid="uid://b2pop4ke31d1x" path="res://Sprites/Cenário/Mata_Atlantica/Foreground/02.png" id="48_ta4ov"]
@@ -450,6 +451,12 @@ grow_vertical = 2
 follow_viewport_enabled = true
 follow_viewport_scale = 0.9
 
+[node name="ArvoreFlor3" type="Sprite2D" parent="-1" unique_id=1888157538]
+position = Vector2(5946.667, -2002.2223)
+scale = Vector2(0.39585268, 0.3958526)
+texture = ExtResource("45_uepkw")
+flip_h = true
+
 [node name="4d8d492a1f014367A06e660443f32612" type="Sprite2D" parent="-1" unique_id=1181458961]
 position = Vector2(6119.7827, -1458.1632)
 texture = ExtResource("8_e0yg5")
@@ -736,7 +743,8 @@ position = Vector2(-5933.755, 643.79596)
 texture = ExtResource("29_vw05h")
 
 [node name="MataAtlântica020260313103853" type="Sprite2D" parent="-02/ArvoresFrente" unique_id=849845573]
-position = Vector2(-2508.245, 655.0205)
+position = Vector2(-2081.7146, 722.3673)
+scale = Vector2(0.7040821, 0.704082)
 texture = ExtResource("30_wditg")
 
 [node name="MataAtlântica020260313104124" type="Sprite2D" parent="-02/ArvoresFrente" unique_id=303403294]
@@ -783,6 +791,17 @@ texture = ExtResource("40_yq7ol")
 [node name="C05f62b06c624d37Abc5E4063cac6059" type="Sprite2D" parent="-02/ArvoresFrente" unique_id=1769233957]
 position = Vector2(-33.75514, 725.4286)
 texture = ExtResource("50_mm3hj")
+
+[node name="ArvoreFlor" type="Sprite2D" parent="-02/ArvoresFrente" unique_id=1886770571]
+position = Vector2(-4188.857, 543.7959)
+scale = Vector2(0.6468435, 0.64684343)
+texture = ExtResource("45_uepkw")
+flip_h = true
+
+[node name="ArvoreFlor2" type="Sprite2D" parent="-02/ArvoresFrente" unique_id=1622893706]
+position = Vector2(-2066.4087, 567.26526)
+scale = Vector2(0.78222835, 0.7822283)
+texture = ExtResource("45_uepkw")
 
 [node name="0" type="CanvasLayer" parent="." unique_id=1713819681]
 follow_viewport_enabled = true

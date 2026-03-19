@@ -2641,8 +2641,8 @@ target = NodePath("../Background/0/Cururu")
 limite_camera = NodePath("../ReferenceRect")
 
 [node name="ReferenceRect" type="ReferenceRect" parent="." unique_id=1517466278]
-offset_left = -18162.002
-offset_top = -4551.0
-offset_right = -7454.002
-offset_bottom = 2099.4502
+offset_left = -18877.203
+offset_top = -5318.665
+offset_right = -8169.1963
+offset_bottom = 1753.9302
 rotation = -0.00014461271
