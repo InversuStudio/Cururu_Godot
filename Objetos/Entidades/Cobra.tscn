@@ -1,13 +1,19 @@
 [gd_scene format=3 uid="uid://smwewolvvw6l"]
 
 [ext_resource type="Script" uid="uid://cbfv81b55ltcb" path="res://Scripts/Inimigos/Cobra.gd" id="1_ihru7"]
+[ext_resource type="Texture2D" uid="uid://dkcfkypdbqfv2" path="res://Sprites/Inimigos/CobraCoral/coralAtaque01.png" id="2_ayjai"]
 [ext_resource type="Texture2D" uid="uid://cvn60mjpk1ddi" path="res://Sprites/Inimigos/CobraCoral/quadro0000.png" id="2_ihru7"]
 [ext_resource type="Texture2D" uid="uid://1msr7dxjxifc" path="res://Sprites/Inimigos/CobraCoral/quadro0001.png" id="3_5m7hk"]
+[ext_resource type="Texture2D" uid="uid://gbrao6lh4pbb" path="res://Sprites/Inimigos/CobraCoral/coralAtaque02.png" id="3_sybt8"]
+[ext_resource type="Texture2D" uid="uid://bifm88daubmob" path="res://Sprites/Inimigos/CobraCoral/coralAtaque03.png" id="4_gvld5"]
 [ext_resource type="Texture2D" uid="uid://doukolsdcaive" path="res://Sprites/Inimigos/CobraCoral/quadro0002.png" id="4_vp05a"]
 [ext_resource type="Script" uid="uid://hsdutxxttrp3" path="res://Scripts/Componentes/Vida.gd" id="5_hcf47"]
+[ext_resource type="Texture2D" uid="uid://br02t60a8ka15" path="res://Sprites/Inimigos/CobraCoral/coralAtaque04.png" id="5_nmk2q"]
 [ext_resource type="Texture2D" uid="uid://dt0wwu7nopmsq" path="res://Sprites/Inimigos/CobraCoral/quadro0003.png" id="5_y70wr"]
 [ext_resource type="Texture2D" uid="uid://lruqdxr2efim" path="res://Sprites/Inimigos/Animação de morte/1.png" id="6_ihru7"]
 [ext_resource type="PackedScene" uid="uid://va5pjd6vuuo2" path="res://Objetos/Funcionalidade/CompHurtBox.tscn" id="6_rcu2w"]
+[ext_resource type="Texture2D" uid="uid://cpy0af7w81arc" path="res://Sprites/Inimigos/CobraCoral/coralAtaque05.png" id="6_ukyts"]
+[ext_resource type="Texture2D" uid="uid://viiw5gtrdilu" path="res://Sprites/Inimigos/CobraCoral/coralAtaque06.png" id="7_4i0ce"]
 [ext_resource type="Texture2D" uid="uid://c87kuuyr2pym0" path="res://Sprites/Inimigos/Animação de morte/2.png" id="7_5m7hk"]
 [ext_resource type="AudioStream" uid="uid://b3mmkipqf30jd" path="res://Audio/SFX/INIMIGOS/HIT_INIMIGO.wav" id="7_l87yx"]
 [ext_resource type="PackedScene" uid="uid://pc4mgv2nv8af" path="res://Objetos/Funcionalidade/CompHitBox.tscn" id="8_dtm3y"]
@@ -25,6 +31,29 @@ size = Vector2(223.68439, 105.921135)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_tkh53"]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_ayjai")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_sybt8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_gvld5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_nmk2q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_ukyts")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_4i0ce")
+}],
+"loop": false,
+"name": &"ataque",
+"speed": 8.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("2_ihru7")
@@ -80,11 +109,19 @@ animations = [{
 "speed": 8.0
 }]
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ayjai"]
+radius = 30.80884
+height = 91.02965
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ihru7"]
 size = Vector2(138.8159, 227.6318)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5m7hk"]
 size = Vector2(136.18433, 223.68442)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_sybt8"]
+radius = 55.921104
+height = 177.63173
 
 [node name="Cobra" type="CharacterBody2D" unique_id=2019109312]
 scale = Vector2(0.67999953, 0.67999953)
@@ -102,13 +139,25 @@ unique_name_in_owner = true
 position = Vector2(38.235317, -197.05896)
 scale = Vector2(0.73920083, 0.7392009)
 sprite_frames = SubResource("SpriteFrames_tkh53")
-animation = &"virada"
+animation = &"ataque"
 autoplay = "default"
+frame = 4
 
 [node name="Vida" type="Node" parent="." unique_id=938649480]
 script = ExtResource("5_hcf47")
 vida_max = 8
 metadata/_custom_type_script = "uid://hsdutxxttrp3"
+
+[node name="AreaRangeAtaque" type="Area2D" parent="." unique_id=1519553533]
+unique_name_in_owner = true
+collision_layer = 0
+collision_mask = 2
+
+[node name="AreaRangeAtaque" type="CollisionShape2D" parent="AreaRangeAtaque" unique_id=145110193]
+position = Vector2(-232.35309, -126.470665)
+rotation = 1.5707964
+scale = Vector2(4, 4)
+shape = SubResource("CapsuleShape2D_ayjai")
 
 [node name="HurtBox" parent="." unique_id=872149296 node_paths=PackedStringArray("comp_vida", "parent", "sprite") instance=ExtResource("6_rcu2w")]
 unique_name_in_owner = true
@@ -135,10 +184,23 @@ collision_layer = 16
 dano = 2
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="HitBox" unique_id=2094676355]
-position = Vector2(5.105252, -68.092155)
+position = Vector2(5.105252, -68.75005)
 rotation = -1.57079
 shape = SubResource("RectangleShape2D_5m7hk")
 debug_color = Color(0.807155, 0.414602, 3.85046e-07, 0.42)
+
+[node name="HitBoxMordida" parent="." unique_id=727505384 instance=ExtResource("8_dtm3y")]
+position = Vector2(13.58827, 0)
+scale = Vector2(2.2352936, 2.2352936)
+collision_layer = 16
+dano = 2
+
+[node name="HitBoxAtaque" type="CollisionShape2D" parent="HitBoxMordida" unique_id=981206294]
+unique_name_in_owner = true
+position = Vector2(-95.55273, -56.578995)
+rotation = 1.5707964
+shape = SubResource("CapsuleShape2D_sybt8")
+debug_color = Color(0.15275016, 0.64540935, 5.7756904e-07, 0.41960785)
 
 [node name="RayDireita" type="RayCast2D" parent="." unique_id=1296964799]
 unique_name_in_owner = true
@@ -172,3 +234,5 @@ position = Vector2(1.4705893, 36.764732)
 scale = Vector2(2.2352936, 2.2352936)
 rect = Rect2(-126.47068, -159.86858, 252.94136, 143.42119)
 follow = true
+
+[connection signal="body_entered" from="AreaRangeAtaque" to="." method="_on_area_range_ataque_body_entered"]

@@ -24,6 +24,8 @@ func _ready() -> void:
 		1:
 			dir = 1
 			%Sprite.flip_h = true
+			
+	%HitBoxAtaque.disabled = true
 
 func _physics_process(delta: float) -> void:
 	if !is_on_floor():
@@ -41,6 +43,7 @@ func _physics_process(delta: float) -> void:
 			%Sprite.play("default")
 			%Sprite.flip_h = false
 			%HitBox.scale.x = 1
+			%AreaRangeAtaque.scale.x = 1
 			#%HurtBox.scale.x = 1
 	
 	if %RayEsquerda.is_colliding() or !%RayVazioEsquerda.is_colliding():
@@ -52,6 +55,7 @@ func _physics_process(delta: float) -> void:
 			%Sprite.play("default")
 			%Sprite.flip_h = true
 			%HitBox.scale.x = -1
+			%AreaRangeAtaque.scale.x = -1
 			#%HurtBox.scale.x = -1
 	
 	move_and_slide()
@@ -64,3 +68,16 @@ func Morte() -> void:
 	%Sprite.play("morte")
 	await %Sprite.animation_finished
 	queue_free()
+
+
+func _on_area_range_ataque_body_entered(body: Node2D) -> void:
+	if body.is_in_group("Player"):
+		var old_dir = dir
+		dir = 0
+		%HitBoxAtaque.disabled = false
+		%Sprite.play("ataque")
+		await %Sprite.animation_finished
+		%HitBoxAtaque.disabled = true
+		dir = old_dir
+		%Sprite.play("default")
+		
