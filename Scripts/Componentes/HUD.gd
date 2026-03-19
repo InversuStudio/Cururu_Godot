@@ -98,6 +98,7 @@ func _ready() -> void:
 	MostraHUD()
 	
 	MudaImgInput()
+	%Red.modulate.a = 0.0
 	
 	%BtnContinuar.connect("pressed", func(): %Pause.visible = false)
 	%BtnSair.connect("pressed", func():
@@ -201,6 +202,17 @@ func MostraItem(nome:String, desc:String, cura:int = 0) -> void:
 # MOSTRA AMULETOS DO INVENTÁRIO
 func MostraAmuleto(nome:String, desc:String) -> void:
 	inventario_amuletos.MostraAmuleto(nome, desc)
+
+func AplicaRed(vida:int) -> void:
+	var color:Color = Color.WHITE
+	if vida == 2:
+			color.a = 0.5
+	elif vida <= 1:
+			color.a = 1.0
+	else:
+		color.a = 0.0
+	var tween:Tween = create_tween()
+	tween.tween_property(%Red, "modulate", color, .3)
 
 # DELETA TODOS OS ITENS DA UI INVENTÁRIO
 func LimpaInv() -> void:

@@ -16,6 +16,15 @@
 [ext_resource type="Texture2D" uid="uid://duesv7kjq2emm" path="res://Sprites/UI/Pause/Pecas/MENU_ABA3.png" id="14_w37wn"]
 [ext_resource type="Texture2D" uid="uid://ydkqrtapi4fn" path="res://Sprites/UI/Pause/Pecas/MAP.png" id="15_w37wn"]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8ip7y"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_width_left = 500
+border_width_top = 500
+border_width_right = 500
+border_width_bottom = 500
+border_color = Color(0.6666667, 0, 0.14117648, 0.60784316)
+border_blend = true
+
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4n7mi"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ijstf"]
@@ -176,6 +185,18 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
+
+[node name="Red" type="Panel" parent="Corpo" unique_id=1676523266]
+unique_name_in_owner = true
+light_mask = 0
+visibility_layer = 2
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_8ip7y")
 
 [node name="ItemRapido" type="Control" parent="Corpo" unique_id=745480697 node_paths=PackedStringArray("cena_inventario")]
 process_mode = 1

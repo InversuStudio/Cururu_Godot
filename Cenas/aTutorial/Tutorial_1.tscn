@@ -8,7 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://i664886fdh55" path="res://Sprites/Cenário/Mata_Atlantica/Background/Mata/mato02.png" id="7_jiro2"]
 [ext_resource type="Texture2D" uid="uid://ra1w5d2v3tvw" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/Arvoresv2/6C28BC06-A7DE-492B-A767-7D7C3B85A403.png" id="7_u3noq"]
 [ext_resource type="Texture2D" uid="uid://d075kid4ojh6b" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/Arvoresv2/4D8D492A-1F01-4367-A06E-660443F32612.PNG" id="8_e0yg5"]
-[ext_resource type="Texture2D" uid="uid://b1sv0car32gha" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/arvore_S3.png" id="8_khsix"]
+[ext_resource type="Texture2D" uid="uid://b1sv0car32gha" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/arvore_s3.png" id="8_khsix"]
 [ext_resource type="Texture2D" uid="uid://d18vqjeq586b1" path="res://Sprites/Cenário/Mata_Atlantica/Pedras e Ruinas/pedra_musgo.png" id="9_akk5h"]
 [ext_resource type="Shader" uid="uid://da2wxasx6evg0" path="res://Scripts/Shaders/Grama.gdshader" id="10_hxoyl"]
 [ext_resource type="Texture2D" uid="uid://yrshunpt0tr8" path="res://Sprites/Cenário/Mata_Atlantica/Background/Mata/mato01.png" id="11_ho4ux"]
@@ -17,7 +17,6 @@
 [ext_resource type="Texture2D" uid="uid://cd0k6180rqklv" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/arvore02.png" id="13_tfbbh"]
 [ext_resource type="Texture2D" uid="uid://cijo1xigx64tj" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/arvore03.png" id="14_mxrmv"]
 [ext_resource type="Texture2D" uid="uid://sih3o1ksris8" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/arvore05.png" id="15_hmxo8"]
-[ext_resource type="Texture2D" uid="uid://cu8wv0sjkceh0" path="res://Sprites/Cenário/Mata_Atlantica/Background/Mata/mata atlântica.png" id="16_u3noq"]
 [ext_resource type="Texture2D" uid="uid://waauxxjip3k6" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/arvore06.png" id="17_2gsqr"]
 [ext_resource type="Texture2D" uid="uid://dujq612hvg603" path="res://Sprites/Cenário/Mata_Atlantica/Pedras e Ruinas/ruinas.png" id="18_8jgqj"]
 [ext_resource type="Texture2D" uid="uid://bykelnwq60jce" path="res://Sprites/Cenário/Mata_Atlantica/Pedras e Ruinas/pilar_templo.png" id="19_vw05h"]
@@ -40,7 +39,6 @@
 [ext_resource type="Texture2D" uid="uid://b104bni305kbn" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/Arvoresv2/mata atlântica_0_20260313104257.PNG" id="27_2gsqr"]
 [ext_resource type="Texture2D" uid="uid://jecy4bfqqqxu" path="res://Sprites/Cenário/Mata_Atlantica/Teto/Moita teste.png" id="27_ytcj4"]
 [ext_resource type="Texture2D" uid="uid://yfr8jwjcydfu" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/Arvoresv2/mata atlântica_0_20260313104035.PNG" id="28_8jgqj"]
-[ext_resource type="Texture2D" uid="uid://b7hwtujjwy182" path="res://Sprites/UI/Pause/maPEAMENTO.png" id="28_thr42"]
 [ext_resource type="Texture2D" uid="uid://cof2xj70bin5w" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/Arvoresv2/15C395C3-E018-4024-8335-CF325DCC4278.png" id="29_2gsqr"]
 [ext_resource type="PackedScene" uid="uid://nohq28uk7lfk" path="res://Objetos/Entidades/Player.tscn" id="29_q2ysr"]
 [ext_resource type="Texture2D" uid="uid://deneflpgwpk1f" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/Arvoresv2/samanbaia02.PNG" id="29_vw05h"]
@@ -70,15 +68,13 @@
 [ext_resource type="Texture2D" uid="uid://5m4b2cn86u3t" path="res://Sprites/Cenário/Mata_Atlantica/Foreground/03.png" id="46_qoj05"]
 [ext_resource type="Texture2D" uid="uid://xjqchtcfdjkn" path="res://Sprites/Cenário/Mata_Atlantica/Foreground/01.png" id="47_1lqui"]
 [ext_resource type="Texture2D" uid="uid://b2pop4ke31d1x" path="res://Sprites/Cenário/Mata_Atlantica/Foreground/02.png" id="48_ta4ov"]
-[ext_resource type="Texture2D" uid="uid://cvd3vo5425kva" path="res://Sprites/Cenário/Mata_Atlantica/Foreground/arvore_fundo2.png" id="49_bvf3l"]
 [ext_resource type="Texture2D" uid="uid://dnhwbt2ch4i3m" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/Arvoresv2/C05F62B0-6C62-4D37-ABC5-E4063CAC6059.png" id="50_mm3hj"]
-[ext_resource type="Texture2D" uid="uid://ndcbb0ydrrj5" path="res://Sprites/Cenário/Mata_Atlantica/Foreground/arvore_fundo1.png" id="50_s5uib"]
 [ext_resource type="PackedScene" uid="uid://u28e3eudu6ch" path="res://Objetos/Funcionalidade/MainCamera.tscn" id="51_ibmem"]
 [ext_resource type="Script" uid="uid://dd16yu704x6wt" path="res://Scripts/Componentes/BGM_Player.gd" id="52_x8j6d"]
 [ext_resource type="Texture2D" uid="uid://cdoeovi1pkiyo" path="res://Sprites/Cenário/Mata_Atlantica/Interativos/amosatrra 2.png" id="53_idg5b"]
 [ext_resource type="PackedScene" uid="uid://1kp2cm82lp4b" path="res://Objetos/Props/arvoreacai.tscn" id="53_q2ysr"]
 [ext_resource type="AudioStream" uid="uid://b2vi4qav4gk5r" path="res://Audio/SFX/AMBIENTE/Cururu - Soundscape A.ogg" id="53_sje6b"]
-[ext_resource type="PackedScene" path="res://Objetos/Funcionalidade/MostraTela.tscn" id="53_thr42"]
+[ext_resource type="PackedScene" uid="uid://bnubkn7kxj708" path="res://Objetos/Funcionalidade/MostraTela.tscn" id="53_thr42"]
 [ext_resource type="PackedScene" uid="uid://dny88hy3w52nm" path="res://Objetos/Props/DropAcai.tscn" id="54_f5hdm"]
 [ext_resource type="Texture2D" uid="uid://daavc04bfrocb" path="res://Sprites/UI/Dialogo/DICA_VIDA.png" id="55_q2ysr"]
 [ext_resource type="Texture2D" uid="uid://bu66so2bkubke" path="res://Sprites/VFX/Iluminação/LightCururu2.png" id="55_sxmps"]
@@ -161,18 +157,6 @@ shader_parameter/flip_wind = false
 shader_parameter/offset = 0.0
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_jn6at"]
-shader = ExtResource("10_hxoyl")
-shader_parameter/speed = 1.0
-shader_parameter/minStrength = 0.0800000038
-shader_parameter/maxStrength = 0.01
-shader_parameter/strengthScale = 100.0
-shader_parameter/interval = 3.5
-shader_parameter/detail = 1.0
-shader_parameter/heightOffset = 0.0
-shader_parameter/flip_wind = false
-shader_parameter/offset = 0.0
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_8pnaw"]
 shader = ExtResource("10_hxoyl")
 shader_parameter/speed = 1.0
 shader_parameter/minStrength = 0.0800000038
@@ -651,11 +635,6 @@ follow_viewport_scale = 0.98
 light_mask = 2
 position = Vector2(8946, -1954)
 
-[node name="Arvore02" type="Sprite2D" parent="-02/ArvoresFrente" unique_id=871859772]
-visible = false
-position = Vector2(-6242, 266)
-texture = ExtResource("13_tfbbh")
-
 [node name="Arvore04" type="Sprite2D" parent="-02/ArvoresFrente" unique_id=1528371599]
 position = Vector2(-203, 266)
 texture = ExtResource("13_tfbbh")
@@ -663,12 +642,6 @@ texture = ExtResource("13_tfbbh")
 [node name="Arvore03" type="Sprite2D" parent="-02/ArvoresFrente" unique_id=889991733]
 position = Vector2(-4783.7554, 262)
 texture = ExtResource("14_mxrmv")
-
-[node name="MataAtlântica" type="Sprite2D" parent="-02/ArvoresFrente" unique_id=78864838]
-visible = false
-position = Vector2(-3621.5098, 398.12256)
-scale = Vector2(1.0042253, 1.0042253)
-texture = ExtResource("16_u3noq")
 
 [node name="Arvore06" type="Sprite2D" parent="-02/ArvoresFrente" unique_id=2027851179]
 position = Vector2(-1966.4083, 230)
@@ -930,13 +903,6 @@ material = SubResource("ShaderMaterial_62810")
 position = Vector2(-34914, -3394)
 texture = ExtResource("24_e0yg5")
 
-[node name="82SemTítulo0000253520251125200852" type="Sprite2D" parent="0/Moitas/Moita4" unique_id=1010693328]
-visible = false
-modulate = Color(3.4751832, 1.8611602, 1.5331067, 1)
-material = SubResource("ShaderMaterial_8pnaw")
-position = Vector2(-110, -34)
-texture = ExtResource("26_idg5b")
-
 [node name="Sombra4" type="Sprite2D" parent="0/Moitas" unique_id=687265529]
 position = Vector2(-34894, -3370.5)
 scale = Vector2(1.7592592, 0.7920354)
@@ -946,12 +912,6 @@ texture = ExtResource("25_uepkw")
 material = SubResource("ShaderMaterial_62810")
 position = Vector2(-30890, -3347)
 texture = ExtResource("24_e0yg5")
-
-[node name="82SemTítulo0000253520251125200853" type="Sprite2D" parent="0/Moitas" unique_id=67073572]
-visible = false
-modulate = Color(2.34715, 2.34715, 2.34715, 1)
-position = Vector2(-32176, -3450)
-texture = ExtResource("26_idg5b")
 
 [node name="Sombra7" type="Sprite2D" parent="0/Moitas" unique_id=1089380527]
 position = Vector2(-30918, -3295.5)
@@ -974,12 +934,6 @@ material = SubResource("ShaderMaterial_62810")
 position = Vector2(-35026, -3251)
 rotation = -3.1415925
 texture = ExtResource("27_ytcj4")
-
-[node name="MaPeamento" type="Sprite2D" parent="0" unique_id=1743193997]
-visible = false
-position = Vector2(6051.9995, -1823.0001)
-scale = Vector2(0.9335072, 0.93350714)
-texture = ExtResource("28_thr42")
 
 [node name="Bau" parent="0" unique_id=1926307680 instance=ExtResource("53_q2ysr")]
 position = Vector2(2843, -1346.9999)
@@ -1536,16 +1490,6 @@ debug_color = Color(0, 0.6, 0.69803923, 0)
 position = Vector2(6996, 52)
 texture = ExtResource("42_iuuok")
 
-[node name="Frontfolha5" type="Sprite2D" parent="2/Foregroundchao" unique_id=1443853391]
-visible = false
-position = Vector2(5117, 0)
-texture = ExtResource("42_iuuok")
-
-[node name="Frontfolha6" type="Sprite2D" parent="2/Foregroundchao" unique_id=274038757]
-visible = false
-position = Vector2(5827, 76)
-texture = ExtResource("42_iuuok")
-
 [node name="Frontfolha11" type="Sprite2D" parent="2/Foregroundchao" unique_id=1520416580]
 position = Vector2(7242, 786)
 texture = ExtResource("42_iuuok")
@@ -1665,52 +1609,6 @@ texture = ExtResource("47_1lqui")
 position = Vector2(-31271.5, -4221.5)
 scale = Vector2(1.3789063, 1.3789063)
 texture = ExtResource("48_ta4ov")
-
-[node name="PilarTemplo3" type="Sprite2D" parent="2" unique_id=927770456]
-visible = false
-modulate = Color(0.012617188, 0.012617188, 0.012617188, 1)
-position = Vector2(2403.8096, -1556.1903)
-rotation = 0.14056882
-scale = Vector2(0.7613709, 0.9234787)
-texture = ExtResource("19_vw05h")
-
-[node name="PilarTemplo4" type="Sprite2D" parent="2" unique_id=1998664281]
-visible = false
-modulate = Color(0.012617188, 0.012617188, 0.012617188, 1)
-position = Vector2(422.85718, -1497.143)
-scale = Vector2(0.687068, 0.8117587)
-texture = ExtResource("19_vw05h")
-
-[node name="ArvoreFundo2" type="Sprite2D" parent="2" unique_id=1365364435]
-visible = false
-modulate = Color(0.012617188, 0.012617188, 0.012617188, 1)
-position = Vector2(3121.9048, -1630.4761)
-rotation = -0.17220382
-scale = Vector2(1.6757926, 1.1372727)
-texture = ExtResource("49_bvf3l")
-flip_h = true
-
-[node name="ArvoreFundo3" type="Sprite2D" parent="2" unique_id=1476136935]
-visible = false
-modulate = Color(0.012617188, 0.012617188, 0.012617188, 1)
-position = Vector2(8108.5723, -1695.2384)
-rotation = 0.06136845
-scale = Vector2(1.6757926, 1.1372727)
-texture = ExtResource("49_bvf3l")
-
-[node name="ArvoreFundo1" type="Sprite2D" parent="2" unique_id=919948358]
-visible = false
-modulate = Color(0.012617188, 0.012617188, 0.012617188, 1)
-position = Vector2(4234.286, -1912.8573)
-scale = Vector2(1.4554528, 1.2868726)
-texture = ExtResource("50_s5uib")
-
-[node name="ArvoreFundo4" type="Sprite2D" parent="2" unique_id=73738936]
-visible = false
-modulate = Color(0.012617188, 0.012617188, 0.012617188, 1)
-position = Vector2(6364.2866, -1831.4287)
-scale = Vector2(1.4957746, 1.4033656)
-texture = ExtResource("50_s5uib")
 
 [node name="5c67d19fAad64a128e7fAe0bbbab2054" type="Sprite2D" parent="2" unique_id=174234679]
 self_modulate = Color(0.012617188, 0.012617188, 0.012617188, 1)

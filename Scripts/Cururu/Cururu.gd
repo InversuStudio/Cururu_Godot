@@ -64,7 +64,8 @@ class_name Player extends CharacterBody2D
 @export var vida : Vida = null
 ## Componente StateMachine
 @export var state_machine : StateMachine = null
-
+## Seta vida específica
+@export var override_vida_player:int = 0
 # Node que segura os Marker2Ds que definem onde os ataques serão instanciados
 @onready var pos_ataques: Node2D = $PosAtaques
 
@@ -98,10 +99,20 @@ func _ready() -> void:
 		global_position = LoadCena.next_pos
 		sprite.flip_h = GameData.direcao
 	
+	#Deixa VFX invisível
+	%VFX.hide()
+	
 	if GameData.game_start == false:
 		pode_mover = false
 		GameData.game_start = true
 		state_machine.MudaState(state_machine.find_child("Acorda"))
+
+		if override_vida_player > 0:
+			vida.vida_atual = override_vida_player
+			await get_tree().scene_changed
+			GameData.vida_atual = override_vida_player
+		
+	HUD.AplicaRed(vida.vida_atual)
 
 	var ib:Array = [-1.0, -1.0] if GameData.direcao else [1.0, 1.0]
 	input_buffer.assign(ib)
@@ -119,9 +130,6 @@ func _ready() -> void:
 		state_machine.MudaState(state_machine.find_child("Pulo"))
 		await get_tree().create_timer(1.0).timeout
 		GameData.veio_de_baixo = false
-		
-	#Deixa VFX invisível
-	%VFX.visible = false
 
 func _process(delta: float) -> void:
 	# Controla se pode mover
@@ -173,6 +181,7 @@ func VidaMudou(vida_nova, vida_antiga) -> void:
 		print("RECEBI DANO")
 		pode_mover = false
 		%StateMachine.call_deferred("MudaState", %StateMachine.find_child("Dano"))
+		HUD.AplicaRed(vida_nova)
 	else:
 		print("RECEBI CURA")
 
