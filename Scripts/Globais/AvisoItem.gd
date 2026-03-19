@@ -27,7 +27,7 @@ func Mostra(nome:String, desc:String, img:Texture2D, action:StringName = "") -> 
 	%ImgItemAviso.texture = img
 	
 	if action != "":
-		var path:StringName = GameData.GetUiButtonImage(action)[0]
+		var path:StringName = GameData.GetUiButtonImage(action)
 		print("Path: " + path)
 		desc = desc.replace("BTN", "[img]%s[/img]" % path)
 	

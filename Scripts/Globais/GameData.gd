@@ -27,8 +27,8 @@ func _input(event: InputEvent) -> void:
 			tipo_input = 1
 			Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 
-func GetUiButtonImage(action:StringName) -> Array[StringName]:
-	var result:Array[StringName] = ["", ""]
+func GetUiButtonImage(action:StringName) -> StringName:
+	var result:StringName = ""
 	var comandos:Array = InputMap.action_get_events(action)
 	
 	if tipo_input < 1:
@@ -38,7 +38,7 @@ func GetUiButtonImage(action:StringName) -> Array[StringName]:
 				key = OS.get_keycode_string(ie.physical_keycode)
 				break
 				
-		result[0] = "res://Sprites/UI/Botoes/TesteTeclado" + key + ".png"
+		result = "res://Sprites/UI/Botoes/TesteTeclado" + key + ".png"
 		
 	else:
 		var botao:int = 0
@@ -55,13 +55,13 @@ func GetUiButtonImage(action:StringName) -> Array[StringName]:
 		if is_axis:
 			match botao:
 				4:
-					result[0] = "res://Sprites/UI/Botoes/TesteInputXboxLT.png"
+					result = "res://Sprites/UI/Botoes/TesteInputXboxLT.png"
 		else:
 			match botao:
 				0:
-					result[0] = "res://Sprites/UI/Botoes/TesteInputXboxA.png"
+					result = "res://Sprites/UI/Botoes/TesteInputXboxA.png"
 				1: 
-					result[0] = "res://Sprites/UI/Botoes/TesteInputXboxB.png"
+					result = "res://Sprites/UI/Botoes/TesteInputXboxB.png"
 		
 	# retorna [imagem_path, tecla]
 	return result

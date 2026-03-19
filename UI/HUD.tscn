@@ -15,7 +15,6 @@
 [ext_resource type="Texture2D" uid="uid://bu6udw31dg5md" path="res://Sprites/UI/Pause/Pecas/MENU_ABA1.png" id="13_mms7u"]
 [ext_resource type="Texture2D" uid="uid://duesv7kjq2emm" path="res://Sprites/UI/Pause/Pecas/MENU_ABA3.png" id="14_w37wn"]
 [ext_resource type="Texture2D" uid="uid://ydkqrtapi4fn" path="res://Sprites/UI/Pause/Pecas/MAP.png" id="15_w37wn"]
-[ext_resource type="Texture2D" uid="uid://c1uwpi576deuf" path="res://Sprites/UI/Botoes/TesteBaseInputTeclado.png" id="16_kg6a8"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4n7mi"]
 
@@ -710,83 +709,32 @@ theme_override_styles/panel = SubResource("StyleBoxTexture_gp2h7")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="Corpo/Pause/BG/Comandos" unique_id=1649677553]
 layout_mode = 2
-theme_override_constants/separation = 24
+theme_override_constants/separation = 0
 alignment = 1
 
-[node name="HBoxContainer" type="HBoxContainer" parent="Corpo/Pause/BG/Comandos/HBoxContainer" unique_id=2003510622]
-layout_mode = 2
-size_flags_horizontal = 3
-
-[node name="Select" type="TextureRect" parent="Corpo/Pause/BG/Comandos/HBoxContainer/HBoxContainer" unique_id=358196428]
+[node name="Select" type="RichTextLabel" parent="Corpo/Pause/BG/Comandos/HBoxContainer" unique_id=1294494662]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(70, 70)
 layout_mode = 2
+size_flags_horizontal = 3
 size_flags_vertical = 4
-texture = ExtResource("16_kg6a8")
-expand_mode = 1
-
-[node name="Tecla" type="Label" parent="Corpo/Pause/BG/Comandos/HBoxContainer/HBoxContainer/Select" unique_id=212551601]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -20.0
-offset_top = -27.5
-offset_right = 20.0
-offset_bottom = 27.5
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_font_sizes/font_size = 52
-text = "X"
+theme_override_font_sizes/normal_font_size = 20
+theme_override_font_sizes/bold_font_size = 0
+bbcode_enabled = true
+text = "BTN Aceitar"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="select_txt" type="RichTextLabel" parent="Corpo/Pause/BG/Comandos/HBoxContainer/HBoxContainer" unique_id=765660311]
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_font_sizes/normal_font_size = 24
-text = "Selecionar"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="HBoxContainer2" type="HBoxContainer" parent="Corpo/Pause/BG/Comandos/HBoxContainer" unique_id=2064513966]
-layout_mode = 2
-size_flags_horizontal = 3
-
-[node name="Back" type="TextureRect" parent="Corpo/Pause/BG/Comandos/HBoxContainer/HBoxContainer2" unique_id=1184226912]
+[node name="Back" type="RichTextLabel" parent="Corpo/Pause/BG/Comandos/HBoxContainer" unique_id=1258469992]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(70, 70)
 layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
-texture = ExtResource("16_kg6a8")
-expand_mode = 1
-
-[node name="Tecla" type="Label" parent="Corpo/Pause/BG/Comandos/HBoxContainer/HBoxContainer2/Back" unique_id=1842745229]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -20.0
-offset_top = -36.0
-offset_right = 20.0
-offset_bottom = 36.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_font_sizes/font_size = 52
-text = "C"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="back_txt" type="RichTextLabel" parent="Corpo/Pause/BG/Comandos/HBoxContainer/HBoxContainer2" unique_id=733934260]
-layout_mode = 2
 size_flags_horizontal = 3
-theme_override_font_sizes/normal_font_size = 24
-text = "Voltar"
+size_flags_vertical = 4
+theme_override_font_sizes/normal_font_size = 20
+theme_override_font_sizes/bold_font_size = 0
+bbcode_enabled = true
+text = "BTN Voltar"
 horizontal_alignment = 1
 vertical_alignment = 1
 

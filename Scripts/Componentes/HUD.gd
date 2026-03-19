@@ -43,13 +43,7 @@ func _input(_event: InputEvent) -> void:
 	
 	if tipo_input != GameData.tipo_input:
 		tipo_input = GameData.tipo_input
-		#var img:Array = GameData.GetInputType()
-		var btn_accept:Array[StringName] = GameData.GetUiButtonImage("ui_accept")
-		%Select.texture = load(btn_accept[0])
-		%Select.get_child(0).text = btn_accept[1]
-		var btn_cancel:Array[StringName] = GameData.GetUiButtonImage("ui_cancel")
-		%Back.texture = load(btn_cancel[0])
-		%Back.get_child(0).text = btn_cancel[1]
+		MudaImgInput()
 	
 	#if !Inventario.tem_mapa: return
 	#if Input.is_action_just_pressed("select"):
@@ -79,6 +73,14 @@ func _process(delta: float) -> void:
 	else:
 		%MapaSmall.hide()
 
+func MudaImgInput() -> void:
+	#%Select.texture = load()
+	#%Back.texture = load(GameData.GetUiButtonImage("ui_cancel"))
+	var txt_select:String = %Select.text.get_slice(" ", 1)
+	%Select.text = "[img]%s[/img]   %s" % [GameData.GetUiButtonImage("ui_accept"), txt_select]
+	var txt_back:String = %Back.text.get_slice(" ", 1)
+	%Back.text = "[img]%s[/img]   %s" % [GameData.GetUiButtonImage("ui_cancel"), txt_back]
+
 func _ready() -> void:
 	# Conecta sinais de mudança de valor
 	GameData.connect("update_magia", UpdateMagia)
@@ -94,6 +96,8 @@ func _ready() -> void:
 	# Organiza visibilidade das abas
 	MudaAba()
 	MostraHUD()
+	
+	MudaImgInput()
 	
 	%BtnContinuar.connect("pressed", func(): %Pause.visible = false)
 	%BtnSair.connect("pressed", func():
