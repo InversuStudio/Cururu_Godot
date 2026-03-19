@@ -1,7 +1,7 @@
-[gd_scene load_steps=15 format=3 uid="uid://36u4axx0kdfy"]
+[gd_scene format=3 uid="uid://36u4axx0kdfy"]
 
 [ext_resource type="Script" uid="uid://c2ijeforn42qo" path="res://Dialogos/balloon.gd" id="1_w6bav"]
-[ext_resource type="Shader" path="res://Scripts/Shaders/blur_shader.gdshader" id="2_lp6v3"]
+[ext_resource type="Shader" uid="uid://c1omtsxv04udh" path="res://Scripts/Shaders/blur_shader.gdshader" id="2_lp6v3"]
 [ext_resource type="PackedScene" uid="uid://ckvgyvclnwggo" path="res://addons/dialogue_manager/dialogue_label.tscn" id="2_ow0pn"]
 [ext_resource type="Script" uid="uid://bb52rsfwhkxbn" path="res://addons/dialogue_manager/dialogue_responses_menu.gd" id="3_ifi3v"]
 [ext_resource type="Texture2D" uid="uid://bfige6m1uslss" path="res://Sprites/UI/Dialogo/DIALOGO_DIREITA.png" id="3_uma04"]
@@ -38,11 +38,11 @@ content_margin_right = 12.0
 content_margin_bottom = 15.0
 texture = ExtResource("8_4bkqv")
 
-[node name="BalaoFala" type="CanvasLayer"]
+[node name="BalaoFala" type="CanvasLayer" unique_id=1730894515]
 layer = 1001
 script = ExtResource("1_w6bav")
 
-[node name="Balloon" type="Control" parent="."]
+[node name="Balloon" type="Control" parent="." unique_id=2105824411]
 unique_name_in_owner = true
 z_index = 8
 layout_mode = 3
@@ -53,7 +53,7 @@ grow_horizontal = 2
 grow_vertical = 2
 theme = SubResource("Theme_w6bav")
 
-[node name="BgOverlay" type="ColorRect" parent="Balloon"]
+[node name="BgOverlay" type="ColorRect" parent="Balloon" unique_id=338010834]
 modulate = Color(0, 0, 0, 1)
 self_modulate = Color(0, 0, 0, 1)
 material = SubResource("ShaderMaterial_4bkqv")
@@ -64,10 +64,10 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="CharacterIcon" type="Sprite2D" parent="Balloon"]
+[node name="CharacterIcon" type="Sprite2D" parent="Balloon" unique_id=310185048]
 position = Vector2(1616, 568)
 
-[node name="MainBox" type="NinePatchRect" parent="Balloon"]
+[node name="MainBox" type="NinePatchRect" parent="Balloon" unique_id=1664815246]
 layout_mode = 0
 offset_left = 51.0
 offset_top = 666.0
@@ -75,7 +75,7 @@ offset_right = 1799.0
 offset_bottom = 1005.0
 texture = ExtResource("3_uma04")
 
-[node name="MarginContainer" type="MarginContainer" parent="Balloon/MainBox"]
+[node name="MarginContainer" type="MarginContainer" parent="Balloon/MainBox" unique_id=97675002]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -89,7 +89,7 @@ offset_bottom = 130.5
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="DialogueLabel" parent="Balloon/MainBox/MarginContainer" instance=ExtResource("2_ow0pn")]
+[node name="DialogueLabel" parent="Balloon/MainBox/MarginContainer" unique_id=410516921 instance=ExtResource("2_ow0pn")]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_vertical = 3
@@ -102,14 +102,14 @@ text = "Dialogue..."
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="NameBox" type="NinePatchRect" parent="Balloon/MainBox"]
+[node name="NameBox" type="NinePatchRect" parent="Balloon/MainBox" unique_id=956476362]
 layout_mode = 1
 offset_left = 77.0
 offset_top = 10.0
 offset_right = 341.0
 offset_bottom = 95.0
 
-[node name="CharacterLabel" type="RichTextLabel" parent="Balloon/MainBox/NameBox"]
+[node name="CharacterLabel" type="RichTextLabel" parent="Balloon/MainBox/NameBox" unique_id=1318056501]
 unique_name_in_owner = true
 layout_mode = 1
 anchors_preset = 15
@@ -135,7 +135,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 script = ExtResource("5_uma04")
 
-[node name="ResponsesMenu" type="HBoxContainer" parent="Balloon" node_paths=PackedStringArray("response_template")]
+[node name="ResponsesMenu" type="HBoxContainer" parent="Balloon" unique_id=860421013 node_paths=PackedStringArray("response_template")]
 unique_name_in_owner = true
 layout_mode = 1
 anchors_preset = 7
@@ -155,7 +155,7 @@ alignment = 1
 script = ExtResource("3_ifi3v")
 response_template = NodePath("ResponseExample")
 
-[node name="ResponseExample" type="Button" parent="Balloon/ResponsesMenu"]
+[node name="ResponseExample" type="Button" parent="Balloon/ResponsesMenu" unique_id=1711906150]
 layout_mode = 2
 focus_neighbor_top = NodePath(".")
 theme_override_font_sizes/font_size = 40
@@ -164,6 +164,9 @@ theme_override_styles/hover = SubResource("StyleBoxTexture_ogmod")
 theme_override_styles/focus = SubResource("StyleBoxTexture_exniy")
 text = "Response example"
 script = ExtResource("9_4bkqv")
+
+[node name="Voz" type="AudioStreamPlayer" parent="." unique_id=358571449]
+unique_name_in_owner = true
 
 [connection signal="gui_input" from="Balloon" to="." method="_on_balloon_gui_input"]
 [connection signal="response_selected" from="Balloon/ResponsesMenu" to="." method="_on_responses_menu_response_selected"]

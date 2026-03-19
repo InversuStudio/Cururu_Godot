@@ -5,6 +5,10 @@ extends Node
 @onready var leu_data:bool = false
 @onready var game_start:bool = false
 
+# Variáveis que armazenam se npc já falou
+var saci_falou:bool = false
+var naia_falou:bool = false
+
 # Armazena se está usando teclado ou controller
 # 0 = Mouse/Teclado | 1 = Controller
 var tipo_input:int = 0

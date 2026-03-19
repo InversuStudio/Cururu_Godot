@@ -4,9 +4,13 @@
 [ext_resource type="Script" uid="uid://hsdutxxttrp3" path="res://Scripts/Componentes/Vida.gd" id="2_16hqa"]
 [ext_resource type="AudioStream" uid="uid://bx8njcohkk04w" path="res://Audio/SFX/AMBIENTE/Musica_Boss.mp3" id="2_ojojp"]
 [ext_resource type="PackedScene" uid="uid://va5pjd6vuuo2" path="res://Objetos/Funcionalidade/CompHurtBox.tscn" id="3_fwdqd"]
+[ext_resource type="AudioStream" uid="uid://d06ge4skt1uy1" path="res://Audio/SFX/BOITATA/Boitata Voz 1a.wav" id="3_t22i8"]
+[ext_resource type="AudioStream" uid="uid://cre5ku0dd6058" path="res://Audio/SFX/BOITATA/Boitata Voz 2a.wav" id="4_2fxlb"]
 [ext_resource type="AudioStream" uid="uid://bbet83hmt2l60" path="res://Audio/SFX/BOITATA/Boitata voice - versão curta variação A.wav" id="4_hbr26"]
+[ext_resource type="AudioStream" uid="uid://cr16bjm4l5t2d" path="res://Audio/SFX/BOITATA/Boitata Voz 3a.wav" id="5_3kiqj"]
 [ext_resource type="AudioStream" uid="uid://b3mmkipqf30jd" path="res://Audio/SFX/INIMIGOS/HIT_INIMIGO.wav" id="5_b2ig3"]
 [ext_resource type="AudioStream" uid="uid://dfa0lhe7imsav" path="res://Audio/SFX/BOITATA/Boitata voice - versão curta variação B.wav" id="5_ycj6j"]
+[ext_resource type="AudioStream" uid="uid://chj2f8iblygkg" path="res://Audio/SFX/BOITATA/Boitata Voz 4a.wav" id="6_httm1"]
 [ext_resource type="Resource" uid="uid://dt1a45lx75dfd" path="res://Dialogos/Boitata.dialogue" id="6_ycj6j"]
 [ext_resource type="Shader" uid="uid://62sadhuywsvn" path="res://Scripts/Shaders/HitFlash.gdshader" id="7_q8716"]
 [ext_resource type="Texture2D" uid="uid://dsfsgfghpduc5" path="res://Sprites/Inimigos/Boitata/Animacoes/Cospe_Fogo/boitata_bola_de_fogo/boitata_79.png" id="8_fwdqd"]
@@ -1868,6 +1872,7 @@ tempo_carga_pilar = 0.7
 tempo_ate_prox_pilar = 0.1
 musica_luta = ExtResource("2_ojojp")
 zoom = 0.5
+vozes_fala = Array[AudioStream]([ExtResource("3_t22i8"), ExtResource("4_2fxlb"), ExtResource("5_3kiqj"), ExtResource("6_httm1")])
 gritos = Array[AudioStream]([ExtResource("88_q1nmn"), ExtResource("4_hbr26"), ExtResource("5_ycj6j")])
 dialogo = ExtResource("6_ycj6j")
 

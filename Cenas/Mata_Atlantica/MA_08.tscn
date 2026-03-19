@@ -23,7 +23,7 @@
 [ext_resource type="PackedScene" uid="uid://cppreprc8pa3k" path="res://Objetos/Props/vasosmoeda/vasomoeda_02.tscn" id="18_sdyfi"]
 [ext_resource type="PackedScene" uid="uid://cqyub70sv0ofp" path="res://Objetos/Props/SavePoint.tscn" id="19_5qg67"]
 [ext_resource type="Texture2D" uid="uid://0agjwkmg3gef" path="res://Sprites/VFX/Iluminação/luz azul.png" id="20_orup7"]
-[ext_resource type="PackedScene" uid="uid://2kargcp4546j" path="res://Objetos/NPCs/Naiá.tscn" id="21_houb6"]
+[ext_resource type="PackedScene" uid="uid://2kargcp4546j" path="res://Objetos/NPCs/Naia.tscn" id="21_houb6"]
 [ext_resource type="Texture2D" uid="uid://c8bkav2g3wyeu" path="res://Sprites/Cenário/Mata_Atlantica/Chao/moita2.png" id="22_v7od0"]
 [ext_resource type="Texture2D" uid="uid://dmmwsf5tpgg24" path="res://Sprites/Cenário/Mata_Atlantica/Interativos/ponte exemplo.png" id="23_0hq41"]
 [ext_resource type="Texture2D" uid="uid://jecy4bfqqqxu" path="res://Sprites/Cenário/Mata_Atlantica/Teto/Moita teste.png" id="23_esn82"]

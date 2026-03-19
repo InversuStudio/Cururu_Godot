@@ -172,6 +172,13 @@
 [ext_resource type="Texture2D" uid="uid://ds8cggb4wbvby" path="res://Sprites/Cururu/Melee/V2/ATAQUE_2_HITS_CHAO/CURURU_ATAQUE_27.png" id="120_lypds"]
 [ext_resource type="Texture2D" uid="uid://dmkqecifr50u3" path="res://Sprites/Cururu/Melee/Ataque cima/CURURU_358.png" id="120_xgubl"]
 [ext_resource type="Texture2D" uid="uid://bd4mrdmvfskq6" path="res://Sprites/Cururu/Melee/V2/ATAQUE_2_HITS_CHAO/CURURU_ATAQUE_29.png" id="121_c06e5"]
+[ext_resource type="Texture2D" uid="uid://deqyncuof35o7" path="res://Sprites/Cururu/Save/CURURU_380.png" id="138_8vwo5"]
+[ext_resource type="Texture2D" uid="uid://delnqqs3r5dmb" path="res://Sprites/Cururu/Save/CURURU_382.png" id="139_qtftx"]
+[ext_resource type="Texture2D" uid="uid://cui2kcte5xsfu" path="res://Sprites/Cururu/Save/CURURU_384.png" id="140_yjbv0"]
+[ext_resource type="Texture2D" uid="uid://0kh8la4rmtnt" path="res://Sprites/Cururu/Save/CURURU_386.png" id="141_lypds"]
+[ext_resource type="Texture2D" uid="uid://3k0bp8fjjtfw" path="res://Sprites/Cururu/Save/CURURU_392.png" id="142_c06e5"]
+[ext_resource type="Texture2D" uid="uid://d5t5hv8sxaeq" path="res://Sprites/Cururu/Save/CURURU_394.png" id="143_vu0ia"]
+[ext_resource type="Texture2D" uid="uid://bpq5wcbmxp6rr" path="res://Sprites/Cururu/Save/CURURU_396.png" id="144_lk4cl"]
 [ext_resource type="AudioStream" uid="uid://dlp7ijp7u7b4i" path="res://Audio/SFX/Comidinha Hum.wav" id="153_ta3r2"]
 [ext_resource type="AudioStream" uid="uid://betvqt03p81ol" path="res://Audio/SFX/CURURU/dash_cururu.wav" id="154_wxhj3"]
 [ext_resource type="AudioStream" uid="uid://s50orlb3i3jk" path="res://Audio/SFX/CURURU/Caindo.wav" id="155_lv5tx"]
@@ -732,6 +739,38 @@ animations = [{
 "loop": true,
 "name": &"Run",
 "speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("138_8vwo5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("139_qtftx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("140_yjbv0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("141_lypds")
+}, {
+"duration": 1.0,
+"texture": ExtResource("141_lypds")
+}, {
+"duration": 1.0,
+"texture": ExtResource("141_lypds")
+}, {
+"duration": 1.0,
+"texture": ExtResource("142_c06e5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("143_vu0ia")
+}, {
+"duration": 1.0,
+"texture": ExtResource("144_lk4cl")
+}],
+"loop": true,
+"name": &"Save",
+"speed": 10.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -1547,6 +1586,34 @@ tracks/3/keys = {
 }]
 }
 
+[sub_resource type="Animation" id="Animation_8vwo5"]
+resource_name = "Save"
+length = 0.9
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Cururu:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"Save"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Cururu:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.10000001, 0.20000002, 0.3, 0.40000004, 0.5, 0.6, 0.70000005, 0.8000001),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 6, 7, 8]
+}
+
 [sub_resource type="Animation" id="Animation_7uoqt"]
 resource_name = "Special"
 length = 0.65
@@ -1784,6 +1851,7 @@ _data = {
 &"Nado_Move": SubResource("Animation_yy1dt"),
 &"RESET": SubResource("Animation_he10h"),
 &"Run": SubResource("Animation_prtj7"),
+&"Save": SubResource("Animation_8vwo5"),
 &"Special": SubResource("Animation_7uoqt"),
 &"Special_Down": SubResource("Animation_7spwe"),
 &"Special_Up": SubResource("Animation_vpyrf"),
@@ -1828,7 +1896,7 @@ unique_name_in_owner = true
 position = Vector2(0, -115)
 scale = Vector2(0.37, 0.37)
 sprite_frames = SubResource("SpriteFrames_ser7u")
-animation = &"Idle"
+animation = &"Save"
 frame = 1
 
 [node name="ColisaoFisica" type="CollisionShape2D" parent="." unique_id=185604391]

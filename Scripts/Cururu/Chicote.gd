@@ -31,17 +31,20 @@ func Enter() -> void:
 	#else:
 	%Anim.play("Special")
 	var fx:Node2D = vfx.instantiate()
-	fx.get_child(1).hit.connect(Hit)
+	var hit:HitBox = fx.get_child(1)
+	hit.hit.connect(Hit)
+	hit.monitoring = false
 	fx.global_position = %PosChicote.global_position
 	fx.scale.x = -1 if parent.sprite.flip_h else 1
 	parent.get_parent().add_child(fx)
 	fx_atual = fx
 	var c:AnimatedSprite2D = fx.get_child(0)
 	%SFX_Ataque.stream = sfx
+	await get_tree().create_timer(.3).timeout
+	hit.monitoring = true
 	
 	await c.animation_finished
 	fx.queue_free()
-	
 
 func Exit() -> void:
 	terminou = false

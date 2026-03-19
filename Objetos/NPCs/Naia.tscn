@@ -1,0 +1,133 @@
+[gd_scene format=3 uid="uid://2kargcp4546j"]
+
+[ext_resource type="Script" uid="uid://bt5du2sk1ba4i" path="res://Scripts/NPCs/NPC.gd" id="1_kc0n5"]
+[ext_resource type="Resource" uid="uid://ch3y4gcny6835" path="res://Dialogos/Vitoriaregia.dialogue" id="2_eqxke"]
+[ext_resource type="Texture2D" uid="uid://b3qk3js8vx4jl" path="res://Sprites/NPCS/Vitoria Régia/NAIA_01.png" id="3_rwdyo"]
+[ext_resource type="Texture2D" uid="uid://bm3a0acfnpp5w" path="res://Sprites/NPCS/Vitoria Régia/NAIA_03.png" id="4_rv43u"]
+[ext_resource type="Texture2D" uid="uid://bgay3vp761mfs" path="res://Sprites/NPCS/Vitoria Régia/NAIA_05.png" id="5_hmr3h"]
+[ext_resource type="Texture2D" uid="uid://b20ieis2l84x0" path="res://Sprites/NPCS/Vitoria Régia/NAIA_07.png" id="6_undef"]
+[ext_resource type="Texture2D" uid="uid://urb4djcm1akb" path="res://Sprites/NPCS/Vitoria Régia/NAIA_09.png" id="7_3kl87"]
+[ext_resource type="Texture2D" uid="uid://s27ejh3vnb43" path="res://Sprites/NPCS/Vitoria Régia/NAIA_11.png" id="8_lxroo"]
+[ext_resource type="Texture2D" uid="uid://dtjvxb585xu7c" path="res://Sprites/NPCS/Vitoria Régia/NAIA_13.png" id="9_n4lol"]
+[ext_resource type="Texture2D" uid="uid://20nvruhslr1a" path="res://Sprites/NPCS/Vitoria Régia/NAIA_15.png" id="10_40p12"]
+[ext_resource type="Texture2D" uid="uid://bl4s7ulgidgga" path="res://Sprites/NPCS/Vitoria Régia/NAIA_17.png" id="11_02sup"]
+[ext_resource type="Texture2D" uid="uid://b1gt2gef8gn3g" path="res://Sprites/NPCS/Vitoria Régia/NAIA_19.png" id="12_ftu61"]
+[ext_resource type="Texture2D" uid="uid://b6lv2th5os3a3" path="res://Sprites/NPCS/Vitoria Régia/NAIA_21.png" id="13_thw4m"]
+[ext_resource type="Texture2D" uid="uid://cb5cdr55s46vi" path="res://Sprites/NPCS/Vitoria Régia/NAIA_23.png" id="14_prhrs"]
+[ext_resource type="Texture2D" uid="uid://b0k1gpdvcf72w" path="res://Sprites/NPCS/Vitoria Régia/NAIA_25.png" id="15_f22ot"]
+[ext_resource type="Texture2D" uid="uid://by6kkjp65pa7w" path="res://Sprites/NPCS/Vitoria Régia/NAIA_27.png" id="16_fp53f"]
+[ext_resource type="Texture2D" uid="uid://bkgl1b55bs822" path="res://Sprites/NPCS/Vitoria Régia/NAIA_29.png" id="17_yd1sq"]
+[ext_resource type="Texture2D" uid="uid://bcgx3chtfcsu2" path="res://Sprites/NPCS/Vitoria Régia/NAIA_31.png" id="18_ill40"]
+[ext_resource type="Script" uid="uid://dd7svcu8l7fxu" path="res://Scripts/Componentes/Interacao.gd" id="19_k0ubn"]
+[ext_resource type="Texture2D" uid="uid://3fndwwvknj3j" path="res://Sprites/Cenário/Objetos/Savepoint/LOGO V1 STEAM.png" id="20_gly7g"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_rmtcg"]
+resource_local_to_scene = true
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_rwdyo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_rv43u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_hmr3h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_undef")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_3kl87")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_lxroo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_n4lol")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_40p12")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_02sup")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_ftu61")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_thw4m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_prhrs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_f22ot")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_fp53f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_yd1sq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_ill40")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 12.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lqome"]
+size = Vector2(1386.5391, 1034.7305)
+
+[node name="Naia" type="Sprite2D" unique_id=1689421134 node_paths=PackedStringArray("interacao")]
+scale = Vector2(0.4348958, 0.43489587)
+script = ExtResource("1_kc0n5")
+arquivo_dialogo = ExtResource("2_eqxke")
+interacao = NodePath("Interacao")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1612304861]
+position = Vector2(-16.09581, 129.91617)
+scale = Vector2(0.6751497, 0.6751497)
+sprite_frames = SubResource("SpriteFrames_rmtcg")
+animation = &"idle"
+autoplay = "idle"
+frame_progress = 0.89227444
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1433189220]
+root_node = NodePath("../AnimatedSprite2D")
+
+[node name="Interacao" type="Area2D" parent="." unique_id=1530476936]
+collision_layer = 0
+collision_mask = 2
+script = ExtResource("19_k0ubn")
+metadata/_custom_type_script = "uid://dd7svcu8l7fxu"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Interacao" unique_id=1391847400]
+position = Vector2(254.08386, 131.06586)
+shape = SubResource("RectangleShape2D_lqome")
+
+[node name="Texto" type="RichTextLabel" parent="." unique_id=1636518439]
+unique_name_in_owner = true
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -315.51797
+offset_top = -531.8802
+offset_right = 284.62576
+offset_bottom = -326.51495
+grow_horizontal = 2
+theme_override_font_sizes/normal_font_size = 90
+text = "CONVERSAR"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="LogoV1Steam" type="Sprite2D" parent="Texto" unique_id=291498113]
+position = Vector2(315.01794, 115.688644)
+scale = Vector2(0.2987412, 0.29874122)
+texture = ExtResource("20_gly7g")
+
+[node name="Voz" type="AudioStreamPlayer" parent="." unique_id=1959106374]
+unique_name_in_owner = true
+max_polyphony = 10

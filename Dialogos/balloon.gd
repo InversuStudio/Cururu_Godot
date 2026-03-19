@@ -102,11 +102,13 @@ func setup_portrait():
 		
 	elif character_label.text == "BOITATÁ":
 		character_dialogue_icon.texture = load("res://Sprites/UI/Visual_Novel/boitata.png")
-
 		
 	elif character_label.text == "NPC Basico":
-		character_dialogue_icon.texture = load("res://Sprites/NPCS/Saci/saci01.png")
-		
+		character_dialogue_icon.texture = load("res://Sprites/VFX/Iluminação/ICON.png")
+
+func TocaVoz(som:AudioStream) -> void:
+	%Voz.stream = som
+	%Voz.play()
 
 ## Apply any changes to the balloon given a new [DialogueLine].
 func apply_dialogue_line() -> void:
@@ -120,6 +122,7 @@ func apply_dialogue_line() -> void:
 	character_label.text = tr(dialogue_line.character, "dialogue")
 	
 	setup_portrait()
+	TocaVoz(DialogoCMD.voz)
 
 	dialogue_label.hide()
 	dialogue_label.dialogue_line = dialogue_line
