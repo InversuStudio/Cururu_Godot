@@ -4,7 +4,6 @@ func _ready() -> void:
 	%LinhaComando.connect("text_submitted", Comando)
 	%Console.hide()
 	MudaAbaSelect()
-	print(3 / 2)
 
 func _input(_event: InputEvent) -> void:
 	if Input.is_action_just_pressed("console"):
