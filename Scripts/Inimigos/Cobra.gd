@@ -11,21 +11,22 @@ func _ready() -> void:
 	for i:String in Mundos.lista_inimigos:
 		if i == id:
 			queue_free()
+			
 	$Vida.alterou_vida.connect(func(_v_new, _v_old) -> void:
 		tomou_dano = true
 		await get_tree().create_timer(.2).timeout
 		tomou_dano = false)
+	
 	velocidade *= 128
 	var rand: int = randi_range(0,1)
 	match rand:
 		0:
 			dir = -1
-			%Sprite.flip_h = false
 		1:
 			dir = 1
-			%Sprite.flip_h = true
-			
-	%HitBoxAtaque.disabled = true
+	
+	%Flip.scale.x = dir
+	%HitBoxMordida.set_deferred("monitoring", false)
 
 func _physics_process(delta: float) -> void:
 	if !is_on_floor():
@@ -41,10 +42,10 @@ func _physics_process(delta: float) -> void:
 			%Sprite.play("virada")
 			await %Sprite.animation_finished
 			%Sprite.play("default")
-			%Sprite.flip_h = false
-			%HitBox.scale.x = 1
-			%AreaRangeAtaque.scale.x = 1
-			#%HurtBox.scale.x = 1
+			# Como o sprite não é centralisado, o flip_h fica ruim, como se
+			# tivesse um offset. Alinhar com todas as Hit/Hurt boxes é um saco.
+			# Por isso, é melhor colocar tudo como filho de um node e flipar ele.
+			%Flip.scale.x = 1
 	
 	if %RayEsquerda.is_colliding() or !%RayVazioEsquerda.is_colliding():
 		if dir == -1:
@@ -53,16 +54,12 @@ func _physics_process(delta: float) -> void:
 			%Sprite.play("virada")
 			await %Sprite.animation_finished
 			%Sprite.play("default")
-			%Sprite.flip_h = true
-			%HitBox.scale.x = -1
-			%AreaRangeAtaque.scale.x = -1
-			#%HurtBox.scale.x = -1
+			%Flip.scale.x = -1
 	
 	move_and_slide()
 
 func Morte() -> void:
 	Mundos.lista_inimigos.append(id)
-	#Mundos.SpawnMoeda(get_parent(), %SpawnMoeda.global_position)
 	%HurtBox.process_mode = PROCESS_MODE_DISABLED
 	%HitBox.process_mode = PROCESS_MODE_DISABLED
 	%Sprite.play("morte")
@@ -74,10 +71,15 @@ func _on_area_range_ataque_body_entered(body: Node2D) -> void:
 	if body.is_in_group("Player"):
 		var old_dir = dir
 		dir = 0
-		%HitBoxAtaque.disabled = false
 		%Sprite.play("ataque")
+		# Espera um pouquinho só pra animação fazer sentido
+		await get_tree().create_timer(.5).timeout
+		# Como Area2D faz checagem física, tem que chamar/setar as coisas
+		# usando o deferred. Basicamente, isso espera o processamento entrar
+		# em idle pra executar o código, o que evita erro.
+		%HitBoxMordida.set_deferred("monitoring", true)#disabled = false
 		await %Sprite.animation_finished
-		%HitBoxAtaque.disabled = true
+		%HitBoxMordida.set_deferred("monitoring", false)#.disabled = true
 		dir = old_dir
 		%Sprite.play("default")
 		

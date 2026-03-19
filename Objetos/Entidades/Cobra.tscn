@@ -29,6 +29,24 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ntg74"]
 size = Vector2(223.68439, 105.921135)
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ayjai"]
+radius = 30.80884
+height = 91.02965
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ihru7"]
+size = Vector2(155.26312, 99.342155)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ayjai"]
+size = Vector2(81.57925, 157.23718)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_gvld5"]
+radius = 73.68424
+height = 247.3686
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_sybt8"]
+radius = 55.921104
+height = 177.63173
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_tkh53"]
 animations = [{
 "frames": [{
@@ -109,108 +127,99 @@ animations = [{
 "speed": 8.0
 }]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ayjai"]
-radius = 30.80884
-height = 91.02965
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_ihru7"]
-size = Vector2(138.8159, 227.6318)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_5m7hk"]
-size = Vector2(136.18433, 223.68442)
-
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_sybt8"]
-radius = 55.921104
-height = 177.63173
-
 [node name="Cobra" type="CharacterBody2D" unique_id=2019109312]
 scale = Vector2(0.67999953, 0.67999953)
 collision_layer = 4
 script = ExtResource("1_ihru7")
 velocidade = 1.6
+metadata/_edit_vertical_guides_ = [-211.0, 176.0]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1948898497]
 position = Vector2(25.000023, -118.38244)
 scale = Vector2(2.2352939, 2.2352939)
 shape = SubResource("RectangleShape2D_ntg74")
 
-[node name="Sprite" type="AnimatedSprite2D" parent="." unique_id=1555891583]
-unique_name_in_owner = true
-position = Vector2(38.235317, -197.05896)
-scale = Vector2(0.73920083, 0.7392009)
-sprite_frames = SubResource("SpriteFrames_tkh53")
-animation = &"ataque"
-autoplay = "default"
-frame = 4
-
 [node name="Vida" type="Node" parent="." unique_id=938649480]
 script = ExtResource("5_hcf47")
 vida_max = 8
 metadata/_custom_type_script = "uid://hsdutxxttrp3"
 
-[node name="AreaRangeAtaque" type="Area2D" parent="." unique_id=1519553533]
+[node name="Flip" type="Node2D" parent="." unique_id=1392119751]
 unique_name_in_owner = true
+
+[node name="AreaRangeAtaque" type="Area2D" parent="Flip" unique_id=1519553533]
 collision_layer = 0
 collision_mask = 2
 
-[node name="AreaRangeAtaque" type="CollisionShape2D" parent="AreaRangeAtaque" unique_id=145110193]
+[node name="AreaRangeAtaque" type="CollisionShape2D" parent="Flip/AreaRangeAtaque" unique_id=145110193]
 position = Vector2(-232.35309, -126.470665)
 rotation = 1.5707964
 scale = Vector2(4, 4)
 shape = SubResource("CapsuleShape2D_ayjai")
 
-[node name="HurtBox" parent="." unique_id=872149296 node_paths=PackedStringArray("comp_vida", "parent", "sprite") instance=ExtResource("6_rcu2w")]
+[node name="HurtBox" parent="Flip" unique_id=872149296 node_paths=PackedStringArray("comp_vida", "parent", "sprite") instance=ExtResource("6_rcu2w")]
 unique_name_in_owner = true
-scale = Vector2(2.2352936, 2.2352936)
+scale = Vector2(2.2352939, 2.2352939)
 collision_layer = 16
-comp_vida = NodePath("../Vida")
+comp_vida = NodePath("../../Vida")
 distancia_knockback = 0.27
 tempo_knockback = 0.2
 hit_sfx = ExtResource("7_l87yx")
-parent = NodePath("..")
+parent = NodePath("../..")
 sprite = NodePath("../Sprite")
 
-[node name="CollisionShape2D3" type="CollisionShape2D" parent="HurtBox" unique_id=1339135318]
-position = Vector2(11.842312, -69.40796)
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Flip/HurtBox" unique_id=1339135318]
+position = Vector2(-84.53955, -77.63218)
 rotation = -1.57079
 shape = SubResource("RectangleShape2D_ihru7")
 debug_color = Color(0.99999, 0, 0.0935918, 0.42)
 
-[node name="HitBox" parent="." unique_id=598623231 instance=ExtResource("8_dtm3y")]
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Flip/HurtBox" unique_id=88289003]
+position = Vector2(43.74994, -40.789433)
+rotation = -1.57079
+shape = SubResource("RectangleShape2D_ayjai")
+debug_color = Color(0.99999, 0, 0.0935918, 0.42)
+
+[node name="HitBox" parent="Flip" unique_id=598623231 instance=ExtResource("8_dtm3y")]
 unique_name_in_owner = true
-position = Vector2(13.58827, 0)
-scale = Vector2(2.2352936, 2.2352936)
+scale = Vector2(2.2352939, 2.2352939)
 collision_layer = 16
 dano = 2
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="HitBox" unique_id=2094676355]
-position = Vector2(5.105252, -68.75005)
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Flip/HitBox" unique_id=2094676355]
+position = Vector2(-10.526305, -76.9738)
 rotation = -1.57079
-shape = SubResource("RectangleShape2D_5m7hk")
+shape = SubResource("CapsuleShape2D_gvld5")
 debug_color = Color(0.807155, 0.414602, 3.85046e-07, 0.42)
 
-[node name="HitBoxMordida" parent="." unique_id=727505384 instance=ExtResource("8_dtm3y")]
-position = Vector2(13.58827, 0)
-scale = Vector2(2.2352936, 2.2352936)
+[node name="HitBoxMordida" parent="Flip" unique_id=727505384 instance=ExtResource("8_dtm3y")]
+unique_name_in_owner = true
+scale = Vector2(2.2352939, 2.2352939)
 collision_layer = 16
 dano = 2
 
-[node name="HitBoxAtaque" type="CollisionShape2D" parent="HitBoxMordida" unique_id=981206294]
-unique_name_in_owner = true
-position = Vector2(-95.55273, -56.578995)
+[node name="HitBoxAtaque" type="CollisionShape2D" parent="Flip/HitBoxMordida" unique_id=981206294]
+position = Vector2(-113.81589, -69.07901)
 rotation = 1.5707964
 shape = SubResource("CapsuleShape2D_sybt8")
 debug_color = Color(0.15275016, 0.64540935, 5.7756904e-07, 0.41960785)
 
+[node name="Sprite" type="AnimatedSprite2D" parent="Flip" unique_id=1555891583]
+unique_name_in_owner = true
+position = Vector2(8.823538, -200.00012)
+scale = Vector2(0.73920083, 0.73920095)
+sprite_frames = SubResource("SpriteFrames_tkh53")
+autoplay = "default"
+
 [node name="RayDireita" type="RayCast2D" parent="." unique_id=1296964799]
 unique_name_in_owner = true
-position = Vector2(286.7649, -60)
+position = Vector2(275.0002, -60)
 scale = Vector2(2.2352936, 2.2352936)
 target_position = Vector2(20, 0)
 
 [node name="RayVazioDireita" type="RayCast2D" parent="." unique_id=2142211602]
 unique_name_in_owner = true
-position = Vector2(286.7649, -24)
+position = Vector2(275.0002, -24)
 scale = Vector2(2.2352936, 2.2352936)
 
 [node name="RayEsquerda" type="RayCast2D" parent="." unique_id=1981733015]
@@ -232,7 +241,7 @@ scale = Vector2(2.2352936, 2.2352936)
 [node name="OtimizadorSprite" parent="." unique_id=448696188 instance=ExtResource("9_ihru7")]
 position = Vector2(1.4705893, 36.764732)
 scale = Vector2(2.2352936, 2.2352936)
-rect = Rect2(-126.47068, -159.86858, 252.94136, 143.42119)
+rect = Rect2(-146.05276, -175.00017, 286.18445, 158.55278)
 follow = true
 
-[connection signal="body_entered" from="AreaRangeAtaque" to="." method="_on_area_range_ataque_body_entered"]
+[connection signal="body_entered" from="Flip/AreaRangeAtaque" to="." method="_on_area_range_ataque_body_entered"]
