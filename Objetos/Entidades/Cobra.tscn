@@ -206,10 +206,13 @@ debug_color = Color(0.15275016, 0.64540935, 5.7756904e-07, 0.41960785)
 
 [node name="Sprite" type="AnimatedSprite2D" parent="Flip" unique_id=1555891583]
 unique_name_in_owner = true
-position = Vector2(8.823538, -200.00012)
+position = Vector2(-44.11767, -200.00012)
 scale = Vector2(0.73920083, 0.73920095)
 sprite_frames = SubResource("SpriteFrames_tkh53")
+animation = &"ataque"
 autoplay = "default"
+frame = 5
+frame_progress = 1.0
 
 [node name="RayDireita" type="RayCast2D" parent="." unique_id=1296964799]
 unique_name_in_owner = true
