@@ -50,6 +50,12 @@
 [ext_resource type="Texture2D" uid="uid://c2yapafbd3cnf" path="res://Sprites/Cenário/Mata_Atlantica/Foreground/cipó.png" id="37_1bo8s"]
 [ext_resource type="Script" uid="uid://1asbq143ewh0" path="res://Scripts/Componentes/empurrar_player_direita.gd" id="37_4xj1r"]
 [ext_resource type="AudioStream" uid="uid://b2vi4qav4gk5r" path="res://Audio/SFX/AMBIENTE/Cururu - Soundscape A.ogg" id="43_mbqr8"]
+[ext_resource type="Texture2D" uid="uid://cimhroq71ngla" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/Arvoresv2/queimada01.PNG" id="46_panah"]
+[ext_resource type="Texture2D" uid="uid://bx76ri4r0cf67" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/Arvoresv2/MataAtlântica020260313104058.png" id="47_efctj"]
+[ext_resource type="Texture2D" uid="uid://tc6hgl2fcsgs" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/Arvoresv2/4F43B61C-F17B-4C53-964C-4949229B536C.PNG" id="48_khi16"]
+[ext_resource type="Texture2D" uid="uid://biajaix6bu33k" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/Arvoresv2/4D1149C0-50E7-4ACC-BD3B-E015F14C3479.PNG" id="49_0dcsl"]
+[ext_resource type="Texture2D" uid="uid://dbd7u8r5gc1c2" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/Arvoresv2/DF2863DD-A31D-4FD6-8334-087AF5C46BA9.PNG" id="50_yyxcl"]
+[ext_resource type="Texture2D" uid="uid://ldh76mruqpaq" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/Arvoresv2/mata atlântica_0_20260313104859.PNG" id="51_cd66a"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_f1q4s"]
 shader = ExtResource("4_yg1sh")
@@ -696,7 +702,7 @@ texture = ExtResource("24_csesn")
 position = Vector2(66, -152)
 
 [node name="TotemPoder" type="Sprite2D" parent="0/Plataformas" unique_id=1855088759]
-position = Vector2(-1891, 1157)
+position = Vector2(-1898.0001, 1188)
 scale = Vector2(0.6171875, 0.6171875)
 texture = ExtResource("31_1bo8s")
 
@@ -714,6 +720,7 @@ position = Vector2(-1486.0004, -111.99997)
 scale = Vector2(0.77247924, 0.7724791)
 
 [node name="Area_secreta" type="TileMapLayer" parent="0/Plataformas" unique_id=829349105]
+visible = false
 z_index = 1
 position = Vector2(-3352.8381, 2071.0046)
 scale = Vector2(0.77247924, 0.7724791)
@@ -1736,7 +1743,7 @@ position = Vector2(84, 221)
 shape = SubResource("RectangleShape2D_x3mff")
 
 [node name="DropAmVelAtaque" parent="0" unique_id=950713708 instance=ExtResource("30_75oum")]
-position = Vector2(-1965, 961)
+position = Vector2(-1909, 1034)
 
 [node name="1" type="CanvasLayer" parent="." unique_id=336936297]
 follow_viewport_enabled = true
@@ -1982,6 +1989,47 @@ texture = ExtResource("37_1bo8s")
 position = Vector2(2807.805, -1353.1708)
 scale = Vector2(0.69054, 0.6697422)
 texture = ExtResource("37_1bo8s")
+
+[node name="Queimada01" type="Sprite2D" parent="1" unique_id=627819102]
+modulate = Color(0.012617188, 0.012617188, 0.012617188, 1)
+position = Vector2(-3640, 772)
+texture = ExtResource("46_panah")
+
+[node name="MataAtlântica020260313104058" type="Sprite2D" parent="1" unique_id=1288791708]
+modulate = Color(0.012617188, 0.012617188, 0.012617188, 1)
+position = Vector2(-2166.8293, 441.95123)
+rotation = -0.107914925
+texture = ExtResource("47_efctj")
+
+[node name="4f43b61cF17b4c53964c4949229b536c" type="Sprite2D" parent="1" unique_id=675541404]
+modulate = Color(0.012617188, 0.012617188, 0.012617188, 1)
+position = Vector2(571.7074, -1539.5123)
+scale = Vector2(0.7626141, 0.7626141)
+texture = ExtResource("48_khi16")
+
+[node name="4f43b61cF17b4c53964c4949229b536c2" type="Sprite2D" parent="1" unique_id=702565208]
+modulate = Color(0.012617188, 0.012617188, 0.012617188, 1)
+position = Vector2(2687.8052, -1252.6831)
+scale = Vector2(0.7626141, 0.7626141)
+texture = ExtResource("48_khi16")
+
+[node name="4d1149c050e74accBd3bE015f14c3479" type="Sprite2D" parent="1" unique_id=1150860556]
+modulate = Color(0.012617188, 0.012617188, 0.012617188, 1)
+position = Vector2(-695.6098, 938.53674)
+scale = Vector2(0.77149653, 0.77149653)
+texture = ExtResource("49_0dcsl")
+
+[node name="Df2863ddA31d4fd68334087af5c46ba9" type="Sprite2D" parent="1" unique_id=2014415171]
+modulate = Color(0.012617188, 0.012617188, 0.012617188, 1)
+position = Vector2(3194.6343, 1042.9269)
+scale = Vector2(0.5369049, 0.67678064)
+texture = ExtResource("50_yyxcl")
+
+[node name="MataAtlântica020260313104859" type="Sprite2D" parent="1" unique_id=814256902]
+modulate = Color(0.012617188, 0.012617188, 0.012617188, 1)
+position = Vector2(3002.9268, -657.65857)
+scale = Vector2(1, 1.2409695)
+texture = ExtResource("51_cd66a")
 
 [node name="2" type="CanvasLayer" parent="." unique_id=43137068]
 follow_viewport_enabled = true

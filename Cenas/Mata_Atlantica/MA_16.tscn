@@ -84,6 +84,18 @@ shader = ExtResource("2_s7kye")
 shader_parameter/darkness = 0.10000000475
 shader_parameter/lod = 0.550000026125
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_hbi5w"]
+shader = ExtResource("28_48sfr")
+shader_parameter/speed = 1.2
+shader_parameter/minStrength = 0.2000000095
+shader_parameter/maxStrength = 0.400000019
+shader_parameter/strengthScale = 100.0
+shader_parameter/interval = 3.5
+shader_parameter/detail = 1.0
+shader_parameter/heightOffset = 0.0
+shader_parameter/flip_wind = false
+shader_parameter/offset = 0.0
+
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_8ogo1"]
 particle_flag_disable_z = true
 emission_shape = 3
@@ -221,9 +233,9 @@ shader_parameter/offset = 0.0
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_o3pe4"]
 shader = ExtResource("28_48sfr")
-shader_parameter/speed = 1.0
-shader_parameter/minStrength = 0.10000000475
-shader_parameter/maxStrength = 0.2000000095
+shader_parameter/speed = 1.5
+shader_parameter/minStrength = 0.250000011875
+shader_parameter/maxStrength = 0.50000002375
 shader_parameter/strengthScale = 80.0
 shader_parameter/interval = 3.5
 shader_parameter/detail = 1.0
@@ -533,6 +545,7 @@ position = Vector2(-4775.5103, -10825)
 texture = ExtResource("14_8ogo1")
 
 [node name="MataAtlântica0220260319103434" type="Sprite2D" parent="-0,5" unique_id=728150766]
+material = SubResource("ShaderMaterial_hbi5w")
 position = Vector2(-4815.4644, -10476.289)
 scale = Vector2(0.71119225, 0.71119225)
 texture = ExtResource("13_hbi5w")
@@ -570,6 +583,7 @@ position = Vector2(-5390.816, -10958.938)
 texture = ExtResource("17_hbi5w")
 
 [node name="MataAtlântica0220260319103435" type="Sprite2D" parent="-0,5" unique_id=593347790]
+material = SubResource("ShaderMaterial_hbi5w")
 position = Vector2(-3837.1135, -10476.289)
 scale = Vector2(0.71119225, 0.71119225)
 texture = ExtResource("13_hbi5w")

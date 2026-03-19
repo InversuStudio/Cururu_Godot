@@ -1,13 +1,18 @@
-[gd_scene load_steps=5 format=3 uid="uid://bgiacv0vndt1q"]
+[gd_scene format=3 uid="uid://bgiacv0vndt1q"]
 
 [ext_resource type="Script" uid="uid://bjl3lkbpnbx3k" path="res://Scripts/Componentes/DropAmuleto.gd" id="1_es4ah"]
 [ext_resource type="Texture2D" uid="uid://bt321ow2lary4" path="res://Sprites/UI/Pause/Pecas/AMULETO_02.png" id="2_e41ni"]
 [ext_resource type="Texture2D" uid="uid://drlhy888vf1qh" path="res://Sprites/UI/Amuletos/ICONE/START WATER2.png" id="3_e41ni"]
+[ext_resource type="Texture2D" uid="uid://bu66so2bkubke" path="res://Sprites/VFX/Iluminação/LightCururu2.png" id="3_l4n3b"]
+
+[sub_resource type="Gradient" id="Gradient_vbkwx"]
+offsets = PackedFloat32Array(0, 0.36458334, 1)
+colors = PackedColorArray(0, 0.4098813, 0.6666103, 1, 0.78116345, 1.1640521, 1.4766657, 1, 1.7086074, 2.50499, 3.0288723, 1)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_s361a"]
 radius = 61.03278
 
-[node name="DropAmVelAtaque" type="Area2D"]
+[node name="DropAmVelAtaque" type="Area2D" unique_id=734966595]
 collision_layer = 0
 collision_mask = 2
 script = ExtResource("1_es4ah")
@@ -15,9 +20,31 @@ nome_tela = "Amuleto de Golpe Ágil"
 descricao_tela = "Todos os seus golpes se tornam mais rápidos"
 imagem_tela = ExtResource("2_e41ni")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="CPUParticles2D" type="CPUParticles2D" parent="." unique_id=1076686502]
+position = Vector2(-2.0000002, -24)
+scale = Vector2(1.2253044, 1.0037334)
+amount = 30
+texture = ExtResource("3_l4n3b")
+lifetime = 0.5
+speed_scale = 0.35
+lifetime_randomness = 0.2
+emission_shape = 3
+emission_rect_extents = Vector2(32, -64)
+gravity = Vector2(0, -980)
+initial_velocity_max = 50.0
+radial_accel_min = -35.05
+radial_accel_max = 29.9
+tangential_accel_max = 100.0
+damping_min = 20.0
+damping_max = 70.0
+scale_amount_min = 0.0
+scale_amount_max = 0.05
+color = Color(0.78116345, 1.1640521, 1.4766657, 1)
+color_ramp = SubResource("Gradient_vbkwx")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=659697051]
 scale = Vector2(0.119140625, 0.11914074)
 texture = ExtResource("3_e41ni")
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="." unique_id=976229955]
 shape = SubResource("CircleShape2D_s361a")

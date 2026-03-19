@@ -1,0 +1,67 @@
+[gd_scene format=3 uid="uid://ce036dhp81d72"]
+
+[ext_resource type="Texture2D" uid="uid://bca5r8teasb00" path="res://Sprites/Cenário/Mata_Atlantica/Background/Cachoeira/1.png" id="1_boa07"]
+[ext_resource type="Texture2D" uid="uid://eilunbxp14uk" path="res://Sprites/Cenário/Mata_Atlantica/Background/Cachoeira/2.png" id="2_jf1s3"]
+[ext_resource type="Texture2D" uid="uid://dk5x4uvcb4tpb" path="res://Sprites/Cenário/Mata_Atlantica/Background/Cachoeira/3.png" id="3_yt6vr"]
+[ext_resource type="Texture2D" uid="uid://cef5lkbfn0nie" path="res://Sprites/Cenário/Mata_Atlantica/Background/Cachoeira/4.png" id="4_4tqi8"]
+[ext_resource type="Texture2D" uid="uid://cr7uvptpiq65n" path="res://Sprites/Cenário/Mata_Atlantica/Background/Cachoeira/5.png" id="5_jf1s3"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_hrdqf"]
+animations = [{
+"frames": [{
+"duration": 0.45,
+"texture": ExtResource("1_boa07")
+}, {
+"duration": 0.45,
+"texture": ExtResource("2_jf1s3")
+}, {
+"duration": 0.45,
+"texture": ExtResource("3_yt6vr")
+}, {
+"duration": 0.45,
+"texture": ExtResource("4_4tqi8")
+}, {
+"duration": 0.45,
+"texture": ExtResource("5_jf1s3")
+}, {
+"duration": 0.45,
+"texture": ExtResource("1_boa07")
+}, {
+"duration": 0.45,
+"texture": ExtResource("2_jf1s3")
+}, {
+"duration": 0.45,
+"texture": ExtResource("3_yt6vr")
+}, {
+"duration": 0.45,
+"texture": ExtResource("4_4tqi8")
+}, {
+"duration": 0.45,
+"texture": ExtResource("5_jf1s3")
+}, {
+"duration": 0.45,
+"texture": ExtResource("1_boa07")
+}, {
+"duration": 0.45,
+"texture": ExtResource("2_jf1s3")
+}, {
+"duration": 0.4,
+"texture": ExtResource("3_yt6vr")
+}, {
+"duration": 0.4,
+"texture": ExtResource("4_4tqi8")
+}, {
+"duration": 0.45,
+"texture": ExtResource("5_jf1s3")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Node2D" type="Node2D" unique_id=1765416233]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=51929092]
+sprite_frames = SubResource("SpriteFrames_hrdqf")
+autoplay = "default"
+frame_progress = 0.6078108
