@@ -77,6 +77,8 @@
 [ext_resource type="Script" uid="uid://dd16yu704x6wt" path="res://Scripts/Componentes/BGM_Player.gd" id="52_x8j6d"]
 [ext_resource type="Texture2D" uid="uid://cdoeovi1pkiyo" path="res://Sprites/Cenário/Mata_Atlantica/Interativos/amosatrra 2.png" id="53_idg5b"]
 [ext_resource type="AudioStream" uid="uid://b2vi4qav4gk5r" path="res://Audio/SFX/AMBIENTE/Cururu - Soundscape A.ogg" id="53_sje6b"]
+[ext_resource type="PackedScene" path="res://Objetos/Funcionalidade/MostraTela.tscn" id="53_thr42"]
+[ext_resource type="Texture2D" uid="uid://daavc04bfrocb" path="res://Sprites/UI/Dialogo/DICA_VIDA.png" id="55_q2ysr"]
 [ext_resource type="Texture2D" uid="uid://bu66so2bkubke" path="res://Sprites/VFX/Iluminação/LightCururu2.png" id="55_sxmps"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_ny35b"]
@@ -191,6 +193,9 @@ shader_parameter/detail = 1.0
 shader_parameter/heightOffset = 0.0
 shader_parameter/flip_wind = false
 shader_parameter/offset = 0.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_thr42"]
+size = Vector2(256, 78)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_td0al"]
 size = Vector2(928, 174)
@@ -980,6 +985,18 @@ position = Vector2(4269, -1411)
 scale = Vector2(0.5371097, 0.5371097)
 texture = ExtResource("53_idg5b")
 
+[node name="MostraTela" parent="0" unique_id=976943619 instance=ExtResource("53_thr42")]
+position = Vector2(4257, -1199)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="0/MostraTela" unique_id=1149115835]
+position = Vector2(1, 0)
+shape = SubResource("RectangleShape2D_thr42")
+
+[node name="DicaVida" type="Sprite2D" parent="0/MostraTela" unique_id=556731556]
+position = Vector2(29, -509)
+scale = Vector2(1.1069521, 1.1069517)
+texture = ExtResource("55_q2ysr")
+
 [node name="Cururu" parent="0" unique_id=1710397734 instance=ExtResource("29_q2ysr")]
 z_index = 0
 position = Vector2(1008.9998, -1159.9999)
@@ -1689,7 +1706,7 @@ texture = ExtResource("50_s5uib")
 
 [node name="5c67d19fAad64a128e7fAe0bbbab2054" type="Sprite2D" parent="2" unique_id=174234679]
 self_modulate = Color(0.012617188, 0.012617188, 0.012617188, 1)
-position = Vector2(3905.7146, -1695.5864)
+position = Vector2(3567.6194, -1695.5864)
 scale = Vector2(0.84660274, 1.1854454)
 texture = ExtResource("38_vw05h")
 
@@ -1737,7 +1754,7 @@ texture = ExtResource("23_tfbbh")
 
 [node name="MataAtlântica020260313104440" type="Sprite2D" parent="2" unique_id=1745528101]
 self_modulate = Color(0.012617188, 0.012617188, 0.012617188, 1)
-position = Vector2(3179.0474, -2024.7621)
+position = Vector2(2986.6667, -2024.7621)
 texture = ExtResource("23_tfbbh")
 
 [node name="MataAtlântica020260313103751" type="Sprite2D" parent="2" unique_id=1906631139]
