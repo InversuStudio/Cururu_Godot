@@ -25,6 +25,7 @@
 [ext_resource type="Texture2D" uid="uid://c1sosljkqiv38" path="res://Sprites/Inimigos/Boitata/Ataques/Pilar de Fogo/final-0033.png" id="27_hbiq0"]
 [ext_resource type="Texture2D" uid="uid://do8h0xh4inkhy" path="res://Sprites/Inimigos/Boitata/Ataques/Pilar de Fogo/final-0034.png" id="28_xu7bp"]
 [ext_resource type="Texture2D" uid="uid://3p8a4724aqxj" path="res://Sprites/Inimigos/Boitata/Ataques/Pilar de Fogo/final-0035.png" id="29_jf45a"]
+[ext_resource type="Texture2D" uid="uid://bu66so2bkubke" path="res://Sprites/VFX/Iluminação/LightCururu2.png" id="29_lotv7"]
 [ext_resource type="Texture2D" uid="uid://dashcbs1i6hol" path="res://Sprites/Inimigos/Boitata/Ataques/Pilar de Fogo/final-0036.png" id="30_xwv4y"]
 [ext_resource type="Texture2D" uid="uid://ccegc5pplv4gx" path="res://Sprites/Inimigos/Boitata/Ataques/Pilar de Fogo/final-0037.png" id="31_8u1mn"]
 [ext_resource type="Texture2D" uid="uid://bo1apn0o2ltrk" path="res://Sprites/Inimigos/Boitata/Ataques/Pilar de Fogo/final-0038.png" id="32_bmbxo"]
@@ -193,5 +194,12 @@ autoplay = true
 
 [node name="Anim" type="AnimationPlayer" parent="." unique_id=1341158531]
 libraries/ = SubResource("AnimationLibrary_lrp0d")
+
+[node name="PointLight2D" type="PointLight2D" parent="." unique_id=1940313112]
+position = Vector2(-3.4999924, -134.5)
+scale = Vector2(0.3368201, 1.9718614)
+color = Color(0.48001462, 1.0234983, 1.3269993, 1)
+energy = 1.92
+texture = ExtResource("29_lotv7")
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

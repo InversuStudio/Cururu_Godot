@@ -13,6 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://n6pd6v23a4j2" path="res://Sprites/Inimigos/Boitata/Ataques/Bola de Fogo/boitata_111.png" id="10_363cr"]
 [ext_resource type="AudioStream" uid="uid://bsgfpgh6g7f4o" path="res://Audio/SFX/BOITATA/Bola_fogo.mp3" id="10_u6gje"]
 [ext_resource type="AudioStream" uid="uid://cji7jh2imtp5t" path="res://Audio/SFX/BOITATA/Caindo_chão.mp3" id="11_iwi73"]
+[ext_resource type="Texture2D" uid="uid://bu66so2bkubke" path="res://Sprites/VFX/Iluminação/LightCururu2.png" id="12_u0of5"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_u0rk8"]
 animations = [{
@@ -86,6 +87,13 @@ linear_damp = 1.0
 unique_name_in_owner = true
 rotation = 1.5707964
 shape = SubResource("CapsuleShape2D_e7y2f")
+
+[node name="PointLight2D" type="PointLight2D" parent="Sprite" unique_id=1267400040]
+position = Vector2(169.99998, -28.750004)
+scale = Vector2(1.9351463, 1.1093073)
+color = Color(0.48001462, 1.0234983, 1.3269993, 1)
+energy = 1.92
+texture = ExtResource("12_u0of5")
 
 [node name="Timer" type="Timer" parent="." unique_id=2115840216]
 wait_time = 3.0

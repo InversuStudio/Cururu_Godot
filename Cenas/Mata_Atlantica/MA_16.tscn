@@ -1,13 +1,16 @@
 [gd_scene format=4 uid="uid://c4rls1pfwei2e"]
 
 [ext_resource type="Texture2D" uid="uid://e4138tmbd6ck" path="res://Sprites/Cenário/Mata_Atlantica/Background/110 Sem Título_20260213153415.png" id="1_s7kye"]
-[ext_resource type="Texture2D" uid="uid://3g4iv5385ymw" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/arvore_S2.png" id="4_4882g"]
-[ext_resource type="Texture2D" uid="uid://dv0q1amqoq168" path="res://Sprites/Cenário/Mata_Atlantica/Background/Mata/mato03.png" id="5_l6p7n"]
-[ext_resource type="Texture2D" uid="uid://wng7roaj8xu6" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/arvore_S1.png" id="7_ty1hn"]
-[ext_resource type="Texture2D" uid="uid://dru600hg8oaty" path="res://Sprites/Cenário/Mata_Atlantica/Background/Mata/mato02.png" id="8_acroo"]
-[ext_resource type="Texture2D" uid="uid://ccql65wj55kqf" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/arvore_s3.png" id="9_hqaqg"]
-[ext_resource type="Texture2D" uid="uid://d3t6c4pjsosio" path="res://Sprites/Cenário/Mata_Atlantica/Background/Mata/mato01.png" id="10_7rmnr"]
-[ext_resource type="Texture2D" uid="uid://bt8vw2o8t62am" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/arvore_miasma.png" id="12_w6tf2"]
+[ext_resource type="Shader" uid="uid://c1omtsxv04udh" path="res://Scripts/Shaders/blur_shader.gdshader" id="2_s7kye"]
+[ext_resource type="Texture2D" uid="uid://dy4ijmjmean6p" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/arvore_S2.png" id="4_4882g"]
+[ext_resource type="Texture2D" uid="uid://yln77sy1ylrp" path="res://Sprites/Cenário/Mata_Atlantica/Background/Mata/mato03.png" id="5_l6p7n"]
+[ext_resource type="Texture2D" uid="uid://ygubbnruuhaw" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/arvore_S1.png" id="7_ty1hn"]
+[ext_resource type="Texture2D" uid="uid://i664886fdh55" path="res://Sprites/Cenário/Mata_Atlantica/Background/Mata/mato02.png" id="8_acroo"]
+[ext_resource type="Texture2D" uid="uid://ga665js0jsci" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/arvore_S3.png" id="9_hqaqg"]
+[ext_resource type="Shader" uid="uid://dc0bwmy1j0o5i" path="res://Scripts/Shaders/fog.gdshader" id="9_maupx"]
+[ext_resource type="Texture2D" uid="uid://yrshunpt0tr8" path="res://Sprites/Cenário/Mata_Atlantica/Background/Mata/mato01.png" id="10_7rmnr"]
+[ext_resource type="Texture2D" uid="uid://7hahb728ibli" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/arvore_miasma.png" id="12_w6tf2"]
+[ext_resource type="Texture2D" uid="uid://0agjwkmg3gef" path="res://Sprites/VFX/Iluminação/luz azul.png" id="13_6qvld"]
 [ext_resource type="Texture2D" uid="uid://6xmqb8rst36e" path="res://Sprites/Cenário/Mata_Atlantica/Chao/moita_miasma1.png" id="13_us20a"]
 [ext_resource type="PackedScene" uid="uid://b7m7lb1s11mbw" path="res://Objetos/Boss/Boitata/Boitata.tscn" id="14_ktto4"]
 [ext_resource type="AudioStream" uid="uid://bw1sgrrx8pvit" path="res://Audio/SFX/AMBIENTE/Musica_Boss_Boitata.ogg" id="15_bgway"]
@@ -36,6 +39,7 @@
 [ext_resource type="Texture2D" uid="uid://cjl88xeknofui" path="res://Sprites/Cenário/Mata_Atlantica/Chao/grama_reto.png" id="38_0quqb"]
 [ext_resource type="Texture2D" uid="uid://dw42p1qq6njp8" path="res://Sprites/Cenário/Mata_Atlantica/Chao/moita_miasma2.png" id="39_e6ktp"]
 [ext_resource type="Texture2D" uid="uid://rbtvfm4m7ft" path="res://Sprites/VFX/Iluminação/SOMBRA2.png" id="40_ukj8n"]
+[ext_resource type="Texture2D" uid="uid://cxa4pl0scvs5k" path="res://Sprites/VFX/Partículas/folhastx.png" id="40_wl1nf"]
 [ext_resource type="Texture2D" uid="uid://jecy4bfqqqxu" path="res://Sprites/Cenário/Mata_Atlantica/Teto/Moita teste.png" id="41_8a82p"]
 [ext_resource type="Texture2D" uid="uid://c8bkav2g3wyeu" path="res://Sprites/Cenário/Mata_Atlantica/Chao/moita2.png" id="42_8p6fm"]
 [ext_resource type="Texture2D" uid="uid://uq6dbjep5wva" path="res://Sprites/Cenário/Mata_Atlantica/Foreground/frontfolha.png" id="43_0nkb0"]
@@ -43,6 +47,46 @@
 [ext_resource type="PackedScene" uid="uid://1apfpwlqocxn" path="res://Objetos/Funcionalidade/TransicaoFase.tscn" id="45_ygg14"]
 [ext_resource type="Script" uid="uid://dd16yu704x6wt" path="res://Scripts/Componentes/BGM_Player.gd" id="46_4nae2"]
 [ext_resource type="PackedScene" uid="uid://u28e3eudu6ch" path="res://Objetos/Funcionalidade/MainCamera.tscn" id="47_3uh5w"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_maupx"]
+shader = ExtResource("2_s7kye")
+shader_parameter/darkness = 0.10000000475
+shader_parameter/lod = 0.6000000285
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_s7kye"]
+shader = ExtResource("2_s7kye")
+shader_parameter/darkness = 0.10000000475
+shader_parameter/lod = 0.6000000285
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_eiwdw"]
+shader = ExtResource("2_s7kye")
+shader_parameter/darkness = 0.10000000475
+shader_parameter/lod = 0.6000000285
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_6qvld"]
+shader = ExtResource("2_s7kye")
+shader_parameter/darkness = 0.10000000475
+shader_parameter/lod = 0.550000026125
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_wl1nf"]
+shader = ExtResource("9_maupx")
+shader_parameter/fog_color = Color(0.18717614, 0.18717614, 0.18717614, 0.7921569)
+shader_parameter/density = 1.0
+shader_parameter/speed = 0.4
+shader_parameter/scale = 2.5
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_8ogo1"]
+particle_flag_disable_z = true
+emission_shape = 3
+emission_box_extents = Vector3(300, 500, 1)
+spread = 20.0
+initial_velocity_min = 1.0
+initial_velocity_max = 5.0
+radial_velocity_min = -10.000022
+radial_velocity_max = 49.999977
+gravity = Vector3(-10, -100, 0)
+scale_min = 0.25
+scale_max = 0.5
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_o607x"]
 size = Vector2(66, 912.5)
@@ -176,18 +220,35 @@ shader_parameter/heightOffset = 0.0
 shader_parameter/flip_wind = false
 shader_parameter/offset = 0.0
 
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_qp27v"]
+particles_animation = true
+particles_anim_h_frames = 7
+particles_anim_v_frames = 1
+particles_anim_loop = false
+
+[sub_resource type="Gradient" id="Gradient_ita6t"]
+offsets = PackedFloat32Array(0, 0.1958042, 0.74825174, 1)
+colors = PackedColorArray(1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_yyslo"]
+gradient = SubResource("Gradient_ita6t")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_x20r4"]
+particle_flag_disable_z = true
+emission_shape = 3
+emission_box_extents = Vector3(7500, 500, 1)
+spread = 20.0
+initial_velocity_min = 0.5
+initial_velocity_max = 2.0
+angular_velocity_min = -1.6093254e-05
+angular_velocity_max = 29.999983
+gravity = Vector3(-20, 30, 0)
+scale_min = 0.19999999
+scale_max = 0.29999998
+color_ramp = SubResource("GradientTexture1D_yyslo")
+anim_offset_max = 1.0
+
 [node name="MA_2-7" type="Node2D" unique_id=226357128]
-
-[node name="-5" type="CanvasLayer" parent="." unique_id=137825394]
-visible = false
-follow_viewport_enabled = true
-follow_viewport_scale = 0.65
-
-[node name="CanvasModulate" type="CanvasModulate" parent="-5" unique_id=163524635]
-visible = false
-position = Vector2(-4830418, -558429.06)
-scale = Vector2(30888.035, 1551.4684)
-color = Color(0, 0, 0, 1)
 
 [node name="-4" type="CanvasLayer" parent="." unique_id=759908728]
 follow_viewport_enabled = true
@@ -208,10 +269,22 @@ position = Vector2(-1600.0001, -10852.5)
 scale = Vector2(1.0913086, 1.0913086)
 texture = ExtResource("1_s7kye")
 
+[node name="ColorRect" type="ColorRect" parent="-4" unique_id=434522747]
+material = SubResource("ShaderMaterial_maupx")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -7105.714
+offset_top = -12651.43
+offset_right = -2102.8574
+offset_bottom = -10408.571
+grow_horizontal = 2
+grow_vertical = 2
+
 [node name="CanvasModulate" type="CanvasModulate" parent="-4" unique_id=1715928177]
 position = Vector2(-27329.11, -13826.375)
 scale = Vector2(175.74992, 39.388683)
-color = Color(0, 0, 0, 1)
+color = Color(0.13319641, 0.13319641, 0.13319638, 1)
 
 [node name="-3,5" type="CanvasLayer" parent="." unique_id=568571791]
 follow_viewport_enabled = true
@@ -245,7 +318,7 @@ texture = ExtResource("4_4882g")
 [node name="CanvasModulate" type="CanvasModulate" parent="-3,5" unique_id=1532007632]
 position = Vector2(-27329.11, -13826.375)
 scale = Vector2(175.74992, 39.388683)
-color = Color(0, 0, 0, 1)
+color = Color(0.13333334, 0.13333334, 0.13333334, 1)
 
 [node name="-3" type="CanvasLayer" parent="." unique_id=2117157649]
 follow_viewport_enabled = true
@@ -266,10 +339,22 @@ position = Vector2(-987.9999, -10722.8)
 scale = Vector2(0.8, 0.8)
 texture = ExtResource("5_l6p7n")
 
+[node name="ColorRect" type="ColorRect" parent="-3" unique_id=2011066350]
+material = SubResource("ShaderMaterial_s7kye")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -7235.4844
+offset_top = -12523.749
+offset_right = -1630.0137
+offset_bottom = -10372.42
+grow_horizontal = 2
+grow_vertical = 2
+
 [node name="CanvasModulate" type="CanvasModulate" parent="-3" unique_id=1528275518]
 position = Vector2(-27329.11, -13826.375)
 scale = Vector2(175.74992, 39.388683)
-color = Color(0, 0, 0, 1)
+color = Color(0.13333334, 0.13333334, 0.13333334, 1)
 
 [node name="-2,5" type="CanvasLayer" parent="." unique_id=1554661304]
 follow_viewport_enabled = true
@@ -288,7 +373,7 @@ texture = ExtResource("7_ty1hn")
 [node name="CanvasModulate" type="CanvasModulate" parent="-2,5" unique_id=1898742926]
 position = Vector2(-27329.11, -13826.375)
 scale = Vector2(175.74992, 39.388683)
-color = Color(0, 0, 0, 1)
+color = Color(0.13333334, 0.13333334, 0.13333334, 1)
 
 [node name="-2" type="CanvasLayer" parent="." unique_id=443703700]
 follow_viewport_enabled = true
@@ -309,10 +394,22 @@ position = Vector2(-348.00012, -10473.8)
 scale = Vector2(0.99999994, 0.99999994)
 texture = ExtResource("8_acroo")
 
+[node name="ColorRect" type="ColorRect" parent="-2" unique_id=1775169747]
+material = SubResource("ShaderMaterial_eiwdw")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -7107.778
+offset_top = -12764.444
+offset_right = -1406.4438
+offset_bottom = -10148.865
+grow_horizontal = 2
+grow_vertical = 2
+
 [node name="CanvasModulate" type="CanvasModulate" parent="-2" unique_id=1542988746]
 position = Vector2(-27329.11, -13826.375)
 scale = Vector2(175.74992, 39.388683)
-color = Color(0, 0, 0, 1)
+color = Color(0.13333334, 0.13333334, 0.13333334, 1)
 
 [node name="-1,5" type="CanvasLayer" parent="." unique_id=72141677]
 follow_viewport_enabled = true
@@ -337,7 +434,7 @@ texture = ExtResource("9_hqaqg")
 [node name="CanvasModulate" type="CanvasModulate" parent="-1,5" unique_id=859431440]
 position = Vector2(-27329.11, -13826.375)
 scale = Vector2(175.74992, 39.388683)
-color = Color(0, 0, 0, 1)
+color = Color(0.13333334, 0.13333334, 0.13333334, 1)
 
 [node name="-1" type="CanvasLayer" parent="." unique_id=1863905597]
 follow_viewport_enabled = true
@@ -361,7 +458,21 @@ texture = ExtResource("10_7rmnr")
 [node name="CanvasModulate" type="CanvasModulate" parent="-1" unique_id=919153298]
 position = Vector2(-27329.11, -13826.375)
 scale = Vector2(175.74992, 39.388683)
-color = Color(0, 0, 0, 1)
+color = Color(0.13333334, 0.13333334, 0.13333334, 1)
+
+[node name="ColorRect" type="ColorRect" parent="-1" unique_id=125376101]
+material = SubResource("ShaderMaterial_6qvld")
+offset_left = -8053.1245
+offset_top = -12596.875
+offset_right = 1634.8306
+offset_bottom = -9194.653
+
+[node name="Fog" type="ColorRect" parent="-1" unique_id=885992687]
+material = SubResource("ShaderMaterial_wl1nf")
+offset_left = -8005.1694
+offset_top = -12229.527
+offset_right = 1380.852
+offset_bottom = -9848.846
 
 [node name="-0,5" type="CanvasLayer" parent="." unique_id=86798231]
 follow_viewport_enabled = true
@@ -395,7 +506,7 @@ texture = ExtResource("12_w6tf2")
 [node name="CanvasModulate" type="CanvasModulate" parent="-0,5" unique_id=1937717558]
 position = Vector2(-27329.11, -13826.375)
 scale = Vector2(175.74992, 39.388683)
-color = Color(0, 0, 0, 1)
+color = Color(0.13333334, 0.13333334, 0.13333334, 1)
 
 [node name="-0,2" type="CanvasLayer" parent="." unique_id=1250855717]
 follow_viewport_enabled = true
@@ -423,10 +534,20 @@ texture = ExtResource("27_iruwy")
 [node name="CanvasModulate" type="CanvasModulate" parent="-0,2" unique_id=1830517515]
 position = Vector2(-27329.11, -13826.375)
 scale = Vector2(175.74992, 39.388683)
-color = Color(0, 0, 0, 1)
+color = Color(0.13333334, 0.13333334, 0.13333334, 1)
 
 [node name="0" type="CanvasLayer" parent="." unique_id=1047624151]
 follow_viewport_enabled = true
+
+[node name="Particula" type="GPUParticles2D" parent="0" unique_id=225402219]
+self_modulate = Color(0.33417645, 0.7147162, 0.9012643, 1)
+position = Vector2(-2912, -10871)
+scale = Vector2(13.239998, 1.747371)
+amount = 200
+amount_ratio = 0.7
+texture = ExtResource("13_6qvld")
+visibility_rect = Rect2(-2000, -500, 4000, 1000)
+process_material = SubResource("ParticleProcessMaterial_8ogo1")
 
 [node name="Boss" parent="0" unique_id=1956277941 node_paths=PackedStringArray("area_check_player", "target_camera_batalha", "rabo", "parent_pilares", "spawn_pilares", "flip_node") instance=ExtResource("14_ktto4")]
 position = Vector2(-5475, -9964)
@@ -443,8 +564,9 @@ flip_node = [NodePath("../ConfigBoss/PosL"), NodePath("../ConfigBoss/PosR")]
 [node name="PointLight2D2" type="PointLight2D" parent="0/Boss" unique_id=654765117]
 light_mask = 2
 visibility_layer = 2
-position = Vector2(-299, -1102)
-scale = Vector2(2.5647385, 2.5573776)
+position = Vector2(-347.9998, -1102)
+scale = Vector2(2.093664, 2.5573776)
+color = Color(0.48001462, 1.0234983, 1.3269993, 1)
 energy = 1.3
 range_layer_max = 1
 texture = ExtResource("31_ss1nv")
@@ -478,8 +600,9 @@ debug_color = Color(0.9866224, 0, 0.3265099, 0.41960785)
 [node name="PointLight2D3" type="PointLight2D" parent="0/Boss/Rabo" unique_id=1125440749]
 light_mask = 2
 visibility_layer = 2
-position = Vector2(65.20764, 117.49707)
-scale = Vector2(1.1625491, 1.1592126)
+position = Vector2(42.44636, 92.27518)
+scale = Vector2(0.96257734, 1.1592126)
+color = Color(0.48001462, 1.0234983, 1.3269993, 1)
 energy = 1.3
 range_layer_max = 1
 texture = ExtResource("31_ss1nv")
@@ -487,8 +610,8 @@ texture = ExtResource("31_ss1nv")
 [node name="PointLight2D" type="PointLight2D" parent="0/Boss" unique_id=498025673]
 light_mask = 2
 visibility_layer = 2
-position = Vector2(1134.4999, -878.49976)
-scale = Vector2(7.979338, 7.056473)
+position = Vector2(1134.4999, -878.4993)
+scale = Vector2(6.389806, 5.6507816)
 energy = 1.3
 range_layer_max = 1
 texture = ExtResource("31_ss1nv")
@@ -550,13 +673,10 @@ position = Vector2(-2954, -9970)
 scale = Vector2(0.8647799, 0.8647799)
 
 [node name="Node2D" parent="0" unique_id=1613074283 instance=ExtResource("24_2ajv4")]
-position = Vector2(-999, -10506)
-
-[node name="Node2D2" parent="0" unique_id=63894290 instance=ExtResource("24_2ajv4")]
-position = Vector2(-1650, -10506)
+position = Vector2(-1378, -10633)
 
 [node name="Node2D3" parent="0" unique_id=281579050 instance=ExtResource("24_2ajv4")]
-position = Vector2(-2266, -10506)
+position = Vector2(-2266, -10633)
 
 [node name="Cenario" type="Node2D" parent="0" unique_id=760172669]
 position = Vector2(-1761.4286, -10515.429)
@@ -801,7 +921,7 @@ flip_v = true
 [node name="CanvasModulate" type="CanvasModulate" parent="0/Cenario" unique_id=124732364]
 position = Vector2(-1793.3334, -455.04785)
 scale = Vector2(13.257071, 6.2760406)
-color = Color(0, 0, 0, 1)
+color = Color(0.13333334, 0.13333334, 0.13333334, 1)
 
 [node name="MA_14(temp)" parent="0/Cenario" unique_id=932632145 instance=ExtResource("45_ygg14")]
 position = Vector2(1357.4286, 197.42773)
@@ -1399,7 +1519,28 @@ texture = ExtResource("43_0nkb0")
 [node name="CanvasModulate" type="CanvasModulate" parent="1" unique_id=530854593]
 position = Vector2(-27329.11, -13826.375)
 scale = Vector2(175.74992, 39.388683)
-color = Color(0, 0, 0, 1)
+color = Color(0.13333334, 0.13333334, 0.13333334, 1)
+
+[node name="Particula2" type="GPUParticles2D" parent="1" unique_id=539339986]
+self_modulate = Color(0.0011461669, 0.0059021167, 0.009983954, 1)
+position = Vector2(-2912, -10871)
+scale = Vector2(13.239998, 1.747371)
+amount = 100
+amount_ratio = 0.7
+texture = ExtResource("13_6qvld")
+visibility_rect = Rect2(-2000, -500, 4000, 1000)
+process_material = SubResource("ParticleProcessMaterial_8ogo1")
+
+[node name="Folhas" type="GPUParticles2D" parent="1" unique_id=891915353]
+self_modulate = Color(0.012617188, 0.012617188, 0.012617188, 1)
+material = SubResource("CanvasItemMaterial_qp27v")
+position = Vector2(-2821, -10966)
+scale = Vector2(4.529099, 2.4026098)
+amount = 1000
+texture = ExtResource("40_wl1nf")
+lifetime = 5.0
+visibility_rect = Rect2(-7500, -500, 15000, 1000)
+process_material = SubResource("ParticleProcessMaterial_x20r4")
 
 [node name="3" type="CanvasLayer" parent="." unique_id=1158125993]
 

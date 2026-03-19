@@ -176,7 +176,7 @@
 [ext_resource type="AudioStream" uid="uid://betvqt03p81ol" path="res://Audio/SFX/CURURU/dash_cururu.wav" id="154_wxhj3"]
 [ext_resource type="AudioStream" uid="uid://s50orlb3i3jk" path="res://Audio/SFX/CURURU/Caindo.wav" id="155_lv5tx"]
 [ext_resource type="Script" uid="uid://b3wmq1vhw42bm" path="res://Scripts/SFX/sfx_passos.gd" id="156_746bk"]
-[ext_resource type="Texture2D" uid="uid://buxjb8khrvcm7" path="res://Sprites/Cururu/Walljump/WALLJUMP.png" id="157_24i8l"]
+[ext_resource type="Texture2D" uid="uid://buxjb8khrvcm7" path="res://Sprites/Cururu/walljump/WALLJUMP.png" id="157_24i8l"]
 [ext_resource type="AudioStream" uid="uid://cqrbf5wusyf2l" path="res://Audio/SFX/CURURU/Passos/Passo 1.wav" id="159_btflu"]
 [ext_resource type="AudioStream" uid="uid://c35bediccvjup" path="res://Audio/SFX/CURURU/Passos/Passo 2.wav" id="160_746bk"]
 [ext_resource type="AudioStream" uid="uid://d2u6s2ijvdo5m" path="res://Audio/SFX/CURURU/Passos/Passo 3.wav" id="161_wxhj3"]
@@ -2042,8 +2042,8 @@ reducao_pulo = 2.0
 
 [node name="PointLight2D" type="PointLight2D" parent="." unique_id=1952098822]
 position = Vector2(7.6293945e-06, -92)
-scale = Vector2(1.1645019, 1.164502)
-energy = 1.5
+scale = Vector2(1.441558, 1.4415585)
+energy = 1.2
 blend_mode = 2
 range_layer_max = 1
 texture = ExtResource("198_24i8l")

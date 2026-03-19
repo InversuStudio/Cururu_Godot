@@ -2019,8 +2019,6 @@ theme_override_styles/background = SubResource("StyleBoxTexture_2fxlb")
 theme_override_styles/fill = SubResource("StyleBoxTexture_3l7sv")
 value = 100.0
 show_percentage = false
-indeterminate = true
-editor_preview_indeterminate = false
 
 [connection signal="timeout" from="TimerIdle" to="StateMachine/Idle" method="_on_timer_idle_timeout"]
 [connection signal="timeout" from="TimerNocaute" to="StateMachine/Nocaute" method="_on_timer_nocaute_timeout"]
