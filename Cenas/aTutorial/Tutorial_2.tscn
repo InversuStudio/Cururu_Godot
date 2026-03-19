@@ -37,7 +37,6 @@
 [ext_resource type="Texture2D" uid="uid://ctexd1uqvvg2e" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/Arvoresv2/3E92CD98-C4C7-4426-A0A0-7D548CBC2FB5.PNG" id="14_ioups"]
 [ext_resource type="PackedScene" uid="uid://bei1s8te3cwko" path="res://Sprites/Cenário/Mata_Atlantica/Interativos/plataforma.tscn" id="14_p37rg"]
 [ext_resource type="Texture2D" uid="uid://dbj5n7gxejm6d" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/Arvoresv2/mata atlântica_0_20260313104525.PNG" id="15_2l0jy"]
-[ext_resource type="Texture2D" uid="uid://rwmi1ggde5dy" path="res://Sprites/VFX/Iluminação/PORTAL.png" id="18_2gijv"]
 [ext_resource type="Shader" uid="uid://cete83ldr534" path="res://Scripts/Shaders/godray.gdshader" id="19_04dap"]
 [ext_resource type="Texture2D" uid="uid://c8tb73qiqhhk8" path="res://Sprites/Cenário/Mata_Atlantica/Background/Galhos/esquerda01.png" id="19_w0qus"]
 [ext_resource type="Shader" uid="uid://dc0bwmy1j0o5i" path="res://Scripts/Shaders/fog.gdshader" id="20_ay7ko"]
@@ -64,6 +63,7 @@
 [ext_resource type="Texture2D" uid="uid://yfr8jwjcydfu" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/Arvoresv2/mata atlântica_0_20260313104035.PNG" id="33_knbtp"]
 [ext_resource type="Texture2D" uid="uid://0agjwkmg3gef" path="res://Sprites/VFX/Iluminação/luz azul.png" id="36_ay7ko"]
 [ext_resource type="AudioStream" uid="uid://b2vi4qav4gk5r" path="res://Audio/SFX/AMBIENTE/Cururu - Soundscape A.ogg" id="38_6qsbx"]
+[ext_resource type="Texture2D" uid="uid://bu66so2bkubke" path="res://Sprites/VFX/Iluminação/LightCururu2.png" id="49_qwwy8"]
 [ext_resource type="Texture2D" uid="uid://cxa4pl0scvs5k" path="res://Sprites/VFX/Partículas/folhastx.png" id="56_hmpv4"]
 [ext_resource type="Texture2D" uid="uid://yutxm23yhixo" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/Arvoresv2/CD9382AD-633B-4035-A55F-471D39E87282.PNG" id="62_2l0jy"]
 [ext_resource type="Texture2D" uid="uid://clarb10wj2dvn" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/Arvoresv2/mata atlântica_0_20260313104028.PNG" id="63_pgv2o"]
@@ -325,9 +325,9 @@ texture = ExtResource("6_nutf4")
 
 [node name="Blur" type="ColorRect" parent="Background2/-25" unique_id=227783226]
 material = SubResource("ShaderMaterial_y0aom")
-offset_left = -29758.668
+offset_left = -30285.334
 offset_top = -5884.0
-offset_right = -16064.0
+offset_right = -15556.0
 offset_bottom = -1786.667
 
 [node name="-2" type="CanvasLayer" parent="Background2" unique_id=1611947402]
@@ -453,9 +453,9 @@ texture = ExtResource("12_mm5xn")
 [node name="ColorRect" type="ColorRect" parent="Background2/-15" unique_id=503223485]
 material = SubResource("ShaderMaterial_cii1e")
 anchors_preset = -1
-anchor_left = -5.8180137
+anchor_left = -6.059435
 anchor_top = -3.8148148
-anchor_right = 1.2916666
+anchor_right = 1.5876236
 anchor_bottom = -0.03703681
 offset_left = -18635.295
 offset_top = -1812.9414
@@ -556,19 +556,19 @@ material = SubResource("ShaderMaterial_04dap")
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -29795.79
+offset_left = -30120.0
 offset_top = -5822.5
-offset_right = -18075.79
+offset_right = -17438.945
 offset_bottom = -2884.2104
 grow_horizontal = 2
 grow_vertical = 2
 
 [node name="Fog" type="ColorRect" parent="Background2/-05" unique_id=360086449]
 material = SubResource("ShaderMaterial_w0qus")
-offset_left = -29866.316
-offset_top = -5147.0
-offset_right = -16102.0
-offset_bottom = -2338.0
+offset_left = -30280.002
+offset_top = -5617.895
+offset_right = -15557.894
+offset_bottom = -2080.0
 
 [node name="-02" type="CanvasLayer" parent="Background2" unique_id=512374760]
 follow_viewport_enabled = true
@@ -1001,11 +1001,12 @@ position = Vector2(83, -321)
 shape = SubResource("RectangleShape2D_ermhl")
 debug_color = Color(0, 0.6, 0.701961, 0)
 
-[node name="Portal2" type="Sprite2D" parent="Background2/0/Tutorial3" unique_id=1697322096]
-position = Vector2(68, -325)
-scale = Vector2(1, 2.6796875)
-texture = ExtResource("18_2gijv")
-flip_h = true
+[node name="PointLight2D" type="PointLight2D" parent="Background2/0/Tutorial3" unique_id=1582497378]
+position = Vector2(135.00015, -234.00014)
+scale = Vector2(0.45352975, 2.0562768)
+energy = 1.3
+range_layer_max = 1
+texture = ExtResource("49_qwwy8")
 
 [node name="Tutorial1" parent="Background2/0" unique_id=1088799968 instance=ExtResource("5_ermhl")]
 position = Vector2(-29840, -3297)
@@ -1016,10 +1017,12 @@ posicao = Vector2(8928, -1182)
 position = Vector2(41, -411.5)
 shape = SubResource("RectangleShape2D_t5n3b")
 
-[node name="Portal" type="Sprite2D" parent="Background2/0/Tutorial1" unique_id=808083322]
-position = Vector2(104, -501.50006)
-scale = Vector2(1, 3.6757817)
-texture = ExtResource("18_2gijv")
+[node name="PointLight2D" type="PointLight2D" parent="Background2/0/Tutorial1" unique_id=34232176]
+position = Vector2(48.499657, -322.50003)
+scale = Vector2(0.6087884, 2.1796541)
+energy = 1.3
+range_layer_max = 1
+texture = ExtResource("49_qwwy8")
 
 [node name="Particula" type="GPUParticles2D" parent="Background2/0" unique_id=302445686]
 position = Vector2(-24636, -3389)

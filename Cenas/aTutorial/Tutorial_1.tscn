@@ -47,7 +47,6 @@
 [ext_resource type="PackedScene" uid="uid://dn2kwqjchyumh" path="res://Sprites/Cenário/Mata_Atlantica/Interativos/parede_pedras.tscn" id="31_h6qte"]
 [ext_resource type="Texture2D" uid="uid://c7ftx4tv020y8" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/Arvoresv2/mata atlântica_0_20260313104055.PNG" id="31_swwbt"]
 [ext_resource type="Texture2D" uid="uid://bfag5uchq5j4w" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/Arvoresv2/mata atlântica_0_20260313104124.PNG" id="32_tfbbh"]
-[ext_resource type="Texture2D" uid="uid://b73nkcosr250e" path="res://Sprites/VFX/Iluminação/LightCururu.png" id="32_txa1b"]
 [ext_resource type="PackedScene" uid="uid://1apfpwlqocxn" path="res://Objetos/Funcionalidade/TransicaoFase.tscn" id="33_thtro"]
 [ext_resource type="Shader" uid="uid://bbohkd8d1ljws" path="res://Scripts/Shaders/wavewater.gdshader" id="35_1r1ic"]
 [ext_resource type="Texture2D" uid="uid://ctexd1uqvvg2e" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/Arvoresv2/3E92CD98-C4C7-4426-A0A0-7D548CBC2FB5.PNG" id="35_8jgqj"]
@@ -74,6 +73,7 @@
 [ext_resource type="PackedScene" uid="uid://u28e3eudu6ch" path="res://Objetos/Funcionalidade/MainCamera.tscn" id="51_ibmem"]
 [ext_resource type="Script" uid="uid://dd16yu704x6wt" path="res://Scripts/Componentes/BGM_Player.gd" id="52_x8j6d"]
 [ext_resource type="AudioStream" uid="uid://b2vi4qav4gk5r" path="res://Audio/SFX/AMBIENTE/Cururu - Soundscape A.ogg" id="53_sje6b"]
+[ext_resource type="Texture2D" uid="uid://bu66so2bkubke" path="res://Sprites/VFX/Iluminação/LightCururu2.png" id="55_sxmps"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_ny35b"]
 shader = ExtResource("3_3sctc")
@@ -176,12 +176,6 @@ shader_parameter/heightOffset = 0.0
 shader_parameter/flip_wind = false
 shader_parameter/offset = 0.0
 
-[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_qeqrq"]
-particle_flag_disable_z = true
-emission_shape = 3
-emission_box_extents = Vector3(1, 1, 1)
-gravity = Vector3(0, 98, 0)
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_td0al"]
 size = Vector2(928, 174)
 
@@ -234,7 +228,7 @@ particles_anim_loop = false
 offsets = PackedFloat32Array(0, 0.1958042, 0.74825174, 1)
 colors = PackedColorArray(1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0)
 
-[sub_resource type="GradientTexture1D" id="GradientTexture1D_mm3hj"]
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_e0yg5"]
 gradient = SubResource("Gradient_rh2pu")
 
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_rh2pu"]
@@ -249,7 +243,7 @@ angular_velocity_max = 29.999983
 gravity = Vector3(-20, 30, 0)
 scale_min = 0.19999999
 scale_max = 0.29999998
-color_ramp = SubResource("GradientTexture1D_mm3hj")
+color_ramp = SubResource("GradientTexture1D_e0yg5")
 anim_offset_max = 1.0
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_74mlv"]
@@ -596,7 +590,7 @@ offset_bottom = 15.55542
 [node name="Fog" type="ColorRect" parent="-05" unique_id=909861361]
 material = SubResource("ShaderMaterial_rh2pu")
 offset_top = -3019.318
-offset_right = 9386.021
+offset_right = 9639.785
 offset_bottom = -638.6362
 
 [node name="-02" type="CanvasLayer" parent="." unique_id=227217406]
@@ -939,16 +933,6 @@ texture = ExtResource("30_f5hdm")
 position = Vector2(448, -1412)
 scale = Vector2(1.28, 1.28)
 
-[node name="Portal" type="Sprite2D" parent="0" unique_id=1313784065]
-position = Vector2(9270.628, -1506.3763)
-rotation = 1.5707964
-scale = Vector2(1.6387185, 0.37409735)
-texture = ExtResource("32_txa1b")
-flip_h = true
-
-[node name="GPUParticles2D" type="GPUParticles2D" parent="0/Portal" unique_id=2146388900]
-process_material = SubResource("ParticleProcessMaterial_qeqrq")
-
 [node name="Tutorial2" parent="0" unique_id=277819807 instance=ExtResource("33_thtro")]
 position = Vector2(9240, -1595)
 collision_layer = 1
@@ -963,6 +947,13 @@ position = Vector2(-19, 13)
 rotation = 1.5707964
 shape = SubResource("RectangleShape2D_td0al")
 debug_color = Color(0, 0.004019165, 0.0056171864, 0)
+
+[node name="PointLight2D" type="PointLight2D" parent="0/Tutorial2" unique_id=750417656]
+position = Vector2(5.5002575, 80.49997)
+scale = Vector2(0.4665273, 3.5519485)
+energy = 1.3
+range_layer_max = 1
+texture = ExtResource("55_sxmps")
 
 [node name="Agua" type="TileMapLayer" parent="0" unique_id=217411494]
 material = SubResource("ShaderMaterial_yyslo")
@@ -1253,6 +1244,11 @@ texture = ExtResource("27_ytcj4")
 [node name="MoitaTeste24" type="Sprite2D" parent="1/Teto" unique_id=1833156225]
 material = SubResource("ShaderMaterial_74mlv")
 position = Vector2(-30644, -4169)
+texture = ExtResource("27_ytcj4")
+
+[node name="MoitaTeste35" type="Sprite2D" parent="1/Teto" unique_id=1893591286]
+material = SubResource("ShaderMaterial_74mlv")
+position = Vector2(-30234.291, -4137.4116)
 texture = ExtResource("27_ytcj4")
 
 [node name="MoitaTeste30" type="Sprite2D" parent="1/Teto" unique_id=821946229]
