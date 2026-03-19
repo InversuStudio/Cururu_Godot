@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://buxjb8khrvcm7"
-path="res://.godot/imported/WALLJUMP.png-45062312e1853a43a5a7e6f869e11947.ctex"
+uid="uid://d0ysghr7fn6d5"
+path="res://.godot/imported/0C32EBBC-DFF8-41BF-A8D5-F1C7DE7E83BE.PNG-f608acbc5c25a804ae23c2b086adc33a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Cururu/walljump/WALLJUMP.png"
-dest_files=["res://.godot/imported/WALLJUMP.png-45062312e1853a43a5a7e6f869e11947.ctex"]
+source_file="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/Arvoresv2/0C32EBBC-DFF8-41BF-A8D5-F1C7DE7E83BE.PNG"
+dest_files=["res://.godot/imported/0C32EBBC-DFF8-41BF-A8D5-F1C7DE7E83BE.PNG-f608acbc5c25a804ae23c2b086adc33a.ctex"]
 
 [params]
 
