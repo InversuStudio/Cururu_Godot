@@ -175,7 +175,11 @@ func VidaMudou(vida_nova, vida_antiga) -> void:
 		%StateMachine.call_deferred("MudaState", %StateMachine.find_child("Dano"))
 	else:
 		print("RECEBI CURA")
-	
+
+func PlayExtra(som:AudioStream) -> void:
+	%SFX_Extra.stream = som
+	%SFX_Extra.play()
+
 # COMPORTAMENTO AO MORRER
 func Morte() -> void:
 	print("MORRI")

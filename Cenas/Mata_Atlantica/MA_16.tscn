@@ -6,7 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://yln77sy1ylrp" path="res://Sprites/Cenário/Mata_Atlantica/Background/Mata/mato03.png" id="5_l6p7n"]
 [ext_resource type="Texture2D" uid="uid://cc6yes0bp2w0y" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/arvore_S1.png" id="7_ty1hn"]
 [ext_resource type="Texture2D" uid="uid://i664886fdh55" path="res://Sprites/Cenário/Mata_Atlantica/Background/Mata/mato02.png" id="8_acroo"]
-[ext_resource type="Texture2D" uid="uid://b1sv0car32gha" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/arvore_S3.png" id="9_hqaqg"]
+[ext_resource type="Texture2D" uid="uid://b1sv0car32gha" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/arvore_s3.png" id="9_hqaqg"]
 [ext_resource type="Shader" uid="uid://dc0bwmy1j0o5i" path="res://Scripts/Shaders/fog.gdshader" id="9_maupx"]
 [ext_resource type="Texture2D" uid="uid://yrshunpt0tr8" path="res://Sprites/Cenário/Mata_Atlantica/Background/Mata/mato01.png" id="10_7rmnr"]
 [ext_resource type="Texture2D" uid="uid://x1ar0khlrujj" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/arvore_miasma.png" id="12_w6tf2"]
@@ -583,11 +583,12 @@ texture = ExtResource("13_6qvld")
 visibility_rect = Rect2(-2000, -500, 4000, 1000)
 process_material = SubResource("ParticleProcessMaterial_8ogo1")
 
-[node name="Boss" parent="0" unique_id=1956277941 node_paths=PackedStringArray("area_check_player", "target_camera_batalha", "rabo", "parent_pilares", "spawn_pilares", "flip_node") instance=ExtResource("14_ktto4")]
+[node name="Boss" parent="0" unique_id=1956277941 node_paths=PackedStringArray("area_check_player", "target_camera_batalha", "rabo", "pos_rabo", "parent_pilares", "spawn_pilares", "flip_node") instance=ExtResource("14_ktto4")]
 position = Vector2(-5475, -9964)
 area_check_player = NodePath("CheckPlayer")
 target_camera_batalha = NodePath("../ConfigBoss/PosCameraBatalha")
 rabo = NodePath("Rabo")
+pos_rabo = [NodePath("PosRaboHide"), NodePath("PosRaboShow")]
 tempo_idle_cuspe = 1.5
 tempo_idle_pilar = 3.0
 parent_pilares = NodePath("../ConfigBoss/PaiPilares")
@@ -596,7 +597,7 @@ musica_luta = ExtResource("15_bgway")
 flip_node = [NodePath("../ConfigBoss/PosL"), NodePath("../ConfigBoss/PosR")]
 
 [node name="CheckPlayer" type="Area2D" parent="0/Boss" unique_id=1296495921]
-position = Vector2(1205, -430)
+position = Vector2(1492, -430)
 collision_layer = 0
 collision_mask = 2
 
@@ -604,44 +605,50 @@ collision_mask = 2
 position = Vector2(-238, -445.75)
 shape = SubResource("RectangleShape2D_o607x")
 
-[node name="PointLight2D2" type="PointLight2D" parent="0/Boss/CheckPlayer" unique_id=654765117]
-light_mask = 2
-visibility_layer = 2
-position = Vector2(-1553, -672)
-scale = Vector2(2.093664, 2.5573776)
-color = Color(0.48001462, 1.0234983, 1.3269993, 1)
-energy = 1.3
-range_layer_max = 1
-texture = ExtResource("31_ss1nv")
-
 [node name="Rabo" parent="0/Boss" unique_id=773282396 instance=ExtResource("16_6tp3d")]
-position = Vector2(2475.0002, -1030)
+position = Vector2(2535.0002, -330.00006)
 scale = Vector2(1.6255717, 1.6255717)
 collision_layer = 16
 
 [node name="Rabo" type="AnimatedSprite2D" parent="0/Boss/Rabo" unique_id=286775902]
-position = Vector2(62.904602, -54.135056)
+position = Vector2(6.7667465, -503.823)
 scale = Vector2(0.9161272, 0.91612715)
 sprite_frames = SubResource("SpriteFrames_hqusl")
 autoplay = "default"
 frame_progress = 0.45953846
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="0/Boss/Rabo" unique_id=1024456315]
-position = Vector2(28, 192.54762)
+position = Vector2(-8.612568, -258.98578)
 shape = SubResource("CapsuleShape2D_s7f4i")
 debug_color = Color(0.9866224, 0, 0.3265099, 0.41960785)
 
-[node name="PointLight2D3" type="PointLight2D" parent="0/Boss/Rabo" unique_id=1125440749]
+[node name="LuzRabo" type="PointLight2D" parent="0/Boss/Rabo" unique_id=1125440749]
 light_mask = 2
 visibility_layer = 2
-position = Vector2(42.44636, 92.27518)
+position = Vector2(38.7555, -285.43808)
 scale = Vector2(0.96257734, 1.1592126)
 color = Color(0.48001462, 1.0234983, 1.3269993, 1)
 energy = 1.3
 range_layer_max = 1
 texture = ExtResource("31_ss1nv")
 
-[node name="PointLight2D" type="PointLight2D" parent="0" unique_id=498025673]
+[node name="PosRaboHide" type="Marker2D" parent="0/Boss" unique_id=931895043]
+position = Vector2(2535.0002, 937.9998)
+
+[node name="PosRaboShow" type="Marker2D" parent="0/Boss" unique_id=836288586]
+position = Vector2(2535.0002, -330.00006)
+
+[node name="LuzBoss" type="PointLight2D" parent="0/Boss" unique_id=654765117]
+light_mask = 2
+visibility_layer = 2
+position = Vector2(-61, -1102)
+scale = Vector2(2.093664, 2.5573776)
+color = Color(0.48001462, 1.0234983, 1.3269993, 1)
+energy = 1.3
+range_layer_max = 1
+texture = ExtResource("31_ss1nv")
+
+[node name="LuzCena" type="PointLight2D" parent="0" unique_id=498025673]
 light_mask = 2
 visibility_layer = 2
 position = Vector2(-4188, -11004)

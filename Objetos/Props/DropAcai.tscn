@@ -10,27 +10,27 @@ radius = 44.0
 [sub_resource type="CircleShape2D" id="CircleShape2D_s361a"]
 radius = 62.03225
 
-[node name="DropAcai" type="RigidBody2D"]
+[node name="DropAcai" type="RigidBody2D" unique_id=1670737524]
 collision_layer = 32
 collision_mask = 3
 script = ExtResource("1_qvwd5")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=285016417]
 z_index = 1001
 position = Vector2(0, 8)
 scale = Vector2(0.27539063, 0.27539065)
 texture = ExtResource("2_qvwd5")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=61494932]
 shape = SubResource("CircleShape2D_qvwd5")
 
-[node name="AreaGet" type="Area2D" parent="."]
+[node name="AreaGet" type="Area2D" parent="." unique_id=1891097235]
 collision_layer = 0
 collision_mask = 2
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="AreaGet"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AreaGet" unique_id=173803809]
 shape = SubResource("CircleShape2D_s361a")
 
-[node name="OtimizadorSprite" parent="." instance=ExtResource("3_h0hhl")]
+[node name="OtimizadorSprite" parent="." unique_id=1385735074 instance=ExtResource("3_h0hhl")]
 rect = Rect2(-49, -50, 98, 100)
 follow = true

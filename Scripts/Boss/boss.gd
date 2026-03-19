@@ -8,6 +8,7 @@ extends Node2D
 
 ## Node do rabo
 @export var rabo:HitBox = null
+@export var pos_rabo:Array[Marker2D] = [] # [pos baixo, pos cima]
 ## Tempo parado após cuspir fogo
 @export var tempo_idle_cuspe:float = 0.0
 ## Tempo parado após pilar de fogo
@@ -73,7 +74,7 @@ func _ready() -> void:
 			#Esconde sprite armadura
 			#%HurtCabeca.set_deferred("monitorable", false)
 			%HurtCabeca.comp_vida = %VidaBoss
-			%HurtCabeca.sprite = %SpriteMain
+			#%HurtCabeca.sprite = %SpriteMain
 			await get_tree().create_timer(.1).timeout # Só pra ter hit flash
 			%SpriteCabeca.hide()
 			ChecaArmor()
@@ -84,7 +85,7 @@ func _ready() -> void:
 			#Esconde sprite armadura
 			#%HurtCorpo.set_deferred("monitorable", false)
 			%HurtCorpo.comp_vida = %VidaBoss
-			%HurtCorpo.sprite = %SpriteMain
+			#%HurtCorpo.sprite = %SpriteMain
 			await get_tree().create_timer(.1).timeout # Só pra ter hit flash
 			%SpriteCorpo.hide()
 			ChecaArmor()
@@ -98,15 +99,16 @@ func _ready() -> void:
 	# Inicializa barra de vida
 	%BarraVida.max_value = %VidaBoss.vida_max
 	%BarraVida.value = 0.0
-	%BarraVida.hide()
 	%BarraArmor.max_value = vida_miasma_max
 	%BarraArmor.value = 0.0
+	%UI_BOSS.hide()
 	
 	# Inicializa rabo
 	rabo.visibility_changed.connect(func():
 		var val:bool = true if rabo.visible else false
 		rabo.set_deferred("monitoring", val)
 		rabo.set_deferred("monitorable", val))
+	rabo.global_position = pos_rabo[0].global_position
 	rabo.hide()
 
 func ChecaArmor() -> void:
@@ -125,29 +127,28 @@ func TomouDano(vida_atual:int, _vida_antiga:int) -> void:
 	if vida_atual == 10:
 		tempo_idle_cuspe /= 2.0
 		tempo_idle_pilar /= 2.0
+	
+	%SpriteMain.material.set_shader_parameter("valor", 1.0)
+	await get_tree().create_timer(.2).timeout
+	%SpriteMain.material.set_shader_parameter("valor", 0.0)
 
 func ArmorDano() -> void:
 	vida_miasma_atual = %VidaMCabeca.vida_atual + %VidaMCorpo.vida_atual
 	var tween_a:Tween = create_tween()
-	tween_a.tween_property(%BarraArmor, "value", vida_miasma_atual, .15)
-	
-	# Deixa ataques mais rápidos
-	#if vida_atual == 10:
-		#tempo_idle_cuspe /= 2.0
-		#tempo_idle_pilar /= 2.0
+	tween_a.tween_property(%BarraArmor, "value", vida_miasma_max - vida_miasma_atual, .15)
 
 func ResetArmor() -> void:
 	if %VidaBoss.vida_atual <= 0: return
 	vida_miasma_atual = vida_miasma_max
 	
 	%HurtCabeca.comp_vida = %VidaMCabeca
-	%HurtCabeca.sprite = %SpriteCabeca
+	#%HurtCabeca.sprite = %SpriteCabeca
 	%VidaMCabeca.RecebeCura(%VidaMCabeca.vida_max)
 	%HurtCabeca.set_deferred("monitorable", true)
 	%SpriteCabeca.show()
 	
 	%HurtCorpo.comp_vida = %VidaMCorpo
-	%HurtCorpo.sprite = %SpriteCorpo
+	#%HurtCorpo.sprite = %SpriteCorpo
 	%VidaMCorpo.RecebeCura(%VidaMCorpo.vida_max)
 	%HurtCorpo.set_deferred("monitorable", true)
 	%SpriteCorpo.show()
@@ -162,7 +163,8 @@ func Morte() -> void:
 	%HurtCorpo.set_deferred("monitorable", false)
 	%TimerNocaute.stop()
 	%TimerIdle.stop()
-	%BarraVida.hide()
+	%TimerPilar.stop()
+	%UI_BOSS.hide()
 	BGM.TocaMusica()
 	await get_tree().physics_frame
 	state_machine.MudaState(state_machine.find_child("Final"))

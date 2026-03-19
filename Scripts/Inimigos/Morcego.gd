@@ -92,7 +92,7 @@ func Pushback(pos:Vector2, _h:HitBox, _layer:int) -> void:
 
 func Morte() -> void:
 	Mundos.lista_inimigos.append(id)
-	Mundos.SpawnMoeda(get_parent(), global_position)
+	#Mundos.SpawnMoeda(get_parent(), global_position)
 	trava_move = true
 	velocity = Vector2.ZERO
 	%HurtBox.set_deferred("monitorable", false)

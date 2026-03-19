@@ -4,7 +4,7 @@ extends Area2D
 ## Dano aplicado a uma HurtBox
 @export var dano: int = 1
 ## Hurtbox a ser ignorada
-@export var ignore : HurtBox = null
+@export var ignore: Array[HurtBox] = []
 ## Efeito sonoro
 @export var sfx : AudioStream = null
 ## Recebe o node pai
@@ -24,7 +24,8 @@ func _ready() -> void:
 
 func _on_area_entered(area: Area2D) -> void:
 	if area is HurtBox: # Se a colisão for uma HurtBox
-		if area == ignore: return
+		for h:HurtBox in ignore:
+			if area == h: return
 		hit.emit(area.global_position, self, area.collision_layer)
 		area.RecebeDano(dano, global_position)
 		var fx:GPUParticles2D = null

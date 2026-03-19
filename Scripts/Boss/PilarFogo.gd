@@ -28,21 +28,23 @@ func Update(_delta : float) -> State:
 
 # Chamado no AnimationPlayer
 func Ataque() -> void:
-	for pos:Marker2D in parent.spawn_pilares:
-		SpawnPilar(pos.global_position)
-		%TimerPilar.start(parent.tempo_ate_prox_pilar)
-		await %TimerPilar.timeout
-		if parent.nocaute: break
-
-	#var dir:int = parent.scale.x
-	#var num:int = parent.spawn_pilares.size()
-	#var i:int = 0 if dir > 0 else num - 1
-	#for n:int in num:
-		#SpawnPilar(parent.spawn_pilares[i].global_position)
-		#i += dir
-		#%TimerPilar.start(parent.tempo_ate_prox_pilar)
-		#await %TimerPilar.timeout
-		#if parent.nocaute: break
+	var rand:int = randi_range(0,1)
+	if rand > 0:
+		for pos:Marker2D in parent.spawn_pilares:
+			SpawnPilar(pos.global_position)
+			%TimerPilar.start(parent.tempo_ate_prox_pilar)
+			await %TimerPilar.timeout
+			if parent.nocaute: break
+	else:
+		var num_pos:int = parent.spawn_pilares.size()
+		@warning_ignore("integer_division")
+		var half:int = num_pos / 2
+		SpawnPilar(parent.spawn_pilares[half].global_position)
+		SpawnPilar(parent.spawn_pilares[0].global_position)
+		SpawnPilar(parent.spawn_pilares[num_pos - 1].global_position)
+		await get_tree().create_timer(.5).timeout
+		SpawnPilar(parent.spawn_pilares[half + 2].global_position)
+		SpawnPilar(parent.spawn_pilares[half - 2].global_position)
 
 # Instancia os pilares de fogo
 func SpawnPilar(pos:Vector2) -> void:

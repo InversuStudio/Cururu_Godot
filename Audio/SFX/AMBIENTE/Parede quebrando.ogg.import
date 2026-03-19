@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://ygl8rm8ceyjd"
+path="res://.godot/imported/Parede quebrando.ogg-26f076b6c57193bba5321bbcba03e68e.oggvorbisstr"
+
+[deps]
+
+source_file="res://Audio/SFX/AMBIENTE/Parede quebrando.ogg"
+dest_files=["res://.godot/imported/Parede quebrando.ogg-26f076b6c57193bba5321bbcba03e68e.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

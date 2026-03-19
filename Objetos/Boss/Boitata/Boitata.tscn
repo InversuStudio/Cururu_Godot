@@ -210,11 +210,11 @@
 [ext_resource type="PackedScene" uid="uid://dct0yu1s5isad" path="res://Objetos/Boss/Boitata/BolaDeFogo.tscn" id="205_ry0yp"]
 [ext_resource type="PackedScene" uid="uid://dppj6i0ifoocp" path="res://Objetos/Boss/Boitata/PilarFogo.tscn" id="206_5xynu"]
 [ext_resource type="Script" uid="uid://c4x7bs5levrly" path="res://Scripts/Boss/TrocaLado.gd" id="210_72l2h"]
-[ext_resource type="Texture2D" uid="uid://bednmsrsaaxw2" path="res://Sprites/UI/Boitata/V2/VIDAF.png" id="211_7f6q5"]
 [ext_resource type="Texture2D" uid="uid://bvsqr6hhfh0da" path="res://Sprites/UI/Boitata/V2/MODURA.png" id="212_0kp2o"]
 [ext_resource type="Texture2D" uid="uid://ic0br8q65c0i" path="res://Sprites/UI/Boitata/V2/VIDA.png" id="213_l7pve"]
 [ext_resource type="Texture2D" uid="uid://c7qbo0y6c2o7r" path="res://Sprites/UI/Boitata/V2/MIASMA.png" id="214_lx522"]
-[ext_resource type="Texture2D" uid="uid://2ktrden52s17" path="res://Sprites/UI/Boitata/V2/MIASMAAGUA.png" id="215_t22i8"]
+[ext_resource type="Texture2D" uid="uid://tb4y0vlf7ewc" path="res://Sprites/UI/Boitata/V2/AGUA (1).png" id="214_r4nid"]
+[ext_resource type="PackedScene" uid="uid://pc4mgv2nv8af" path="res://Objetos/Funcionalidade/CompHitBox.tscn" id="215_7f6q5"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_iwjnr"]
 shader = ExtResource("7_q8716")
@@ -615,6 +615,9 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": ExtResource("99_gapa0")
+}, {
+"duration": 1.0,
+"texture": null
 }],
 "loop": false,
 "name": &"NocauteStart",
@@ -864,6 +867,9 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": ExtResource("126_pdfjf")
+}, {
+"duration": 1.0,
+"texture": null
 }],
 "loop": false,
 "name": &"NocauteStart",
@@ -943,6 +949,9 @@ animations = [{
 "speed": 10.0
 }]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7f6q5"]
+size = Vector2(494, 1151)
+
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_fwdqd"]
 radius = 171.0
 height = 780.0
@@ -954,9 +963,6 @@ height = 568.0
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_0w5f0"]
 radius = 214.0
 height = 606.0
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_72l2h"]
-size = Vector2(144, 1529)
 
 [sub_resource type="Animation" id="Animation_16hqa"]
 resource_name = "CospeFogo"
@@ -1495,6 +1501,54 @@ tracks/2/keys = {
 "update": 1,
 "values": [true]
 }
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("SpriteCabeca:animation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"NocauteStart"]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("SpriteCabeca:frame")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.10000001, 0.20000002, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("SpriteCorpo:animation")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"NocauteStart"]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("SpriteCorpo:frame")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 0.10000001, 0.20000002, 0.3, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4]
+}
 
 [sub_resource type="Animation" id="Animation_fwdqd"]
 resource_name = "Pilar"
@@ -1623,6 +1677,18 @@ tracks/1/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [6]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("SpriteCorpo:frame")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
 }
 
 [sub_resource type="Animation" id="Animation_r4nid"]
@@ -1793,18 +1859,11 @@ _data = {
 &"Surge": SubResource("Animation_sgy8v")
 }
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2fxlb"]
-texture = ExtResource("214_lx522")
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_3l7sv"]
-texture = ExtResource("215_t22i8")
-texture_margin_left = 70.0
-axis_stretch_horizontal = 1
-
 [node name="Boss" type="Node2D" unique_id=232076307]
 script = ExtResource("1_s15tt")
 tempo_idle_cuspe = 1.0
 tempo_idle_pilar = 2.5
+dist_para_pilar = 6.0
 tempo_carga_pilar = 0.7
 tempo_ate_prox_pilar = 0.1
 musica_luta = ExtResource("2_ojojp")
@@ -1831,7 +1890,7 @@ material = SubResource("ShaderMaterial_iwjnr")
 position = Vector2(0, -1020)
 scale = Vector2(1.5, 1.5)
 sprite_frames = SubResource("SpriteFrames_nkv4g")
-animation = &"Idle"
+animation = &"CospeFogo"
 frame = 7
 
 [node name="SpriteCabeca" type="AnimatedSprite2D" parent="." unique_id=1407401025]
@@ -1840,7 +1899,7 @@ material = SubResource("ShaderMaterial_183op")
 position = Vector2(0, -1020)
 scale = Vector2(1.5, 1.5)
 sprite_frames = SubResource("SpriteFrames_71r63")
-animation = &"Idle"
+animation = &"CospeFogo"
 frame = 6
 
 [node name="SpriteCorpo" type="AnimatedSprite2D" parent="." unique_id=1919865204]
@@ -1849,7 +1908,17 @@ material = SubResource("ShaderMaterial_aev7w")
 position = Vector2(0, -1020)
 scale = Vector2(1.5, 1.5)
 sprite_frames = SubResource("SpriteFrames_tic1h")
-animation = &"Idle"
+animation = &"CospeFogo"
+frame = 1
+
+[node name="HitBox" parent="." unique_id=727505384 node_paths=PackedStringArray("ignore") instance=ExtResource("215_7f6q5")]
+position = Vector2(38, -858)
+ignore = [NodePath("../HurtBox"), NodePath("../HurtCabeca"), NodePath("../HurtCorpo")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HitBox" unique_id=1129292244]
+position = Vector2(-53, 111.5)
+shape = SubResource("RectangleShape2D_7f6q5")
+debug_color = Color(0.63191026, 0.18956223, 0.99999994, 0.41960785)
 
 [node name="VidaBoss" type="Node" parent="." unique_id=1212445150]
 unique_name_in_owner = true
@@ -1857,13 +1926,12 @@ script = ExtResource("2_16hqa")
 vida_max = 50
 metadata/_custom_type_script = "uid://hsdutxxttrp3"
 
-[node name="HurtBox" parent="." unique_id=1116069954 node_paths=PackedStringArray("comp_vida", "sprite") instance=ExtResource("3_fwdqd")]
+[node name="HurtBox" parent="." unique_id=1116069954 node_paths=PackedStringArray("comp_vida") instance=ExtResource("3_fwdqd")]
 unique_name_in_owner = true
 position = Vector2(483, -549)
 collision_layer = 16
 comp_vida = NodePath("../VidaBoss")
 hit_sfx = ExtResource("5_b2ig3")
-sprite = NodePath("../SpriteMain")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HurtBox" unique_id=1241077229]
 rotation = 1.5707964
@@ -1911,13 +1979,6 @@ shape = SubResource("CapsuleShape2D_0w5f0")
 unique_name_in_owner = true
 position = Vector2(423, -933)
 gizmo_extents = 45.0
-
-[node name="ParedeCostas" type="StaticBody2D" parent="." unique_id=1341593828]
-unique_name_in_owner = true
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="ParedeCostas" unique_id=1789736655]
-position = Vector2(-414, -865.5)
-shape = SubResource("RectangleShape2D_72l2h")
 
 [node name="Anim" type="AnimationPlayer" parent="." unique_id=1716167178]
 unique_name_in_owner = true
@@ -1968,6 +2029,7 @@ state_idle = NodePath("../Idle")
 script = ExtResource("95_q1nmn")
 
 [node name="UI_BOSS" type="CanvasLayer" parent="." unique_id=745554726]
+unique_name_in_owner = true
 
 [node name="Control" type="Control" parent="UI_BOSS" unique_id=1274586709]
 layout_mode = 3
@@ -1977,48 +2039,47 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="BarraVida" type="TextureProgressBar" parent="UI_BOSS/Control" unique_id=1155627967]
-unique_name_in_owner = true
+[node name="Moldura" type="TextureRect" parent="UI_BOSS/Control" unique_id=663322444]
 layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -503.0
-offset_top = -131.0
-offset_right = 1372.0
-offset_bottom = 66.0
+offset_left = -847.5
+offset_top = -135.0
+offset_right = 847.5
+offset_bottom = -24.0
 grow_horizontal = 2
 grow_vertical = 0
-scale = Vector2(0.59999996, 0.59999996)
-max_value = 15.0
-step = 0.01
-value = 12.4
-texture_under = ExtResource("211_7f6q5")
-texture_over = ExtResource("212_0kp2o")
-texture_progress = ExtResource("213_l7pve")
-tint_under = Color(0.25836357, 0.16748038, 0.20151487, 1)
-tint_progress = Color(0.6270837, 0, 0.048433684, 1)
+texture = ExtResource("212_0kp2o")
+expand_mode = 1
 
-[node name="BarraArmor" type="ProgressBar" parent="UI_BOSS/Control/BarraVida" unique_id=1963998257]
+[node name="BarraVida" type="TextureProgressBar" parent="UI_BOSS/Control/Moldura" unique_id=568802183]
 unique_name_in_owner = true
-texture_repeat = 2
-layout_mode = 1
-anchors_preset = -1
-anchor_top = 0.5
-anchor_right = 1.0
-anchor_bottom = 0.5
-offset_left = 164.99997
-offset_top = -33.500023
-offset_right = -351.66663
-offset_bottom = 1.4999771
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_styles/background = SubResource("StyleBoxTexture_2fxlb")
-theme_override_styles/fill = SubResource("StyleBoxTexture_3l7sv")
-value = 100.0
-show_percentage = false
+z_index = -1
+layout_mode = 0
+offset_left = 9.0
+offset_top = 11.0
+offset_right = 1683.0
+offset_bottom = 60.0
+step = 0.1
+value = 31.0
+texture_progress = ExtResource("213_l7pve")
+
+[node name="BarraArmor" type="TextureProgressBar" parent="UI_BOSS/Control/Moldura" unique_id=1804526948]
+unique_name_in_owner = true
+z_index = -1
+layout_mode = 0
+offset_left = 165.0
+offset_top = 66.0
+offset_right = 1528.0
+offset_bottom = 100.0
+step = 0.1
+value = 27.4
+fill_mode = 6
+texture_under = ExtResource("214_lx522")
+texture_progress = ExtResource("214_r4nid")
 
 [connection signal="timeout" from="TimerIdle" to="StateMachine/Idle" method="_on_timer_idle_timeout"]
 [connection signal="timeout" from="TimerNocaute" to="StateMachine/Nocaute" method="_on_timer_nocaute_timeout"]

@@ -148,7 +148,7 @@ unique_name_in_owner = true
 position = Vector2(0.22733307, 27.500069)
 scale = Vector2(0.6818189, 0.6818189)
 collision_layer = 16
-ignore = NodePath("../HurtBox")
+ignore = [NodePath("../HurtBox")]
 parent = NodePath("..")
 
 [node name="AreaColisaoHitBox" type="CollisionShape2D" parent="HitBox" unique_id=1095466206]

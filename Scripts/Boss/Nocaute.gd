@@ -12,6 +12,8 @@ func _ready() -> void:
 	print("DEF: " + str(%HurtBox.defesa))
 
 func Enter() -> void:
+	%TimerIdle.stop()
+	%TimerPilar.stop()
 	parent.nocaute = true
 	%Anim.play("NocauteStart")
 	%TimerNocaute.start()
@@ -31,6 +33,8 @@ func Exit() -> void:
 	parent.nocaute = false
 	prossegue = false
 	%TimerNocaute.stop()
+	%HurtBox.defesa = 0
+	%HurtBox.set_deferred("monitorable", false)
 
 func _on_anim_animation_finished(anim_name: StringName) -> void:
 	if get_parent().current_state != self: return

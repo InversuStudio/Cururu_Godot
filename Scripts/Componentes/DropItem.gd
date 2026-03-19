@@ -7,6 +7,8 @@ extends RigidBody2D
 
 var vel:Vector2 = Vector2.ZERO
 
+const sfx_coleta = preload("uid://cwyl4x7vhhq10")
+
 func _ready() -> void:
 	$AreaGet.connect("body_entered", _on_body_entered)
 	# É isso mesmo, Theo. Roubei seu código na cara dura
@@ -19,5 +21,6 @@ func _physics_process(_delta: float) -> void:
 
 func _on_body_entered(body: Node2D) -> void:
 	if body.is_in_group("Player"):
+		body.PlayExtra(sfx_coleta)
 		Inventario.AddItem(Inventario.ItensString[tipo_item])
 		queue_free()
