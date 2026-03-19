@@ -7,7 +7,7 @@ extends RigidBody2D
 
 var vel:Vector2 = Vector2.ZERO
 
-const sfx_coleta = preload("uid://cwyl4x7vhhq10")
+const sfx_coleta = preload("uid://bo4f1065o660y")
 
 func _ready() -> void:
 	$AreaGet.connect("body_entered", _on_body_entered)
