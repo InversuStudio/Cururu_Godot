@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://buxjb8khrvcm7"
-path="res://.godot/imported/WALLJUMP.png-45062312e1853a43a5a7e6f869e11947.ctex"
+uid="uid://cdoeovi1pkiyo"
+path="res://.godot/imported/amosatrra 2.png-82f283a311cef730d443fd0ad3b41783.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Cururu/walljump/WALLJUMP.png"
-dest_files=["res://.godot/imported/WALLJUMP.png-45062312e1853a43a5a7e6f869e11947.ctex"]
+source_file="res://Sprites/Cenário/Mata_Atlantica/Interativos/amosatrra 2.png"
+dest_files=["res://.godot/imported/amosatrra 2.png-82f283a311cef730d443fd0ad3b41783.ctex"]
 
 [params]
 
