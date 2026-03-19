@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://bnubkn7kxj708"]
+
+[ext_resource type="Script" uid="uid://dd7svcu8l7fxu" path="res://Scripts/Componentes/Interacao.gd" id="1_lb0kg"]
+[ext_resource type="Script" uid="uid://drndup8d2ja84" path="res://Scripts/Componentes/MostraTela.gd" id="2_nejno"]
+
+[node name="MostraTela" type="Area2D" unique_id=976943619 node_paths=PackedStringArray("objeto_interacao")]
+editor_description = "Mostra uma tela/sprite ao entrar na área. Apenas coloque a imagem como filha deste node."
+collision_layer = 0
+collision_mask = 2
+script = ExtResource("1_lb0kg")
+objeto_interacao = NodePath("Script")
+metadata/_custom_type_script = "uid://dd7svcu8l7fxu"
+
+[node name="Script" type="Node" parent="." unique_id=1336794716]
+script = ExtResource("2_nejno")

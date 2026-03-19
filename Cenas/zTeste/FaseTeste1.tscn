@@ -34,6 +34,8 @@
 [ext_resource type="PackedScene" uid="uid://va5pjd6vuuo2" path="res://Objetos/Funcionalidade/CompHurtBox.tscn" id="27_ixy8u"]
 [ext_resource type="Script" uid="uid://dd16yu704x6wt" path="res://Scripts/Componentes/BGM_Player.gd" id="31_cq3ie"]
 [ext_resource type="AudioStream" uid="uid://c7qftchbhu6xc" path="res://Audio/SFX/AMBIENTE/Musica_Jogo.mp3" id="32_m8swv"]
+[ext_resource type="PackedScene" uid="uid://bnubkn7kxj708" path="res://Objetos/Funcionalidade/MostraTela.tscn" id="35_geigx"]
+[ext_resource type="Texture2D" uid="uid://cl1vcib5wycma" path="res://Sprites/VFX/Iluminação/ICON.png" id="36_0wrly"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fjg5v"]
 texture = ExtResource("5_tkd1t")
@@ -73,6 +75,9 @@ shader_parameter/offset = 0.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fjg5v"]
 size = Vector2(124, 124)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xwk50"]
+size = Vector2(167, 260)
 
 [node name="FaseTeste" type="Node2D" unique_id=523808259]
 
@@ -412,5 +417,16 @@ shape = SubResource("RectangleShape2D_fjg5v")
 script = ExtResource("31_cq3ie")
 musica = ExtResource("32_m8swv")
 metadata/_custom_type_script = "uid://dd16yu704x6wt"
+
+[node name="MostraTela" parent="." unique_id=976943619 instance=ExtResource("35_geigx")]
+position = Vector2(-110, -395)
+
+[node name="Sprite2D" type="Sprite2D" parent="MostraTela" unique_id=1869903399]
+position = Vector2(-22, -187)
+texture = ExtResource("36_0wrly")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MostraTela" unique_id=910446577]
+position = Vector2(-20.5, -120)
+shape = SubResource("RectangleShape2D_xwk50")
 
 [editable path="Props/UpgradeMissil"]
