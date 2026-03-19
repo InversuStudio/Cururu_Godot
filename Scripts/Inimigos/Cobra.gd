@@ -33,16 +33,26 @@ func _physics_process(delta: float) -> void:
 		velocity.x = move_toward(velocity.x, velocidade * dir, velocidade / 8.0)
 	
 	if %RayDireita.is_colliding() or !%RayVazioDireita.is_colliding():
-		dir = -1
-		%Sprite.flip_h = false
-		%HitBox.scale.x = 1
-		#%HurtBox.scale.x = 1
+		if dir == 1:
+			dir = -1
+			print("virou1")
+			%Sprite.play("virada")
+			await %Sprite.animation_finished
+			%Sprite.play("default")
+			%Sprite.flip_h = false
+			%HitBox.scale.x = 1
+			#%HurtBox.scale.x = 1
 	
 	if %RayEsquerda.is_colliding() or !%RayVazioEsquerda.is_colliding():
-		dir = 1
-		%Sprite.flip_h = true
-		%HitBox.scale.x = -1
-		#%HurtBox.scale.x = -1
+		if dir == -1:
+			dir = 1
+			print("virou2")
+			%Sprite.play("virada")
+			await %Sprite.animation_finished
+			%Sprite.play("default")
+			%Sprite.flip_h = true
+			%HitBox.scale.x = -1
+			#%HurtBox.scale.x = -1
 	
 	move_and_slide()
 

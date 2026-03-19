@@ -17,6 +17,8 @@
 [ext_resource type="Texture2D" uid="uid://yxi1hdj1bo5o" path="res://Sprites/Inimigos/Animação de morte/5.png" id="10_m5aos"]
 [ext_resource type="Texture2D" uid="uid://b88rutgnulrpo" path="res://Sprites/Inimigos/Animação de morte/6.png" id="11_1fts8"]
 [ext_resource type="Texture2D" uid="uid://bdexte3g5lkq7" path="res://Sprites/Inimigos/Animação de morte/7.png" id="12_6t08x"]
+[ext_resource type="Texture2D" uid="uid://clw7r8vhm3pnn" path="res://Sprites/Inimigos/CobraCoral/coralVirada01.png" id="13_a8b1x"]
+[ext_resource type="Texture2D" uid="uid://b7bah6s2awj4i" path="res://Sprites/Inimigos/CobraCoral/coralVirada02.png" id="14_ybhk0"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ntg74"]
 size = Vector2(223.68439, 105.921135)
@@ -64,7 +66,18 @@ animations = [{
 }],
 "loop": false,
 "name": &"morte",
-"speed": 5.0
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("13_a8b1x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_ybhk0")
+}],
+"loop": false,
+"name": &"virada",
+"speed": 8.0
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ihru7"]
@@ -89,8 +102,8 @@ unique_name_in_owner = true
 position = Vector2(38.235317, -197.05896)
 scale = Vector2(0.73920083, 0.7392009)
 sprite_frames = SubResource("SpriteFrames_tkh53")
+animation = &"virada"
 autoplay = "default"
-frame_progress = 0.18063547
 
 [node name="Vida" type="Node" parent="." unique_id=938649480]
 script = ExtResource("5_hcf47")
