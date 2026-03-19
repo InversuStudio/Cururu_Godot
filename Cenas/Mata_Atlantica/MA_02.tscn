@@ -67,8 +67,6 @@
 [ext_resource type="PackedScene" uid="uid://u28e3eudu6ch" path="res://Objetos/Funcionalidade/MainCamera.tscn" id="49_r2jgk"]
 [ext_resource type="Texture2D" uid="uid://clarb10wj2dvn" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/Arvoresv2/mata atlântica_0_20260313104028.PNG" id="62_15e74"]
 [ext_resource type="Texture2D" uid="uid://tc6hgl2fcsgs" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/Arvoresv2/4F43B61C-F17B-4C53-964C-4949229B536C.PNG" id="63_ts3dy"]
-[ext_resource type="PackedScene" path="res://Objetos/Funcionalidade/MostraTela.tscn" id="64_3awaj"]
-[ext_resource type="Texture2D" uid="uid://b4mpyxtqe3pwu" path="res://Sprites/UI/Dialogo/INTERAGIR.png" id="65_uyy7x"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_co6lv"]
 shader = ExtResource("4_3863u")
@@ -181,9 +179,6 @@ scale_min = 0.19999999
 scale_max = 0.29999998
 color_ramp = SubResource("GradientTexture1D_yyslo")
 anim_offset_max = 1.0
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_2ol20"]
-size = Vector2(403, 44)
 
 [node name="MA_1-1" type="Node2D" unique_id=61085530]
 
@@ -1619,18 +1614,6 @@ self_modulate = Color(0.012617188, 0.012617188, 0.012617188, 1)
 position = Vector2(1710.9525, 36.86245)
 scale = Vector2(1.4604188, 1.8298593)
 texture = ExtResource("15_ts3dy")
-
-[node name="MostraTela" parent="background/2/Teto" unique_id=976943619 instance=ExtResource("64_3awaj")]
-position = Vector2(1037, 1010)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="background/2/Teto/MostraTela" unique_id=1906779328]
-position = Vector2(31.5, 8)
-shape = SubResource("RectangleShape2D_2ol20")
-
-[node name="Interagir" type="Sprite2D" parent="background/2/Teto/MostraTela" unique_id=197500876]
-position = Vector2(87.76199, 129.04773)
-scale = Vector2(0.83253986, 0.83253986)
-texture = ExtResource("65_uyy7x")
 
 [node name="3" type="CanvasLayer" parent="background" unique_id=1953598573]
 follow_viewport_enabled = true
