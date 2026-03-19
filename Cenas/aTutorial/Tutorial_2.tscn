@@ -21,7 +21,7 @@
 [ext_resource type="PackedScene" uid="uid://bjvnm0aydr0vd" path="res://Objetos/Entidades/Morcego.tscn" id="6_p37rg"]
 [ext_resource type="Texture2D" uid="uid://jecy4bfqqqxu" path="res://Sprites/Cenário/Mata_Atlantica/Teto/Moita teste.png" id="7_4sgns"]
 [ext_resource type="Texture2D" uid="uid://uq6dbjep5wva" path="res://Sprites/Cenário/Mata_Atlantica/Foreground/frontfolha.png" id="8_646f2"]
-[ext_resource type="Texture2D" uid="uid://b1sv0car32gha" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/arvore_s3.png" id="8_vw1s4"]
+[ext_resource type="Texture2D" uid="uid://b1sv0car32gha" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/arvore_S3.png" id="8_vw1s4"]
 [ext_resource type="Texture2D" uid="uid://i664886fdh55" path="res://Sprites/Cenário/Mata_Atlantica/Background/Mata/mato02.png" id="9_oteog"]
 [ext_resource type="Texture2D" uid="uid://cs5tclcq8xish" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/arvore_S2.png" id="9_s0t4j"]
 [ext_resource type="Texture2D" uid="uid://ra1w5d2v3tvw" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/Arvoresv2/6C28BC06-A7DE-492B-A767-7D7C3B85A403.png" id="10_3oehb"]
@@ -64,6 +64,9 @@
 [ext_resource type="Texture2D" uid="uid://0agjwkmg3gef" path="res://Sprites/VFX/Iluminação/luz azul.png" id="36_ay7ko"]
 [ext_resource type="AudioStream" uid="uid://b2vi4qav4gk5r" path="res://Audio/SFX/AMBIENTE/Cururu - Soundscape A.ogg" id="38_6qsbx"]
 [ext_resource type="Texture2D" uid="uid://bu66so2bkubke" path="res://Sprites/VFX/Iluminação/LightCururu2.png" id="49_qwwy8"]
+[ext_resource type="Texture2D" uid="uid://cdoeovi1pkiyo" path="res://Sprites/Cenário/Mata_Atlantica/Interativos/amosatrra 2.png" id="50_aue61"]
+[ext_resource type="PackedScene" path="res://Objetos/Funcionalidade/MostraTela.tscn" id="51_dp1o5"]
+[ext_resource type="Texture2D" uid="uid://dkp1wy5dw5idu" path="res://Sprites/UI/Dialogo/DICA_DASH.png" id="52_dp1o5"]
 [ext_resource type="Texture2D" uid="uid://cxa4pl0scvs5k" path="res://Sprites/VFX/Partículas/folhastx.png" id="56_hmpv4"]
 [ext_resource type="Texture2D" uid="uid://yutxm23yhixo" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/Arvoresv2/CD9382AD-633B-4035-A55F-471D39E87282.PNG" id="62_2l0jy"]
 [ext_resource type="Texture2D" uid="uid://clarb10wj2dvn" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/Arvoresv2/mata atlântica_0_20260313104028.PNG" id="63_pgv2o"]
@@ -120,6 +123,21 @@ radial_velocity_max = 49.999977
 gravity = Vector3(0, -15, 0)
 scale_min = 0.25
 scale_max = 0.5
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_phua6"]
+shader = ExtResource("22_cii1e")
+shader_parameter/speed = 1.5
+shader_parameter/minStrength = 0.10000000475
+shader_parameter/maxStrength = 0.30000001425
+shader_parameter/strengthScale = 80.0
+shader_parameter/interval = 2.0
+shader_parameter/detail = 1.0
+shader_parameter/heightOffset = 0.0
+shader_parameter/flip_wind = false
+shader_parameter/offset = 0.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rocre"]
+size = Vector2(310.292, 464.4121)
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_q1edg"]
 shader = ExtResource("19_04dap")
@@ -1033,6 +1051,25 @@ amount_ratio = 0.7
 texture = ExtResource("36_ay7ko")
 visibility_rect = Rect2(-2000, -500, 4000, 1000)
 process_material = SubResource("ParticleProcessMaterial_04dap")
+
+[node name="Amosatrra2" type="Sprite2D" parent="Background2/0" unique_id=40023065]
+material = SubResource("ShaderMaterial_phua6")
+position = Vector2(-19995, -4474)
+scale = Vector2(0.5371097, 0.5371097)
+texture = ExtResource("50_aue61")
+
+[node name="MostraTela" parent="Background2/0" unique_id=976943619 instance=ExtResource("51_dp1o5")]
+position = Vector2(-20006, -4240)
+scale = Vector2(0.67999953, 0.67999953)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Background2/0/MostraTela" unique_id=404925954]
+position = Vector2(13.970703, -222.20703)
+shape = SubResource("RectangleShape2D_rocre")
+
+[node name="DicaDash" type="Sprite2D" parent="Background2/0/MostraTela" unique_id=1627548138]
+position = Vector2(17.646973, -635.2946)
+scale = Vector2(1.4250228, 1.4250227)
+texture = ExtResource("52_dp1o5")
 
 [node name="Inimigos" type="Node2D" parent="Background2/0" unique_id=1164061410]
 position = Vector2(-28395, -3344)
