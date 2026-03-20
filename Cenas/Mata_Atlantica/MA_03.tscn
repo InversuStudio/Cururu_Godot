@@ -6,7 +6,7 @@
 [ext_resource type="Shader" uid="uid://c1omtsxv04udh" path="res://Scripts/Shaders/blur_shader.gdshader" id="4_6ski5"]
 [ext_resource type="Texture2D" uid="uid://cc6yes0bp2w0y" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/arvore_S1.png" id="5_hwlog"]
 [ext_resource type="Texture2D" uid="uid://i664886fdh55" path="res://Sprites/Cenário/Mata_Atlantica/Background/Mata/mato02.png" id="6_i10kd"]
-[ext_resource type="Texture2D" uid="uid://b1sv0car32gha" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/arvore_s3.png" id="7_tg5hw"]
+[ext_resource type="Texture2D" uid="uid://b1sv0car32gha" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/arvore_S3.png" id="7_tg5hw"]
 [ext_resource type="Texture2D" uid="uid://yrshunpt0tr8" path="res://Sprites/Cenário/Mata_Atlantica/Background/Mata/mato01.png" id="8_h1j0t"]
 [ext_resource type="Texture2D" uid="uid://c8bkav2g3wyeu" path="res://Sprites/Cenário/Mata_Atlantica/Chao/moita2.png" id="9_7axcw"]
 [ext_resource type="Shader" uid="uid://dc0bwmy1j0o5i" path="res://Scripts/Shaders/fog.gdshader" id="10_bbvfj"]
@@ -200,9 +200,9 @@ anchor_top = -3.8148148
 anchor_right = -2.1447535
 anchor_bottom = -0.03703681
 offset_left = 11802.855
-offset_top = -1803.6201
+offset_top = -2345.7139
 offset_right = 11842.855
-offset_bottom = -1763.6204
+offset_bottom = -2001.1731
 scale = Vector2(0.9844004, 1.7800354)
 
 [node name="-25" type="CanvasLayer" parent="background" unique_id=1165574317]

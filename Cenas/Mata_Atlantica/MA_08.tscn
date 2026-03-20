@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://e4138tmbd6ck" path="res://Sprites/Cenário/Mata_Atlantica/Background/110 Sem Título_20260213153415.png" id="1_guig2"]
 [ext_resource type="Shader" uid="uid://c1omtsxv04udh" path="res://Scripts/Shaders/blur_shader.gdshader" id="3_8p0p3"]
 [ext_resource type="Texture2D" uid="uid://yln77sy1ylrp" path="res://Sprites/Cenário/Mata_Atlantica/Background/Mata/mato03.png" id="3_qyssx"]
-[ext_resource type="Texture2D" uid="uid://b1sv0car32gha" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/arvore_s3.png" id="4_r33ly"]
+[ext_resource type="Texture2D" uid="uid://b1sv0car32gha" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/arvore_S3.png" id="4_r33ly"]
 [ext_resource type="Texture2D" uid="uid://cc6yes0bp2w0y" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/arvore_S1.png" id="5_u1r77"]
 [ext_resource type="Texture2D" uid="uid://i664886fdh55" path="res://Sprites/Cenário/Mata_Atlantica/Background/Mata/mato02.png" id="6_7aepq"]
 [ext_resource type="PackedScene" uid="uid://1apfpwlqocxn" path="res://Objetos/Funcionalidade/TransicaoFase.tscn" id="6_c5tg8"]

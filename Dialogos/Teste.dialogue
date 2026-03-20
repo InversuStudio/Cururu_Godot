@@ -1,13 +1,16 @@
  ~ start
-SACI: Olha só quem deu as caras... o protegido da Naiá.
-SACI: Então a fofoca é verdadeira mesmo...vejo até que recebeu a Cabaça Lunar.
-SACI: ... e eu achando que era só conversa de vento ...
-SACI: Bom, se tu tá metido nessa, é porque a coisa tá feia.
-SACI: O guardião dessa região tá sumido... dizem que espalhou miasma por todo lado...
-SACI: Como você chega até ele? É. Isso aí eu não sei. Mas pra limpar essa sujeira, você vai ter que dar seu melhor.
-SACI: Ou dar seus pulos. Heheh!
-SACI: Procure pela benção da água no caminho adiante, ela purifica o mal que se espalha pela floresta.
-SACI: Mas olho vivo, tem muitos outros segredos que vão ajudar você na jornada.
+if GameData.saci_falou == false:
+	SACI: Olha só quem deu as caras... o protegido da Naiá.
+	SACI: Então a fofoca é verdadeira mesmo...vejo até que recebeu a Cabaça Lunar.
+	SACI: ... e eu achando que era só conversa de vento ...
+	SACI: Bom, se tu tá metido nessa, é porque a coisa tá feia.
+	SACI: O guardião dessa região tá sumido... dizem que espalhou miasma por todo lado...
+	SACI: Como você chega até ele? É. Isso aí eu não sei. Mas pra limpar essa sujeira, você vai ter que dar seu melhor.
+	SACI: Ou dar seus pulos. Heheh!
+	SACI: Procure pela benção da água no caminho adiante, ela purifica o mal que se espalha pela floresta.
+	SACI: Mas olho vivo, tem muitos outros segredos que vão ajudar você na jornada. [do! GameData.saci_falou = true]
+else:
+	SACI: Anda muleque, rapadura é doce mas não é mole não.
 => END!
 
 ~ mapa

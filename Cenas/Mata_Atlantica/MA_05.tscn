@@ -34,7 +34,7 @@
 [ext_resource type="Texture2D" uid="uid://sih3o1ksris8" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/arvore05.png" id="25_y5m3t"]
 [ext_resource type="Texture2D" uid="uid://waauxxjip3k6" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/arvore06.png" id="26_hxknu"]
 [ext_resource type="Texture2D" uid="uid://cijo1xigx64tj" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/arvore03.png" id="27_l2wog"]
-[ext_resource type="Texture2D" uid="uid://b1sv0car32gha" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/arvore_s3.png" id="28_kw2xg"]
+[ext_resource type="Texture2D" uid="uid://b1sv0car32gha" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/arvore_S3.png" id="28_kw2xg"]
 [ext_resource type="Texture2D" uid="uid://cs5tclcq8xish" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/arvore_S2.png" id="29_l7lqk"]
 [ext_resource type="Script" uid="uid://dd16yu704x6wt" path="res://Scripts/Componentes/BGM_Player.gd" id="34_l7lqk"]
 [ext_resource type="AudioStream" uid="uid://c7qftchbhu6xc" path="res://Audio/SFX/AMBIENTE/Musica_Jogo.mp3" id="35_158ye"]
