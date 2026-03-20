@@ -109,7 +109,7 @@ func _on_melee_timeout() -> void:
 
 func Hit(pos_target:Vector2, hit:HitBox, _layer:int) -> void:
 	var dir:float = -1. if pos_target.x > parent.global_position.x else 1.0
-	var up:float = 0.0 if parent.is_on_floor() else -1500.0
+	var up:float = 0.0 if parent.is_on_floor() else -800.0
 	var push:float = ((2.0 * distancia_push) / tempo_push) * 128
 	var vel:Vector2 = Vector2(push * dir, up)
 	parent.velocity = vel

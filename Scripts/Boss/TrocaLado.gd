@@ -5,9 +5,9 @@ extends State
 var terminou:bool = false
 
 func Enter() -> void:
-	%Anim.play("Some")
 	%HurtCabeca.set_deferred("monitorable", false)
 	%HurtCorpo.set_deferred("monitorable", false)
+	%Anim.play("Some")
 	var tween_rabo:Tween = create_tween()
 	tween_rabo.tween_property(parent.rabo, "global_position",
 		parent.pos_rabo[0].global_position, .5)

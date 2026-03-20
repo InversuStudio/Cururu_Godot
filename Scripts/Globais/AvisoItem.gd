@@ -32,8 +32,13 @@ func Mostra(nome:String, desc:String, img:Texture2D, action:StringName = "") -> 
 		desc = desc.replace("BTN", "[img]%s[/img]" % path)
 	
 	%DescItemAviso.text = desc
+	%Seguir.text = %Seguir.text.replace("BTN", "[img]%s[/img]" %
+							GameData.GetUiButtonImage("ui_accept"))
+	%Seguir.modulate.a = 0.0
 
 	%Anim.play("TelaOn")
 	%ColorRect.visible = true
 	await %Anim.animation_finished
+	var tween:Tween = create_tween()
+	tween.tween_property(%Seguir, "modulate", Color.WHITE, .5)
 	ativo = true

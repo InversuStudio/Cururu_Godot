@@ -15,8 +15,9 @@ func Enter() -> void:
 	%Anim.play("Idle")
 	%TimerIdle.start()
 
-func FixedUpdate(_delta : float) -> State:
+func FixedUpdate(_delta: float) -> State:
 	if prosseguir:
+		if parent.vida_miasma_atual <= 0: return null
 		if parent.natl > 0:
 			var dist:float = Mundos.player.global_position.x - parent.global_position.x
 			if abs(dist) <= parent.dist_para_pilar * 128:
@@ -25,9 +26,6 @@ func FixedUpdate(_delta : float) -> State:
 		else:
 			parent.natl = parent.num_ate_trocar_lado
 			return state_troca
-		#if randi_range(0,1) == 1:
-			#return state_cospe_fogo
-		#return state_pilar_fogo
 	return null
 	
 func _on_timer_idle_timeout() -> void:

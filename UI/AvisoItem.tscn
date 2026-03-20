@@ -135,17 +135,37 @@ vertical_alignment = 1
 script = ExtResource("4_qmy0w")
 max_font_size = 50
 
-[node name="VBoxContainer" type="VBoxContainer" parent="AvisoItem/Conteudo/VBoxContainer" unique_id=1563253648]
-layout_mode = 2
-size_flags_vertical = 3
-
-[node name="DescItemAviso" type="RichTextLabel" parent="AvisoItem/Conteudo/VBoxContainer/VBoxContainer" unique_id=1285259944]
+[node name="DescItemAviso" type="RichTextLabel" parent="AvisoItem/Conteudo/VBoxContainer" unique_id=1285259944]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_font_sizes/normal_font_size = 40
 bbcode_enabled = true
 text = "Descrição Item labubu"
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("4_qmy0w")
+
+[node name="Seguir" type="RichTextLabel" parent="AvisoItem/Conteudo" unique_id=938057735]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -320.5
+offset_top = -129.0
+offset_right = -22.0
+offset_bottom = -26.0
+grow_horizontal = 0
+grow_vertical = 0
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.2
+theme_override_colors/default_color = Color(0.7417226, 0.6294677, 0.55546534, 1)
+theme_override_font_sizes/normal_font_size = 32
+bbcode_enabled = true
+text = "Continuar  BTN"
 horizontal_alignment = 1
 vertical_alignment = 1
 
