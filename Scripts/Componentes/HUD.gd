@@ -74,12 +74,8 @@ func _process(delta: float) -> void:
 		%MapaSmall.hide()
 
 func MudaImgInput() -> void:
-	#%Select.texture = load()
-	#%Back.texture = load(GameData.GetUiButtonImage("ui_cancel"))
-	var txt_select:String = %Select.text.get_slice(" ", 1)
-	%Select.text = "[img]%s[/img]   %s" % [GameData.GetUiButtonImage("ui_accept"), txt_select]
-	var txt_back:String = %Back.text.get_slice(" ", 1)
-	%Back.text = "[img]%s[/img]   %s" % [GameData.GetUiButtonImage("ui_cancel"), txt_back]
+	%Select.text = "[img]%s[/img]   %s" % [GameData.GetUiButtonImage("ui_accept"), "Selecionar"]
+	%Back.text = "[img]%s[/img]   %s" % [GameData.GetUiButtonImage("ui_cancel"), "Voltar"]
 
 func _ready() -> void:
 	# Conecta sinais de mudança de valor

@@ -58,6 +58,9 @@ func Start() -> void:
 	var tween_title:Tween = create_tween()
 	tween_title.tween_property(%Titulo, "modulate", Color.WHITE, .2)
 	%TimerTitulo.start(2)
-		
+	
+	var tween_light:Tween = create_tween()
+	tween_light.tween_property(parent.luz_boss, "energy", parent.luz, .5)
+	
 	await %Anim.animation_finished
 	inicia_luta = true

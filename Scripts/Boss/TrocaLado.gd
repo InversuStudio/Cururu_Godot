@@ -11,6 +11,8 @@ func Enter() -> void:
 	var tween_rabo:Tween = create_tween()
 	tween_rabo.tween_property(parent.rabo, "global_position",
 		parent.pos_rabo[0].global_position, .5)
+	var tween_light:Tween = create_tween()
+	tween_light.tween_property(parent.luz_boss, "energy", 0.0, .5)
 	await %Anim.animation_finished
 	%Anim.play("Escondido")
 	if parent.scale.x > 0:
@@ -27,6 +29,9 @@ func Enter() -> void:
 	tween_rabo = create_tween()
 	tween_rabo.tween_property(parent.rabo, "global_position",
 		parent.pos_rabo[1].global_position, .5)
+	tween_light.kill()
+	tween_light = create_tween()
+	tween_light.tween_property(parent.luz_boss, "energy", parent.luz, .5)
 	await %Anim.animation_finished
 	%HurtCabeca.set_deferred("monitorable", true)
 	%HurtCorpo.set_deferred("monitorable", true)

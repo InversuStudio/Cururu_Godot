@@ -44,10 +44,12 @@ var num_vul:int = 0
 @export var zoom:float = .6
 ## Arquivos de áudio contendo as vozes de fala
 @export var vozes_fala:Array[AudioStream] = []
+## Luz do boss
+@export var luz_boss:Light2D = null
 
 var tween:Tween = null
-
 var nocaute:bool = false
+var luz:float = 0.0
 
 var vida_miasma_max:int = 0
 var vida_miasma_atual:int = 0
@@ -72,6 +74,9 @@ func _ready() -> void:
 	DialogueManager.connect("got_dialogue", func(_l:DialogueLine) -> void:
 		var id:int = randi_range(0, vozes_fala.size() - 1)
 		if id >= 0: DialogoCMD.voz = vozes_fala[id])
+	
+	luz = luz_boss.energy
+	luz_boss.energy = 0.0
 	
 	# Sinais de vida
 	%VidaBoss.connect("alterou_vida", TomouDano)

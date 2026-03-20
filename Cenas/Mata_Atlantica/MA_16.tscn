@@ -638,7 +638,7 @@ texture = ExtResource("13_6qvld")
 visibility_rect = Rect2(-2000, -500, 4000, 1000)
 process_material = SubResource("ParticleProcessMaterial_8ogo1")
 
-[node name="Boss" parent="0" unique_id=1956277941 node_paths=PackedStringArray("area_check_player", "target_camera_batalha", "rabo", "pos_rabo", "parent_pilares", "spawn_pilares", "flip_node") instance=ExtResource("14_ktto4")]
+[node name="Boss" parent="0" unique_id=1956277941 node_paths=PackedStringArray("area_check_player", "target_camera_batalha", "rabo", "pos_rabo", "parent_pilares", "spawn_pilares", "flip_node", "luz_boss") instance=ExtResource("14_ktto4")]
 position = Vector2(-5475, -9964)
 area_check_player = NodePath("CheckPlayer")
 target_camera_batalha = NodePath("../ConfigBoss/PosCameraBatalha")
@@ -650,6 +650,7 @@ parent_pilares = NodePath("../ConfigBoss/PaiPilares")
 spawn_pilares = [NodePath("../ConfigBoss/PaiPilares/PosPilar1"), NodePath("../ConfigBoss/PaiPilares/PosPilar2"), NodePath("../ConfigBoss/PaiPilares/PosPilar3"), NodePath("../ConfigBoss/PaiPilares/PosPilar4"), NodePath("../ConfigBoss/PaiPilares/PosPilar5"), NodePath("../ConfigBoss/PaiPilares/PosPilar6"), NodePath("../ConfigBoss/PaiPilares/PosPilar7"), NodePath("../ConfigBoss/PaiPilares/PosPilar8"), NodePath("../ConfigBoss/PaiPilares/PosPilar9")]
 musica_luta = ExtResource("15_bgway")
 flip_node = [NodePath("../ConfigBoss/PosL"), NodePath("../ConfigBoss/PosR")]
+luz_boss = NodePath("LuzBoss")
 
 [node name="CheckPlayer" type="Area2D" parent="0/Boss" unique_id=1296495921]
 position = Vector2(1492, -430)
