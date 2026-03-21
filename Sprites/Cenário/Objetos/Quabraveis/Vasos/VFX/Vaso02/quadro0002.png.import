@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://buxjb8khrvcm7"
-path="res://.godot/imported/WALLJUMP.png-45062312e1853a43a5a7e6f869e11947.ctex"
+uid="uid://bqsbmfp6l6jqb"
+path="res://.godot/imported/quadro0002.png-5a0925ce405d57af1c44a96779e5cabb.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Cururu/walljump/WALLJUMP.png"
-dest_files=["res://.godot/imported/WALLJUMP.png-45062312e1853a43a5a7e6f869e11947.ctex"]
+source_file="res://Sprites/Cenário/Objetos/Quabraveis/Vasos/VFX/Vaso02/quadro0002.png"
+dest_files=["res://.godot/imported/quadro0002.png-5a0925ce405d57af1c44a96779e5cabb.ctex"]
 
 [params]
 

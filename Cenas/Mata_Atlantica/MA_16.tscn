@@ -6,10 +6,11 @@
 [ext_resource type="Texture2D" uid="uid://yln77sy1ylrp" path="res://Sprites/Cenário/Mata_Atlantica/Background/Mata/mato03.png" id="5_l6p7n"]
 [ext_resource type="Texture2D" uid="uid://cc6yes0bp2w0y" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/arvore_S1.png" id="7_ty1hn"]
 [ext_resource type="Texture2D" uid="uid://i664886fdh55" path="res://Sprites/Cenário/Mata_Atlantica/Background/Mata/mato02.png" id="8_acroo"]
-[ext_resource type="Texture2D" uid="uid://b1sv0car32gha" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/arvore_s3.png" id="9_hqaqg"]
+[ext_resource type="Texture2D" uid="uid://b1sv0car32gha" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/arvore_S3.png" id="9_hqaqg"]
 [ext_resource type="Shader" uid="uid://dc0bwmy1j0o5i" path="res://Scripts/Shaders/fog.gdshader" id="9_maupx"]
 [ext_resource type="Texture2D" uid="uid://yrshunpt0tr8" path="res://Sprites/Cenário/Mata_Atlantica/Background/Mata/mato01.png" id="10_7rmnr"]
 [ext_resource type="Texture2D" uid="uid://dbd7u8r5gc1c2" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/Arvoresv2/DF2863DD-A31D-4FD6-8334-087AF5C46BA9.PNG" id="10_a60eu"]
+[ext_resource type="PackedScene" uid="uid://b1elmr5805xoc" path="res://Sprites/VFX/VFX_Cenario/fogo_mata.tscn" id="10_b3tkq"]
 [ext_resource type="Texture2D" uid="uid://x1ar0khlrujj" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/arvore_miasma.png" id="12_w6tf2"]
 [ext_resource type="Texture2D" uid="uid://0agjwkmg3gef" path="res://Sprites/VFX/Iluminação/luz azul.png" id="13_6qvld"]
 [ext_resource type="Texture2D" uid="uid://cqbmkgbnj6txv" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/Arvoresv2/mata atlântica_0_2_20260319103434.png" id="13_hbi5w"]
@@ -81,8 +82,8 @@ shader_parameter/scale = 1.5
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_6qvld"]
 shader = ExtResource("2_s7kye")
-shader_parameter/darkness = 0.10000000475
-shader_parameter/lod = 0.550000026125
+shader_parameter/darkness = 0.02000000095
+shader_parameter/lod = 0.400000019
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_hbi5w"]
 shader = ExtResource("28_48sfr")
@@ -283,12 +284,12 @@ scale = Vector2(1.0913086, 1.0913086)
 texture = ExtResource("1_s7kye")
 
 [node name="110SemTítulo20260213153416" type="Sprite2D" parent="-4" unique_id=1094450257]
-position = Vector2(-3288.5715, -10852.5)
+position = Vector2(-3721.4287, -10852.5)
 scale = Vector2(1.0913086, 1.0913086)
 texture = ExtResource("1_s7kye")
 
 [node name="110SemTítulo20260213153417" type="Sprite2D" parent="-4" unique_id=1003032646]
-position = Vector2(-1600.0001, -10852.5)
+position = Vector2(-2342.857, -10852.5)
 scale = Vector2(1.0913086, 1.0913086)
 texture = ExtResource("1_s7kye")
 
@@ -419,6 +420,10 @@ position = Vector2(-1257.0002, -10907.001)
 scale = Vector2(1.1458104, 0.8139577)
 texture = ExtResource("12_w6tf2")
 
+[node name="Node2D3" parent="-2,5" unique_id=1316149818 instance=ExtResource("10_b3tkq")]
+position = Vector2(-4072.9412, -10523.529)
+scale = Vector2(0.65143585, 0.65143585)
+
 [node name="CanvasModulate" type="CanvasModulate" parent="-2,5" unique_id=1898742926]
 position = Vector2(-27329.11, -13826.375)
 scale = Vector2(175.74992, 39.388683)
@@ -496,6 +501,10 @@ position = Vector2(-1696.9995, -10190.2)
 scale = Vector2(1.2, 1.2)
 texture = ExtResource("10_7rmnr")
 
+[node name="Node2D" parent="-1" unique_id=1613765897 instance=ExtResource("10_b3tkq")]
+position = Vector2(-3365.625, -10352.084)
+scale = Vector2(0.65143585, 0.65143585)
+
 [node name="Fog" type="ColorRect" parent="-1" unique_id=885992687]
 material = SubResource("ShaderMaterial_wl1nf")
 offset_left = -8005.1694
@@ -518,6 +527,17 @@ color = Color(0.13333334, 0.13333334, 0.13333334, 1)
 [node name="-0,5" type="CanvasLayer" parent="." unique_id=86798231]
 follow_viewport_enabled = true
 follow_viewport_scale = 0.97
+
+[node name="Node2D2" parent="-0,5" unique_id=1151844016 instance=ExtResource("10_b3tkq")]
+position = Vector2(-4958.3335, -10250.001)
+scale = Vector2(0.65143585, 0.65143585)
+
+[node name="ColorRect" type="ColorRect" parent="-0,5" unique_id=488744727]
+material = SubResource("ShaderMaterial_6qvld")
+offset_left = -8290.721
+offset_top = -12794.845
+offset_right = 1397.2344
+offset_bottom = -9392.622
 
 [node name="Queimada01" type="Sprite2D" parent="-0,5" unique_id=88525946]
 position = Vector2(-3683, -10825)
@@ -1331,8 +1351,33 @@ position = Vector2(1061.3735, 524.5976)
 scale = Vector2(1.4612763, 1.4612763)
 texture = ExtResource("42_8p6fm")
 
+[node name="Node2D2" parent="1/Teto/BoitataCenario" unique_id=827364479 instance=ExtResource("10_b3tkq")]
+modulate = Color(0.5370987, 0.5370987, 0.5370987, 1)
+position = Vector2(-507.89777, 596.68665)
+scale = Vector2(1.2456858, 1.2456858)
+
+[node name="Node2D3" parent="1/Teto/BoitataCenario" unique_id=939737255 instance=ExtResource("10_b3tkq")]
+modulate = Color(0.45262197, 0.45262197, 0.45262197, 1)
+position = Vector2(2127.9663, 709.4137)
+scale = Vector2(1.2456858, 1.2456858)
+
 [node name="Frontfolha29" type="Sprite2D" parent="1/Teto/BoitataCenario" unique_id=1459377224]
 position = Vector2(-649.7802, 317.09653)
+scale = Vector2(1.4612763, 1.4612763)
+texture = ExtResource("43_0nkb0")
+
+[node name="Frontfolha37" type="Sprite2D" parent="1/Teto/BoitataCenario" unique_id=113042396]
+position = Vector2(-1071.5327, 502.0515)
+scale = Vector2(1.4612763, 1.4612763)
+texture = ExtResource("43_0nkb0")
+
+[node name="Frontfolha38" type="Sprite2D" parent="1/Teto/BoitataCenario" unique_id=1978773275]
+position = Vector2(-783.4526, 471.43567)
+scale = Vector2(1.4612763, 1.4612763)
+texture = ExtResource("43_0nkb0")
+
+[node name="Frontfolha39" type="Sprite2D" parent="1/Teto/BoitataCenario" unique_id=1587357330]
+position = Vector2(2418.8289, 925.12573)
 scale = Vector2(1.4612763, 1.4612763)
 texture = ExtResource("43_0nkb0")
 

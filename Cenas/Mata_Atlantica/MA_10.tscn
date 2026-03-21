@@ -651,9 +651,9 @@ position = Vector2(6863, -705)
 [node name="Escorpiao3" parent="0/Entidades" unique_id=730661902 instance=ExtResource("27_aw4uh")]
 position = Vector2(3620, -1855)
 
-[node name="Cururu" parent="0/Entidades" unique_id=1764927139 instance=ExtResource("2_4lf50")]
+[node name="Cururu" parent="0" unique_id=1764927139 instance=ExtResource("2_4lf50")]
 z_index = 0
-position = Vector2(5182.0005, -180.00003)
+position = Vector2(512.0005, 1394)
 
 [node name="Particula" type="GPUParticles2D" parent="0" unique_id=1214739010]
 position = Vector2(-394.0022, -133.24945)
@@ -2067,7 +2067,7 @@ limit_left = -4329
 limit_top = -1871
 limit_right = 3448
 limit_bottom = 1607
-target = NodePath("../0/Entidades/Cururu")
+target = NodePath("../0/Cururu")
 limite_camera = NodePath("../LimiteCam")
 
 [node name="LimiteCam" type="ReferenceRect" parent="." unique_id=238775481]

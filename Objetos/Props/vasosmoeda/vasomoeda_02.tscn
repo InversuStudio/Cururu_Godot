@@ -1,13 +1,14 @@
-[gd_scene load_steps=11 format=3 uid="uid://cppreprc8pa3k"]
+[gd_scene format=3 uid="uid://cppreprc8pa3k"]
 
 [ext_resource type="Script" uid="uid://drxk6hwuv2e3i" path="res://Scripts/Componentes/Bau.gd" id="1_seuef"]
 [ext_resource type="PackedScene" uid="uid://va5pjd6vuuo2" path="res://Objetos/Funcionalidade/CompHurtBox.tscn" id="2_wn4od"]
 [ext_resource type="AudioStream" uid="uid://cnv7vp76x4q2x" path="res://Audio/SFX/AMBIENTE/Jarro quebrando.wav" id="3_seuef"]
-[ext_resource type="Texture2D" uid="uid://8rbhvq514fp0" path="res://Sprites/Cenário/Objetos/Quabraveis/Vasos/VFX/01.png" id="4_eauit"]
-[ext_resource type="Texture2D" uid="uid://c2vy8car41yny" path="res://Sprites/Cenário/Objetos/Quabraveis/Vasos/VFX/02.png" id="5_fsnlf"]
-[ext_resource type="Texture2D" uid="uid://bsinyssrgovn0" path="res://Sprites/Cenário/Objetos/Quabraveis/Vasos/VFX/03.png" id="6_rb1gn"]
-[ext_resource type="Texture2D" uid="uid://rmdr5veprlua" path="res://Sprites/Cenário/Objetos/Quabraveis/Vasos/VFX/04.png" id="7_rlga3"]
-[ext_resource type="Texture2D" uid="uid://cquobu7g7kr4y" path="res://Sprites/Cenário/Objetos/Quabraveis/Vasos/vaso_02.png" id="8_seuef"]
+[ext_resource type="Texture2D" uid="uid://nt84ascj2vj1" path="res://Sprites/Cenário/Objetos/Quabraveis/Vasos/VFX/Vaso02/quadro0000.png" id="4_wn4od"]
+[ext_resource type="Texture2D" uid="uid://wx63scfldrjp" path="res://Sprites/Cenário/Objetos/Quabraveis/Vasos/VFX/Vaso02/quadro0001.png" id="5_e68lo"]
+[ext_resource type="Texture2D" uid="uid://bqsbmfp6l6jqb" path="res://Sprites/Cenário/Objetos/Quabraveis/Vasos/VFX/Vaso02/quadro0002.png" id="6_eauit"]
+[ext_resource type="Texture2D" uid="uid://rld6fqeqlvpu" path="res://Sprites/Cenário/Objetos/Quabraveis/Vasos/VFX/Vaso02/quadro0003.png" id="7_fsnlf"]
+[ext_resource type="Texture2D" uid="uid://sfst0lfhb2v7" path="res://Sprites/Cenário/Objetos/Quabraveis/Vasos/VFX/Vaso02/quadro0004.png" id="8_rb1gn"]
+[ext_resource type="Texture2D" uid="uid://bos0822285mbv" path="res://Sprites/Cenário/Objetos/Quabraveis/Vasos/VFX/Vaso02/quadro0006.png" id="9_wn4od"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4vmwf"]
 size = Vector2(187, 185)
@@ -16,16 +17,19 @@ size = Vector2(187, 185)
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("4_eauit")
+"texture": ExtResource("4_wn4od")
 }, {
 "duration": 1.0,
-"texture": ExtResource("5_fsnlf")
+"texture": ExtResource("5_e68lo")
 }, {
 "duration": 1.0,
-"texture": ExtResource("6_rb1gn")
+"texture": ExtResource("6_eauit")
 }, {
 "duration": 1.0,
-"texture": ExtResource("7_rlga3")
+"texture": ExtResource("7_fsnlf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_rb1gn")
 }],
 "loop": false,
 "name": &"Abre",
@@ -33,27 +37,27 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("8_seuef")
+"texture": ExtResource("9_wn4od")
 }],
 "loop": true,
 "name": &"Normal",
 "speed": 5.0
 }]
 
-[node name="Bau" type="Node2D"]
+[node name="Bau" type="Node2D" unique_id=1639657195]
 script = ExtResource("1_seuef")
 
-[node name="HurtBox" parent="." node_paths=PackedStringArray("sprite") instance=ExtResource("2_wn4od")]
+[node name="HurtBox" parent="." unique_id=2065670188 node_paths=PackedStringArray("sprite") instance=ExtResource("2_wn4od")]
 collision_layer = 16
 hit_sfx = ExtResource("3_seuef")
 sprite = NodePath("../Sprite")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="HurtBox"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HurtBox" unique_id=665786924]
 position = Vector2(1.5, -93.5)
 shape = SubResource("RectangleShape2D_4vmwf")
 debug_color = Color(0.7753908, 0.38766962, 0.5591627, 0.41960785)
 
-[node name="Sprite" type="AnimatedSprite2D" parent="."]
+[node name="Sprite" type="AnimatedSprite2D" parent="." unique_id=1952160677]
 position = Vector2(0, -107)
 scale = Vector2(0.2734375, 0.27343756)
 sprite_frames = SubResource("SpriteFrames_5tjap")
@@ -61,7 +65,7 @@ animation = &"Normal"
 autoplay = "Normal"
 speed_scale = 1.5
 
-[node name="PosItem" type="Marker2D" parent="."]
+[node name="PosItem" type="Marker2D" parent="." unique_id=481646701]
 z_index = 1001
 position = Vector2(0, -110)
 

@@ -1,0 +1,66 @@
+[gd_scene format=3 uid="uid://b1elmr5805xoc"]
+
+[ext_resource type="Texture2D" uid="uid://bv1oj31iv7phf" path="res://Sprites/Cenário/Mata_Atlantica/fogo/final-0001.png" id="1_bxai6"]
+[ext_resource type="Texture2D" uid="uid://jngtg1fh3tn6" path="res://Sprites/Cenário/Mata_Atlantica/fogo/final-0003.png" id="2_acwi1"]
+[ext_resource type="Texture2D" uid="uid://br8aqooejnsn7" path="res://Sprites/Cenário/Mata_Atlantica/fogo/final-0005.png" id="3_s731d"]
+[ext_resource type="Texture2D" uid="uid://5fxo8ucxyuqr" path="res://Sprites/Cenário/Mata_Atlantica/fogo/final-0007.png" id="4_qkruf"]
+[ext_resource type="Texture2D" uid="uid://hfosmsjmyfuc" path="res://Sprites/Cenário/Mata_Atlantica/fogo/final-0009.png" id="5_carmk"]
+[ext_resource type="Texture2D" uid="uid://cio3165oxxcke" path="res://Sprites/Cenário/Mata_Atlantica/fogo/final-0011.png" id="6_f8aea"]
+[ext_resource type="Texture2D" uid="uid://buspxuq5nqjbl" path="res://Sprites/Cenário/Mata_Atlantica/fogo/final-0013.png" id="7_u7beh"]
+[ext_resource type="Texture2D" uid="uid://b5bc31l3hm1wy" path="res://Sprites/Cenário/Mata_Atlantica/fogo/final-0015.png" id="8_5mxfb"]
+[ext_resource type="Texture2D" uid="uid://cfpvxm47lx5oj" path="res://Sprites/Cenário/Mata_Atlantica/fogo/final-0017.png" id="9_dp80i"]
+[ext_resource type="Texture2D" uid="uid://drrdoqdyk5mik" path="res://Sprites/Cenário/Mata_Atlantica/fogo/final-0019.png" id="10_c8i8w"]
+[ext_resource type="Texture2D" uid="uid://durn7p7f1hwok" path="res://Sprites/Cenário/Mata_Atlantica/fogo/final-0021.png" id="11_6djm1"]
+[ext_resource type="Texture2D" uid="uid://dqo3xdj6ursh1" path="res://Sprites/Cenário/Mata_Atlantica/fogo/final-0023.png" id="12_687vt"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_5bud8"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_bxai6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_acwi1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_s731d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_qkruf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_carmk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_f8aea")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_u7beh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_5mxfb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_dp80i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_c8i8w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_6djm1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_687vt")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
+
+[node name="Node2D" type="Node2D" unique_id=1316149818]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1897541304]
+position = Vector2(0, -444)
+sprite_frames = SubResource("SpriteFrames_5bud8")
+autoplay = "default"
+frame_progress = 0.41184217

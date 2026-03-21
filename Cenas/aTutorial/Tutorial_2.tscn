@@ -63,6 +63,8 @@
 [ext_resource type="Texture2D" uid="uid://yfr8jwjcydfu" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/Arvoresv2/mata atlântica_0_20260313104035.PNG" id="33_knbtp"]
 [ext_resource type="Texture2D" uid="uid://0agjwkmg3gef" path="res://Sprites/VFX/Iluminação/luz azul.png" id="36_ay7ko"]
 [ext_resource type="AudioStream" uid="uid://b2vi4qav4gk5r" path="res://Audio/SFX/AMBIENTE/Cururu - Soundscape A.ogg" id="38_6qsbx"]
+[ext_resource type="PackedScene" uid="uid://1fdx2ie24dh8" path="res://Objetos/Props/arvoreguarana.tscn" id="46_rocre"]
+[ext_resource type="PackedScene" uid="uid://u48tpl3f3l20" path="res://Objetos/Props/DropGuarana.tscn" id="47_2evx6"]
 [ext_resource type="Texture2D" uid="uid://bu66so2bkubke" path="res://Sprites/VFX/Iluminação/LightCururu2.png" id="49_qwwy8"]
 [ext_resource type="Texture2D" uid="uid://cdoeovi1pkiyo" path="res://Sprites/Cenário/Mata_Atlantica/Interativos/amosatrra 2.png" id="50_aue61"]
 [ext_resource type="PackedScene" path="res://Objetos/Funcionalidade/MostraTela.tscn" id="51_dp1o5"]
@@ -976,6 +978,11 @@ position = Vector2(-29189, -3396)
 scale = Vector2(0.635, 0.635)
 texture = ExtResource("29_77xc2")
 flip_h = true
+
+[node name="ArvoreGuarana" parent="Background2/0" unique_id=1939146182 instance=ExtResource("46_rocre")]
+position = Vector2(-21163, -3837)
+drop_item = Array[PackedScene]([ExtResource("47_2evx6")])
+multi_drop = true
 
 [node name="Armadilha" parent="Background2/0" unique_id=720132593 node_paths=PackedStringArray("spawn_points") instance=ExtResource("11_fo7ry")]
 position = Vector2(-27147, -3083)
@@ -1970,7 +1977,7 @@ flip_h = true
 
 [node name="49ee43ea5129452f8072Ce0b3e0b96d7" type="Sprite2D" parent="Background2/2" unique_id=1360779601]
 self_modulate = Color(0.012617188, 0.012617188, 0.012617188, 1)
-position = Vector2(-21347.273, -4300.909)
+position = Vector2(-20741.904, -4347.619)
 texture = ExtResource("31_rocre")
 
 [node name="49ee43ea5129452f8072Ce0b3e0b96d8" type="Sprite2D" parent="Background2/2" unique_id=133089070]

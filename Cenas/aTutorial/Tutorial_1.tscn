@@ -78,6 +78,8 @@
 [ext_resource type="PackedScene" uid="uid://dny88hy3w52nm" path="res://Objetos/Props/DropAcai.tscn" id="54_f5hdm"]
 [ext_resource type="Texture2D" uid="uid://daavc04bfrocb" path="res://Sprites/UI/Dialogo/DICA_VIDA.png" id="55_q2ysr"]
 [ext_resource type="Texture2D" uid="uid://bu66so2bkubke" path="res://Sprites/VFX/Iluminação/LightCururu2.png" id="55_sxmps"]
+[ext_resource type="Texture2D" uid="uid://bnnb7jjjothj3" path="res://Sprites/UI/Dialogo/ATACAR.png" id="76_ytcj4"]
+[ext_resource type="PackedScene" uid="uid://c6hglvets6hgp" path="res://Objetos/Funcionalidade/OtimizadorCena.tscn" id="80_thr42"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_ny35b"]
 shader = ExtResource("3_3sctc")
@@ -271,6 +273,9 @@ size = Vector2(1417, 141)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jwima"]
 size = Vector2(1449, 44)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_q2ysr"]
+size = Vector2(293, 144)
+
 [node name="Tutorial_1" type="Node2D" unique_id=1617733573]
 
 [node name="-4" type="CanvasLayer" parent="." unique_id=2045436367]
@@ -399,48 +404,50 @@ texture = ExtResource("6_ebxlw")
 follow_viewport_enabled = true
 follow_viewport_scale = 0.88
 
-[node name="PilarTemplo3" type="Sprite2D" parent="-15" unique_id=1240382340]
+[node name="cenario03" type="Node2D" parent="-15" unique_id=1880632278]
+
+[node name="PilarTemplo3" type="Sprite2D" parent="-15/cenario03" unique_id=1240382340]
 position = Vector2(2779.5918, -1572.1097)
 scale = Vector2(0.6252286, 0.6252286)
 texture = ExtResource("19_vw05h")
 
-[node name="MataAtlântica020260313104860" type="Sprite2D" parent="-15" unique_id=446189867]
+[node name="MataAtlântica020260313104860" type="Sprite2D" parent="-15/cenario03" unique_id=446189867]
 position = Vector2(5346.667, -2255.7224)
 scale = Vector2(0.7328523, 0.76851577)
 texture = ExtResource("20_hxoyl")
 flip_h = true
 
-[node name="49ee43ea5129452f8072Ce0b3e0b96d8" type="Sprite2D" parent="-15" unique_id=878570575]
+[node name="49ee43ea5129452f8072Ce0b3e0b96d8" type="Sprite2D" parent="-15/cenario03" unique_id=878570575]
 position = Vector2(5761.1113, -2511.111)
 texture = ExtResource("39_wditg")
 
-[node name="Mato02" type="Sprite2D" parent="-15" unique_id=1477506959]
+[node name="Mato02" type="Sprite2D" parent="-15/cenario03" unique_id=1477506959]
 position = Vector2(3267, -1145.8824)
 texture = ExtResource("7_jiro2")
 
-[node name="Mato05" type="Sprite2D" parent="-15" unique_id=626633197]
+[node name="Mato05" type="Sprite2D" parent="-15/cenario03" unique_id=626633197]
 position = Vector2(5624.4707, -1314.0881)
 texture = ExtResource("7_jiro2")
 
-[node name="Mato09" type="Sprite2D" parent="-15" unique_id=1345131988]
+[node name="Mato09" type="Sprite2D" parent="-15/cenario03" unique_id=1345131988]
 position = Vector2(6493.47, -1238.0883)
 texture = ExtResource("7_jiro2")
 
-[node name="Mato10" type="Sprite2D" parent="-15" unique_id=327632114]
+[node name="Mato10" type="Sprite2D" parent="-15/cenario03" unique_id=327632114]
 position = Vector2(8569.471, -1167.0884)
 texture = ExtResource("7_jiro2")
 
-[node name="6c28bc06A7de492bA7677d7c3b85a403" type="Sprite2D" parent="-15" unique_id=367155530]
+[node name="6c28bc06A7de492bA7677d7c3b85a403" type="Sprite2D" parent="-15/cenario03" unique_id=367155530]
 position = Vector2(3184.0906, -1391.3978)
 scale = Vector2(2.6785161, 2.678516)
 texture = ExtResource("7_u3noq")
 
-[node name="6c28bc06A7de492bA7677d7c3b85a404" type="Sprite2D" parent="-15" unique_id=717176161]
+[node name="6c28bc06A7de492bA7677d7c3b85a404" type="Sprite2D" parent="-15/cenario03" unique_id=717176161]
 position = Vector2(5730.6816, -1391.3978)
 scale = Vector2(2.6785161, 2.678516)
 texture = ExtResource("7_u3noq")
 
-[node name="ColorRect" type="ColorRect" parent="-15" unique_id=737726372]
+[node name="ColorRect" type="ColorRect" parent="-15/cenario03" unique_id=737726372]
 material = SubResource("ShaderMaterial_ny35b")
 anchors_preset = 15
 anchor_right = 1.0
@@ -455,120 +462,122 @@ grow_vertical = 2
 follow_viewport_enabled = true
 follow_viewport_scale = 0.9
 
-[node name="ArvoreFlor3" type="Sprite2D" parent="-1" unique_id=1888157538]
+[node name="cenario02" type="Node2D" parent="-1" unique_id=565162948]
+
+[node name="ArvoreFlor3" type="Sprite2D" parent="-1/cenario02" unique_id=1888157538]
 position = Vector2(5946.667, -2002.2223)
 scale = Vector2(0.39585268, 0.3958526)
 texture = ExtResource("45_uepkw")
 flip_h = true
 
-[node name="4d8d492a1f014367A06e660443f32612" type="Sprite2D" parent="-1" unique_id=1181458961]
+[node name="4d8d492a1f014367A06e660443f32612" type="Sprite2D" parent="-1/cenario02" unique_id=1181458961]
 position = Vector2(6119.7827, -1458.1632)
 texture = ExtResource("8_e0yg5")
 
-[node name="Node2D" parent="-1" unique_id=1765416233 instance=ExtResource("12_e0yg5")]
+[node name="Node2D" parent="-1/cenario02" unique_id=1765416233 instance=ExtResource("12_e0yg5")]
 position = Vector2(5996.667, -1170.0001)
 
-[node name="Node2D2" parent="-1" unique_id=2082677606 instance=ExtResource("12_e0yg5")]
+[node name="Node2D2" parent="-1/cenario02" unique_id=2082677606 instance=ExtResource("12_e0yg5")]
 position = Vector2(5236.667, -1191.1111)
 
-[node name="Arvore" type="Sprite2D" parent="-1" unique_id=102631073]
+[node name="Arvore" type="Sprite2D" parent="-1/cenario02" unique_id=102631073]
 position = Vector2(2162, -1436)
 texture = ExtResource("8_khsix")
 
-[node name="Arvore2" type="Sprite2D" parent="-1" unique_id=245837416]
+[node name="Arvore2" type="Sprite2D" parent="-1/cenario02" unique_id=245837416]
 position = Vector2(4259.0557, -1546.4723)
 scale = Vector2(1.0831983, 1.0203277)
 texture = ExtResource("8_khsix")
 
-[node name="Arvore5" type="Sprite2D" parent="-1" unique_id=122468618]
+[node name="Arvore5" type="Sprite2D" parent="-1/cenario02" unique_id=122468618]
 position = Vector2(9351.111, -1594.4446)
 texture = ExtResource("8_khsix")
 
-[node name="Arvore7" type="Sprite2D" parent="-1" unique_id=2069912771]
+[node name="Arvore7" type="Sprite2D" parent="-1/cenario02" unique_id=2069912771]
 position = Vector2(8027, -1527)
 texture = ExtResource("8_khsix")
 
-[node name="PedraMusgo5" type="Sprite2D" parent="-1" unique_id=2064249290]
+[node name="PedraMusgo5" type="Sprite2D" parent="-1/cenario02" unique_id=2064249290]
 position = Vector2(5847, -1364.4445)
 scale = Vector2(0.6, 0.6)
 texture = ExtResource("9_akk5h")
 flip_h = true
 
-[node name="MataAtlântica020260313104859" type="Sprite2D" parent="-1" unique_id=1401059692]
+[node name="MataAtlântica020260313104859" type="Sprite2D" parent="-1/cenario02" unique_id=1401059692]
 position = Vector2(3577.4182, -1961.7686)
 scale = Vector2(1.0410769, 1.0917398)
 texture = ExtResource("20_hxoyl")
 flip_h = true
 
-[node name="MataAtlântica020260313103733" type="Sprite2D" parent="-1" unique_id=424055215]
+[node name="MataAtlântica020260313103733" type="Sprite2D" parent="-1/cenario02" unique_id=424055215]
 position = Vector2(3823.3367, -1277.2585)
 texture = ExtResource("21_ho4ux")
 flip_h = true
 
-[node name="MataAtlântica020260313104922" type="Sprite2D" parent="-1" unique_id=1818357707]
+[node name="MataAtlântica020260313104922" type="Sprite2D" parent="-1/cenario02" unique_id=1818357707]
 position = Vector2(6430.1943, -1892.3911)
 texture = ExtResource("22_swwbt")
 flip_h = true
 
-[node name="MataAtlântica020260313104439" type="Sprite2D" parent="-1" unique_id=596771004]
+[node name="MataAtlântica020260313104439" type="Sprite2D" parent="-1/cenario02" unique_id=596771004]
 position = Vector2(5327.419, -2431.34)
 texture = ExtResource("23_tfbbh")
 flip_h = true
 
-[node name="MataAtlântica020260313104923" type="Sprite2D" parent="-1" unique_id=1631040796]
+[node name="MataAtlântica020260313104923" type="Sprite2D" parent="-1/cenario02" unique_id=1631040796]
 position = Vector2(2346.8057, -1497.6667)
 rotation = -0.13150689
 texture = ExtResource("22_swwbt")
 flip_h = true
 
-[node name="MataAtlântica020260313104456" type="Sprite2D" parent="-1" unique_id=1235444195]
+[node name="MataAtlântica020260313104456" type="Sprite2D" parent="-1/cenario02" unique_id=1235444195]
 position = Vector2(1958.4727, -1954.3352)
 rotation = -0.06366439
 scale = Vector2(0.94434565, 0.9443456)
 texture = ExtResource("24_mxrmv")
 flip_h = true
 
-[node name="MataAtlântica020260313104525" type="Sprite2D" parent="-1" unique_id=1548391341]
+[node name="MataAtlântica020260313104525" type="Sprite2D" parent="-1/cenario02" unique_id=1548391341]
 position = Vector2(5223.337, -2271.1365)
 texture = ExtResource("25_hmxo8")
 flip_h = true
 
-[node name="MataAtlântica020260313104338" type="Sprite2D" parent="-1" unique_id=567328296]
+[node name="MataAtlântica020260313104338" type="Sprite2D" parent="-1/cenario02" unique_id=567328296]
 position = Vector2(2272.316, -1907.8708)
 texture = ExtResource("26_u3noq")
 flip_h = true
 
-[node name="MataAtlântica020260313104257" type="Sprite2D" parent="-1" unique_id=43291948]
+[node name="MataAtlântica020260313104257" type="Sprite2D" parent="-1/cenario02" unique_id=43291948]
 position = Vector2(5202.9287, -2435.422)
 texture = ExtResource("27_2gsqr")
 flip_h = true
 
-[node name="MataAtlântica020260313104035" type="Sprite2D" parent="-1" unique_id=1708530689]
+[node name="MataAtlântica020260313104035" type="Sprite2D" parent="-1/cenario02" unique_id=1708530689]
 position = Vector2(4467.215, -2047.6667)
 texture = ExtResource("28_8jgqj")
 flip_h = true
 
-[node name="MataAtlântica020260313103751" type="Sprite2D" parent="-1" unique_id=2052294903]
+[node name="MataAtlântica020260313103751" type="Sprite2D" parent="-1/cenario02" unique_id=2052294903]
 position = Vector2(1886.602, -1383.3811)
 texture = ExtResource("29_vw05h")
 flip_h = true
 
-[node name="MataAtlântica020260313104055" type="Sprite2D" parent="-1" unique_id=1748797913]
+[node name="MataAtlântica020260313104055" type="Sprite2D" parent="-1/cenario02" unique_id=1748797913]
 position = Vector2(4286.6025, -1926.2383)
 texture = ExtResource("31_swwbt")
 flip_h = true
 
-[node name="MataAtlântica020260313104036" type="Sprite2D" parent="-1" unique_id=465480418]
+[node name="MataAtlântica020260313104036" type="Sprite2D" parent="-1/cenario02" unique_id=465480418]
 position = Vector2(5053.949, -2002.7688)
 texture = ExtResource("28_8jgqj")
 flip_h = true
 
-[node name="MataAtlântica020260313104124" type="Sprite2D" parent="-1" unique_id=1996925525]
+[node name="MataAtlântica020260313104124" type="Sprite2D" parent="-1/cenario02" unique_id=1996925525]
 position = Vector2(6611.1113, -1669.0952)
 texture = ExtResource("32_tfbbh")
 flip_h = true
 
-[node name="Arvore05" type="Sprite2D" parent="-1" unique_id=1614852]
+[node name="Arvore05" type="Sprite2D" parent="-1/cenario02" unique_id=1614852]
 position = Vector2(4990.8164, -1692)
 texture = ExtResource("15_hmxo8")
 
@@ -576,52 +585,54 @@ texture = ExtResource("15_hmxo8")
 follow_viewport_enabled = true
 follow_viewport_scale = 0.93
 
-[node name="Mato06" type="Sprite2D" parent="-05" unique_id=1953768129]
+[node name="cenario01" type="Node2D" parent="-05" unique_id=170866974]
+
+[node name="Mato06" type="Sprite2D" parent="-05/cenario01" unique_id=1953768129]
 material = SubResource("ShaderMaterial_ty187")
 position = Vector2(4427, -1170.8685)
 texture = ExtResource("11_ho4ux")
 
-[node name="Mato07" type="Sprite2D" parent="-05" unique_id=536281018]
+[node name="Mato07" type="Sprite2D" parent="-05/cenario01" unique_id=536281018]
 material = SubResource("ShaderMaterial_ty187")
 position = Vector2(7281, -1158.8685)
 texture = ExtResource("11_ho4ux")
 
-[node name="Mato08" type="Sprite2D" parent="-05" unique_id=1711544242]
+[node name="Mato08" type="Sprite2D" parent="-05/cenario01" unique_id=1711544242]
 material = SubResource("ShaderMaterial_ty187")
 position = Vector2(9411.111, -1060.6462)
 texture = ExtResource("11_ho4ux")
 
-[node name="Mato01" type="Sprite2D" parent="-05" unique_id=1320587738]
+[node name="Mato01" type="Sprite2D" parent="-05/cenario01" unique_id=1320587738]
 material = SubResource("ShaderMaterial_ty187")
 position = Vector2(2192.6316, -1135.8685)
 texture = ExtResource("11_ho4ux")
 
-[node name="0af96f167b04424c89ddA6896bd7f6a2" type="Sprite2D" parent="-05" unique_id=1000997931]
+[node name="0af96f167b04424c89ddA6896bd7f6a2" type="Sprite2D" parent="-05/cenario01" unique_id=1000997931]
 position = Vector2(9021.505, -1309.6774)
 texture = ExtResource("24_hmxo8")
 
-[node name="MataAtlântica020260313103853" type="Sprite2D" parent="-05" unique_id=1598016966]
+[node name="MataAtlântica020260313103853" type="Sprite2D" parent="-05/cenario01" unique_id=1598016966]
 position = Vector2(2575.269, -1279.5698)
 texture = ExtResource("30_wditg")
 flip_h = true
 
-[node name="MataAtlântica020260313103733" type="Sprite2D" parent="-05" unique_id=1634277779]
+[node name="MataAtlântica020260313103733" type="Sprite2D" parent="-05/cenario01" unique_id=1634277779]
 position = Vector2(8423.656, -1333.3333)
 texture = ExtResource("26_2gsqr")
 
-[node name="15c395c3E01840248335Cf325dcc4278" type="Sprite2D" parent="-05" unique_id=1866460325]
+[node name="15c395c3E01840248335Cf325dcc4278" type="Sprite2D" parent="-05/cenario01" unique_id=1866460325]
 position = Vector2(6613.9775, -993.54846)
 scale = Vector2(1.5863433, 1.5863432)
 texture = ExtResource("29_2gsqr")
 
-[node name="ColorRect" type="ColorRect" parent="-05" unique_id=1996743918]
+[node name="ColorRect" type="ColorRect" parent="-05/cenario01" unique_id=1996743918]
 material = SubResource("ShaderMaterial_qeqrq")
 offset_left = -47.95508
 offset_top = -3386.6665
 offset_right = 9640.0
 offset_bottom = 15.55542
 
-[node name="Fog" type="ColorRect" parent="-05" unique_id=909861361]
+[node name="Fog" type="ColorRect" parent="-05/cenario01" unique_id=909861361]
 material = SubResource("ShaderMaterial_rh2pu")
 offset_top = -3019.318
 offset_right = 9639.785
@@ -799,137 +810,139 @@ texture = ExtResource("45_uepkw")
 [node name="0" type="CanvasLayer" parent="." unique_id=1713819681]
 follow_viewport_enabled = true
 
-[node name="Mato01" type="Sprite2D" parent="0" unique_id=344093513]
+[node name="Moitas2" type="Node2D" parent="0" unique_id=947309493]
+
+[node name="Mato01" type="Sprite2D" parent="0/Moitas2" unique_id=344093513]
 material = SubResource("ShaderMaterial_cctfo")
 position = Vector2(5335, -976)
 texture = ExtResource("21_yq7ol")
 flip_h = true
 
-[node name="Mato02" type="Sprite2D" parent="0" unique_id=1172824200]
+[node name="Mato02" type="Sprite2D" parent="0/Moitas2" unique_id=1172824200]
 material = SubResource("ShaderMaterial_cctfo")
 position = Vector2(8223, -976)
 texture = ExtResource("21_yq7ol")
 
-[node name="PedraMusgo" type="Sprite2D" parent="0" unique_id=393232982]
+[node name="PedraMusgo" type="Sprite2D" parent="0/Moitas2" unique_id=393232982]
 position = Vector2(4791, -1325.2999)
 scale = Vector2(0.5114725, 0.5114725)
 texture = ExtResource("9_akk5h")
 
-[node name="PedraMusgo3" type="Sprite2D" parent="0" unique_id=658906861]
+[node name="PedraMusgo3" type="Sprite2D" parent="0/Moitas2" unique_id=658906861]
 position = Vector2(8200, -1375)
 scale = Vector2(0.6, 0.6)
 texture = ExtResource("9_akk5h")
 
-[node name="PedraMusgo4" type="Sprite2D" parent="0" unique_id=1339098662]
+[node name="PedraMusgo4" type="Sprite2D" parent="0/Moitas2" unique_id=1339098662]
 position = Vector2(3532.746, -1236.8999)
 scale = Vector2(0.22619864, 0.22619863)
 texture = ExtResource("9_akk5h")
 flip_h = true
 
-[node name="6c28bc06A7de492bA7677d7c3b85a403" type="Sprite2D" parent="0" unique_id=1064086838]
+[node name="6c28bc06A7de492bA7677d7c3b85a403" type="Sprite2D" parent="0/Moitas2" unique_id=1064086838]
 position = Vector2(1622, -1198)
 texture = ExtResource("7_u3noq")
 
-[node name="15c395c3E01840248335Cf325dcc4278" type="Sprite2D" parent="0" unique_id=71501775]
+[node name="15c395c3E01840248335Cf325dcc4278" type="Sprite2D" parent="0/Moitas2" unique_id=71501775]
 position = Vector2(3386, -1222)
 texture = ExtResource("29_2gsqr")
 
-[node name="MoitaChao2" type="Sprite2D" parent="0" unique_id=829610345]
+[node name="MoitaChao2" type="Sprite2D" parent="0/Moitas2" unique_id=829610345]
 material = SubResource("ShaderMaterial_otj2n")
 position = Vector2(865, -1138)
 scale = Vector2(1.2113702, 1.2113702)
 texture = ExtResource("22_mm3hj")
 
-[node name="Moitas" type="Node2D" parent="0" unique_id=397482516]
+[node name="Moitas" type="Node2D" parent="0/Moitas2" unique_id=397482516]
 light_mask = 2
 position = Vector2(39399, 2158)
 
-[node name="PedraSmusgo" type="Sprite2D" parent="0/Moitas" unique_id=1935632394]
+[node name="PedraSmusgo" type="Sprite2D" parent="0/Moitas2/Moitas" unique_id=1935632394]
 position = Vector2(-36783, -3508)
 scale = Vector2(0.3895548, 0.3895548)
 texture = ExtResource("23_sxmps")
 
-[node name="Moita6" type="Sprite2D" parent="0/Moitas" unique_id=566814880]
+[node name="Moita6" type="Sprite2D" parent="0/Moitas2/Moitas" unique_id=566814880]
 material = SubResource("ShaderMaterial_62810")
 position = Vector2(-32052, -3390)
 texture = ExtResource("24_e0yg5")
 
-[node name="Sombra6" type="Sprite2D" parent="0/Moitas" unique_id=678008059]
+[node name="Sombra6" type="Sprite2D" parent="0/Moitas2/Moitas" unique_id=678008059]
 position = Vector2(-32080, -3338.5)
 scale = Vector2(1.7592592, 0.7920354)
 texture = ExtResource("25_uepkw")
 
-[node name="Moita2" type="Sprite2D" parent="0/Moitas" unique_id=1333479858]
+[node name="Moita2" type="Sprite2D" parent="0/Moitas2/Moitas" unique_id=1333479858]
 material = SubResource("ShaderMaterial_qmj2s")
 position = Vector2(-37372, -3322)
 texture = ExtResource("24_e0yg5")
 
-[node name="Sombra2" type="Sprite2D" parent="0/Moitas/Moita2" unique_id=873168221]
+[node name="Sombra2" type="Sprite2D" parent="0/Moitas2/Moitas/Moita2" unique_id=873168221]
 position = Vector2(12, 14)
 scale = Vector2(1.7592592, 0.7920354)
 texture = ExtResource("25_uepkw")
 
-[node name="Moita3" type="Sprite2D" parent="0/Moitas" unique_id=350807398]
+[node name="Moita3" type="Sprite2D" parent="0/Moitas2/Moitas" unique_id=350807398]
 material = SubResource("ShaderMaterial_62810")
 position = Vector2(-36497, -3353)
 texture = ExtResource("24_e0yg5")
 
-[node name="82SemTítulo0000253520251125200851" type="Sprite2D" parent="0/Moitas/Moita3" unique_id=726950588]
+[node name="82SemTítulo0000253520251125200851" type="Sprite2D" parent="0/Moitas2/Moitas/Moita3" unique_id=726950588]
 visible = false
 modulate = Color(2.34715, 2.34715, 2.34715, 1)
 material = SubResource("ShaderMaterial_jn6at")
 position = Vector2(-173, -60)
 texture = ExtResource("26_idg5b")
 
-[node name="Sombra3" type="Sprite2D" parent="0/Moitas" unique_id=2034974664]
+[node name="Sombra3" type="Sprite2D" parent="0/Moitas2/Moitas" unique_id=2034974664]
 position = Vector2(-36463, -3286.9995)
 scale = Vector2(1.7592592, 0.7920354)
 texture = ExtResource("25_uepkw")
 
-[node name="MataAtlântica020260313104257" type="Sprite2D" parent="0/Moitas" unique_id=1442437755]
+[node name="MataAtlântica020260313104257" type="Sprite2D" parent="0/Moitas2/Moitas" unique_id=1442437755]
 position = Vector2(-36204, -3370)
 texture = ExtResource("27_2gsqr")
 
-[node name="MataAtlântica020260313104258" type="Sprite2D" parent="0/Moitas" unique_id=1005842079]
+[node name="MataAtlântica020260313104258" type="Sprite2D" parent="0/Moitas2/Moitas" unique_id=1005842079]
 position = Vector2(-34200, -3387)
 texture = ExtResource("27_2gsqr")
 
-[node name="MataAtlântica020260313104259" type="Sprite2D" parent="0/Moitas" unique_id=124934900]
+[node name="MataAtlântica020260313104259" type="Sprite2D" parent="0/Moitas2/Moitas" unique_id=124934900]
 position = Vector2(-31815, -3381)
 texture = ExtResource("27_2gsqr")
 
-[node name="Moita4" type="Sprite2D" parent="0/Moitas" unique_id=1077966285]
+[node name="Moita4" type="Sprite2D" parent="0/Moitas2/Moitas" unique_id=1077966285]
 material = SubResource("ShaderMaterial_62810")
 position = Vector2(-34914, -3394)
 texture = ExtResource("24_e0yg5")
 
-[node name="Sombra4" type="Sprite2D" parent="0/Moitas" unique_id=687265529]
+[node name="Sombra4" type="Sprite2D" parent="0/Moitas2/Moitas" unique_id=687265529]
 position = Vector2(-34894, -3370.5)
 scale = Vector2(1.7592592, 0.7920354)
 texture = ExtResource("25_uepkw")
 
-[node name="Moita7" type="Sprite2D" parent="0/Moitas" unique_id=1178002586]
+[node name="Moita7" type="Sprite2D" parent="0/Moitas2/Moitas" unique_id=1178002586]
 material = SubResource("ShaderMaterial_62810")
 position = Vector2(-30890, -3347)
 texture = ExtResource("24_e0yg5")
 
-[node name="Sombra7" type="Sprite2D" parent="0/Moitas" unique_id=1089380527]
+[node name="Sombra7" type="Sprite2D" parent="0/Moitas2/Moitas" unique_id=1089380527]
 position = Vector2(-30918, -3295.5)
 scale = Vector2(1.7592592, 0.7920354)
 texture = ExtResource("25_uepkw")
 
-[node name="Moita8" type="Sprite2D" parent="0/Moitas" unique_id=1158060875]
+[node name="Moita8" type="Sprite2D" parent="0/Moitas2/Moitas" unique_id=1158060875]
 material = SubResource("ShaderMaterial_62810")
 position = Vector2(-35938, -3217)
 texture = ExtResource("24_e0yg5")
 
-[node name="Moitachao" type="Sprite2D" parent="0/Moitas" unique_id=932469375]
+[node name="Moitachao" type="Sprite2D" parent="0/Moitas2/Moitas" unique_id=932469375]
 material = SubResource("ShaderMaterial_62810")
 position = Vector2(-34860, -3263)
 rotation = -3.1415925
 texture = ExtResource("27_ytcj4")
 
-[node name="Moitachao2" type="Sprite2D" parent="0/Moitas" unique_id=950592587]
+[node name="Moitachao2" type="Sprite2D" parent="0/Moitas2/Moitas" unique_id=950592587]
 material = SubResource("ShaderMaterial_62810")
 position = Vector2(-35026, -3251)
 rotation = -3.1415925
@@ -1611,84 +1624,95 @@ position = Vector2(-31271.5, -4221.5)
 scale = Vector2(1.3789063, 1.3789063)
 texture = ExtResource("48_ta4ov")
 
-[node name="5c67d19fAad64a128e7fAe0bbbab2054" type="Sprite2D" parent="2" unique_id=174234679]
+[node name="5c67d19fAad64a128e7fAe0bbbab2054" type="Sprite2D" parent="2/Cipó" unique_id=174234679]
 self_modulate = Color(0.012617188, 0.012617188, 0.012617188, 1)
-position = Vector2(3567.6194, -1695.5864)
+position = Vector2(-35839.38, -3962.5864)
 scale = Vector2(0.84660274, 1.1854454)
 texture = ExtResource("38_vw05h")
 
-[node name="5c67d19fAad64a128e7fAe0bbbab2055" type="Sprite2D" parent="2" unique_id=1642565872]
+[node name="5c67d19fAad64a128e7fAe0bbbab2055" type="Sprite2D" parent="2/Cipó" unique_id=1642565872]
 self_modulate = Color(0.012617188, 0.012617188, 0.012617188, 1)
-position = Vector2(7835.1147, -1719.7341)
+position = Vector2(-31571.885, -3986.7341)
 scale = Vector2(1.1502928, 1.1502928)
 texture = ExtResource("38_vw05h")
 flip_h = true
 
-[node name="49ee43ea5129452f8072Ce0b3e0b96d7" type="Sprite2D" parent="2" unique_id=1347208005]
+[node name="49ee43ea5129452f8072Ce0b3e0b96d7" type="Sprite2D" parent="2/Cipó" unique_id=1347208005]
 self_modulate = Color(0.012617188, 0.012617188, 0.012617188, 1)
-position = Vector2(2420.9526, -1375.2382)
+position = Vector2(-36986.047, -3642.2383)
 texture = ExtResource("39_wditg")
 
-[node name="MataAtlântica020260313104058" type="Sprite2D" parent="2" unique_id=2031726893]
+[node name="MataAtlântica020260313104058" type="Sprite2D" parent="2/Cipó" unique_id=2031726893]
 self_modulate = Color(0.012617188, 0.012617188, 0.012617188, 1)
-position = Vector2(6314.1074, -1756.3898)
+position = Vector2(-33092.89, -4023.3896)
 scale = Vector2(1.2212209, 1.2212209)
 texture = ExtResource("41_mm3hj")
 
-[node name="MataAtlântica020260313104035" type="Sprite2D" parent="2" unique_id=1302883357]
+[node name="MataAtlântica020260313104035" type="Sprite2D" parent="2/Cipó" unique_id=1302883357]
 self_modulate = Color(0.012617188, 0.012617188, 0.012617188, 1)
-position = Vector2(5025.7144, -1736.1904)
+position = Vector2(-34381.285, -4003.1904)
 scale = Vector2(1.2598141, 1.259814)
 texture = ExtResource("28_8jgqj")
 flip_h = true
 
-[node name="MataAtlântica020260313104059" type="Sprite2D" parent="2" unique_id=887609820]
+[node name="MataAtlântica020260313104059" type="Sprite2D" parent="2/Cipó" unique_id=887609820]
 self_modulate = Color(0.012617188, 0.012617188, 0.012617188, 1)
-position = Vector2(2118.749, -1756.3898)
+position = Vector2(-37288.25, -4023.3896)
 scale = Vector2(1.2212209, 1.2212209)
 texture = ExtResource("41_mm3hj")
 
-[node name="MataAtlântica020260313104036" type="Sprite2D" parent="2" unique_id=782276146]
+[node name="MataAtlântica020260313104036" type="Sprite2D" parent="2/Cipó" unique_id=782276146]
 self_modulate = Color(0.012617188, 0.012617188, 0.012617188, 1)
-position = Vector2(1419.0476, -1787.6191)
+position = Vector2(-37987.953, -4054.6191)
 scale = Vector2(1.2598141, 1.259814)
 texture = ExtResource("28_8jgqj")
 
-[node name="MataAtlântica020260313104439" type="Sprite2D" parent="2" unique_id=2069982616]
+[node name="MataAtlântica020260313104439" type="Sprite2D" parent="2/Cipó" unique_id=2069982616]
 self_modulate = Color(0.012617188, 0.012617188, 0.012617188, 1)
-position = Vector2(8475.238, -1956.1907)
+position = Vector2(-30931.762, -4223.1904)
 texture = ExtResource("23_tfbbh")
 
-[node name="MataAtlântica020260313104440" type="Sprite2D" parent="2" unique_id=1745528101]
+[node name="MataAtlântica020260313104440" type="Sprite2D" parent="2/Cipó" unique_id=1745528101]
 self_modulate = Color(0.012617188, 0.012617188, 0.012617188, 1)
-position = Vector2(2986.6667, -2024.7621)
+position = Vector2(-36420.332, -4291.762)
 texture = ExtResource("23_tfbbh")
 
-[node name="MataAtlântica020260313103751" type="Sprite2D" parent="2" unique_id=1906631139]
+[node name="MataAtlântica020260313103751" type="Sprite2D" parent="2/Cipó" unique_id=1906631139]
 self_modulate = Color(0.012617188, 0.012617188, 0.012617188, 1)
-position = Vector2(1782.857, -975.23816)
+position = Vector2(-37624.145, -3242.2383)
 texture = ExtResource("29_vw05h")
 
-[node name="MataAtlântica020260313103752" type="Sprite2D" parent="2" unique_id=1223923202]
+[node name="MataAtlântica020260313103752" type="Sprite2D" parent="2/Cipó" unique_id=1223923202]
 self_modulate = Color(0.012617188, 0.012617188, 0.012617188, 1)
-position = Vector2(5237.143, -975.23816)
+position = Vector2(-34169.855, -3242.2383)
 texture = ExtResource("29_vw05h")
 
-[node name="MataAtlântica020260313103753" type="Sprite2D" parent="2" unique_id=107525342]
+[node name="MataAtlântica020260313103753" type="Sprite2D" parent="2/Cipó" unique_id=107525342]
 self_modulate = Color(0.012617188, 0.012617188, 0.012617188, 1)
-position = Vector2(6999.048, -975.23816)
+position = Vector2(-32407.953, -3242.2383)
 texture = ExtResource("29_vw05h")
 
-[node name="MataAtlântica020260313103754" type="Sprite2D" parent="2" unique_id=782310143]
+[node name="MataAtlântica020260313103754" type="Sprite2D" parent="2/Cipó" unique_id=782310143]
 self_modulate = Color(0.012617188, 0.012617188, 0.012617188, 1)
-position = Vector2(6070.4766, -789.52386)
+position = Vector2(-33336.523, -3056.524)
 texture = ExtResource("29_vw05h")
 
-[node name="MataAtlântica020260313103755" type="Sprite2D" parent="2" unique_id=1794403605]
+[node name="MataAtlântica020260313103755" type="Sprite2D" parent="2/Cipó" unique_id=1794403605]
 self_modulate = Color(0.012617188, 0.012617188, 0.012617188, 1)
-position = Vector2(8326.667, -1128.5714)
+position = Vector2(-31080.332, -3395.5713)
 scale = Vector2(0.60846597, 0.6084661)
 texture = ExtResource("29_vw05h")
+
+[node name="MostraTela2" parent="2" unique_id=253981939 instance=ExtResource("53_thr42")]
+position = Vector2(2736, -1225)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="2/MostraTela2" unique_id=386846697]
+position = Vector2(-3.5, -3)
+shape = SubResource("RectangleShape2D_q2ysr")
+
+[node name="Atacar" type="Sprite2D" parent="2/MostraTela2" unique_id=1239265285]
+position = Vector2(1, 189)
+texture = ExtResource("76_ytcj4")
 
 [node name="Cenario" type="Node2D" parent="." unique_id=1043735198]
 position = Vector2(39399, 2158)
@@ -1714,6 +1738,12 @@ offset_bottom = -808.0
 script = ExtResource("52_x8j6d")
 musica = ExtResource("53_sje6b")
 metadata/_custom_type_script = "uid://dd16yu704x6wt"
+
+[node name="OtimizadorCena" parent="." unique_id=728809620 node_paths=PackedStringArray("targets") instance=ExtResource("80_thr42")]
+position = Vector2(8326.667, -1128.5714)
+scale = Vector2(0.60846597, 0.6084661)
+rect = Rect2(-13134.124, -2779.8237, 14709.122, 3337.9014)
+targets = [NodePath("../2/Foreground"), NodePath("../1/Teto"), NodePath("../-02/ArvoresFrente"), NodePath("../-05/cenario01"), NodePath("../-1/cenario02"), NodePath("../-15/cenario03"), NodePath("../-2/Arvores03")]
 
 [connection signal="body_entered" from="2/Foregroundchao/StaticBody2D/AreaPonteVFX" to="0/Cururu" method="_on_area_ponte_vfx_body_entered"]
 [connection signal="body_exited" from="2/Foregroundchao/StaticBody2D/AreaPonteVFX" to="0/Cururu" method="_on_area_ponte_vfx_body_exited"]

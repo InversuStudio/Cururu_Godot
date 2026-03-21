@@ -28,7 +28,7 @@ border_blend = true
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4n7mi"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ijstf"]
-bg_color = Color(0.9411892, 1.0049391, 0.89736134, 1)
+bg_color = Color(0.39215687, 0.7058824, 0.8627451, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_yixhe"]
 font_size = 64

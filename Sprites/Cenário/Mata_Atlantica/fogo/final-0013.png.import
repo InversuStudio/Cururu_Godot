@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://buxjb8khrvcm7"
-path="res://.godot/imported/WALLJUMP.png-45062312e1853a43a5a7e6f869e11947.ctex"
+uid="uid://buspxuq5nqjbl"
+path="res://.godot/imported/final-0013.png-c738bd47b7e8cacbc5c8c2bd779d019a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Cururu/walljump/WALLJUMP.png"
-dest_files=["res://.godot/imported/WALLJUMP.png-45062312e1853a43a5a7e6f869e11947.ctex"]
+source_file="res://Sprites/Cenário/Mata_Atlantica/fogo/final-0013.png"
+dest_files=["res://.godot/imported/final-0013.png-c738bd47b7e8cacbc5c8c2bd779d019a.ctex"]
 
 [params]
 

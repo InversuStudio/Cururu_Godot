@@ -19,10 +19,13 @@
 [ext_resource type="Texture2D" uid="uid://2b6t2slc5ujl" path="res://Sprites/Cenário/Mata_Atlantica/Background/copa01.png" id="15_mhwhk"]
 [ext_resource type="Texture2D" uid="uid://uq6dbjep5wva" path="res://Sprites/Cenário/Mata_Atlantica/Foreground/frontfolha.png" id="16_4rut0"]
 [ext_resource type="Texture2D" uid="uid://daqvadoaxijjc" path="res://Sprites/Cenário/Mata_Atlantica/Background/copa02.png" id="16_bf5tm"]
+[ext_resource type="PackedScene" uid="uid://tvw2ynw76htc" path="res://Objetos/Props/vasosmoeda/vasomoeda_01.tscn" id="16_id0tb"]
 [ext_resource type="Texture2D" uid="uid://d18vqjeq586b1" path="res://Sprites/Cenário/Mata_Atlantica/Pedras e Ruinas/pedra_musgo.png" id="16_m6ifx"]
 [ext_resource type="Texture2D" uid="uid://d0w6r04nxo1a2" path="res://Sprites/Cenário/Mata_Atlantica/Background/Mata/mato00.png" id="16_qvxil"]
 [ext_resource type="Texture2D" uid="uid://cdnyx0mqh22t0" path="res://Sprites/Cenário/Mata_Atlantica/Background/copa03.png" id="17_5bp2d"]
+[ext_resource type="PackedScene" uid="uid://cppreprc8pa3k" path="res://Objetos/Props/vasosmoeda/vasomoeda_02.tscn" id="17_5rt2h"]
 [ext_resource type="Texture2D" uid="uid://c2yapafbd3cnf" path="res://Sprites/Cenário/Mata_Atlantica/Foreground/cipó.png" id="17_l3md2"]
+[ext_resource type="PackedScene" uid="uid://bktu336s6ruri" path="res://Objetos/Props/Moeda.tscn" id="18_qfmlu"]
 [ext_resource type="PackedScene" uid="uid://bos2748v4fxwy" path="res://Objetos/Props/upgrade_vida.tscn" id="19_158ye"]
 [ext_resource type="TileSet" uid="uid://b0nn6bkolhibj" path="res://TilesetChao.tres" id="21_158ye"]
 [ext_resource type="Shader" uid="uid://cete83ldr534" path="res://Scripts/Shaders/godray.gdshader" id="21_c6y8k"]
@@ -336,6 +339,16 @@ flip_h = true
 
 [node name="0" type="CanvasLayer" parent="." unique_id=277295051]
 follow_viewport_enabled = true
+
+[node name="Bau" parent="0" unique_id=179752699 instance=ExtResource("16_id0tb")]
+position = Vector2(130, -2688)
+drop_item = Array[PackedScene]([ExtResource("18_qfmlu"), ExtResource("18_qfmlu"), ExtResource("18_qfmlu")])
+multi_drop = true
+
+[node name="Bau2" parent="0" unique_id=1639657195 instance=ExtResource("17_5rt2h")]
+position = Vector2(241, -2691)
+drop_item = Array[PackedScene]([ExtResource("18_qfmlu"), ExtResource("18_qfmlu")])
+multi_drop = true
 
 [node name="MA_03" parent="0" unique_id=742767588 instance=ExtResource("2_botoi")]
 position = Vector2(2159, -2935)
