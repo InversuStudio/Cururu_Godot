@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://dxm13ylvxl6us"]
+[gd_scene format=3 uid="uid://dxm13ylvxl6us"]
 
 [ext_resource type="Texture2D" uid="uid://ciu3iyvaxic8e" path="res://Sprites/Cururu/Nadando/VFX/Entrando_Agua/01.png" id="1_8gufj"]
 [ext_resource type="Texture2D" uid="uid://m5fvvkblqod8" path="res://Sprites/Cururu/Nadando/VFX/Entrando_Agua/02.png" id="2_2mtbn"]
@@ -62,11 +62,12 @@ animations = [{
 "speed": 12.0
 }]
 
-[node name="VFX_Agua_In" type="Node2D"]
+[node name="VFX_Agua_In" type="Node2D" unique_id=376703374]
 script = ExtResource("14_my7mx")
 
-[node name="VFX_Agua_In" type="AnimatedSprite2D" parent="."]
-position = Vector2(16, -192.00002)
-scale = Vector2(0.3, 0.3)
+[node name="VFX_Agua_In" type="AnimatedSprite2D" parent="." unique_id=89355511]
+z_index = -1
+position = Vector2(16, -216)
+scale = Vector2(0.38333338, 0.38333333)
 sprite_frames = SubResource("SpriteFrames_kf6ce")
 autoplay = "default"

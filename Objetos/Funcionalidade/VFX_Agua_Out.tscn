@@ -63,10 +63,11 @@ animations = [{
 }]
 
 [node name="VFX_Agua_Out" type="Node2D" unique_id=150469296]
+z_index = -1
 script = ExtResource("14_pjygv")
 
 [node name="VFX_Agua_Out" type="AnimatedSprite2D" parent="." unique_id=1974127280]
 position = Vector2(0, -198)
-scale = Vector2(0.3, 0.3)
+scale = Vector2(0.36851847, 0.3685185)
 sprite_frames = SubResource("SpriteFrames_jb41k")
 autoplay = "default"
