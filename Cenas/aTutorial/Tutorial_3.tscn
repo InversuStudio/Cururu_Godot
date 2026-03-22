@@ -6,7 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://cc6yes0bp2w0y" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/arvore_S1.png" id="4_431bo"]
 [ext_resource type="Texture2D" uid="uid://yln77sy1ylrp" path="res://Sprites/Cenário/Mata_Atlantica/Background/Mata/mato03.png" id="5_kw66j"]
 [ext_resource type="Texture2D" uid="uid://i664886fdh55" path="res://Sprites/Cenário/Mata_Atlantica/Background/Mata/mato02.png" id="6_ek7qv"]
-[ext_resource type="Texture2D" uid="uid://b1sv0car32gha" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/arvore_s3.png" id="7_gytst"]
+[ext_resource type="Texture2D" uid="uid://b1sv0car32gha" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/arvore_S3.png" id="7_gytst"]
 [ext_resource type="Shader" uid="uid://dc0bwmy1j0o5i" path="res://Scripts/Shaders/fog.gdshader" id="8_40frc"]
 [ext_resource type="Texture2D" uid="uid://yrshunpt0tr8" path="res://Sprites/Cenário/Mata_Atlantica/Background/Mata/mato01.png" id="9_lsfrh"]
 [ext_resource type="Texture2D" uid="uid://sih3o1ksris8" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/arvore05.png" id="10_816ow"]
@@ -829,26 +829,33 @@ spawn_points = [NodePath("../../../../Area2D"), NodePath("../../../../Area2D")]
 position = Vector2(393, 248)
 spawn_points = [NodePath("../../../../Area2D"), NodePath("../../../../Area2D")]
 
-[node name="Armadilha4" parent="Background/0/Espinhos" unique_id=1853033786 instance=ExtResource("24_cv4nt")]
+[node name="Armadilha4" parent="Background/0/Espinhos" unique_id=1853033786 node_paths=PackedStringArray("spawn_points") instance=ExtResource("24_cv4nt")]
 position = Vector2(538, 368)
+spawn_points = [NodePath("../../../../Area2D"), NodePath("../../../../Area2D")]
 
-[node name="Armadilha5" parent="Background/0/Espinhos" unique_id=1856735176 instance=ExtResource("24_cv4nt")]
+[node name="Armadilha5" parent="Background/0/Espinhos" unique_id=1856735176 node_paths=PackedStringArray("spawn_points") instance=ExtResource("24_cv4nt")]
 position = Vector2(572, 655)
+spawn_points = [NodePath("../../../../Area2D"), NodePath("../../../../Area2D")]
 
-[node name="Armadilha6" parent="Background/0/Espinhos" unique_id=531618476 instance=ExtResource("24_cv4nt")]
+[node name="Armadilha6" parent="Background/0/Espinhos" unique_id=531618476 node_paths=PackedStringArray("spawn_points") instance=ExtResource("24_cv4nt")]
 position = Vector2(659, 849)
+spawn_points = [NodePath("../../../../Area2D"), NodePath("../../../../Area2D")]
 
-[node name="Armadilha7" parent="Background/0/Espinhos" unique_id=1368309719 instance=ExtResource("24_cv4nt")]
+[node name="Armadilha7" parent="Background/0/Espinhos" unique_id=1368309719 node_paths=PackedStringArray("spawn_points") instance=ExtResource("24_cv4nt")]
 position = Vector2(774, 1068)
+spawn_points = [NodePath("../../../../Area2D"), NodePath("../../../../Area2D")]
 
-[node name="Armadilha8" parent="Background/0/Espinhos" unique_id=188920617 instance=ExtResource("24_cv4nt")]
+[node name="Armadilha8" parent="Background/0/Espinhos" unique_id=188920617 node_paths=PackedStringArray("spawn_points") instance=ExtResource("24_cv4nt")]
 position = Vector2(809, 1285)
+spawn_points = [NodePath("../../../../Area2D"), NodePath("../../../../Area2D")]
 
-[node name="Armadilha9" parent="Background/0/Espinhos" unique_id=261927058 instance=ExtResource("24_cv4nt")]
+[node name="Armadilha9" parent="Background/0/Espinhos" unique_id=261927058 node_paths=PackedStringArray("spawn_points") instance=ExtResource("24_cv4nt")]
 position = Vector2(759, 1457)
+spawn_points = [NodePath("../../../../Area2D"), NodePath("../../../../Area2D")]
 
-[node name="Armadilha10" parent="Background/0/Espinhos" unique_id=343966984 instance=ExtResource("24_cv4nt")]
+[node name="Armadilha10" parent="Background/0/Espinhos" unique_id=343966984 node_paths=PackedStringArray("spawn_points") instance=ExtResource("24_cv4nt")]
 position = Vector2(715, 1699)
+spawn_points = [NodePath("../../../../Area2D"), NodePath("../../../../Area2D")]
 
 [node name="Armadilha18" parent="Background/0/Espinhos" unique_id=1828203877 instance=ExtResource("24_cv4nt")]
 position = Vector2(7250, -786)
@@ -874,30 +881,38 @@ position = Vector2(-1879, 2303)
 [node name="Armadilha15" parent="Background/0/Espinhos" unique_id=1285537866 instance=ExtResource("24_cv4nt")]
 position = Vector2(-1962, 2940)
 
-[node name="Armadilha14" parent="Background/0/Espinhos" unique_id=894458850 instance=ExtResource("24_cv4nt")]
+[node name="Armadilha14" parent="Background/0/Espinhos" unique_id=894458850 node_paths=PackedStringArray("spawn_points") instance=ExtResource("24_cv4nt")]
 position = Vector2(-1908, 2630)
+spawn_points = [NodePath("../../../../Area2D2"), NodePath("../../../../Area2D3")]
 
-[node name="Armadilha22" parent="Background/0/Espinhos" unique_id=1248260186 instance=ExtResource("24_cv4nt")]
+[node name="Armadilha22" parent="Background/0/Espinhos" unique_id=1248260186 node_paths=PackedStringArray("spawn_points") instance=ExtResource("24_cv4nt")]
 position = Vector2(2931, 2014)
+spawn_points = [NodePath("../../../../Area2D"), NodePath("../../../../Area2D")]
 
-[node name="Armadilha21" parent="Background/0/Espinhos" unique_id=1202579615 instance=ExtResource("24_cv4nt")]
+[node name="Armadilha21" parent="Background/0/Espinhos" unique_id=1202579615 node_paths=PackedStringArray("spawn_points") instance=ExtResource("24_cv4nt")]
 position = Vector2(2869, 2239)
+spawn_points = [NodePath("../../../../Area2D"), NodePath("../../../../Area2D")]
 
-[node name="Armadilha23" parent="Background/0/Espinhos" unique_id=1087842906 instance=ExtResource("24_cv4nt")]
+[node name="Armadilha23" parent="Background/0/Espinhos" unique_id=1087842906 node_paths=PackedStringArray("spawn_points") instance=ExtResource("24_cv4nt")]
 position = Vector2(3084, 1835)
+spawn_points = [NodePath("../../../../Area2D"), NodePath("../../../../Area2D")]
 
-[node name="Armadilha25" parent="Background/0/Espinhos" unique_id=1600798248 instance=ExtResource("24_cv4nt")]
+[node name="Armadilha25" parent="Background/0/Espinhos" unique_id=1600798248 node_paths=PackedStringArray("spawn_points") instance=ExtResource("24_cv4nt")]
 position = Vector2(2956, 1324)
+spawn_points = [NodePath("../../../../Area2D"), NodePath("../../../../Area2D")]
 
-[node name="Armadilha24" parent="Background/0/Espinhos" unique_id=344170774 instance=ExtResource("24_cv4nt")]
+[node name="Armadilha24" parent="Background/0/Espinhos" unique_id=344170774 node_paths=PackedStringArray("spawn_points") instance=ExtResource("24_cv4nt")]
 position = Vector2(3037, 1548)
+spawn_points = [NodePath("../../../../Area2D"), NodePath("../../../../Area2D")]
 
-[node name="Armadilha26" parent="Background/0/Espinhos" unique_id=347866038 instance=ExtResource("24_cv4nt")]
+[node name="Armadilha26" parent="Background/0/Espinhos" unique_id=347866038 node_paths=PackedStringArray("spawn_points") instance=ExtResource("24_cv4nt")]
 position = Vector2(3037, 1115)
+spawn_points = [NodePath("../../../../Area2D"), NodePath("../../../../Area2D")]
 
-[node name="Armadilha17" parent="Background/0/Espinhos" unique_id=927559818 instance=ExtResource("25_xa16c")]
+[node name="Armadilha17" parent="Background/0/Espinhos" unique_id=927559818 node_paths=PackedStringArray("spawn_points") instance=ExtResource("25_xa16c")]
 position = Vector2(-572, 3208.9998)
 rotation = 2.9502616
+spawn_points = [NodePath("../../../../Area2D2"), NodePath("../../../../Area2D3")]
 
 [node name="Armadilha16" parent="Background/0/Espinhos" unique_id=702134946 node_paths=PackedStringArray("spawn_points") instance=ExtResource("25_xa16c")]
 position = Vector2(-540, 3278)

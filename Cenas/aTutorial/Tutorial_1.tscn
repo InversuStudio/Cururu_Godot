@@ -1742,7 +1742,7 @@ metadata/_custom_type_script = "uid://dd16yu704x6wt"
 [node name="OtimizadorCena" parent="." unique_id=728809620 node_paths=PackedStringArray("targets") instance=ExtResource("80_thr42")]
 position = Vector2(8326.667, -1128.5714)
 scale = Vector2(0.60846597, 0.6084661)
-rect = Rect2(-13134.124, -2779.8237, 14709.122, 3337.9014)
+rect = Rect2(-14872.923, -3315.5972, 17156.26, 4261.5356)
 targets = [NodePath("../2/Foreground"), NodePath("../1/Teto"), NodePath("../-02/ArvoresFrente"), NodePath("../-05/cenario01"), NodePath("../-1/cenario02"), NodePath("../-15/cenario03"), NodePath("../-2/Arvores03")]
 
 [connection signal="body_entered" from="2/Foregroundchao/StaticBody2D/AreaPonteVFX" to="0/Cururu" method="_on_area_ponte_vfx_body_entered"]

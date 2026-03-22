@@ -22,6 +22,7 @@
 [ext_resource type="Texture2D" uid="uid://6xmqb8rst36e" path="res://Sprites/Cenário/Mata_Atlantica/Chao/moita_miasma1.png" id="20_332t1"]
 [ext_resource type="Texture2D" uid="uid://d18vqjeq586b1" path="res://Sprites/Cenário/Mata_Atlantica/Pedras e Ruinas/pedra_musgo.png" id="21_hf7s7"]
 [ext_resource type="Texture2D" uid="uid://c81axtnengkmx" path="res://Sprites/Cenário/Miasma/miasmacanto.png" id="22_4ycaj"]
+[ext_resource type="Shader" uid="uid://c5kmgpt3xfcos" path="res://Scripts/Shaders/Wave.gdshader" id="22_cfkov"]
 [ext_resource type="PackedScene" uid="uid://pc4mgv2nv8af" path="res://Objetos/Funcionalidade/CompHitBox.tscn" id="23_3kuko"]
 [ext_resource type="Texture2D" uid="uid://baaqd3x38ve2y" path="res://Sprites/Cenário/Miasma/miasma medio.png" id="24_rqnvr"]
 [ext_resource type="PackedScene" uid="uid://cdhelg6sloxbj" path="res://Objetos/Props/PortaTemp.tscn" id="25_7ob16"]
@@ -76,11 +77,18 @@ shader_parameter/density = 0.5
 shader_parameter/speed = 0.3
 shader_parameter/scale = 6.0
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_wrolb"]
+shader = ExtResource("22_cfkov")
+shader_parameter/wave_speed = 5.0
+shader_parameter/wave_strength = 7.7710003691225005
+shader_parameter/wave_frequency = 5.1430002442925
+shader_parameter/top_influence = 1.0
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0lx4q"]
-size = Vector2(754.5305, 922.58105)
+size = Vector2(513.70764, 922.58105)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_npdt7"]
-size = Vector2(754.69385, 878.96765)
+size = Vector2(746.98303, 878.96765)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dr2ls"]
 size = Vector2(91, 453)
@@ -588,6 +596,7 @@ scale = Vector2(1.7500001, 1.1061947)
 texture = ExtResource("19_4ts2f")
 
 [node name="90SemTítulo20251205150832" type="Sprite2D" parent="background/0" unique_id=1951469212]
+material = SubResource("ShaderMaterial_wrolb")
 position = Vector2(5088, -7)
 scale = Vector2(0.35589817, 0.35589814)
 texture = ExtResource("22_4ycaj")
@@ -597,17 +606,20 @@ position = Vector2(5360.0005, 311)
 scale = Vector2(0.42485547, 0.57908845)
 
 [node name="90SemTítulo20251205150837" type="Sprite2D" parent="background/0/StaticBody2D" unique_id=721117913]
+material = SubResource("ShaderMaterial_wrolb")
 position = Vector2(60.114746, 0)
 scale = Vector2(0.87423694, 1)
 texture = ExtResource("22_4ycaj")
 
 [node name="90SemTítulo20251205150838" type="Sprite2D" parent="background/0/StaticBody2D/90SemTítulo20251205150837" unique_id=1360313952]
+material = SubResource("ShaderMaterial_wrolb")
 position = Vector2(-138.06934, 264.20837)
 scale = Vector2(1.2258698, 0.990162)
 texture = ExtResource("22_4ycaj")
 flip_v = true
 
 [node name="90SemTítulo20251205150839" type="Sprite2D" parent="background/0/StaticBody2D/90SemTítulo20251205150837" unique_id=939467357]
+material = SubResource("ShaderMaterial_wrolb")
 position = Vector2(-80.34473, -58.712982)
 rotation = -0.95021427
 scale = Vector2(1.0540422, 1.1713976)
@@ -616,14 +628,14 @@ texture = ExtResource("22_4ycaj")
 flip_v = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="background/0/StaticBody2D" unique_id=1075616556]
-position = Vector2(44.645508, -39.45822)
+position = Vector2(165.05566, -39.45822)
 shape = SubResource("RectangleShape2D_0lx4q")
 
 [node name="HitBox" parent="background/0/StaticBody2D/CollisionShape2D" unique_id=1534762485 instance=ExtResource("23_3kuko")]
 position = Vector2(-31.250977, 39.45822)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="background/0/StaticBody2D/CollisionShape2D/HitBox" unique_id=1599414741]
-position = Vector2(16.932617, 21.585571)
+position = Vector2(20.78711, 21.585571)
 shape = SubResource("RectangleShape2D_npdt7")
 
 [node name="MiasmaMedio" type="Sprite2D" parent="background/0" unique_id=2100047069]
@@ -702,12 +714,14 @@ position = Vector2(1888, -3908)
 position = Vector2(1878, -4033)
 
 [node name="90SemTítulo20251205150834" type="Sprite2D" parent="background/0" unique_id=1213509961]
+material = SubResource("ShaderMaterial_wrolb")
 position = Vector2(4656, -384)
 scale = Vector2(0.35589817, 0.35589814)
 texture = ExtResource("22_4ycaj")
 
 [node name="90SemTítulo20251205150838" type="Sprite2D" parent="background/0" unique_id=878153771]
 modulate = Color(0.012617188, 0.012617188, 0.012617188, 1)
+material = SubResource("ShaderMaterial_wrolb")
 position = Vector2(4738, -407)
 rotation = 0.19296306
 scale = Vector2(0.45916063, 0.45916054)
@@ -2023,6 +2037,7 @@ flip_h = true
 
 [node name="90SemTítulo20251205150839" type="Sprite2D" parent="background/1/Foreground" unique_id=1921254848]
 modulate = Color(0.012617188, 0.012617188, 0.012617188, 1)
+material = SubResource("ShaderMaterial_wrolb")
 position = Vector2(7016, 262.00006)
 rotation = 0.5235988
 scale = Vector2(1.5055103, 1.5055102)
@@ -2030,6 +2045,7 @@ texture = ExtResource("22_4ycaj")
 
 [node name="90SemTítulo20251205150840" type="Sprite2D" parent="background/1/Foreground" unique_id=841714294]
 modulate = Color(0.012617188, 0.012617188, 0.012617188, 1)
+material = SubResource("ShaderMaterial_wrolb")
 position = Vector2(6652, -252.00003)
 rotation = -0.2617994
 scale = Vector2(1.5055103, 1.5055101)
