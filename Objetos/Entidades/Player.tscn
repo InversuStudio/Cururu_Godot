@@ -611,6 +611,9 @@ animations = [{
 "texture": ExtResource("110_4gb4y")
 }, {
 "duration": 1.0,
+"texture": ExtResource("118_qtftx")
+}, {
+"duration": 1.0,
 "texture": ExtResource("111_24i8l")
 }, {
 "duration": 1.0,
@@ -638,6 +641,9 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": ExtResource("117_8vwo5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("107_qdgh8")
 }],
 "loop": false,
 "name": &"MeleeChao2",
@@ -1896,7 +1902,7 @@ unique_name_in_owner = true
 position = Vector2(0, -115)
 scale = Vector2(0.37, 0.37)
 sprite_frames = SubResource("SpriteFrames_ser7u")
-animation = &"Dash"
+animation = &"Special"
 frame = 1
 
 [node name="ColisaoFisica" type="CollisionShape2D" parent="." unique_id=185604391]
@@ -1936,11 +1942,11 @@ position = Vector2(-2, 0)
 
 [node name="PosMelee" type="Marker2D" parent="PosAtaques" unique_id=1527872985]
 unique_name_in_owner = true
-position = Vector2(135, -92)
+position = Vector2(140, -109)
 
 [node name="PosChicote" type="Marker2D" parent="PosAtaques" unique_id=761845377]
 unique_name_in_owner = true
-position = Vector2(134, -69)
+position = Vector2(141, -70)
 
 [node name="Anim" type="AnimationPlayer" parent="." unique_id=501766058]
 unique_name_in_owner = true

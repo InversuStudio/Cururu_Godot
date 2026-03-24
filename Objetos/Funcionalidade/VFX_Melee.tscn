@@ -1,11 +1,9 @@
 [gd_scene format=3 uid="uid://dr7oj8vguihm0"]
 
-[ext_resource type="Texture2D" uid="uid://dkiah6c1qdwoe" path="res://Sprites/Cururu/Melee/V2/ATAQUE_1_HIT_AGUA/CURURU_ATAQUE_03.png" id="1_hena8"]
-[ext_resource type="Texture2D" uid="uid://dlikf3e84i2kg" path="res://Sprites/Cururu/Melee/V2/ATAQUE_1_HIT_AGUA/CURURU_ATAQUE_05.png" id="2_v4lfw"]
-[ext_resource type="Texture2D" uid="uid://4ux2snne6vti" path="res://Sprites/Cururu/Melee/V2/ATAQUE_1_HIT_AGUA/CURURU_ATAQUE_07.png" id="3_ddfql"]
-[ext_resource type="Texture2D" uid="uid://cdgxma1wf2u25" path="res://Sprites/Cururu/Melee/V2/ATAQUE_1_HIT_AGUA/CURURU_ATAQUE_09.png" id="4_t2u0w"]
-[ext_resource type="Texture2D" uid="uid://sqrh4vieii8t" path="res://Sprites/Cururu/Melee/V2/ATAQUE_1_HIT_AGUA/CURURU_ATAQUE_11.png" id="5_fensd"]
-[ext_resource type="Texture2D" uid="uid://dexpq56mlcv5m" path="res://Sprites/Cururu/Melee/V2/ATAQUE_1_HIT_AGUA/CURURU_ATAQUE_13.png" id="6_1qob1"]
+[ext_resource type="Texture2D" uid="uid://dlhwc5an87l0v" path="res://Sprites/Cururu/Melee/V2/ATAQUE_2_HITS_AGUA/CURURU_ATAQUE_15.png" id="1_v4lfw"]
+[ext_resource type="Texture2D" uid="uid://upb5alx2ftkv" path="res://Sprites/Cururu/Melee/V2/ATAQUE_2_HITS_AGUA/CURURU_ATAQUE_17.png" id="3_ddfql"]
+[ext_resource type="Texture2D" uid="uid://bqqs2scymdtjo" path="res://Sprites/Cururu/Melee/V2/ATAQUE_2_HITS_AGUA/CURURU_ATAQUE_19.png" id="4_fensd"]
+[ext_resource type="Texture2D" uid="uid://cr6u2tfgyop3x" path="res://Sprites/Cururu/Melee/V2/ATAQUE_2_HITS_AGUA/CURURU_ATAQUE_21.png" id="7_8phdt"]
 [ext_resource type="Texture2D" uid="uid://b03gs8133u1u1" path="res://Sprites/Cururu/Melee/V2/ATAQUE_2_HITS_AGUA/CURURU_ATAQUE_23.png" id="7_hat3q"]
 [ext_resource type="Texture2D" uid="uid://ofjwuivnuj0i" path="res://Sprites/Cururu/Melee/V2/ATAQUE_2_HITS_AGUA/CURURU_ATAQUE_25.png" id="8_yfr1s"]
 [ext_resource type="Texture2D" uid="uid://j1fwt1srdi3s" path="res://Sprites/Cururu/Melee/V2/ATAQUE_2_HITS_AGUA/CURURU_ATAQUE_27.png" id="9_vhn8j"]
@@ -17,43 +15,58 @@
 [sub_resource type="SpriteFrames" id="SpriteFrames_dsijf"]
 animations = [{
 "frames": [{
-"duration": 1.0,
-"texture": ExtResource("1_hena8")
+"duration": 0.8,
+"texture": ExtResource("1_v4lfw")
 }, {
-"duration": 1.0,
-"texture": ExtResource("2_v4lfw")
+"duration": 0.8,
+"texture": ExtResource("10_2lgjf")
 }, {
-"duration": 1.0,
+"duration": 0.8,
 "texture": ExtResource("3_ddfql")
 }, {
-"duration": 1.0,
-"texture": ExtResource("4_t2u0w")
+"duration": 0.8,
+"texture": ExtResource("4_fensd")
 }, {
-"duration": 1.0,
-"texture": ExtResource("5_fensd")
+"duration": 0.8,
+"texture": ExtResource("8_yfr1s")
 }, {
-"duration": 1.0,
-"texture": ExtResource("6_1qob1")
+"duration": 0.8,
+"texture": ExtResource("7_hat3q")
+}, {
+"duration": 0.8,
+"texture": ExtResource("7_8phdt")
+}, {
+"duration": 0.8,
+"texture": ExtResource("11_1txr8")
 }],
 "loop": false,
 "name": &"1",
-"speed": 12.0
+"speed": 10.0
 }, {
 "frames": [{
-"duration": 1.0,
+"duration": 0.8,
+"texture": ExtResource("11_1txr8")
+}, {
+"duration": 0.8,
+"texture": ExtResource("7_8phdt")
+}, {
+"duration": 0.8,
 "texture": ExtResource("7_hat3q")
 }, {
-"duration": 1.0,
+"duration": 0.8,
 "texture": ExtResource("8_yfr1s")
 }, {
-"duration": 1.0,
+"duration": 0.8,
 "texture": ExtResource("9_vhn8j")
 }, {
-"duration": 1.0,
+"duration": 0.8,
+"texture": ExtResource("3_ddfql")
+}, {
+"duration": 0.8,
 "texture": ExtResource("10_2lgjf")
 }, {
-"duration": 1.0,
-"texture": ExtResource("11_1txr8")
+"duration": 0.8,
+"texture": ExtResource("1_v4lfw")
 }],
 "loop": false,
 "name": &"2",
@@ -61,14 +74,14 @@ animations = [{
 }]
 
 [node name="MeleeVFX" type="Node2D" unique_id=42300229]
-z_index = 1
+position = Vector2(108, -64)
 
 [node name="Animation" type="AnimatedSprite2D" parent="." unique_id=1976484140]
 scale = Vector2(0.37, 0.37)
 sprite_frames = SubResource("SpriteFrames_dsijf")
 animation = &"1"
-frame = 2
-frame_progress = 0.023823978
+frame = 3
+speed_scale = 1.2
 
 [node name="HitBox" parent="." unique_id=727505384 instance=ExtResource("12_hena8")]
 collision_mask = 16
@@ -76,4 +89,4 @@ vfx = ExtResource("13_v4lfw")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="HitBox" unique_id=756496064]
 position = Vector2(-120, 129)
-polygon = PackedVector2Array(178, -214, 265, -135, 197, -46, -7, -48, 56, -109, 24, -192)
+polygon = PackedVector2Array(197, -229, 241, -206, 264, -161, 264, -110, 243, -67, 204, -42, 128, -35, 4, -39, 13, -114, 18, -200, 68, -215, 136, -229)
