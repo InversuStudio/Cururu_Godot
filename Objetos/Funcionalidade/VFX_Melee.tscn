@@ -6,7 +6,6 @@
 [ext_resource type="Texture2D" uid="uid://cr6u2tfgyop3x" path="res://Sprites/Cururu/Melee/V2/ATAQUE_2_HITS_AGUA/CURURU_ATAQUE_21.png" id="7_8phdt"]
 [ext_resource type="Texture2D" uid="uid://b03gs8133u1u1" path="res://Sprites/Cururu/Melee/V2/ATAQUE_2_HITS_AGUA/CURURU_ATAQUE_23.png" id="7_hat3q"]
 [ext_resource type="Texture2D" uid="uid://ofjwuivnuj0i" path="res://Sprites/Cururu/Melee/V2/ATAQUE_2_HITS_AGUA/CURURU_ATAQUE_25.png" id="8_yfr1s"]
-[ext_resource type="Texture2D" uid="uid://j1fwt1srdi3s" path="res://Sprites/Cururu/Melee/V2/ATAQUE_2_HITS_AGUA/CURURU_ATAQUE_27.png" id="9_vhn8j"]
 [ext_resource type="Texture2D" uid="uid://ccadpupbwhkl4" path="res://Sprites/Cururu/Melee/V2/ATAQUE_2_HITS_AGUA/CURURU_ATAQUE_29.png" id="10_2lgjf"]
 [ext_resource type="Texture2D" uid="uid://cw3cdq4up1xqy" path="res://Sprites/Cururu/Melee/V2/ATAQUE_2_HITS_AGUA/CURURU_ATAQUE_31.png" id="11_1txr8"]
 [ext_resource type="PackedScene" uid="uid://pc4mgv2nv8af" path="res://Objetos/Funcionalidade/CompHitBox.tscn" id="12_hena8"]
@@ -57,7 +56,7 @@ animations = [{
 "texture": ExtResource("8_yfr1s")
 }, {
 "duration": 0.8,
-"texture": ExtResource("9_vhn8j")
+"texture": ExtResource("4_fensd")
 }, {
 "duration": 0.8,
 "texture": ExtResource("3_ddfql")
@@ -70,7 +69,7 @@ animations = [{
 }],
 "loop": false,
 "name": &"2",
-"speed": 12.0
+"speed": 10.0
 }]
 
 [node name="MeleeVFX" type="Node2D" unique_id=42300229]
@@ -80,7 +79,6 @@ position = Vector2(108, -64)
 scale = Vector2(0.37, 0.37)
 sprite_frames = SubResource("SpriteFrames_dsijf")
 animation = &"1"
-frame = 3
 speed_scale = 1.2
 
 [node name="HitBox" parent="." unique_id=727505384 instance=ExtResource("12_hena8")]
@@ -89,4 +87,4 @@ vfx = ExtResource("13_v4lfw")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="HitBox" unique_id=756496064]
 position = Vector2(-120, 129)
-polygon = PackedVector2Array(197, -229, 241, -206, 264, -161, 264, -110, 243, -67, 204, -42, 128, -35, 4, -39, 13, -114, 18, -200, 68, -215, 136, -229)
+polygon = PackedVector2Array(195, -226, 230, -202, 254, -158, 257, -104, 230, -64, 184, -41, 128, -35, 4, -39, 13, -114, 18, -200, 68, -215, 136, -229)
