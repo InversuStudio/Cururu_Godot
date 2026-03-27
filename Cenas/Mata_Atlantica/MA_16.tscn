@@ -787,6 +787,7 @@ hitbox = NodePath("HitMiasma1")
 metadata/_custom_type_script = "uid://davjnwfncyj66"
 
 [node name="HitMiasma1" parent="0/Cenario/PocoMiasma" unique_id=727505384 instance=ExtResource("16_6tp3d")]
+collision_mask = 10
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="0/Cenario/PocoMiasma/HitMiasma1" unique_id=1988070400]
 position = Vector2(1226.75, -239)
@@ -818,6 +819,7 @@ hitbox = NodePath("HitMiasma2")
 metadata/_custom_type_script = "uid://davjnwfncyj66"
 
 [node name="HitMiasma2" parent="0/Cenario/PocoMiasma2" unique_id=1073369559 instance=ExtResource("16_6tp3d")]
+collision_mask = 10
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="0/Cenario/PocoMiasma2/HitMiasma2" unique_id=124354328]
 position = Vector2(-1571.375, -239)
@@ -847,7 +849,6 @@ z_as_relative = false
 position = Vector2(874.4285, 131.42871)
 
 [node name="PointLight2D2" type="PointLight2D" parent="0/Cenario/Cururu" unique_id=1549148829]
-visible = false
 position = Vector2(7.6293945e-06, -92)
 scale = Vector2(1.441558, 1.4415585)
 energy = 1.2

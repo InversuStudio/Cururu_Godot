@@ -6,10 +6,11 @@ class_name Armadilha extends Node2D
 @export var hitbox:HitBox = null
 
 var ponto:Vector2
+var tp:bool = false
 
 func _ready() -> void:
 	hitbox.connect("hit", _on_hit)
-	
+	hitbox.body_entered.connect(_body_entered)
 	if spawn_points[0] != null and spawn_points[1] != null:
 		for sp:Area2D in spawn_points:
 			sp.collision_layer = 0
@@ -21,12 +22,22 @@ func _ready() -> void:
 func _on_hit(_p:Vector2, _h:HitBox, layer:int) -> void:
 	# Os IDs das collision layers são múltiplos de 2
 	# O ID 8 é a camada da Hit/Hurt do Player
-	if layer != 8: return
+	if layer != 8 or tp == true: return
+	TP()
+
+func _body_entered(body:Node2D) -> void:
+	if tp == false and body.is_in_group("Player"):
+		TP()
+
+func TP() -> void:
 	if spawn_points[0] != null and spawn_points[1] != null:
+		tp = true
 		Fade.FadeOut()
 		await Fade.terminou
+		tp = false
 		Mundos.player.global_position = ponto
 		Mundos.player.state_machine.MudaState(
 			Mundos.player.state_machine.find_child("Acorda")
 		)
 		Fade.FadeIn()
+		

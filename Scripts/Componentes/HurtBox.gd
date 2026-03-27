@@ -26,6 +26,8 @@ var ativo:bool = true
 signal hurt
 signal counter
 
+var last_hit:HitBox = null
+
 func _ready() -> void:
 	if hit_sfx: %SFX.stream = hit_sfx
 	if cooldown_dano > 0.0:
@@ -77,7 +79,9 @@ func AchaHit() -> void:
 	for a:Area2D in areas:
 		if a is HitBox:
 			hitbox.append(a)
-	hurt.emit(hitbox)
+	if hitbox.size() > 0:
+		last_hit = hitbox[0]
+		hurt.emit(hitbox)
 
 func CalcKnockback(dist:float, time:float, pos_target:Vector2) -> void:
 	# Define direção do knockback
@@ -95,3 +99,5 @@ func CalcKnockback(dist:float, time:float, pos_target:Vector2) -> void:
 
 func _on_timer_timeout() -> void:
 	ativo = true
+	if last_hit and overlaps_area(last_hit):
+		RecebeDano(last_hit.dano, global_position)
