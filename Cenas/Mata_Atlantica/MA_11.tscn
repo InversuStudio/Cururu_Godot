@@ -9,7 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://dyv700lptbkyq" path="res://Sprites/Cenário/Mata_Atlantica/Background/Galhos/composição2.png" id="4_omrxv"]
 [ext_resource type="Texture2D" uid="uid://dphhlbwaebgco" path="res://Sprites/Cenário/Mata_Atlantica/Background/Galhos/composição.png" id="5_b78wb"]
 [ext_resource type="PackedScene" uid="uid://1apfpwlqocxn" path="res://Objetos/Funcionalidade/TransicaoFase.tscn" id="5_fwuoy"]
-[ext_resource type="Texture2D" uid="uid://b1sv0car32gha" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/arvore_s3.png" id="7_8aryp"]
+[ext_resource type="Texture2D" uid="uid://b1sv0car32gha" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/arvore_S3.png" id="7_8aryp"]
 [ext_resource type="Texture2D" uid="uid://ctar30vsktrrb" path="res://Sprites/Cenário/Mata_Atlantica/Background/Iluminação e Fundo/FUNDONEVOA2.png" id="7_jb1wv"]
 [ext_resource type="Texture2D" uid="uid://i664886fdh55" path="res://Sprites/Cenário/Mata_Atlantica/Background/Mata/mato02.png" id="9_g8olc"]
 [ext_resource type="Texture2D" uid="uid://x1ar0khlrujj" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/arvore_miasma.png" id="9_ir41t"]
@@ -96,7 +96,7 @@ shader_parameter/offset = 0.0
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_nf0t0"]
 particle_flag_disable_z = true
 emission_shape = 3
-emission_box_extents = Vector3(300, 500, 1)
+emission_box_extents = Vector3(3500, 2500, 1)
 spread = 20.0
 initial_velocity_min = 1.0
 initial_velocity_max = 5.0
@@ -122,7 +122,7 @@ gradient = SubResource("Gradient_ihk82")
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_pwipa"]
 particle_flag_disable_z = true
 emission_shape = 3
-emission_box_extents = Vector3(7500, 500, 1)
+emission_box_extents = Vector3(3000, 3000, 1)
 spread = 20.0
 initial_velocity_min = 0.5
 initial_velocity_max = 2.0
@@ -618,22 +618,20 @@ z_index = 0
 position = Vector2(2588.0002, -646)
 
 [node name="Particula" type="GPUParticles2D" parent="0" unique_id=769110414]
-position = Vector2(3485, -2407.9998)
-scale = Vector2(24.456299, 7.56237)
+position = Vector2(3500, -2608)
 amount = 200
 amount_ratio = 0.7
 texture = ExtResource("37_1fg2t")
-visibility_rect = Rect2(-2000, -500, 4000, 1000)
+visibility_rect = Rect2(0, 0, 0, 0)
 process_material = SubResource("ParticleProcessMaterial_nf0t0")
 
 [node name="Folhas" type="GPUParticles2D" parent="0" unique_id=497644535]
 material = SubResource("CanvasItemMaterial_himbn")
-position = Vector2(4427, -2690)
-scale = Vector2(6.622835, 5.4080343)
+position = Vector2(3682, -2641)
 amount = 1000
 texture = ExtResource("34_8r8hw")
 lifetime = 5.0
-visibility_rect = Rect2(-7500, -500, 15000, 1000)
+visibility_rect = Rect2(0, 0, 7000, 1000)
 process_material = SubResource("ParticleProcessMaterial_pwipa")
 
 [node name="TileMapLayer" type="TileMapLayer" parent="0" unique_id=1014421929]

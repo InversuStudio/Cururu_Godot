@@ -194,5 +194,7 @@ func Morte() -> void:
 	print("MORRI")
 	GameData.game_start = false
 	if GameData.Load() == false:
+		Mundos.lista_inimigos = []
+		Mundos.lista_baus = []
 		GameData.player_morreu = true
 		LoadCena.Load("res://Cenas/aTutorial/Tutorial_1.tscn")

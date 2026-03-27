@@ -3,10 +3,12 @@ extends Node2D
 ## 2 Areas2D (esquerda e direita) que definem onde o player deve respawnar após dano.[br]
 ## [b]Se estiver vazio, não faz nada.[/b]
 @export var spawn_points:Array[Area2D] = [null, null]
+@export var hitbox:HitBox = null
 
 var ponto:Vector2
 
 func _ready() -> void:
+	hitbox.connect("hit", _on_hit)
 	if spawn_points[0] != null and spawn_points[1] != null:
 		for sp:Area2D in spawn_points:
 			sp.collision_layer = 0
@@ -15,7 +17,7 @@ func _ready() -> void:
 				if body.is_in_group("Player"):
 					ponto = sp.global_position)
 	
-func _on_hit_box_hit(_p:Vector2, _h:HitBox, layer:int) -> void:
+func _on_hit(_p:Vector2, _h:HitBox, layer:int) -> void:
 	# Os IDs das collision layers são múltiplos de 2
 	# O ID 8 é a camada da Hit/Hurt do Player
 	if layer != 8: return

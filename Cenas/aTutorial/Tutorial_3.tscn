@@ -24,7 +24,10 @@
 [ext_resource type="Texture2D" uid="uid://d18vqjeq586b1" path="res://Sprites/Cenário/Mata_Atlantica/Pedras e Ruinas/pedra_musgo.png" id="22_1eavy"]
 [ext_resource type="Texture2D" uid="uid://b2f2ppntemt15" path="res://Sprites/Cenário/Mata_Atlantica/Chao/flores.png" id="23_cd5hs"]
 [ext_resource type="PackedScene" uid="uid://bnm668fws2641" path="res://Objetos/Props/Armadilha.tscn" id="24_cv4nt"]
+[ext_resource type="Script" uid="uid://davjnwfncyj66" path="res://Scripts/Componentes/Armadilha.gd" id="25_hg2ga"]
 [ext_resource type="PackedScene" uid="uid://dgfcdht1gifdp" path="res://Objetos/Props/Espinhos.tscn" id="25_xa16c"]
+[ext_resource type="Texture2D" uid="uid://cjoew37wldhfy" path="res://Sprites/Cenário/Mata_Atlantica/Interativos/ESPINHOS_EXTERNO.png" id="26_431bo"]
+[ext_resource type="PackedScene" uid="uid://pc4mgv2nv8af" path="res://Objetos/Funcionalidade/CompHitBox.tscn" id="26_kw66j"]
 [ext_resource type="PackedScene" uid="uid://bos2748v4fxwy" path="res://Objetos/Props/upgrade_vida.tscn" id="26_n46oo"]
 [ext_resource type="PackedScene" uid="uid://dghxpclnjwg5k" path="res://Objetos/Props/PecaCoracao.tscn" id="27_61xe8"]
 [ext_resource type="PackedScene" uid="uid://1apfpwlqocxn" path="res://Objetos/Funcionalidade/TransicaoFase.tscn" id="28_fhn4p"]
@@ -76,6 +79,15 @@ size = Vector2(458, 83)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qclta"]
 size = Vector2(459, 28)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kw66j"]
+size = Vector2(765.3124, 304.4458)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ek7qv"]
+size = Vector2(765.3124, 253.1914)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gytst"]
+size = Vector2(739.1138, 68.81055)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ti6rg"]
 size = Vector2(135, 708)
@@ -918,6 +930,55 @@ spawn_points = [NodePath("../../../../Area2D2"), NodePath("../../../../Area2D3")
 position = Vector2(-540, 3278)
 rotation = -0.4063784
 spawn_points = [NodePath("../../../../Area2D2"), NodePath("../../../../Area2D3")]
+
+[node name="Espinhos" type="Node2D" parent="Background/0/Espinhos" unique_id=721482694 node_paths=PackedStringArray("spawn_points", "hitbox")]
+position = Vector2(2868, 12)
+rotation = -1.3063397
+script = ExtResource("25_hg2ga")
+spawn_points = [NodePath("Teste1"), NodePath("Teste2")]
+hitbox = NodePath("HitBox")
+
+[node name="HitBox" parent="Background/0/Espinhos/Espinhos" unique_id=727505384 instance=ExtResource("26_kw66j")]
+collision_layer = 16
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Background/0/Espinhos/Espinhos/HitBox" unique_id=1763157910]
+position = Vector2(-78.73828, -45.557617)
+rotation = -0.1899745
+shape = SubResource("RectangleShape2D_kw66j")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Background/0/Espinhos/Espinhos/HitBox" unique_id=579306738]
+position = Vector2(-493.89624, 62.26172)
+rotation = -0.3757463
+shape = SubResource("RectangleShape2D_ek7qv")
+
+[node name="Sprite2D" type="Sprite2D" parent="Background/0/Espinhos/Espinhos" unique_id=1793885873]
+texture = ExtResource("26_431bo")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Background/0/Espinhos/Espinhos" unique_id=131490911]
+position = Vector2(-314.1658, 148.27292)
+rotation = -0.56244314
+texture = ExtResource("26_431bo")
+
+[node name="Sprite2D3" type="Sprite2D" parent="Background/0/Espinhos/Espinhos" unique_id=1127079245]
+position = Vector2(-535.4455, 195.76306)
+rotation = -0.3131454
+texture = ExtResource("26_431bo")
+
+[node name="Teste1" type="Area2D" parent="Background/0/Espinhos/Espinhos" unique_id=1302692809]
+position = Vector2(575.31604, -29.401001)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Background/0/Espinhos/Espinhos/Teste1" unique_id=1790712959]
+position = Vector2(49.808838, -13.347656)
+rotation = -0.26179945
+shape = SubResource("RectangleShape2D_gytst")
+
+[node name="Teste2" type="Area2D" parent="Background/0/Espinhos/Espinhos" unique_id=1192628108]
+position = Vector2(366.57355, -907.3615)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Background/0/Espinhos/Espinhos/Teste2" unique_id=1304830520]
+position = Vector2(49.808838, -13.347656)
+rotation = -0.26179945
+shape = SubResource("RectangleShape2D_gytst")
 
 [node name="Node2D" parent="Background/0" unique_id=1869668779 instance=ExtResource("26_n46oo")]
 position = Vector2(-15734, -1269)

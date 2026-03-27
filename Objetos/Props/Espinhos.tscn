@@ -21,8 +21,9 @@ animations = [{
 radius = 113.99996
 height = 886.0
 
-[node name="Espinhos" type="Node2D" unique_id=2018921236]
+[node name="Espinhos" type="Node2D" unique_id=2018921236 node_paths=PackedStringArray("hitbox")]
 script = ExtResource("1_8olkt")
+hitbox = NodePath("HitBox")
 
 [node name="Sprite" type="AnimatedSprite2D" parent="." unique_id=679433497]
 unique_name_in_owner = true

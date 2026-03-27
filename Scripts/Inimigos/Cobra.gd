@@ -6,6 +6,7 @@ var dir: int = 1
 @onready var id:String = str(Mundos.fase_atual) + name
 
 var tomou_dano:bool = false
+var morreu:bool = false
 
 func _ready() -> void:
 	for i:String in Mundos.lista_inimigos:
@@ -59,6 +60,7 @@ func _physics_process(delta: float) -> void:
 	move_and_slide()
 
 func Morte() -> void:
+	morreu = true
 	%SomMorte.play()
 	Mundos.lista_inimigos.append(id)
 	%HurtBox.process_mode = PROCESS_MODE_DISABLED
@@ -69,17 +71,19 @@ func Morte() -> void:
 
 
 func _on_area_range_ataque_body_entered(body: Node2D) -> void:
-	if body.is_in_group("Player"):
+	if body.is_in_group("Player") and !morreu:
 		var old_dir = dir
 		dir = 0
 		%Sprite.play("ataque")
 		# Espera um pouquinho só pra animação fazer sentido
 		await get_tree().create_timer(.5).timeout
+		if morreu: return
 		# Como Area2D faz checagem física, tem que chamar/setar as coisas
 		# usando o deferred. Basicamente, isso espera o processamento entrar
 		# em idle pra executar o código, o que evita erro.
 		%HitBoxMordida.set_deferred("monitoring", true)#disabled = false
 		await %Sprite.animation_finished
+		if morreu: return
 		%HitBoxMordida.set_deferred("monitoring", false)#.disabled = true
 		dir = old_dir
 		%Sprite.play("default")

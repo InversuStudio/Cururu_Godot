@@ -21,8 +21,9 @@ animations = [{
 radius = 243.9999
 height = 487.9998
 
-[node name="Armadilha" type="Node2D" unique_id=88614158]
+[node name="Armadilha" type="Node2D" unique_id=88614158 node_paths=PackedStringArray("hitbox")]
 script = ExtResource("1_jlm20")
+hitbox = NodePath("HitBox")
 
 [node name="Sprite" type="AnimatedSprite2D" parent="." unique_id=1797736855]
 unique_name_in_owner = true
@@ -47,5 +48,3 @@ debug_color = Color(0.807155, 0.414602, 3.85046e-07, 0.42)
 rect = Rect2(-262, -309, 524, 545)
 script = ExtResource("5_4o1mp")
 metadata/_custom_type_script = "uid://b2ls33ys55oyt"
-
-[connection signal="hit" from="HitBox" to="." method="_on_hit_box_hit"]

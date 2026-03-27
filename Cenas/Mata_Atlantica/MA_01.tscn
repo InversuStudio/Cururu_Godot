@@ -45,7 +45,7 @@
 [ext_resource type="Texture2D" uid="uid://c7ftx4tv020y8" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/Arvoresv2/mata atlântica_0_20260313104055.PNG" id="36_sqp07"]
 [ext_resource type="Texture2D" uid="uid://b2h3fql3vsmes" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/Arvoresv2/A726E68F-D2E6-4926-9FEC-593D04D02A5F.PNG" id="37_2nacr"]
 [ext_resource type="Texture2D" uid="uid://qnmudd1gsvwa" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/Arvoresv2/9E7FA84B-693E-43FC-9618-BDAB20CEADC9.PNG" id="38_gto7e"]
-[ext_resource type="PackedScene" path="res://Objetos/Funcionalidade/MostraTela.tscn" id="42_x6mjr"]
+[ext_resource type="PackedScene" uid="uid://bnubkn7kxj708" path="res://Objetos/Funcionalidade/MostraTela.tscn" id="42_x6mjr"]
 [ext_resource type="Texture2D" uid="uid://b4mpyxtqe3pwu" path="res://Sprites/UI/Dialogo/INTERAGIR.png" id="43_ywd7t"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_qfxhu"]

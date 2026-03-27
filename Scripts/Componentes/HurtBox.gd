@@ -21,6 +21,7 @@ extends Area2D
 var hit_shader: Shader = preload("res://Scripts/Shaders/HitFlash.gdshader")
 var s_material: ShaderMaterial = null
 var material_sprite: ShaderMaterial= null
+var ativo:bool = true
 
 signal hurt
 signal counter
@@ -38,7 +39,8 @@ func _ready() -> void:
 		material_sprite = sprite.material
 
 # FUNÇÃO DE RECEBER DANO
-func RecebeDano(dano:int, pos_target:Vector2):
+func RecebeDano(dano:int, pos_target:Vector2) -> void:
+	if !ativo: return
 	# Se houver componente de vida, recebe dano
 	if comp_vida:
 		# Rebe dano subtraído da defesa
@@ -57,7 +59,7 @@ func RecebeDano(dano:int, pos_target:Vector2):
 	call_deferred("AchaHit")
 	if cooldown_dano > 0.0:
 		# Desabilita colisão
-		set_deferred("monitorable", false)
+		ativo = false
 		# Inicia cooldown
 		%Timer.start()
 	# Toca som de dano
@@ -92,4 +94,4 @@ func CalcKnockback(dist:float, time:float, pos_target:Vector2) -> void:
 		counter.emit(c, dir)
 
 func _on_timer_timeout() -> void:
-	set_deferred("monitorable", true)
+	ativo = true
