@@ -1,4 +1,4 @@
-extends Node2D
+class_name Armadilha extends Node2D
 
 ## 2 Areas2D (esquerda e direita) que definem onde o player deve respawnar após dano.[br]
 ## [b]Se estiver vazio, não faz nada.[/b]
@@ -9,6 +9,7 @@ var ponto:Vector2
 
 func _ready() -> void:
 	hitbox.connect("hit", _on_hit)
+	
 	if spawn_points[0] != null and spawn_points[1] != null:
 		for sp:Area2D in spawn_points:
 			sp.collision_layer = 0
@@ -25,4 +26,7 @@ func _on_hit(_p:Vector2, _h:HitBox, layer:int) -> void:
 		Fade.FadeOut()
 		await Fade.terminou
 		Mundos.player.global_position = ponto
+		Mundos.player.state_machine.MudaState(
+			Mundos.player.state_machine.find_child("Acorda")
+		)
 		Fade.FadeIn()

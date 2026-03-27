@@ -38,7 +38,6 @@
 [ext_resource type="Script" uid="uid://davjnwfncyj66" path="res://Scripts/Componentes/Armadilha.gd" id="27_xyal3"]
 [ext_resource type="Shader" uid="uid://da2wxasx6evg0" path="res://Scripts/Shaders/Grama.gdshader" id="28_48sfr"]
 [ext_resource type="Texture2D" uid="uid://b6f4rmw8i4g77" path="res://Sprites/Inimigos/Boitata/PropCorpoBoitata.png" id="29_60v7g"]
-[ext_resource type="PackedScene" uid="uid://c7fydvoibqcaj" path="res://Objetos/Props/Miasma_Agua.tscn" id="30_sbacw"]
 [ext_resource type="Texture2D" uid="uid://b73nkcosr250e" path="res://Sprites/VFX/Iluminação/LightCururu.png" id="31_ss1nv"]
 [ext_resource type="PackedScene" uid="uid://nohq28uk7lfk" path="res://Objetos/Entidades/Player.tscn" id="32_fdwrl"]
 [ext_resource type="Shader" uid="uid://bbohkd8d1ljws" path="res://Scripts/Shaders/wavewater.gdshader" id="33_5ax0a"]
@@ -59,16 +58,6 @@
 [ext_resource type="Script" uid="uid://dd16yu704x6wt" path="res://Scripts/Componentes/BGM_Player.gd" id="46_4nae2"]
 [ext_resource type="PackedScene" uid="uid://u28e3eudu6ch" path="res://Objetos/Funcionalidade/MainCamera.tscn" id="47_3uh5w"]
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_maupx"]
-shader = ExtResource("2_s7kye")
-shader_parameter/darkness = 0.10000000475
-shader_parameter/lod = 0.6000000285
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_s7kye"]
-shader = ExtResource("2_s7kye")
-shader_parameter/darkness = 0.10000000475
-shader_parameter/lod = 0.6000000285
-
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_eiwdw"]
 shader = ExtResource("2_s7kye")
 shader_parameter/darkness = 0.10000000475
@@ -80,11 +69,6 @@ shader_parameter/fog_color = Color(0.18717614, 0.18717614, 0.18717614, 0.7921569
 shader_parameter/density = 1.3
 shader_parameter/speed = 0.4
 shader_parameter/scale = 1.5
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_6qvld"]
-shader = ExtResource("2_s7kye")
-shader_parameter/darkness = 0.02000000095
-shader_parameter/lod = 0.400000019
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_hbi5w"]
 shader = ExtResource("28_48sfr")
@@ -179,10 +163,14 @@ shader_parameter/heightOffset = 0.0
 shader_parameter/flip_wind = false
 shader_parameter/offset = 0.0
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_giq4m"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xyal3"]
+size = Vector2(812.5, 381)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xyjrg"]
 size = Vector2(40.65988, 1082)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_p266r"]
+size = Vector2(1299.25, 381)
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_afdng"]
 shader = ExtResource("33_5ax0a")
@@ -310,18 +298,6 @@ position = Vector2(-2342.857, -10852.5)
 scale = Vector2(1.0913086, 1.0913086)
 texture = ExtResource("1_s7kye")
 
-[node name="ColorRect" type="ColorRect" parent="-4" unique_id=434522747]
-material = SubResource("ShaderMaterial_maupx")
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -7105.714
-offset_top = -12651.43
-offset_right = -2102.8574
-offset_bottom = -10408.571
-grow_horizontal = 2
-grow_vertical = 2
-
 [node name="CanvasModulate" type="CanvasModulate" parent="-4" unique_id=1715928177]
 position = Vector2(-27329.11, -13826.375)
 scale = Vector2(175.74992, 39.388683)
@@ -379,18 +355,6 @@ texture = ExtResource("5_l6p7n")
 position = Vector2(-987.9999, -10722.8)
 scale = Vector2(0.8, 0.8)
 texture = ExtResource("5_l6p7n")
-
-[node name="ColorRect" type="ColorRect" parent="-3" unique_id=2011066350]
-material = SubResource("ShaderMaterial_s7kye")
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -7235.4844
-offset_top = -12523.749
-offset_right = -1630.0137
-offset_bottom = -10372.42
-grow_horizontal = 2
-grow_vertical = 2
 
 [node name="CanvasModulate" type="CanvasModulate" parent="-3" unique_id=1528275518]
 position = Vector2(-27329.11, -13826.375)
@@ -478,7 +442,6 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="CanvasModulate" type="CanvasModulate" parent="-2" unique_id=1542988746]
-position = Vector2(-27329.11, -13826.375)
 scale = Vector2(175.74992, 39.388683)
 color = Color(0.13333334, 0.13333334, 0.13333334, 1)
 
@@ -529,13 +492,6 @@ offset_top = -12229.527
 offset_right = 1380.852
 offset_bottom = -9848.846
 
-[node name="ColorRect" type="ColorRect" parent="-1" unique_id=125376101]
-material = SubResource("ShaderMaterial_6qvld")
-offset_left = -8053.1245
-offset_top = -12596.875
-offset_right = 1634.8306
-offset_bottom = -9194.653
-
 [node name="CanvasModulate" type="CanvasModulate" parent="-1" unique_id=919153298]
 position = Vector2(-27329.11, -13826.375)
 scale = Vector2(175.74992, 39.388683)
@@ -548,13 +504,6 @@ follow_viewport_scale = 0.97
 [node name="Node2D2" parent="-0,5" unique_id=1151844016 instance=ExtResource("10_b3tkq")]
 position = Vector2(-4958.3335, -10250.001)
 scale = Vector2(0.65143585, 0.65143585)
-
-[node name="ColorRect" type="ColorRect" parent="-0,5" unique_id=488744727]
-material = SubResource("ShaderMaterial_6qvld")
-offset_left = -8290.721
-offset_top = -12794.845
-offset_right = 1397.2344
-offset_bottom = -9392.622
 
 [node name="Queimada01" type="Sprite2D" parent="-0,5" unique_id=88525946]
 position = Vector2(-3683, -10825)
@@ -711,18 +660,10 @@ sprite_frames = SubResource("SpriteFrames_hqusl")
 autoplay = "default"
 frame_progress = 0.48184553
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="0/Boss/Rabo" unique_id=1024456315 node_paths=PackedStringArray("spawn_points")]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="0/Boss/Rabo" unique_id=1024456315]
 position = Vector2(-8.612568, -258.98578)
 shape = SubResource("CapsuleShape2D_s7f4i")
 debug_color = Color(0.9866224, 0, 0.3265099, 0.41960785)
-script = ExtResource("27_xyal3")
-spawn_points = [NodePath("../../../Cenario/Armadilha/Respawn2"), NodePath("../../../Cenario/Armadilha/Respawn")]
-
-[node name="Respaw" type="Node2D" parent="0/Boss/Rabo/CollisionShape2D" unique_id=263160941 node_paths=PackedStringArray("spawn_points")]
-position = Vector2(8.612549, 258.98584)
-scale = Vector2(0.99999994, 0.99999994)
-script = ExtResource("27_xyal3")
-spawn_points = [NodePath("../../../../Cenario/Armadilha/Respawn"), NodePath("../../../../Cenario/Armadilha/Respawn2")]
 
 [node name="LuzRabo" type="PointLight2D" parent="0/Boss/Rabo" unique_id=1125440749]
 light_mask = 2
@@ -838,49 +779,64 @@ rotation = -2.8797934
 scale = Vector2(0.57967436, 0.5796744)
 texture = ExtResource("29_60v7g")
 
-[node name="Armadilha" parent="0/Cenario" unique_id=298321285 node_paths=PackedStringArray("spawn_points") instance=ExtResource("30_sbacw")]
-material = SubResource("ShaderMaterial_giq4m")
-position = Vector2(-1306.5714, 468.4287)
-scale = Vector2(1.1458104, 0.8139577)
+[node name="PocoMiasma" type="Node2D" parent="0/Cenario" unique_id=808995035 node_paths=PackedStringArray("spawn_points", "hitbox")]
+position = Vector2(-2426.5713, 628.4287)
+script = ExtResource("27_xyal3")
 spawn_points = [NodePath("Respawn"), NodePath("Respawn2")]
+hitbox = NodePath("HitMiasma1")
+metadata/_custom_type_script = "uid://davjnwfncyj66"
 
-[node name="Respawn2" type="Area2D" parent="0/Cenario/Armadilha" unique_id=1666160087]
-position = Vector2(-308.95166, -422.62625)
-scale = Vector2(2.0176654, 1.2285651)
+[node name="HitMiasma1" parent="0/Cenario/PocoMiasma" unique_id=727505384 instance=ExtResource("16_6tp3d")]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="0/Cenario/Armadilha/Respawn2" unique_id=2034831520]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="0/Cenario/PocoMiasma/HitMiasma1" unique_id=1988070400]
+position = Vector2(1226.75, -239)
+shape = SubResource("RectangleShape2D_xyal3")
+
+[node name="Respawn2" type="Area2D" parent="0/Cenario/PocoMiasma" unique_id=1666160087]
+position = Vector2(766, -504)
+scale = Vector2(2.311862, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="0/Cenario/PocoMiasma/Respawn2" unique_id=2034831520]
 position = Vector2(-1.7302017, -522)
 scale = Vector2(0.9999999, 0.9999997)
 shape = SubResource("RectangleShape2D_xyjrg")
 
-[node name="Respawn" type="Area2D" parent="0/Cenario/Armadilha" unique_id=70277916]
-position = Vector2(494.8462, -422.62625)
-scale = Vector2(2.0176654, 1.2285651)
+[node name="Respawn" type="Area2D" parent="0/Cenario/PocoMiasma" unique_id=70277916]
+position = Vector2(1687, -504)
+scale = Vector2(2.311862, 1)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="0/Cenario/Armadilha/Respawn" unique_id=258669393]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="0/Cenario/PocoMiasma/Respawn" unique_id=258669393]
 position = Vector2(0.43255615, -522)
 scale = Vector2(0.9999999, 0.99999964)
 shape = SubResource("RectangleShape2D_xyjrg")
 
-[node name="Armadilha2" parent="0/Cenario" unique_id=186458593 node_paths=PackedStringArray("spawn_points") instance=ExtResource("30_sbacw")]
-position = Vector2(-3780.5718, 522.4287)
-scale = Vector2(2.3118618, 1)
+[node name="PocoMiasma2" type="Node2D" parent="0/Cenario" unique_id=719820579 node_paths=PackedStringArray("spawn_points", "hitbox")]
+position = Vector2(-2426.5713, 628.4287)
+script = ExtResource("27_xyal3")
 spawn_points = [NodePath("Respawn3"), NodePath("Respawn4")]
+hitbox = NodePath("HitMiasma2")
+metadata/_custom_type_script = "uid://davjnwfncyj66"
 
-[node name="Respawn3" type="Area2D" parent="0/Cenario/Armadilha2" unique_id=1584371129]
-position = Vector2(283.7539, -381)
-scale = Vector2(0.99999994, 0.99999994)
+[node name="HitMiasma2" parent="0/Cenario/PocoMiasma2" unique_id=1073369559 instance=ExtResource("16_6tp3d")]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="0/Cenario/Armadilha2/Respawn3" unique_id=1013735740]
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="0/Cenario/PocoMiasma2/HitMiasma2" unique_id=124354328]
+position = Vector2(-1571.375, -239)
+shape = SubResource("RectangleShape2D_p266r")
+
+[node name="Respawn3" type="Area2D" parent="0/Cenario/PocoMiasma2" unique_id=1584371129]
+position = Vector2(-698.0005, -487)
+scale = Vector2(2.3118615, 0.99999994)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="0/Cenario/PocoMiasma2/Respawn3" unique_id=1013735740]
 position = Vector2(0.43255615, -522)
 scale = Vector2(0.9999999, 0.9999997)
 shape = SubResource("RectangleShape2D_xyjrg")
 
-[node name="Respawn4" type="Area2D" parent="0/Cenario/Armadilha2" unique_id=931996395]
-position = Vector2(-400.54297, -381)
-scale = Vector2(0.99999994, 0.99999994)
+[node name="Respawn4" type="Area2D" parent="0/Cenario/PocoMiasma2" unique_id=931996395]
+position = Vector2(-2280.0005, -487)
+scale = Vector2(2.3118615, 0.99999994)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="0/Cenario/Armadilha2/Respawn4" unique_id=478786906]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="0/Cenario/PocoMiasma2/Respawn4" unique_id=478786906]
 position = Vector2(0.43255615, -522)
 scale = Vector2(0.9999999, 0.9999997)
 shape = SubResource("RectangleShape2D_xyjrg")
@@ -891,6 +847,7 @@ z_as_relative = false
 position = Vector2(874.4285, 131.42871)
 
 [node name="PointLight2D2" type="PointLight2D" parent="0/Cenario/Cururu" unique_id=1549148829]
+visible = false
 position = Vector2(7.6293945e-06, -92)
 scale = Vector2(1.441558, 1.4415585)
 energy = 1.2
@@ -898,7 +855,7 @@ blend_mode = 2
 range_layer_max = 1
 texture = ExtResource("34_qp27v")
 
-[node name="Agua" type="TileMapLayer" parent="0/Cenario" unique_id=608737215 groups=["Agua"]]
+[node name="Miasma" type="TileMapLayer" parent="0/Cenario" unique_id=608737215 groups=["Agua"]]
 self_modulate = Color(1.7445444, 3.1984727, 4.3813295, 1)
 material = SubResource("ShaderMaterial_afdng")
 position = Vector2(-1525.4095, 12434.434)
@@ -1711,10 +1668,6 @@ texture = ExtResource("40_wl1nf")
 lifetime = 5.0
 visibility_rect = Rect2(-7500, -500, 15000, 1000)
 process_material = SubResource("ParticleProcessMaterial_x20r4")
-
-[node name="3" type="CanvasLayer" parent="." unique_id=1158125993]
-
-[node name="4" type="CanvasLayer" parent="." unique_id=610410012]
 
 [node name="BGM_Player" type="Node" parent="." unique_id=1663845811]
 script = ExtResource("46_4nae2")
