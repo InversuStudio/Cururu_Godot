@@ -1945,11 +1945,11 @@ position = Vector2(-2, 0)
 
 [node name="PosMelee" type="Marker2D" parent="PosAtaques" unique_id=1527872985]
 unique_name_in_owner = true
-position = Vector2(140, -109)
+position = Vector2(140, -131)
 
 [node name="PosChicote" type="Marker2D" parent="PosAtaques" unique_id=761845377]
 unique_name_in_owner = true
-position = Vector2(141, -70)
+position = Vector2(116, -70)
 
 [node name="Anim" type="AnimationPlayer" parent="." unique_id=501766058]
 unique_name_in_owner = true
