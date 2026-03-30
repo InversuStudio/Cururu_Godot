@@ -84,7 +84,7 @@ size = Vector2(459, 28)
 size = Vector2(765.3124, 304.4458)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ek7qv"]
-size = Vector2(765.3124, 253.1914)
+size = Vector2(745.0635, 287.26855)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gytst"]
 size = Vector2(739.1138, 68.81055)
@@ -947,8 +947,8 @@ rotation = -0.1899745
 shape = SubResource("RectangleShape2D_kw66j")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Background/0/Espinhos/Espinhos/HitBox" unique_id=579306738]
-position = Vector2(-493.89624, 62.26172)
-rotation = -0.3757463
+position = Vector2(-469.29053, 107.66211)
+rotation = -0.26179942
 shape = SubResource("RectangleShape2D_ek7qv")
 
 [node name="Sprite2D" type="Sprite2D" parent="Background/0/Espinhos/Espinhos" unique_id=1793885873]
@@ -973,6 +973,7 @@ rotation = -0.26179945
 shape = SubResource("RectangleShape2D_gytst")
 
 [node name="Teste2" type="Area2D" parent="Background/0/Espinhos/Espinhos" unique_id=1192628108]
+visible = false
 position = Vector2(366.57355, -907.3615)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Background/0/Espinhos/Espinhos/Teste2" unique_id=1304830520]

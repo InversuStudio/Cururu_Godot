@@ -5,7 +5,7 @@ if GameData.naia_falou == false:
 	NAIÁ: Elas lhe serão úteis para purificar a região do MIASMA.
 	NAIÁ: Saci me contou que o Encantado que protege esse lugar também foi contaminado… É realmente preocupante. 
 	NAIÁ: ...não será uma tarefa fácil enfrentá-lo.
-	NAIÁ: Mas não tema: o poder que lhe concedi é forte contra o mal.
+	NAIÁ: Mas não tema, o poder que lhe concedi é forte contra o mal.
 	NAIÁ: Agora vá, e confie nas águas lunares para abrir seu caminho.[do! GameData.naia_falou = true]
 else:
 	NAIÁ: Vai pequeno, e que a Lua te proteja.
