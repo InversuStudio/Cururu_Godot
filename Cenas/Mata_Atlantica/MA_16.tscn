@@ -58,6 +58,11 @@
 [ext_resource type="Script" uid="uid://dd16yu704x6wt" path="res://Scripts/Componentes/BGM_Player.gd" id="46_4nae2"]
 [ext_resource type="PackedScene" uid="uid://u28e3eudu6ch" path="res://Objetos/Funcionalidade/MainCamera.tscn" id="47_3uh5w"]
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_b3tkq"]
+shader = ExtResource("2_s7kye")
+shader_parameter/darkness = 0.2000000095
+shader_parameter/lod = 0.70000003325
+
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_eiwdw"]
 shader = ExtResource("2_s7kye")
 shader_parameter/darkness = 0.10000000475
@@ -303,6 +308,20 @@ position = Vector2(-27329.11, -13826.375)
 scale = Vector2(175.74992, 39.388683)
 color = Color(0.13319641, 0.13319641, 0.13319638, 1)
 
+[node name="ColorRect" type="ColorRect" parent="-4" unique_id=88570864]
+material = SubResource("ShaderMaterial_b3tkq")
+anchors_preset = -1
+anchor_left = -4.2973237
+anchor_top = -2.9960322
+anchor_right = -0.034064736
+anchor_bottom = -0.5625289
+offset_left = 845.147
+offset_top = -10011.429
+offset_right = 885.147
+offset_bottom = -9971.429
+scale = Vector2(0.9844004, 1.7800354)
+metadata/_edit_use_anchors_ = true
+
 [node name="-3,5" type="CanvasLayer" parent="." unique_id=568571791]
 follow_viewport_enabled = true
 follow_viewport_scale = 0.75
@@ -355,6 +374,20 @@ texture = ExtResource("5_l6p7n")
 position = Vector2(-987.9999, -10722.8)
 scale = Vector2(0.8, 0.8)
 texture = ExtResource("5_l6p7n")
+
+[node name="ColorRect" type="ColorRect" parent="-3" unique_id=419673277]
+material = SubResource("ShaderMaterial_b3tkq")
+anchors_preset = -1
+anchor_left = -4.2973237
+anchor_top = -2.9960322
+anchor_right = -0.034064736
+anchor_bottom = -0.5625289
+offset_left = 765.8613
+offset_top = -10024.285
+offset_right = 805.8574
+offset_bottom = -9984.285
+scale = Vector2(0.9844004, 1.7800354)
+metadata/_edit_use_anchors_ = true
 
 [node name="CanvasModulate" type="CanvasModulate" parent="-3" unique_id=1528275518]
 position = Vector2(-27329.11, -13826.375)
@@ -487,10 +520,10 @@ scale = Vector2(0.65143585, 0.65143585)
 
 [node name="Fog" type="ColorRect" parent="-1" unique_id=885992687]
 material = SubResource("ShaderMaterial_wl1nf")
-offset_left = -8005.1694
-offset_top = -12229.527
-offset_right = 1380.852
-offset_bottom = -9848.846
+offset_left = -7576.042
+offset_top = -12917.709
+offset_right = 726.042
+offset_bottom = -9431.251
 
 [node name="CanvasModulate" type="CanvasModulate" parent="-1" unique_id=919153298]
 position = Vector2(-27329.11, -13826.375)

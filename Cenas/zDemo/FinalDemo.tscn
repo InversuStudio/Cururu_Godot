@@ -1,10 +1,11 @@
-[gd_scene load_steps=4 format=3 uid="uid://d0dte5wfi7d0m"]
+[gd_scene format=3 uid="uid://d0dte5wfi7d0m"]
 
 [ext_resource type="Texture2D" uid="uid://cwk87j7k2tx4b" path="res://Sprites/UI/FinalDemo/TELA_FINAL.png" id="1_a8qag"]
 [ext_resource type="Script" uid="uid://bybbf6dpcoelr" path="res://Scripts/Demo/FinalDemo.gd" id="1_bw0r5"]
+[ext_resource type="AudioStream" uid="uid://cdyib5njx1h8o" path="res://Audio/Musicas/Fim.ogg" id="4_l7wy2"]
 [ext_resource type="Script" uid="uid://dd16yu704x6wt" path="res://Scripts/Componentes/BGM_Player.gd" id="4_ued6h"]
 
-[node name="FinalDemo" type="Control"]
+[node name="FinalDemo" type="Control" unique_id=678308461]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -13,7 +14,7 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_bw0r5")
 
-[node name="Background" type="TextureRect" parent="."]
+[node name="Background" type="TextureRect" parent="." unique_id=346422841]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -22,6 +23,7 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("1_a8qag")
 
-[node name="BGM_Player" type="Node" parent="."]
+[node name="BGM_Player" type="Node" parent="." unique_id=1971115413]
 script = ExtResource("4_ued6h")
+musica = ExtResource("4_l7wy2")
 metadata/_custom_type_script = "uid://dd16yu704x6wt"

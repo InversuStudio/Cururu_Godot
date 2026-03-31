@@ -19,6 +19,8 @@
 [ext_resource type="Texture2D" uid="uid://c8tb73qiqhhk8" path="res://Sprites/Cenário/Mata_Atlantica/Background/Galhos/esquerda01.png" id="17_fr13k"]
 [ext_resource type="Texture2D" uid="uid://d0w6r04nxo1a2" path="res://Sprites/Cenário/Mata_Atlantica/Background/Mata/mato00.png" id="18_qqu0f"]
 [ext_resource type="Shader" uid="uid://cete83ldr534" path="res://Scripts/Shaders/godray.gdshader" id="19_cdlqy"]
+[ext_resource type="Texture2D" uid="uid://bgwwis0v04hil" path="res://Sprites/Cenário/Miasma/miasma_gota.png" id="19_ek7qv"]
+[ext_resource type="Texture2D" uid="uid://cry1d2tvkctu1" path="res://Sprites/Cenário/Miasma/miasma_chao02.png" id="20_gytst"]
 [ext_resource type="Texture2D" uid="uid://c8bkav2g3wyeu" path="res://Sprites/Cenário/Mata_Atlantica/Chao/moita2.png" id="20_hsclv"]
 [ext_resource type="Texture2D" uid="uid://rbtvfm4m7ft" path="res://Sprites/VFX/Iluminação/SOMBRA2.png" id="21_h1566"]
 [ext_resource type="Texture2D" uid="uid://d18vqjeq586b1" path="res://Sprites/Cenário/Mata_Atlantica/Pedras e Ruinas/pedra_musgo.png" id="22_1eavy"]
@@ -696,6 +698,17 @@ texture = ExtResource("18_qqu0f")
 
 [node name="0" type="CanvasLayer" parent="Background" unique_id=1841973241]
 follow_viewport_enabled = true
+
+[node name="MiasmaGota" type="Sprite2D" parent="Background/0" unique_id=338692305]
+position = Vector2(-16744, -4050.0002)
+scale = Vector2(1.4117647, 1.2548983)
+texture = ExtResource("19_ek7qv")
+
+[node name="MiasmaChao02" type="Sprite2D" parent="Background/0" unique_id=655168629]
+position = Vector2(-16745, -4110)
+scale = Vector2(1.1611654, 1.5611223)
+texture = ExtResource("20_gytst")
+flip_v = true
 
 [node name="Moita7" type="Sprite2D" parent="Background/0" unique_id=1546691643]
 position = Vector2(-12340.002, 586.99994)
