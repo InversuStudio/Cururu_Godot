@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://cr0f7c8aqji57"]
+
+[ext_resource type="Script" uid="uid://dnpoiernmavtn" path="res://Scripts/Componentes/miasma_gota.gd" id="1_n73oq"]
+[ext_resource type="Texture2D" uid="uid://c3tl3oddronfh" path="res://icon.svg" id="2_mmskc"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_i580p"]
+radius = 48.259712
+
+[node name="MiasmaGota" type="Area2D" unique_id=934553913]
+collision_layer = 0
+collision_mask = 9
+script = ExtResource("1_n73oq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=254279479]
+shape = SubResource("CircleShape2D_i580p")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2087247784]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_mmskc")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

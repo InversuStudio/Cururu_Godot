@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://bvijejxbeiu45"]
+
+[ext_resource type="Texture2D" uid="uid://c3tl3oddronfh" path="res://icon.svg" id="1_2a3at"]
+[ext_resource type="Script" uid="uid://bu7pk5veav6gb" path="res://Scripts/Componentes/miasma_goteira.gd" id="1_2yl68"]
+[ext_resource type="PackedScene" uid="uid://cr0f7c8aqji57" path="res://Objetos/Props/MiasmaGota.tscn" id="2_wgkwy"]
+
+[node name="MiasmaGoteira" type="Node2D" unique_id=500610219]
+script = ExtResource("1_2yl68")
+cena_gota = ExtResource("2_wgkwy")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2113022082]
+scale = Vector2(2.1, 0.6)
+texture = ExtResource("1_2a3at")
+
+[node name="Marker2D" type="Marker2D" parent="." unique_id=1491738578]
+position = Vector2(0, 38)

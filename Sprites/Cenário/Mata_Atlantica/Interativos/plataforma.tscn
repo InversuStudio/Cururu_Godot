@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://36i4t28uavm" path="res://Sprites/Cenário/Mata_Atlantica/Interativos/plataforma.png" id="1_hnyem"]
 [ext_resource type="Texture2D" uid="uid://b2pop4ke31d1x" path="res://Sprites/Cenário/Mata_Atlantica/Foreground/02.png" id="2_j1l0s"]
+[ext_resource type="Script" uid="uid://dxybq1f17jajy" path="res://Sprites/Cenário/Mata_Atlantica/Interativos/PlataformaElastica.gd" id="2_oxxl1"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hnyem"]
 size = Vector2(372.8256, 8.285015)
@@ -10,6 +11,7 @@ size = Vector2(372.8256, 8.285015)
 position = Vector2(1.0000038, 9.536743e-07)
 scale = Vector2(0.965599, 0.9655989)
 texture = ExtResource("1_hnyem")
+script = ExtResource("2_oxxl1")
 
 [node name="02" type="Sprite2D" parent="." unique_id=2044473014]
 position = Vector2(-130.48895, 86.99264)
