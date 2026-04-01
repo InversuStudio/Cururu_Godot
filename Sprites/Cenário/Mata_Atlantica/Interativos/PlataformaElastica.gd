@@ -10,7 +10,7 @@ var _animando: bool = false
 var _estava_caindo: bool = false
 var _pos_anterior: Vector2
 
-@onready var _static_body: StaticBody2D = $StaticBody2D
+#@onready var _static_body: StaticBody2D = $StaticBody2D
 
 func _ready() -> void:
 	_posicao_origem = position
@@ -21,21 +21,18 @@ func _physics_process(_delta: float) -> void:
 	if _animando:
 		var delta_y: float = position.y - _pos_anterior.y
 		if delta_y > 0:  # só na descida
-			var player: Player = Mundos.player
-			if player != null:
-				var dist_x: float = abs(player.global_position.x - global_position.x)
+			if Mundos.player:
+				var dist_x: float = abs(Mundos.player.global_position.x - global_position.x)
 				if dist_x < 200.0:
-					player.global_position.y += delta_y
+					Mundos.player.global_position.y += delta_y
 		_pos_anterior = position
 		return
 
 	_pos_anterior = position
 
-	var player: Player = Mundos.player
-	if player == null:
-		return
+	if Mundos.player == null: return
 
-	var vel_y: float = player.velocity.y as float
+	var vel_y: float = Mundos.player.velocity.y as float
 	var caindo_agora: bool = vel_y > velocidade_minima_aterrisagem
 
 	if caindo_agora:
@@ -45,8 +42,8 @@ func _physics_process(_delta: float) -> void:
 	if _estava_caindo and not caindo_agora:
 		_estava_caindo = false
 
-		var dist_x: float = abs(player.global_position.x - global_position.x)
-		var dist_y: float = abs(player.global_position.y - global_position.y)
+		var dist_x: float = abs(Mundos.player.global_position.x - global_position.x)
+		var dist_y: float = abs(Mundos.player.global_position.y - global_position.y)
 
 		if dist_x < 200.0 and dist_y < 150.0:
 			_animar_elastico()

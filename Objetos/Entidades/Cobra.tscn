@@ -158,7 +158,7 @@ rotation = 1.5707964
 scale = Vector2(4, 4)
 shape = SubResource("CapsuleShape2D_ayjai")
 
-[node name="HurtBox" parent="Flip" unique_id=872149296 node_paths=PackedStringArray("comp_vida", "parent", "sprite") instance=ExtResource("6_rcu2w")]
+[node name="HurtBox" parent="Flip" unique_id=872149296 node_paths=PackedStringArray("comp_vida", "parent", "sprite") groups=["AddMagia"] instance=ExtResource("6_rcu2w")]
 unique_name_in_owner = true
 scale = Vector2(2.2352939, 2.2352939)
 collision_layer = 16

@@ -115,7 +115,7 @@ func FixedUpdate(delta: float) -> State:
 					parent.anim.play("Walk")
 				else:
 					parent.speed = parent.speed_run
-					parent.anim.play("Run")
+					parent.anim.play("Run")#; parent.sprite.offset = Vector2(100,0)
 		else:
 			if item_cura:
 				#parent.speed = parent.speed_walk
@@ -124,7 +124,7 @@ func FixedUpdate(delta: float) -> State:
 				Flip()
 			else:
 				#parent.speed = parent.speed_run
-				parent.anim.play("Idle")
+				parent.anim.play("Idle")#; parent.sprite.offset = Vector2.ZERO
 	
 		checa_tempo = true if item_cura else false
 	

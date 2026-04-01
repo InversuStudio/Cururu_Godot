@@ -126,7 +126,7 @@ collision_mask = 2
 [node name="AreaColisaoVisaoEntrada" type="CollisionShape2D" parent="AreaVisaoEntrada" unique_id=1986013385]
 shape = SubResource("CircleShape2D_j5mvf")
 
-[node name="HurtBox" parent="." unique_id=1147275587 node_paths=PackedStringArray("comp_vida", "parent", "sprite") instance=ExtResource("5_87fsy")]
+[node name="HurtBox" parent="." unique_id=1147275587 node_paths=PackedStringArray("comp_vida", "parent", "sprite") groups=["AddMagia"] instance=ExtResource("5_87fsy")]
 unique_name_in_owner = true
 position = Vector2(0.22733307, 28.636433)
 scale = Vector2(0.6818189, 0.6818189)

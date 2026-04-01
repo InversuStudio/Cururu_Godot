@@ -100,7 +100,7 @@ script = ExtResource("5_jbocm")
 vida_max = 3
 metadata/_custom_type_script = "uid://hsdutxxttrp3"
 
-[node name="HurtBox" parent="." unique_id=378787195 node_paths=PackedStringArray("comp_vida", "parent", "sprite") instance=ExtResource("6_ppnp4")]
+[node name="HurtBox" parent="." unique_id=378787195 node_paths=PackedStringArray("comp_vida", "parent", "sprite") groups=["AddMagia"] instance=ExtResource("6_ppnp4")]
 unique_name_in_owner = true
 collision_layer = 16
 comp_vida = NodePath("../Vida")

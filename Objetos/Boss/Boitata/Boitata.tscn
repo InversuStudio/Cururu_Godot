@@ -1936,7 +1936,7 @@ script = ExtResource("2_16hqa")
 vida_max = 50
 metadata/_custom_type_script = "uid://hsdutxxttrp3"
 
-[node name="HurtBox" parent="." unique_id=1116069954 node_paths=PackedStringArray("comp_vida") instance=ExtResource("3_fwdqd")]
+[node name="HurtBox" parent="." unique_id=1116069954 node_paths=PackedStringArray("comp_vida") groups=["AddMagia"] instance=ExtResource("3_fwdqd")]
 unique_name_in_owner = true
 position = Vector2(483, -549)
 collision_layer = 16
@@ -1955,7 +1955,7 @@ vida_max = 10
 morre = false
 metadata/_custom_type_script = "uid://hsdutxxttrp3"
 
-[node name="HurtCabeca" parent="." unique_id=830437686 node_paths=PackedStringArray("comp_vida", "sprite") instance=ExtResource("3_fwdqd")]
+[node name="HurtCabeca" parent="." unique_id=830437686 node_paths=PackedStringArray("comp_vida", "sprite") groups=["AddMagia"] instance=ExtResource("3_fwdqd")]
 unique_name_in_owner = true
 position = Vector2(72, -1063)
 collision_layer = 16
@@ -1974,7 +1974,7 @@ vida_max = 10
 morre = false
 metadata/_custom_type_script = "uid://hsdutxxttrp3"
 
-[node name="HurtCorpo" parent="." unique_id=454590909 node_paths=PackedStringArray("comp_vida", "sprite") instance=ExtResource("3_fwdqd")]
+[node name="HurtCorpo" parent="." unique_id=454590909 node_paths=PackedStringArray("comp_vida", "sprite") groups=["AddMagia"] instance=ExtResource("3_fwdqd")]
 unique_name_in_owner = true
 position = Vector2(114, -497)
 collision_layer = 16
