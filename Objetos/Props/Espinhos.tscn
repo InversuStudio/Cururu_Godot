@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://dgfcdht1gifdp"]
 
 [ext_resource type="Script" uid="uid://davjnwfncyj66" path="res://Scripts/Componentes/Armadilha.gd" id="1_8olkt"]
-[ext_resource type="Texture2D" uid="uid://bpkplb3cgqbco" path="res://Sprites/Cenário/Mata_Atlantica/Interativos/ESPINHOS.png" id="2_uwfcm"]
+[ext_resource type="Texture2D" uid="uid://bbf4p1hjw1ohh" path="res://Sprites/Cenário/Mata_Atlantica/Interativos/ESPINHOS.png" id="2_uwfcm"]
 [ext_resource type="PackedScene" uid="uid://pc4mgv2nv8af" path="res://Objetos/Funcionalidade/CompHitBox.tscn" id="3_xnfjv"]
 [ext_resource type="AudioStream" uid="uid://d0lumxscgbgin" path="res://Audio/SFX/INIMIGOS/inimigo_dead.mp3" id="4_ff3yg"]
 [ext_resource type="Script" uid="uid://b2ls33ys55oyt" path="res://Scripts/Componentes/OtimizadorObjeto.gd" id="5_gb73u"]
@@ -27,8 +27,8 @@ hitbox = NodePath("HitBox")
 
 [node name="Sprite" type="AnimatedSprite2D" parent="." unique_id=679433497]
 unique_name_in_owner = true
-position = Vector2(-10.9999695, -126.07029)
-scale = Vector2(0.95366174, 0.9536618)
+position = Vector2(-10.9999695, -119)
+scale = Vector2(1.8931295, 1.8931295)
 sprite_frames = SubResource("SpriteFrames_tkh53")
 autoplay = "default"
 
