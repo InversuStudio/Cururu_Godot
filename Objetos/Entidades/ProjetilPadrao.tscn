@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://bhol64tb7a8oy"]
+
+[ext_resource type="Script" uid="uid://csu34wwics42f" path="res://Scripts/Componentes/ProjetilPadrao.gd" id="1_qr87o"]
+[ext_resource type="Texture2D" uid="uid://c3tl3oddronfh" path="res://icon.svg" id="2_kcsmx"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_dgo6x"]
+radius = 98.0
+
+[node name="ProjetilPadrao" type="Area2D" unique_id=356411572]
+scale = Vector2(0.5, 0.5)
+collision_layer = 0
+collision_mask = 9
+script = ExtResource("1_qr87o")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=401860184]
+shape = SubResource("CircleShape2D_dgo6x")
+debug_color = Color(0.99607843, 0, 0.21568628, 0.09803922)
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1318506629]
+texture = ExtResource("2_kcsmx")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

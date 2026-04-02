@@ -1,0 +1,184 @@
+[gd_scene format=3 uid="uid://dxukn0l7i0384"]
+
+[ext_resource type="Script" uid="uid://dlictuhvn462" path="res://Scripts/Inimigos/InimigoDist.gd" id="1_6bmvj"]
+[ext_resource type="PackedScene" uid="uid://bhol64tb7a8oy" path="res://Objetos/Entidades/ProjetilPadrao.tscn" id="2_ugwgy"]
+[ext_resource type="PackedScene" uid="uid://va5pjd6vuuo2" path="res://Objetos/Funcionalidade/CompHurtBox.tscn" id="3_7x1h4"]
+[ext_resource type="Script" uid="uid://hsdutxxttrp3" path="res://Scripts/Componentes/Vida.gd" id="3_rr2uw"]
+[ext_resource type="AudioStream" uid="uid://b3mmkipqf30jd" path="res://Audio/SFX/INIMIGOS/HIT_INIMIGO.wav" id="4_fcbn0"]
+[ext_resource type="PackedScene" uid="uid://pc4mgv2nv8af" path="res://Objetos/Funcionalidade/CompHitBox.tscn" id="5_x3tbq"]
+[ext_resource type="Texture2D" uid="uid://c3tl3oddronfh" path="res://icon.svg" id="6_ta1k4"]
+[ext_resource type="Texture2D" uid="uid://lruqdxr2efim" path="res://Sprites/Inimigos/Animação de morte/1.png" id="16_4c7pd"]
+[ext_resource type="Texture2D" uid="uid://c87kuuyr2pym0" path="res://Sprites/Inimigos/Animação de morte/2.png" id="17_w4ne4"]
+[ext_resource type="Texture2D" uid="uid://ddb4clgck30m" path="res://Sprites/Inimigos/Animação de morte/3.png" id="18_t0mq7"]
+[ext_resource type="Texture2D" uid="uid://b6lp0on4i181d" path="res://Sprites/Inimigos/Animação de morte/4.png" id="19_i4m65"]
+[ext_resource type="Texture2D" uid="uid://yxi1hdj1bo5o" path="res://Sprites/Inimigos/Animação de morte/5.png" id="20_up6gn"]
+[ext_resource type="Texture2D" uid="uid://b88rutgnulrpo" path="res://Sprites/Inimigos/Animação de morte/6.png" id="21_nxy0w"]
+[ext_resource type="Texture2D" uid="uid://bdexte3g5lkq7" path="res://Sprites/Inimigos/Animação de morte/7.png" id="22_cn3b1"]
+[ext_resource type="PackedScene" uid="uid://ffqi6t0ahbmk" path="res://Objetos/Funcionalidade/OtimizadorObjeto.tscn" id="25_aq8e6"]
+[ext_resource type="AudioStream" uid="uid://deqw7rxc5hhfh" path="res://Audio/SFX/INIMIGOS/Inimigo morrendo.wav" id="26_2okk7"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ntg74"]
+size = Vector2(223.68439, 105.921135)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ihru7"]
+size = Vector2(155.26312, 99.342155)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ayjai"]
+size = Vector2(81.57925, 140.78961)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_gvld5"]
+radius = 53.94742
+height = 190.7896
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_tkh53"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_ta1k4")
+}],
+"loop": true,
+"name": &"default",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("16_4c7pd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_w4ne4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_t0mq7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_i4m65")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_up6gn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_nxy0w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_cn3b1")
+}],
+"loop": false,
+"name": &"morte",
+"speed": 8.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ugwgy"]
+radius = 745.5902
+
+[node name="InimigoDist" type="CharacterBody2D" unique_id=2019109312]
+scale = Vector2(0.67999953, 0.67999953)
+collision_layer = 4
+script = ExtResource("1_6bmvj")
+cena_projetil = ExtResource("2_ugwgy")
+metadata/_edit_vertical_guides_ = [-211.0, 176.0]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1948898497]
+position = Vector2(4.411768, -147.05894)
+scale = Vector2(2.2352939, 2.2352939)
+shape = SubResource("RectangleShape2D_ntg74")
+
+[node name="Vida" type="Node" parent="." unique_id=938649480]
+script = ExtResource("3_rr2uw")
+vida_max = 8
+metadata/_custom_type_script = "uid://hsdutxxttrp3"
+
+[node name="Flip" type="Node2D" parent="." unique_id=1392119751]
+unique_name_in_owner = true
+
+[node name="HurtBox" parent="Flip" unique_id=872149296 node_paths=PackedStringArray("comp_vida", "parent", "sprite") instance=ExtResource("3_7x1h4")]
+unique_name_in_owner = true
+scale = Vector2(2.2352939, 2.2352939)
+collision_layer = 16
+comp_vida = NodePath("../../Vida")
+distancia_knockback = 0.27
+tempo_knockback = 0.2
+hit_sfx = ExtResource("4_fcbn0")
+parent = NodePath("../..")
+sprite = NodePath("../Sprite")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Flip/HurtBox" unique_id=1339135318]
+position = Vector2(2.631581, -66.44742)
+shape = SubResource("RectangleShape2D_ihru7")
+debug_color = Color(0.99999, 0, 0.0935918, 0.42)
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Flip/HurtBox" unique_id=88289003]
+position = Vector2(0.6578946, -66.447426)
+rotation = -1.57079
+shape = SubResource("RectangleShape2D_ayjai")
+debug_color = Color(0.99999, 0, 0.0935918, 0.42)
+
+[node name="HitBox" parent="Flip" unique_id=598623231 instance=ExtResource("5_x3tbq")]
+unique_name_in_owner = true
+scale = Vector2(2.2352939, 2.2352939)
+collision_layer = 16
+dano = 2
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Flip/HitBox" unique_id=2094676355]
+position = Vector2(0, -67.10532)
+rotation = -1.57079
+shape = SubResource("CapsuleShape2D_gvld5")
+debug_color = Color(0.807155, 0.414602, 3.85046e-07, 0.42)
+
+[node name="Sprite" type="AnimatedSprite2D" parent="Flip" unique_id=1555891583]
+unique_name_in_owner = true
+position = Vector2(2.8161812, -153.06627)
+scale = Vector2(1.4725423, 1.4725425)
+sprite_frames = SubResource("SpriteFrames_tkh53")
+autoplay = "default"
+
+[node name="PontoDisparo" type="Marker2D" parent="Flip" unique_id=1543077576]
+unique_name_in_owner = true
+position = Vector2(97.05889, -166.17659)
+
+[node name="AreaVisao" type="Area2D" parent="Flip" unique_id=93547442]
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Flip/AreaVisao" unique_id=1917221437]
+position = Vector2(1.470581, -161.76482)
+shape = SubResource("CircleShape2D_ugwgy")
+
+[node name="RayDireita" type="RayCast2D" parent="." unique_id=1296964799]
+unique_name_in_owner = true
+position = Vector2(275.0002, -60)
+scale = Vector2(2.2352936, 2.2352936)
+target_position = Vector2(20, 0)
+
+[node name="RayVazioDireita" type="RayCast2D" parent="." unique_id=2142211602]
+unique_name_in_owner = true
+position = Vector2(275.0002, -24)
+scale = Vector2(2.2352936, 2.2352936)
+
+[node name="RayEsquerda" type="RayCast2D" parent="." unique_id=1981733015]
+unique_name_in_owner = true
+position = Vector2(-270.58844, -60)
+scale = Vector2(2.2352936, 2.2352936)
+target_position = Vector2(-20, 0)
+
+[node name="RayVazioEsquerda" type="RayCast2D" parent="." unique_id=1602263692]
+unique_name_in_owner = true
+position = Vector2(-270.58844, -24)
+scale = Vector2(2.2352936, 2.2352936)
+
+[node name="SpawnMoeda" type="Marker2D" parent="." unique_id=523206188]
+unique_name_in_owner = true
+position = Vector2(0, -43)
+scale = Vector2(2.2352936, 2.2352936)
+
+[node name="OtimizadorSprite" parent="." unique_id=448696188 instance=ExtResource("25_aq8e6")]
+position = Vector2(1.4705893, 36.764732)
+scale = Vector2(2.2352936, 2.2352936)
+rect = Rect2(-146.05276, -175.00017, 286.18445, 158.55278)
+follow = true
+
+[node name="SomMorte" type="AudioStreamPlayer2D" parent="." unique_id=1033857000]
+unique_name_in_owner = true
+stream = ExtResource("26_2okk7")
+
+[connection signal="body_entered" from="Flip/AreaVisao" to="." method="_on_area_visao_body_entered"]
+[connection signal="body_exited" from="Flip/AreaVisao" to="." method="_on_area_visao_body_exited"]

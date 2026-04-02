@@ -30,6 +30,7 @@
 [ext_resource type="Shader" uid="uid://da2wxasx6evg0" path="res://Scripts/Shaders/Grama.gdshader" id="25_vdl7m"]
 [ext_resource type="Script" uid="uid://hsdutxxttrp3" path="res://Scripts/Componentes/Vida.gd" id="26_der3i"]
 [ext_resource type="Texture2D" uid="uid://c8bkav2g3wyeu" path="res://Sprites/Cenário/Mata_Atlantica/Chao/moita2.png" id="26_fjg5v"]
+[ext_resource type="PackedScene" uid="uid://dxukn0l7i0384" path="res://Objetos/Entidades/InimigoDist.tscn" id="26_xwk50"]
 [ext_resource type="PackedScene" uid="uid://davj0hqm0kiya" path="res://Objetos/Funcionalidade/TransicaoCameraNeo.tscn" id="27_der3i"]
 [ext_resource type="PackedScene" uid="uid://va5pjd6vuuo2" path="res://Objetos/Funcionalidade/CompHurtBox.tscn" id="27_ixy8u"]
 [ext_resource type="Script" uid="uid://dd16yu704x6wt" path="res://Scripts/Componentes/BGM_Player.gd" id="31_cq3ie"]
@@ -295,6 +296,9 @@ position = Vector2(-94, -19)
 
 [node name="InimigoTeste2" parent="Entidades" unique_id=247375279 instance=ExtResource("7_2vimk")]
 position = Vector2(-618, -19)
+
+[node name="InimigoDist" parent="Entidades" unique_id=2019109312 instance=ExtResource("26_xwk50")]
+position = Vector2(-121, -835.00006)
 
 [node name="Armadilha" parent="." unique_id=1813372272 node_paths=PackedStringArray("spawn_points") instance=ExtResource("24_tkd1t")]
 position = Vector2(-1435, 106)

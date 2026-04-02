@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://ckx8d6ifkhtoc"]
+[gd_scene format=3 uid="uid://ckx8d6ifkhtoc"]
 
 [ext_resource type="PackedScene" uid="uid://pc4mgv2nv8af" path="res://Objetos/Funcionalidade/CompHitBox.tscn" id="1_hpi2w"]
 [ext_resource type="Texture2D" uid="uid://bnyawnirg7qrl" path="res://Sprites/Cururu/MagiaProjetil/05.png" id="1_lvlep"]
@@ -46,27 +46,27 @@ animations = [{
 [sub_resource type="CircleShape2D" id="CircleShape2D_g7efx"]
 radius = 154.0
 
-[node name="ProjetilMagia" type="Node2D" groups=["Magia"]]
+[node name="ProjetilMagia" type="Node2D" unique_id=1276746833 groups=["Magia"]]
 scale = Vector2(0.5, 0.5)
 script = ExtResource("1_xp004")
 
-[node name="Sprite2D" type="AnimatedSprite2D" parent="."]
+[node name="Sprite2D" type="AnimatedSprite2D" parent="." unique_id=460741797]
 sprite_frames = SubResource("SpriteFrames_hxyyo")
 autoplay = "default"
 frame_progress = 0.7859208
 
-[node name="HitBox" parent="." instance=ExtResource("1_hpi2w")]
+[node name="HitBox" parent="." unique_id=450545380 instance=ExtResource("1_hpi2w")]
 unique_name_in_owner = true
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="HitBox"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HitBox" unique_id=2098368940]
 shape = SubResource("CircleShape2D_g7efx")
 
-[node name="Colisao" type="Area2D" parent="."]
+[node name="Colisao" type="Area2D" parent="." unique_id=720086846]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Colisao"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Colisao" unique_id=1253187042]
 shape = SubResource("CircleShape2D_g7efx")
 
-[node name="Timer" type="Timer" parent="."]
+[node name="Timer" type="Timer" parent="." unique_id=1625139205]
 unique_name_in_owner = true
 one_shot = true
 
