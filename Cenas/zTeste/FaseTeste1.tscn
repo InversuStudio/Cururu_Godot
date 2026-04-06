@@ -38,6 +38,7 @@
 [ext_resource type="PackedScene" uid="uid://bnubkn7kxj708" path="res://Objetos/Funcionalidade/MostraTela.tscn" id="35_geigx"]
 [ext_resource type="Texture2D" uid="uid://cl1vcib5wycma" path="res://Sprites/VFX/Iluminação/ICON.png" id="36_0wrly"]
 [ext_resource type="PackedScene" uid="uid://bvijejxbeiu45" path="res://Objetos/Props/MiasmaGoteira.tscn" id="37_0wrly"]
+[ext_resource type="PackedScene" uid="uid://bselorwjp2nad" path="res://Objetos/Props/TotemMagia.tscn" id="39_l3l3w"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fjg5v"]
 texture = ExtResource("5_tkd1t")
@@ -436,5 +437,8 @@ shape = SubResource("RectangleShape2D_xwk50")
 
 [node name="MiasmaGoteira" parent="." unique_id=500610219 instance=ExtResource("37_0wrly")]
 position = Vector2(4210, -881)
+
+[node name="TotemMagia" parent="." unique_id=1098512559 instance=ExtResource("39_l3l3w")]
+position = Vector2(380, -1094)
 
 [editable path="Props/UpgradeMissil"]

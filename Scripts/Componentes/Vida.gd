@@ -58,7 +58,10 @@ func Morre():
 	if parent.has_method("Morte"):
 		parent.Morte()
 	else:
-		var tween:Tween = create_tween()
-		tween.tween_property(parent, "modulate", Color(.0,.0,.0,.0), .5)
-		await tween.finished
-		parent.queue_free()
+		MorteFX()
+
+func MorteFX() -> void:
+	var tween:Tween = create_tween()
+	tween.tween_property(parent, "modulate", Color(.0,.0,.0,.0), .5)
+	await tween.finished
+	parent.call_deferred("queue_free")

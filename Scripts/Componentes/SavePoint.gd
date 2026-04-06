@@ -8,6 +8,8 @@ func _ready() -> void:
 
 func Interact() -> void:
 	Mundos.player.vida.RecebeCura(GameData.vida_max)
+	GameData.magia_atual += GameData.miasma
+	GameData.miasma = 0
 	%SFX.play()
 	%Anim.play("Save")
 	GameData.Save()
