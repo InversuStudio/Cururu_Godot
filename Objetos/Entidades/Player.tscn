@@ -72,6 +72,7 @@
 [ext_resource type="Texture2D" uid="uid://b04g02rixixdn" path="res://Sprites/Cururu/Pulo/04.png" id="40_32f06"]
 [ext_resource type="Texture2D" uid="uid://dqmv0hysgnoq4" path="res://Sprites/Cururu/Idle/13.png" id="40_s2eek"]
 [ext_resource type="Texture2D" uid="uid://b3lsqr7m6ijwg" path="res://Sprites/Cururu/Pulo/05.png" id="41_6q3px"]
+[ext_resource type="Texture2D" uid="uid://dn7teanbyle7" path="res://Sprites/Cururu/Pulo/02.png" id="41_yjbv0"]
 [ext_resource type="Texture2D" uid="uid://cnp81cndugpg7" path="res://Sprites/Cururu/Pulo/14.png" id="42_d2bxm"]
 [ext_resource type="Texture2D" uid="uid://cvsapry4c5t0j" path="res://Sprites/Cururu/Pulo/15.png" id="43_kbhwl"]
 [ext_resource type="Script" uid="uid://hsdutxxttrp3" path="res://Scripts/Componentes/Vida.gd" id="45_vkjtj"]
@@ -183,7 +184,7 @@
 [ext_resource type="AudioStream" uid="uid://betvqt03p81ol" path="res://Audio/SFX/CURURU/dash_cururu.wav" id="154_wxhj3"]
 [ext_resource type="AudioStream" uid="uid://s50orlb3i3jk" path="res://Audio/SFX/CURURU/Caindo.wav" id="155_lv5tx"]
 [ext_resource type="Script" uid="uid://b3wmq1vhw42bm" path="res://Scripts/SFX/sfx_passos.gd" id="156_746bk"]
-[ext_resource type="Texture2D" uid="uid://buxjb8khrvcm7" path="res://Sprites/Cururu/walljump/WALLJUMP.png" id="157_24i8l"]
+[ext_resource type="Texture2D" uid="uid://buxjb8khrvcm7" path="res://Sprites/Cururu/Walljump/WALLJUMP.png" id="157_24i8l"]
 [ext_resource type="AudioStream" uid="uid://cqrbf5wusyf2l" path="res://Audio/SFX/CURURU/Passos/Passo 1.wav" id="159_btflu"]
 [ext_resource type="AudioStream" uid="uid://c35bediccvjup" path="res://Audio/SFX/CURURU/Passos/Passo 2.wav" id="160_746bk"]
 [ext_resource type="AudioStream" uid="uid://d2u6s2ijvdo5m" path="res://Audio/SFX/CURURU/Passos/Passo 3.wav" id="161_wxhj3"]
@@ -204,6 +205,7 @@
 [ext_resource type="AudioStream" uid="uid://dbig0lyde3y74" path="res://Audio/SFX/CURURU/Passos/Passo 16.wav" id="174_2dakj"]
 [ext_resource type="Script" uid="uid://qlpwe7rvuiyp" path="res://Scripts/SFX/sfx_cura.gd" id="175_3h5vl"]
 [ext_resource type="Script" uid="uid://ckbboaft5bwd0" path="res://Scripts/Cururu/Wallslide.gd" id="200_2dakj"]
+[ext_resource type="Script" uid="uid://c6143sq1041gy" path="res://Objetos/Entidades/carga.gd" id="205_qtftx"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_k0fov"]
 animations = [{
@@ -345,6 +347,14 @@ animations = [{
 }],
 "loop": false,
 "name": &"Acorda",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("41_yjbv0")
+}],
+"loop": true,
+"name": &"Carga",
 "speed": 5.0
 }, {
 "frames": [{
@@ -904,6 +914,34 @@ tracks/1/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [&"Acorda"]
+}
+
+[sub_resource type="Animation" id="Animation_c06e5"]
+resource_name = "Carga"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Cururu:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"Carga"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Cururu:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
 }
 
 [sub_resource type="Animation" id="Animation_x4him"]
@@ -1841,6 +1879,7 @@ tracks/1/keys = {
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_g0l4m"]
 _data = {
 &"Acorda": SubResource("Animation_o645d"),
+&"Carga": SubResource("Animation_c06e5"),
 &"Cura_Move": SubResource("Animation_x4him"),
 &"Cura_Parado": SubResource("Animation_toswy"),
 &"Dano": SubResource("Animation_aofpm"),
@@ -1905,7 +1944,7 @@ unique_name_in_owner = true
 position = Vector2(0, -115)
 scale = Vector2(0.37, 0.37)
 sprite_frames = SubResource("SpriteFrames_ser7u")
-animation = &"Wallslide"
+animation = &"Carga"
 
 [node name="ColisaoFisica" type="CollisionShape2D" parent="." unique_id=185604391]
 position = Vector2(0, -79)
@@ -1944,7 +1983,7 @@ position = Vector2(-2, 0)
 
 [node name="PosMelee" type="Marker2D" parent="PosAtaques" unique_id=1527872985]
 unique_name_in_owner = true
-position = Vector2(140, -131)
+position = Vector2(80, -91)
 
 [node name="PosChicote" type="Marker2D" parent="PosAtaques" unique_id=761845377]
 unique_name_in_owner = true
@@ -2048,13 +2087,14 @@ start_state = NodePath("Fall")
 script = ExtResource("110_yy1dt")
 chao_state = NodePath("../Chao")
 
-[node name="Chao" type="Node" parent="StateMachine" unique_id=1039871569 node_paths=PackedStringArray("pulo_state", "fall_state", "dash_state", "melee_state", "special_state")]
+[node name="Chao" type="Node" parent="StateMachine" unique_id=1039871569 node_paths=PackedStringArray("pulo_state", "fall_state", "dash_state", "melee_state", "special_state", "carga_state")]
 script = ExtResource("50_3s0sn")
 pulo_state = NodePath("../Pulo")
 fall_state = NodePath("../Fall")
 dash_state = NodePath("../Dash")
 melee_state = NodePath("../Melee")
 special_state = NodePath("../Chicote")
+carga_state = NodePath("../Carga")
 
 [node name="Fall" type="Node" parent="StateMachine" unique_id=1802511952 node_paths=PackedStringArray("chao_state", "pulo_state", "dash_state", "melee_state", "special_state", "nado_state", "wall_state")]
 script = ExtResource("51_dvy3r")
@@ -2114,6 +2154,10 @@ chao_state = NodePath("../Chao")
 velocidade_cair = 3.0
 impulso_horizontal_pulo = 7.0
 reducao_pulo = 2.0
+
+[node name="Carga" type="Node" parent="StateMachine" unique_id=58287326 node_paths=PackedStringArray("chao_state")]
+script = ExtResource("205_qtftx")
+chao_state = NodePath("../Chao")
 
 [connection signal="animation_finished" from="Anim" to="StateMachine/Chao" method="_on_anim_animation_finished"]
 [connection signal="animation_finished" from="Anim" to="StateMachine/Fall" method="_on_anim_animation_finished"]

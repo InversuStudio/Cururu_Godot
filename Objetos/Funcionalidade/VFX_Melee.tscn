@@ -73,15 +73,18 @@ animations = [{
 }]
 
 [node name="MeleeVFX" type="Node2D" unique_id=42300229]
-position = Vector2(108, -64)
 
 [node name="Animation" type="AnimatedSprite2D" parent="." unique_id=1976484140]
+position = Vector2(110.08, -12.919998)
 scale = Vector2(0.37, 0.37)
 sprite_frames = SubResource("SpriteFrames_dsijf")
 animation = &"1"
+frame = 3
+frame_progress = 0.24660014
 speed_scale = 1.2
 
 [node name="HitBox" parent="." unique_id=727505384 instance=ExtResource("12_hena8")]
+position = Vector2(110.08, -12.919998)
 collision_mask = 16
 vfx = ExtResource("13_v4lfw")
 

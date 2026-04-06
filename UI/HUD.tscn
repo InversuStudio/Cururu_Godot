@@ -27,6 +27,9 @@ border_blend = true
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4n7mi"]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kg6a8"]
+bg_color = Color(0.32828355, 0.23167095, 0.38723433, 1)
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ijstf"]
 bg_color = Color(0.39215687, 0.7058824, 0.8627451, 1)
 
@@ -318,6 +321,22 @@ offset_bottom = 236.0
 texture = ExtResource("5_2ptjp")
 expand_mode = 1
 
+[node name="BarraMiasma" type="ProgressBar" parent="Corpo/Main/MaskMagia" unique_id=121295913]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/background = SubResource("StyleBoxEmpty_4n7mi")
+theme_override_styles/fill = SubResource("StyleBoxFlat_kg6a8")
+max_value = 5.0
+value = 4.0
+fill_mode = 3
+show_percentage = false
+
 [node name="BarraMagia" type="ProgressBar" parent="Corpo/Main/MaskMagia" unique_id=299614223]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(150, 150)
@@ -400,6 +419,7 @@ horizontal_alignment = 2
 
 [node name="Pause" type="Panel" parent="Corpo" unique_id=2011513613]
 unique_name_in_owner = true
+visible = false
 material = SubResource("ShaderMaterial_ixkb2")
 layout_mode = 1
 anchors_preset = 15

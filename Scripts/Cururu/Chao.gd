@@ -11,6 +11,8 @@ extends State
 @export var melee_state: State = null
 ## State de ataque magico
 @export var special_state: State = null
+## State de carga
+@export var carga_state: State = null
 
 var pode_anim: bool = false
 var turn:bool = false
@@ -86,6 +88,8 @@ func Update(_delta: float) -> State:
 	if Input.is_action_just_pressed("pulo") and parent.pode_mover:
 		if item_cura: return null
 		return pulo_state
+	if Input.is_action_just_pressed("charge") and parent.pode_mover:
+		if GameData.miasma > 0: return carga_state
 	return null # Não muda o State
 	
 # COMPORTAMENTO PHYSICS_PROCESS

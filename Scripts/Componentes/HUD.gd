@@ -80,6 +80,7 @@ func MudaImgInput() -> void:
 func _ready() -> void:
 	# Conecta sinais de mudança de valor
 	GameData.connect("update_magia", UpdateMagia)
+	GameData.connect("update_miasma", UpdateMiasma)
 	GameData.connect("update_vida_max", AdicionaCoracao)
 	GameData.connect("update_vida_atual", UpdateVida)
 	GameData.connect("update_moeda", UpdateMoeda)
@@ -155,6 +156,8 @@ func IniciaHUD() -> void:
 		# Inicializa valores
 		%BarraMagia.max_value = GameData.magia_max
 		%BarraMagia.value = GameData.magia_atual
+		%BarraMiasma.max_value = GameData.magia_max
+		%BarraMiasma.value = 0.0
 		UpdateMoeda()
 		item_rapido.IniciaBarra()
 		# Marca como configurado
@@ -186,6 +189,12 @@ func UpdateMagia() -> void:
 	Console._Print("[color=cyan]MAGIA: %s[/color]" % [GameData.magia_atual])
 	var tween:Tween = get_tree().create_tween()
 	tween.tween_property(%BarraMagia,"value",GameData.magia_atual,.3).set_trans(
+		Tween.TRANS_CUBIC)
+
+func UpdateMiasma() -> void:
+	Console._Print("MIASMA")
+	var tween:Tween = get_tree().create_tween()
+	tween.tween_property(%BarraMiasma,"value",GameData.miasma,.3).set_trans(
 		Tween.TRANS_CUBIC)
 
 func AvisoSave() -> void:

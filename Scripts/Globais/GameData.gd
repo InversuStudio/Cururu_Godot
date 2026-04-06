@@ -102,8 +102,15 @@ var magia_max: int = 0
 var magia_atual: float = 0.5:
 	set(valor):
 		magia_atual = valor
-		magia_atual = clamp(magia_atual, 0, magia_max)
+		magia_atual = clampi(roundi(magia_atual), 0, magia_max)
 		update_magia.emit()
+
+signal update_miasma
+var miasma:int = 0:
+	set(valor):
+		miasma = valor
+		miasma = clampi(miasma, 0, magia_max)
+		update_miasma.emit()
 
 var upgrade_num: int = 0
 enum Upgrades {
