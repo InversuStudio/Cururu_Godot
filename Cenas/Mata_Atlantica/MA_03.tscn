@@ -329,10 +329,10 @@ scale = Vector2(0.9844004, 1.7800354)
 
 [node name="Fog" type="ColorRect" parent="background/-1" unique_id=1431574206]
 material = SubResource("ShaderMaterial_ounwf")
-offset_left = 364.91992
-offset_top = -6423.0
-offset_right = 7196.4985
-offset_bottom = -2237.3677
+offset_left = 172.22224
+offset_top = -6791.1113
+offset_right = 7199.5522
+offset_bottom = -2398.6787
 scale = Vector2(0.9844004, 1.7800354)
 
 [node name="-05" type="CanvasLayer" parent="background" unique_id=1253110262]

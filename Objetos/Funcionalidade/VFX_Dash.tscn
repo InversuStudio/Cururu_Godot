@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://ceisglxy7ojmt"]
+[gd_scene format=3 uid="uid://ceisglxy7ojmt"]
 
 [ext_resource type="Texture2D" uid="uid://bhf1ccuw8e518" path="res://Sprites/Cururu/Dash/VFX/06.png" id="1_osb84"]
 [ext_resource type="Texture2D" uid="uid://yc4g46w0dltb" path="res://Sprites/Cururu/Dash/VFX/08.png" id="2_15swy"]
@@ -9,16 +9,25 @@
 [sub_resource type="SpriteFrames" id="SpriteFrames_8ox06"]
 animations = [{
 "frames": [{
-"duration": 1.0,
+"duration": 0.5,
 "texture": ExtResource("1_osb84")
 }, {
-"duration": 1.0,
+"duration": 0.5,
 "texture": ExtResource("2_15swy")
 }, {
-"duration": 1.0,
+"duration": 0.5,
 "texture": ExtResource("3_wd4d4")
 }, {
-"duration": 1.0,
+"duration": 0.5,
+"texture": ExtResource("2_15swy")
+}, {
+"duration": 0.5,
+"texture": ExtResource("3_wd4d4")
+}, {
+"duration": 0.5,
+"texture": ExtResource("1_osb84")
+}, {
+"duration": 0.5,
 "texture": ExtResource("4_vsh7r")
 }],
 "loop": false,
@@ -26,11 +35,13 @@ animations = [{
 "speed": 12.0
 }]
 
-[node name="VFX_Dash" type="Node2D"]
+[node name="VFX_Dash" type="Node2D" unique_id=1038978524]
 script = ExtResource("6_mg7ok")
 
-[node name="VFX_Dash" type="AnimatedSprite2D" parent="."]
+[node name="VFX_Dash" type="AnimatedSprite2D" parent="." unique_id=1604558650]
 position = Vector2(-65, -144)
 scale = Vector2(0.5, 0.5)
 sprite_frames = SubResource("SpriteFrames_8ox06")
 autoplay = "default"
+frame = 6
+frame_progress = 1.0
