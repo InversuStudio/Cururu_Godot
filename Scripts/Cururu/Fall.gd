@@ -82,7 +82,8 @@ func FixedUpdate(delta: float) -> State:
 		return chao_state
 	
 	if parent.is_on_wall_only() and parent.input_move[0] and parent.pode_wall:
-		return wall_state
+		if %RayWallUp.is_colliding() and %RayWallDown.is_colliding():
+			return wall_state
 	
 	return null # Não muda o State
 

@@ -1944,7 +1944,7 @@ unique_name_in_owner = true
 position = Vector2(0, -115)
 scale = Vector2(0.37, 0.37)
 sprite_frames = SubResource("SpriteFrames_ser7u")
-animation = &"Carga"
+animation = &"Wallslide"
 
 [node name="ColisaoFisica" type="CollisionShape2D" parent="." unique_id=185604391]
 position = Vector2(0, -79)
@@ -1988,6 +1988,16 @@ position = Vector2(80, -91)
 [node name="PosChicote" type="Marker2D" parent="PosAtaques" unique_id=761845377]
 unique_name_in_owner = true
 position = Vector2(116, -70)
+
+[node name="RayWallUp" type="RayCast2D" parent="PosAtaques" unique_id=1823937245]
+unique_name_in_owner = true
+position = Vector2(2, -136)
+target_position = Vector2(100, 0)
+
+[node name="RayWallDown" type="RayCast2D" parent="PosAtaques" unique_id=2030409180]
+unique_name_in_owner = true
+position = Vector2(2, -24)
+target_position = Vector2(100, 0)
 
 [node name="Anim" type="AnimationPlayer" parent="." unique_id=501766058]
 unique_name_in_owner = true
