@@ -72,6 +72,7 @@
 [ext_resource type="Texture2D" uid="uid://b04g02rixixdn" path="res://Sprites/Cururu/Pulo/04.png" id="40_32f06"]
 [ext_resource type="Texture2D" uid="uid://dqmv0hysgnoq4" path="res://Sprites/Cururu/Idle/13.png" id="40_s2eek"]
 [ext_resource type="Texture2D" uid="uid://b3lsqr7m6ijwg" path="res://Sprites/Cururu/Pulo/05.png" id="41_6q3px"]
+[ext_resource type="Texture2D" uid="uid://bv1yjwvp0m8hk" path="res://Sprites/Cururu/Levantando/09.png" id="41_yjbv0"]
 [ext_resource type="Texture2D" uid="uid://cnp81cndugpg7" path="res://Sprites/Cururu/Pulo/14.png" id="42_d2bxm"]
 [ext_resource type="Texture2D" uid="uid://cvsapry4c5t0j" path="res://Sprites/Cururu/Pulo/15.png" id="43_kbhwl"]
 [ext_resource type="Script" uid="uid://hsdutxxttrp3" path="res://Scripts/Componentes/Vida.gd" id="45_vkjtj"]
@@ -359,7 +360,7 @@ animations = [{
 "texture": ExtResource("58_pabuw")
 }, {
 "duration": 1.0,
-"texture": ExtResource("57_7cs7m")
+"texture": ExtResource("41_yjbv0")
 }],
 "loop": true,
 "name": &"Carga",

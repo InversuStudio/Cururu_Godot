@@ -487,7 +487,7 @@ scale = Vector2(0.5944206, 0.5944206)
 texture = ExtResource("12_qex2w")
 
 [node name="Plataforma" parent="-05" unique_id=945294774 instance=ExtResource("13_w4lji")]
-position = Vector2(2351, -429)
+position = Vector2(2351, -418.94742)
 
 [node name="Plataforma2" parent="-05" unique_id=957727390 instance=ExtResource("13_w4lji")]
 position = Vector2(-469, 1004)
@@ -499,16 +499,16 @@ position = Vector2(-3639, 787.0001)
 position = Vector2(411, 666)
 
 [node name="Plataforma6" parent="-05" unique_id=827104889 instance=ExtResource("13_w4lji")]
-position = Vector2(1595.917, -780.6821)
+position = Vector2(1595.917, -764.21063)
 
 [node name="Plataforma7" parent="-05" unique_id=1955680127 instance=ExtResource("13_w4lji")]
-position = Vector2(941, -94)
+position = Vector2(941, -67.36842)
 
 [node name="Plataforma5" parent="-05" unique_id=1903414615 instance=ExtResource("13_w4lji")]
-position = Vector2(142.75, 110)
+position = Vector2(142.75, 172.63159)
 
 [node name="Plataforma4" parent="-05" unique_id=1000101698 instance=ExtResource("13_w4lji")]
-position = Vector2(245.65457, -937.68207)
+position = Vector2(245.65457, -917.8947)
 
 [node name="-02" type="CanvasLayer" parent="." unique_id=245188980]
 follow_viewport_enabled = true
