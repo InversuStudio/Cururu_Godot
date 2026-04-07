@@ -1,14 +1,24 @@
 extends InteractObject
 
-var tela:Node2D = null
+var tela:Node = null
+# Recebe a RichTextLabel que contém o texto
+var texto:RichTextLabel = null
 
 func _ready() -> void:
 	for c:Node in get_parent().get_children():
-		if c is Sprite2D or c is AnimatedSprite2D:
+		if c is Sprite2D or c is AnimatedSprite2D or c is Control:
 			tela = c
-			break
+			for ch:Node in c.get_children():
+				if ch is RichTextLabel:
+					ch.bbcode_enabled = true
+					texto = ch
+			#break
+		
 	if tela:
 		tela.modulate = Color.TRANSPARENT
+	if texto:
+		texto.text = texto.text.replace(
+			"BTN", "[img]%s[/img]" % GameData.GetUiButtonImage(texto.name))
 
 func Extra(dentro:bool) -> void:
 	if tela == null: return

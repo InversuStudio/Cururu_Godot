@@ -79,8 +79,6 @@ position = Vector2(110.08, -12.919998)
 scale = Vector2(0.37, 0.37)
 sprite_frames = SubResource("SpriteFrames_dsijf")
 animation = &"1"
-frame = 6
-frame_progress = 1.0
 speed_scale = 1.2
 
 [node name="HitBox" parent="." unique_id=727505384 instance=ExtResource("12_hena8")]

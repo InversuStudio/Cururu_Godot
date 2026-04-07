@@ -305,7 +305,7 @@ unique_name_in_owner = true
 position = Vector2(-0.5, -63.5)
 shape = SubResource("RectangleShape2D_rixxk")
 
-[node name="HurtBox" parent="." unique_id=991220621 node_paths=PackedStringArray("sprite") instance=ExtResource("3_7ptwx")]
+[node name="HurtBox" parent="." unique_id=991220621 node_paths=PackedStringArray("sprite") groups=["AddMagia"] instance=ExtResource("3_7ptwx")]
 unique_name_in_owner = true
 position = Vector2(-12, 0)
 scale = Vector2(0.70287764, 1)
