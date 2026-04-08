@@ -1,6 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://kuarj30f8veq"]
+[gd_scene format=3 uid="uid://kuarj30f8veq"]
 
 [ext_resource type="Script" uid="uid://bclpkwuvn4e0r" path="res://Scripts/Inventario/InventarioHUD.gd" id="1_0mgwr"]
+[ext_resource type="FontFile" uid="uid://cmh0geo7e3aon" path="res://Dialogos/Font/MONTSERRAT-BLACK.TTF" id="3_7gfu0"]
 [ext_resource type="Texture2D" uid="uid://ckvwjmjhwpbyd" path="res://Sprites/UI/Pause/Pecas/INFO_ITENS.png" id="3_cr80i"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2ptjp"]
@@ -12,83 +13,85 @@ texture = ExtResource("3_cr80i")
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_f2wx0"]
 
-[node name="Inventario" type="VBoxContainer"]
+[node name="Inventario" type="VBoxContainer" unique_id=1028752303]
 process_mode = 2
 script = ExtResource("1_0mgwr")
 
-[node name="HSeparator" type="HSeparator" parent="."]
+[node name="HSeparator" type="HSeparator" parent="." unique_id=908412094]
 layout_mode = 2
 theme_override_constants/separation = 25
 theme_override_styles/separator = SubResource("StyleBoxFlat_2ptjp")
 
-[node name="Conteudo" type="HBoxContainer" parent="."]
+[node name="Conteudo" type="HBoxContainer" parent="." unique_id=760937779]
 layout_mode = 2
 size_flags_vertical = 3
 size_flags_stretch_ratio = 4.0
 alignment = 1
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Conteudo"]
+[node name="VBoxContainer" type="VBoxContainer" parent="Conteudo" unique_id=1133347601]
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="AreaDesc" type="PanelContainer" parent="Conteudo/VBoxContainer"]
+[node name="AreaDesc" type="PanelContainer" parent="Conteudo/VBoxContainer" unique_id=932163421]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 theme_override_styles/panel = SubResource("StyleBoxTexture_6dbge")
 
-[node name="MarginContainer" type="MarginContainer" parent="Conteudo/VBoxContainer/AreaDesc"]
+[node name="MarginContainer" type="MarginContainer" parent="Conteudo/VBoxContainer/AreaDesc" unique_id=955476825]
 layout_mode = 2
 theme_override_constants/margin_left = 40
 theme_override_constants/margin_top = 20
 theme_override_constants/margin_right = 20
 theme_override_constants/margin_bottom = 20
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Conteudo/VBoxContainer/AreaDesc/MarginContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="Conteudo/VBoxContainer/AreaDesc/MarginContainer" unique_id=40743967]
 layout_mode = 2
 alignment = 1
 
-[node name="HBoxContainer" type="HBoxContainer" parent="Conteudo/VBoxContainer/AreaDesc/MarginContainer/VBoxContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="Conteudo/VBoxContainer/AreaDesc/MarginContainer/VBoxContainer" unique_id=862767030]
 layout_mode = 2
 size_flags_vertical = 3
 size_flags_stretch_ratio = 0.2
 alignment = 1
 
-[node name="NomeInv" type="RichTextLabel" parent="Conteudo/VBoxContainer/AreaDesc/MarginContainer/VBoxContainer/HBoxContainer"]
+[node name="NomeInv" type="RichTextLabel" parent="Conteudo/VBoxContainer/AreaDesc/MarginContainer/VBoxContainer/HBoxContainer" unique_id=2027028206]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
+theme_override_fonts/normal_font = ExtResource("3_7gfu0")
 theme_override_font_sizes/normal_font_size = 40
 text = "TITULO"
 vertical_alignment = 1
 
-[node name="VSeparator" type="VSeparator" parent="Conteudo/VBoxContainer/AreaDesc/MarginContainer/VBoxContainer/HBoxContainer"]
+[node name="VSeparator" type="VSeparator" parent="Conteudo/VBoxContainer/AreaDesc/MarginContainer/VBoxContainer/HBoxContainer" unique_id=586455145]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_styles/separator = SubResource("StyleBoxEmpty_f2wx0")
 
-[node name="NumCura" type="HBoxContainer" parent="Conteudo/VBoxContainer/AreaDesc/MarginContainer/VBoxContainer/HBoxContainer"]
+[node name="NumCura" type="HBoxContainer" parent="Conteudo/VBoxContainer/AreaDesc/MarginContainer/VBoxContainer/HBoxContainer" unique_id=1774640019]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
 alignment = 2
 
-[node name="DescInv" type="RichTextLabel" parent="Conteudo/VBoxContainer/AreaDesc/MarginContainer/VBoxContainer"]
+[node name="DescInv" type="RichTextLabel" parent="Conteudo/VBoxContainer/AreaDesc/MarginContainer/VBoxContainer" unique_id=2031390615]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_vertical = 3
 size_flags_stretch_ratio = 0.8
 theme_override_constants/line_separation = 4
+theme_override_fonts/normal_font = ExtResource("3_7gfu0")
 theme_override_font_sizes/normal_font_size = 28
 text = "DESCRIÇÃO"
 
-[node name="VSeparator" type="VSeparator" parent="Conteudo"]
+[node name="VSeparator" type="VSeparator" parent="Conteudo" unique_id=1937171658]
 self_modulate = Color(1, 1, 1, 0)
 layout_mode = 2
 theme_override_constants/separation = 25
 
-[node name="MargemInventario" type="MarginContainer" parent="Conteudo"]
+[node name="MargemInventario" type="MarginContainer" parent="Conteudo" unique_id=1743904745]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
@@ -98,7 +101,7 @@ theme_override_constants/margin_top = 10
 theme_override_constants/margin_right = 10
 theme_override_constants/margin_bottom = 10
 
-[node name="Inv" type="GridContainer" parent="Conteudo/MargemInventario"]
+[node name="Inv" type="GridContainer" parent="Conteudo/MargemInventario" unique_id=1603806440]
 unique_name_in_owner = true
 layout_mode = 2
 theme_override_constants/h_separation = 20

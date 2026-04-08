@@ -5,6 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://dxetesue4pk34" path="res://Sprites/UI/Pause/Pecas/COLETA_ITEM.png" id="2_j1nce"]
 [ext_resource type="AudioStream" uid="uid://da8j5pkrlvh5y" path="res://Audio/SFX/AMBIENTE/Iten especial.wav" id="4_2llkm"]
 [ext_resource type="Script" uid="uid://dvao27av8qjbk" path="res://Dialogos/label_auto_resize.gd" id="4_qmy0w"]
+[ext_resource type="FontFile" uid="uid://cmh0geo7e3aon" path="res://Dialogos/Font/MONTSERRAT-BLACK.TTF" id="4_r7f5s"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_2llkm"]
 shader = ExtResource("2_7m40o")
@@ -128,6 +129,7 @@ unique_name_in_owner = true
 layout_mode = 2
 size_flags_vertical = 3
 size_flags_stretch_ratio = 0.2
+theme_override_fonts/normal_font = ExtResource("4_r7f5s")
 theme_override_font_sizes/normal_font_size = 50
 text = "Nome Item"
 horizontal_alignment = 1
@@ -139,6 +141,7 @@ max_font_size = 50
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_vertical = 3
+theme_override_fonts/normal_font = ExtResource("4_r7f5s")
 theme_override_font_sizes/normal_font_size = 40
 bbcode_enabled = true
 text = "Descrição Item labubu"
@@ -163,6 +166,7 @@ grow_vertical = 0
 size_flags_vertical = 3
 size_flags_stretch_ratio = 0.2
 theme_override_colors/default_color = Color(1, 1, 1, 1)
+theme_override_fonts/normal_font = ExtResource("4_r7f5s")
 theme_override_font_sizes/normal_font_size = 32
 bbcode_enabled = true
 text = "Continuar  BTN"

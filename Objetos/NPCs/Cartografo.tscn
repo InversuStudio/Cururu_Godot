@@ -28,6 +28,7 @@
 [ext_resource type="Texture2D" uid="uid://whlrmln2d37f" path="res://Sprites/NPCS/Cartografo/21.png" id="23_e0mxe"]
 [ext_resource type="Script" uid="uid://dd7svcu8l7fxu" path="res://Scripts/Componentes/Interacao.gd" id="24_rh6ph"]
 [ext_resource type="Texture2D" uid="uid://3fndwwvknj3j" path="res://Sprites/Cenário/Objetos/Savepoint/LOGO V1 STEAM.png" id="25_ipf2l"]
+[ext_resource type="FontFile" uid="uid://cmh0geo7e3aon" path="res://Dialogos/Font/MONTSERRAT-BLACK.TTF" id="28_5vcwb"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_rmtcg"]
 resource_local_to_scene = true
@@ -139,11 +140,12 @@ anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
 offset_left = -315.51797
-offset_top = -531.8802
+offset_top = -466.7784
 offset_right = 284.62576
-offset_bottom = -326.51495
+offset_bottom = -96.57486
 grow_horizontal = 2
-theme_override_font_sizes/normal_font_size = 90
+theme_override_fonts/normal_font = ExtResource("28_5vcwb")
+theme_override_font_sizes/normal_font_size = 62
 text = "CONVERSAR"
 horizontal_alignment = 1
 vertical_alignment = 1

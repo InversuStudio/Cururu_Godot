@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://jrl1634sm6lb" path="res://Scripts/Componentes/MenuPrincipal.gd" id="1_sgs44"]
 [ext_resource type="Texture2D" uid="uid://ciudp1bvjo4s5" path="res://Sprites/UI/Telainicial/01.png" id="2_hkuru"]
+[ext_resource type="FontFile" uid="uid://cmh0geo7e3aon" path="res://Dialogos/Font/MONTSERRAT-BLACK.TTF" id="3_e3fqx"]
 [ext_resource type="AudioStream" uid="uid://w484n11fqypl" path="res://Audio/SFX/MENU INICIAL/selecao_menu.mp3" id="4_6y4ar"]
 [ext_resource type="AudioStream" uid="uid://bash5t5ceubo" path="res://Audio/Musicas/Cururu - Tema.ogg" id="5_6y4ar"]
 [ext_resource type="Script" uid="uid://dd16yu704x6wt" path="res://Scripts/Componentes/BGM_Player.gd" id="5_e3fqx"]
@@ -41,6 +42,7 @@ unique_name_in_owner = true
 custom_minimum_size = Vector2(350, 100)
 layout_mode = 2
 size_flags_horizontal = 3
+theme_override_fonts/font = ExtResource("3_e3fqx")
 theme_override_font_sizes/font_size = 40
 text = "Continuar"
 
@@ -49,6 +51,7 @@ unique_name_in_owner = true
 custom_minimum_size = Vector2(350, 100)
 layout_mode = 2
 size_flags_horizontal = 3
+theme_override_fonts/font = ExtResource("3_e3fqx")
 theme_override_font_sizes/font_size = 40
 text = "Novo Jogo"
 
@@ -56,6 +59,7 @@ text = "Novo Jogo"
 custom_minimum_size = Vector2(350, 100)
 layout_mode = 2
 size_flags_horizontal = 3
+theme_override_fonts/font = ExtResource("3_e3fqx")
 theme_override_font_sizes/font_size = 40
 text = "Sair"
 

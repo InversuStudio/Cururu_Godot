@@ -5,6 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://bf0q4vuc2s0md" path="res://Sprites/Cenário/Objetos/Savepoint/apagado.png" id="2_3f5lj"]
 [ext_resource type="Texture2D" uid="uid://bqe80obttjb82" path="res://Sprites/Cenário/Objetos/Savepoint/save_meio_termo.png" id="4_j20lk"]
 [ext_resource type="Texture2D" uid="uid://byyty8fw4cjjd" path="res://Sprites/Cenário/Objetos/Savepoint/save_ativado.png" id="5_41v7y"]
+[ext_resource type="FontFile" uid="uid://cmh0geo7e3aon" path="res://Dialogos/Font/MONTSERRAT-BLACK.TTF" id="6_ti6fj"]
 [ext_resource type="PackedScene" uid="uid://ffqi6t0ahbmk" path="res://Objetos/Funcionalidade/OtimizadorObjeto.tscn" id="7_7viry"]
 [ext_resource type="AudioStream" uid="uid://ny7q34ehan6u" path="res://Audio/SFX/AMBIENTE/Save.wav" id="7_ti6fj"]
 [ext_resource type="Texture2D" uid="uid://3fndwwvknj3j" path="res://Sprites/Cenário/Objetos/Savepoint/LOGO V1 STEAM.png" id="8_7viry"]
@@ -86,19 +87,20 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -190.0
-offset_top = -585.0
+offset_top = -539.0
 offset_right = 203.0
-offset_bottom = -432.0
+offset_bottom = -367.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_font_sizes/normal_font_size = 60
+theme_override_fonts/normal_font = ExtResource("6_ti6fj")
+theme_override_font_sizes/normal_font_size = 48
 bbcode_enabled = true
 text = "DESCANSAR"
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="LogoV1Steam" type="Sprite2D" parent="Texto" unique_id=456346128]
-position = Vector2(190, 71.00002)
+position = Vector2(190, 28.000027)
 scale = Vector2(0.2038632, 0.20386322)
 texture = ExtResource("8_7viry")
 

@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://3fndwwvknj3j" path="res://Sprites/Cenário/Objetos/Savepoint/LOGO V1 STEAM.png" id="7_auc58"]
 [ext_resource type="AudioStream" uid="uid://b3q8f2bgu746y" path="res://Audio/SFX/AMBIENTE/som_upgrade.wav" id="7_rm14k"]
 [ext_resource type="Script" uid="uid://b2ls33ys55oyt" path="res://Scripts/Componentes/OtimizadorObjeto.gd" id="7_xtwx5"]
+[ext_resource type="FontFile" uid="uid://cmh0geo7e3aon" path="res://Dialogos/Font/MONTSERRAT-BLACK.TTF" id="7_ynk8w"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qxje0"]
 size = Vector2(84, 220)
@@ -67,11 +68,12 @@ color_initial_ramp = SubResource("Gradient_beg2k")
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -196.5
-offset_top = -391.0
-offset_right = 196.5
-offset_bottom = -312.0
+offset_left = -144.0
+offset_top = -417.0
+offset_right = 144.0
+offset_bottom = -286.0
 grow_horizontal = 2
+theme_override_fonts/normal_font = ExtResource("7_ynk8w")
 theme_override_font_sizes/normal_font_size = 40
 bbcode_enabled = true
 text = "ABSORVER"
@@ -79,7 +81,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="LogoV1Steam" type="Sprite2D" parent="Texto" unique_id=1098870823]
-position = Vector2(196.5, 36.337616)
+position = Vector2(144.99998, 27)
 scale = Vector2(0.13532764, 0.13532771)
 texture = ExtResource("7_auc58")
 

@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://ddf8xx25186i"]
+[gd_scene format=3 uid="uid://ddf8xx25186i"]
 
 [ext_resource type="Script" uid="uid://cf5a7cgeqpkpr" path="res://Scripts/Inventario/AmuletoHUD.gd" id="1_k4mju"]
 [ext_resource type="Texture2D" uid="uid://ckvwjmjhwpbyd" path="res://Sprites/UI/Pause/Pecas/INFO_ITENS.png" id="2_mmnim"]
+[ext_resource type="FontFile" uid="uid://cmh0geo7e3aon" path="res://Dialogos/Font/MONTSERRAT-BLACK.TTF" id="3_s6lpq"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2ptjp"]
 bg_color = Color(1, 1, 1, 1)
@@ -10,66 +11,68 @@ border_width_top = 1
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_mmnim"]
 texture = ExtResource("2_mmnim")
 
-[node name="Amuletos" type="VBoxContainer"]
+[node name="Amuletos" type="VBoxContainer" unique_id=663133526]
 process_mode = 2
 script = ExtResource("1_k4mju")
 
-[node name="HSeparator" type="HSeparator" parent="."]
+[node name="HSeparator" type="HSeparator" parent="." unique_id=1507487894]
 layout_mode = 2
 theme_override_constants/separation = 25
 theme_override_styles/separator = SubResource("StyleBoxFlat_2ptjp")
 
-[node name="Conteudo" type="HBoxContainer" parent="."]
+[node name="Conteudo" type="HBoxContainer" parent="." unique_id=2093294448]
 layout_mode = 2
 size_flags_vertical = 3
 size_flags_stretch_ratio = 4.0
 alignment = 1
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Conteudo"]
+[node name="VBoxContainer" type="VBoxContainer" parent="Conteudo" unique_id=64789614]
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="AreaDesc" type="PanelContainer" parent="Conteudo/VBoxContainer"]
+[node name="AreaDesc" type="PanelContainer" parent="Conteudo/VBoxContainer" unique_id=1483195189]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 theme_override_styles/panel = SubResource("StyleBoxTexture_mmnim")
 
-[node name="MarginContainer" type="MarginContainer" parent="Conteudo/VBoxContainer/AreaDesc"]
+[node name="MarginContainer" type="MarginContainer" parent="Conteudo/VBoxContainer/AreaDesc" unique_id=278986919]
 layout_mode = 2
 theme_override_constants/margin_left = 40
 theme_override_constants/margin_top = 20
 theme_override_constants/margin_right = 40
 theme_override_constants/margin_bottom = 20
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Conteudo/VBoxContainer/AreaDesc/MarginContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="Conteudo/VBoxContainer/AreaDesc/MarginContainer" unique_id=1783301733]
 layout_mode = 2
 alignment = 1
 
-[node name="NomeInv" type="RichTextLabel" parent="Conteudo/VBoxContainer/AreaDesc/MarginContainer/VBoxContainer"]
+[node name="NomeInv" type="RichTextLabel" parent="Conteudo/VBoxContainer/AreaDesc/MarginContainer/VBoxContainer" unique_id=1829474264]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 size_flags_stretch_ratio = 0.2
+theme_override_fonts/normal_font = ExtResource("3_s6lpq")
 theme_override_font_sizes/normal_font_size = 40
 text = "TITULO"
 vertical_alignment = 1
 
-[node name="DescInv" type="RichTextLabel" parent="Conteudo/VBoxContainer/AreaDesc/MarginContainer/VBoxContainer"]
+[node name="DescInv" type="RichTextLabel" parent="Conteudo/VBoxContainer/AreaDesc/MarginContainer/VBoxContainer" unique_id=999111881]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_vertical = 3
 size_flags_stretch_ratio = 0.8
+theme_override_fonts/normal_font = ExtResource("3_s6lpq")
 theme_override_font_sizes/normal_font_size = 28
 text = "DESCRIÇÃO"
 
-[node name="VSeparator" type="VSeparator" parent="Conteudo"]
+[node name="VSeparator" type="VSeparator" parent="Conteudo" unique_id=1121838911]
 self_modulate = Color(1, 1, 1, 0)
 layout_mode = 2
 theme_override_constants/separation = 25
 
-[node name="MargemInventario" type="MarginContainer" parent="Conteudo"]
+[node name="MargemInventario" type="MarginContainer" parent="Conteudo" unique_id=1665207401]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
@@ -79,7 +82,7 @@ theme_override_constants/margin_top = 10
 theme_override_constants/margin_right = 10
 theme_override_constants/margin_bottom = 10
 
-[node name="Inv" type="GridContainer" parent="Conteudo/MargemInventario"]
+[node name="Inv" type="GridContainer" parent="Conteudo/MargemInventario" unique_id=1092775344]
 unique_name_in_owner = true
 layout_mode = 2
 theme_override_constants/h_separation = 20

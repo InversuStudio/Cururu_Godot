@@ -15,6 +15,7 @@
 [ext_resource type="Texture2D" uid="uid://d2u8nh7g7k2f7" path="res://Sprites/NPCS/Saci/saci13.png" id="9_73y1c"]
 [ext_resource type="Script" uid="uid://dd7svcu8l7fxu" path="res://Scripts/Componentes/Interacao.gd" id="10_x2w2l"]
 [ext_resource type="Texture2D" uid="uid://3fndwwvknj3j" path="res://Sprites/Cenário/Objetos/Savepoint/LOGO V1 STEAM.png" id="11_qeabn"]
+[ext_resource type="FontFile" uid="uid://cmh0geo7e3aon" path="res://Dialogos/Font/MONTSERRAT-BLACK.TTF" id="15_8ryo0"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_rmtcg"]
 resource_local_to_scene = true
@@ -105,17 +106,18 @@ anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
 offset_left = -315.51797
-offset_top = -531.8802
+offset_top = -498.97003
 offset_right = 284.62576
-offset_bottom = -326.51495
+offset_bottom = -238.41916
 grow_horizontal = 2
-theme_override_font_sizes/normal_font_size = 90
+theme_override_fonts/normal_font = ExtResource("15_8ryo0")
+theme_override_font_sizes/normal_font_size = 62
 text = "CONVERSAR"
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="LogoV1Steam" type="Sprite2D" parent="Texto" unique_id=561569843]
-position = Vector2(315.01794, 97.293434)
+position = Vector2(315.01794, 52.886215)
 scale = Vector2(0.2987412, 0.29874122)
 texture = ExtResource("11_qeabn")
 
