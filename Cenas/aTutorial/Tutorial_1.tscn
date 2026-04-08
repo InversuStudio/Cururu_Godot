@@ -974,14 +974,16 @@ scale = Vector2(1.2507048, 1.2507043)
 texture = ExtResource("55_q2ysr")
 
 [node name="usar_item" type="RichTextLabel" parent="0/MostraTela/DicaVida" unique_id=1808342795]
-offset_left = -268.64844
-offset_top = -46.37378
-offset_right = 279.04272
-offset_bottom = 93.54736
+offset_left = -270.24762
+offset_top = -46.373875
+offset_right = 277.44354
+offset_bottom = 72.75906
 theme_override_fonts/normal_font = ExtResource("56_q2ysr")
-theme_override_font_sizes/normal_font_size = 30
-text = "Aperte BTN  para consumir frutos do seu inventário e poder CURAR ou ENERGIZAR o Cururu."
+theme_override_font_sizes/normal_font_size = 25
+bbcode_enabled = true
+text = "Aperte BTN para consumir frutos do seu inventário e poder CURAR o Cururu."
 horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="Cururu" parent="0" unique_id=1710397734 instance=ExtResource("29_q2ysr")]
 z_index = 0
@@ -1723,8 +1725,21 @@ position = Vector2(-3.5, -3)
 shape = SubResource("RectangleShape2D_q2ysr")
 
 [node name="Atacar" type="Sprite2D" parent="2/MostraTela2" unique_id=1239265285]
+visible = false
 position = Vector2(1, 189)
 texture = ExtResource("76_ytcj4")
+
+[node name="melee" type="RichTextLabel" parent="2/MostraTela2" unique_id=584970901]
+offset_left = -163.61888
+offset_top = 143.09523
+offset_right = 194.47633
+offset_bottom = 267.85712
+theme_override_fonts/normal_font = ExtResource("56_q2ysr")
+theme_override_font_sizes/normal_font_size = 46
+bbcode_enabled = true
+text = "BTN ATACAR"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="Cenario" type="Node2D" parent="." unique_id=1043735198]
 position = Vector2(39399, 2158)
@@ -1752,7 +1767,7 @@ musica = ExtResource("53_sje6b")
 metadata/_custom_type_script = "uid://dd16yu704x6wt"
 
 [node name="OtimizadorCena" parent="." unique_id=728809620 node_paths=PackedStringArray("targets") instance=ExtResource("80_thr42")]
-position = Vector2(8326.667, -1128.5714)
+position = Vector2(8408, -1133)
 scale = Vector2(0.60846597, 0.6084661)
 rect = Rect2(-14872.923, -3315.5972, 17156.26, 4261.5356)
 targets = [NodePath("../2/Foreground"), NodePath("../1/Teto"), NodePath("../-02/ArvoresFrente"), NodePath("../-05/cenario01"), NodePath("../-1/cenario02"), NodePath("../-15/cenario03"), NodePath("../-2/Arvores03")]
