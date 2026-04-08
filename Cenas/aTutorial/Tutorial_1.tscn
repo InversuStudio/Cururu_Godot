@@ -78,6 +78,7 @@
 [ext_resource type="PackedScene" uid="uid://dny88hy3w52nm" path="res://Objetos/Props/DropAcai.tscn" id="54_f5hdm"]
 [ext_resource type="Texture2D" uid="uid://daavc04bfrocb" path="res://Sprites/UI/Dialogo/DICA_VIDA.png" id="55_q2ysr"]
 [ext_resource type="Texture2D" uid="uid://bu66so2bkubke" path="res://Sprites/VFX/Iluminação/LightCururu2.png" id="55_sxmps"]
+[ext_resource type="FontFile" uid="uid://cmh0geo7e3aon" path="res://Dialogos/Font/MONTSERRAT-BLACK.TTF" id="56_q2ysr"]
 [ext_resource type="Texture2D" uid="uid://bnnb7jjjothj3" path="res://Sprites/UI/Dialogo/ATACAR.png" id="76_ytcj4"]
 [ext_resource type="PackedScene" uid="uid://c6hglvets6hgp" path="res://Objetos/Funcionalidade/OtimizadorCena.tscn" id="80_thr42"]
 
@@ -971,6 +972,16 @@ shape = SubResource("RectangleShape2D_thr42")
 position = Vector2(3, -509)
 scale = Vector2(1.2507048, 1.2507043)
 texture = ExtResource("55_q2ysr")
+
+[node name="usar_item" type="RichTextLabel" parent="0/MostraTela/DicaVida" unique_id=1808342795]
+offset_left = -268.64844
+offset_top = -46.37378
+offset_right = 279.04272
+offset_bottom = 93.54736
+theme_override_fonts/normal_font = ExtResource("56_q2ysr")
+theme_override_font_sizes/normal_font_size = 30
+text = "Aperte BTN  para consumir frutos do seu inventário e poder CURAR ou ENERGIZAR o Cururu."
+horizontal_alignment = 1
 
 [node name="Cururu" parent="0" unique_id=1710397734 instance=ExtResource("29_q2ysr")]
 z_index = 0

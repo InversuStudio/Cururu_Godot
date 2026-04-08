@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://buxjb8khrvcm7"
-path="res://.godot/imported/WALLJUMP.png-45062312e1853a43a5a7e6f869e11947.ctex"
+uid="uid://d0tqxewujiu5x"
+path="res://.godot/imported/TesteTecladoZ.png-81a2c9024fe8a590b94b416d25bfc01d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Cururu/walljump/WALLJUMP.png"
-dest_files=["res://.godot/imported/WALLJUMP.png-45062312e1853a43a5a7e6f869e11947.ctex"]
+source_file="res://Sprites/UI/Botoes/TesteTecladoZ.png"
+dest_files=["res://.godot/imported/TesteTecladoZ.png-81a2c9024fe8a590b94b416d25bfc01d.ctex"]
 
 [params]
 

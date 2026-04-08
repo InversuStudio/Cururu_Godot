@@ -1,0 +1,46 @@
+[gd_scene format=3 uid="uid://b7ndd3xpqwo3j"]
+
+[ext_resource type="Texture2D" uid="uid://6xrhe4ry30ua" path="res://Sprites/Cururu/Cura/VFX/vida/01.png" id="1_2xib6"]
+[ext_resource type="Texture2D" uid="uid://jkaw8j3sfl52" path="res://Sprites/Cururu/Cura/VFX/vida/02.png" id="2_24vsj"]
+[ext_resource type="Texture2D" uid="uid://dc47mcjfhlajx" path="res://Sprites/Cururu/Cura/VFX/vida/03.png" id="3_vro5n"]
+[ext_resource type="Texture2D" uid="uid://5adrqqokma8t" path="res://Sprites/Cururu/Cura/VFX/magia/01.png" id="4_rrlyb"]
+[ext_resource type="Texture2D" uid="uid://bgh5n7240bfsw" path="res://Sprites/Cururu/Cura/VFX/magia/02.png" id="5_oajdv"]
+[ext_resource type="Texture2D" uid="uid://b83j2njllpxmq" path="res://Sprites/Cururu/Cura/VFX/magia/03.png" id="6_4l53i"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_c30xr"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_2xib6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_24vsj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_vro5n")
+}],
+"loop": true,
+"name": &"cura",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_rrlyb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_oajdv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_4l53i")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
+
+[node name="Node2D" type="Node2D" unique_id=1675020762]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=367390914]
+modulate = Color(1, 1, 1, 0.5764706)
+sprite_frames = SubResource("SpriteFrames_c30xr")
+frame_progress = 0.85557103

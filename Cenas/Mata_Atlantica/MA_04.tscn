@@ -877,7 +877,7 @@ position = Vector2(3900, -7424)
 position = Vector2(-5006, 864)
 
 [node name="PortaTemp2" parent="Fundo/0/Props" unique_id=1097396082 instance=ExtResource("26_rxp3q")]
-position = Vector2(-3588, 715)
+position = Vector2(-3370, 715)
 
 [node name="PortaTemp3" parent="Fundo/0/Props" unique_id=678866606 instance=ExtResource("26_rxp3q")]
 position = Vector2(-1204, 726)

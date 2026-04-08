@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://buxjb8khrvcm7"
-path="res://.godot/imported/WALLJUMP.png-45062312e1853a43a5a7e6f869e11947.ctex"
+uid="uid://dj2n4an017dwl"
+path="res://.godot/imported/TesteInputPSC.png-3543f9c89a0a02588f1bacf576ae2405.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Cururu/walljump/WALLJUMP.png"
-dest_files=["res://.godot/imported/WALLJUMP.png-45062312e1853a43a5a7e6f869e11947.ctex"]
+source_file="res://Sprites/UI/Botoes/TesteInputPSC.png"
+dest_files=["res://.godot/imported/TesteInputPSC.png-3543f9c89a0a02588f1bacf576ae2405.ctex"]
 
 [params]
 
