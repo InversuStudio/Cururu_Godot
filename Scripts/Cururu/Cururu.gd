@@ -64,8 +64,10 @@ class_name Player extends CharacterBody2D
 @export var vida : Vida = null
 ## Componente StateMachine
 @export var state_machine : StateMachine = null
-## Seta vida específica
+## Seta vida específica. 0 não faz nada
 @export var override_vida_player:int = 0
+## Seta magia específica. -1 não faz nada
+@export var override_magia:int = -1
 # Node que segura os Marker2Ds que definem onde os ataques serão instanciados
 @onready var pos_ataques: Node2D = $PosAtaques
 
@@ -111,7 +113,11 @@ func _ready() -> void:
 			vida.vida_atual = override_vida_player
 			await get_tree().scene_changed
 			GameData.vida_atual = override_vida_player
-		
+		if override_magia > -1:
+			#vida.vida_atual = override_vida_player
+			#await get_tree().scene_changed
+			print("PINTO BOLAS!!!!!!!!!!!!!!!!!!!!")
+			GameData.magia_atual = override_magia
 	HUD.AplicaRed(vida.vida_atual)
 
 	var ib:Array = [-1.0, -1.0] if GameData.direcao else [1.0, 1.0]
