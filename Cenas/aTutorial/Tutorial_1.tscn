@@ -8,7 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://i664886fdh55" path="res://Sprites/Cenário/Mata_Atlantica/Background/Mata/mato02.png" id="7_jiro2"]
 [ext_resource type="Texture2D" uid="uid://ra1w5d2v3tvw" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/Arvoresv2/6C28BC06-A7DE-492B-A767-7D7C3B85A403.png" id="7_u3noq"]
 [ext_resource type="Texture2D" uid="uid://d075kid4ojh6b" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/Arvoresv2/4D8D492A-1F01-4367-A06E-660443F32612.PNG" id="8_e0yg5"]
-[ext_resource type="Texture2D" uid="uid://b1sv0car32gha" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/arvore_s3.png" id="8_khsix"]
+[ext_resource type="Texture2D" uid="uid://b1sv0car32gha" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/arvore_S3.png" id="8_khsix"]
 [ext_resource type="Texture2D" uid="uid://d18vqjeq586b1" path="res://Sprites/Cenário/Mata_Atlantica/Pedras e Ruinas/pedra_musgo.png" id="9_akk5h"]
 [ext_resource type="Shader" uid="uid://da2wxasx6evg0" path="res://Scripts/Shaders/Grama.gdshader" id="10_hxoyl"]
 [ext_resource type="Texture2D" uid="uid://yrshunpt0tr8" path="res://Sprites/Cenário/Mata_Atlantica/Background/Mata/mato01.png" id="11_ho4ux"]

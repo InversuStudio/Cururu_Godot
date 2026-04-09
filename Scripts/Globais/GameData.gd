@@ -11,7 +11,11 @@ var naia_falou:bool = false
 
 # Armazena se está usando teclado ou controller
 # 0 = Mouse/Teclado | 1 = Xbox | 2 = PlayStation | 3 = Nintendo
-var tipo_input:int = 0
+signal tipo_input_mudou
+var tipo_input:int = 0:
+	set(valor):
+		tipo_input = valor
+		tipo_input_mudou.emit()
 
 func _input(event: InputEvent) -> void:
 	if event is InputEventMouseMotion:
@@ -75,22 +79,22 @@ func GetUiButtonImage(action: StringName) -> StringName:
 					match tipo_input:
 						1: result = "res://Sprites/UI/Botoes/TesteInputXboxA.png"
 						2: result = "res://Sprites/UI/Botoes/TesteInputPSX.png"
-						3: result = "res://Sprites/UI/Botoes/TesteInputNintendoB.png"
+						3: result = "res://Sprites/UI/Botoes/TesteInputXboxB.png"
 				JOY_BUTTON_B:
 					match tipo_input:
 						1: result = "res://Sprites/UI/Botoes/TesteInputXboxB.png"
 						2: result = "res://Sprites/UI/Botoes/TesteInputPSC.png"
-						3: result = "res://Sprites/UI/Botoes/TesteInputNintendoA.png"
+						3: result = "res://Sprites/UI/Botoes/TesteInputXboxA.png"
 				JOY_BUTTON_X:
 					match tipo_input:
 						1: result = "res://Sprites/UI/Botoes/TesteInputXboxX.png"
 						2: result = "res://Sprites/UI/Botoes/TesteInputPSQ.png"
-						3: result = "res://Sprites/UI/Botoes/TesteInputNintendoY.png"
+						3: result = "res://Sprites/UI/Botoes/TesteInputXboxY.png"
 				JOY_BUTTON_Y:
 					match tipo_input:
 						1: result = "res://Sprites/UI/Botoes/TesteInputXboxY.png"
 						2: result = "res://Sprites/UI/Botoes/TesteInputPST.png"
-						3: result = "res://Sprites/UI/Botoes/TesteInputNintendoX.png"
+						3: result = "res://Sprites/UI/Botoes/TesteInputXboxX.png"
 
 	return result
 

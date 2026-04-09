@@ -3,8 +3,10 @@ extends InteractObject
 var tela:Node = null
 # Recebe a RichTextLabel que contém o texto
 var texto:RichTextLabel = null
+var og_txt:String = ""
 
 func _ready() -> void:
+	GameData.connect("tipo_input_mudou", UpdateInput)
 	for c:Node in get_parent().get_children():
 		if c is Sprite2D or c is AnimatedSprite2D or c is Control:
 			tela = c
@@ -12,6 +14,7 @@ func _ready() -> void:
 				if ch is RichTextLabel:
 					ch.bbcode_enabled = true
 					texto = ch
+					og_txt = texto.text
 			#break
 		
 	if tela:
@@ -20,8 +23,11 @@ func _ready() -> void:
 		var path = GameData.GetUiButtonImage("dash")
 		print("PATH DASH: ", path)
 		print("TIPO INPUT: ", GameData.tipo_input)
-		texto.text = texto.text.replace(
-			"BTN", "[img]%s[/img]" % GameData.GetUiButtonImage(texto.name))
+		UpdateInput()
+
+func UpdateInput() -> void:
+	texto.text = og_txt.replace(
+		"BTN", "[img]%s[/img]" % GameData.GetUiButtonImage(texto.name))
 
 func Extra(dentro:bool) -> void:
 	if tela == null: return
