@@ -431,7 +431,7 @@ position = Vector2(-110, -395)
 position = Vector2(-22, -187)
 texture = ExtResource("36_0wrly")
 
-[node name="melee" type="RichTextLabel" parent="MostraTela/Tela" unique_id=1373887768]
+[node name="dash" type="RichTextLabel" parent="MostraTela/Tela" unique_id=1373887768]
 offset_left = -158.0
 offset_top = -79.0
 offset_right = 166.0

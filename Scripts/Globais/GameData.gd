@@ -50,6 +50,7 @@ func GetUiButtonImage(action: StringName) -> StringName:
 		for ie: InputEvent in comandos:
 			if ie is InputEventKey:
 				key = OS.get_keycode_string(ie.physical_keycode)
+				print(key)
 				break
 		result = "res://Sprites/UI/Botoes/TesteTeclado" + key + ".png"
 
@@ -65,14 +66,18 @@ func GetUiButtonImage(action: StringName) -> StringName:
 				is_axis = true
 				break
 
-		var prefixo: String = "Xbox"
-		match tipo_input:
-			2: prefixo = "PS"
-			3: prefixo = "Nintendo"
-
 		if is_axis:
 			match botao:
-				4: result = "res://Sprites/UI/Botoes/TesteInput%sLT.png" % prefixo
+				JOY_AXIS_TRIGGER_RIGHT:
+					match tipo_input:
+						1: result = "res://Sprites/UI/Botoes/TesteInputXboxRT.png"
+						2: result = "res://Sprites/UI/Botoes/TesteInputPSRT.png"
+						3: result = "res://Sprites/UI/Botoes/TesteInputXboxRT.png"
+				JOY_AXIS_TRIGGER_LEFT:
+					match tipo_input:
+						1: result = "res://Sprites/UI/Botoes/TesteInputXboxLT.png"
+						2: result = "res://Sprites/UI/Botoes/TesteInputPSLT.png"
+						3: result = "res://Sprites/UI/Botoes/TesteInputXboxLT.png"
 		else:
 			match botao:
 				JOY_BUTTON_A:
