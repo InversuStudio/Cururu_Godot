@@ -3,21 +3,21 @@
 [ext_resource type="Script" uid="uid://dg1wm8v16vrwl" path="res://Scripts/Componentes/HUD.gd" id="1_yixhe"]
 [ext_resource type="Texture2D" uid="uid://dbohcm7v5pvg4" path="res://Sprites/UI/HUD/Barra_Vida/UIHUD-MAGIA.png" id="2_f2wx0"]
 [ext_resource type="Script" uid="uid://ded3gd0hff7e6" path="res://Scripts/ItemRápido/ItemRápido.gd" id="2_md4fy"]
-[ext_resource type="PackedScene" uid="uid://c4qqwpn8wd4aq" path="res://UI/ItemSlot.tscn" id="3_7i7fj"]
+[ext_resource type="Texture2D" uid="uid://brlkj1uhui4fn" path="res://Sprites/UI/Botoes/TesteInputXboxRB.png" id="4_gp2h7"]
 [ext_resource type="Texture2D" uid="uid://dnhrdntc80h37" path="res://Sprites/UI/HUD/Menu_Rapido/UIHUD - SELETOR DE ITEM.png" id="4_rbci0"]
-[ext_resource type="Texture2D" uid="uid://0vn3u6huw3ie" path="res://Sprites/UI/HUD/UIHUDCASH.png" id="4_uk570"]
 [ext_resource type="Texture2D" uid="uid://8tc3pgq3fdi8" path="res://Sprites/UI/HUD/Barra_Vida/UIHUD-MAGIABK.png" id="5_2ptjp"]
 [ext_resource type="PackedScene" uid="uid://kuarj30f8veq" path="res://UI/Inventario.tscn" id="5_f2wx0"]
 [ext_resource type="PackedScene" uid="uid://ddf8xx25186i" path="res://UI/Amuletos.tscn" id="6_gppie"]
-[ext_resource type="Texture2D" uid="uid://bfv87oodpbq2v" path="res://Sprites/zWIP/TesteBarraVida.png" id="7_8ip7y"]
+[ext_resource type="Texture2D" uid="uid://ca8k5v74jj6ko" path="res://Sprites/UI/HUD/Barra_Vida/UIHUD-MAGIABK2.png" id="7_8ip7y"]
+[ext_resource type="PackedScene" uid="uid://cgwht06tcuv48" path="res://UI/BarraHUD.tscn" id="7_kg6a8"]
 [ext_resource type="Shader" uid="uid://c1omtsxv04udh" path="res://Scripts/Shaders/blur_shader.gdshader" id="8_am7sw"]
 [ext_resource type="FontFile" uid="uid://cmh0geo7e3aon" path="res://Dialogos/Font/MONTSERRAT-BLACK.TTF" id="8_kg6a8"]
 [ext_resource type="Script" uid="uid://bqsntloofwyiu" path="res://Scripts/Componentes/BarraAgua.gd" id="8_lbtxw"]
-[ext_resource type="Texture2D" uid="uid://vr5k8umqoobf" path="res://Sprites/UI/HUD/01.png" id="8_rsrlt"]
 [ext_resource type="Texture2D" uid="uid://c1kcyxqfye0pf" path="res://Sprites/UI/Pause/Pecas/HUD_FUNDO.png" id="9_ixkb2"]
-[ext_resource type="Texture2D" uid="uid://5v22r1552tve" path="res://Sprites/UI/HUD/02.png" id="9_lbtxw"]
-[ext_resource type="Texture2D" uid="uid://dcylqvun2htbh" path="res://Sprites/UI/HUD/03.png" id="10_gp2h7"]
-[ext_resource type="Texture2D" uid="uid://dmp74xed1jdx4" path="res://Sprites/UI/HUD/04.png" id="12_gp2h7"]
+[ext_resource type="Texture2D" uid="uid://bm1wlli2isrbh" path="res://Sprites/UI/HUD/M01.png" id="9_lbtxw"]
+[ext_resource type="Texture2D" uid="uid://b3h6r7dtu6lb5" path="res://Sprites/UI/HUD/M02.png" id="10_gp2h7"]
+[ext_resource type="Texture2D" uid="uid://bg5g81j3jfixf" path="res://Sprites/UI/HUD/M03.png" id="11_4hs1h"]
+[ext_resource type="Texture2D" uid="uid://c8rxjvh3wkog2" path="res://Sprites/UI/HUD/M04.png" id="12_dcyds"]
 [ext_resource type="Texture2D" uid="uid://bc2yoaw6bn0kt" path="res://Sprites/UI/Pause/Pecas/MENU_ABA2.png" id="13_281ki"]
 [ext_resource type="Texture2D" uid="uid://bu6udw31dg5md" path="res://Sprites/UI/Pause/Pecas/MENU_ABA1.png" id="13_mms7u"]
 [ext_resource type="Texture2D" uid="uid://duesv7kjq2emm" path="res://Sprites/UI/Pause/Pecas/MENU_ABA3.png" id="14_w37wn"]
@@ -32,40 +32,15 @@ border_width_bottom = 500
 border_color = Color(0.4482779, 0, 0.02036234, 0.60784316)
 border_blend = true
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4n7mi"]
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kg6a8"]
-bg_color = Color(0.1090967, 0.045741357, 0.10900665, 1)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ijstf"]
-bg_color = Color(0.105882354, 0.5568628, 0.8039216, 1)
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8ip7y"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_likdy"]
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_3yavs"]
-texture = ExtResource("7_8ip7y")
-texture_margin_left = 1.0
-texture_margin_top = 4.0
-texture_margin_right = 1.0
-texture_margin_bottom = 2.0
-expand_margin_top = 5.0
-axis_stretch_horizontal = 2
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_sqq4o"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_exw07"]
-
-[sub_resource type="AnimatedTexture" id="AnimatedTexture_4hs1h"]
+[sub_resource type="AnimatedTexture" id="AnimatedTexture_rc7pm"]
 frames = 4
-frame_0/texture = ExtResource("8_rsrlt")
+frame_0/texture = ExtResource("9_lbtxw")
 frame_0/duration = 0.2
-frame_1/texture = ExtResource("9_lbtxw")
+frame_1/texture = ExtResource("10_gp2h7")
 frame_1/duration = 0.2
-frame_2/texture = ExtResource("10_gp2h7")
+frame_2/texture = ExtResource("11_4hs1h")
 frame_2/duration = 0.2
-frame_3/texture = ExtResource("12_gp2h7")
+frame_3/texture = ExtResource("12_dcyds")
 frame_3/duration = 0.2
 
 [sub_resource type="LabelSettings" id="LabelSettings_yixhe"]
@@ -255,10 +230,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -52.0
-offset_top = -50.5
-offset_right = 52.0
-offset_bottom = 50.5
+offset_left = -38.0
+offset_top = -34.0
+offset_right = 66.0
+offset_bottom = 67.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("4_rbci0")
@@ -298,120 +273,47 @@ grow_horizontal = 2
 grow_vertical = 2
 expand_mode = 1
 
-[node name="ItemBar" type="Control" parent="Corpo/ItemRapido/Seletor" unique_id=36420870]
-clip_contents = true
-custom_minimum_size = Vector2(32, 32)
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="HBoxContainer" type="HBoxContainer" parent="Corpo/ItemRapido/Seletor/ItemBar" unique_id=1863275145]
-visible = false
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -80.0
-offset_top = -42.0
-offset_right = 80.0
+[node name="TextureRect" type="TextureRect" parent="Corpo/ItemRapido/Seletor" unique_id=1250515157]
+layout_mode = 0
+offset_left = 74.0
+offset_top = 17.0
+offset_right = 93.44186
 offset_bottom = 28.0
-grow_horizontal = 2
-grow_vertical = 2
-pivot_offset = Vector2(0, 41.5)
-theme_override_constants/separation = 20
-alignment = 1
-
-[node name="ItemSlot1" parent="Corpo/ItemRapido/Seletor/ItemBar/HBoxContainer" unique_id=1776023585 instance=ExtResource("3_7i7fj")]
-layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
-
-[node name="ItemSlot2" parent="Corpo/ItemRapido/Seletor/ItemBar/HBoxContainer" unique_id=1739646018 instance=ExtResource("3_7i7fj")]
-layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
+texture = ExtResource("4_gp2h7")
+expand_mode = 1
 
 [node name="Main" type="TextureRect" parent="Corpo" unique_id=40236132]
 layout_mode = 1
-offset_left = 20.0
-offset_top = 24.143318
-offset_right = 848.0
-offset_bottom = 277.77094
+offset_left = 10.0
+offset_top = 10.0
+offset_right = 794.0
+offset_bottom = 363.0
 scale = Vector2(0.5119974, 0.5119974)
 texture = ExtResource("2_f2wx0")
-expand_mode = 1
 
 [node name="MaskMagia" type="TextureRect" parent="Corpo/Main" unique_id=1708054420]
 clip_children = 2
-z_index = -1
 layout_mode = 0
-offset_left = 18.0
-offset_top = 16.0
-offset_right = 238.0
-offset_bottom = 236.0
+offset_left = 48.828373
+offset_top = 19.531357
+offset_right = 245.82837
+offset_bottom = 217.53136
 texture = ExtResource("5_2ptjp")
-expand_mode = 1
 
-[node name="BarraMiasma" type="ProgressBar" parent="Corpo/Main/MaskMagia" unique_id=121295913]
+[node name="BarraAgua" parent="Corpo/Main/MaskMagia" unique_id=1130310329 instance=ExtResource("7_kg6a8")]
 unique_name_in_owner = true
-visible = false
-custom_minimum_size = Vector2(150, 150)
 layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_styles/background = SubResource("StyleBoxEmpty_4n7mi")
-theme_override_styles/fill = SubResource("StyleBoxFlat_kg6a8")
-max_value = 5.0
-value = 4.0
-fill_mode = 3
-show_percentage = false
 
-[node name="BarraMagia" type="ProgressBar" parent="Corpo/Main/MaskMagia" unique_id=299614223]
-unique_name_in_owner = true
-visible = false
-custom_minimum_size = Vector2(150, 150)
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_styles/background = SubResource("StyleBoxFlat_kg6a8")
-theme_override_styles/fill = SubResource("StyleBoxFlat_ijstf")
-max_value = 5.0
-value = 4.0
-fill_mode = 3
-show_percentage = false
+[node name="MaskMiasma" type="TextureRect" parent="Corpo/Main" unique_id=1943924643]
+clip_children = 2
+layout_mode = 0
+offset_left = 21.484482
+offset_top = 212.8917
+offset_right = 140.48448
+offset_bottom = 331.8917
+texture = ExtResource("7_8ip7y")
 
-[node name="Separador" type="VScrollBar" parent="Corpo/Main/MaskMagia" unique_id=2062619275]
-unique_name_in_owner = true
-visible = false
-texture_filter = 1
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_top = 222.00255
-offset_bottom = 222.00256
-grow_horizontal = 2
-grow_vertical = 2
-scale = Vector2(1, -1)
-theme_override_styles/scroll = SubResource("StyleBoxEmpty_8ip7y")
-theme_override_styles/scroll_focus = SubResource("StyleBoxEmpty_likdy")
-theme_override_styles/grabber = SubResource("StyleBoxTexture_3yavs")
-theme_override_styles/grabber_highlight = SubResource("StyleBoxEmpty_sqq4o")
-theme_override_styles/grabber_pressed = SubResource("StyleBoxEmpty_exw07")
-max_value = 10.0
-
-[node name="BarraAgua" type="Control" parent="Corpo/Main/MaskMagia" unique_id=1372111527]
+[node name="BarraMiasma" type="Control" parent="Corpo/Main/MaskMiasma" unique_id=1389947873]
 unique_name_in_owner = true
 layout_mode = 1
 anchors_preset = 15
@@ -421,15 +323,15 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("8_lbtxw")
 
-[node name="Textura" type="TextureRect" parent="Corpo/Main/MaskMagia/BarraAgua" unique_id=1648461471]
+[node name="Textura" type="TextureRect" parent="Corpo/Main/MaskMiasma/BarraMiasma" unique_id=2115583060]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_bottom = 0.00018310547
 grow_horizontal = 2
 grow_vertical = 2
-texture = SubResource("AnimatedTexture_4hs1h")
+texture = SubResource("AnimatedTexture_rc7pm")
+expand_mode = 1
 
 [node name="BarraHeart" type="HBoxContainer" parent="Corpo/Main" unique_id=1811892292]
 unique_name_in_owner = true
@@ -440,20 +342,7 @@ offset_right = 835.9984
 offset_bottom = 203.96196
 scale = Vector2(0.85, 0.85)
 
-[node name="Moedas" type="TextureRect" parent="Corpo" unique_id=899026181]
-layout_mode = 1
-anchors_preset = 1
-anchor_left = 1.0
-anchor_right = 1.0
-offset_left = -1791.0
-offset_top = 190.0
-offset_right = -1674.1154
-offset_bottom = 229.0
-grow_horizontal = 0
-texture = ExtResource("4_uk570")
-expand_mode = 1
-
-[node name="CounterMoeda" type="Label" parent="Corpo/Moedas" unique_id=624115473]
+[node name="CounterMoeda" type="Label" parent="Corpo/Main" unique_id=624115473]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(160, 0)
 layout_mode = 1
@@ -462,10 +351,10 @@ anchor_left = 1.0
 anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 0.5
-offset_left = -118.88464
-offset_top = -23.5
-offset_right = 41.115356
-offset_bottom = 64.5
+offset_left = -614.0773
+offset_top = 87.17322
+offset_right = -430.63965
+offset_bottom = 175.17322
 grow_horizontal = 0
 grow_vertical = 2
 scale = Vector2(0.5, 0.5)

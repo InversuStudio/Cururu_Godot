@@ -79,8 +79,8 @@ func MudaImgInput() -> void:
 
 func _ready() -> void:
 	# Conecta sinais de mudança de valor
-	#GameData.connect("update_magia", UpdateMagia)
-	#GameData.connect("update_miasma", UpdateMiasma)
+	GameData.connect("update_magia", UpdateMagia)
+	GameData.connect("update_miasma", UpdateMiasma)
 	GameData.connect("update_vida_max", AdicionaCoracao)
 	GameData.connect("update_vida_atual", UpdateVida)
 	GameData.connect("update_moeda", UpdateMoeda)
@@ -155,18 +155,10 @@ func IniciaHUD() -> void:
 			i += 1
 		# Inicializa valores
 		%BarraAgua.tamanho = GameData.magia_max
-		%BarraAgua.valor = %BarraAgua.tamanho
-		%BarraAgua.last_val = %BarraAgua.valor
-		%BarraAgua.step = %BarraAgua.textura.size.y / %BarraAgua.tamanho
-		#%BarraAgua.tamanho = GameData.magia_max
-		#%BarraAgua.valor = GameData.magia_atual
-		#%BarraMagia.max_value = GameData.magia_max
-		#%BarraMagia.value = GameData.magia_atual
-		#%Separador.max_value = GameData.magia_max
-		#%Separador.value = GameData.magia_atual
-		
-		#%BarraMiasma.max_value = GameData.magia_max
-		#%BarraMiasma.value = 0.0
+		%BarraAgua.valor = GameData.magia_atual
+		%BarraMiasma.tamanho = GameData.magia_max
+		%BarraMiasma.valor = GameData.miasma
+
 		UpdateMoeda()
 		item_rapido.IniciaBarra()
 		# Marca como configurado
@@ -195,19 +187,10 @@ func AdicionaCoracao(old:int) -> void:
 		%BarraHeart.remove_child(child)
 	
 func UpdateMagia() -> void:
-	Console._Print("[color=cyan]MAGIA: %s[/color]" % [GameData.magia_atual])
-	var tween:Tween = get_tree().create_tween()
-	tween.tween_property(%BarraMagia,"value",GameData.magia_atual,.3).set_trans(
-		Tween.TRANS_CUBIC)
-	var t:Tween = get_tree().create_tween()
-	t.tween_property(%Separador,"value",GameData.magia_atual,.3).set_trans(
-		Tween.TRANS_CUBIC)
+	%BarraAgua.valor = GameData.magia_atual
 
 func UpdateMiasma() -> void:
-	Console._Print("MIASMA")
-	var tween:Tween = get_tree().create_tween()
-	tween.tween_property(%BarraMiasma,"value",GameData.miasma,.3).set_trans(
-		Tween.TRANS_CUBIC)
+	%BarraMiasma.valor = GameData.miasma
 
 func AvisoSave() -> void:
 	%Anim.play("JogoSalvo")

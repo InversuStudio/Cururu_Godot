@@ -50,7 +50,6 @@ func GetUiButtonImage(action: StringName) -> StringName:
 		for ie: InputEvent in comandos:
 			if ie is InputEventKey:
 				key = OS.get_keycode_string(ie.physical_keycode)
-				print(key)
 				break
 		result = "res://Sprites/UI/Botoes/TesteTeclado" + key + ".png"
 
