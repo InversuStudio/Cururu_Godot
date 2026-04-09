@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b1sv0car32gha"
-path="res://.godot/imported/arvore_S3.png-a8fb738b1321a2ebc0dbb9a4935d2f42.ctex"
+uid="uid://bg5g81j3jfixf"
+path="res://.godot/imported/M03.png-6e0da56e49dee93b82efd3b219c1ea2a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/arvore_S3.png"
-dest_files=["res://.godot/imported/arvore_S3.png-a8fb738b1321a2ebc0dbb9a4935d2f42.ctex"]
+source_file="res://Sprites/UI/HUD/M03.png"
+dest_files=["res://.godot/imported/M03.png-6e0da56e49dee93b82efd3b219c1ea2a.ctex"]
 
 [params]
 

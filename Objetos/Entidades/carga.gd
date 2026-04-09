@@ -14,6 +14,7 @@ func _ready() -> void:
 # COMPORTAMENTO AO ENTRAR NO STATE
 func Enter() -> void:
 	parent.input_move.x = 0.0
+	parent.velocity.x = 0.0
 	%Anim.play("Carga")
 	
 # COMPORTAMENTO AO SAIR DO STATE
