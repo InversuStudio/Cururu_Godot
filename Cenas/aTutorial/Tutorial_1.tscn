@@ -74,7 +74,7 @@
 [ext_resource type="Texture2D" uid="uid://cdoeovi1pkiyo" path="res://Sprites/Cenário/Mata_Atlantica/Interativos/amosatrra 2.png" id="53_idg5b"]
 [ext_resource type="PackedScene" uid="uid://1kp2cm82lp4b" path="res://Objetos/Props/arvoreacai.tscn" id="53_q2ysr"]
 [ext_resource type="AudioStream" uid="uid://b2vi4qav4gk5r" path="res://Audio/SFX/AMBIENTE/Cururu - Soundscape A.ogg" id="53_sje6b"]
-[ext_resource type="PackedScene" uid="uid://bnubkn7kxj708" path="res://Objetos/Funcionalidade/MostraTela.tscn" id="53_thr42"]
+[ext_resource type="PackedScene" path="res://Objetos/Funcionalidade/MostraTela.tscn" id="53_thr42"]
 [ext_resource type="PackedScene" uid="uid://dny88hy3w52nm" path="res://Objetos/Props/DropAcai.tscn" id="54_f5hdm"]
 [ext_resource type="Texture2D" uid="uid://daavc04bfrocb" path="res://Sprites/UI/Dialogo/DICA_VIDA.png" id="55_q2ysr"]
 [ext_resource type="Texture2D" uid="uid://bu66so2bkubke" path="res://Sprites/VFX/Iluminação/LightCururu2.png" id="55_sxmps"]
