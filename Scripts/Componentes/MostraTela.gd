@@ -26,8 +26,9 @@ func _ready() -> void:
 		UpdateInput()
 
 func UpdateInput() -> void:
-	texto.text = og_txt.replace(
-		"BTN", "[img]%s[/img]" % GameData.GetUiButtonImage(texto.name))
+	if texto:
+		texto.text = og_txt.replace(
+			"BTN", "[img]%s[/img]" % GameData.GetUiButtonImage(texto.name))
 
 func Extra(dentro:bool) -> void:
 	if tela == null: return
