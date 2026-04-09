@@ -43,6 +43,7 @@
 [ext_resource type="PackedScene" uid="uid://dy4duxmhynhha" path="res://Objetos/Props/Parede_Secreta.tscn" id="41_x273o"]
 [ext_resource type="Texture2D" uid="uid://61clqhtbc6ab" path="res://Sprites/Cenário/Tilemaps/Chao.png" id="42_qdnuj"]
 [ext_resource type="Texture2D" uid="uid://uq6dbjep5wva" path="res://Sprites/Cenário/Mata_Atlantica/Foreground/frontfolha.png" id="43_0tu4c"]
+[ext_resource type="PackedScene" uid="uid://bu62qgilsxetf" path="res://Objetos/Entidades/Escorpiao.tscn" id="43_ql26k"]
 [ext_resource type="Texture2D" uid="uid://c2yapafbd3cnf" path="res://Sprites/Cenário/Mata_Atlantica/Foreground/cipó.png" id="44_s6hji"]
 [ext_resource type="Script" uid="uid://dd16yu704x6wt" path="res://Scripts/Componentes/BGM_Player.gd" id="45_t66co"]
 [ext_resource type="AudioStream" uid="uid://c7qftchbhu6xc" path="res://Audio/SFX/AMBIENTE/Musica_Jogo.mp3" id="46_an2db"]
@@ -954,6 +955,9 @@ shape = SubResource("RectangleShape2D_yftf5")
 position = Vector2(106, -279)
 scale = Vector2(1, 2.4414063)
 texture = ExtResource("29_qprck")
+
+[node name="Escorpiao" parent="Background/0" unique_id=2146126591 instance=ExtResource("43_ql26k")]
+position = Vector2(-16888, -775.00006)
 
 [node name="Cururu" parent="Background/0" unique_id=1638125701 instance=ExtResource("30_est77")]
 z_index = 0

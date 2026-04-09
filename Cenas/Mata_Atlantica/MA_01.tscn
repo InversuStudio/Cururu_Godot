@@ -37,7 +37,11 @@
 [ext_resource type="Texture2D" uid="uid://bfdwnykeft6td" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/Arvoresv2/mata atlântica_0_20260313103733.PNG" id="22_x6mjr"]
 [ext_resource type="AudioStream" uid="uid://b18d40g67evyi" path="res://Audio/Musicas/Aparecimento do Saci.ogg" id="25_3saii"]
 [ext_resource type="AudioStream" uid="uid://b2vi4qav4gk5r" path="res://Audio/SFX/AMBIENTE/Cururu - Soundscape A.ogg" id="26_ogne8"]
+[ext_resource type="Shader" uid="uid://da2wxasx6evg0" path="res://Scripts/Shaders/Grama.gdshader" id="30_oidfv"]
+[ext_resource type="Texture2D" uid="uid://cdoeovi1pkiyo" path="res://Sprites/Cenário/Mata_Atlantica/Interativos/amosatrra 2.png" id="31_3elui"]
+[ext_resource type="FontFile" uid="uid://cmh0geo7e3aon" path="res://Dialogos/Font/MONTSERRAT-BLACK.TTF" id="32_8j1pq"]
 [ext_resource type="Texture2D" uid="uid://bu66so2bkubke" path="res://Sprites/VFX/Iluminação/LightCururu2.png" id="33_lmfyw"]
+[ext_resource type="Texture2D" uid="uid://5l3wvmvbv06n" path="res://Sprites/UI/Dialogo/DICA_MIASMA.png" id="33_oidfv"]
 [ext_resource type="Texture2D" uid="uid://tc6hgl2fcsgs" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/Arvoresv2/4F43B61C-F17B-4C53-964C-4949229B536C.PNG" id="33_ywd7t"]
 [ext_resource type="Texture2D" uid="uid://ctexd1uqvvg2e" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/Arvoresv2/3E92CD98-C4C7-4426-A0A0-7D548CBC2FB5.PNG" id="34_ro4nb"]
 [ext_resource type="Texture2D" uid="uid://cog3cwpoyrm4m" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/Arvoresv2/mata atlântica_0_20260313103917.PNG" id="34_uaoi8"]
@@ -45,7 +49,7 @@
 [ext_resource type="Texture2D" uid="uid://c7ftx4tv020y8" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/Arvoresv2/mata atlântica_0_20260313104055.PNG" id="36_sqp07"]
 [ext_resource type="Texture2D" uid="uid://b2h3fql3vsmes" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/Arvoresv2/A726E68F-D2E6-4926-9FEC-593D04D02A5F.PNG" id="37_2nacr"]
 [ext_resource type="Texture2D" uid="uid://qnmudd1gsvwa" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/Arvoresv2/9E7FA84B-693E-43FC-9618-BDAB20CEADC9.PNG" id="38_gto7e"]
-[ext_resource type="PackedScene" uid="uid://bnubkn7kxj708" path="res://Objetos/Funcionalidade/MostraTela.tscn" id="42_x6mjr"]
+[ext_resource type="PackedScene" path="res://Objetos/Funcionalidade/MostraTela.tscn" id="42_x6mjr"]
 [ext_resource type="Texture2D" uid="uid://b4mpyxtqe3pwu" path="res://Sprites/UI/Dialogo/INTERAGIR.png" id="43_ywd7t"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_qfxhu"]
@@ -69,6 +73,21 @@ shader_parameter/fog_color = Color(0.47058824, 0.7411765, 0.54901963, 0.43529412
 shader_parameter/density = 0.5
 shader_parameter/speed = 0.3
 shader_parameter/scale = 4.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_oaclk"]
+shader = ExtResource("30_oidfv")
+shader_parameter/speed = 1.5
+shader_parameter/minStrength = 0.10000000475
+shader_parameter/maxStrength = 0.30000001425
+shader_parameter/strengthScale = 80.0
+shader_parameter/interval = 2.0
+shader_parameter/detail = 1.0
+shader_parameter/heightOffset = 0.0
+shader_parameter/flip_wind = false
+shader_parameter/offset = 0.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_oidfv"]
+size = Vector2(256, 78)
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_b8vbg"]
 shader = ExtResource("12_6k000")
@@ -435,6 +454,36 @@ position = Vector2(7235, -4484)
 [node name="NPC-Basico" parent="0" unique_id=643951544 instance=ExtResource("2_mtufu")]
 position = Vector2(8334, -4607)
 
+[node name="Amosatrra2" type="Sprite2D" parent="0" unique_id=1002542859]
+material = SubResource("ShaderMaterial_oaclk")
+position = Vector2(6139.099, -4675)
+scale = Vector2(0.43574032, 0.43574017)
+texture = ExtResource("31_3elui")
+
+[node name="MostraTela" parent="0" unique_id=976943619 instance=ExtResource("42_x6mjr")]
+position = Vector2(6129.099, -4516)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="0/MostraTela" unique_id=220499846]
+position = Vector2(1, 0)
+shape = SubResource("RectangleShape2D_oidfv")
+
+[node name="DicaVida" type="Sprite2D" parent="0/MostraTela" unique_id=1886788873]
+position = Vector2(3.9999995, -290)
+scale = Vector2(0.8112688, 0.8112685)
+texture = ExtResource("33_oidfv")
+
+[node name="charge" type="RichTextLabel" parent="0/MostraTela/DicaVida" unique_id=248065936]
+offset_left = -270.24762
+offset_top = -46.373875
+offset_right = 277.44354
+offset_bottom = 72.75906
+theme_override_fonts/normal_font = ExtResource("32_8j1pq")
+theme_override_font_sizes/normal_font_size = 25
+bbcode_enabled = true
+text = "Aperte BTN para converter energia MIASMA em ÁGUA LUNAR."
+horizontal_alignment = 1
+vertical_alignment = 1
+
 [node name="Cururu" parent="0" unique_id=1093154945 instance=ExtResource("3_2e63t")]
 z_index = 0
 position = Vector2(5489, -4468.9995)
@@ -723,7 +772,7 @@ scale = Vector2(0.5, 0.5)
 texture = ExtResource("33_ywd7t")
 flip_h = true
 
-[node name="MostraTela" parent="2" unique_id=976943619 instance=ExtResource("42_x6mjr")]
+[node name="MostraTela" parent="2" unique_id=942020243 instance=ExtResource("42_x6mjr")]
 position = Vector2(8238.096, -4513.3335)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="2/MostraTela" unique_id=516313010]

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://buxjb8khrvcm7"
-path="res://.godot/imported/WALLJUMP.png-45062312e1853a43a5a7e6f869e11947.ctex"
+uid="uid://5l3wvmvbv06n"
+path="res://.godot/imported/DICA_MIASMA.png-f77a6596ea5f8a834d10c812c73079c6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Cururu/walljump/WALLJUMP.png"
-dest_files=["res://.godot/imported/WALLJUMP.png-45062312e1853a43a5a7e6f869e11947.ctex"]
+source_file="res://Sprites/UI/Dialogo/DICA_MIASMA.png"
+dest_files=["res://.godot/imported/DICA_MIASMA.png-f77a6596ea5f8a834d10c812c73079c6.ctex"]
 
 [params]
 
