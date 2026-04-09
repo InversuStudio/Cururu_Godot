@@ -9,7 +9,6 @@
 [ext_resource type="Texture2D" uid="uid://cvqtebi0mysss" path="res://Sprites/Cenário/Miasma/Porta de Miasma/Gota/04.png" id="6_0ndyp"]
 [ext_resource type="Texture2D" uid="uid://qspwcph34t1n" path="res://Sprites/Cenário/Miasma/Porta de Miasma/Gota/05.png" id="7_oqtdq"]
 [ext_resource type="Texture2D" uid="uid://bxcm3ujrllyus" path="res://Sprites/Cenário/Miasma/Porta de Miasma/Gota/06.png" id="8_yidb2"]
-[ext_resource type="Texture2D" uid="uid://sblgmrpwuk4q" path="res://Sprites/Cenário/Miasma/Porta de Miasma/Gota/07.png" id="9_m43p6"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_wgkwy"]
 animations = [{
@@ -31,9 +30,6 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": ExtResource("8_yidb2")
-}, {
-"duration": 1.0,
-"texture": ExtResource("9_m43p6")
 }],
 "loop": false,
 "name": &"default",
@@ -45,10 +41,12 @@ script = ExtResource("1_2yl68")
 cena_gota = ExtResource("2_wgkwy")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=835389273]
-position = Vector2(0, 76)
+position = Vector2(0, 40)
 scale = Vector2(0.5, 0.5)
 sprite_frames = SubResource("SpriteFrames_wgkwy")
 autoplay = "default"
+frame = 4
+frame_progress = 1.0
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=2113022082]
 position = Vector2(0, -1)
@@ -56,6 +54,6 @@ rotation = -3.1415925
 texture = ExtResource("3_wgkwy")
 
 [node name="Marker2D" type="Marker2D" parent="." unique_id=1491738578]
-position = Vector2(0, 60)
+position = Vector2(3, 73)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1098321955]
