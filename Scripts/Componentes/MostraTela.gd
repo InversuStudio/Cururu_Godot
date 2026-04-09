@@ -17,6 +17,9 @@ func _ready() -> void:
 	if tela:
 		tela.modulate = Color.TRANSPARENT
 	if texto:
+		var path = GameData.GetUiButtonImage("dash")
+		print("PATH DASH: ", path)
+		print("TIPO INPUT: ", GameData.tipo_input)
 		texto.text = texto.text.replace(
 			"BTN", "[img]%s[/img]" % GameData.GetUiButtonImage(texto.name))
 

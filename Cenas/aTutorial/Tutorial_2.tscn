@@ -21,7 +21,7 @@
 [ext_resource type="PackedScene" uid="uid://bjvnm0aydr0vd" path="res://Objetos/Entidades/Morcego.tscn" id="6_p37rg"]
 [ext_resource type="Texture2D" uid="uid://jecy4bfqqqxu" path="res://Sprites/Cenário/Mata_Atlantica/Teto/Moita teste.png" id="7_4sgns"]
 [ext_resource type="Texture2D" uid="uid://uq6dbjep5wva" path="res://Sprites/Cenário/Mata_Atlantica/Foreground/frontfolha.png" id="8_646f2"]
-[ext_resource type="Texture2D" uid="uid://b1sv0car32gha" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/arvore_S3.png" id="8_vw1s4"]
+[ext_resource type="Texture2D" uid="uid://b1sv0car32gha" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/arvore_s3.png" id="8_vw1s4"]
 [ext_resource type="Texture2D" uid="uid://i664886fdh55" path="res://Sprites/Cenário/Mata_Atlantica/Background/Mata/mato02.png" id="9_oteog"]
 [ext_resource type="Texture2D" uid="uid://cs5tclcq8xish" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/arvore_S2.png" id="9_s0t4j"]
 [ext_resource type="Texture2D" uid="uid://ra1w5d2v3tvw" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/Arvoresv2/6C28BC06-A7DE-492B-A767-7D7C3B85A403.png" id="10_3oehb"]
@@ -67,7 +67,7 @@
 [ext_resource type="PackedScene" uid="uid://u48tpl3f3l20" path="res://Objetos/Props/DropGuarana.tscn" id="47_2evx6"]
 [ext_resource type="Texture2D" uid="uid://bu66so2bkubke" path="res://Sprites/VFX/Iluminação/LightCururu2.png" id="49_qwwy8"]
 [ext_resource type="Texture2D" uid="uid://cdoeovi1pkiyo" path="res://Sprites/Cenário/Mata_Atlantica/Interativos/amosatrra 2.png" id="50_aue61"]
-[ext_resource type="PackedScene" path="res://Objetos/Funcionalidade/MostraTela.tscn" id="51_dp1o5"]
+[ext_resource type="PackedScene" uid="uid://bnubkn7kxj708" path="res://Objetos/Funcionalidade/MostraTela.tscn" id="51_dp1o5"]
 [ext_resource type="Texture2D" uid="uid://dkp1wy5dw5idu" path="res://Sprites/UI/Dialogo/DICA_DASH.png" id="52_dp1o5"]
 [ext_resource type="FontFile" uid="uid://cmh0geo7e3aon" path="res://Dialogos/Font/MONTSERRAT-BLACK.TTF" id="55_2evx6"]
 [ext_resource type="Texture2D" uid="uid://cxa4pl0scvs5k" path="res://Sprites/VFX/Partículas/folhastx.png" id="56_hmpv4"]
@@ -1084,14 +1084,14 @@ scale = Vector2(1.4250228, 1.4250227)
 texture = ExtResource("52_dp1o5")
 
 [node name="dash" type="RichTextLabel" parent="Background2/0/MostraTela/DicaDash" unique_id=1392621397]
-offset_left = -267.28125
+offset_left = -268.3125
 offset_top = -31.99121
-offset_right = 259.0254
+offset_right = 257.99414
 offset_bottom = 100.10205
 theme_override_fonts/normal_font = ExtResource("55_2evx6")
 theme_override_font_sizes/normal_font_size = 28
 bbcode_enabled = true
-text = "Aperte BNT no CHÃO ou AR para alcançar lugares distantes."
+text = "Aperte BTN no CHÃO ou AR para alcançar lugares distantes."
 horizontal_alignment = 1
 vertical_alignment = 1
 

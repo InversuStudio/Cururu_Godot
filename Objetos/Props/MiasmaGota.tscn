@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://cr0f7c8aqji57"]
 
 [ext_resource type="Script" uid="uid://dnpoiernmavtn" path="res://Scripts/Componentes/miasma_gota.gd" id="1_n73oq"]
-[ext_resource type="Texture2D" uid="uid://c3tl3oddronfh" path="res://icon.svg" id="2_mmskc"]
+[ext_resource type="Texture2D" uid="uid://sblgmrpwuk4q" path="res://Sprites/Cenário/Miasma/Porta de Miasma/Gota/07.png" id="2_n73oq"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_i580p"]
 radius = 48.259712
@@ -15,8 +15,9 @@ script = ExtResource("1_n73oq")
 shape = SubResource("CircleShape2D_i580p")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=2087247784]
+position = Vector2(-2, -32)
 scale = Vector2(0.5, 0.5)
-texture = ExtResource("2_mmskc")
+texture = ExtResource("2_n73oq")
 
 [connection signal="area_entered" from="." to="." method="_on_area_entered"]
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

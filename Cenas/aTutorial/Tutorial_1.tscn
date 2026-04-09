@@ -8,7 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://i664886fdh55" path="res://Sprites/Cenário/Mata_Atlantica/Background/Mata/mato02.png" id="7_jiro2"]
 [ext_resource type="Texture2D" uid="uid://ra1w5d2v3tvw" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/Arvoresv2/6C28BC06-A7DE-492B-A767-7D7C3B85A403.png" id="7_u3noq"]
 [ext_resource type="Texture2D" uid="uid://d075kid4ojh6b" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/Arvoresv2/4D8D492A-1F01-4367-A06E-660443F32612.PNG" id="8_e0yg5"]
-[ext_resource type="Texture2D" uid="uid://b1sv0car32gha" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/arvore_S3.png" id="8_khsix"]
+[ext_resource type="Texture2D" uid="uid://b1sv0car32gha" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/arvore_s3.png" id="8_khsix"]
 [ext_resource type="Texture2D" uid="uid://d18vqjeq586b1" path="res://Sprites/Cenário/Mata_Atlantica/Pedras e Ruinas/pedra_musgo.png" id="9_akk5h"]
 [ext_resource type="Shader" uid="uid://da2wxasx6evg0" path="res://Scripts/Shaders/Grama.gdshader" id="10_hxoyl"]
 [ext_resource type="Texture2D" uid="uid://yrshunpt0tr8" path="res://Sprites/Cenário/Mata_Atlantica/Background/Mata/mato01.png" id="11_ho4ux"]
@@ -74,12 +74,11 @@
 [ext_resource type="Texture2D" uid="uid://cdoeovi1pkiyo" path="res://Sprites/Cenário/Mata_Atlantica/Interativos/amosatrra 2.png" id="53_idg5b"]
 [ext_resource type="PackedScene" uid="uid://1kp2cm82lp4b" path="res://Objetos/Props/arvoreacai.tscn" id="53_q2ysr"]
 [ext_resource type="AudioStream" uid="uid://b2vi4qav4gk5r" path="res://Audio/SFX/AMBIENTE/Cururu - Soundscape A.ogg" id="53_sje6b"]
-[ext_resource type="PackedScene" path="res://Objetos/Funcionalidade/MostraTela.tscn" id="53_thr42"]
+[ext_resource type="PackedScene" uid="uid://bnubkn7kxj708" path="res://Objetos/Funcionalidade/MostraTela.tscn" id="53_thr42"]
 [ext_resource type="PackedScene" uid="uid://dny88hy3w52nm" path="res://Objetos/Props/DropAcai.tscn" id="54_f5hdm"]
 [ext_resource type="Texture2D" uid="uid://daavc04bfrocb" path="res://Sprites/UI/Dialogo/DICA_VIDA.png" id="55_q2ysr"]
 [ext_resource type="Texture2D" uid="uid://bu66so2bkubke" path="res://Sprites/VFX/Iluminação/LightCururu2.png" id="55_sxmps"]
 [ext_resource type="FontFile" uid="uid://cmh0geo7e3aon" path="res://Dialogos/Font/MONTSERRAT-BLACK.TTF" id="56_q2ysr"]
-[ext_resource type="Texture2D" uid="uid://bnnb7jjjothj3" path="res://Sprites/UI/Dialogo/ATACAR.png" id="76_ytcj4"]
 [ext_resource type="PackedScene" uid="uid://c6hglvets6hgp" path="res://Objetos/Funcionalidade/OtimizadorCena.tscn" id="80_thr42"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_ny35b"]
@@ -1725,15 +1724,13 @@ position = Vector2(-3.5, -3)
 shape = SubResource("RectangleShape2D_q2ysr")
 
 [node name="Atacar" type="Sprite2D" parent="2/MostraTela2" unique_id=1239265285]
-visible = false
 position = Vector2(1, 189)
-texture = ExtResource("76_ytcj4")
 
-[node name="melee" type="RichTextLabel" parent="2/MostraTela2" unique_id=584970901]
-offset_left = -163.61888
-offset_top = 143.09523
-offset_right = 194.47633
-offset_bottom = 267.85712
+[node name="melee" type="RichTextLabel" parent="2/MostraTela2/Atacar" unique_id=584970901]
+offset_left = -164.6189
+offset_top = -45.904785
+offset_right = 193.47632
+offset_bottom = 78.8571
 theme_override_fonts/normal_font = ExtResource("56_q2ysr")
 theme_override_font_sizes/normal_font_size = 46
 bbcode_enabled = true
@@ -1767,7 +1764,7 @@ musica = ExtResource("53_sje6b")
 metadata/_custom_type_script = "uid://dd16yu704x6wt"
 
 [node name="OtimizadorCena" parent="." unique_id=728809620 node_paths=PackedStringArray("targets") instance=ExtResource("80_thr42")]
-position = Vector2(8408, -1133)
+position = Vector2(8503, -1175)
 scale = Vector2(0.60846597, 0.6084661)
 rect = Rect2(-14872.923, -3315.5972, 17156.26, 4261.5356)
 targets = [NodePath("../2/Foreground"), NodePath("../1/Teto"), NodePath("../-02/ArvoresFrente"), NodePath("../-05/cenario01"), NodePath("../-1/cenario02"), NodePath("../-15/cenario03"), NodePath("../-2/Arvores03")]

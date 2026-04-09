@@ -10,7 +10,7 @@ var saci_falou:bool = false
 var naia_falou:bool = false
 
 # Armazena se está usando teclado ou controller
-# 0 = Mouse/Teclado | 1 = Controller
+# 0 = Mouse/Teclado | 1 = Xbox | 2 = PlayStation | 3 = Nintendo
 var tipo_input:int = 0
 
 func _input(event: InputEvent) -> void:
@@ -24,26 +24,35 @@ func _input(event: InputEvent) -> void:
 			Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 			
 		elif event is InputEventJoypadButton or event is InputEventJoypadMotion:
-			tipo_input = 1
+			tipo_input = DetectControllerType()
 			Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 
-func GetUiButtonImage(action:StringName) -> StringName:
-	var result:StringName = ""
-	var comandos:Array = InputMap.action_get_events(action)
-	
-	if tipo_input < 1:
-		var key:String = ""
-		for ie:InputEvent in comandos:
+func DetectControllerType() -> int:
+	var nome: String = Input.get_joy_name(0).to_lower()
+	if "xbox" in nome or "xinput" in nome or "microsoft" in nome:
+		return 1
+	elif "playstation" in nome or "dualshock" in nome or "dualsense" in nome or "sony" in nome:
+		return 2
+	elif "nintendo" in nome or "switch" in nome or "joy-con" in nome:
+		return 3
+	return 1  # fallback: Xbox como padrão
+
+func GetUiButtonImage(action: StringName) -> StringName:
+	var result: StringName = ""
+	var comandos: Array = InputMap.action_get_events(action)
+
+	if tipo_input == 0:
+		var key: String = ""
+		for ie: InputEvent in comandos:
 			if ie is InputEventKey:
 				key = OS.get_keycode_string(ie.physical_keycode)
 				break
-				
 		result = "res://Sprites/UI/Botoes/TesteTeclado" + key + ".png"
-		
+
 	else:
-		var botao:int = 0
-		var is_axis:bool = false
-		for ie:InputEvent in comandos:
+		var botao: int = 0
+		var is_axis: bool = false
+		for ie: InputEvent in comandos:
 			if ie is InputEventJoypadButton:
 				botao = ie.button_index
 				break
@@ -51,19 +60,38 @@ func GetUiButtonImage(action:StringName) -> StringName:
 				botao = ie.axis
 				is_axis = true
 				break
-		
+
+		var prefixo: String = "Xbox"
+		match tipo_input:
+			2: prefixo = "PS"
+			3: prefixo = "Nintendo"
+
 		if is_axis:
 			match botao:
-				4:
-					result = "res://Sprites/UI/Botoes/TesteInputXboxLT.png"
+				4: result = "res://Sprites/UI/Botoes/TesteInput%sLT.png" % prefixo
 		else:
 			match botao:
-				0:
-					result = "res://Sprites/UI/Botoes/TesteInputXboxA.png"
-				1: 
-					result = "res://Sprites/UI/Botoes/TesteInputXboxB.png"
-		
-	# retorna [imagem_path, tecla]
+				JOY_BUTTON_A:
+					match tipo_input:
+						1: result = "res://Sprites/UI/Botoes/TesteInputXboxA.png"
+						2: result = "res://Sprites/UI/Botoes/TesteInputPSX.png"
+						3: result = "res://Sprites/UI/Botoes/TesteInputNintendoB.png"
+				JOY_BUTTON_B:
+					match tipo_input:
+						1: result = "res://Sprites/UI/Botoes/TesteInputXboxB.png"
+						2: result = "res://Sprites/UI/Botoes/TesteInputPSC.png"
+						3: result = "res://Sprites/UI/Botoes/TesteInputNintendoA.png"
+				JOY_BUTTON_X:
+					match tipo_input:
+						1: result = "res://Sprites/UI/Botoes/TesteInputXboxX.png"
+						2: result = "res://Sprites/UI/Botoes/TesteInputPSQ.png"
+						3: result = "res://Sprites/UI/Botoes/TesteInputNintendoY.png"
+				JOY_BUTTON_Y:
+					match tipo_input:
+						1: result = "res://Sprites/UI/Botoes/TesteInputXboxY.png"
+						2: result = "res://Sprites/UI/Botoes/TesteInputPST.png"
+						3: result = "res://Sprites/UI/Botoes/TesteInputNintendoX.png"
+
 	return result
 
 # Armazena a posição inicial do player

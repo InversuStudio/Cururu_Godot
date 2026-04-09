@@ -1,7 +1,7 @@
 extends Node2D
 
 ## Intervalo entre gotas em segundos
-@export var intervalo: float = 3.0
+@export var intervalo: float = 2
 ## Cena da gota a ser spawnada
 @export var cena_gota: PackedScene = null
 

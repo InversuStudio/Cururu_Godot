@@ -1,16 +1,61 @@
 [gd_scene format=3 uid="uid://bvijejxbeiu45"]
 
-[ext_resource type="Texture2D" uid="uid://c3tl3oddronfh" path="res://icon.svg" id="1_2a3at"]
 [ext_resource type="Script" uid="uid://bu7pk5veav6gb" path="res://Scripts/Componentes/miasma_goteira.gd" id="1_2yl68"]
 [ext_resource type="PackedScene" uid="uid://cr0f7c8aqji57" path="res://Objetos/Props/MiasmaGota.tscn" id="2_wgkwy"]
+[ext_resource type="Texture2D" uid="uid://bp04ya4bqgak2" path="res://Sprites/Cenário/Miasma/Porta de Miasma/Gota/01.png" id="3_qruoh"]
+[ext_resource type="Texture2D" uid="uid://cry1d2tvkctu1" path="res://Sprites/Cenário/Miasma/miasma_chao02.png" id="3_wgkwy"]
+[ext_resource type="Texture2D" uid="uid://c7cv65equ7435" path="res://Sprites/Cenário/Miasma/Porta de Miasma/Gota/02.png" id="4_luwgf"]
+[ext_resource type="Texture2D" uid="uid://cdp60kstqx0nc" path="res://Sprites/Cenário/Miasma/Porta de Miasma/Gota/03.png" id="5_xpu06"]
+[ext_resource type="Texture2D" uid="uid://cvqtebi0mysss" path="res://Sprites/Cenário/Miasma/Porta de Miasma/Gota/04.png" id="6_0ndyp"]
+[ext_resource type="Texture2D" uid="uid://qspwcph34t1n" path="res://Sprites/Cenário/Miasma/Porta de Miasma/Gota/05.png" id="7_oqtdq"]
+[ext_resource type="Texture2D" uid="uid://bxcm3ujrllyus" path="res://Sprites/Cenário/Miasma/Porta de Miasma/Gota/06.png" id="8_yidb2"]
+[ext_resource type="Texture2D" uid="uid://sblgmrpwuk4q" path="res://Sprites/Cenário/Miasma/Porta de Miasma/Gota/07.png" id="9_m43p6"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_wgkwy"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_qruoh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_luwgf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_xpu06")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_0ndyp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_oqtdq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_yidb2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_m43p6")
+}],
+"loop": false,
+"name": &"default",
+"speed": 12.0
+}]
 
 [node name="MiasmaGoteira" type="Node2D" unique_id=500610219]
 script = ExtResource("1_2yl68")
 cena_gota = ExtResource("2_wgkwy")
 
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=835389273]
+position = Vector2(0, 76)
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_wgkwy")
+autoplay = "default"
+
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=2113022082]
-scale = Vector2(2.1, 0.6)
-texture = ExtResource("1_2a3at")
+position = Vector2(0, -1)
+rotation = -3.1415925
+texture = ExtResource("3_wgkwy")
 
 [node name="Marker2D" type="Marker2D" parent="." unique_id=1491738578]
-position = Vector2(0, 38)
+position = Vector2(0, 60)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1098321955]

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cfngcrhepgqik"
-path="res://.godot/imported/TesteInputXboxL2.png-6453b921306ed97e5bd3e292afa5ff37.ctex"
+uid="uid://do2muhubqb14v"
+path="res://.godot/imported/TesteInputPSRB.png-ffcf2cca375ca198581014a01cea8e37.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/UI/Botoes/TesteInputXboxL2.png"
-dest_files=["res://.godot/imported/TesteInputXboxL2.png-6453b921306ed97e5bd3e292afa5ff37.ctex"]
+source_file="res://Sprites/UI/Botoes/TesteInputPSRB.png"
+dest_files=["res://.godot/imported/TesteInputPSRB.png-ffcf2cca375ca198581014a01cea8e37.ctex"]
 
 [params]
 
