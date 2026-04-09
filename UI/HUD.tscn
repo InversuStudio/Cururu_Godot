@@ -3,7 +3,6 @@
 [ext_resource type="Script" uid="uid://dg1wm8v16vrwl" path="res://Scripts/Componentes/HUD.gd" id="1_yixhe"]
 [ext_resource type="Texture2D" uid="uid://dbohcm7v5pvg4" path="res://Sprites/UI/HUD/Barra_Vida/UIHUD-MAGIA.png" id="2_f2wx0"]
 [ext_resource type="Script" uid="uid://ded3gd0hff7e6" path="res://Scripts/ItemRápido/ItemRápido.gd" id="2_md4fy"]
-[ext_resource type="Texture2D" uid="uid://brlkj1uhui4fn" path="res://Sprites/UI/Botoes/TesteInputXboxRB.png" id="4_gp2h7"]
 [ext_resource type="Texture2D" uid="uid://dnhrdntc80h37" path="res://Sprites/UI/HUD/Menu_Rapido/UIHUD - SELETOR DE ITEM.png" id="4_rbci0"]
 [ext_resource type="Texture2D" uid="uid://8tc3pgq3fdi8" path="res://Sprites/UI/HUD/Barra_Vida/UIHUD-MAGIABK.png" id="5_2ptjp"]
 [ext_resource type="PackedScene" uid="uid://kuarj30f8veq" path="res://UI/Inventario.tscn" id="5_f2wx0"]
@@ -216,29 +215,27 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_8ip7y")
 process_mode = 1
 layout_mode = 1
 anchors_preset = 0
-offset_left = 62.0
-offset_top = 197.0
-offset_right = 102.0
-offset_bottom = 237.0
+offset_right = 40.0
+offset_bottom = 40.0
 script = ExtResource("2_md4fy")
 cena_inventario = NodePath("../Pause/BG/ContainerMenus/Inventario")
 
 [node name="Seletor" type="TextureRect" parent="Corpo/ItemRapido" unique_id=106487821]
+clip_children = 2
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -38.0
-offset_top = -34.0
-offset_right = 66.0
-offset_bottom = 67.0
+offset_left = 68.0
+offset_top = 211.0
+offset_right = 201.0
+offset_bottom = 333.0
 grow_horizontal = 2
 grow_vertical = 2
+scale = Vector2(0.7, 0.7)
 texture = ExtResource("4_rbci0")
-expand_mode = 1
-stretch_mode = 5
 
 [node name="NumRap" type="Label" parent="Corpo/ItemRapido/Seletor" unique_id=185213856]
 unique_name_in_owner = true
@@ -248,13 +245,16 @@ anchor_left = 0.85400003
 anchor_top = 0.67700005
 anchor_right = 0.85400003
 anchor_bottom = 0.67700005
-offset_left = -8.816002
-offset_top = -12.877007
-offset_right = 9.183998
-offset_bottom = 10.122993
+offset_left = -110.72485
+offset_top = -12.594017
+offset_right = -69.296295
+offset_bottom = 30.26313
 grow_horizontal = 0
 grow_vertical = 2
+theme_override_fonts/font = ExtResource("8_kg6a8")
+theme_override_font_sizes/font_size = 20
 horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="IconItem" type="TextureRect" parent="Corpo/ItemRapido/Seletor" unique_id=1111159519]
 unique_name_in_owner = true
@@ -265,21 +265,12 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -39.0
-offset_top = -36.0
-offset_right = 31.0
-offset_bottom = 24.0
+offset_left = -36.5
+offset_top = -35.0
+offset_right = 47.5
+offset_bottom = 37.0
 grow_horizontal = 2
 grow_vertical = 2
-expand_mode = 1
-
-[node name="TextureRect" type="TextureRect" parent="Corpo/ItemRapido/Seletor" unique_id=1250515157]
-layout_mode = 0
-offset_left = 74.0
-offset_top = 17.0
-offset_right = 93.44186
-offset_bottom = 28.0
-texture = ExtResource("4_gp2h7")
 expand_mode = 1
 
 [node name="Main" type="TextureRect" parent="Corpo" unique_id=40236132]
@@ -288,16 +279,16 @@ offset_left = 10.0
 offset_top = 10.0
 offset_right = 794.0
 offset_bottom = 363.0
-scale = Vector2(0.5119974, 0.5119974)
+scale = Vector2(0.7, 0.7)
 texture = ExtResource("2_f2wx0")
 
 [node name="MaskMagia" type="TextureRect" parent="Corpo/Main" unique_id=1708054420]
 clip_children = 2
 layout_mode = 0
-offset_left = 48.828373
-offset_top = 19.531357
-offset_right = 245.82837
-offset_bottom = 217.53136
+offset_left = 52.0
+offset_top = 23.0
+offset_right = 243.0
+offset_bottom = 215.0
 texture = ExtResource("5_2ptjp")
 
 [node name="BarraAgua" parent="Corpo/Main/MaskMagia" unique_id=1130310329 instance=ExtResource("7_kg6a8")]
@@ -307,10 +298,10 @@ layout_mode = 1
 [node name="MaskMiasma" type="TextureRect" parent="Corpo/Main" unique_id=1943924643]
 clip_children = 2
 layout_mode = 0
-offset_left = 21.484482
-offset_top = 212.8917
-offset_right = 140.48448
-offset_bottom = 331.8917
+offset_left = 23.0
+offset_top = 217.0
+offset_right = 136.0
+offset_bottom = 330.0
 texture = ExtResource("7_8ip7y")
 
 [node name="BarraMiasma" type="Control" parent="Corpo/Main/MaskMiasma" unique_id=1389947873]
@@ -328,6 +319,8 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_top = 3.0
+offset_bottom = 3.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = SubResource("AnimatedTexture_rc7pm")
@@ -358,6 +351,7 @@ offset_bottom = 175.17322
 grow_horizontal = 0
 grow_vertical = 2
 scale = Vector2(0.5, 0.5)
+theme_override_fonts/font = ExtResource("8_kg6a8")
 theme_override_font_sizes/font_size = 8
 text = "0"
 label_settings = SubResource("LabelSettings_yixhe")
