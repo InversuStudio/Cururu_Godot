@@ -34,18 +34,17 @@ func _on_area_entered(area: Area2D) -> void:
 			fx = vfx.instantiate()
 			fx.global_position = area.get_child(0).global_position
 			parent.get_parent().add_child(fx)
-			if fx is GPUParticles2D: fx.restart()
+			if fx is GPUParticles2D:
+				fx.finished.connect(fx.queue_free)
+				fx.restart()
+			elif fx is AnimatedSprite2D:
+				fx.animation_finished.connect(fx.queue_free)
 		Mundos.HitFreeze(hit_freeze)
 		if get_tree().get_first_node_in_group("MainCamera"):
 			get_tree().get_first_node_in_group("MainCamera").Shake(camera_shake)
 		# Toca som
 		if sfx:
 			$SFX.play()
-		
-		if fx:
-			if fx is GPUParticles2D: await fx.finished
-			elif fx is AnimatedSprite2D: await fx.animation_finished
-			fx.queue_free()
 
 func CalcPushback(dist:float, time:float, pos_target:Vector2) -> void:
 	# Define direção do knockback
