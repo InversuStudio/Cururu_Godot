@@ -17,7 +17,8 @@ func _ready() -> void:
 		if %IconItem.texture == null:
 			await get_tree().physics_frame
 			%IconItem.texture = cena_inventario.PegaSprite(0)
-		%NumRap.text = str(Inventario.inventario[id_item][1]))
+		if Inventario.inventario.size() > 0:
+			%NumRap.text = str(Inventario.inventario[id_item][1]))
 
 func _input(_event: InputEvent) -> void:
 	if Input.is_action_just_pressed("bumper_direito"):

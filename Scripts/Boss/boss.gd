@@ -80,9 +80,10 @@ func _ready() -> void:
 	
 	# Sinais de vida
 	%VidaBoss.connect("alterou_vida", TomouDano)
-	%VidaMCabeca.connect("alterou_vida", func(atual:int, _old:int):
-		ArmorDano()
-		if atual <= 0:
+	#%VidaMCabeca.connect("alterou_vida", func(atual:int, _old:int):
+	%HurtCabeca.connect("hurt", func(h:Array[HitBox]) -> void:
+		ArmorDano(%VidaMCabeca, h)
+		if %VidaMCabeca.vida_atual <= 0:
 			#Esconde sprite armadura
 			#%HurtCabeca.set_deferred("monitorable", false)
 			%HurtCabeca.comp_vida = %VidaBoss
@@ -91,9 +92,10 @@ func _ready() -> void:
 			%SpriteCabeca.hide()
 			ChecaArmor()
 	)
-	%VidaMCorpo.connect("alterou_vida", func(atual:int, _old:int):
-		ArmorDano()
-		if atual <= 0:
+	#%VidaMCorpo.connect("alterou_vida", func(atual:int, _old:int):
+	%HurtCorpo.connect("hurt", func(h:Array[HitBox]) -> void:
+		ArmorDano(%VidaMCorpo, h)
+		if %VidaMCorpo.vida_atual <= 0:
 			#Esconde sprite armadura
 			#%HurtCorpo.set_deferred("monitorable", false)
 			%HurtCorpo.comp_vida = %VidaBoss
@@ -144,7 +146,10 @@ func TomouDano(vida_atual:int, _vida_antiga:int) -> void:
 	await get_tree().create_timer(.2).timeout
 	%SpriteMain.material.set_shader_parameter("valor", 0.0)
 
-func ArmorDano() -> void:
+func ArmorDano(vida:Vida, h:Array[HitBox]) -> void:
+	for hit:HitBox in h:
+		if hit.is_in_group("Special"):
+			vida.RecebeDano(100)
 	vida_miasma_atual = %VidaMCabeca.vida_atual + %VidaMCorpo.vida_atual
 	var tween_a:Tween = create_tween()
 	tween_a.tween_property(%BarraArmor, "value", vida_miasma_max - vida_miasma_atual, .15)

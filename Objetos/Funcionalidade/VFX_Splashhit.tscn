@@ -46,6 +46,7 @@ animations = [{
 }]
 
 [node name="VFX_SplashHit" type="AnimatedSprite2D" unique_id=782659300]
+z_index = 2
 sprite_frames = SubResource("SpriteFrames_y56qc")
 autoplay = "default"
 frame = 8
