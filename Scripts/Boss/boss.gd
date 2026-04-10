@@ -136,7 +136,7 @@ func TomouDano(vida_atual:int, _vida_antiga:int) -> void:
 	tween = create_tween()
 	tween.tween_property(%BarraVida, "value", vida_atual, .15)
 	
-	if vida_atual == 10:
+	if vida_atual == 20:
 		tempo_idle_cuspe /= 2.0
 		tempo_idle_pilar /= 2.0
 	

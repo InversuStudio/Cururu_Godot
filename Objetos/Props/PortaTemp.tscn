@@ -317,11 +317,12 @@ position = Vector2(-0.5, -63.5)
 shape = SubResource("RectangleShape2D_41i4q")
 debug_color = Color(0.99137133, 0, 0.27243033, 0.41960785)
 
-[node name="HitBox" parent="." unique_id=1790758728 instance=ExtResource("4_7ptwx")]
+[node name="HitBox" parent="." unique_id=1790758728 node_paths=PackedStringArray("parent") instance=ExtResource("4_7ptwx")]
 unique_name_in_owner = true
 position = Vector2(-12, 0)
 scale = Vector2(0.70287764, 1)
 collision_layer = 16
+parent = NodePath("..")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HitBox" unique_id=1177134349]
 position = Vector2(0, -62.15)

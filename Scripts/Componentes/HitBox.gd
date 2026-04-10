@@ -30,7 +30,7 @@ func _on_area_entered(area: Area2D) -> void:
 		hit.emit(area.global_position, self, area.collision_layer)
 		area.RecebeDano(dano, global_position)
 		var fx:Node2D = null
-		if vfx:
+		if vfx and parent:
 			fx = vfx.instantiate()
 			fx.global_position = area.get_child(0).global_position
 			parent.get_parent().add_child(fx)
