@@ -3,9 +3,23 @@
 [ext_resource type="Script" uid="uid://jrl1634sm6lb" path="res://Scripts/Componentes/MenuPrincipal.gd" id="1_sgs44"]
 [ext_resource type="Texture2D" uid="uid://ciudp1bvjo4s5" path="res://Sprites/UI/Telainicial/01.png" id="2_hkuru"]
 [ext_resource type="FontFile" uid="uid://cmh0geo7e3aon" path="res://Dialogos/Font/MONTSERRAT-BLACK.TTF" id="3_e3fqx"]
+[ext_resource type="Texture2D" uid="uid://0agjwkmg3gef" path="res://Sprites/VFX/Iluminação/luz azul.png" id="3_y8gyb"]
 [ext_resource type="AudioStream" uid="uid://w484n11fqypl" path="res://Audio/SFX/MENU INICIAL/selecao_menu.mp3" id="4_6y4ar"]
 [ext_resource type="AudioStream" uid="uid://bash5t5ceubo" path="res://Audio/Musicas/Cururu - Tema.ogg" id="5_6y4ar"]
 [ext_resource type="Script" uid="uid://dd16yu704x6wt" path="res://Scripts/Componentes/BGM_Player.gd" id="5_e3fqx"]
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_y8gyb"]
+particle_flag_disable_z = true
+emission_shape = 3
+emission_box_extents = Vector3(300, 500, 1)
+spread = 20.0
+initial_velocity_min = 1.0
+initial_velocity_max = 5.0
+radial_velocity_min = -10.000022
+radial_velocity_max = 49.999977
+gravity = Vector3(0, -15, 0)
+scale_min = 0.14999999
+scale_max = 0.25
 
 [node name="MenuPrincipal" type="Control" unique_id=1104044087]
 layout_mode = 3
@@ -24,6 +38,16 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("2_hkuru")
+
+[node name="Particula2" type="GPUParticles2D" parent="." unique_id=1658704929]
+position = Vector2(949, 957.0002)
+scale = Vector2(3.801912, 0.39453796)
+amount = 50
+amount_ratio = 0.7
+texture = ExtResource("3_y8gyb")
+speed_scale = 0.5
+visibility_rect = Rect2(-2000, -500, 4000, 1000)
+process_material = SubResource("ParticleProcessMaterial_y8gyb")
 
 [node name="HBoxContainer" type="VBoxContainer" parent="." unique_id=410967359]
 layout_mode = 1

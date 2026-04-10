@@ -2,8 +2,53 @@
 
 [ext_resource type="Texture2D" uid="uid://cwk87j7k2tx4b" path="res://Sprites/UI/FinalDemo/TELA_FINAL.png" id="1_a8qag"]
 [ext_resource type="Script" uid="uid://bybbf6dpcoelr" path="res://Scripts/Demo/FinalDemo.gd" id="1_bw0r5"]
+[ext_resource type="Script" uid="uid://crja57phbaqrg" path="res://Cenas/zDemo/scroll_container.gd" id="3_3x8op"]
+[ext_resource type="Texture2D" uid="uid://cfnwndd4cr5ml" path="res://Sprites/UI/FinalDemo/creditos.png" id="3_6y2jv"]
+[ext_resource type="Texture2D" uid="uid://cxa4pl0scvs5k" path="res://Sprites/VFX/Partículas/folhastx.png" id="3_yfi72"]
 [ext_resource type="AudioStream" uid="uid://cdyib5njx1h8o" path="res://Audio/Musicas/Fim.ogg" id="4_l7wy2"]
+[ext_resource type="Texture2D" uid="uid://0agjwkmg3gef" path="res://Sprites/VFX/Iluminação/luz azul.png" id="4_n1qtx"]
 [ext_resource type="Script" uid="uid://dd16yu704x6wt" path="res://Scripts/Componentes/BGM_Player.gd" id="4_ued6h"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_sw7qa"]
+particles_animation = true
+particles_anim_h_frames = 7
+particles_anim_v_frames = 1
+particles_anim_loop = false
+
+[sub_resource type="Gradient" id="Gradient_awe4i"]
+offsets = PackedFloat32Array(0, 0.1958042, 0.74825174, 1)
+colors = PackedColorArray(1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_e0yg5"]
+gradient = SubResource("Gradient_awe4i")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_k4x4j"]
+particle_flag_disable_z = true
+emission_shape = 3
+emission_box_extents = Vector3(1000, 500, 1)
+spread = 15.0
+initial_velocity_min = 0.5
+initial_velocity_max = 2.0
+angular_velocity_min = -1.6093254e-05
+angular_velocity_max = 29.999983
+gravity = Vector3(-20, 30, 0)
+scale_min = 0.08
+scale_max = 0.12
+color_ramp = SubResource("GradientTexture1D_e0yg5")
+anim_offset_max = 1.0
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_p0nfx"]
+particle_flag_disable_z = true
+emission_shape = 3
+emission_box_extents = Vector3(2500, 500, 1)
+spread = 20.0
+initial_velocity_min = 1.0
+initial_velocity_max = 5.0
+radial_velocity_min = -10.000022
+radial_velocity_max = 49.999977
+gravity = Vector3(0, -15, 0)
+scale_min = 0.14999999
+scale_max = 0.25
 
 [node name="FinalDemo" type="Control" unique_id=678308461]
 layout_mode = 3
@@ -22,6 +67,46 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("1_a8qag")
+
+[node name="Folhas" type="GPUParticles2D" parent="Background" unique_id=762553867]
+material = SubResource("CanvasItemMaterial_sw7qa")
+position = Vector2(1362, 531.00006)
+scale = Vector2(0.5634587, -1.2445595)
+amount = 50
+texture = ExtResource("3_yfi72")
+lifetime = 3.0
+visibility_rect = Rect2(-7500, -500, 15000, 1000)
+process_material = SubResource("ParticleProcessMaterial_k4x4j")
+
+[node name="Particula" type="GPUParticles2D" parent="Background" unique_id=1282331886]
+position = Vector2(1419.0001, 1028)
+scale = Vector2(0.2446461, 0.17852305)
+amount = 50
+amount_ratio = 0.7
+texture = ExtResource("4_n1qtx")
+speed_scale = 0.5
+visibility_rect = Rect2(-2000, -500, 4000, 1000)
+process_material = SubResource("ParticleProcessMaterial_p0nfx")
+
+[node name="CreditsArea" type="ScrollContainer" parent="Background" unique_id=925689919]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.08229167
+anchor_top = 0.43425927
+anchor_right = 0.30208334
+anchor_bottom = 0.74814814
+grow_horizontal = 2
+grow_vertical = 2
+scroll_vertical_custom_step = 70.252
+horizontal_scroll_mode = 0
+vertical_scroll_mode = 3
+script = ExtResource("3_3x8op")
+speed = 60.0
+metadata/_edit_use_anchors_ = true
+
+[node name="TextureRect" type="TextureRect" parent="Background/CreditsArea" unique_id=17484189]
+layout_mode = 2
+texture = ExtResource("3_6y2jv")
 
 [node name="BGM_Player" type="Node" parent="." unique_id=1971115413]
 script = ExtResource("4_ued6h")
