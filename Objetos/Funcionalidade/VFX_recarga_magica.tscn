@@ -1,6 +1,7 @@
-[gd_scene format=3 uid="uid://bnd87lrjdvmk5"]
+[gd_scene format=3 uid="uid://dlnqe8yqk5r67"]
 
 [ext_resource type="Texture2D" uid="uid://dsjsg1c51dbse" path="res://Sprites/Cururu/VFX/Magia/final-0048.png" id="1_fm8fh"]
+[ext_resource type="Script" uid="uid://c1bl210yhadrx" path="res://Scripts/Componentes/VFX.gd" id="1_rs328"]
 [ext_resource type="Texture2D" uid="uid://brb7xrwdh2ug5" path="res://Sprites/Cururu/VFX/Magia/final-0049.png" id="2_rs328"]
 [ext_resource type="Texture2D" uid="uid://d13mcqy7nvh14" path="res://Sprites/Cururu/VFX/Magia/final-0050.png" id="3_uayqq"]
 [ext_resource type="Texture2D" uid="uid://darej5j0g2wqj" path="res://Sprites/Cururu/VFX/Magia/final-0051.png" id="4_xq6wy"]
@@ -38,8 +39,10 @@ animations = [{
 }]
 
 [node name="VFX_RecargaMagica" type="Node2D" unique_id=603394038]
+script = ExtResource("1_rs328")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=576655500]
 position = Vector2(0, -101)
 sprite_frames = SubResource("SpriteFrames_ogij0")
-frame_progress = 0.31857753
+frame = 6
+frame_progress = 1.0

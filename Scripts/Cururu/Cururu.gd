@@ -90,6 +90,8 @@ var pode_item:bool = true
 
 var detalhe_chao:Array = [false, ""]
 
+const vfx_cura: PackedScene = preload("res://Objetos/Funcionalidade/VFX_Cura.tscn")
+
 signal virou
 var input_buffer:Array[float] = [0.0, 0.0]
 
@@ -189,6 +191,9 @@ func VidaMudou(vida_nova, vida_antiga) -> void:
 		%StateMachine.call_deferred("MudaState", %StateMachine.find_child("Dano"))
 	else:
 		print("RECEBI CURA")
+		var fx: Node2D = vfx_cura.instantiate()
+		add_child(fx)
+		fx.get_child(0).play("default")
 	HUD.AplicaRed(vida_nova)
 
 func PlayExtra(som:AudioStream) -> void:
