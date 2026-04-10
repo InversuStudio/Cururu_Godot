@@ -42,7 +42,6 @@ func DetectControllerType() -> int:
 	return 1  # fallback: Xbox como padrão
 
 func GetUiButtonImage(action: StringName) -> StringName:
-	var result: StringName = ""
 	var comandos: Array = InputMap.action_get_events(action)
 
 	if tipo_input == 0:
@@ -51,7 +50,7 @@ func GetUiButtonImage(action: StringName) -> StringName:
 			if ie is InputEventKey:
 				key = OS.get_keycode_string(ie.physical_keycode)
 				break
-		result = "res://Sprites/UI/Botoes/TesteTeclado" + key + ".png"
+		return "res://Sprites/UI/Botoes/TesteTeclado" + key + ".png"
 
 	else:
 		var botao: int = 0
@@ -66,41 +65,65 @@ func GetUiButtonImage(action: StringName) -> StringName:
 				break
 
 		if is_axis:
-			match botao:
-				JOY_AXIS_TRIGGER_RIGHT:
-					match tipo_input:
-						1: result = "res://Sprites/UI/Botoes/TesteInputXboxRT.png"
-						2: result = "res://Sprites/UI/Botoes/TesteInputPSRT.png"
-						3: result = "res://Sprites/UI/Botoes/TesteInputXboxRT.png"
-				JOY_AXIS_TRIGGER_LEFT:
-					match tipo_input:
-						1: result = "res://Sprites/UI/Botoes/TesteInputXboxLT.png"
-						2: result = "res://Sprites/UI/Botoes/TesteInputPSLT.png"
-						3: result = "res://Sprites/UI/Botoes/TesteInputXboxLT.png"
+			return GetJoyAxis(botao)
 		else:
-			match botao:
-				JOY_BUTTON_A:
-					match tipo_input:
-						1: result = "res://Sprites/UI/Botoes/TesteInputXboxA.png"
-						2: result = "res://Sprites/UI/Botoes/TesteInputPSX.png"
-						3: result = "res://Sprites/UI/Botoes/TesteInputXboxB.png"
-				JOY_BUTTON_B:
-					match tipo_input:
-						1: result = "res://Sprites/UI/Botoes/TesteInputXboxB.png"
-						2: result = "res://Sprites/UI/Botoes/TesteInputPSC.png"
-						3: result = "res://Sprites/UI/Botoes/TesteInputXboxA.png"
-				JOY_BUTTON_X:
-					match tipo_input:
-						1: result = "res://Sprites/UI/Botoes/TesteInputXboxX.png"
-						2: result = "res://Sprites/UI/Botoes/TesteInputPSQ.png"
-						3: result = "res://Sprites/UI/Botoes/TesteInputXboxY.png"
-				JOY_BUTTON_Y:
-					match tipo_input:
-						1: result = "res://Sprites/UI/Botoes/TesteInputXboxY.png"
-						2: result = "res://Sprites/UI/Botoes/TesteInputPST.png"
-						3: result = "res://Sprites/UI/Botoes/TesteInputXboxX.png"
+			return GetJoyButton(botao)
 
-	return result
+func GetJoyAxis(botao:int) -> StringName:
+	match botao:
+		JOY_AXIS_TRIGGER_RIGHT:
+			match tipo_input:
+				1: return "res://Sprites/UI/Botoes/TesteInputXboxRT.png"
+				2: return "res://Sprites/UI/Botoes/TesteInputPSRT.png"
+				3: return "res://Sprites/UI/Botoes/TesteInputXboxRT.png"
+		JOY_AXIS_TRIGGER_LEFT:
+			match tipo_input:
+				1: return "res://Sprites/UI/Botoes/TesteInputXboxLT.png"
+				2: return "res://Sprites/UI/Botoes/TesteInputPSLT.png"
+				3: return "res://Sprites/UI/Botoes/TesteInputXboxLT.png"
+	return ""
+
+func GetJoyButton(botao:int) -> StringName:
+	match botao:
+		JOY_BUTTON_A:
+			match tipo_input:
+				1: return "res://Sprites/UI/Botoes/TesteInputXboxA.png"
+				2: return "res://Sprites/UI/Botoes/TesteInputPSX.png"
+				3: return "res://Sprites/UI/Botoes/TesteInputXboxB.png"
+		JOY_BUTTON_B:
+			match tipo_input:
+				1: return "res://Sprites/UI/Botoes/TesteInputXboxB.png"
+				2: return "res://Sprites/UI/Botoes/TesteInputPSC.png"
+				3: return "res://Sprites/UI/Botoes/TesteInputXboxA.png"
+		JOY_BUTTON_X:
+			match tipo_input:
+				1: return "res://Sprites/UI/Botoes/TesteInputXboxX.png"
+				2: return "res://Sprites/UI/Botoes/TesteInputPSQ.png"
+				3: return "res://Sprites/UI/Botoes/TesteInputXboxY.png"
+		JOY_BUTTON_Y:
+			match tipo_input:
+				1: return "res://Sprites/UI/Botoes/TesteInputXboxY.png"
+				2: return "res://Sprites/UI/Botoes/TesteInputPST.png"
+				3: return "res://Sprites/UI/Botoes/TesteInputXboxX.png"
+		JOY_BUTTON_RIGHT_SHOULDER:
+			match tipo_input:
+				1: return "res://Sprites/UI/Botoes/TesteInputXboxRB.png"
+				2: return "res://Sprites/UI/Botoes/TesteInputPSRB.png"
+				3: return "res://Sprites/UI/Botoes/TesteInputXboxRB.png"
+		JOY_BUTTON_LEFT_SHOULDER:
+			match tipo_input:
+				1: return "res://Sprites/UI/Botoes/TesteInputXboxLB.png"
+				2: return "res://Sprites/UI/Botoes/TesteInputPSLB.png"
+				3: return "res://Sprites/UI/Botoes/TesteInputXboxLB.png"
+		JOY_BUTTON_DPAD_UP:
+			return "res://Sprites/UI/Botoes/TesteInputXboxCima.png"
+		JOY_BUTTON_DPAD_DOWN:
+			return "res://Sprites/UI/Botoes/TesteInputXboxBaixo.png"
+		JOY_BUTTON_DPAD_LEFT:
+			return "res://Sprites/UI/Botoes/TesteInputXboxEsquerda.png"
+		JOY_BUTTON_DPAD_RIGHT:
+			return "res://Sprites/UI/Botoes/TesteInputXboxDireita.png"
+	return ""
 
 # Armazena a posição inicial do player
 var posicao: Vector2 = Vector2(0, 0)
