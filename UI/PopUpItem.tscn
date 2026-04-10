@@ -1,0 +1,72 @@
+[gd_scene format=3 uid="uid://1yfgmkbyy3uc"]
+
+[ext_resource type="Texture2D" uid="uid://duesv7kjq2emm" path="res://Sprites/UI/Pause/Pecas/MENU_ABA3.png" id="1_qulct"]
+[ext_resource type="Script" uid="uid://7coh1mtj3lmw" path="res://Scripts/Componentes/PopUpItem.gd" id="2_hct7e"]
+[ext_resource type="Script" uid="uid://dvao27av8qjbk" path="res://Dialogos/label_auto_resize.gd" id="3_hct7e"]
+[ext_resource type="Texture2D" uid="uid://8tc3pgq3fdi8" path="res://Sprites/UI/HUD/Barra_Vida/UIHUD-MAGIABK.png" id="3_tnqp6"]
+[ext_resource type="FontFile" uid="uid://cmh0geo7e3aon" path="res://Dialogos/Font/MONTSERRAT-BLACK.TTF" id="4_hct7e"]
+
+[node name="PopupItem" type="TextureRect" unique_id=136282357]
+mouse_filter = 2
+texture = ExtResource("1_qulct")
+script = ExtResource("2_hct7e")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=59548154]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer" unique_id=424821983]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/separation = 0
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/HBoxContainer" unique_id=1384825195]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.2
+texture = ExtResource("3_tnqp6")
+expand_mode = 1
+
+[node name="Img" type="TextureRect" parent="MarginContainer/HBoxContainer/TextureRect" unique_id=1609635226]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(60, 50)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -30.0
+offset_top = -28.0
+offset_right = 30.0
+offset_bottom = 28.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 6
+size_flags_stretch_ratio = 0.2
+mouse_filter = 2
+expand_mode = 1
+
+[node name="Nome" type="RichTextLabel" parent="MarginContainer/HBoxContainer" unique_id=1382743487]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_filter = 2
+theme_override_fonts/normal_font = ExtResource("4_hct7e")
+bbcode_enabled = true
+text = "[wave]Guarana"
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("3_hct7e")
+max_font_size = 40
+min_font_size = 20

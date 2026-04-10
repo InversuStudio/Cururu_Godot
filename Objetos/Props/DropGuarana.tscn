@@ -10,29 +10,31 @@ radius = 55.081757
 [sub_resource type="CircleShape2D" id="CircleShape2D_s361a"]
 radius = 70.0
 
-[node name="DropGuarana" type="RigidBody2D"]
+[node name="DropGuarana" type="RigidBody2D" unique_id=1450960922]
 z_index = 1001
 collision_layer = 32
 collision_mask = 3
 script = ExtResource("1_fhqsw")
 tipo_item = 1
+imagem = ExtResource("2_fhqsw")
+nome = "Guaraná"
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1442425506]
 z_index = 1001
 position = Vector2(-18.999998, -13.999999)
 scale = Vector2(0.8242187, 0.8242187)
 texture = ExtResource("2_fhqsw")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1506828917]
 shape = SubResource("CircleShape2D_fhqsw")
 
-[node name="AreaGet" type="Area2D" parent="."]
+[node name="AreaGet" type="Area2D" parent="." unique_id=1895982501]
 collision_layer = 0
 collision_mask = 2
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="AreaGet"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AreaGet" unique_id=1823195017]
 shape = SubResource("CircleShape2D_s361a")
 
-[node name="OtimizadorSprite" parent="." instance=ExtResource("3_ehqyr")]
+[node name="OtimizadorSprite" parent="." unique_id=1678738589 instance=ExtResource("3_ehqyr")]
 rect = Rect2(-72, -50, 135, 116)
 follow = true

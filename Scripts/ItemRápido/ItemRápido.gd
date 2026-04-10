@@ -34,6 +34,7 @@ func _input(_event: InputEvent) -> void:
 			
 	if Input.is_action_just_pressed("usar_item") and Mundos.player:
 		if !Mundos.player.pode_item: return
+		if Mundos.player.state_machine.current_state.name != "Chao": return
 		if Inventario.inventario.size() > 0:
 			cena_inventario.UsaItem(id_item)
 			usa_item.emit()

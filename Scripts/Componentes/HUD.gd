@@ -3,6 +3,8 @@ extends CanvasLayer
 const sprite_cheio:Texture2D = preload("res://Sprites/UI/HUD/Barra_Vida/UIHUD-VIDACHEIA.png")
 const sprite_vazio:Texture2D = preload("res://Sprites/UI/HUD/Barra_Vida/UIHUD-VIDAVAZIZ.png")
 
+const pop_item:PackedScene = preload("res://UI/PopUpItem.tscn")
+
 @export var inventario_itens:Control = null
 @export var inventario_amuletos:Control = null
 @export var item_rapido:Control = null
@@ -206,6 +208,11 @@ func MostraItem(nome:String, desc:String, cura:int = 0) -> void:
 # MOSTRA AMULETOS DO INVENTÁRIO
 func MostraAmuleto(nome:String, desc:String) -> void:
 	inventario_amuletos.MostraAmuleto(nome, desc)
+
+func PopItem(img:Texture2D, nome:String) -> void:
+	var pop:PopUp = pop_item.instantiate()
+	pop.Setup(img, nome)
+	%PopUpItens.add_child(pop)
 
 func AplicaRed(vida:int) -> void:
 	var color:Color = Color.WHITE
