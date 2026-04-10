@@ -14,6 +14,8 @@ radius = 62.03225
 collision_layer = 32
 collision_mask = 3
 script = ExtResource("1_qvwd5")
+imagem = ExtResource("2_qvwd5")
+nome = "Açaí"
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=285016417]
 z_index = 1001

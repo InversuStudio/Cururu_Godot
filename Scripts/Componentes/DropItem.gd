@@ -9,6 +9,10 @@ var vel:Vector2 = Vector2.ZERO
 
 const sfx_coleta = preload("uid://bo4f1065o660y")
 
+@export_group("Popu-Up")
+@export var imagem:Texture2D = null
+@export var nome:String = ""
+
 func _ready() -> void:
 	$AreaGet.connect("body_entered", _on_body_entered)
 	# É isso mesmo, Theo. Roubei seu código na cara dura
@@ -23,4 +27,5 @@ func _on_body_entered(body: Node2D) -> void:
 	if body.is_in_group("Player"):
 		body.PlayExtra(sfx_coleta)
 		Inventario.AddItem(Inventario.ItensString[tipo_item])
+		HUD.PopItem(imagem, nome)
 		queue_free()
