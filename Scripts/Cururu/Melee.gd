@@ -114,8 +114,9 @@ func Hit(pos_target:Vector2, hit:HitBox, _layer:int) -> void:
 	var vel:Vector2 = Vector2(push * dir, up)
 	parent.velocity = vel
 	hit.CalcPushback(distancia_push, tempo_push, pos_target)
-	if hit.get_overlapping_areas()[0].is_in_group("AddMagia"):
-		GameData.miasma += 1
+	var areas:Array[Area2D] = hit.get_overlapping_areas()
+	for a:Area2D in areas:
+		if a.is_in_group("AddMagia"): GameData.miasma += 1
 	parent.input_move = Vector2.ZERO
 	parent.pode_mover = false
 	await get_tree().create_timer(.2).timeout
