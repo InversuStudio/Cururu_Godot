@@ -293,6 +293,7 @@ func Load() -> bool:
 			vida_atual = vida_max
 		if magia_max > 0:
 			magia_atual = magia_max
+		miasma = 0
 		return true
 	printerr("SAVE NÃO ENCONTRADO")
 	return false
@@ -317,6 +318,7 @@ func ResetData() -> void:
 	vida_atual = vida_max
 	magia_max = p.magia_max
 	magia_atual = magia_max
+	miasma = 0
 	p.queue_free()
 	
 	moedas = 0

@@ -29,22 +29,58 @@ func _on_area_entered(area: Area2D) -> void:
 		if !area.ativo: return
 		hit.emit(area.global_position, self, area.collision_layer)
 		area.RecebeDano(dano, global_position)
-		var fx:Node2D = null
 		if vfx and parent:
-			fx = vfx.instantiate()
-			fx.global_position = area.get_child(0).global_position
-			parent.get_parent().add_child(fx)
-			if fx is GPUParticles2D:
-				fx.finished.connect(fx.queue_free)
-				fx.restart()
-			elif fx is AnimatedSprite2D:
-				fx.animation_finished.connect(fx.queue_free)
+			HitVFX(area)
 		Mundos.HitFreeze(hit_freeze)
 		if get_tree().get_first_node_in_group("MainCamera"):
 			get_tree().get_first_node_in_group("MainCamera").Shake(camera_shake)
 		# Toca som
 		if sfx:
 			$SFX.play()
+
+func HitVFX(area:Area2D) -> void:
+	var self_shape:Shape2D = null
+	var self_xform:Transform2D
+	var other_shape:Shape2D = null
+	var other_xform:Transform2D
+
+	for c:Node in get_children():
+		if c is CollisionObject2D:
+			self_shape = c.shape
+			self_xform = c.transform
+			break
+		elif c is CollisionPolygon2D:
+			var shape:ConcavePolygonShape2D = ConcavePolygonShape2D.new()
+			shape.segments = c.polygon
+			self_shape = shape
+			self_xform = c.transform
+	
+	for c:Node in area.get_children():
+		if c is CollisionShape2D:
+			other_shape = c.shape
+			other_xform = c.transform
+			break
+		elif c is CollisionPolygon2D:
+			var shape:ConcavePolygonShape2D = ConcavePolygonShape2D.new()
+			shape.segments = c.polygon
+			other_shape = shape
+			other_xform = c.transform
+	
+	var points:PackedVector2Array = self_shape.collide_and_get_contacts(
+		self_xform, other_shape, other_xform)
+	
+	var fx:Node2D = vfx.instantiate()
+	var ponto:Vector2 = Vector2(0,0)
+	for p:Vector2 in points:
+		if p > ponto: p = ponto
+	
+	fx.global_position = to_global(ponto)#area.get_child(0).global_position
+	parent.get_parent().add_child(fx)
+	if fx is GPUParticles2D:
+		fx.finished.connect(fx.queue_free)
+		fx.restart()
+	elif fx is AnimatedSprite2D:
+		fx.animation_finished.connect(fx.queue_free)
 
 func CalcPushback(dist:float, time:float, pos_target:Vector2) -> void:
 	# Define direção do knockback
