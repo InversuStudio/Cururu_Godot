@@ -119,13 +119,17 @@ func _ready() -> void:
 		var bus:int = AudioServer.get_bus_index("SFX")
 		AudioServer.set_bus_volume_db(bus, linear_to_db(valor)))
 	
+	for aba:Button in %ContainerAbas.get_children():
+		aba.pressed.connect(MudaAba.bind(aba.get_index()))
+	
 	# Lógica para evitar bugs durante testes
 	await get_tree().physics_frame
 	if Mundos.player and GameData.vida_max > 0:
 		IniciaHUD()
 		MostraHUD()
 
-func MudaAba() -> void:
+func MudaAba(id:int = -1) -> void:
+	if id > -1: hud_ativo = id
 	for c:Control in %ContainerMenus.get_children():
 		if c.get_index() == hud_ativo:
 			c.show()

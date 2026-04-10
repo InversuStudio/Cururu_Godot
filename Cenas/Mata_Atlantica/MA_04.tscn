@@ -60,8 +60,13 @@
 [ext_resource type="AudioStream" uid="uid://b2vi4qav4gk5r" path="res://Audio/SFX/AMBIENTE/Cururu - Soundscape A.ogg" id="44_83y2k"]
 [ext_resource type="Texture2D" uid="uid://ctexd1uqvvg2e" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/Arvoresv2/3E92CD98-C4C7-4426-A0A0-7D548CBC2FB5.PNG" id="51_rxp3q"]
 [ext_resource type="Texture2D" uid="uid://yfr8jwjcydfu" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/Arvoresv2/mata atlântica_0_20260313104035.PNG" id="52_cfb5v"]
+[ext_resource type="Shader" uid="uid://da2wxasx6evg0" path="res://Scripts/Shaders/Grama.gdshader" id="52_nbt0q"]
+[ext_resource type="Texture2D" uid="uid://cdoeovi1pkiyo" path="res://Sprites/Cenário/Mata_Atlantica/Interativos/amosatrra 2.png" id="53_05bps"]
 [ext_resource type="Texture2D" uid="uid://bbn2qnl3a7v5d" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/Arvoresv2/mata atlântica_0_20260313103853.PNG" id="53_2476y"]
 [ext_resource type="Texture2D" uid="uid://cabbe0o8t838t" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/Arvoresv2/mata atlântica_0_20260313103751.PNG" id="54_ktj4b"]
+[ext_resource type="PackedScene" uid="uid://bnubkn7kxj708" path="res://Objetos/Funcionalidade/MostraTela.tscn" id="54_puqih"]
+[ext_resource type="Texture2D" uid="uid://5l3wvmvbv06n" path="res://Sprites/UI/Dialogo/DICA_MIASMA.png" id="55_ivmm3"]
+[ext_resource type="FontFile" uid="uid://cmh0geo7e3aon" path="res://Dialogos/Font/MONTSERRAT-BLACK.TTF" id="56_boyx2"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_4fngu"]
 shader = ExtResource("6_u7lhw")
@@ -228,6 +233,21 @@ tile_size = Vector2i(128, 128)
 physics_layer_0/collision_layer = 1
 physics_layer_0/collision_mask = 0
 sources/0 = SubResource("TileSetAtlasSource_v7od0")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_t842b"]
+shader = ExtResource("52_nbt0q")
+shader_parameter/speed = 1.5
+shader_parameter/minStrength = 0.10000000475
+shader_parameter/maxStrength = 0.30000001425
+shader_parameter/strengthScale = 80.0
+shader_parameter/interval = 2.0
+shader_parameter/detail = 1.0
+shader_parameter/heightOffset = 0.0
+shader_parameter/flip_wind = false
+shader_parameter/offset = 0.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_13ela"]
+size = Vector2(256, 78)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_krmto"]
 size = Vector2(70, 399)
@@ -1731,6 +1751,38 @@ position = Vector2(-2060.0005, 340.00195)
 rotation = 3.1415925
 scale = Vector2(0.99999976, 0.99999976)
 texture = ExtResource("28_boyx2")
+
+[node name="Amosatrra2" type="Sprite2D" parent="Fundo/0" unique_id=2048031903]
+z_index = -1
+material = SubResource("ShaderMaterial_t842b")
+position = Vector2(837.00006, -8126)
+scale = Vector2(0.43574032, 0.43574017)
+texture = ExtResource("53_05bps")
+
+[node name="MostraTela" parent="Fundo/0/Amosatrra2" unique_id=976943619 instance=ExtResource("54_puqih")]
+position = Vector2(-22.949219, 364.89648)
+scale = Vector2(2.2949448, 2.2949455)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Fundo/0/Amosatrra2/MostraTela" unique_id=1466983391]
+position = Vector2(1, 0)
+shape = SubResource("RectangleShape2D_13ela")
+
+[node name="DicaVida" type="Sprite2D" parent="Fundo/0/Amosatrra2/MostraTela" unique_id=871008899]
+position = Vector2(3.9999995, -290)
+scale = Vector2(0.8112688, 0.8112685)
+texture = ExtResource("55_ivmm3")
+
+[node name="charge" type="RichTextLabel" parent="Fundo/0/Amosatrra2/MostraTela/DicaVida" unique_id=1218602129]
+offset_left = -270.24762
+offset_top = -46.373875
+offset_right = 277.44354
+offset_bottom = 72.75906
+theme_override_fonts/normal_font = ExtResource("56_boyx2")
+theme_override_font_sizes/normal_font_size = 25
+bbcode_enabled = true
+text = "Aperte BTN para converter energia MIASMA em ÁGUA LUNAR."
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="1" type="CanvasLayer" parent="Fundo" unique_id=158131956]
 follow_viewport_enabled = true

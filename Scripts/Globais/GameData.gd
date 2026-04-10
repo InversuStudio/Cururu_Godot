@@ -42,7 +42,7 @@ func DetectControllerType() -> int:
 	return 1  # fallback: Xbox como padrão
 
 func GetUiButtonImage(action: StringName) -> StringName:
-	var comandos: Array = InputMap.action_get_events(action)
+	var comandos:Array[InputEvent] = InputMap.action_get_events(action)
 
 	if tipo_input == 0:
 		var key: String = ""

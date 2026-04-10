@@ -21,7 +21,10 @@ func _ready() -> void:
 		connect("pressed", script_logica.Logica)
 	
 	if sprite_normal: texture_normal = sprite_normal
-	if sprite_select: texture_focused = sprite_select
+	if sprite_select:
+		texture_focused = sprite_select
+		texture_hover = sprite_select
+		texture_pressed = sprite_select
 	
 	focus_entered.connect(func():
 		HUD.MostraAmuleto(

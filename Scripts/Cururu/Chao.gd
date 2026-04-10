@@ -89,7 +89,8 @@ func Update(_delta: float) -> State:
 		if item_cura: return null
 		return pulo_state
 	if Input.is_action_just_pressed("charge") and parent.pode_mover:
-		if GameData.miasma > 0: return carga_state
+		if GameData.miasma > 0 and GameData.magia_atual < GameData.magia_max:
+			return carga_state
 	return null # Não muda o State
 	
 # COMPORTAMENTO PHYSICS_PROCESS

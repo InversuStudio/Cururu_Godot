@@ -8,7 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://kuarj30f8veq" path="res://UI/Inventario.tscn" id="5_f2wx0"]
 [ext_resource type="PackedScene" uid="uid://ddf8xx25186i" path="res://UI/Amuletos.tscn" id="6_gppie"]
 [ext_resource type="Texture2D" uid="uid://ca8k5v74jj6ko" path="res://Sprites/UI/HUD/Barra_Vida/UIHUD-MAGIABK2.png" id="7_8ip7y"]
-[ext_resource type="PackedScene" path="res://UI/BarraHUD.tscn" id="7_kg6a8"]
+[ext_resource type="PackedScene" uid="uid://cgwht06tcuv48" path="res://UI/BarraHUD.tscn" id="7_kg6a8"]
 [ext_resource type="Shader" uid="uid://c1omtsxv04udh" path="res://Scripts/Shaders/blur_shader.gdshader" id="8_am7sw"]
 [ext_resource type="FontFile" uid="uid://cmh0geo7e3aon" path="res://Dialogos/Font/MONTSERRAT-BLACK.TTF" id="8_kg6a8"]
 [ext_resource type="Script" uid="uid://bqsntloofwyiu" path="res://Scripts/Componentes/BarraAgua.gd" id="8_lbtxw"]
@@ -382,7 +382,6 @@ horizontal_alignment = 2
 
 [node name="Pause" type="Panel" parent="Corpo" unique_id=2011513613]
 unique_name_in_owner = true
-visible = false
 z_index = 1
 material = SubResource("ShaderMaterial_ixkb2")
 layout_mode = 1
@@ -650,6 +649,7 @@ theme_override_fonts/font = ExtResource("8_kg6a8")
 theme_override_font_sizes/font_size = 24
 theme_override_styles/normal = SubResource("StyleBoxTexture_ghl3h")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_qbvrm")
+theme_override_styles/hover = SubResource("StyleBoxTexture_ghl3h")
 toggle_mode = true
 button_group = SubResource("ButtonGroup_f2wx0")
 text = "Mapa"
@@ -663,6 +663,7 @@ theme_override_fonts/font = ExtResource("8_kg6a8")
 theme_override_font_sizes/font_size = 24
 theme_override_styles/normal = SubResource("StyleBoxTexture_4hs1h")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_h8urj")
+theme_override_styles/hover = SubResource("StyleBoxTexture_ghl3h")
 toggle_mode = true
 button_group = SubResource("ButtonGroup_f2wx0")
 text = "Inventário"
@@ -676,6 +677,7 @@ theme_override_fonts/font = ExtResource("8_kg6a8")
 theme_override_font_sizes/font_size = 24
 theme_override_styles/normal = SubResource("StyleBoxTexture_dcyds")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_rc7pm")
+theme_override_styles/hover = SubResource("StyleBoxTexture_ghl3h")
 toggle_mode = true
 button_group = SubResource("ButtonGroup_f2wx0")
 text = "Amuletos"
@@ -689,6 +691,7 @@ theme_override_fonts/font = ExtResource("8_kg6a8")
 theme_override_font_sizes/font_size = 24
 theme_override_styles/normal = SubResource("StyleBoxTexture_6it0x")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_8ecy4")
+theme_override_styles/hover = SubResource("StyleBoxTexture_ghl3h")
 toggle_mode = true
 button_group = SubResource("ButtonGroup_f2wx0")
 text = "Áudio
@@ -703,6 +706,7 @@ theme_override_fonts/font = ExtResource("8_kg6a8")
 theme_override_font_sizes/font_size = 24
 theme_override_styles/normal = SubResource("StyleBoxTexture_bf46y")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_v10bk")
+theme_override_styles/hover = SubResource("StyleBoxTexture_ghl3h")
 toggle_mode = true
 button_group = SubResource("ButtonGroup_f2wx0")
 text = "Opções"

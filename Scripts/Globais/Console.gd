@@ -19,6 +19,21 @@ func _input(_event: InputEvent) -> void:
 			$Timer.start(.1)
 			await $Timer.timeout
 			%LinhaComando.text = ""
+	if Input.is_action_pressed("ui_cancel") and GameData.tipo_input == 0:
+		var e:Array[InputEvent] = InputMap.action_get_events("ui_cancel")
+		var key:String = ""
+		for ie: InputEvent in e:
+			if ie is InputEventKey:
+				key = OS.get_keycode_string(ie.physical_keycode)
+				break
+		if !Input.is_physical_key_pressed(KEY_SHIFT):
+			key = key.to_lower()
+		%LinhaComando.text += key
+		%LinhaComando.release_focus()
+		await get_tree().create_timer(.1).timeout
+		%LinhaComando.grab_focus()
+		%LinhaComando.caret_column = %LinhaComando.text.length()
+		
 
 func _Print(txt:Variant) -> void:
 	if %Console.visible:
@@ -64,11 +79,11 @@ func Comando(line:String) -> void:
 	%LinhaComando.text = ""
 	%LinhaComando.grab_focus()
 
-func DisablePlayer(val:bool = false) -> void:
+func DisablePlayer(pode_mover:bool = false) -> void:
 	if Mundos.player == null: return
-	Mundos.player.pode_mover = val
+	Mundos.player.pode_mover = pode_mover
 	Mundos.player.input_move.x = 0.0
 	Mundos.player.velocity.x = 0.0
-	Mundos.player.pode_ataque = val
-	Mundos.player.pode_dash = val
-	Mundos.player.pode_item = val
+	Mundos.player.pode_ataque = pode_mover
+	Mundos.player.pode_dash = pode_mover
+	Mundos.player.pode_item = pode_mover

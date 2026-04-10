@@ -28,6 +28,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 script = ExtResource("1_sgs44")
 
 [node name="Background" type="TextureRect" parent="." unique_id=1423255837]
@@ -40,7 +41,7 @@ grow_vertical = 2
 texture = ExtResource("2_hkuru")
 
 [node name="Particula2" type="GPUParticles2D" parent="." unique_id=1658704929]
-position = Vector2(949, 957.0002)
+position = Vector2(974, 884.9998)
 scale = Vector2(3.801912, 0.39453796)
 amount = 50
 amount_ratio = 0.7
@@ -55,11 +56,12 @@ anchors_preset = 4
 anchor_top = 0.5
 anchor_bottom = 0.5
 offset_left = 276.0
-offset_top = -18.0
+offset_top = -73.5
 offset_right = 626.0
-offset_bottom = 211.0
+offset_bottom = 266.5
 grow_vertical = 2
 theme_override_constants/separation = 20
+alignment = 1
 
 [node name="Continuar" type="Button" parent="HBoxContainer" unique_id=1082075029]
 unique_name_in_owner = true

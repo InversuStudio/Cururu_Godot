@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://bmonoqdck6ten"]
+[gd_scene format=3 uid="uid://bmonoqdck6ten"]
 
 [ext_resource type="Script" uid="uid://bc1xu2vyl6ya8" path="res://Scripts/Componentes/Cutscene_Intro.gd" id="1_bhbvs"]
 [ext_resource type="Texture2D" uid="uid://ci0xvvqjll2i3" path="res://Sprites/UI/Visual_Novel/Intro_game/Tela_01.png" id="2_iwqvi"]
@@ -6,24 +6,15 @@
 [ext_resource type="AudioStream" uid="uid://w484n11fqypl" path="res://Audio/SFX/MENU INICIAL/selecao_menu.mp3" id="3_wmdw0"]
 [ext_resource type="Texture2D" uid="uid://ch16kbnxffhyq" path="res://Sprites/UI/Visual_Novel/Intro_game/Tela_03.png" id="4_3ec2c"]
 [ext_resource type="Script" uid="uid://dd16yu704x6wt" path="res://Scripts/Componentes/BGM_Player.gd" id="4_be5h4"]
-[ext_resource type="Texture2D" uid="uid://bc2yoaw6bn0kt" path="res://Sprites/UI/Pause/Pecas/MENU_ABA2.png" id="4_uuu4a"]
-[ext_resource type="Texture2D" uid="uid://bu6udw31dg5md" path="res://Sprites/UI/Pause/Pecas/MENU_ABA1.png" id="5_4q4i6"]
 [ext_resource type="Texture2D" uid="uid://bai4oo20hdtk6" path="res://Sprites/UI/Visual_Novel/Intro_game/Tela_04.png" id="6_pu4bt"]
 [ext_resource type="Texture2D" uid="uid://ueeqhivxg0s4" path="res://Sprites/UI/Visual_Novel/Intro_game/Tela_05.png" id="7_fdg1p"]
 [ext_resource type="Texture2D" uid="uid://c0ewjlssuflxj" path="res://Sprites/UI/Visual_Novel/Intro_game/Tela_06.png" id="8_fjhlr"]
 [ext_resource type="Texture2D" uid="uid://dvln7aukfokcn" path="res://Sprites/UI/Visual_Novel/Intro_game/Tela_07.png" id="9_fv720"]
 [ext_resource type="Texture2D" uid="uid://cncy3gmjiyahb" path="res://Sprites/UI/Visual_Novel/Intro_game/Tela_08.png" id="10_rvfgo"]
+[ext_resource type="FontFile" uid="uid://cmh0geo7e3aon" path="res://Dialogos/Font/MONTSERRAT-BLACK.TTF" id="12_pdo3u"]
 [ext_resource type="AudioStream" uid="uid://bash5t5ceubo" path="res://Audio/Musicas/Cururu - Tema.ogg" id="14_xqwwo"]
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ajkku"]
-texture = ExtResource("4_uuu4a")
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ibt7k"]
-texture = ExtResource("5_4q4i6")
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_xqwwo"]
-
-[node name="CutsceneIntro" type="Control"]
+[node name="CutsceneIntro" type="Control" unique_id=419720395]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -32,93 +23,91 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_bhbvs")
 
-[node name="ColorRect" type="ColorRect" parent="."]
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1825092636]
 layout_mode = 0
 offset_right = 1920.0
 offset_bottom = 1080.0
 color = Color(0, 0, 0, 1)
 
-[node name="Tela0" type="Sprite2D" parent="."]
+[node name="Telas" type="Control" parent="ColorRect" unique_id=1391747327]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Tela0" type="Sprite2D" parent="ColorRect/Telas" unique_id=1455692755]
 unique_name_in_owner = true
-visible = false
-position = Vector2(376, 260)
+position = Vector2(-564, -260)
 texture = ExtResource("2_iwqvi")
 
-[node name="Tela1" type="Sprite2D" parent="."]
+[node name="Tela1" type="Sprite2D" parent="ColorRect/Telas" unique_id=2123709530]
 unique_name_in_owner = true
-visible = false
-position = Vector2(1098, 266.99997)
+position = Vector2(158, -253.00003)
 texture = ExtResource("3_1oirj")
 
-[node name="Tela2" type="Sprite2D" parent="."]
+[node name="Tela2" type="Sprite2D" parent="ColorRect/Telas" unique_id=192482853]
 unique_name_in_owner = true
-visible = false
-position = Vector2(949, 798)
+position = Vector2(9, 278)
 texture = ExtResource("4_3ec2c")
 
-[node name="Tela3" type="Sprite2D" parent="."]
+[node name="Tela3" type="Sprite2D" parent="ColorRect/Telas" unique_id=271241544]
 unique_name_in_owner = true
-visible = false
-position = Vector2(346, 225)
+position = Vector2(-594, -295)
 texture = ExtResource("6_pu4bt")
 
-[node name="Tela4" type="Sprite2D" parent="."]
+[node name="Tela4" type="Sprite2D" parent="ColorRect/Telas" unique_id=2076029594]
 unique_name_in_owner = true
-visible = false
-position = Vector2(1008, 227)
+position = Vector2(68, -293)
 texture = ExtResource("7_fdg1p")
 
-[node name="Tela5" type="Sprite2D" parent="."]
+[node name="Tela5" type="Sprite2D" parent="ColorRect/Telas" unique_id=2004520497]
 unique_name_in_owner = true
-visible = false
-position = Vector2(1607, 260)
+position = Vector2(667, -260)
 texture = ExtResource("8_fjhlr")
 
-[node name="Tela6" type="Sprite2D" parent="."]
+[node name="Tela6" type="Sprite2D" parent="ColorRect/Telas" unique_id=2025786871]
 unique_name_in_owner = true
-visible = false
-position = Vector2(690, 755)
+position = Vector2(-250, 235)
 texture = ExtResource("9_fv720")
 
-[node name="Tela7" type="Sprite2D" parent="."]
+[node name="Tela7" type="Sprite2D" parent="ColorRect/Telas" unique_id=1689101871]
 unique_name_in_owner = true
-visible = false
-position = Vector2(1451, 772)
+position = Vector2(511, 252)
 texture = ExtResource("10_rvfgo")
 
-[node name="HBoxContainer" type="VBoxContainer" parent="."]
-layout_mode = 1
-anchors_preset = 7
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
-anchor_bottom = 1.0
-offset_left = 647.0001
-offset_top = -92.91998
-offset_right = 997.0001
-offset_bottom = 7.080078
-grow_horizontal = 2
-grow_vertical = 0
-scale = Vector2(0.84000003, 0.7392)
-
-[node name="Continuar" type="Button" parent="HBoxContainer"]
+[node name="BTN" type="RichTextLabel" parent="." unique_id=1367897686]
 unique_name_in_owner = true
-custom_minimum_size = Vector2(350, 100)
-layout_mode = 2
-theme_override_font_sizes/font_size = 38
-theme_override_styles/normal = SubResource("StyleBoxTexture_ajkku")
-theme_override_styles/pressed = SubResource("StyleBoxTexture_ibt7k")
-theme_override_styles/focus = SubResource("StyleBoxEmpty_xqwwo")
-text = "A - Continuar"
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -100.0
+offset_top = -100.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_fonts/normal_font = ExtResource("12_pdo3u")
+theme_override_font_sizes/normal_font_size = 40
+bbcode_enabled = true
+text = "BTN"
+horizontal_alignment = 1
+vertical_alignment = 1
 
-[node name="BtnSFX" type="AudioStreamPlayer" parent="."]
+[node name="BtnSFX" type="AudioStreamPlayer" parent="." unique_id=1475454150]
 stream = ExtResource("3_wmdw0")
 volume_db = -15.0
 
-[node name="BGM_Player" type="Node" parent="."]
+[node name="BGM_Player" type="Node" parent="." unique_id=1509787138]
 script = ExtResource("4_be5h4")
 musica = ExtResource("14_xqwwo")
 metadata/_custom_type_script = "uid://dd16yu704x6wt"
-
-[connection signal="pressed" from="HBoxContainer/Continuar" to="." method="_on_continuar_pressed"]
-[connection signal="pressed" from="HBoxContainer/Continuar" to="." method="_on_main_pressed"]

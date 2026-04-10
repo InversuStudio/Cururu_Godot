@@ -24,6 +24,7 @@ anchor_bottom = 1.0
 offset_top = -409.0
 offset_right = 661.0
 grow_vertical = 0
+mouse_filter = 2
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Control/Console" unique_id=2090762100]
 layout_mode = 1
@@ -32,16 +33,19 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 
 [node name="MarginContainer2" type="MarginContainer" parent="Control/Console/VBoxContainer" unique_id=216754473]
 z_index = 5
 layout_mode = 2
+mouse_filter = 2
 theme_override_constants/margin_left = 5
 theme_override_constants/margin_top = 5
 theme_override_constants/margin_right = 5
 
 [node name="HBoxContainer" type="HBoxContainer" parent="Control/Console/VBoxContainer/MarginContainer2" unique_id=843280044]
 layout_mode = 2
+mouse_filter = 2
 
 [node name="Label" type="Label" parent="Control/Console/VBoxContainer/MarginContainer2/HBoxContainer" unique_id=1105829772]
 layout_mode = 2
@@ -58,6 +62,7 @@ size_flags_horizontal = 3
 [node name="MarginContainer" type="MarginContainer" parent="Control/Console/VBoxContainer" unique_id=1836218172]
 layout_mode = 2
 size_flags_vertical = 3
+mouse_filter = 2
 theme_override_constants/margin_left = 10
 theme_override_constants/margin_top = 10
 theme_override_constants/margin_right = 10
@@ -66,27 +71,32 @@ theme_override_constants/margin_bottom = 10
 [node name="HBoxContainer" type="HBoxContainer" parent="Control/Console/VBoxContainer/MarginContainer" unique_id=1169776134]
 layout_mode = 2
 size_flags_vertical = 3
+mouse_filter = 2
 
 [node name="TextoConsole" type="RichTextLabel" parent="Control/Console/VBoxContainer/MarginContainer/HBoxContainer" unique_id=1363181888]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
+mouse_filter = 2
 bbcode_enabled = true
 scroll_following = true
 
 [node name="VSeparator" type="VSeparator" parent="Control/Console/VBoxContainer/MarginContainer/HBoxContainer" unique_id=586539118]
 layout_mode = 2
+mouse_filter = 2
 
 [node name="StatePlayer" type="RichTextLabel" parent="Control/Console/VBoxContainer/MarginContainer/HBoxContainer" unique_id=919291390]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 0.2
+mouse_filter = 2
 bbcode_enabled = true
 scroll_following = true
 
 [node name="MarginContainer3" type="MarginContainer" parent="Control/Console/VBoxContainer" unique_id=1785487386]
 layout_mode = 2
+mouse_filter = 2
 theme_override_constants/margin_left = 5
 theme_override_constants/margin_top = 5
 theme_override_constants/margin_right = 5
@@ -94,6 +104,7 @@ theme_override_constants/margin_bottom = 5
 
 [node name="HBoxContainer" type="HBoxContainer" parent="Control/Console/VBoxContainer/MarginContainer3" unique_id=183385573]
 layout_mode = 2
+mouse_filter = 2
 
 [node name="Label" type="Label" parent="Control/Console/VBoxContainer/MarginContainer3/HBoxContainer" unique_id=731234378]
 layout_mode = 2
@@ -104,6 +115,7 @@ unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
 focus_mode = 1
+context_menu_enabled = false
 
 [node name="Timer" type="Timer" parent="." unique_id=1083141134]
 ignore_time_scale = true
