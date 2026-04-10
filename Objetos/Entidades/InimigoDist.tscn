@@ -7,6 +7,7 @@
 [ext_resource type="AudioStream" uid="uid://b3mmkipqf30jd" path="res://Audio/SFX/INIMIGOS/HIT_INIMIGO.wav" id="4_fcbn0"]
 [ext_resource type="PackedScene" uid="uid://pc4mgv2nv8af" path="res://Objetos/Funcionalidade/CompHitBox.tscn" id="5_x3tbq"]
 [ext_resource type="Texture2D" uid="uid://c3tl3oddronfh" path="res://icon.svg" id="6_ta1k4"]
+[ext_resource type="Texture2D" uid="uid://brlkj1uhui4fn" path="res://Sprites/UI/Botoes/TesteInputXboxRB.png" id="12_gyk8v"]
 [ext_resource type="Texture2D" uid="uid://lruqdxr2efim" path="res://Sprites/Inimigos/Animação de morte/1.png" id="16_4c7pd"]
 [ext_resource type="Texture2D" uid="uid://c87kuuyr2pym0" path="res://Sprites/Inimigos/Animação de morte/2.png" id="17_w4ne4"]
 [ext_resource type="Texture2D" uid="uid://ddb4clgck30m" path="res://Sprites/Inimigos/Animação de morte/3.png" id="18_t0mq7"]
@@ -17,18 +18,12 @@
 [ext_resource type="PackedScene" uid="uid://ffqi6t0ahbmk" path="res://Objetos/Funcionalidade/OtimizadorObjeto.tscn" id="25_aq8e6"]
 [ext_resource type="AudioStream" uid="uid://deqw7rxc5hhfh" path="res://Audio/SFX/INIMIGOS/Inimigo morrendo.wav" id="26_2okk7"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_ntg74"]
-size = Vector2(223.68439, 105.921135)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_ihru7"]
-size = Vector2(155.26312, 99.342155)
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ayjai"]
-size = Vector2(81.57925, 140.78961)
+size = Vector2(87.500114, 88.15794)
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_gvld5"]
-radius = 53.94742
-height = 190.7896
+radius = 44.73688
+height = 93.421135
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_tkh53"]
 animations = [{
@@ -70,17 +65,10 @@ animations = [{
 [sub_resource type="CircleShape2D" id="CircleShape2D_ugwgy"]
 radius = 745.5902
 
-[node name="InimigoDist" type="CharacterBody2D" unique_id=2019109312]
-scale = Vector2(0.67999953, 0.67999953)
-collision_layer = 4
+[node name="InimigoDist" type="Node2D" unique_id=7476346]
 script = ExtResource("1_6bmvj")
 cena_projetil = ExtResource("2_ugwgy")
 metadata/_edit_vertical_guides_ = [-211.0, 176.0]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1948898497]
-position = Vector2(4.411768, -147.05894)
-scale = Vector2(2.2352939, 2.2352939)
-shape = SubResource("RectangleShape2D_ntg74")
 
 [node name="Vida" type="Node" parent="." unique_id=938649480]
 script = ExtResource("3_rr2uw")
@@ -90,7 +78,7 @@ metadata/_custom_type_script = "uid://hsdutxxttrp3"
 [node name="Flip" type="Node2D" parent="." unique_id=1392119751]
 unique_name_in_owner = true
 
-[node name="HurtBox" parent="Flip" unique_id=872149296 node_paths=PackedStringArray("comp_vida", "parent", "sprite") instance=ExtResource("3_7x1h4")]
+[node name="HurtBox" parent="Flip" unique_id=872149296 node_paths=PackedStringArray("comp_vida", "sprite") groups=["AddMagia"] instance=ExtResource("3_7x1h4")]
 unique_name_in_owner = true
 scale = Vector2(2.2352939, 2.2352939)
 collision_layer = 16
@@ -98,72 +86,57 @@ comp_vida = NodePath("../../Vida")
 distancia_knockback = 0.27
 tempo_knockback = 0.2
 hit_sfx = ExtResource("4_fcbn0")
-parent = NodePath("../..")
 sprite = NodePath("../Sprite")
 
-[node name="CollisionShape2D3" type="CollisionShape2D" parent="Flip/HurtBox" unique_id=1339135318]
-position = Vector2(2.631581, -66.44742)
-shape = SubResource("RectangleShape2D_ihru7")
-debug_color = Color(0.99999, 0, 0.0935918, 0.42)
-
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="Flip/HurtBox" unique_id=88289003]
-position = Vector2(0.6578946, -66.447426)
+position = Vector2(1.315786, -42.980312)
 rotation = -1.57079
 shape = SubResource("RectangleShape2D_ayjai")
 debug_color = Color(0.99999, 0, 0.0935918, 0.42)
 
-[node name="HitBox" parent="Flip" unique_id=598623231 instance=ExtResource("5_x3tbq")]
+[node name="HitBox" parent="Flip" unique_id=598623231 node_paths=PackedStringArray("parent") instance=ExtResource("5_x3tbq")]
 unique_name_in_owner = true
 scale = Vector2(2.2352939, 2.2352939)
 collision_layer = 16
 dano = 2
+parent = NodePath("../..")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Flip/HitBox" unique_id=2094676355]
-position = Vector2(0, -67.10532)
+position = Vector2(-1.7812453e-11, -41.335567)
 rotation = -1.57079
 shape = SubResource("CapsuleShape2D_gvld5")
 debug_color = Color(0.807155, 0.414602, 3.85046e-07, 0.42)
-
-[node name="Sprite" type="AnimatedSprite2D" parent="Flip" unique_id=1555891583]
-unique_name_in_owner = true
-position = Vector2(2.8161812, -153.06627)
-scale = Vector2(1.4725423, 1.4725425)
-sprite_frames = SubResource("SpriteFrames_tkh53")
-autoplay = "default"
 
 [node name="PontoDisparo" type="Marker2D" parent="Flip" unique_id=1543077576]
 unique_name_in_owner = true
 position = Vector2(97.05889, -166.17659)
 
-[node name="AreaVisao" type="Area2D" parent="Flip" unique_id=93547442]
+[node name="Sprite" type="AnimatedSprite2D" parent="Flip" unique_id=1555891583]
+unique_name_in_owner = true
+position = Vector2(2.8161812, -95.463295)
+scale = Vector2(1.4725424, 1.4725425)
+sprite_frames = SubResource("SpriteFrames_tkh53")
+autoplay = "default"
+
+[node name="Sprite2D" type="Sprite2D" parent="Flip/Sprite" unique_id=997432110]
+position = Vector2(81.97612, 0)
+texture = ExtResource("12_gyk8v")
+
+[node name="AreaVisao" type="Area2D" parent="." unique_id=93547442]
+position = Vector2(0, -94.117714)
 collision_layer = 2
 collision_mask = 2
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Flip/AreaVisao" unique_id=1917221437]
-position = Vector2(1.470581, -161.76482)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AreaVisao" unique_id=1917221437]
 shape = SubResource("CircleShape2D_ugwgy")
 
-[node name="RayDireita" type="RayCast2D" parent="." unique_id=1296964799]
+[node name="ChecaWall" type="RayCast2D" parent="." unique_id=1296964799]
 unique_name_in_owner = true
-position = Vector2(275.0002, -60)
+position = Vector2(0, -94.117714)
 scale = Vector2(2.2352936, 2.2352936)
-target_position = Vector2(20, 0)
-
-[node name="RayVazioDireita" type="RayCast2D" parent="." unique_id=2142211602]
-unique_name_in_owner = true
-position = Vector2(275.0002, -24)
-scale = Vector2(2.2352936, 2.2352936)
-
-[node name="RayEsquerda" type="RayCast2D" parent="." unique_id=1981733015]
-unique_name_in_owner = true
-position = Vector2(-270.58844, -60)
-scale = Vector2(2.2352936, 2.2352936)
-target_position = Vector2(-20, 0)
-
-[node name="RayVazioEsquerda" type="RayCast2D" parent="." unique_id=1602263692]
-unique_name_in_owner = true
-position = Vector2(-270.58844, -24)
-scale = Vector2(2.2352936, 2.2352936)
+target_position = Vector2(350, 0)
+collision_mask = 3
+hit_from_inside = true
 
 [node name="SpawnMoeda" type="Marker2D" parent="." unique_id=523206188]
 unique_name_in_owner = true
@@ -173,12 +146,16 @@ scale = Vector2(2.2352936, 2.2352936)
 [node name="OtimizadorSprite" parent="." unique_id=448696188 instance=ExtResource("25_aq8e6")]
 position = Vector2(1.4705893, 36.764732)
 scale = Vector2(2.2352936, 2.2352936)
-rect = Rect2(-146.05276, -175.00017, 286.18445, 158.55278)
+rect = Rect2(-53.947414, -110.52641, 107.89484, 103.289566)
 follow = true
 
 [node name="SomMorte" type="AudioStreamPlayer2D" parent="." unique_id=1033857000]
 unique_name_in_owner = true
 stream = ExtResource("26_2okk7")
 
-[connection signal="body_entered" from="Flip/AreaVisao" to="." method="_on_area_visao_body_entered"]
-[connection signal="body_exited" from="Flip/AreaVisao" to="." method="_on_area_visao_body_exited"]
+[node name="IntervaloTiro" type="Timer" parent="." unique_id=323297293]
+unique_name_in_owner = true
+one_shot = true
+
+[connection signal="body_entered" from="AreaVisao" to="." method="_on_area_visao_body_entered"]
+[connection signal="body_exited" from="AreaVisao" to="." method="_on_area_visao_body_exited"]

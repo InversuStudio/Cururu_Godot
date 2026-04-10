@@ -17,10 +17,6 @@ func Enter() -> void:
 	parent.velocity.x = 0.0
 	%Anim.play("Carga")
 	
-# COMPORTAMENTO AO SAIR DO STATE
-func Exit() -> void:
-	pass
-	
 # COMPORTAMENTO PROCESS, RETORNA UM STATE
 func Update(_delta : float) -> State:
 	if Input.is_action_just_released("charge") or (GameData.miasma <= 0

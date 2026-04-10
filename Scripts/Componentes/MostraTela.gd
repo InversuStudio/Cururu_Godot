@@ -20,7 +20,6 @@ func _ready() -> void:
 	if tela:
 		tela.modulate = Color.TRANSPARENT
 	if texto:
-		var path = GameData.GetUiButtonImage("dash")
 		UpdateInput()
 
 func UpdateInput() -> void:

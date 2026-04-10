@@ -6,15 +6,17 @@ extends Area2D
 var velocidade: Vector2 = Vector2.ZERO
 
 func init(direcao: Vector2) -> void:
-	velocidade = direcao.normalized() * velocidade_ms * 128
+	look_at(Mundos.player.global_position)
+	velocidade = direcao * velocidade_ms * 128
 
 func _physics_process(delta: float) -> void:
-	position += velocidade * delta
+	if velocidade != Vector2.ZERO:
+		position += velocidade * delta
 
 func _on_body_entered(_body: Node2D) -> void:
-	queue_free()
+	call_deferred("queue_free")
 
 func _on_area_entered(area: Area2D) -> void:
 	if area is HurtBox:
 		area.RecebeDano(dano, global_position)
-	queue_free()
+	call_deferred("queue_free")

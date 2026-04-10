@@ -205,7 +205,7 @@
 [ext_resource type="AudioStream" uid="uid://dbig0lyde3y74" path="res://Audio/SFX/CURURU/Passos/Passo 16.wav" id="174_2dakj"]
 [ext_resource type="Script" uid="uid://qlpwe7rvuiyp" path="res://Scripts/SFX/sfx_cura.gd" id="175_3h5vl"]
 [ext_resource type="Script" uid="uid://ckbboaft5bwd0" path="res://Scripts/Cururu/Wallslide.gd" id="200_2dakj"]
-[ext_resource type="Script" uid="uid://c6143sq1041gy" path="res://Objetos/Entidades/carga.gd" id="205_qtftx"]
+[ext_resource type="Script" uid="uid://c6143sq1041gy" path="res://Scripts/Cururu/Carga.gd" id="205_qtftx"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_k0fov"]
 animations = [{

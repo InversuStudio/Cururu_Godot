@@ -26,5 +26,5 @@ func _spawnar_gota() -> void:
 	if cena_gota == null:
 		return
 	var gota: Node2D = cena_gota.instantiate()
-	get_tree().current_scene.add_child(gota)
 	gota.global_position = _ponto_spawn.global_position
+	get_tree().current_scene.add_child(gota)
