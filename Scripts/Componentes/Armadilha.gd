@@ -11,7 +11,7 @@ var tp:bool = false
 func _ready() -> void:
 	hitbox.connect("hit", _on_hit)
 	hitbox.body_entered.connect(_body_entered)
-	if spawn_points[0] != null and spawn_points[1] != null:
+	if spawn_points[0] != null:
 		for sp:Area2D in spawn_points:
 			sp.collision_layer = 0
 			sp.collision_mask = 2
@@ -30,7 +30,7 @@ func _body_entered(body:Node2D) -> void:
 		TP()
 
 func TP() -> void:
-	if spawn_points[0] != null and spawn_points[1] != null:
+	if spawn_points[0] != null:
 		tp = true
 		Fade.FadeOut()
 		await Fade.terminou

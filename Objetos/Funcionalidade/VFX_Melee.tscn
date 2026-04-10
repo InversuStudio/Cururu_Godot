@@ -7,9 +7,9 @@
 [ext_resource type="Texture2D" uid="uid://b03gs8133u1u1" path="res://Sprites/Cururu/Melee/V2/ATAQUE_2_HITS_AGUA/CURURU_ATAQUE_23.png" id="7_hat3q"]
 [ext_resource type="Texture2D" uid="uid://ofjwuivnuj0i" path="res://Sprites/Cururu/Melee/V2/ATAQUE_2_HITS_AGUA/CURURU_ATAQUE_25.png" id="8_yfr1s"]
 [ext_resource type="Texture2D" uid="uid://ccadpupbwhkl4" path="res://Sprites/Cururu/Melee/V2/ATAQUE_2_HITS_AGUA/CURURU_ATAQUE_29.png" id="10_2lgjf"]
+[ext_resource type="PackedScene" uid="uid://bvobjk05orpm2" path="res://Objetos/Funcionalidade/VFX_Splashhit.tscn" id="10_c8n85"]
 [ext_resource type="Texture2D" uid="uid://cw3cdq4up1xqy" path="res://Sprites/Cururu/Melee/V2/ATAQUE_2_HITS_AGUA/CURURU_ATAQUE_31.png" id="11_1txr8"]
 [ext_resource type="PackedScene" uid="uid://pc4mgv2nv8af" path="res://Objetos/Funcionalidade/CompHitBox.tscn" id="12_hena8"]
-[ext_resource type="PackedScene" uid="uid://tg8x6n8040y8" path="res://Objetos/Funcionalidade/HitVFX.tscn" id="13_v4lfw"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_dsijf"]
 animations = [{
@@ -64,10 +64,11 @@ sprite_frames = SubResource("SpriteFrames_dsijf")
 animation = &"2"
 speed_scale = 1.2
 
-[node name="HitBox" parent="." unique_id=727505384 instance=ExtResource("12_hena8")]
+[node name="HitBox" parent="." unique_id=727505384 node_paths=PackedStringArray("parent") instance=ExtResource("12_hena8")]
 position = Vector2(110.08, -12.919998)
 collision_mask = 16
-vfx = ExtResource("13_v4lfw")
+parent = NodePath("..")
+vfx = ExtResource("10_c8n85")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="HitBox" unique_id=756496064]
 position = Vector2(-120, 129)

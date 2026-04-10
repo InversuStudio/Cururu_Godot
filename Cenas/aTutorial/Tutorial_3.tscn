@@ -23,10 +23,13 @@
 [ext_resource type="Texture2D" uid="uid://rbtvfm4m7ft" path="res://Sprites/VFX/Iluminação/SOMBRA2.png" id="21_h1566"]
 [ext_resource type="Texture2D" uid="uid://d18vqjeq586b1" path="res://Sprites/Cenário/Mata_Atlantica/Pedras e Ruinas/pedra_musgo.png" id="22_1eavy"]
 [ext_resource type="Texture2D" uid="uid://b2f2ppntemt15" path="res://Sprites/Cenário/Mata_Atlantica/Chao/flores.png" id="23_cd5hs"]
-[ext_resource type="PackedScene" uid="uid://bnm668fws2641" path="res://Objetos/Props/Armadilha.tscn" id="24_cv4nt"]
-[ext_resource type="PackedScene" uid="uid://dgfcdht1gifdp" path="res://Objetos/Props/Espinhos.tscn" id="25_xa16c"]
+[ext_resource type="Script" uid="uid://davjnwfncyj66" path="res://Scripts/Componentes/Armadilha.gd" id="23_hg2ga"]
+[ext_resource type="Texture2D" uid="uid://bj4jdh71epb8o" path="res://Sprites/Cenário/Mata_Atlantica/Interativos/ESPINHOS_EXTERNO.png" id="24_431bo"]
+[ext_resource type="Texture2D" uid="uid://bbf4p1hjw1ohh" path="res://Sprites/Cenário/Mata_Atlantica/Interativos/ESPINHOS.png" id="25_kw66j"]
+[ext_resource type="PackedScene" uid="uid://pc4mgv2nv8af" path="res://Objetos/Funcionalidade/CompHitBox.tscn" id="26_431bo"]
 [ext_resource type="PackedScene" uid="uid://bos2748v4fxwy" path="res://Objetos/Props/upgrade_vida.tscn" id="26_n46oo"]
 [ext_resource type="PackedScene" uid="uid://dghxpclnjwg5k" path="res://Objetos/Props/PecaCoracao.tscn" id="27_61xe8"]
+[ext_resource type="Texture2D" uid="uid://yd210r3oar2" path="res://Sprites/zWIP/Absolute.jpg" id="27_kw66j"]
 [ext_resource type="PackedScene" uid="uid://1apfpwlqocxn" path="res://Objetos/Funcionalidade/TransicaoFase.tscn" id="28_fhn4p"]
 [ext_resource type="Texture2D" uid="uid://rwmi1ggde5dy" path="res://Sprites/VFX/Iluminação/PORTAL.png" id="29_qprck"]
 [ext_resource type="PackedScene" uid="uid://nohq28uk7lfk" path="res://Objetos/Entidades/Player.tscn" id="30_est77"]
@@ -77,6 +80,46 @@ size = Vector2(458, 83)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qclta"]
 size = Vector2(459, 28)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_431bo"]
+radius = 254.32422
+height = 866.1738
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ek7qv"]
+radius = 254.32422
+height = 690.5371
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_kw66j"]
+radius = 213.80469
+height = 1292.3994
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_gytst"]
+radius = 275.0
+height = 1654.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_40frc"]
+radius = 275.0
+height = 1139.6182
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_lsfrh"]
+radius = 275.0
+height = 827.19727
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_431bo"]
+size = Vector2(299, 510.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_op0pn"]
+size = Vector2(105, 666)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kw66j"]
+size = Vector2(207.73254, 593.9352)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_816ow"]
+radius = 145.0
+height = 1014.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fed0x"]
+size = Vector2(343.14124, 322.40967)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ti6rg"]
 size = Vector2(135, 708)
@@ -170,9 +213,6 @@ texture_region_size = Vector2i(128, 128)
 tile_size = Vector2i(128, 128)
 physics_layer_0/collision_layer = 1
 sources/1 = SubResource("TileSetAtlasSource_3fe7p")
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_op0pn"]
-size = Vector2(105, 666)
 
 [node name="Tutorial3" type="Node2D" unique_id=894119357]
 
@@ -816,111 +856,211 @@ scale = Vector2(1.6053236, 0.9646016)
 texture = ExtResource("21_h1566")
 
 [node name="Espinhos" type="Node2D" parent="Background/0" unique_id=2031486291]
-position = Vector2(-15558, -3270)
+position = Vector2(-13618, -1837)
 
-[node name="Armadilha2" parent="Background/0/Espinhos" unique_id=638444291 node_paths=PackedStringArray("spawn_points") instance=ExtResource("24_cv4nt")]
-position = Vector2(217, 80)
-spawn_points = [NodePath("../../../../Area2D"), NodePath("../../../../Area2D")]
+[node name="QuedaEsquerda1" type="Node2D" parent="Background/0/Espinhos" unique_id=1352554674 node_paths=PackedStringArray("spawn_points", "hitbox")]
+position = Vector2(-1541, -1168)
+rotation = -0.5804334
+script = ExtResource("23_hg2ga")
+spawn_points = [NodePath("../SpawnCima")]
+hitbox = NodePath("HitBox")
+metadata/_custom_type_script = "uid://davjnwfncyj66"
 
-[node name="Armadilha" parent="Background/0/Espinhos" unique_id=1286772807 node_paths=PackedStringArray("spawn_points") instance=ExtResource("24_cv4nt")]
-position = Vector2(3, 4)
-spawn_points = [NodePath("../../../../Area2D"), NodePath("../../../../Area2D")]
+[node name="Sprite2D" type="Sprite2D" parent="Background/0/Espinhos/QuedaEsquerda1" unique_id=1105617967]
+position = Vector2(-179.58965, -311.50052)
+rotation = 1.5667102
+scale = Vector2(2.69, 2.69)
+texture = ExtResource("24_431bo")
 
-[node name="Armadilha3" parent="Background/0/Espinhos" unique_id=2015783403 node_paths=PackedStringArray("spawn_points") instance=ExtResource("24_cv4nt")]
-position = Vector2(393, 248)
-spawn_points = [NodePath("../../../../Area2D"), NodePath("../../../../Area2D")]
+[node name="Sprite2D2" type="Sprite2D" parent="Background/0/Espinhos/QuedaEsquerda1" unique_id=423438873]
+position = Vector2(-4.3623962, 83.2404)
+rotation = 1.4896573
+scale = Vector2(2.69, 2.69)
+texture = ExtResource("24_431bo")
 
-[node name="Armadilha4" parent="Background/0/Espinhos" unique_id=1853033786 node_paths=PackedStringArray("spawn_points") instance=ExtResource("24_cv4nt")]
-position = Vector2(538, 368)
-spawn_points = [NodePath("../../../../Area2D"), NodePath("../../../../Area2D")]
+[node name="HitBox" parent="Background/0/Espinhos/QuedaEsquerda1" unique_id=727505384 instance=ExtResource("26_431bo")]
 
-[node name="Armadilha5" parent="Background/0/Espinhos" unique_id=1856735176 node_paths=PackedStringArray("spawn_points") instance=ExtResource("24_cv4nt")]
-position = Vector2(572, 655)
-spawn_points = [NodePath("../../../../Area2D"), NodePath("../../../../Area2D")]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Background/0/Espinhos/QuedaEsquerda1/HitBox" unique_id=631454912]
+position = Vector2(-88.510605, -224.2674)
+rotation = -0.33989757
+shape = SubResource("CapsuleShape2D_431bo")
 
-[node name="Armadilha6" parent="Background/0/Espinhos" unique_id=531618476 node_paths=PackedStringArray("spawn_points") instance=ExtResource("24_cv4nt")]
-position = Vector2(659, 849)
-spawn_points = [NodePath("../../../../Area2D"), NodePath("../../../../Area2D")]
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Background/0/Espinhos/QuedaEsquerda1/HitBox" unique_id=1413541052]
+position = Vector2(3.9700274, 158.06404)
+rotation = 0.11546308
+shape = SubResource("CapsuleShape2D_ek7qv")
 
-[node name="Armadilha7" parent="Background/0/Espinhos" unique_id=1368309719 node_paths=PackedStringArray("spawn_points") instance=ExtResource("24_cv4nt")]
-position = Vector2(774, 1068)
-spawn_points = [NodePath("../../../../Area2D"), NodePath("../../../../Area2D")]
+[node name="QuedaEsquerda2" type="Node2D" parent="Background/0/Espinhos" unique_id=1899970190]
+position = Vector2(-1071, -104)
 
-[node name="Armadilha8" parent="Background/0/Espinhos" unique_id=188920617 node_paths=PackedStringArray("spawn_points") instance=ExtResource("24_cv4nt")]
-position = Vector2(809, 1285)
-spawn_points = [NodePath("../../../../Area2D"), NodePath("../../../../Area2D")]
+[node name="Sprite2D" type="Sprite2D" parent="Background/0/Espinhos/QuedaEsquerda2" unique_id=495226097]
+rotation = 1.3590305
+scale = Vector2(2.69, 2.69)
+texture = ExtResource("25_kw66j")
 
-[node name="Armadilha9" parent="Background/0/Espinhos" unique_id=261927058 node_paths=PackedStringArray("spawn_points") instance=ExtResource("24_cv4nt")]
-position = Vector2(759, 1457)
-spawn_points = [NodePath("../../../../Area2D"), NodePath("../../../../Area2D")]
+[node name="HitBox" parent="Background/0/Espinhos/QuedaEsquerda2" unique_id=1969082133 instance=ExtResource("26_431bo")]
+collision_layer = 16
 
-[node name="Armadilha10" parent="Background/0/Espinhos" unique_id=343966984 node_paths=PackedStringArray("spawn_points") instance=ExtResource("24_cv4nt")]
-position = Vector2(715, 1699)
-spawn_points = [NodePath("../../../../Area2D"), NodePath("../../../../Area2D")]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Background/0/Espinhos/QuedaEsquerda2/HitBox" unique_id=1276277160]
+position = Vector2(-110, 6)
+rotation = -0.27859873
+shape = SubResource("CapsuleShape2D_kw66j")
 
-[node name="Armadilha18" parent="Background/0/Espinhos" unique_id=1828203877 instance=ExtResource("24_cv4nt")]
-position = Vector2(7250, -786)
+[node name="QuedaDireita" type="Node2D" parent="Background/0/Espinhos" unique_id=1486171790]
+position = Vector2(844, -311)
 
-[node name="Armadilha19" parent="Background/0/Espinhos" unique_id=1414746142 instance=ExtResource("24_cv4nt")]
-position = Vector2(7350, -597)
+[node name="Sprite2D" type="Sprite2D" parent="Background/0/Espinhos/QuedaDireita" unique_id=1871333232]
+position = Vector2(-31.999939, 570.41064)
+rotation = -1.7179725
+scale = Vector2(3, 3)
+texture = ExtResource("25_kw66j")
 
-[node name="Armadilha20" parent="Background/0/Espinhos" unique_id=1037692044 instance=ExtResource("24_cv4nt")]
-position = Vector2(7182, -170)
+[node name="Sprite2D2" type="Sprite2D" parent="Background/0/Espinhos/QuedaDireita" unique_id=539904079]
+position = Vector2(29, -683.58936)
+rotation = -1.3512311
+scale = Vector2(3, 3)
+texture = ExtResource("25_kw66j")
 
-[node name="Armadilha27" parent="Background/0/Espinhos" unique_id=945482761 instance=ExtResource("24_cv4nt")]
-position = Vector2(7342, -383)
+[node name="Sprite2D3" type="Sprite2D" parent="Background/0/Espinhos/QuedaDireita" unique_id=1295686940]
+position = Vector2(-139.00012, 1294.4105)
+rotation = -1.3512311
+scale = Vector2(2.23, 2.23)
+texture = ExtResource("24_431bo")
 
-[node name="Armadilha11" parent="Background/0/Espinhos" unique_id=2084872555 instance=ExtResource("24_cv4nt")]
-position = Vector2(-1650, 1806)
+[node name="Sprite2D4" type="Sprite2D" parent="Background/0/Espinhos/QuedaDireita" unique_id=2044865971]
+position = Vector2(90.00006, -1319.5894)
+rotation = -0.9295291
+scale = Vector2(1.785, 1.785)
+texture = ExtResource("24_431bo")
 
-[node name="Armadilha12" parent="Background/0/Espinhos" unique_id=109384808 instance=ExtResource("24_cv4nt")]
-position = Vector2(-1801, 2111)
+[node name="HitBox" parent="Background/0/Espinhos/QuedaDireita" unique_id=1148384420 instance=ExtResource("26_431bo")]
+position = Vector2(-888, 325.41064)
+collision_layer = 16
 
-[node name="Armadilha13" parent="Background/0/Espinhos" unique_id=1505849681 instance=ExtResource("24_cv4nt")]
-position = Vector2(-1879, 2303)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Background/0/Espinhos/QuedaDireita/HitBox" unique_id=1242273525]
+position = Vector2(1038, -1065.4106)
+rotation = 0.04725085
+shape = SubResource("CapsuleShape2D_gytst")
 
-[node name="Armadilha15" parent="Background/0/Espinhos" unique_id=1285537866 instance=ExtResource("24_cv4nt")]
-position = Vector2(-1962, 2940)
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Background/0/Espinhos/QuedaDireita/HitBox" unique_id=1060692196]
+position = Vector2(877, 781.58936)
+rotation = 0.2799006
+shape = SubResource("CapsuleShape2D_40frc")
 
-[node name="Armadilha14" parent="Background/0/Espinhos" unique_id=894458850 node_paths=PackedStringArray("spawn_points") instance=ExtResource("24_cv4nt")]
-position = Vector2(-1908, 2630)
-spawn_points = [NodePath("../../../../Area2D2"), NodePath("../../../../Area2D3")]
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Background/0/Espinhos/QuedaDireita/HitBox" unique_id=921169618]
+position = Vector2(946, -22.410645)
+rotation = -0.28085497
+shape = SubResource("CapsuleShape2D_lsfrh")
 
-[node name="Armadilha22" parent="Background/0/Espinhos" unique_id=1248260186 node_paths=PackedStringArray("spawn_points") instance=ExtResource("24_cv4nt")]
-position = Vector2(2931, 2014)
-spawn_points = [NodePath("../../../../Area2D"), NodePath("../../../../Area2D")]
+[node name="Absolute" type="Node2D" parent="Background/0/Espinhos" unique_id=509334661]
+position = Vector2(5900, -1970)
 
-[node name="Armadilha21" parent="Background/0/Espinhos" unique_id=1202579615 node_paths=PackedStringArray("spawn_points") instance=ExtResource("24_cv4nt")]
-position = Vector2(2869, 2239)
-spawn_points = [NodePath("../../../../Area2D"), NodePath("../../../../Area2D")]
+[node name="Sprite2D2" type="Sprite2D" parent="Background/0/Espinhos/Absolute" unique_id=2041911645]
+position = Vector2(-263, -80.000015)
+rotation = -1.5392652
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("24_431bo")
 
-[node name="Armadilha23" parent="Background/0/Espinhos" unique_id=1087842906 node_paths=PackedStringArray("spawn_points") instance=ExtResource("24_cv4nt")]
-position = Vector2(3084, 1835)
-spawn_points = [NodePath("../../../../Area2D"), NodePath("../../../../Area2D")]
+[node name="Sprite2D" type="Sprite2D" parent="Background/0/Espinhos/Absolute" unique_id=1560151413]
+position = Vector2(-469.99994, 310)
+rotation = -1.1590474
+scale = Vector2(2.025, 2.025)
+texture = ExtResource("24_431bo")
 
-[node name="Armadilha25" parent="Background/0/Espinhos" unique_id=1600798248 node_paths=PackedStringArray("spawn_points") instance=ExtResource("24_cv4nt")]
-position = Vector2(2956, 1324)
-spawn_points = [NodePath("../../../../Area2D"), NodePath("../../../../Area2D")]
+[node name="HitBox" parent="Background/0/Espinhos/Absolute" unique_id=1936962342 instance=ExtResource("26_431bo")]
 
-[node name="Armadilha24" parent="Background/0/Espinhos" unique_id=344170774 node_paths=PackedStringArray("spawn_points") instance=ExtResource("24_cv4nt")]
-position = Vector2(3037, 1548)
-spawn_points = [NodePath("../../../../Area2D"), NodePath("../../../../Area2D")]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Background/0/Espinhos/Absolute/HitBox" unique_id=1956643235]
+position = Vector2(-465.5, -32.75)
+shape = SubResource("RectangleShape2D_431bo")
 
-[node name="Armadilha26" parent="Background/0/Espinhos" unique_id=347866038 node_paths=PackedStringArray("spawn_points") instance=ExtResource("24_cv4nt")]
-position = Vector2(3037, 1115)
-spawn_points = [NodePath("../../../../Area2D"), NodePath("../../../../Area2D")]
+[node name="Sprite2D3" type="Sprite2D" parent="Background/0/Espinhos/Absolute" unique_id=956613525]
 
-[node name="Armadilha17" parent="Background/0/Espinhos" unique_id=927559818 node_paths=PackedStringArray("spawn_points") instance=ExtResource("25_xa16c")]
-position = Vector2(-572, 3208.9998)
-rotation = 2.9502616
-spawn_points = [NodePath("../../../../Area2D2"), NodePath("../../../../Area2D3")]
+[node name="Absolute" type="Sprite2D" parent="Background/0/Espinhos/Absolute" unique_id=2132659827]
+position = Vector2(-832.99994, -15.000069)
+scale = Vector2(0.086895086, 0.08689506)
+texture = ExtResource("27_kw66j")
 
-[node name="Armadilha16" parent="Background/0/Espinhos" unique_id=702134946 node_paths=PackedStringArray("spawn_points") instance=ExtResource("25_xa16c")]
-position = Vector2(-540, 3278)
-rotation = -0.4063784
-spawn_points = [NodePath("../../../../Area2D2"), NodePath("../../../../Area2D3")]
+[node name="SpawnCima" type="Area2D" parent="Background/0/Espinhos" unique_id=1622934609]
+position = Vector2(-1971, -1759)
 
-[node name="Node2D" parent="Background/0" unique_id=1869668779 instance=ExtResource("26_n46oo")]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Background/0/Espinhos/SpawnCima" unique_id=602001513]
+position = Vector2(0.5, -323)
+shape = SubResource("RectangleShape2D_op0pn")
+
+[node name="SpawnBaixo1" type="Area2D" parent="Background/0/Espinhos" unique_id=1584396400]
+position = Vector2(-2816, 1715)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Background/0/Espinhos/SpawnBaixo1" unique_id=304640479]
+position = Vector2(0.5, -323)
+shape = SubResource("RectangleShape2D_op0pn")
+
+[node name="SpawnBaixo2" type="Area2D" parent="Background/0/Espinhos" unique_id=1853214004]
+position = Vector2(-2328, 1524)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Background/0/Espinhos/SpawnBaixo2" unique_id=1040243615]
+position = Vector2(0.5, -323)
+shape = SubResource("RectangleShape2D_op0pn")
+
+[node name="Armadilha" type="Node2D" parent="Background/0/Espinhos" unique_id=1700399972 node_paths=PackedStringArray("spawn_points", "hitbox")]
+position = Vector2(-2566, 1706)
+script = ExtResource("23_hg2ga")
+spawn_points = [NodePath("../SpawnBaixo1"), NodePath("../SpawnBaixo2")]
+hitbox = NodePath("HitBaixo")
+metadata/_custom_type_script = "uid://davjnwfncyj66"
+
+[node name="Sprite2D" type="Sprite2D" parent="Background/0/Espinhos/Armadilha" unique_id=1262014811]
+position = Vector2(-9.3515625, -32.87805)
+rotation = -0.5541084
+scale = Vector2(1.345, 1.345)
+texture = ExtResource("25_kw66j")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Background/0/Espinhos/Armadilha" unique_id=513651083]
+position = Vector2(-18.351563, 87.12195)
+rotation = -3.742217
+scale = Vector2(1.345, 1.345)
+texture = ExtResource("25_kw66j")
+
+[node name="HitBaixo" parent="Background/0/Espinhos/Armadilha" unique_id=1017799577 instance=ExtResource("26_431bo")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Background/0/Espinhos/Armadilha/HitBaixo" unique_id=2122131715]
+position = Vector2(-3.5371094, 26.634293)
+rotation = 0.9664423
+scale = Vector2(0.9999998, 0.9999998)
+shape = SubResource("RectangleShape2D_kw66j")
+
+[node name="Canto" type="Node2D" parent="Background/0/Espinhos" unique_id=1658351107]
+position = Vector2(-3662, 1254)
+
+[node name="Sprite2D" type="Sprite2D" parent="Background/0/Espinhos/Canto" unique_id=1639592808]
+position = Vector2(-77, -38)
+rotation = 1.6668539
+scale = Vector2(2.29, 2.29)
+texture = ExtResource("25_kw66j")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Background/0/Espinhos/Canto" unique_id=1305582279]
+position = Vector2(20.000008, 41.999985)
+rotation = -0.41947654
+scale = Vector2(1.45, 1.45)
+texture = ExtResource("24_431bo")
+
+[node name="Sprite2D3" type="Sprite2D" parent="Background/0/Espinhos/Canto" unique_id=996009921]
+position = Vector2(36.000008, 101)
+rotation = 2.9276793
+scale = Vector2(1.615, 1.615)
+texture = ExtResource("24_431bo")
+
+[node name="HitBox" parent="Background/0/Espinhos/Canto" unique_id=1034759998 instance=ExtResource("26_431bo")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Background/0/Espinhos/Canto/HitBox" unique_id=1678336785]
+position = Vector2(-126, -70)
+shape = SubResource("CapsuleShape2D_816ow")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Background/0/Espinhos/Canto/HitBox" unique_id=979551481]
+position = Vector2(64.56445, 66.469604)
+rotation = 1.1336969
+shape = SubResource("RectangleShape2D_fed0x")
+
+[node name="AltarPetala" parent="Background/0" unique_id=1869668779 instance=ExtResource("26_n46oo")]
 position = Vector2(-15734, -1269)
 
 [node name="PecaCoracao" parent="Background/0" unique_id=624153123 instance=ExtResource("27_61xe8")]
@@ -2615,27 +2755,6 @@ texture = ExtResource("44_s6hji")
 
 [node name="3" type="CanvasLayer" parent="Background" unique_id=1137213829]
 follow_viewport_enabled = true
-
-[node name="Area2D" type="Area2D" parent="." unique_id=1622934609]
-position = Vector2(-15589, -3596)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=602001513]
-position = Vector2(0.5, -323)
-shape = SubResource("RectangleShape2D_op0pn")
-
-[node name="Area2D2" type="Area2D" parent="." unique_id=1584396400]
-position = Vector2(-16434, -122)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2" unique_id=304640479]
-position = Vector2(0.5, -323)
-shape = SubResource("RectangleShape2D_op0pn")
-
-[node name="Area2D3" type="Area2D" parent="." unique_id=1853214004]
-position = Vector2(-15946, -313)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D3" unique_id=1040243615]
-position = Vector2(0.5, -323)
-shape = SubResource("RectangleShape2D_op0pn")
 
 [node name="BGM_Player" type="Node" parent="." unique_id=1164482962]
 script = ExtResource("45_t66co")

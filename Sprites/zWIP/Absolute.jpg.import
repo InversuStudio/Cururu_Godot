@@ -2,22 +2,22 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bbf4p1hjw1ohh"
-path="res://.godot/imported/ESPINHOS.png-ebdc02c1fe3b867f68a7bcdd1d62c7ed.ctex"
+uid="uid://yd210r3oar2"
+path="res://.godot/imported/Absolute.jpg-deae2a26504d645fd6ec552b844af071.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Cenário/Mata_Atlantica/Interativos/ESPINHOS.png"
-dest_files=["res://.godot/imported/ESPINHOS.png-ebdc02c1fe3b867f68a7bcdd1d62c7ed.ctex"]
+source_file="res://Sprites/zWIP/Absolute.jpg"
+dest_files=["res://.godot/imported/Absolute.jpg-deae2a26504d645fd6ec552b844af071.ctex"]
 
 [params]
 
-compress/mode=0
+compress/mode=1
 compress/high_quality=false
-compress/lossy_quality=0.7
+compress/lossy_quality=0.0
 compress/uastc_level=0
 compress/rdo_quality_loss=0.0
 compress/hdr_compression=1

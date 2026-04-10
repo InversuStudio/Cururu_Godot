@@ -29,12 +29,12 @@ func _on_area_entered(area: Area2D) -> void:
 		if !area.ativo: return
 		hit.emit(area.global_position, self, area.collision_layer)
 		area.RecebeDano(dano, global_position)
-		var fx:GPUParticles2D = null
+		var fx:Node2D = null
 		if vfx:
 			fx = vfx.instantiate()
-			get_parent().add_child(fx)
 			fx.global_position = area.get_child(0).global_position
-			fx.restart()
+			parent.get_parent().add_child(fx)
+			if fx is GPUParticles2D: fx.restart()
 		Mundos.HitFreeze(hit_freeze)
 		if get_tree().get_first_node_in_group("MainCamera"):
 			get_tree().get_first_node_in_group("MainCamera").Shake(camera_shake)
@@ -43,7 +43,8 @@ func _on_area_entered(area: Area2D) -> void:
 			$SFX.play()
 		
 		if fx:
-			await fx.finished
+			if fx is GPUParticles2D: await fx.finished
+			elif fx is AnimatedSprite2D: await fx.animation_finished
 			fx.queue_free()
 
 func CalcPushback(dist:float, time:float, pos_target:Vector2) -> void:

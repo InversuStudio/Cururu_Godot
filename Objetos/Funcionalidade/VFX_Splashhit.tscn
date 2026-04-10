@@ -40,13 +40,13 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("9_x52an")
 }],
-"loop": true,
+"loop": false,
 "name": &"default",
 "speed": 14.0
 }]
 
-[node name="VFX_Splashhit" type="Node2D" unique_id=632029077]
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=782659300]
+[node name="VFX_SplashHit" type="AnimatedSprite2D" unique_id=782659300]
 sprite_frames = SubResource("SpriteFrames_y56qc")
-frame_progress = 0.4226288
+autoplay = "default"
+frame = 8
+frame_progress = 1.0

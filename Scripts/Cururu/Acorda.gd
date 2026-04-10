@@ -4,6 +4,8 @@ extends State
 
 # COMPORTAMENTO AO ENTRAR NO STATE
 func Enter() -> void:
+	parent.input_move.x = 0.0
+	parent.velocity.x = 0.0
 	%Anim.play("Acorda")
 	await %Anim.animation_finished
 	get_parent().MudaState(chao_state)
