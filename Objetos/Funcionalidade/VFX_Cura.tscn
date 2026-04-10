@@ -1,11 +1,15 @@
 [gd_scene format=3 uid="uid://b7ndd3xpqwo3j"]
 
 [ext_resource type="Texture2D" uid="uid://6xrhe4ry30ua" path="res://Sprites/Cururu/Cura/VFX/vida/01.png" id="1_2xib6"]
+[ext_resource type="Texture2D" uid="uid://cghawmej0la5p" path="res://Sprites/Cururu/VFX/Cura/final-0056.png" id="1_5xp8i"]
 [ext_resource type="Texture2D" uid="uid://jkaw8j3sfl52" path="res://Sprites/Cururu/Cura/VFX/vida/02.png" id="2_24vsj"]
+[ext_resource type="Texture2D" uid="uid://jtnaarjiytji" path="res://Sprites/Cururu/VFX/Cura/final-0057.png" id="2_pj2ts"]
+[ext_resource type="Texture2D" uid="uid://cjlsop5oyniqu" path="res://Sprites/Cururu/VFX/Cura/final-0058.png" id="3_kq8d4"]
 [ext_resource type="Texture2D" uid="uid://dc47mcjfhlajx" path="res://Sprites/Cururu/Cura/VFX/vida/03.png" id="3_vro5n"]
-[ext_resource type="Texture2D" uid="uid://5adrqqokma8t" path="res://Sprites/Cururu/Cura/VFX/magia/01.png" id="4_rrlyb"]
-[ext_resource type="Texture2D" uid="uid://bgh5n7240bfsw" path="res://Sprites/Cururu/Cura/VFX/magia/02.png" id="5_oajdv"]
-[ext_resource type="Texture2D" uid="uid://b83j2njllpxmq" path="res://Sprites/Cururu/Cura/VFX/magia/03.png" id="6_4l53i"]
+[ext_resource type="Texture2D" uid="uid://cy32r8f1d2m72" path="res://Sprites/Cururu/VFX/Cura/final-0059.png" id="4_a0ps3"]
+[ext_resource type="Texture2D" uid="uid://b0xo6t4ewmifw" path="res://Sprites/Cururu/VFX/Cura/final-0060.png" id="5_7l1ll"]
+[ext_resource type="Texture2D" uid="uid://8gqslpl6t0nm" path="res://Sprites/Cururu/VFX/Cura/final-0061.png" id="6_s5s5d"]
+[ext_resource type="Texture2D" uid="uid://bfqtag4jcxnr4" path="res://Sprites/Cururu/VFX/Cura/final-0062.png" id="7_vdoym"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_c30xr"]
 animations = [{
@@ -25,22 +29,35 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("4_rrlyb")
+"texture": ExtResource("1_5xp8i")
 }, {
 "duration": 1.0,
-"texture": ExtResource("5_oajdv")
+"texture": ExtResource("2_pj2ts")
 }, {
 "duration": 1.0,
-"texture": ExtResource("6_4l53i")
+"texture": ExtResource("3_kq8d4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_a0ps3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_7l1ll")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_s5s5d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_vdoym")
 }],
 "loop": true,
 "name": &"default",
-"speed": 10.0
+"speed": 12.0
 }]
 
-[node name="Node2D" type="Node2D" unique_id=1675020762]
+[node name="VFX_Cura" type="Node2D" unique_id=1675020762]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=367390914]
 modulate = Color(1, 1, 1, 0.5764706)
+position = Vector2(0, -127)
 sprite_frames = SubResource("SpriteFrames_c30xr")
-frame_progress = 0.85557103
+frame_progress = 0.5570743

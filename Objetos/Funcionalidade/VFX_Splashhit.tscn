@@ -1,0 +1,52 @@
+[gd_scene format=3 uid="uid://bvobjk05orpm2"]
+
+[ext_resource type="Texture2D" uid="uid://cqa3x3mhc874r" path="res://Sprites/Cururu/Melee/VFX_Splash/final-0038.png" id="1_6er8y"]
+[ext_resource type="Texture2D" uid="uid://d3etk4hr0drly" path="res://Sprites/Cururu/Melee/VFX_Splash/final-0039.png" id="2_wv6oc"]
+[ext_resource type="Texture2D" uid="uid://cpenp03ubykj2" path="res://Sprites/Cururu/Melee/VFX_Splash/final-0040.png" id="3_lfjs7"]
+[ext_resource type="Texture2D" uid="uid://cvb1cvgl0ox8q" path="res://Sprites/Cururu/Melee/VFX_Splash/final-0041.png" id="4_cpwar"]
+[ext_resource type="Texture2D" uid="uid://cfs0oldx4lpcr" path="res://Sprites/Cururu/Melee/VFX_Splash/final-0042.png" id="5_75rhf"]
+[ext_resource type="Texture2D" uid="uid://ljt47jp6fodm" path="res://Sprites/Cururu/Melee/VFX_Splash/final-0043.png" id="6_v7nu7"]
+[ext_resource type="Texture2D" uid="uid://ba61gaqbsi8tc" path="res://Sprites/Cururu/Melee/VFX_Splash/final-0044.png" id="7_3707l"]
+[ext_resource type="Texture2D" uid="uid://ccfk2nhstfaqo" path="res://Sprites/Cururu/Melee/VFX_Splash/final-0045.png" id="8_2k1jq"]
+[ext_resource type="Texture2D" uid="uid://d0sh4h7l3i8yv" path="res://Sprites/Cururu/Melee/VFX_Splash/final-0046.png" id="9_x52an"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_y56qc"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_6er8y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_wv6oc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_lfjs7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_cpwar")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_75rhf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_v7nu7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_3707l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_2k1jq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_x52an")
+}],
+"loop": true,
+"name": &"default",
+"speed": 14.0
+}]
+
+[node name="VFX_Splashhit" type="Node2D" unique_id=632029077]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=782659300]
+sprite_frames = SubResource("SpriteFrames_y56qc")
+frame_progress = 0.4226288
