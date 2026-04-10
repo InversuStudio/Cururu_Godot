@@ -8,7 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://kuarj30f8veq" path="res://UI/Inventario.tscn" id="5_f2wx0"]
 [ext_resource type="PackedScene" uid="uid://ddf8xx25186i" path="res://UI/Amuletos.tscn" id="6_gppie"]
 [ext_resource type="Texture2D" uid="uid://ca8k5v74jj6ko" path="res://Sprites/UI/HUD/Barra_Vida/UIHUD-MAGIABK2.png" id="7_8ip7y"]
-[ext_resource type="PackedScene" uid="uid://cgwht06tcuv48" path="res://UI/BarraHUD.tscn" id="7_kg6a8"]
+[ext_resource type="PackedScene" path="res://UI/BarraHUD.tscn" id="7_kg6a8"]
 [ext_resource type="Shader" uid="uid://c1omtsxv04udh" path="res://Scripts/Shaders/blur_shader.gdshader" id="8_am7sw"]
 [ext_resource type="FontFile" uid="uid://cmh0geo7e3aon" path="res://Dialogos/Font/MONTSERRAT-BLACK.TTF" id="8_kg6a8"]
 [ext_resource type="Script" uid="uid://bqsntloofwyiu" path="res://Scripts/Componentes/BarraAgua.gd" id="8_lbtxw"]
@@ -228,10 +228,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = 68.0
-offset_top = 211.0
-offset_right = 201.0
-offset_bottom = 333.0
+offset_left = 66.0
+offset_top = 217.99998
+offset_right = 199.0
+offset_bottom = 340.0
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(0.7, 0.7)
@@ -258,6 +258,7 @@ vertical_alignment = 1
 
 [node name="IconItem" type="TextureRect" parent="Corpo/ItemRapido/Seletor" unique_id=1111159519]
 unique_name_in_owner = true
+z_index = 1
 custom_minimum_size = Vector2(70, 60)
 layout_mode = 1
 anchors_preset = 8
@@ -382,6 +383,7 @@ horizontal_alignment = 2
 [node name="Pause" type="Panel" parent="Corpo" unique_id=2011513613]
 unique_name_in_owner = true
 visible = false
+z_index = 1
 material = SubResource("ShaderMaterial_ixkb2")
 layout_mode = 1
 anchors_preset = 15
