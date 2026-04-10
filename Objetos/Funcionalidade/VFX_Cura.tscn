@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://b7ndd3xpqwo3j"]
+[gd_scene format=3 uid="uid://daw4jhnejdgh0"]
 
 [ext_resource type="Script" uid="uid://c1bl210yhadrx" path="res://Scripts/Componentes/VFX.gd" id="1_4l53i"]
 [ext_resource type="Texture2D" uid="uid://cghawmej0la5p" path="res://Sprites/Cururu/VFX/Cura/final-0056.png" id="1_5xp8i"]
