@@ -3,7 +3,8 @@
 [ext_resource type="Script" uid="uid://hsdutxxttrp3" path="res://Scripts/Componentes/Vida.gd" id="1_qwkpf"]
 [ext_resource type="Script" uid="uid://6u785xtvuv2d" path="res://Scripts/Componentes/TotemMagia.gd" id="1_rccpc"]
 [ext_resource type="PackedScene" uid="uid://va5pjd6vuuo2" path="res://Objetos/Funcionalidade/CompHurtBox.tscn" id="2_rccpc"]
-[ext_resource type="Texture2D" uid="uid://cy15u8nv3h088" path="res://Sprites/VFX/Partículas/TesteHit.png" id="3_do5p1"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_rccpc"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_do5p1"]
 size = Vector2(70, 126)
@@ -16,14 +17,14 @@ script = ExtResource("1_qwkpf")
 vida_max = 3
 metadata/_custom_type_script = "uid://hsdutxxttrp3"
 
-[node name="Sprite" type="Sprite2D" parent="." unique_id=1307677217]
+[node name="Sprite" type="AnimatedSprite2D" parent="." unique_id=35830827]
 position = Vector2(0, -63)
-texture = ExtResource("3_do5p1")
+sprite_frames = SubResource("SpriteFrames_rccpc")
 
 [node name="HurtBox" parent="." unique_id=393218860 node_paths=PackedStringArray("comp_vida", "sprite") instance=ExtResource("2_rccpc")]
 collision_layer = 16
 comp_vida = NodePath("../Vida")
-sprite = NodePath("../Sprite")
+sprite = NodePath("")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HurtBox" unique_id=547260217]
 position = Vector2(0, -63)
