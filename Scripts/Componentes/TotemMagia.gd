@@ -5,6 +5,6 @@ extends Node2D
 
 func Morte() -> void:
 	GameData.magia_atual += (magia_a_recuperar / 100.0) * GameData.magia_max
-	$Sprite.play("Abre")
+	$Sprite.play("Quebrando")
 	await $Sprite.animation_finished
 	queue_free()

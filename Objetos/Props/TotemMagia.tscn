@@ -5,6 +5,17 @@
 [ext_resource type="PackedScene" uid="uid://va5pjd6vuuo2" path="res://Objetos/Funcionalidade/CompHurtBox.tscn" id="2_rccpc"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_rccpc"]
+animations = [{
+"frames": [],
+"loop": true,
+"name": &"Quebrando",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_do5p1"]
 size = Vector2(70, 126)
@@ -20,11 +31,12 @@ metadata/_custom_type_script = "uid://hsdutxxttrp3"
 [node name="Sprite" type="AnimatedSprite2D" parent="." unique_id=35830827]
 position = Vector2(0, -63)
 sprite_frames = SubResource("SpriteFrames_rccpc")
+animation = &"Quebrando"
+autoplay = "default"
 
-[node name="HurtBox" parent="." unique_id=393218860 node_paths=PackedStringArray("comp_vida", "sprite") instance=ExtResource("2_rccpc")]
+[node name="HurtBox" parent="." unique_id=393218860 node_paths=PackedStringArray("comp_vida") instance=ExtResource("2_rccpc")]
 collision_layer = 16
 comp_vida = NodePath("../Vida")
-sprite = NodePath("")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HurtBox" unique_id=547260217]
 position = Vector2(0, -63)
