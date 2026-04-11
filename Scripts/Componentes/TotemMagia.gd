@@ -21,6 +21,6 @@ func Morte() -> void:
 	Mundos.lista_baus.append(id)
 	$HurtBox.set_deferred("monitorable", false)
 	GameData.magia_atual += (magia_a_recuperar / 100.0) * GameData.magia_max
-	$Sprite.play("Abre")
+	$Sprite.play("Quebrando")
 	await $Sprite.animation_finished
 	queue_free()

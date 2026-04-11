@@ -37,6 +37,7 @@
 [ext_resource type="Texture2D" uid="uid://bfdwnykeft6td" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/Arvoresv2/mata atlântica_0_20260313103733.PNG" id="22_x6mjr"]
 [ext_resource type="AudioStream" uid="uid://b18d40g67evyi" path="res://Audio/Musicas/Aparecimento do Saci.ogg" id="25_3saii"]
 [ext_resource type="AudioStream" uid="uid://b2vi4qav4gk5r" path="res://Audio/SFX/AMBIENTE/Cururu - Soundscape A.ogg" id="26_ogne8"]
+[ext_resource type="PackedScene" uid="uid://dcellneyankfd" path="res://Objetos/Props/TotemMagia.tscn" id="30_yqgeq"]
 [ext_resource type="Texture2D" uid="uid://bu66so2bkubke" path="res://Sprites/VFX/Iluminação/LightCururu2.png" id="33_lmfyw"]
 [ext_resource type="Texture2D" uid="uid://tc6hgl2fcsgs" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/Arvoresv2/4F43B61C-F17B-4C53-964C-4949229B536C.PNG" id="33_ywd7t"]
 [ext_resource type="Texture2D" uid="uid://ctexd1uqvvg2e" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/Arvoresv2/3E92CD98-C4C7-4426-A0A0-7D548CBC2FB5.PNG" id="34_ro4nb"]
@@ -429,6 +430,16 @@ position = Vector2(7235, -4484)
 
 [node name="NPC-Basico" parent="0" unique_id=643951544 instance=ExtResource("2_mtufu")]
 position = Vector2(8334, -4607)
+
+[node name="TotemMagia" parent="0" unique_id=1098512559 instance=ExtResource("30_yqgeq")]
+position = Vector2(6130, -4480)
+
+[node name="TotemMagia3" parent="0" unique_id=1882523559 instance=ExtResource("30_yqgeq")]
+position = Vector2(6442, -4480)
+
+[node name="TotemMagia2" parent="0" unique_id=869289433 instance=ExtResource("30_yqgeq")]
+position = Vector2(6273, -4480)
+scale = Vector2(0.8, 0.8)
 
 [node name="Cururu" parent="0" unique_id=1093154945 instance=ExtResource("3_2e63t")]
 z_index = 0

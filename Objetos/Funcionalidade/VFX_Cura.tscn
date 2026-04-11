@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://daw4jhnejdgh0"]
+[gd_scene format=3 uid="uid://c2p7tlr3qoror"]
 
 [ext_resource type="Script" uid="uid://c1bl210yhadrx" path="res://Scripts/Componentes/VFX.gd" id="1_4l53i"]
 [ext_resource type="Texture2D" uid="uid://cghawmej0la5p" path="res://Sprites/Cururu/VFX/Cura/final-0056.png" id="1_5xp8i"]
@@ -43,5 +43,5 @@ script = ExtResource("1_4l53i")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=367390914]
 modulate = Color(1, 1, 1, 0.5764706)
-position = Vector2(0, -127)
+position = Vector2(0, -87)
 sprite_frames = SubResource("SpriteFrames_c30xr")
