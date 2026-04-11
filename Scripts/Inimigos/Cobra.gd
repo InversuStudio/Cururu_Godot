@@ -3,12 +3,15 @@ extends CharacterBody2D
 @export var velocidade: float = 0.0
 var dir: int = 1
 
-@onready var id:String = str(Mundos.fase_atual) + name
+var id:String = ""
 
 var tomou_dano:bool = false
 var morreu:bool = false
 
 func _ready() -> void:
+	# Gera ID
+	id = str(Mundos.fase_atual) + name
+	# Checa se já foi morto
 	for i:String in Mundos.lista_inimigos:
 		if i == id:
 			queue_free()

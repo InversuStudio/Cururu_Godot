@@ -229,4 +229,4 @@ func AplicaRed(vida:int) -> void:
 func LimpaInv() -> void:
 	inventario_itens.LimpaInv()
 	inventario_amuletos.LimpaAm()
-	item_rapido.IniciaBarra()
+	item_rapido.ResetaBarra()#IniciaBarra()

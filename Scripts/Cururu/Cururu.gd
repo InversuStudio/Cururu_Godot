@@ -90,7 +90,7 @@ var pode_item:bool = true
 
 var detalhe_chao:Array = [false, ""]
 
-const vfx_cura: PackedScene = preload("res://Objetos/Funcionalidade/VFX_Cura.tscn")
+const vfx_cura:PackedScene = preload("uid://c2p7tlr3qoror")
 
 signal virou
 var input_buffer:Array[float] = [0.0, 0.0]
@@ -205,7 +205,11 @@ func Morte() -> void:
 	print("MORRI")
 	GameData.game_start = false
 	if GameData.Load() == false:
+		# Se não tem save, reseta tudo
 		Mundos.lista_inimigos = []
 		Mundos.lista_baus = []
+		Inventario.inventario = []
+		Inventario.amuletos = []
+		HUD.LimpaInv()
 		GameData.player_morreu = true
 		LoadCena.Load("res://Cenas/aTutorial/Tutorial_1.tscn")

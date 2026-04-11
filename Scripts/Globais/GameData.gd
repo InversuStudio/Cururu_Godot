@@ -274,8 +274,11 @@ func Load() -> bool:
 		peca_coracao = config.get_value("save", "peca_coracao")
 		Mundos.pecas_coracao = config.get_value("save", "lista_coracao")
 		Mundos.areas_secretas = config.get_value("save", "areas_secretas")
+		Mundos.lista_baus = []
+		Mundos.lista_inimigos = []
 		
 		Inventario.inventario = []
+		Inventario.amuletos = []
 		HUD.LimpaInv()
 		
 		var inv:Array[Array] = config.get_value("save", "inventario")
@@ -284,7 +287,6 @@ func Load() -> bool:
 		
 		var am:Array[Array] = config.get_value("save", "amuletos")
 		for a:Array in am:
-			print(a)
 			Inventario.AddAmuleto(a[0], a[1])
 		
 		Inventario.tem_mapa = config.get_value("save", "tem_mapa")

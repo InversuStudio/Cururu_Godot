@@ -3,11 +3,14 @@ extends CharacterBody2D
 @export var velocidade: float = 0.0
 var dir: int = 1
 
-@onready var id:String = str(Mundos.fase_atual) + name
+var id:String = ""
 
 var tomou_dano:bool = false
 
 func _ready() -> void:
+	# Gera ID
+	id = str(Mundos.fase_atual) + name
+	# Checa se já foi morto
 	for i:String in Mundos.lista_inimigos:
 		if i == id:
 			queue_free()
@@ -47,8 +50,8 @@ func _physics_process(delta: float) -> void:
 	move_and_slide()
 
 func Morte() -> void:
-	%SomMorte.play()
 	Mundos.lista_inimigos.append(id)
+	%SomMorte.play()
 	#Mundos.SpawnMoeda(get_parent(), %SpawnMoeda.global_position)
 	%HurtBox.process_mode = PROCESS_MODE_DISABLED
 	%HitBox.process_mode = PROCESS_MODE_DISABLED

@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-@onready var id:String = str(Mundos.fase_atual) + name
+var id:String = ""
 
 @export var speed: float = 200.0
 @export var speedAtaque: float = 1250.0
@@ -23,6 +23,9 @@ var para_ataque:bool = false
 const poeira:PackedScene = preload("res://Objetos/Funcionalidade/VFX_POEIRA.tscn")
 
 func _ready() -> void:
+	# Gera ID
+	id = str(Mundos.fase_atual) + name
+	# Checa se já foi morto
 	for i:String in Mundos.lista_inimigos:
 		if i == id:
 			queue_free()

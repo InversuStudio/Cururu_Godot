@@ -1,9 +1,9 @@
 extends Node2D
 
+var id:String = ""
+
 @export var intervalo_tiro: float = 2.0
 @export var cena_projetil: PackedScene = null
-
-@onready var id: String = str(Mundos.fase_atual) + name
 
 var morreu: bool = false
 var pode_atirar: bool = true
@@ -12,10 +12,12 @@ var hunting: bool = false
 @onready var checa_wall: RayCast2D = %ChecaWall
 
 func _ready() -> void:
-	for i: String in Mundos.lista_inimigos:
+	# Gera ID
+	id = str(Mundos.fase_atual) + name
+	# Checa se já foi morto
+	for i:String in Mundos.lista_inimigos:
 		if i == id:
 			queue_free()
-			return
 	
 	%IntervaloTiro.connect("timeout", func() -> void:
 		if !morreu:
