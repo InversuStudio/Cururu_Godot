@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://cjajnhtghvrrs" path="res://Sprites/Cenário/Objetos/Quabraveis/Cristal/Folder 2.PNG" id="3_do5p1"]
 [ext_resource type="Texture2D" uid="uid://ba4bjbl5ibft" path="res://Sprites/Cenário/Objetos/Quabraveis/Cristal/Layer 4.PNG" id="3_o3v6a"]
 [ext_resource type="AudioStream" uid="uid://bn4cgre1rfojs" path="res://Audio/SFX/Cristal_SFX.mp3" id="6_m83di"]
+[ext_resource type="Texture2D" uid="uid://0agjwkmg3gef" path="res://Sprites/VFX/Iluminação/luz azul.png" id="7_n8mw8"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_rccpc"]
 animations = [{
@@ -42,6 +43,13 @@ metadata/_custom_type_script = "uid://hsdutxxttrp3"
 position = Vector2(0.9999924, -95)
 sprite_frames = SubResource("SpriteFrames_rccpc")
 autoplay = "default"
+
+[node name="PointLight2D" type="PointLight2D" parent="Sprite" unique_id=767464191]
+position = Vector2(-0.9999924, -68.000015)
+scale = Vector2(7.6, 7.6)
+color = Color(0, 0.34523332, 0.49344826, 0.83137256)
+range_layer_max = 1
+texture = ExtResource("7_n8mw8")
 
 [node name="HurtBox" parent="." unique_id=393218860 node_paths=PackedStringArray("comp_vida") instance=ExtResource("2_rccpc")]
 collision_layer = 16

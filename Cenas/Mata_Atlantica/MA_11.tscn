@@ -41,6 +41,7 @@
 [ext_resource type="Script" uid="uid://dd16yu704x6wt" path="res://Scripts/Componentes/BGM_Player.gd" id="26_jb1wv"]
 [ext_resource type="AudioStream" uid="uid://c7qftchbhu6xc" path="res://Audio/SFX/AMBIENTE/Musica_Jogo.mp3" id="27_vgqnr"]
 [ext_resource type="TileSet" uid="uid://b0nn6bkolhibj" path="res://TilesetChao.tres" id="30_n7put"]
+[ext_resource type="PackedScene" uid="uid://dcellneyankfd" path="res://Objetos/Props/TotemMagia.tscn" id="30_nf0t0"]
 [ext_resource type="Texture2D" uid="uid://cxa4pl0scvs5k" path="res://Sprites/VFX/Partículas/folhastx.png" id="34_8r8hw"]
 [ext_resource type="PackedScene" uid="uid://u28e3eudu6ch" path="res://Objetos/Funcionalidade/MainCamera.tscn" id="34_xqsk0"]
 [ext_resource type="Texture2D" uid="uid://0agjwkmg3gef" path="res://Sprites/VFX/Iluminação/luz azul.png" id="37_1fg2t"]
@@ -604,6 +605,18 @@ position = Vector2(2022, -794)
 position = Vector2(1230, -2940)
 drop_item = Array[PackedScene]([ExtResource("17_sjxar"), ExtResource("18_p7mcf")])
 
+[node name="TotemMagia" parent="0" unique_id=1098512559 instance=ExtResource("30_nf0t0")]
+position = Vector2(4607, -841)
+rotation = -1.3089969
+
+[node name="TotemMagia3" parent="0" unique_id=943827560 instance=ExtResource("30_nf0t0")]
+position = Vector2(4586, -672)
+rotation = -0.7853982
+
+[node name="TotemMagia2" parent="0" unique_id=223095454 instance=ExtResource("30_nf0t0")]
+position = Vector2(4411, -635)
+scale = Vector2(0.8, 0.8)
+
 [node name="Escorpiao" parent="0" unique_id=999671053 instance=ExtResource("14_jb1wv")]
 position = Vector2(2161, -2944)
 
@@ -628,6 +641,7 @@ process_material = SubResource("ParticleProcessMaterial_nf0t0")
 [node name="Folhas" type="GPUParticles2D" parent="0" unique_id=497644535]
 material = SubResource("CanvasItemMaterial_himbn")
 position = Vector2(3682, -2641)
+scale = Vector2(6.539764, -1.0089378)
 amount = 1000
 texture = ExtResource("34_8r8hw")
 lifetime = 5.0

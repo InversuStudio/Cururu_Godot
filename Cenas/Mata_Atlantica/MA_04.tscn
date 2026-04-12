@@ -52,6 +52,7 @@
 [ext_resource type="PackedScene" uid="uid://u48tpl3f3l20" path="res://Objetos/Props/DropGuarana.tscn" id="33_jvx3h"]
 [ext_resource type="Texture2D" uid="uid://jecy4bfqqqxu" path="res://Sprites/Cenário/Mata_Atlantica/Teto/Moita teste.png" id="34_dj0qt"]
 [ext_resource type="Texture2D" uid="uid://uq6dbjep5wva" path="res://Sprites/Cenário/Mata_Atlantica/Foreground/frontfolha.png" id="36_2h1ds"]
+[ext_resource type="PackedScene" uid="uid://dcellneyankfd" path="res://Objetos/Props/TotemMagia.tscn" id="37_05bps"]
 [ext_resource type="Texture2D" uid="uid://c2yapafbd3cnf" path="res://Sprites/Cenário/Mata_Atlantica/Foreground/cipó.png" id="37_x80na"]
 [ext_resource type="Texture2D" uid="uid://ocigo0xrfr6j" path="res://Sprites/Cenário/Tilemaps/TileChao.png" id="40_cfb5v"]
 [ext_resource type="AudioStream" uid="uid://c7qftchbhu6xc" path="res://Audio/SFX/AMBIENTE/Musica_Jogo.mp3" id="40_jvx3h"]
@@ -64,7 +65,7 @@
 [ext_resource type="Texture2D" uid="uid://cdoeovi1pkiyo" path="res://Sprites/Cenário/Mata_Atlantica/Interativos/amosatrra 2.png" id="53_05bps"]
 [ext_resource type="Texture2D" uid="uid://bbn2qnl3a7v5d" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/Arvoresv2/mata atlântica_0_20260313103853.PNG" id="53_2476y"]
 [ext_resource type="Texture2D" uid="uid://cabbe0o8t838t" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/Arvoresv2/mata atlântica_0_20260313103751.PNG" id="54_ktj4b"]
-[ext_resource type="PackedScene" uid="uid://bnubkn7kxj708" path="res://Objetos/Funcionalidade/MostraTela.tscn" id="54_puqih"]
+[ext_resource type="PackedScene" path="res://Objetos/Funcionalidade/MostraTela.tscn" id="54_puqih"]
 [ext_resource type="Texture2D" uid="uid://5l3wvmvbv06n" path="res://Sprites/UI/Dialogo/DICA_MIASMA.png" id="55_ivmm3"]
 [ext_resource type="FontFile" uid="uid://cmh0geo7e3aon" path="res://Dialogos/Font/MONTSERRAT-BLACK.TTF" id="56_boyx2"]
 
@@ -810,7 +811,7 @@ scale = Vector2(0.36729452, 0.36729452)
 texture = ExtResource("20_1rj2j")
 
 [node name="PedraMusgo2" type="Sprite2D" parent="Fundo/0" unique_id=1039407263]
-position = Vector2(-2266, -6202)
+position = Vector2(-2908, -6202)
 scale = Vector2(0.36729452, 0.36729452)
 texture = ExtResource("20_1rj2j")
 flip_h = true
@@ -883,6 +884,16 @@ position = Vector2(906, -6543)
 
 [node name="Morcego" parent="Fundo/0" unique_id=335208979 instance=ExtResource("24_bxttj")]
 position = Vector2(1726, -6860)
+
+[node name="TotemMagia" parent="Fundo/0" unique_id=1098512559 instance=ExtResource("37_05bps")]
+position = Vector2(-2295, -6012.9995)
+
+[node name="TotemMagia3" parent="Fundo/0" unique_id=1361076510 instance=ExtResource("37_05bps")]
+position = Vector2(-1983, -6012.9995)
+
+[node name="TotemMagia2" parent="Fundo/0" unique_id=608836523 instance=ExtResource("37_05bps")]
+position = Vector2(-2151.999, -6013)
+scale = Vector2(0.8, 0.8)
 
 [node name="Cururu" parent="Fundo/0" unique_id=253463539 instance=ExtResource("22_8a6rq")]
 z_index = 0

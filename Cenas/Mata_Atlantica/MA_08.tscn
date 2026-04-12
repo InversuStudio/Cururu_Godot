@@ -24,6 +24,7 @@
 [ext_resource type="PackedScene" uid="uid://cqyub70sv0ofp" path="res://Objetos/Props/SavePoint.tscn" id="19_5qg67"]
 [ext_resource type="Texture2D" uid="uid://0agjwkmg3gef" path="res://Sprites/VFX/Iluminação/luz azul.png" id="20_orup7"]
 [ext_resource type="PackedScene" uid="uid://2kargcp4546j" path="res://Objetos/NPCs/Naia.tscn" id="21_houb6"]
+[ext_resource type="PackedScene" uid="uid://dcellneyankfd" path="res://Objetos/Props/TotemMagia.tscn" id="22_rtb7l"]
 [ext_resource type="Texture2D" uid="uid://c8bkav2g3wyeu" path="res://Sprites/Cenário/Mata_Atlantica/Chao/moita2.png" id="22_v7od0"]
 [ext_resource type="Texture2D" uid="uid://dmmwsf5tpgg24" path="res://Sprites/Cenário/Mata_Atlantica/Interativos/ponte exemplo.png" id="23_0hq41"]
 [ext_resource type="Texture2D" uid="uid://jecy4bfqqqxu" path="res://Sprites/Cenário/Mata_Atlantica/Teto/Moita teste.png" id="23_esn82"]
@@ -261,7 +262,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 offset_left = -1608.0
 offset_top = -6180.9995
-offset_right = 1908.8125
+offset_right = 2484.9102
 offset_bottom = -5963.2725
 grow_horizontal = 2
 grow_vertical = 2
@@ -307,7 +308,7 @@ texture = ExtResource("9_sitov")
 material = SubResource("ShaderMaterial_nyrh8")
 offset_left = -1597.0
 offset_top = -6458.9995
-offset_right = 3993.205
+offset_right = 4122.913
 offset_bottom = -4993.8604
 scale = Vector2(0.9844004, 1.7800354)
 
@@ -315,7 +316,7 @@ scale = Vector2(0.9844004, 1.7800354)
 material = SubResource("ShaderMaterial_0n704")
 offset_left = 188.42105
 offset_top = -5960.0
-offset_right = 1485.421
+offset_right = 1381.0527
 offset_bottom = -4296.0
 
 [node name="CasaNaia" type="Sprite2D" parent="-1" unique_id=1765477441]
@@ -337,7 +338,7 @@ scale = Vector2(0.6173083, 0.6173083)
 texture = ExtResource("13_t4hgq")
 
 [node name="PedraLisa2" type="Sprite2D" parent="0" unique_id=1594014190]
-position = Vector2(1598.9175, -4499.25)
+position = Vector2(1893, -4499.25)
 scale = Vector2(0.44423145, 0.44423145)
 texture = ExtResource("13_t4hgq")
 
@@ -384,6 +385,13 @@ process_material = SubResource("ParticleProcessMaterial_fm07s")
 [node name="NPC-Basico" parent="0" unique_id=1473609202 instance=ExtResource("21_houb6")]
 position = Vector2(533.00006, -4691)
 scale = Vector2(0.7016272, 0.7016273)
+
+[node name="TotemMagia3" parent="0" unique_id=1098512559 instance=ExtResource("22_rtb7l")]
+position = Vector2(1693, -4489)
+
+[node name="TotemMagia2" parent="0" unique_id=1449649067 instance=ExtResource("22_rtb7l")]
+position = Vector2(1548, -4489)
+scale = Vector2(0.8, 0.8)
 
 [node name="Cururu" parent="0" unique_id=32676309 instance=ExtResource("8_c5tg8")]
 z_index = 0
