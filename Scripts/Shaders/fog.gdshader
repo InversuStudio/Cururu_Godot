@@ -1,12 +1,14 @@
 shader_type canvas_item;
 
 uniform vec4 fog_color : source_color = vec4(1.0, 1.0, 1.0, 1.0);
-uniform float density = 0.4;
-uniform float speed = 0.04;
-uniform float scale = 2.5;
+uniform float density : hint_range(0.0, 1.0) = 0.4;
+uniform float speed : hint_range(0.0, 1.0) = 0.04;
+uniform float scale : hint_range(0.1, 10.0) = 2.5;
 
 float hash(vec2 p) {
-    return fract(sin(dot(p, vec2(127.1, 311.7))) * 43758.5453123);
+    p = fract(p * vec2(123.34, 456.21));
+    p += dot(p, p + 45.32);
+    return fract(p.x * p.y);
 }
 
 float noise(vec2 p) {
@@ -20,38 +22,34 @@ float noise(vec2 p) {
 
     vec2 u = f * f * (3.0 - 2.0 * f);
 
-    return mix(a, b, u.x) +
-           (c - a) * u.y * (1.0 - u.x) +
-           (d - b) * u.x * u.y;
+    return mix(mix(a, b, u.x), mix(c, d, u.x), u.y);
 }
 
 float fbm(vec2 p) {
     float value = 0.0;
-    float amplitude = 0.5;
-    float frequency = 1.0;
 
-    for (int i = 0; i < 5; i++) {
-        value += noise(p * frequency) * amplitude;
-        frequency *= 2.0;
-        amplitude *= 0.5;
-    }
+    value += noise(p) * 0.5;
+    p *= 2.0;
+
+    value += noise(p) * 0.25;
+    p *= 2.0;
+
+    value += noise(p) * 0.125;
+    p *= 2.0;
+
+    value += noise(p) * 0.0625;
 
     return value;
 }
 
 void fragment() {
-    vec2 uv = UV * scale;
+    float t = TIME * speed;
 
-    // Fluxos diferentes quebram linhas retas
-    uv += vec2(
-        TIME * speed,
-        sin(TIME * 0.7) * speed * 0.5
-    );
+    vec2 uv = UV * scale;
+    uv += vec2(t, sin(t * 12.0) * 0.02);
 
     float n = fbm(uv);
-
-    // Curva suave de densidade
-    float alpha = smoothstep(0.3, 1.0, n) * density;
+    float alpha = smoothstep(0.35, 0.9, n) * density;
 
     COLOR = vec4(fog_color.rgb, alpha);
 }

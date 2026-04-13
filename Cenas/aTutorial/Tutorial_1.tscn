@@ -74,12 +74,17 @@
 [ext_resource type="Texture2D" uid="uid://cdoeovi1pkiyo" path="res://Sprites/Cenário/Mata_Atlantica/Interativos/amosatrra 2.png" id="53_idg5b"]
 [ext_resource type="PackedScene" uid="uid://1kp2cm82lp4b" path="res://Objetos/Props/arvoreacai.tscn" id="53_q2ysr"]
 [ext_resource type="AudioStream" uid="uid://b2vi4qav4gk5r" path="res://Audio/SFX/AMBIENTE/Cururu - Soundscape A.ogg" id="53_sje6b"]
-[ext_resource type="PackedScene" uid="uid://bnubkn7kxj708" path="res://Objetos/Funcionalidade/MostraTela.tscn" id="53_thr42"]
+[ext_resource type="PackedScene" path="res://Objetos/Funcionalidade/MostraTela.tscn" id="53_thr42"]
 [ext_resource type="PackedScene" uid="uid://dny88hy3w52nm" path="res://Objetos/Props/DropAcai.tscn" id="54_f5hdm"]
 [ext_resource type="Texture2D" uid="uid://daavc04bfrocb" path="res://Sprites/UI/Dialogo/DICA_VIDA.png" id="55_q2ysr"]
 [ext_resource type="Texture2D" uid="uid://bu66so2bkubke" path="res://Sprites/VFX/Iluminação/LightCururu2.png" id="55_sxmps"]
 [ext_resource type="FontFile" uid="uid://cmh0geo7e3aon" path="res://Dialogos/Font/MONTSERRAT-BLACK.TTF" id="56_q2ysr"]
 [ext_resource type="PackedScene" uid="uid://c6hglvets6hgp" path="res://Objetos/Funcionalidade/OtimizadorCena.tscn" id="80_thr42"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_thr42"]
+shader = ExtResource("3_3sctc")
+shader_parameter/darkness = 0.2000000095
+shader_parameter/lod = 0.70000003325
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_ny35b"]
 shader = ExtResource("3_3sctc")
@@ -100,7 +105,7 @@ shader_parameter/offset = 0.0
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_qeqrq"]
 shader = ExtResource("3_3sctc")
-shader_parameter/darkness = 0.10000000475
+shader_parameter/darkness = 0.0800000038
 shader_parameter/lod = 0.550000026125
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_rh2pu"]
@@ -297,17 +302,6 @@ position = Vector2(8158, -1329.5001)
 scale = Vector2(1.4155273, 1.4155273)
 texture = ExtResource("2_ev0np")
 
-[node name="ColorRect" type="ColorRect" parent="-4" unique_id=1202977465]
-material = SubResource("ShaderMaterial_ny35b")
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_top = -4121.3335
-offset_right = 7756.0
-offset_bottom = -998.6665
-grow_horizontal = 2
-grow_vertical = 2
-
 [node name="-3" type="CanvasLayer" parent="." unique_id=1692417625]
 follow_viewport_enabled = true
 follow_viewport_scale = 0.78
@@ -346,8 +340,8 @@ texture = ExtResource("5_3afnj")
 position = Vector2(7642.45, -1303.5)
 texture = ExtResource("5_3afnj")
 
-[node name="ColorRect" type="ColorRect" parent="-25" unique_id=1317634167]
-material = SubResource("ShaderMaterial_ny35b")
+[node name="Blur" type="ColorRect" parent="-25" unique_id=1317634167]
+material = SubResource("ShaderMaterial_thr42")
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -447,7 +441,7 @@ position = Vector2(5730.6816, -1391.3978)
 scale = Vector2(2.6785161, 2.678516)
 texture = ExtResource("7_u3noq")
 
-[node name="ColorRect" type="ColorRect" parent="-15/cenario03" unique_id=737726372]
+[node name="Blur" type="ColorRect" parent="-15/cenario03" unique_id=737726372]
 material = SubResource("ShaderMaterial_ny35b")
 anchors_preset = 15
 anchor_right = 1.0
@@ -625,7 +619,7 @@ position = Vector2(6613.9775, -993.54846)
 scale = Vector2(1.5863433, 1.5863432)
 texture = ExtResource("29_2gsqr")
 
-[node name="ColorRect" type="ColorRect" parent="-05/cenario01" unique_id=1996743918]
+[node name="Blur" type="ColorRect" parent="-05/cenario01" unique_id=1996743918]
 material = SubResource("ShaderMaterial_qeqrq")
 offset_left = -47.95508
 offset_top = -3386.6665
@@ -1105,85 +1099,105 @@ light_mask = 2
 position = Vector2(-13, 24)
 
 [node name="GramaReto" type="Sprite2D" parent="0/Chão/piso" unique_id=85607000]
+self_modulate = Color(1.9749014, 1.3486332, 0.29227707, 1)
 position = Vector2(-38658, -3288)
 texture = ExtResource("40_lymfm")
 
 [node name="GramaReto2" type="Sprite2D" parent="0/Chão/piso" unique_id=315285336]
+self_modulate = Color(1.9749014, 1.3486332, 0.29227707, 1)
 position = Vector2(-38116, -3290.5)
 texture = ExtResource("40_lymfm")
 
 [node name="GramaReto3" type="Sprite2D" parent="0/Chão/piso" unique_id=448221480]
+self_modulate = Color(1.9749014, 1.3486332, 0.29227707, 1)
 position = Vector2(-37556, -3290.5)
 texture = ExtResource("40_lymfm")
 
 [node name="GramaReto4" type="Sprite2D" parent="0/Chão/piso" unique_id=1098585363]
+self_modulate = Color(1.9749014, 1.3486332, 0.29227707, 1)
 position = Vector2(-37000, -3288)
 texture = ExtResource("40_lymfm")
 
 [node name="GramaReto18" type="Sprite2D" parent="0/Chão/piso" unique_id=1459844181]
+self_modulate = Color(1.9749014, 1.3486332, 0.29227707, 1)
 position = Vector2(-36764, -3288)
 texture = ExtResource("40_lymfm")
 
 [node name="GramaReto5" type="Sprite2D" parent="0/Chão/piso" unique_id=237773712]
+self_modulate = Color(1.9749014, 1.3486332, 0.29227707, 1)
 position = Vector2(-36503, -3288)
 texture = ExtResource("40_lymfm")
 
 [node name="GramaReto6" type="Sprite2D" parent="0/Chão/piso" unique_id=1381787958]
+self_modulate = Color(1.9749014, 1.3486332, 0.29227707, 1)
 position = Vector2(-35969, -3288)
 texture = ExtResource("40_lymfm")
 
 [node name="GramaReto7" type="Sprite2D" parent="0/Chão/piso" unique_id=656021340]
+self_modulate = Color(1.9749014, 1.3486332, 0.29227707, 1)
 position = Vector2(-35427, -3288)
 texture = ExtResource("40_lymfm")
 
 [node name="GramaReto8" type="Sprite2D" parent="0/Chão/piso" unique_id=1005323977]
+self_modulate = Color(1.9749014, 1.3486332, 0.29227707, 1)
 position = Vector2(-34885, -3288)
 texture = ExtResource("40_lymfm")
 
 [node name="GramaReto9" type="Sprite2D" parent="0/Chão/piso" unique_id=999019526]
+self_modulate = Color(1.9749014, 1.3486332, 0.29227707, 1)
 position = Vector2(-34351, -3288)
 texture = ExtResource("40_lymfm")
 
 [node name="GramaReto13" type="Sprite2D" parent="0/Chão/piso" unique_id=1092140647]
+self_modulate = Color(1.9749014, 1.3486332, 0.29227707, 1)
 position = Vector2(-32198, -3288)
 texture = ExtResource("40_lymfm")
 
 [node name="GramaReto14" type="Sprite2D" parent="0/Chão/piso" unique_id=1816851310]
+self_modulate = Color(1.9749014, 1.3486332, 0.29227707, 1)
 position = Vector2(-31656, -3288)
 texture = ExtResource("40_lymfm")
 
 [node name="GramaReto15" type="Sprite2D" parent="0/Chão/piso" unique_id=1645614858]
+self_modulate = Color(1.9749014, 1.3486332, 0.29227707, 1)
 position = Vector2(-31122, -3288)
 texture = ExtResource("40_lymfm")
 
 [node name="GramaReto16" type="Sprite2D" parent="0/Chão/piso" unique_id=840008621]
+self_modulate = Color(1.9749014, 1.3486332, 0.29227707, 1)
 position = Vector2(-30585, -3288)
 texture = ExtResource("40_lymfm")
 
 [node name="GramaReto17" type="Sprite2D" parent="0/Chão/piso" unique_id=1507943439]
+self_modulate = Color(1.9749014, 1.3486332, 0.29227707, 1)
 position = Vector2(-30043, -3288)
 texture = ExtResource("40_lymfm")
 
 [node name="ChapExterno" type="Sprite2D" parent="0/Chão/piso" unique_id=196409777]
+self_modulate = Color(1.9749014, 1.3486332, 0.29227707, 1)
 position = Vector2(-34129, -3189)
 rotation = -1.5707964
 texture = ExtResource("41_3tgem")
 
 [node name="ChapExterno2" type="Sprite2D" parent="0/Chão/piso" unique_id=799590053]
+self_modulate = Color(1.9749014, 1.3486332, 0.29227707, 1)
 position = Vector2(-32461, -3189)
 rotation = -1.5707964
 texture = ExtResource("41_3tgem")
 flip_v = true
 
 [node name="GramaReto19" type="Sprite2D" parent="0/Chão" unique_id=832044417]
+self_modulate = Color(1.9749014, 1.3486332, 0.29227707, 1)
 position = Vector2(-33763, -3016)
 texture = ExtResource("40_lymfm")
 
 [node name="GramaReto20" type="Sprite2D" parent="0/Chão" unique_id=310650914]
+self_modulate = Color(1.9749014, 1.3486332, 0.29227707, 1)
 position = Vector2(-33229, -3016)
 texture = ExtResource("40_lymfm")
 
 [node name="GramaReto21" type="Sprite2D" parent="0/Chão" unique_id=380567985]
+self_modulate = Color(1.9749014, 1.3486332, 0.29227707, 1)
 position = Vector2(-32855, -3016)
 texture = ExtResource("40_lymfm")
 
@@ -1646,8 +1660,8 @@ texture = ExtResource("38_vw05h")
 
 [node name="5c67d19fAad64a128e7fAe0bbbab2055" type="Sprite2D" parent="2/Cipó" unique_id=1642565872]
 self_modulate = Color(0.012617188, 0.012617188, 0.012617188, 1)
-position = Vector2(-31571.885, -3986.7341)
-scale = Vector2(1.1502928, 1.1502928)
+position = Vector2(-31431.703, -3823.7813)
+scale = Vector2(0.91344273, 0.91344273)
 texture = ExtResource("38_vw05h")
 flip_h = true
 

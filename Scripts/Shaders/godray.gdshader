@@ -1,6 +1,5 @@
 shader_type canvas_item;
 
-// Required in Godot 4 for screen sampling
 uniform sampler2D SCREEN_TEXTURE : hint_screen_texture, filter_linear_mipmap;
 
 /*
@@ -9,10 +8,7 @@ uniform sampler2D SCREEN_TEXTURE : hint_screen_texture, filter_linear_mipmap;
     =========================
 */
 
-// Espelha o efeito no eixo horizontal (X)
 uniform bool flip_horizontal = false;
-
-// Espelha o efeito no eixo vertical (Y)
 uniform bool flip_vertical = false;
 
 /*
@@ -44,11 +40,10 @@ uniform float seed = 5.0;
     =========================
 */
 
-float random(vec2 _uv) {
-    return fract(
-        sin(dot(_uv.xy, vec2(12.9898, 78.233))) *
-        43758.5453123
-    );
+float random(vec2 p) {
+    p = fract(p * vec2(123.34, 345.45));
+    p += dot(p, p + 34.345);
+    return fract(p.x * p.y);
 }
 
 float noise(vec2 uv) {
@@ -62,9 +57,7 @@ float noise(vec2 uv) {
 
     vec2 u = f * f * (3.0 - 2.0 * f);
 
-    return mix(a, b, u.x) +
-           (c - a) * u.y * (1.0 - u.x) +
-           (d - b) * u.x * u.y;
+    return mix(mix(a, b, u.x), mix(c, d, u.x), u.y);
 }
 
 /*
@@ -73,14 +66,16 @@ float noise(vec2 uv) {
     =========================
 */
 
-mat2 rotate(float _angle) {
+mat2 rotate(float a) {
+    float s = sin(a);
+    float c = cos(a);
     return mat2(
-        vec2(cos(_angle), -sin(_angle)),
-        vec2(sin(_angle),  cos(_angle))
+        vec2(c, -s),
+        vec2(s,  c)
     );
 }
 
-vec4 screen(vec4 base, vec4 blend) {
+vec3 screen_blend(vec3 base, vec3 blend) {
     return 1.0 - (1.0 - base) * (1.0 - blend);
 }
 
@@ -91,46 +86,35 @@ vec4 screen(vec4 base, vec4 blend) {
 */
 
 void fragment() {
-
-    /*
-        UV base com opção de espelhamento
-    */
     vec2 uv = UV;
 
-    if (flip_horizontal) {
-        uv.x = 1.0 - uv.x;
-    }
-
-    if (flip_vertical) {
-        uv.y = 1.0 - uv.y;
-    }
+    /*
+        Espelhamento sem blocos extras complexos
+    */
+    uv.x = flip_horizontal ? (1.0 - uv.x) : uv.x;
+    uv.y = flip_vertical ? (1.0 - uv.y) : uv.y;
 
     /*
-        Transformação principal dos UVs
+        Pré-cálculos
     */
-    vec2 transformed_uv =
-        (rotate(angle) * (uv - position)) /
-        ((uv.y + spread) - (uv.y * spread));
+    float t1 = sin(TIME * 0.1 * speed);
+    float t2 = sin(TIME * 0.2 * speed);
+
+    float denom = (uv.y + spread) - (uv.y * spread);
+    vec2 transformed_uv = (rotate(angle) * (uv - vec2(position))) / denom;
 
     /*
-        Camada 1 – raios largos (fundo)
+        Raios
     */
-    vec2 ray1 = vec2(
+    float ray1_x =
         transformed_uv.x * ray1_density +
-        sin(TIME * 0.1 * speed) * (ray1_density * 0.2) +
-        seed,
-        1.0
-    );
+        t1 * (ray1_density * 0.2) +
+        seed;
 
-    /*
-        Camada 2 – raios finos (frente)
-    */
-    vec2 ray2 = vec2(
+    float ray2_x =
         transformed_uv.x * ray2_density +
-        sin(TIME * 0.2 * speed) * (ray1_density * 0.2) +
-        seed,
-        1.0
-    );
+        t2 * (ray1_density * 0.2) +
+        seed;
 
     /*
         Corte lateral
@@ -138,42 +122,40 @@ void fragment() {
     float cut = step(cutoff, transformed_uv.x) *
                 step(cutoff, 1.0 - transformed_uv.x);
 
-    ray1 *= cut;
-    ray2 *= cut;
+    /*
+        Noise combinado
+    */
+    float rays = noise(vec2(ray1_x, 1.0)) +
+                 noise(vec2(ray2_x, 1.0)) * ray2_intensity;
+
+    rays *= cut;
 
     /*
-        Combinação das camadas
+        Clamp condicional simplificado
     */
-    float rays;
-    if (hdr) {
-        rays = noise(ray1) + (noise(ray2) * ray2_intensity);
-    } else {
-        rays = clamp(
-            noise(ray1) + (noise(ray2) * ray2_intensity),
-            0.0,
-            1.0
-        );
+    if (!hdr) {
+        rays = clamp(rays, 0.0, 1.0);
     }
 
     /*
-        Fade vertical e nas bordas
+        Fade vertical e de borda
     */
-    rays *= smoothstep(0.0, falloff, 1.0 - uv.y);
-    rays *= smoothstep(cutoff, edge_fade + cutoff, transformed_uv.x);
-    rays *= smoothstep(cutoff, edge_fade + cutoff, 1.0 - transformed_uv.x);
+    float fade_vertical = smoothstep(0.0, falloff, 1.0 - uv.y);
+    float fade_left = smoothstep(cutoff, edge_fade + cutoff, transformed_uv.x);
+    float fade_right = smoothstep(cutoff, edge_fade + cutoff, 1.0 - transformed_uv.x);
+
+    rays *= fade_vertical * fade_left * fade_right;
 
     /*
-        Coloração
+        Cor
     */
     vec3 shine = vec3(rays) * color.rgb;
 
     /*
-        Blend Screen com o fundo
+        Screen blend com fundo
     */
-    shine = screen(
-        texture(SCREEN_TEXTURE, SCREEN_UV),
-        vec4(shine, 1.0)
-    ).rgb;
+    vec3 screen_col = texture(SCREEN_TEXTURE, SCREEN_UV).rgb;
+    shine = screen_blend(screen_col, shine);
 
     COLOR = vec4(shine, rays * color.a);
 }
