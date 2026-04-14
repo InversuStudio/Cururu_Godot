@@ -40,7 +40,9 @@ func Enter() -> void:
 	%Anim.play(combo_anim[combo_num] + state, -1, GameData.ataque_anim_speed)
 	var next_combo = combo_num + 1
 	var fx:Node2D = vfx.instantiate()
-	fx.get_child(1).hit.connect(Hit)
+	var hit:HitBox = fx.get_child(1)
+	hit.hit.connect(Hit)
+	hit.monitoring = false  # ← começa desativada antes de add_child
 	fx.global_position = %PosMelee.global_position
 	parent.get_parent().add_child(fx)
 	fx.scale.x = -1 if parent.sprite.flip_h else 1
@@ -51,6 +53,13 @@ func Enter() -> void:
 	
 	%SFX_Ataque.stream = sfx[combo_num]
 	%SFX_Ataque.play()
+	
+	# Ativa hitbox a partir do segundo frame
+	c.frame_changed.connect(func():
+		if not is_instance_valid(hit):
+			return
+		if c.frame > 1:
+			hit.monitoring = true)
 	
 	await c.animation_finished
 	fx.queue_free()
@@ -108,6 +117,7 @@ func _on_melee_timeout() -> void:
 	combo_num = 0
 
 func Hit(pos_target:Vector2, hit:HitBox, _layer:int) -> void:
+	print("HIT no frame: ", fx_atual.get_child(0).frame)
 	var dir:float = -1. if pos_target.x > parent.global_position.x else 1.0
 	var up:float = 0.0 if parent.is_on_floor() else -800.0
 	var push:float = ((2.0 * distancia_push) / tempo_push) * 128
