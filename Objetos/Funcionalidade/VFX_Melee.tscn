@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://dr7oj8vguihm0"]
 
+[ext_resource type="Script" uid="uid://c4vcokdhsqowc" path="res://Objetos/Funcionalidade/vfx_melee.gd" id="1_8phdt"]
 [ext_resource type="Texture2D" uid="uid://dlhwc5an87l0v" path="res://Sprites/Cururu/Melee/V2/ATAQUE_2_HITS_AGUA/CURURU_ATAQUE_15.png" id="1_v4lfw"]
 [ext_resource type="Texture2D" uid="uid://upb5alx2ftkv" path="res://Sprites/Cururu/Melee/V2/ATAQUE_2_HITS_AGUA/CURURU_ATAQUE_17.png" id="3_ddfql"]
 [ext_resource type="Texture2D" uid="uid://bqqs2scymdtjo" path="res://Sprites/Cururu/Melee/V2/ATAQUE_2_HITS_AGUA/CURURU_ATAQUE_19.png" id="4_fensd"]
@@ -7,7 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://b03gs8133u1u1" path="res://Sprites/Cururu/Melee/V2/ATAQUE_2_HITS_AGUA/CURURU_ATAQUE_23.png" id="7_hat3q"]
 [ext_resource type="Texture2D" uid="uid://ofjwuivnuj0i" path="res://Sprites/Cururu/Melee/V2/ATAQUE_2_HITS_AGUA/CURURU_ATAQUE_25.png" id="8_yfr1s"]
 [ext_resource type="Texture2D" uid="uid://ccadpupbwhkl4" path="res://Sprites/Cururu/Melee/V2/ATAQUE_2_HITS_AGUA/CURURU_ATAQUE_29.png" id="10_2lgjf"]
-[ext_resource type="PackedScene" uid="uid://bvobjk05orpm2" path="res://Objetos/Funcionalidade/VFX_Splashhit.tscn" id="10_c8n85"]
+[ext_resource type="PackedScene" path="res://Objetos/Funcionalidade/VFX_Splashhit.tscn" id="10_c8n85"]
 [ext_resource type="Texture2D" uid="uid://cw3cdq4up1xqy" path="res://Sprites/Cururu/Melee/V2/ATAQUE_2_HITS_AGUA/CURURU_ATAQUE_31.png" id="11_1txr8"]
 [ext_resource type="PackedScene" uid="uid://pc4mgv2nv8af" path="res://Objetos/Funcionalidade/CompHitBox.tscn" id="12_hena8"]
 
@@ -55,6 +56,7 @@ animations = [{
 }]
 
 [node name="MeleeVFX" type="Node2D" unique_id=42300229]
+script = ExtResource("1_8phdt")
 
 [node name="Animation" type="AnimatedSprite2D" parent="." unique_id=1976484140]
 self_modulate = Color(1, 1, 1, 0.6862745)
