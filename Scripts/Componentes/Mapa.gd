@@ -14,6 +14,7 @@ func _process(delta: float) -> void:
 	if move:
 		conteudo.position += move * move_speed * delta
 
-func Start() -> void:
-	for c:MapaSala in conteudo.get_children():
-		c.Start()
+func UpdateMapa() -> void:
+	for c:Node in conteudo.get_children():
+		if c is MapaSala:
+			c.Start()

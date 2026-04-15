@@ -44,6 +44,9 @@ func _input(_event: InputEvent) -> void:
 		if Input.is_action_just_pressed("select"):
 			mapa.visible = not mapa.visible
 	
+	if Input.is_physical_key_pressed(KEY_2):
+		print(Mundos.fases_visitadas)
+	
 	if tipo_input != GameData.tipo_input:
 		tipo_input = GameData.tipo_input
 		MudaImgInput()
@@ -142,7 +145,7 @@ func IniciaHUD() -> void:
 		UpdateMoeda()
 		item_rapido.IniciaBarra()
 		
-		mapa.Start()
+		mapa.UpdateMapa()
 		
 		# Marca como configurado
 		configurado = true

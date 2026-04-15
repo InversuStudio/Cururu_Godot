@@ -216,6 +216,7 @@ func Save() -> void:
 	config.set_value("save", "lista_coracao", Mundos.pecas_coracao)
 	config.set_value("save", "areas_secretas", Mundos.areas_secretas)
 	config.set_value("save", "tem_mapa", Inventario.tem_mapa)
+	config.set_value("save", "fases_visitadas", Mundos.fases_visitadas)
 	
 	var save_path:String = OS.get_system_dir(OS.SYSTEM_DIR_DOCUMENTS) + "/SavedGames"
 	# Checa se pasta SavedGames existe
@@ -249,53 +250,53 @@ func Save() -> void:
 func Load() -> bool:
 	# Checa se o arquivo de save existe
 	if ChecaData() != "":
-		# Se existir, lê os dados
+		# Se existir, lê todos os dados necessários
 		posicao = config.get_value("save", "posicao")
 		direcao = config.get_value("save", "direcao")
-		
-		var trocou:bool = false
-		# Carrega o jogo, com os dados certos
-		var fase:StringName = config.get_value("save", "fase")
-		for f:PackedStringArray in Mundos.lista_fases:
-			if f[1].get_slice(".", 0) == fase:
-				var dest:PackedStringArray = f[1].split(".")
-				LoadCena.Load(
-					"res://Cenas/%s/%s" % [f[0], dest[0]+"."+dest[1]]
-					, true, posicao)
-				trocou = true
-				break
-		if !trocou:
-			printerr("Cena não encontrada ao carregar save")
-			return false
-		
 		vida_max = config.get_value("save", "vida_max")
 		moedas = config.get_value("save", "moedas", 0)
-		upgrade_num = config.get_value("save", "upgrades")
-		peca_coracao = config.get_value("save", "peca_coracao")
-		Mundos.pecas_coracao = config.get_value("save", "lista_coracao")
-		Mundos.areas_secretas = config.get_value("save", "areas_secretas")
+		upgrade_num = config.get_value("save", "upgrades", 0)
+		peca_coracao = config.get_value("save", "peca_coracao", [])
+		
+		Mundos.pecas_coracao = config.get_value("save", "lista_coracao", [])
+		Mundos.areas_secretas = config.get_value("save", "areas_secretas", [])
 		Mundos.lista_baus = []
 		Mundos.lista_inimigos = []
+		Mundos.fases_visitadas = config.get_value("save", "fases_visitadas", [])
 		
 		Inventario.inventario = []
 		Inventario.amuletos = []
 		HUD.LimpaInv()
 		
-		var inv:Array[Array] = config.get_value("save", "inventario")
+		var inv:Array[Array] = config.get_value("save", "inventario", [])
 		for i:Array in inv:
 			Inventario.AddItem(i[0], i[1])
 		
-		var am:Array[Array] = config.get_value("save", "amuletos")
+		var am:Array[Array] = config.get_value("save", "amuletos", [])
 		for a:Array in am:
 			Inventario.AddAmuleto(a[0], a[1])
 		
-		Inventario.tem_mapa = config.get_value("save", "tem_mapa")
+		Inventario.tem_mapa = config.get_value("save", "tem_mapa", false)
 		
 		if vida_max > 0:
 			vida_atual = vida_max
 		if magia_max > 0:
 			magia_atual = magia_max
 		miasma = 0
+		
+		# Carrega o jogo, com os dados certos
+		var trocou:bool = false
+		var fase:StringName = config.get_value("save", "fase")
+		for f:PackedStringArray in Mundos.lista_fases:
+			if f[1].get_slice(".", 0) == fase:
+				LoadCena.Load(
+					"res://Cenas/%s/%s" % [f[0], f[1]]
+					, true, posicao)
+				trocou = true
+				break
+		if !trocou:
+			printerr("Cena não encontrada ao carregar save")
+			return false
 		return true
 	printerr("SAVE NÃO ENCONTRADO")
 	return false
@@ -330,3 +331,6 @@ func ResetData() -> void:
 	
 	peca_coracao = 0
 	Mundos.pecas_coracao = []
+	Mundos.fases_visitadas = []
+	Mundos.lista_inimigos = []
+	Mundos.lista_baus = []

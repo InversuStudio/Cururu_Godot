@@ -3,13 +3,10 @@
 [ext_resource type="Script" uid="uid://b3xlsh6k88jre" path="res://Scripts/Componentes/MapaSala.gd" id="1_200xy"]
 
 [node name="Sala" type="Control" unique_id=61298990]
-visible = false
 layout_mode = 3
 anchors_preset = 0
-offset_left = 184.0
-offset_top = 664.0
-offset_right = 470.0
-offset_bottom = 777.0
+offset_right = 286.0
+offset_bottom = 113.0
 script = ExtResource("1_200xy")
 
 [node name="In" type="ColorRect" parent="." unique_id=1361796577]
