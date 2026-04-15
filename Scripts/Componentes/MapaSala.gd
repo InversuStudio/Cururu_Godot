@@ -5,12 +5,14 @@ class_name MapaSala extends Control
 @export_tool_button("Update Tamanho") var update_sala = UpdateSala
 
 func _ready() -> void:
+	# Define highlight da área atual ao trocar de fase
 	LoadCena.connect("fase_mudou", func() -> void:
-		var f:PackedStringArray = fase.split("/")
-		if f[f.size() - 1] == Mundos.fase_atual + ".tscn":
+		var nome_fase:PackedStringArray = fase.split("/")
+		if nome_fase[nome_fase.size() - 1] == Mundos.fase_atual + ".tscn":
 			show()
 			%In.show()
-		else: %In.hide()
+		else:
+			%In.hide()
 	)
 	%In.hide()
 
@@ -21,12 +23,11 @@ func Start() -> void:
 		for nome_lista:StringName in Mundos.fases_visitadas:
 			var new:StringName = nome.replace(".tscn", "")
 			if nome_lista == new:
-				print("TO MOSTRANDO")
 				show()
-			else: hide()
-	else:
-		hide()
+				return
+	hide()
 
+# Usado apenas no editor
 func UpdateSala() -> void:
 	if !Engine.is_editor_hint(): return
 	if ResourceLoader.exists(fase):
@@ -41,3 +42,4 @@ func UpdateSala() -> void:
 			if limit:
 				size = limit.size / 40
 			instance.queue_free()
+			print_rich("[color=green]SALA ATUALIZADA")

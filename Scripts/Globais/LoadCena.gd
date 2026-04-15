@@ -20,10 +20,6 @@ func Load(lugar:StringName, detalhado:bool=false, pos:Vector2=Vector2.ZERO) -> v
 	# Espera frame de física e troca para tela de loading
 	await get_tree().physics_frame
 	get_tree().change_scene_to_file("res://UI/TelaCarregando.tscn")
-	#await get_tree().scene_changed
-	# Aplica Fade In
-	#Fade.FadeIn()
-	#await Fade.terminou
 	# Carrega nova fase
 	ResourceLoader.load_threaded_request(next_path)
 	is_load = true
@@ -42,9 +38,6 @@ func _process(_delta: float) -> void:
 		FazCoisa()
 
 func FazCoisa() -> void:
-	# Aplica Fade Out
-	#Fade.FadeOut()
-	#await Fade.terminou
 	# Muda a cena para o arquivo carregado
 	var cena:PackedScene = ResourceLoader.load_threaded_get(next_path)
 	get_tree().change_scene_to_packed(cena)
@@ -55,8 +48,9 @@ func FazCoisa() -> void:
 	# Armazena o nome da fase atual
 	var nome:PackedStringArray = next_path.split("/", false)
 	var n:String = nome[nome.size() - 1]
+	# Adiciona fase atual se não estiver na lista
 	Mundos.fase_atual = n.get_slice(".", 0)
-	if !Mundos.fases_visitadas.find(Mundos.fase_atual):
+	if !Mundos.fases_visitadas.has(Mundos.fase_atual):
 		Mundos.fases_visitadas.append(Mundos.fase_atual)
 	# Reseta tudo se player morreu e não tem save
 	if GameData.ChecaData() == "" and GameData.player_morreu:

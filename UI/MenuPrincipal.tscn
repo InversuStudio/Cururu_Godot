@@ -82,6 +82,7 @@ theme_override_font_sizes/font_size = 40
 text = "Novo Jogo"
 
 [node name="Sair" type="Button" parent="HBoxContainer" unique_id=1889683076]
+unique_name_in_owner = true
 custom_minimum_size = Vector2(350, 100)
 layout_mode = 2
 size_flags_horizontal = 3
@@ -97,7 +98,3 @@ volume_db = -15.0
 script = ExtResource("5_e3fqx")
 musica = ExtResource("5_6y4ar")
 metadata/_custom_type_script = "uid://dd16yu704x6wt"
-
-[connection signal="pressed" from="HBoxContainer/Continuar" to="." method="_on_fase_teste_pressed"]
-[connection signal="pressed" from="HBoxContainer/NovoJogo" to="." method="_on_main_pressed"]
-[connection signal="pressed" from="HBoxContainer/Sair" to="." method="_on_sair_pressed"]
