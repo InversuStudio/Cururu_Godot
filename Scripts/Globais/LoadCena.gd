@@ -5,6 +5,7 @@ var next_pos:Vector2 = Vector2.ZERO
 var usa_pos:bool = false
 
 var is_load:bool = false
+signal fase_mudou
 
 func Load(lugar:StringName, detalhado:bool=false, pos:Vector2=Vector2.ZERO) -> void:
 	# Despausa cena, por precaução
@@ -55,6 +56,8 @@ func FazCoisa() -> void:
 	var nome:PackedStringArray = next_path.split("/", false)
 	var n:String = nome[nome.size() - 1]
 	Mundos.fase_atual = n.get_slice(".", 0)
+	if !Mundos.fases_visitadas.find(Mundos.fase_atual):
+		Mundos.fases_visitadas.append(Mundos.fase_atual)
 	# Reseta tudo se player morreu e não tem save
 	if GameData.ChecaData() == "" and GameData.player_morreu:
 		GameData.moedas = 0
@@ -63,3 +66,4 @@ func FazCoisa() -> void:
 	Console.MudaAbaSelect()
 	# Inicia Fade In
 	Fade.FadeIn()
+	fase_mudou.emit()

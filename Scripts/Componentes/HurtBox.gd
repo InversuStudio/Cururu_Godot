@@ -65,7 +65,9 @@ func RecebeDano(dano:int, pos_target:Vector2) -> void:
 		# Inicia cooldown
 		%Timer.start()
 	# Toca som de dano
-	if hit_sfx: %SFX.play()
+	if hit_sfx:
+		%SFX.pitch_scale = randf_range(.9, 1.1) 
+		%SFX.play()
 	# VFX dano
 	if sprite:
 		if sprite.material == null: return

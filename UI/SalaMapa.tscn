@@ -1,0 +1,57 @@
+[gd_scene format=3 uid="uid://dytwc5rvtwh68"]
+
+[ext_resource type="Script" uid="uid://b3xlsh6k88jre" path="res://Scripts/Componentes/MapaSala.gd" id="1_200xy"]
+
+[node name="Sala" type="Control" unique_id=61298990]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_left = 184.0
+offset_top = 664.0
+offset_right = 470.0
+offset_bottom = 777.0
+script = ExtResource("1_200xy")
+
+[node name="In" type="ColorRect" parent="." unique_id=1361796577]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(1, 0.52854663, 0.22631818, 1)
+
+[node name="Esquerda" type="ColorRect" parent="." unique_id=297505291]
+custom_minimum_size = Vector2(10, 0)
+layout_mode = 1
+anchors_preset = 9
+anchor_bottom = 1.0
+grow_vertical = 2
+
+[node name="Direita" type="ColorRect" parent="." unique_id=128196909]
+custom_minimum_size = Vector2(10, 0)
+layout_mode = 1
+anchors_preset = 11
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 0
+grow_vertical = 2
+
+[node name="Cima" type="ColorRect" parent="." unique_id=748582822]
+custom_minimum_size = Vector2(0, 10)
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+grow_horizontal = 2
+
+[node name="Baixo" type="ColorRect" parent="." unique_id=1014248622]
+custom_minimum_size = Vector2(0, 10)
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 0
