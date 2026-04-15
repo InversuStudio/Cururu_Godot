@@ -32,7 +32,7 @@ size = Vector2(184, 217)
 
 [node name="TotemMagia" type="Node2D" unique_id=1098512559]
 script = ExtResource("1_rccpc")
-magia_a_recuperar = 5.0
+magia_a_recuperar = 10
 
 [node name="Vida" type="Node" parent="." unique_id=574520857]
 script = ExtResource("1_qwkpf")

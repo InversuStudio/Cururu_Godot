@@ -1,0 +1,160 @@
+[gd_scene format=3 uid="uid://d11uewa10yhje"]
+
+[ext_resource type="Script" uid="uid://4nnpjk3k6gns" path="res://Scripts/Componentes/Mapa.gd" id="1_mg8rq"]
+[ext_resource type="PackedScene" uid="uid://dytwc5rvtwh68" path="res://UI/SalaMapa.tscn" id="2_tsan8"]
+
+[node name="Mapa" type="PanelContainer" unique_id=951120903]
+process_mode = 2
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_mg8rq")
+
+[node name="Conteudo" type="Control" parent="." unique_id=407332579]
+layout_mode = 2
+
+[node name="Tutorial_1" parent="Conteudo" unique_id=61298990 instance=ExtResource("2_tsan8")]
+visible = true
+layout_mode = 0
+offset_left = 26.0
+offset_top = 584.0
+offset_right = 252.54999
+offset_bottom = 636.55
+fase = &"res://Cenas/aTutorial/Tutorial_1.tscn"
+
+[node name="Tutorial_2" parent="Conteudo" unique_id=1620328091 instance=ExtResource("2_tsan8")]
+visible = true
+layout_mode = 0
+offset_left = 263.0
+offset_top = 563.0
+offset_right = 604.575
+offset_bottom = 635.675
+fase = &"res://Cenas/aTutorial/Tutorial_2.tscn"
+
+[node name="Tutorial_3" parent="Conteudo" unique_id=1081949037 instance=ExtResource("2_tsan8")]
+visible = true
+layout_mode = 0
+offset_left = 615.0
+offset_top = 562.0
+offset_right = 882.7002
+offset_bottom = 738.8149
+fase = &"res://Cenas/aTutorial/Tutorial_3.tscn"
+
+[node name="MA_01" parent="Conteudo" unique_id=90560223 instance=ExtResource("2_tsan8")]
+visible = true
+layout_mode = 0
+offset_left = 891.0
+offset_top = 702.0
+offset_right = 993.15
+offset_bottom = 740.025
+fase = &"res://Cenas/Mata_Atlantica/MA_01.tscn"
+
+[node name="MA_02" parent="Conteudo" unique_id=97529208 instance=ExtResource("2_tsan8")]
+visible = true
+layout_mode = 0
+offset_left = 1003.0
+offset_top = 702.0
+offset_right = 1288.25
+offset_bottom = 767.85
+fase = &"res://Cenas/Mata_Atlantica/MA_02.tscn"
+
+[node name="MA_03" parent="Conteudo" unique_id=1791233768 instance=ExtResource("2_tsan8")]
+visible = true
+layout_mode = 0
+offset_left = 1296.0
+offset_top = 601.0
+offset_right = 1388.65
+offset_bottom = 767.55
+fase = &"res://Cenas/Mata_Atlantica/MA_03.tscn"
+
+[node name="MA_04" parent="Conteudo" unique_id=1508449254 instance=ExtResource("2_tsan8")]
+visible = true
+layout_mode = 0
+offset_left = 981.0
+offset_top = 557.0
+offset_right = 1288.1
+offset_bottom = 654.6
+fase = &"res://Cenas/Mata_Atlantica/MA_04.tscn"
+
+[node name="MA_05" parent="Conteudo" unique_id=1044977682 instance=ExtResource("2_tsan8")]
+visible = true
+layout_mode = 0
+offset_left = 1198.0
+offset_top = 659.0
+offset_right = 1288.475
+offset_bottom = 698.275
+fase = &"res://Cenas/Mata_Atlantica/MA_05.tscn"
+
+[node name="MA_06" parent="Conteudo" unique_id=1686079147 instance=ExtResource("2_tsan8")]
+visible = true
+layout_mode = 0
+offset_left = 1398.0
+offset_top = 602.0
+offset_right = 1593.1
+offset_bottom = 656.525
+fase = &"res://Cenas/Mata_Atlantica/MA_06.tscn"
+
+[node name="MA_07" parent="Conteudo" unique_id=1867248754 instance=ExtResource("2_tsan8")]
+visible = true
+layout_mode = 0
+offset_left = 1602.0
+offset_top = 534.0
+offset_right = 1681.95
+offset_bottom = 656.775
+fase = &"res://Cenas/Mata_Atlantica/MA_07.tscn"
+
+[node name="MA_08" parent="Conteudo" unique_id=1264043500 instance=ExtResource("2_tsan8")]
+visible = true
+layout_mode = 0
+offset_left = 1484.0
+offset_top = 534.0
+offset_right = 1592.075
+offset_bottom = 583.35
+fase = &"res://Cenas/Mata_Atlantica/MA_08.tscn"
+
+[node name="MA_09" parent="Conteudo" unique_id=125720189 instance=ExtResource("2_tsan8")]
+visible = true
+layout_mode = 0
+offset_left = 1691.0
+offset_top = 535.0
+offset_right = 1810.425
+offset_bottom = 564.225
+fase = &"res://Cenas/Mata_Atlantica/MA_09.tscn"
+
+[node name="MA_10" parent="Conteudo" unique_id=1497808783 instance=ExtResource("2_tsan8")]
+visible = true
+layout_mode = 0
+offset_left = 1691.0
+offset_top = 438.0
+offset_right = 1885.425
+offset_bottom = 524.95
+fase = &"res://Cenas/Mata_Atlantica/MA_10.tscn"
+
+[node name="MA_11" parent="Conteudo" unique_id=470450699 instance=ExtResource("2_tsan8")]
+visible = true
+layout_mode = 0
+offset_left = 1691.0
+offset_top = 438.0
+offset_right = 1885.425
+offset_bottom = 524.95
+fase = &"res://Cenas/Mata_Atlantica/MA_10.tscn"
+
+[node name="MA_14" parent="Conteudo" unique_id=2058619288 instance=ExtResource("2_tsan8")]
+visible = true
+layout_mode = 0
+offset_left = 1691.0
+offset_top = 295.0
+offset_right = 1866.575
+offset_bottom = 428.09998
+fase = &"res://Cenas/Mata_Atlantica/MA_14.tscn"
+
+[node name="MA_16" parent="Conteudo" unique_id=336942556 instance=ExtResource("2_tsan8")]
+visible = true
+layout_mode = 0
+offset_left = 1528.0
+offset_top = 373.0
+offset_right = 1681.4
+offset_bottom = 428.5
+fase = &"res://Cenas/Mata_Atlantica/MA_16.tscn"

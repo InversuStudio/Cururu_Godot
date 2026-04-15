@@ -75,6 +75,13 @@ func Comando(line:String) -> void:
 		
 		"speed":
 			Engine.time_scale = float(cmd[1])
+		
+		"mapa":
+			if cmd[1].to_lower() == "true":
+				Inventario.tem_mapa = true
+			elif cmd[1].to_lower() == "false":
+				Inventario.tem_mapa = false
+			else: _Print("[color=red]Valor inválido")
 			
 	%LinhaComando.text = ""
 	%LinhaComando.grab_focus()

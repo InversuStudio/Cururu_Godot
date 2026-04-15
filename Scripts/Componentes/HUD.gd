@@ -9,12 +9,10 @@ const pop_item:PackedScene = preload("res://UI/PopUpItem.tscn")
 @export var inventario_amuletos:Control = null
 @export var item_rapido:Control = null
 signal usa_item_rapido
+@export var mapa:Mapa = null
 
 var hud_ativo:int = 0
 var configurado:bool = false
-
-var full_mapa:bool = false
-var tempo_mapa:float = 0.0
 
 var tipo_input:int = 0
 
@@ -23,7 +21,7 @@ func _input(_event: InputEvent) -> void:
 	if Input.is_action_just_pressed("start"):
 		var dialogo_ativo = get_tree().root.find_child("BalaoFala", true, false)
 		if Mundos.player == null or AvisoItem.ativo or dialogo_ativo: return
-		%Pause.visible = true if %Pause.visible == false else false
+		%Pause.visible = not %Pause.visible
 	
 	if Input.is_action_just_pressed("ui_cancel"):
 		if %Pause.visible:
@@ -35,7 +33,6 @@ func _input(_event: InputEvent) -> void:
 	if Input.is_action_just_pressed("bumper_direito") and %Pause.visible:
 		if hud_ativo + 1 <= %ContainerAbas.get_child_count() - 1:
 			hud_ativo += 1
-			print("É, MEU BOM. A VIDA É TRISTE")
 			MudaAba()
 	
 	if Input.is_action_just_pressed("bumper_esquerdo") and %Pause.visible:
@@ -43,37 +40,13 @@ func _input(_event: InputEvent) -> void:
 			hud_ativo -= 1
 			MudaAba()
 	
+	if Inventario.tem_mapa and not %Pause.visible:
+		if Input.is_action_just_pressed("select"):
+			mapa.visible = not mapa.visible
+	
 	if tipo_input != GameData.tipo_input:
 		tipo_input = GameData.tipo_input
 		MudaImgInput()
-	
-	#if !Inventario.tem_mapa: return
-	#if Input.is_action_just_pressed("select"):
-		#full_mapa = true
-	#
-	#if Input.is_action_just_released("select"):
-		#if %MapaSmall.visible:
-			#%MapaSmall.hide()
-		#elif tempo_mapa < 1.0 and not %Pause.visible:
-			#%MapaSmall.show()
-		#full_mapa = false
-		#tempo_mapa = 0.0
-
-func _process(delta: float) -> void:
-	if full_mapa:
-		tempo_mapa += delta
-		if tempo_mapa >= 1:
-			full_mapa = false
-			tempo_mapa = 0.0
-			hud_ativo = 2
-			MudaAba()
-			%MapaSmall.hide()
-			%Pause.show()
-	if !Inventario.tem_mapa: return
-	if Input.is_action_pressed("select") and not %Pause.visible:
-		%MapaSmall.show()
-	else:
-		%MapaSmall.hide()
 
 func MudaImgInput() -> void:
 	%Select.text = "[img]%s[/img]   %s" % [GameData.GetUiButtonImage("ui_accept"), "Selecionar"]
@@ -90,8 +63,9 @@ func _ready() -> void:
 	
 	item_rapido.connect("usa_item", usa_item_rapido.emit)
 	
-	%Pause.connect("visibility_changed", func():
-		get_tree().paused = true if %Pause.visible else false)
+	%Pause.connect("visibility_changed", func() -> void:
+		get_tree().paused = %Pause.visible)
+		
 	# Organiza visibilidade das abas
 	MudaAba()
 	MostraHUD()
@@ -141,7 +115,7 @@ func MudaAba(id:int = -1) -> void:
 func MostraHUD() -> void:
 	%Pause.hide()
 	%AvisoSave.self_modulate.a = 0.0
-	%MapaSmall.hide()
+	mapa.hide()
 	if Mundos.player: %Corpo.show()
 	else: %Corpo.hide()
 
@@ -167,6 +141,9 @@ func IniciaHUD() -> void:
 
 		UpdateMoeda()
 		item_rapido.IniciaBarra()
+		
+		mapa.Start()
+		
 		# Marca como configurado
 		configurado = true
 
@@ -229,4 +206,4 @@ func AplicaRed(vida:int) -> void:
 func LimpaInv() -> void:
 	inventario_itens.LimpaInv()
 	inventario_amuletos.LimpaAm()
-	item_rapido.ResetaBarra()#IniciaBarra()
+	item_rapido.ResetaBarra()

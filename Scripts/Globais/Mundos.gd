@@ -2,6 +2,8 @@ extends Node
 
 # Registra o nome de todas as fases do jogo
 var lista_fases:Array[PackedStringArray] = [] # [PASTA, ARQUIVO]
+# Registra as fases que o player já visitou
+var fases_visitadas:PackedStringArray = []
 # Registra fase atual
 var fase_atual:StringName = ""
 # Segura a instância atual do Player

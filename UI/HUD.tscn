@@ -20,7 +20,7 @@
 [ext_resource type="Texture2D" uid="uid://bc2yoaw6bn0kt" path="res://Sprites/UI/Pause/Pecas/MENU_ABA2.png" id="13_281ki"]
 [ext_resource type="Texture2D" uid="uid://bu6udw31dg5md" path="res://Sprites/UI/Pause/Pecas/MENU_ABA1.png" id="13_mms7u"]
 [ext_resource type="Texture2D" uid="uid://duesv7kjq2emm" path="res://Sprites/UI/Pause/Pecas/MENU_ABA3.png" id="14_w37wn"]
-[ext_resource type="Texture2D" uid="uid://ydkqrtapi4fn" path="res://Sprites/UI/Pause/Pecas/MAP.png" id="15_w37wn"]
+[ext_resource type="PackedScene" uid="uid://d11uewa10yhje" path="res://UI/Mapa.tscn" id="21_lbtxw"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8ip7y"]
 bg_color = Color(0.6, 0.6, 0.6, 0)
@@ -108,19 +108,16 @@ texture = ExtResource("13_281ki")
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_281ki"]
 texture = ExtResource("13_mms7u")
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ghl3h"]
-texture = ExtResource("13_mms7u")
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_qbvrm"]
-texture = ExtResource("13_281ki")
-
-[sub_resource type="ButtonGroup" id="ButtonGroup_f2wx0"]
-
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_4hs1h"]
 texture = ExtResource("13_mms7u")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_h8urj"]
 texture = ExtResource("13_281ki")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ghl3h"]
+texture = ExtResource("13_mms7u")
+
+[sub_resource type="ButtonGroup" id="ButtonGroup_f2wx0"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_dcyds"]
 texture = ExtResource("13_mms7u")
@@ -180,13 +177,14 @@ _data = {
 &"RESET": SubResource("Animation_uk570")
 }
 
-[node name="HUD" type="CanvasLayer" unique_id=1021729722 node_paths=PackedStringArray("inventario_itens", "inventario_amuletos", "item_rapido")]
+[node name="HUD" type="CanvasLayer" unique_id=1021729722 node_paths=PackedStringArray("inventario_itens", "inventario_amuletos", "item_rapido", "mapa")]
 process_mode = 3
 layer = 1000
 script = ExtResource("1_yixhe")
 inventario_itens = NodePath("Corpo/Pause/BG/ContainerMenus/Inventario")
 inventario_amuletos = NodePath("Corpo/Pause/BG/ContainerMenus/Amuletos")
 item_rapido = NodePath("Corpo/ItemRapido")
+mapa = NodePath("Corpo/Mapa")
 
 [node name="Corpo" type="Control" parent="." unique_id=922472296]
 unique_name_in_owner = true
@@ -420,12 +418,6 @@ theme_override_constants/margin_top = 50
 theme_override_constants/margin_right = 50
 theme_override_constants/margin_bottom = 50
 
-[node name="Mapa" type="TextureRect" parent="Corpo/Pause/BG/ContainerMenus" unique_id=1126428983]
-layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
-texture = ExtResource("15_w37wn")
-
 [node name="Inventario" parent="Corpo/Pause/BG/ContainerMenus" unique_id=1827011368 instance=ExtResource("5_f2wx0")]
 layout_mode = 2
 
@@ -641,20 +633,6 @@ layout_mode = 2
 theme_override_constants/separation = 20
 alignment = 1
 
-[node name="Mapa" type="Button" parent="Corpo/Pause/BG/Abas/ContainerAbas" unique_id=1213326777]
-layout_mode = 2
-size_flags_horizontal = 3
-focus_mode = 0
-focus_behavior_recursive = 1
-theme_override_fonts/font = ExtResource("8_kg6a8")
-theme_override_font_sizes/font_size = 24
-theme_override_styles/normal = SubResource("StyleBoxTexture_ghl3h")
-theme_override_styles/pressed = SubResource("StyleBoxTexture_qbvrm")
-theme_override_styles/hover = SubResource("StyleBoxTexture_ghl3h")
-toggle_mode = true
-button_group = SubResource("ButtonGroup_f2wx0")
-text = "Mapa"
-
 [node name="Itens" type="Button" parent="Corpo/Pause/BG/Abas/ContainerAbas" unique_id=729298683]
 layout_mode = 2
 size_flags_horizontal = 3
@@ -760,21 +738,8 @@ text = "BTN Voltar"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="MapaSmall" type="PanelContainer" parent="Corpo" unique_id=318422203]
-unique_name_in_owner = true
-visible = false
+[node name="Mapa" parent="Corpo" unique_id=951120903 instance=ExtResource("21_lbtxw")]
 layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="MapaImg" type="TextureRect" parent="Corpo/MapaSmall" unique_id=1553218902]
-layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
-texture = ExtResource("15_w37wn")
 
 [node name="Anim" type="AnimationPlayer" parent="Corpo" unique_id=1033174811]
 unique_name_in_owner = true

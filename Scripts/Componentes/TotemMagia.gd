@@ -3,7 +3,7 @@ extends Node2D
 @onready var id: String = str(Mundos.fase_atual) + name
 
 ## Porcentagem da magia total a ser recuperada
-@export_range(1, 100, 1, "suffix:%") var magia_a_recuperar: float = 50
+@export_range(1, 100, 1, "suffix:%") var magia_a_recuperar: int = 50
 
 var quebrado: bool = false
 
@@ -20,7 +20,9 @@ func Morte() -> void:
 	quebrado = true
 	Mundos.lista_baus.append(id)
 	$HurtBox.set_deferred("monitorable", false)
-	GameData.magia_atual += (magia_a_recuperar / 100.0) * GameData.magia_max
+	var result:int = round((magia_a_recuperar / 100.0) * GameData.magia_max)
+	if result <= 0: result = 1
+	GameData.magia_atual += result
 	$Sprite.play("Quebrando")
 	await $Sprite.animation_finished
 	queue_free()
