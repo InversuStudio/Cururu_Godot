@@ -3,24 +3,56 @@
 [ext_resource type="Script" uid="uid://hsdutxxttrp3" path="res://Scripts/Componentes/Vida.gd" id="1_qwkpf"]
 [ext_resource type="Script" uid="uid://6u785xtvuv2d" path="res://Scripts/Componentes/TotemMagia.gd" id="1_rccpc"]
 [ext_resource type="PackedScene" uid="uid://va5pjd6vuuo2" path="res://Objetos/Funcionalidade/CompHurtBox.tscn" id="2_rccpc"]
-[ext_resource type="Texture2D" uid="uid://cjajnhtghvrrs" path="res://Sprites/Cenário/Objetos/Quabraveis/Cristal/Folder 2.PNG" id="3_do5p1"]
-[ext_resource type="Texture2D" uid="uid://ba4bjbl5ibft" path="res://Sprites/Cenário/Objetos/Quabraveis/Cristal/Layer 4.PNG" id="3_o3v6a"]
+[ext_resource type="Texture2D" uid="uid://dul523pdk34jh" path="res://Sprites/Cenário/Objetos/Quabraveis/Cristal/CRISTAL_04.PNG" id="3_u1vu6"]
+[ext_resource type="Texture2D" uid="uid://xn35c8rcfeui" path="res://Sprites/Cenário/Objetos/Quabraveis/Cristal/CRISTAL_06.PNG" id="4_vi8xn"]
+[ext_resource type="Texture2D" uid="uid://ntt6041a1a86" path="res://Sprites/Cenário/Objetos/Quabraveis/Cristal/CRISTAL_08.PNG" id="5_84fej"]
+[ext_resource type="Texture2D" uid="uid://bk2iry5mmq2sx" path="res://Sprites/Cenário/Objetos/Quabraveis/Cristal/CRISTAL_09.PNG" id="6_h8mpq"]
 [ext_resource type="AudioStream" uid="uid://bn4cgre1rfojs" path="res://Audio/SFX/Cristal_SFX.mp3" id="6_m83di"]
 [ext_resource type="Texture2D" uid="uid://0agjwkmg3gef" path="res://Sprites/VFX/Iluminação/luz azul.png" id="7_n8mw8"]
+[ext_resource type="Texture2D" uid="uid://byrmllh4sktdj" path="res://Sprites/Cenário/Objetos/Quabraveis/Cristal/CRISTAL_10.PNG" id="7_ub28r"]
+[ext_resource type="Texture2D" uid="uid://fxdv062bl2pv" path="res://Sprites/Cenário/Objetos/Quabraveis/Cristal/CRISTAL_13.PNG" id="8_xtkdk"]
+[ext_resource type="Texture2D" uid="uid://72r7va0nraw" path="res://Sprites/Cenário/Objetos/Quabraveis/Cristal/CRISTAL_14.PNG" id="9_x8you"]
+[ext_resource type="Texture2D" uid="uid://cuy4bh64dxue2" path="res://Sprites/Cenário/Objetos/Quabraveis/Cristal/CRISTAL_15.PNG" id="10_jsaxj"]
+[ext_resource type="Texture2D" uid="uid://3n1t7g57lnsc" path="res://Sprites/Cenário/Objetos/Quabraveis/Cristal/CRISTAL_17.PNG" id="11_xmxy6"]
+[ext_resource type="Texture2D" uid="uid://bodwbe4xt8pqw" path="res://Sprites/Cenário/Objetos/Quabraveis/Cristal/CRISTAL_01.PNG" id="12_x2321"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_rccpc"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("3_o3v6a")
+"texture": ExtResource("3_u1vu6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_vi8xn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_84fej")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_h8mpq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_ub28r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_xtkdk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_x8you")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_jsaxj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_xmxy6")
 }],
-"loop": true,
+"loop": false,
 "name": &"Quebrando",
 "speed": 5.0
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("3_do5p1")
+"texture": ExtResource("12_x2321")
 }],
 "loop": true,
 "name": &"default",
@@ -28,7 +60,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_do5p1"]
-size = Vector2(184, 217)
+size = Vector2(184, 195)
 
 [node name="TotemMagia" type="Node2D" unique_id=1098512559]
 script = ExtResource("1_rccpc")
@@ -40,7 +72,8 @@ vida_max = 1
 metadata/_custom_type_script = "uid://hsdutxxttrp3"
 
 [node name="Sprite" type="AnimatedSprite2D" parent="." unique_id=35830827]
-position = Vector2(0.9999924, -95)
+position = Vector2(0.9999924, -156)
+scale = Vector2(1.9296875, 1.9296875)
 sprite_frames = SubResource("SpriteFrames_rccpc")
 autoplay = "default"
 
@@ -57,6 +90,6 @@ comp_vida = NodePath("../Vida")
 hit_sfx = ExtResource("6_m83di")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HurtBox" unique_id=547260217]
-position = Vector2(3, -108.5)
+position = Vector2(3, -97.5)
 shape = SubResource("RectangleShape2D_do5p1")
 debug_color = Color(0.99479586, 0, 0.22375083, 0.41960785)
