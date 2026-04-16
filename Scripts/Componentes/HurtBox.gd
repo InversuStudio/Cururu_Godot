@@ -101,5 +101,5 @@ func CalcKnockback(dist:float, time:float, pos_target:Vector2) -> void:
 
 func _on_timer_timeout() -> void:
 	ativo = true
-	if last_hit and overlaps_area(last_hit):
-		RecebeDano(last_hit.dano, global_position)
+	#if last_hit and overlaps_area(last_hit):
+		#RecebeDano(last_hit.dano, global_position)
