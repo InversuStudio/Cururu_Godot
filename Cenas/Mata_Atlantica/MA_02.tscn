@@ -560,10 +560,6 @@ position = Vector2(677.2631, 5.263157)
 scale = Vector2(1.1534344, 1.1534344)
 texture = ExtResource("31_o0mc4")
 
-[node name="MataAtlântica020260313104334" type="Sprite2D" parent="background/-05" unique_id=2129100700]
-position = Vector2(-2124.6675, 3222.866)
-texture = ExtResource("30_wepyd")
-
 [node name="MataAtlântica020260313104439" type="Sprite2D" parent="background/-05" unique_id=276993077]
 position = Vector2(535.7893, -597.8948)
 texture = ExtResource("33_3eu04")
@@ -925,17 +921,97 @@ tile_set = ExtResource("35_s5w06")
 [node name="Reto" type="Node2D" parent="background/0/Chão" unique_id=1814584369]
 
 [node name="GramaReto" type="Sprite2D" parent="background/0/Chão/Reto" unique_id=1790655414]
-position = Vector2(-7473, 441)
-rotation = 1.5707964
-texture = ExtResource("36_kfoo2")
-
-[node name="GramaReto18" type="Sprite2D" parent="background/0/Chão/Reto" unique_id=742466749]
-position = Vector2(-7473, 627)
+position = Vector2(-7466, 360)
 rotation = 1.5707964
 texture = ExtResource("36_kfoo2")
 
 [node name="GramaReto2" type="Sprite2D" parent="background/0/Chão/Reto" unique_id=1064658042]
-position = Vector2(-6992, 1071)
+position = Vector2(-7047, 1070)
+texture = ExtResource("36_kfoo2")
+
+[node name="GramaReto3" type="Sprite2D" parent="background/0/Chão/Reto" unique_id=1328985926]
+position = Vector2(-6559, 1070)
+texture = ExtResource("36_kfoo2")
+
+[node name="GramaReto24" type="Sprite2D" parent="background/0/Chão/Reto" unique_id=1174245126]
+position = Vector2(-6077, 1070)
+texture = ExtResource("36_kfoo2")
+
+[node name="GramaReto4" type="Sprite2D" parent="background/0/Chão/Reto" unique_id=390821953]
+position = Vector2(-5611.5, 1070)
+texture = ExtResource("36_kfoo2")
+
+[node name="GramaReto5" type="Sprite2D" parent="background/0/Chão/Reto" unique_id=1969532912]
+position = Vector2(-5123.5, 1070)
+texture = ExtResource("36_kfoo2")
+
+[node name="GramaReto25" type="Sprite2D" parent="background/0/Chão/Reto" unique_id=1502747363]
+position = Vector2(-4641.5, 1070)
+texture = ExtResource("36_kfoo2")
+
+[node name="GramaReto6" type="Sprite2D" parent="background/0/Chão/Reto" unique_id=1603162452]
+position = Vector2(-4164.5, 1070)
+texture = ExtResource("36_kfoo2")
+
+[node name="GramaReto7" type="Sprite2D" parent="background/0/Chão/Reto" unique_id=931654455]
+position = Vector2(-3676.5, 1070)
+texture = ExtResource("36_kfoo2")
+
+[node name="GramaReto26" type="Sprite2D" parent="background/0/Chão/Reto" unique_id=2052491376]
+position = Vector2(-3194.5, 1070)
+texture = ExtResource("36_kfoo2")
+
+[node name="GramaReto8" type="Sprite2D" parent="background/0/Chão/Reto" unique_id=903057217]
+position = Vector2(-2711.5, 1070)
+texture = ExtResource("36_kfoo2")
+
+[node name="GramaReto9" type="Sprite2D" parent="background/0/Chão/Reto" unique_id=1429175086]
+position = Vector2(-2223.5, 1070)
+texture = ExtResource("36_kfoo2")
+
+[node name="GramaReto27" type="Sprite2D" parent="background/0/Chão/Reto" unique_id=1820463555]
+position = Vector2(-1741.5, 1070)
+texture = ExtResource("36_kfoo2")
+
+[node name="GramaReto10" type="Sprite2D" parent="background/0/Chão/Reto" unique_id=408626997]
+position = Vector2(-1261.5, 1070)
+texture = ExtResource("36_kfoo2")
+
+[node name="GramaReto11" type="Sprite2D" parent="background/0/Chão/Reto" unique_id=1545000679]
+position = Vector2(-773.5, 1070)
+texture = ExtResource("36_kfoo2")
+
+[node name="GramaReto28" type="Sprite2D" parent="background/0/Chão/Reto" unique_id=981977511]
+position = Vector2(-291.5, 1070)
+texture = ExtResource("36_kfoo2")
+
+[node name="GramaReto12" type="Sprite2D" parent="background/0/Chão/Reto" unique_id=228703316]
+position = Vector2(196.5, 1070)
+texture = ExtResource("36_kfoo2")
+
+[node name="GramaReto13" type="Sprite2D" parent="background/0/Chão/Reto" unique_id=175070617]
+position = Vector2(684.5, 1070)
+texture = ExtResource("36_kfoo2")
+
+[node name="GramaReto29" type="Sprite2D" parent="background/0/Chão/Reto" unique_id=932493446]
+position = Vector2(1166.5, 1070)
+texture = ExtResource("36_kfoo2")
+
+[node name="GramaReto14" type="Sprite2D" parent="background/0/Chão/Reto" unique_id=1033342671]
+position = Vector2(1637.5, 1070)
+texture = ExtResource("36_kfoo2")
+
+[node name="GramaReto19" type="Sprite2D" parent="background/0/Chão/Reto" unique_id=1150232044]
+position = Vector2(2125.5, 1070)
+texture = ExtResource("36_kfoo2")
+
+[node name="GramaReto30" type="Sprite2D" parent="background/0/Chão/Reto" unique_id=1638262965]
+position = Vector2(2607.5, 1070)
+texture = ExtResource("36_kfoo2")
+
+[node name="GramaReto18" type="Sprite2D" parent="background/0/Chão/Reto" unique_id=742466749]
+position = Vector2(-7462, 690)
+rotation = 1.5707964
 texture = ExtResource("36_kfoo2")
 
 [node name="GramaReto15" type="Sprite2D" parent="background/0/Chão/Reto" unique_id=1226027037]
@@ -950,85 +1026,13 @@ texture = ExtResource("36_kfoo2")
 position = Vector2(-8813, -85)
 texture = ExtResource("36_kfoo2")
 
-[node name="GramaReto3" type="Sprite2D" parent="background/0/Chão/Reto" unique_id=1328985926]
-position = Vector2(-6470, 1068)
-texture = ExtResource("36_kfoo2")
-
-[node name="GramaReto4" type="Sprite2D" parent="background/0/Chão/Reto" unique_id=1234119683]
-position = Vector2(-5346, 1069)
-texture = ExtResource("36_kfoo2")
-
-[node name="GramaReto24" type="Sprite2D" parent="background/0/Chão/Reto" unique_id=1174245126]
-position = Vector2(-5939, 1065)
-texture = ExtResource("36_kfoo2")
-
-[node name="GramaReto5" type="Sprite2D" parent="background/0/Chão/Reto" unique_id=186757592]
-position = Vector2(-4811, 1070)
-texture = ExtResource("36_kfoo2")
-
-[node name="GramaReto6" type="Sprite2D" parent="background/0/Chão/Reto" unique_id=483609196]
-position = Vector2(-4264, 1072)
-texture = ExtResource("36_kfoo2")
-
-[node name="GramaReto7" type="Sprite2D" parent="background/0/Chão/Reto" unique_id=1710447255]
-position = Vector2(-3739, 1072)
-texture = ExtResource("36_kfoo2")
-
-[node name="GramaReto8" type="Sprite2D" parent="background/0/Chão/Reto" unique_id=484211215]
-position = Vector2(-3201, 1070)
-texture = ExtResource("36_kfoo2")
-
-[node name="GramaReto9" type="Sprite2D" parent="background/0/Chão/Reto" unique_id=499747115]
-position = Vector2(-2688, 1073)
-texture = ExtResource("36_kfoo2")
-
-[node name="GramaReto10" type="Sprite2D" parent="background/0/Chão/Reto" unique_id=1785470166]
-position = Vector2(-2167, 1073)
-texture = ExtResource("36_kfoo2")
-
-[node name="GramaReto11" type="Sprite2D" parent="background/0/Chão/Reto" unique_id=12365460]
-position = Vector2(-1667, 1074)
-texture = ExtResource("36_kfoo2")
-
-[node name="GramaReto12" type="Sprite2D" parent="background/0/Chão/Reto" unique_id=85843717]
-position = Vector2(-1153, 1073)
-texture = ExtResource("36_kfoo2")
-
-[node name="GramaReto13" type="Sprite2D" parent="background/0/Chão/Reto" unique_id=2013929914]
-position = Vector2(-611, 1072)
-texture = ExtResource("36_kfoo2")
-
-[node name="GramaReto14" type="Sprite2D" parent="background/0/Chão/Reto" unique_id=1600961349]
-position = Vector2(-77, 1071)
-texture = ExtResource("36_kfoo2")
-
-[node name="GramaReto19" type="Sprite2D" parent="background/0/Chão/Reto" unique_id=1441687925]
-position = Vector2(454, 1071)
-texture = ExtResource("36_kfoo2")
-
-[node name="GramaReto20" type="Sprite2D" parent="background/0/Chão/Reto" unique_id=1727035760]
-position = Vector2(989, 1071)
-texture = ExtResource("36_kfoo2")
-
-[node name="GramaReto21" type="Sprite2D" parent="background/0/Chão/Reto" unique_id=1841879667]
-position = Vector2(1528, 1071)
-texture = ExtResource("36_kfoo2")
-
-[node name="GramaReto22" type="Sprite2D" parent="background/0/Chão/Reto" unique_id=1565523858]
-position = Vector2(2064, 1071)
-texture = ExtResource("36_kfoo2")
-
-[node name="GramaReto23" type="Sprite2D" parent="background/0/Chão/Reto" unique_id=1348994502]
-position = Vector2(2300, 1071)
-texture = ExtResource("36_kfoo2")
-
 [node name="ChapExterno" type="Sprite2D" parent="background/0/Chão/Reto" unique_id=1616638535]
-position = Vector2(-7565, 27)
+position = Vector2(-7534, -5)
 rotation = -1.5707954
 texture = ExtResource("37_qh6tj")
 
 [node name="ChapInterno" type="Sprite2D" parent="background/0/Chão/Reto" unique_id=990440423]
-position = Vector2(-7373, 970)
+position = Vector2(-7392, 998)
 rotation = -1.5707964
 texture = ExtResource("38_3axpn")
 

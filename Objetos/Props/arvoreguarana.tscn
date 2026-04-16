@@ -10,7 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://v6je3iqnukti" path="res://Sprites/Cenário/Objetos/frutos/guarana_04.png" id="7_jcy5v"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4vmwf"]
-size = Vector2(238, 140)
+size = Vector2(228, 140)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_5tjap"]
 animations = [{
@@ -49,7 +49,7 @@ hit_sfx = ExtResource("3_6ojqs")
 sprite = NodePath("../Sprite")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HurtBox" unique_id=714964957]
-position = Vector2(1, -71)
+position = Vector2(6, -71)
 shape = SubResource("RectangleShape2D_4vmwf")
 debug_color = Color(0.7753908, 0.38766962, 0.5591627, 0.41960785)
 

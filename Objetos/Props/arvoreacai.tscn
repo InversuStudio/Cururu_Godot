@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://1kp2cm82lp4b"]
+[gd_scene format=3 uid="uid://1kp2cm82lp4b"]
 
 [ext_resource type="Script" uid="uid://drxk6hwuv2e3i" path="res://Scripts/Componentes/Bau.gd" id="1_b7nho"]
 [ext_resource type="PackedScene" uid="uid://va5pjd6vuuo2" path="res://Objetos/Funcionalidade/CompHurtBox.tscn" id="2_etetv"]
@@ -10,7 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://cudd1v7y0vnbv" path="res://Sprites/Cenário/Objetos/frutos/acai_04.png" id="7_o8cyq"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4vmwf"]
-size = Vector2(142, 269)
+size = Vector2(21, 269)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_5tjap"]
 animations = [{
@@ -40,23 +40,23 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="Bau" type="Node2D"]
+[node name="Bau" type="Node2D" unique_id=1712995937]
 script = ExtResource("1_b7nho")
 
-[node name="HurtBox" parent="." node_paths=PackedStringArray("sprite") instance=ExtResource("2_etetv")]
+[node name="HurtBox" parent="." unique_id=1346515019 node_paths=PackedStringArray("sprite") instance=ExtResource("2_etetv")]
 collision_layer = 16
 hit_sfx = ExtResource("3_x8dq1")
 sprite = NodePath("../Sprite")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="HurtBox"]
-position = Vector2(24, -66.5)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HurtBox" unique_id=16075831]
+position = Vector2(-33.5, -66.5)
 shape = SubResource("RectangleShape2D_4vmwf")
 debug_color = Color(0.7753908, 0.38766962, 0.5591627, 0.41960785)
 
-[node name="PosItem" type="Marker2D" parent="."]
-position = Vector2(0, -110)
+[node name="PosItem" type="Marker2D" parent="." unique_id=1939832639]
+position = Vector2(8, -104)
 
-[node name="Sprite" type="AnimatedSprite2D" parent="."]
+[node name="Sprite" type="AnimatedSprite2D" parent="." unique_id=1586075960]
 position = Vector2(-9, -65.5)
 scale = Vector2(0.26464844, 0.26464844)
 sprite_frames = SubResource("SpriteFrames_5tjap")

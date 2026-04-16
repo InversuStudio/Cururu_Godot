@@ -184,7 +184,7 @@
 [ext_resource type="AudioStream" uid="uid://betvqt03p81ol" path="res://Audio/SFX/CURURU/dash_cururu.wav" id="154_wxhj3"]
 [ext_resource type="AudioStream" uid="uid://s50orlb3i3jk" path="res://Audio/SFX/CURURU/Caindo.wav" id="155_lv5tx"]
 [ext_resource type="Script" uid="uid://b3wmq1vhw42bm" path="res://Scripts/SFX/sfx_passos.gd" id="156_746bk"]
-[ext_resource type="Texture2D" uid="uid://buxjb8khrvcm7" path="res://Sprites/Cururu/Walljump/WALLJUMP.png" id="157_24i8l"]
+[ext_resource type="Texture2D" uid="uid://buxjb8khrvcm7" path="res://Sprites/Cururu/walljump/WALLJUMP.png" id="157_24i8l"]
 [ext_resource type="AudioStream" uid="uid://cqrbf5wusyf2l" path="res://Audio/SFX/CURURU/Passos/Passo 1.wav" id="159_btflu"]
 [ext_resource type="AudioStream" uid="uid://c35bediccvjup" path="res://Audio/SFX/CURURU/Passos/Passo 2.wav" id="160_746bk"]
 [ext_resource type="AudioStream" uid="uid://d2u6s2ijvdo5m" path="res://Audio/SFX/CURURU/Passos/Passo 3.wav" id="161_wxhj3"]
@@ -630,9 +630,6 @@ animations = [{
 "texture": ExtResource("110_4gb4y")
 }, {
 "duration": 1.0,
-"texture": ExtResource("118_qtftx")
-}, {
-"duration": 1.0,
 "texture": ExtResource("111_24i8l")
 }, {
 "duration": 1.0,
@@ -640,7 +637,7 @@ animations = [{
 }],
 "loop": false,
 "name": &"MeleeChao1",
-"speed": 8.0
+"speed": 10.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -1966,7 +1963,6 @@ position = Vector2(0, -115)
 scale = Vector2(0.37, 0.37)
 sprite_frames = SubResource("SpriteFrames_ser7u")
 animation = &"Carga"
-frame = 1
 
 [node name="ColisaoFisica" type="CollisionShape2D" parent="." unique_id=185604391]
 position = Vector2(0, -79)
@@ -1980,7 +1976,7 @@ metadata/_custom_type_script = "uid://hsdutxxttrp3"
 [node name="HurtBox" parent="." unique_id=1078087139 node_paths=PackedStringArray("comp_vida", "parent", "sprite") instance=ExtResource("46_wjcvp")]
 collision_mask = 16
 comp_vida = NodePath("../Vida")
-distancia_knockback = 1.0
+distancia_knockback = 1.2
 tempo_knockback = 0.2
 cooldown_dano = 1.3
 hit_sfx = ExtResource("77_d7mdf")
