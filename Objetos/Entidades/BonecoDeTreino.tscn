@@ -1,0 +1,46 @@
+[gd_scene format=3 uid="uid://c8of5uv0e2sm3"]
+
+[ext_resource type="Script" uid="uid://bshr6fwcwaqgu" path="res://Objetos/Entidades/boneco_de_treino.gd" id="1_tn84e"]
+[ext_resource type="Script" uid="uid://bp8oxr810tyxf" path="res://Scripts/Componentes/HurtBox.gd" id="1_w66fp"]
+[ext_resource type="Script" uid="uid://hsdutxxttrp3" path="res://Scripts/Componentes/Vida.gd" id="2_tn84e"]
+[ext_resource type="Texture2D" uid="uid://c3tl3oddronfh" path="res://icon.svg" id="2_vuvjc"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_k0ewx"]
+size = Vector2(129, 129)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vuvjc"]
+size = Vector2(137, 137)
+
+[node name="BonecoDeTreino" type="StaticBody2D" unique_id=900060060]
+script = ExtResource("1_tn84e")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=356533188]
+texture = ExtResource("2_vuvjc")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=381419022]
+position = Vector2(0.5, -0.5)
+shape = SubResource("RectangleShape2D_k0ewx")
+
+[node name="HurtBox" type="Area2D" parent="." unique_id=148429981 node_paths=PackedStringArray("comp_vida", "parent", "sprite")]
+collision_layer = 16
+collision_mask = 8
+script = ExtResource("1_w66fp")
+comp_vida = NodePath("Vida")
+distancia_knockback = 1.2
+parent = NodePath("..")
+sprite = NodePath("../Sprite2D")
+metadata/_custom_type_script = "uid://bp8oxr810tyxf"
+
+[node name="Vida" type="Node" parent="HurtBox" unique_id=1018779206]
+script = ExtResource("2_tn84e")
+vida_max = 10
+morre = false
+metadata/_custom_type_script = "uid://hsdutxxttrp3"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HurtBox" unique_id=404126713]
+position = Vector2(0.5, -1.5)
+shape = SubResource("RectangleShape2D_vuvjc")
+debug_color = Color(0.807233, 0, 0.057903096, 0.41960785)
+
+[node name="Timer" type="Timer" parent="HurtBox" unique_id=1215972669]
+unique_name_in_owner = true

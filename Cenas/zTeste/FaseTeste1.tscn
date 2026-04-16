@@ -7,7 +7,6 @@
 [ext_resource type="PackedScene" uid="uid://cqyub70sv0ofp" path="res://Objetos/Props/SavePoint.tscn" id="4_fo4t4"]
 [ext_resource type="TileSet" uid="uid://b0nn6bkolhibj" path="res://TilesetChao.tres" id="5_der3i"]
 [ext_resource type="Texture2D" uid="uid://61clqhtbc6ab" path="res://Sprites/Cenário/Tilemaps/Chao.png" id="5_tkd1t"]
-[ext_resource type="PackedScene" uid="uid://bu62qgilsxetf" path="res://Objetos/Entidades/Escorpiao.tscn" id="7_2vimk"]
 [ext_resource type="Texture2D" uid="uid://cjl88xeknofui" path="res://Sprites/Cenário/Mata_Atlantica/Chao/grama_reto.png" id="7_ixy8u"]
 [ext_resource type="PackedScene" uid="uid://bktu336s6ruri" path="res://Objetos/Props/Moeda.tscn" id="8_fo4t4"]
 [ext_resource type="Texture2D" uid="uid://ch0q0av2e62tu" path="res://Sprites/zWIP/Botata.jpg" id="8_qmn8k"]
@@ -30,7 +29,6 @@
 [ext_resource type="Shader" uid="uid://da2wxasx6evg0" path="res://Scripts/Shaders/Grama.gdshader" id="25_vdl7m"]
 [ext_resource type="Script" uid="uid://hsdutxxttrp3" path="res://Scripts/Componentes/Vida.gd" id="26_der3i"]
 [ext_resource type="Texture2D" uid="uid://c8bkav2g3wyeu" path="res://Sprites/Cenário/Mata_Atlantica/Chao/moita2.png" id="26_fjg5v"]
-[ext_resource type="PackedScene" uid="uid://dxukn0l7i0384" path="res://Objetos/Entidades/InimigoDist.tscn" id="26_xwk50"]
 [ext_resource type="PackedScene" uid="uid://davj0hqm0kiya" path="res://Objetos/Funcionalidade/TransicaoCameraNeo.tscn" id="27_der3i"]
 [ext_resource type="PackedScene" uid="uid://va5pjd6vuuo2" path="res://Objetos/Funcionalidade/CompHurtBox.tscn" id="27_ixy8u"]
 [ext_resource type="Script" uid="uid://dd16yu704x6wt" path="res://Scripts/Componentes/BGM_Player.gd" id="31_cq3ie"]
@@ -38,6 +36,7 @@
 [ext_resource type="PackedScene" uid="uid://bnubkn7kxj708" path="res://Objetos/Funcionalidade/MostraTela.tscn" id="35_geigx"]
 [ext_resource type="Texture2D" uid="uid://cl1vcib5wycma" path="res://Sprites/VFX/Iluminação/ICON.png" id="36_0wrly"]
 [ext_resource type="PackedScene" uid="uid://bvijejxbeiu45" path="res://Objetos/Props/MiasmaGoteira.tscn" id="37_0wrly"]
+[ext_resource type="PackedScene" uid="uid://c8of5uv0e2sm3" path="res://Objetos/Entidades/BonecoDeTreino.tscn" id="38_xwk50"]
 [ext_resource type="PackedScene" uid="uid://bselorwjp2nad" path="res://Objetos/Props/TotemMagia.tscn" id="39_l3l3w"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fjg5v"]
@@ -292,15 +291,6 @@ shape = SubResource("RectangleShape2D_u25g5")
 [node name="Player" parent="Entidades" unique_id=90520141 instance=ExtResource("3_2vimk")]
 position = Vector2(-146, -434)
 
-[node name="InimigoTeste" parent="Entidades" unique_id=1081849934 instance=ExtResource("7_2vimk")]
-position = Vector2(-94, -19)
-
-[node name="InimigoTeste2" parent="Entidades" unique_id=247375279 instance=ExtResource("7_2vimk")]
-position = Vector2(-618, -19)
-
-[node name="InimigoDist" parent="Entidades" unique_id=2019109312 instance=ExtResource("26_xwk50")]
-position = Vector2(-121, -835.00006)
-
 [node name="Armadilha" parent="." unique_id=1813372272 node_paths=PackedStringArray("spawn_points") instance=ExtResource("24_tkd1t")]
 position = Vector2(-1435, 106)
 spawn_points = [NodePath("Area2D"), NodePath("Area2D2")]
@@ -380,10 +370,10 @@ drag_horizontal_enabled = true
 drag_vertical_enabled = true
 
 [node name="LimiteCam" type="ReferenceRect" parent="." unique_id=291183794]
-offset_left = -2669.0
-offset_top = -1983.0
-offset_right = 1580.0
-offset_bottom = 55.0
+offset_left = -2394.0
+offset_top = -1856.0
+offset_right = 1855.0
+offset_bottom = 182.0
 border_width = 5.0
 
 [node name="Salao->Main" parent="." unique_id=1252773758 node_paths=PackedStringArray("de", "para") instance=ExtResource("27_der3i")]
@@ -450,5 +440,8 @@ position = Vector2(4210, -881)
 
 [node name="TotemMagia" parent="." unique_id=1098512559 instance=ExtResource("39_l3l3w")]
 position = Vector2(380, -1094)
+
+[node name="BonecoDeTreino" parent="." unique_id=900060060 instance=ExtResource("38_xwk50")]
+position = Vector2(-970, -106)
 
 [editable path="Props/UpgradeMissil"]
