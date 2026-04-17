@@ -1,0 +1,43 @@
+[gd_scene format=3 uid="uid://cds280rs42djo"]
+
+[ext_resource type="Script" uid="uid://bbpp58wkqoall" path="res://Scripts/Inventario/BaseItemInventario.gd" id="1_rjhf6"]
+[ext_resource type="Texture2D" uid="uid://dk4wua1wjthnt" path="res://Sprites/UI/HUD/Menu_Rapido/Itens/GUARA.png" id="2_x3qng"]
+[ext_resource type="Texture2D" uid="uid://c2xj887lbjlg4" path="res://Sprites/UI/Pause/Inventario/ITEM_GUARA.png" id="3_350qy"]
+[ext_resource type="Texture2D" uid="uid://dieialphn1oe2" path="res://Sprites/UI/Pause/Inventario/ITEM_GUARA_SELECT.png" id="4_lcpbm"]
+[ext_resource type="Script" uid="uid://d276l3hkipxin" path="res://Scripts/Inventario/Caju.gd" id="5_rjhf6"]
+
+[node name="ItemCaju" type="TextureButton" unique_id=255049377 node_paths=PackedStringArray("script_logica")]
+custom_minimum_size = Vector2(200, 200)
+ignore_texture_size = true
+stretch_mode = 0
+script = ExtResource("1_rjhf6")
+item = 2
+nome_display = "Caju"
+sprite_display = ExtResource("2_x3qng")
+desc_item = "O guaraná é nativo da Amazônia, muito utilizado e consumido por povos indígenas. Seu fruto é pequeno, avermelhado e, conforme ocorre seu amadurecimento, sua semente preta fica evidente. Além disso, a palavra \"guaraná\" vem do termo indígena \"wara'ná\", que significa \"fruta como os olhos das pessoas\"."
+sprite_normal = ExtResource("3_350qy")
+sprite_select = ExtResource("4_lcpbm")
+script_logica = NodePath("Script")
+
+[node name="Script" type="Node" parent="." unique_id=422463554]
+script = ExtResource("5_rjhf6")
+
+[node name="NumItem" type="Label" parent="." unique_id=1362088216]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -52.0
+offset_top = -204.0
+offset_right = 5.0
+offset_bottom = -149.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_constants/outline_size = 8
+theme_override_font_sizes/font_size = 38
+text = "1"
+horizontal_alignment = 1
+vertical_alignment = 1

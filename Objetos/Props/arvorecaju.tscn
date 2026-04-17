@@ -1,0 +1,67 @@
+[gd_scene format=3 uid="uid://rwf8qamlwcag"]
+
+[ext_resource type="Script" uid="uid://drxk6hwuv2e3i" path="res://Scripts/Componentes/Bau.gd" id="1_ka44r"]
+[ext_resource type="PackedScene" uid="uid://va5pjd6vuuo2" path="res://Objetos/Funcionalidade/CompHurtBox.tscn" id="2_rdf1a"]
+[ext_resource type="AudioStream" uid="uid://42ve7xiilmug" path="res://Audio/SFX/AMBIENTE/Mexendo no Arbusto.wav" id="3_5uvyu"]
+[ext_resource type="Texture2D" uid="uid://b7osbcusvyx0g" path="res://Sprites/Cenário/Objetos/frutos/guarana_01.png" id="4_wuiuc"]
+[ext_resource type="Texture2D" uid="uid://bq0sb5m0qpmnf" path="res://Sprites/Cenário/Objetos/frutos/guarana_02.png" id="5_6d52b"]
+[ext_resource type="Texture2D" uid="uid://iiue1rna5gao" path="res://Sprites/Cenário/Objetos/frutos/guarana_03.png" id="6_6ekgb"]
+[ext_resource type="Texture2D" uid="uid://v6je3iqnukti" path="res://Sprites/Cenário/Objetos/frutos/guarana_04.png" id="7_03aui"]
+[ext_resource type="Texture2D" uid="uid://csoc5q7br131j" path="res://Sprites/Cenário/Objetos/frutos/guarana.png" id="8_06b7h"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4vmwf"]
+size = Vector2(228, 140)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_5tjap"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_wuiuc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_6d52b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_6ekgb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_03aui")
+}],
+"loop": false,
+"name": &"Abre",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_06b7h")
+}],
+"loop": true,
+"name": &"Normal",
+"speed": 5.0
+}]
+
+[node name="ArvoreCaju" type="Node2D" unique_id=1939146182]
+script = ExtResource("1_ka44r")
+
+[node name="HurtBox" parent="." unique_id=2147031711 node_paths=PackedStringArray("sprite") instance=ExtResource("2_rdf1a")]
+collision_layer = 16
+hit_sfx = ExtResource("3_5uvyu")
+sprite = NodePath("../Sprite")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HurtBox" unique_id=714964957]
+position = Vector2(6, -71)
+shape = SubResource("RectangleShape2D_4vmwf")
+debug_color = Color(0.7753908, 0.38766962, 0.5591627, 0.41960785)
+
+[node name="PosItem" type="Marker2D" parent="." unique_id=517355542]
+z_index = 1002
+position = Vector2(0, -110)
+
+[node name="Sprite" type="AnimatedSprite2D" parent="." unique_id=698805628]
+position = Vector2(0, -136)
+scale = Vector2(0.37109375, 0.3710938)
+sprite_frames = SubResource("SpriteFrames_5tjap")
+animation = &"Normal"
+autoplay = "Normal"
+
+[connection signal="hurt" from="HurtBox" to="." method="_on_hurt_box_hurt"]

@@ -4,16 +4,19 @@ extends Node
 enum Itens {
 	Acai,
 	Guarana,
+	Caju
 }
 
 const ItensString:Array[String] = [
 	"Acai",
-	"Guarana"
+	"Guarana",
+	"Caju"
 ]
 
 const lista_itens:Dictionary = {
 	"Acai" : preload("res://Objetos/Inventario/InvAcai.tscn"),
 	"Guarana" : preload("res://Objetos/Inventario/InvGuarana.tscn"),
+	"Caju" : preload("res://Objetos/Inventario/InvCaju.tscn")
 }
 
 signal add_item

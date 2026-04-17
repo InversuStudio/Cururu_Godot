@@ -1,0 +1,39 @@
+[gd_scene format=3 uid="uid://crg4kb7jx0noq"]
+
+[ext_resource type="Script" uid="uid://du13c3vr4mc5k" path="res://Scripts/Componentes/DropItem.gd" id="1_l5ybf"]
+[ext_resource type="Texture2D" uid="uid://2de6nadjv7s5" path="res://Sprites/UI/HUD/Menu_Rapido/Itens/ACAI.png" id="2_bcaqh"]
+[ext_resource type="PackedScene" uid="uid://ffqi6t0ahbmk" path="res://Objetos/Funcionalidade/OtimizadorObjeto.tscn" id="3_o1mpv"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_qvwd5"]
+radius = 44.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_s361a"]
+radius = 62.03225
+
+[node name="DropCaju" type="RigidBody2D" unique_id=1670737524]
+collision_layer = 32
+collision_mask = 3
+script = ExtResource("1_l5ybf")
+tipo_item = 2
+imagem = ExtResource("2_bcaqh")
+nome = "Açaí"
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=285016417]
+z_index = 1001
+position = Vector2(0, 8)
+scale = Vector2(0.27539063, 0.27539065)
+texture = ExtResource("2_bcaqh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=61494932]
+shape = SubResource("CircleShape2D_qvwd5")
+
+[node name="AreaGet" type="Area2D" parent="." unique_id=1891097235]
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AreaGet" unique_id=173803809]
+shape = SubResource("CircleShape2D_s361a")
+
+[node name="OtimizadorSprite" parent="." unique_id=1385735074 instance=ExtResource("3_o1mpv")]
+rect = Rect2(-49, -50, 98, 100)
+follow = true
