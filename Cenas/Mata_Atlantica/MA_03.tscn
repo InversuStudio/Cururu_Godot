@@ -10,9 +10,9 @@
 [ext_resource type="Texture2D" uid="uid://yrshunpt0tr8" path="res://Sprites/Cenário/Mata_Atlantica/Background/Mata/mato01.png" id="8_h1j0t"]
 [ext_resource type="Texture2D" uid="uid://c8bkav2g3wyeu" path="res://Sprites/Cenário/Mata_Atlantica/Chao/moita2.png" id="9_7axcw"]
 [ext_resource type="Shader" uid="uid://dc0bwmy1j0o5i" path="res://Scripts/Shaders/fog.gdshader" id="10_bbvfj"]
+[ext_resource type="Texture2D" uid="uid://3v555i5ve41i" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/arvore_tronco.png" id="11_cfkov"]
 [ext_resource type="Texture2D" uid="uid://cd0k6180rqklv" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/arvore02.png" id="11_olt6v"]
 [ext_resource type="Texture2D" uid="uid://7dph67ih6epl" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/arvore04.png" id="12_83u8g"]
-[ext_resource type="Texture2D" uid="uid://sih3o1ksris8" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/arvore05.png" id="13_5ewyv"]
 [ext_resource type="Texture2D" uid="uid://c8tb73qiqhhk8" path="res://Sprites/Cenário/Mata_Atlantica/Background/Galhos/esquerda01.png" id="14_bnvg8"]
 [ext_resource type="PackedScene" uid="uid://bei1s8te3cwko" path="res://Sprites/Cenário/Mata_Atlantica/Interativos/plataforma.tscn" id="15_gbacd"]
 [ext_resource type="Texture2D" uid="uid://dphhlbwaebgco" path="res://Sprites/Cenário/Mata_Atlantica/Background/Galhos/composição.png" id="16_pjxq5"]
@@ -233,6 +233,19 @@ flip_v = true
 position = Vector2(-620, 4402)
 texture = ExtResource("5_hwlog")
 
+[node name="ArvoreS2" type="Sprite2D" parent="background/-25/Arvorefundo4" unique_id=1373140465]
+position = Vector2(-620, -20)
+texture = ExtResource("5_hwlog")
+
+[node name="ArvoreS11" type="Sprite2D" parent="background/-25/Arvorefundo4" unique_id=2139965859]
+position = Vector2(-620, 2191)
+texture = ExtResource("5_hwlog")
+flip_v = true
+
+[node name="ArvoreS12" type="Sprite2D" parent="background/-25/Arvorefundo4" unique_id=2036972208]
+position = Vector2(-620, 4402)
+texture = ExtResource("5_hwlog")
+
 [node name="Arvorefundo2" type="Node2D" parent="background/-25" unique_id=440971379]
 position = Vector2(3105, -4981)
 
@@ -277,11 +290,11 @@ follow_viewport_scale = 0.85
 position = Vector2(2753, -4788.5)
 
 [node name="ArvoreS3" type="Sprite2D" parent="background/-15/Arvorefundo1" unique_id=1438079229]
-texture = ExtResource("7_tg5hw")
+texture = ExtResource("11_cfkov")
 
 [node name="ArvoreS4" type="Sprite2D" parent="background/-15/Arvorefundo1" unique_id=396173568]
 position = Vector2(0, 2211)
-texture = ExtResource("7_tg5hw")
+texture = ExtResource("11_cfkov")
 flip_v = true
 
 [node name="ArvoreS5" type="Sprite2D" parent="background/-15/Arvorefundo1" unique_id=1766022428]
@@ -340,8 +353,8 @@ follow_viewport_enabled = true
 follow_viewport_scale = 0.95
 
 [node name="Arvore02" type="Sprite2D" parent="background/-05" unique_id=1979319476]
-position = Vector2(3249, -4913.5)
-texture = ExtResource("11_olt6v")
+position = Vector2(3249, -5089.474)
+texture = ExtResource("11_cfkov")
 
 [node name="Arvore03" type="Sprite2D" parent="background/-05" unique_id=1411365681]
 position = Vector2(1958.6842, -4913.5)
@@ -363,13 +376,9 @@ texture = ExtResource("11_olt6v")
 position = Vector2(5233.421, -284.21045)
 texture = ExtResource("11_olt6v")
 
-[node name="Arvore06" type="Sprite2D" parent="background/-05" unique_id=678241961]
-position = Vector2(3977, -2677)
-texture = ExtResource("12_83u8g")
-
 [node name="Arvore05" type="Sprite2D" parent="background/-05" unique_id=1246984595]
 position = Vector2(3249, -2702.5)
-texture = ExtResource("13_5ewyv")
+texture = ExtResource("11_cfkov")
 flip_v = true
 
 [node name="Esquerda01" type="Sprite2D" parent="background/-05/Arvore05" unique_id=1262443678]
@@ -396,7 +405,7 @@ texture = ExtResource("12_83u8g")
 
 [node name="Arvore07" type="Sprite2D" parent="background/-05" unique_id=2038799006]
 position = Vector2(3977, -4888)
-texture = ExtResource("12_83u8g")
+texture = ExtResource("11_cfkov")
 flip_v = true
 
 [node name="Esquerda02" type="Sprite2D" parent="background/-05/Arvore07" unique_id=218057836]
@@ -411,7 +420,10 @@ scale = Vector2(1, 1)
 [node name="Arvore08" type="Sprite2D" parent="background/-05" unique_id=133392781]
 position = Vector2(3977, -466)
 texture = ExtResource("17_mf344")
-flip_v = true
+
+[node name="Arvore06" type="Sprite2D" parent="background/-05" unique_id=678241961]
+position = Vector2(3973.6843, -2677)
+texture = ExtResource("11_cfkov")
 
 [node name="Props" type="Node2D" parent="background/-05" unique_id=687810638]
 position = Vector2(1918, 108)
@@ -861,6 +873,12 @@ scale = Vector2(0.7, 0.7)
 texture = ExtResource("39_u8dco")
 flip_v = true
 
+[node name="Frontfolha5" type="Sprite2D" parent="background/0" unique_id=753562770]
+position = Vector2(5343, -2511)
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("39_u8dco")
+flip_v = true
+
 [node name="GramaReto9" type="Sprite2D" parent="background/0" unique_id=1283962936]
 position = Vector2(5003, -2002)
 texture = ExtResource("40_aj2tt")
@@ -876,7 +894,7 @@ scale = Vector2(0.5, 0.5)
 texture = ExtResource("38_ruwr8")
 
 [node name="GramaReto16" type="Sprite2D" parent="background/0" unique_id=1828900356]
-position = Vector2(5289, -2220.3726)
+position = Vector2(5296, -2312)
 rotation = -1.5707964
 scale = Vector2(0.8502564, 1)
 texture = ExtResource("40_aj2tt")
@@ -890,8 +908,53 @@ nome_id = "MoitaA1MA2"
 [node name="Area_secreta" type="TileMapLayer" parent="background/0" unique_id=1439185552]
 position = Vector2(6983.0005, -5491)
 rotation = -3.1415925
-tile_map_data = PackedByteArray("AAANAOX/AQAAAAAAAAANAOb/AQAAAAAAAAANAOf/AQAAAAAAAAANAOj/AQAAAAAAAAAOAOX/AQAAAAAAAAAOAOb/AQAAAAAAAAAOAOf/AQAAAAAAAAAOAOj/AQAAAAAAAAAPAOX/AQAAAAAAAAAPAOb/AQAAAAAAAAAPAOf/AQAAAAAAAAAPAOj/AQAAAAAAAAAQAOX/AQAAAAAAAAAQAOb/AQAAAAAAAAAQAOf/AQAAAAAAAAAQAOj/AQAAAAAAAAARAOX/AQAAAAAAAAARAOb/AQAAAAAAAAARAOf/AQAAAAAAAAARAOj/AQAAAAAAAAALAOn/AQAAAAAAAAAMAOn/AQAAAAAAAAANAOn/AQAAAAAAAAAOAOn/AQAAAAAAAAAPAOn/AQAAAAAAAAAQAOn/AQAAAAAAAAARAOn/AQAAAAAAAAAMAOT/AQAAAAAAAAAMAOX/AQAAAAAAAAAMAOb/AQAAAAAAAAAMAOf/AQAAAAAAAAAMAOj/AQAAAAAAAAANAOT/AQAAAAAAAAAOAOT/AQAAAAAAAAAPAOT/AQAAAAAAAAAQAOT/AQAAAAAAAAARAOT/AQAAAAAAAAA=")
+tile_map_data = PackedByteArray("AAANAOX/AQAAAAAAAAANAOb/AQAAAAAAAAANAOf/AQAAAAAAAAANAOj/AQAAAAAAAAAOAOX/AQAAAAAAAAAOAOb/AQAAAAAAAAAOAOf/AQAAAAAAAAAOAOj/AQAAAAAAAAAPAOX/AQAAAAAAAAAPAOb/AQAAAAAAAAAPAOf/AQAAAAAAAAAPAOj/AQAAAAAAAAALAOn/AQAAAAAAAAAMAOn/AQAAAAAAAAANAOn/AQAAAAAAAAAOAOn/AQAAAAAAAAAPAOn/AQAAAAAAAAAQAOn/AQAAAAAAAAARAOn/AQAAAAAAAAAMAOT/AQAAAAAAAAAMAOX/AQAAAAAAAAAMAOb/AQAAAAAAAAAMAOf/AQAAAAAAAAAMAOj/AQAAAAAAAAANAOT/AQAAAAAAAAAOAOT/AQAAAAAAAAAPAOT/AQAAAAAAAAAQAOT/AQAAAAAAAAARAOT/AQAAAAAAAAA=")
 tile_set = SubResource("TileSet_7nelj")
+
+[node name="MoitaTeste7" type="Sprite2D" parent="background/0/Area_secreta" unique_id=1053317260]
+z_index = 1
+position = Vector2(2067.9194, -3037.0786)
+rotation = -2.3561947
+scale = Vector2(0.5731409, 0.573141)
+texture = ExtResource("38_ruwr8")
+
+[node name="MoitaTeste8" type="Sprite2D" parent="background/0/Area_secreta" unique_id=1274714736]
+z_index = 1
+position = Vector2(1983.7432, -3240.9998)
+rotation = -1.3089969
+scale = Vector2(0.5731409, 0.573141)
+texture = ExtResource("38_ruwr8")
+
+[node name="MoitaTeste9" type="Sprite2D" parent="background/0/Area_secreta" unique_id=1339521140]
+z_index = 1
+position = Vector2(2079.7432, -3422.0002)
+rotation = -0.7853982
+scale = Vector2(0.5731409, 0.573141)
+texture = ExtResource("38_ruwr8")
+
+[node name="MoitaChao17" type="Sprite2D" parent="background/0/Area_secreta" unique_id=963982337]
+modulate = Color(0.012617188, 0.012617188, 0.012617188, 1)
+z_index = 1
+position = Vector2(1986.9214, -3479.2354)
+rotation = 2.6179936
+scale = Vector2(0.6720117, 0.6720117)
+texture = ExtResource("47_w7gkm")
+
+[node name="MoitaChao18" type="Sprite2D" parent="background/0/Area_secreta" unique_id=1664416625]
+modulate = Color(0.012617188, 0.012617188, 0.012617188, 1)
+z_index = 1
+position = Vector2(1852.6074, -3293.9414)
+rotation = 1.5707961
+scale = Vector2(0.6720117, 0.6720117)
+texture = ExtResource("47_w7gkm")
+
+[node name="MoitaChao19" type="Sprite2D" parent="background/0/Area_secreta" unique_id=756706247]
+modulate = Color(0.012617188, 0.012617188, 0.012617188, 1)
+z_index = 1
+position = Vector2(1823.1958, -3077.2747)
+rotation = 0.78539807
+scale = Vector2(0.6720117, 0.6720117)
+texture = ExtResource("47_w7gkm")
 
 [node name="ParedeSecreta" parent="background/0" unique_id=729610840 instance=ExtResource("43_yhn6r")]
 visibility_layer = 7
@@ -1580,7 +1643,7 @@ position = Vector2(5580, -3700)
 texture = ExtResource("38_ruwr8")
 
 [node name="MoitaTeste6" type="Sprite2D" parent="background/1/Teto" unique_id=1570866184]
-position = Vector2(5556, -5392)
+position = Vector2(5601.255, -5392)
 texture = ExtResource("38_ruwr8")
 
 [node name="MoitaTeste11" type="Sprite2D" parent="background/1/Teto" unique_id=1780081298]
@@ -1640,7 +1703,7 @@ position = Vector2(4904, -11796)
 texture = ExtResource("38_ruwr8")
 
 [node name="MoitaTeste17" type="Sprite2D" parent="background/1/Teto" unique_id=1326255938]
-position = Vector2(2800, -11946)
+position = Vector2(2800, -12053.255)
 texture = ExtResource("38_ruwr8")
 
 [node name="MoitaTeste29" type="Sprite2D" parent="background/1/Teto" unique_id=2098389913]
@@ -1789,6 +1852,12 @@ scale = Vector2(1.4, 1.4)
 texture = ExtResource("39_u8dco")
 flip_v = true
 
+[node name="Frontfolha4" type="Sprite2D" parent="background/1/Foreground" unique_id=1459647477]
+position = Vector2(6981.6484, -5259.1377)
+scale = Vector2(1.4, 1.4)
+texture = ExtResource("39_u8dco")
+flip_v = true
+
 [node name="Frontfolha15" type="Sprite2D" parent="background/1/Foreground" unique_id=1962063431]
 position = Vector2(4954, -8522)
 scale = Vector2(1.4, 1.4)
@@ -1902,11 +1971,11 @@ position = Vector2(6472, -9768)
 texture = ExtResource("45_o8fgi")
 
 [node name="Cipó14" type="Sprite2D" parent="background/1/Foreground" unique_id=2080896077]
-position = Vector2(2184, -11840)
+position = Vector2(2156.157, -11886.589)
 texture = ExtResource("45_o8fgi")
 
 [node name="Cipó15" type="Sprite2D" parent="background/1/Foreground" unique_id=83028692]
-position = Vector2(2708, -11860)
+position = Vector2(2708, -11910.118)
 texture = ExtResource("45_o8fgi")
 
 [node name="Cipó16" type="Sprite2D" parent="background/1/Foreground" unique_id=1770954700]
@@ -1948,7 +2017,7 @@ flip_v = true
 
 [node name="MoitaChao9" type="Sprite2D" parent="background/1/Foreground" unique_id=871400424]
 modulate = Color(0.012617188, 0.012617188, 0.012617188, 1)
-position = Vector2(5748, -4218)
+position = Vector2(5748, -4108.1567)
 scale = Vector2(1.3440233, 1.3440233)
 texture = ExtResource("47_w7gkm")
 
@@ -2120,6 +2189,14 @@ material = SubResource("ShaderMaterial_wrolb")
 position = Vector2(6652, -252.00003)
 rotation = -0.2617994
 scale = Vector2(1.5055103, 1.5055101)
+texture = ExtResource("22_4ycaj")
+
+[node name="90SemTítulo20251205150841" type="Sprite2D" parent="background/1/Foreground" unique_id=1484562737]
+modulate = Color(0.012617188, 0.012617188, 0.012617188, 1)
+material = SubResource("ShaderMaterial_wrolb")
+position = Vector2(5613.02, -1278.745)
+rotation = 0.49663767
+scale = Vector2(1.1548134, 1.1548132)
 texture = ExtResource("22_4ycaj")
 
 [node name="2" type="CanvasLayer" parent="background" unique_id=1387756370]

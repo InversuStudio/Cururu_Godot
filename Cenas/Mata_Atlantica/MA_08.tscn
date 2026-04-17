@@ -434,15 +434,19 @@ tile_map_data = PackedByteArray("AAD+/97/AQAAAAEAAAD//97/AQAAAAEAAAAAAN7/AQAAAAE
 tile_set = ExtResource("27_0h4tx")
 
 [node name="GramaReto" type="Sprite2D" parent="0" unique_id=1959219479]
-position = Vector2(2899, -4437)
+position = Vector2(2873, -4437)
 texture = ExtResource("17_ui1e1")
 
 [node name="GramaReto4" type="Sprite2D" parent="0" unique_id=1934953071]
-position = Vector2(3436, -4437)
+position = Vector2(3477, -4437)
+texture = ExtResource("17_ui1e1")
+
+[node name="GramaReto8" type="Sprite2D" parent="0" unique_id=1544989294]
+position = Vector2(3102, -4437)
 texture = ExtResource("17_ui1e1")
 
 [node name="GramaReto2" type="Sprite2D" parent="0" unique_id=971602666]
-position = Vector2(2360, -4437)
+position = Vector2(2284, -4437)
 texture = ExtResource("17_ui1e1")
 
 [node name="GramaReto3" type="Sprite2D" parent="0" unique_id=1505364845]
@@ -450,17 +454,22 @@ position = Vector2(1821, -4437)
 texture = ExtResource("17_ui1e1")
 
 [node name="GramaReto5" type="Sprite2D" parent="0" unique_id=1326533107]
-position = Vector2(-292, -5101)
+position = Vector2(-306, -5158)
+rotation = 1.5707964
+texture = ExtResource("17_ui1e1")
+
+[node name="GramaReto7" type="Sprite2D" parent="0" unique_id=2133910869]
+position = Vector2(-306, -4892)
 rotation = 1.5707964
 texture = ExtResource("17_ui1e1")
 
 [node name="GramaReto6" type="Sprite2D" parent="0" unique_id=1614672682]
-position = Vector2(-292, -4575)
+position = Vector2(-304, -4535)
 rotation = 1.5707964
 texture = ExtResource("17_ui1e1")
 
 [node name="ChapExterno" type="Sprite2D" parent="0" unique_id=1555965870]
-position = Vector2(1559, -4345)
+position = Vector2(1517, -4369)
 texture = ExtResource("13_ammsr")
 flip_h = true
 flip_v = true
@@ -485,6 +494,10 @@ follow_viewport_scale = 1.02
 position = Vector2(1238, -4184)
 texture = ExtResource("31_0pcfg")
 
+[node name="MoitaChao7" type="Sprite2D" parent="0/1" unique_id=1187766646]
+position = Vector2(1489.2157, -4169.608)
+texture = ExtResource("31_0pcfg")
+
 [node name="MoitaChao1" type="Sprite2D" parent="0/1" unique_id=811245012]
 position = Vector2(879, -4155)
 texture = ExtResource("30_yosc2")
@@ -507,6 +520,10 @@ texture = ExtResource("31_0pcfg")
 
 [node name="MoitaTeto2" type="Sprite2D" parent="0/1" unique_id=1386580230]
 position = Vector2(-100, -5381)
+texture = ExtResource("33_ut20e")
+
+[node name="MoitaTeto16" type="Sprite2D" parent="0/1" unique_id=2127687159]
+position = Vector2(-229.41177, -5494.1177)
 texture = ExtResource("33_ut20e")
 
 [node name="MoitaTeto4" type="Sprite2D" parent="0/1" unique_id=1331599779]
@@ -599,6 +616,10 @@ texture = ExtResource("24_esn82")
 
 [node name="Frontfolha12" type="Sprite2D" parent="0/2" unique_id=1613673250]
 position = Vector2(1995, -4338)
+texture = ExtResource("24_esn82")
+
+[node name="Frontfolha14" type="Sprite2D" parent="0/2" unique_id=132409162]
+position = Vector2(1878.0952, -4190.476)
 texture = ExtResource("24_esn82")
 
 [node name="Frontfolha13" type="Sprite2D" parent="0/2" unique_id=687323783]

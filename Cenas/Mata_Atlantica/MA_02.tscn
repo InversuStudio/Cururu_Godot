@@ -23,6 +23,7 @@
 [ext_resource type="Texture2D" uid="uid://ctexd1uqvvg2e" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/Arvoresv2/3E92CD98-C4C7-4426-A0A0-7D548CBC2FB5.PNG" id="17_uyy7x"]
 [ext_resource type="Texture2D" uid="uid://d0w6r04nxo1a2" path="res://Sprites/Cenário/Mata_Atlantica/Background/Mata/mato00.png" id="18_0l8d6"]
 [ext_resource type="Texture2D" uid="uid://dbj5n7gxejm6d" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/Arvoresv2/mata atlântica_0_20260313104525.PNG" id="18_2ol20"]
+[ext_resource type="Texture2D" uid="uid://cgog2gngmbgvh" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/arvore.png" id="18_ts3dy"]
 [ext_resource type="Texture2D" uid="uid://b2f2ppntemt15" path="res://Sprites/Cenário/Mata_Atlantica/Chao/flores.png" id="19_15e74"]
 [ext_resource type="Texture2D" uid="uid://b104bni305kbn" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/Arvoresv2/mata atlântica_0_20260313104257.PNG" id="19_xmq1o"]
 [ext_resource type="Shader" uid="uid://cete83ldr534" path="res://Scripts/Shaders/godray.gdshader" id="20_ts3dy"]
@@ -464,7 +465,7 @@ texture = ExtResource("13_0lf4e")
 
 [node name="Arvore07" type="Sprite2D" parent="background/-05" unique_id=1986076410]
 position = Vector2(-164, 55.5)
-texture = ExtResource("12_d1yra")
+texture = ExtResource("18_ts3dy")
 
 [node name="Arvore08" type="Sprite2D" parent="background/-05" unique_id=922441035]
 position = Vector2(1993, 499)

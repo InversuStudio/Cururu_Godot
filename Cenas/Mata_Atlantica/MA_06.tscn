@@ -17,9 +17,8 @@
 [ext_resource type="Texture2D" uid="uid://bxqxqu7gnoj8q" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/asrvore07.png" id="9_s2cq8"]
 [ext_resource type="Texture2D" uid="uid://i664886fdh55" path="res://Sprites/Cenário/Mata_Atlantica/Background/Mata/mato02.png" id="10_7ri12"]
 [ext_resource type="Texture2D" uid="uid://waauxxjip3k6" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/arvore06.png" id="10_jt3v3"]
-[ext_resource type="Texture2D" uid="uid://sih3o1ksris8" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/arvore05.png" id="11_7ri12"]
 [ext_resource type="Texture2D" uid="uid://yrshunpt0tr8" path="res://Sprites/Cenário/Mata_Atlantica/Background/Mata/mato01.png" id="11_gl4lj"]
-[ext_resource type="Texture2D" uid="uid://cijo1xigx64tj" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/arvore03.png" id="12_gl4lj"]
+[ext_resource type="Texture2D" uid="uid://cgog2gngmbgvh" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/arvore.png" id="12_ri2xm"]
 [ext_resource type="Texture2D" uid="uid://cd0k6180rqklv" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/arvore02.png" id="13_tkjsf"]
 [ext_resource type="Texture2D" uid="uid://d0w6r04nxo1a2" path="res://Sprites/Cenário/Mata_Atlantica/Background/Mata/mato00.png" id="17_tkjsf"]
 [ext_resource type="Texture2D" uid="uid://cw2yeg7ynw0kl" path="res://Sprites/Cenário/Mata_Atlantica/Chao/chap_externo.png" id="19_8juyj"]
@@ -299,7 +298,7 @@ texture = ExtResource("10_jt3v3")
 
 [node name="Arvore05" type="Sprite2D" parent="-02" unique_id=629638888]
 position = Vector2(5032, -1136)
-texture = ExtResource("11_7ri12")
+texture = ExtResource("12_ri2xm")
 
 [node name="Composição2" type="Sprite2D" parent="-02/Arvore05" unique_id=690861607]
 position = Vector2(-238, 416)
@@ -312,7 +311,7 @@ position = Vector2(-354.9995, 300)
 
 [node name="Arvore03" type="Sprite2D" parent="-02" unique_id=1612036607]
 position = Vector2(2111, -1189)
-texture = ExtResource("12_gl4lj")
+texture = ExtResource("12_ri2xm")
 
 [node name="Composição" type="Sprite2D" parent="-02/Arvore03" unique_id=567521304]
 position = Vector2(-223.00049, 511.0005)

@@ -29,12 +29,12 @@
 [ext_resource type="Texture2D" uid="uid://xfqi8mc766et" path="res://Sprites/Inimigos/Boitata/Animacoes/Rabo/boitata_157.png" id="20_agxkt"]
 [ext_resource type="Texture2D" uid="uid://bv355g2kjbpf2" path="res://Sprites/Inimigos/Boitata/Animacoes/Rabo/boitata_159.png" id="21_dfjqd"]
 [ext_resource type="Texture2D" uid="uid://bfetn2xgsxtse" path="res://Sprites/Inimigos/Boitata/Animacoes/Rabo/boitata_161.png" id="22_uyrp1"]
+[ext_resource type="Texture2D" uid="uid://dc4ocn7li3obx" path="res://Sprites/Cenário/Mata_Atlantica/Chao/moita_chao1.png" id="23_b3tkq"]
 [ext_resource type="Texture2D" uid="uid://ddo34f6u1n17b" path="res://Sprites/Inimigos/Boitata/Animacoes/Rabo/boitata_163.png" id="23_dqa24"]
 [ext_resource type="PackedScene" uid="uid://18e8pqawhowp" path="res://Sprites/Cenário/Mata_Atlantica/Interativos/chama_iluminacao.tscn" id="24_2ajv4"]
 [ext_resource type="Texture2D" uid="uid://dburljfs4utwt" path="res://Sprites/Inimigos/Boitata/Animacoes/Rabo/boitata_165.png" id="24_rppi7"]
 [ext_resource type="Texture2D" uid="uid://dx1lfugnv6um7" path="res://Sprites/Inimigos/Boitata/Animacoes/Rabo/boitata_167.png" id="25_1fff3"]
 [ext_resource type="Texture2D" uid="uid://ftcnbw8cqyxj" path="res://Sprites/Inimigos/Boitata/Animacoes/Rabo/boitata_169.png" id="26_crkp4"]
-[ext_resource type="Texture2D" uid="uid://drcemrcpb3ydc" path="res://Sprites/Cenário/Mata_Atlantica/Chao/moita_chao2.png" id="27_iruwy"]
 [ext_resource type="Script" uid="uid://davjnwfncyj66" path="res://Scripts/Componentes/Armadilha.gd" id="27_xyal3"]
 [ext_resource type="Shader" uid="uid://da2wxasx6evg0" path="res://Scripts/Shaders/Grama.gdshader" id="28_48sfr"]
 [ext_resource type="Texture2D" uid="uid://b6f4rmw8i4g77" path="res://Sprites/Inimigos/Boitata/PropCorpoBoitata.png" id="29_60v7g"]
@@ -617,12 +617,14 @@ follow_viewport_enabled = true
 follow_viewport_scale = 0.98
 
 [node name="MoitaChao3" type="Sprite2D" parent="-0,2" unique_id=1963045245]
+self_modulate = Color(0.72043425, 0.72043425, 0.72043425, 1)
 position = Vector2(-3621.4287, -10396.278)
-texture = ExtResource("27_iruwy")
+texture = ExtResource("39_e6ktp")
 
 [node name="MoitaChao2" type="Sprite2D" parent="-0,2" unique_id=1284409863]
+self_modulate = Color(0.72043425, 0.72043425, 0.72043425, 1)
 position = Vector2(-4526.531, -10415)
-texture = ExtResource("27_iruwy")
+texture = ExtResource("39_e6ktp")
 
 [node name="MoitaMiasma7" type="Sprite2D" parent="-0,2" unique_id=214529537]
 position = Vector2(-2217.954, -10378.778)
@@ -636,8 +638,8 @@ scale = Vector2(0.8647799, 0.8647799)
 texture = ExtResource("13_us20a")
 
 [node name="MoitaMiasma1" type="Sprite2D" parent="-0,2" unique_id=58110580]
-position = Vector2(-4076.5305, -10375.278)
-texture = ExtResource("13_us20a")
+position = Vector2(-4076.5305, -10373.469)
+texture = ExtResource("23_b3tkq")
 
 [node name="CanvasModulate" type="CanvasModulate" parent="-0,2" unique_id=1830517515]
 position = Vector2(-27329.11, -13826.375)
@@ -905,28 +907,28 @@ tile_set = ExtResource("35_26l3j")
 [node name="Chao" type="Node2D" parent="0/Cenario" unique_id=1120031141]
 
 [node name="ChapExterno" type="Sprite2D" parent="0/Cenario/Chao" unique_id=1775112383]
-position = Vector2(-1705.5714, 292.4287)
+position = Vector2(-1674.5714, 257.4287)
 rotation = -1.5707964
 texture = ExtResource("36_xyhsb")
 
 [node name="ChapExterno4" type="Sprite2D" parent="0/Cenario/Chao" unique_id=1728525943]
-position = Vector2(-4779.0713, 292.4287)
+position = Vector2(-4742.5713, 268.4287)
 rotation = -1.5707964
 texture = ExtResource("36_xyhsb")
 
 [node name="ChapExterno5" type="Sprite2D" parent="0/Cenario/Chao" unique_id=837627081]
-position = Vector2(-4898.5713, -384.5713)
+position = Vector2(-4887.5713, -344.5713)
 rotation = -1.5707964
 texture = ExtResource("36_xyhsb")
 flip_h = true
 
 [node name="ChapExterno2" type="Sprite2D" parent="0/Cenario/Chao" unique_id=513876889]
-position = Vector2(-3212.5713, 282.4287)
+position = Vector2(-3255.5713, 261.4287)
 rotation = 3.1415925
 texture = ExtResource("36_xyhsb")
 
 [node name="ChapExterno3" type="Sprite2D" parent="0/Cenario/Chao" unique_id=448251054]
-position = Vector2(-654.5714, 288.4287)
+position = Vector2(-698.5714, 264.4287)
 rotation = 3.1415925
 texture = ExtResource("36_xyhsb")
 
@@ -952,7 +954,7 @@ texture = ExtResource("37_emlcy")
 flip_h = true
 
 [node name="ChapInterno3" type="Sprite2D" parent="0/Cenario/Chao" unique_id=1027247301]
-position = Vector2(-4586.0713, 473.4287)
+position = Vector2(-4597.5713, 473.4287)
 rotation = -3.1415925
 texture = ExtResource("37_emlcy")
 flip_h = true
@@ -994,12 +996,12 @@ position = Vector2(-5044.5713, 196.42871)
 texture = ExtResource("38_0quqb")
 
 [node name="GramaReto18" type="Sprite2D" parent="0/Cenario/Chao" unique_id=1221730103]
-position = Vector2(-4801.5713, -795.5713)
+position = Vector2(-4815.5713, -710.5713)
 rotation = 1.5707964
 texture = ExtResource("38_0quqb")
 
 [node name="GramaReto19" type="Sprite2D" parent="0/Cenario/Chao" unique_id=551655878]
-position = Vector2(-4801.5713, -1101.5713)
+position = Vector2(-4819.5713, -1101.5713)
 rotation = 1.5707964
 texture = ExtResource("38_0quqb")
 
@@ -1016,7 +1018,7 @@ position = Vector2(442.4286, 189.42871)
 texture = ExtResource("38_0quqb")
 
 [node name="GramaReto22" type="Sprite2D" parent="0/Cenario/Chao" unique_id=1472471714]
-position = Vector2(-260.5714, 189.42871)
+position = Vector2(-344.5714, 195.42871)
 texture = ExtResource("38_0quqb")
 
 [node name="GramaReto23" type="Sprite2D" parent="0/Cenario/Chao" unique_id=1217329765]
@@ -1263,26 +1265,6 @@ position = Vector2(9.999512, 36)
 scale = Vector2(2.2565186, 0.92623836)
 texture = ExtResource("40_ukj8n")
 
-[node name="MoitaChao2" type="Sprite2D" parent="1/Teto/BoitataCenario" unique_id=350933606]
-position = Vector2(948.8554, 144.66577)
-scale = Vector2(1.4612763, 1.4612763)
-texture = ExtResource("27_iruwy")
-
-[node name="MoitaChao4" type="Sprite2D" parent="1/Teto/BoitataCenario" unique_id=1261490615]
-position = Vector2(444.71533, 97.90527)
-scale = Vector2(1.4612763, 1.4612763)
-texture = ExtResource("27_iruwy")
-
-[node name="MoitaChao5" type="Sprite2D" parent="1/Teto/BoitataCenario" unique_id=1393429442]
-position = Vector2(-301.99658, 140.28183)
-scale = Vector2(1.4612763, 1.4612763)
-texture = ExtResource("27_iruwy")
-
-[node name="MoitaChao6" type="Sprite2D" parent="1/Teto/BoitataCenario" unique_id=1479691479]
-position = Vector2(1429.6157, 200.19434)
-scale = Vector2(1.4612763, 1.4612763)
-texture = ExtResource("27_iruwy")
-
 [node name="Moita11" type="Sprite2D" parent="1/Teto/BoitataCenario" unique_id=211157177]
 position = Vector2(-1530.1991, 54.06724)
 scale = Vector2(1.4612763, 1.4612763)
@@ -1303,6 +1285,19 @@ position = Vector2(259.13348, 236.72676)
 scale = Vector2(1.4612763, 1.4612763)
 texture = ExtResource("42_8p6fm")
 
+[node name="MoitaChao2" type="Sprite2D" parent="1/Teto/BoitataCenario" unique_id=350933606]
+self_modulate = Color(0.45336455, 0.45336455, 0.45336455, 1)
+position = Vector2(901.88574, 102.63574)
+rotation = -0.26179937
+scale = Vector2(1.4612765, 1.4612765)
+texture = ExtResource("39_e6ktp")
+
+[node name="MoitaChao6" type="Sprite2D" parent="1/Teto/BoitataCenario" unique_id=1479691479]
+self_modulate = Color(0.45336455, 0.45336455, 0.45336455, 1)
+position = Vector2(1429.6167, 200.19434)
+scale = Vector2(1.4612764, 1.4612764)
+texture = ExtResource("39_e6ktp")
+
 [node name="Moita5" type="Sprite2D" parent="1/Teto/BoitataCenario" unique_id=636688357]
 position = Vector2(736.9707, 394.54395)
 scale = Vector2(1.4612763, 1.4612763)
@@ -1317,6 +1312,12 @@ texture = ExtResource("42_8p6fm")
 position = Vector2(1079.6399, 377.00864)
 scale = Vector2(4.94872, 1.3534904)
 texture = ExtResource("40_ukj8n")
+
+[node name="MoitaChao5" type="Sprite2D" parent="1/Teto/BoitataCenario" unique_id=1393429442]
+self_modulate = Color(0.45336455, 0.45336455, 0.45336455, 1)
+position = Vector2(-301.99658, 140.28223)
+scale = Vector2(1.4612764, 1.4612764)
+texture = ExtResource("39_e6ktp")
 
 [node name="Moita15" type="Sprite2D" parent="1/Teto/BoitataCenario" unique_id=123933148]
 position = Vector2(2066.7317, 119.82402)
@@ -1342,6 +1343,12 @@ texture = ExtResource("40_ukj8n")
 position = Vector2(2199.7083, 309.79044)
 scale = Vector2(1.4612764, 1.4612764)
 texture = ExtResource("42_8p6fm")
+
+[node name="MoitaChao4" type="Sprite2D" parent="1/Teto/BoitataCenario" unique_id=1261490615]
+self_modulate = Color(0.45336455, 0.45336455, 0.45336455, 1)
+position = Vector2(444.71533, 340.61548)
+scale = Vector2(1.4612764, 1.4612764)
+texture = ExtResource("39_e6ktp")
 
 [node name="Moita18" type="Sprite2D" parent="1/Teto/BoitataCenario" unique_id=255500133]
 position = Vector2(1749.6351, 321.48065)

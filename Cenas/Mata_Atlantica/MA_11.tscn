@@ -658,205 +658,175 @@ position = Vector2(6586, -438)
 [node name="GramaReto29" type="Sprite2D" parent="0/Chao" unique_id=516859504]
 position = Vector2(-1946.9995, -536)
 rotation = 1.5707964
-scale = Vector2(0.8, 0.8)
 texture = ExtResource("10_rrc73")
 flip_v = true
 
 [node name="GramaReto42" type="Sprite2D" parent="0/Chao" unique_id=1836609042]
 position = Vector2(-1946.9995, -966)
 rotation = 1.5707964
-scale = Vector2(0.8, 0.8)
 texture = ExtResource("10_rrc73")
 flip_v = true
 
 [node name="GramaReto43" type="Sprite2D" parent="0/Chao" unique_id=852228368]
 position = Vector2(-1946.9995, -1283.0001)
 rotation = 1.5707964
-scale = Vector2(0.8, 0.8)
 texture = ExtResource("10_rrc73")
 flip_v = true
 
 [node name="GramaReto44" type="Sprite2D" parent="0/Chao" unique_id=1882779159]
 position = Vector2(-2199, -1913)
 rotation = 1.5707964
-scale = Vector2(0.8, 0.8)
 texture = ExtResource("10_rrc73")
 flip_v = true
 
 [node name="GramaReto45" type="Sprite2D" parent="0/Chao" unique_id=92787071]
 position = Vector2(-2199, -2364)
 rotation = 1.5707964
-scale = Vector2(0.8, 0.8)
 texture = ExtResource("10_rrc73")
 flip_v = true
 
 [node name="GramaReto46" type="Sprite2D" parent="0/Chao" unique_id=1557334070]
 position = Vector2(-2199, -2608)
 rotation = 1.5707964
-scale = Vector2(0.8, 0.8)
 texture = ExtResource("10_rrc73")
 flip_v = true
 
 [node name="ChapInterno21" type="Sprite2D" parent="0/Chao" unique_id=1558623059]
-position = Vector2(-2028, -245.00003)
-scale = Vector2(0.8, 0.8)
+position = Vector2(-2023, -227.00003)
 texture = ExtResource("11_bkuxo")
 flip_h = true
 flip_v = true
 
 [node name="ChapInterno19" type="Sprite2D" parent="0/Chao" unique_id=902703845]
-position = Vector2(-4243, -2070)
-scale = Vector2(0.8, 0.8)
+position = Vector2(-4254, -2070)
 texture = ExtResource("11_bkuxo")
 
 [node name="ChapInterno20" type="Sprite2D" parent="0/Chao" unique_id=1713721725]
-position = Vector2(-2284, -2843)
-scale = Vector2(0.8, 0.8)
+position = Vector2(-2274, -2864)
 texture = ExtResource("11_bkuxo")
 flip_h = true
 
 [node name="ChapInterno25" type="Sprite2D" parent="0/Chao" unique_id=692664260]
-position = Vector2(-2023, -1437.0001)
-scale = Vector2(0.8, 0.8)
+position = Vector2(-2023, -1470)
 texture = ExtResource("11_bkuxo")
 flip_h = true
 
 [node name="ChapInterno22" type="Sprite2D" parent="0/Chao" unique_id=1255217954]
-position = Vector2(-2662.0002, -3228)
-scale = Vector2(0.8, 0.8)
+position = Vector2(-2641, -3228)
 texture = ExtResource("11_bkuxo")
 flip_h = true
 
-[node name="ChapInterno23" type="Sprite2D" parent="0/Chao" unique_id=175657266]
-position = Vector2(-5516, -3226)
-scale = Vector2(0.8, 0.8)
-texture = ExtResource("11_bkuxo")
-
 [node name="ChapInterno24" type="Sprite2D" parent="0/Chao" unique_id=666078620]
-position = Vector2(-5517, -2551)
-scale = Vector2(0.8, 0.8)
+position = Vector2(-5539, -2530)
 texture = ExtResource("11_bkuxo")
 flip_v = true
 
 [node name="ChapExterno" type="Sprite2D" parent="0/Chao" unique_id=1681014590]
-position = Vector2(-4020.0002, -85.79999)
-scale = Vector2(0.8, 0.8)
+position = Vector2(-4013, -85.79999)
 texture = ExtResource("12_noowx")
 flip_v = true
 
+[node name="ChapInterno23" type="Sprite2D" parent="0/Chao" unique_id=175657266]
+position = Vector2(-5540, -3226)
+texture = ExtResource("11_bkuxo")
+
 [node name="ChapExterno2" type="Sprite2D" parent="0/Chao" unique_id=721473354]
 position = Vector2(-3402.2, -86)
-scale = Vector2(0.8, 0.8)
 texture = ExtResource("12_noowx")
 flip_h = true
 flip_v = true
 
 [node name="ChapExterno16" type="Sprite2D" parent="0/Chao" unique_id=1884542769]
 position = Vector2(-4401, -699.99994)
-scale = Vector2(0.8, 0.8)
 texture = ExtResource("12_noowx")
 
 [node name="ChapExterno19" type="Sprite2D" parent="0/Chao" unique_id=92454440]
-position = Vector2(-4145, -2225)
-scale = Vector2(0.8, 0.8)
+position = Vector2(-4145, -2196)
 texture = ExtResource("12_noowx")
 
 [node name="ChapExterno21" type="Sprite2D" parent="0/Chao" unique_id=1571745280]
-position = Vector2(-2115, -1598)
-scale = Vector2(0.8, 0.8)
+position = Vector2(-2126, -1598)
 texture = ExtResource("12_noowx")
 flip_h = true
 
 [node name="ChapExterno22" type="Sprite2D" parent="0/Chao" unique_id=1042693102]
 position = Vector2(-2499, -3003)
-scale = Vector2(0.8, 0.8)
 texture = ExtResource("12_noowx")
 flip_h = true
 
 [node name="ChapExterno18" type="Sprite2D" parent="0/Chao" unique_id=796814998]
 position = Vector2(-4145, -2390)
-scale = Vector2(0.8, 0.8)
 texture = ExtResource("12_noowx")
 flip_v = true
 
 [node name="GramaReto24" type="Sprite2D" parent="0/Chao" unique_id=1171492619]
 position = Vector2(-4357.4, -161.40002)
-scale = Vector2(0.8, 0.8)
+texture = ExtResource("10_rrc73")
+
+[node name="GramaReto30" type="Sprite2D" parent="0/Chao" unique_id=1037923182]
+position = Vector2(-3943, 254)
+rotation = 1.5707964
+texture = ExtResource("10_rrc73")
+
+[node name="GramaReto31" type="Sprite2D" parent="0/Chao" unique_id=545945909]
+position = Vector2(-3472, 254)
+rotation = -1.5707964
 texture = ExtResource("10_rrc73")
 
 [node name="GramaReto40" type="Sprite2D" parent="0/Chao" unique_id=1916691089]
 position = Vector2(-2764.0002, -161.40002)
-scale = Vector2(0.8, 0.8)
 texture = ExtResource("10_rrc73")
 
 [node name="GramaReto41" type="Sprite2D" parent="0/Chao" unique_id=111702800]
 position = Vector2(-2356.0002, -161.40002)
-scale = Vector2(0.8, 0.8)
 texture = ExtResource("10_rrc73")
 
 [node name="GramaReto25" type="Sprite2D" parent="0/Chao" unique_id=1319277705]
 position = Vector2(-4786.0005, -161.40002)
-scale = Vector2(0.8, 0.8)
 texture = ExtResource("10_rrc73")
 
 [node name="GramaReto26" type="Sprite2D" parent="0/Chao" unique_id=1527154455]
-position = Vector2(-5213, -2467)
-scale = Vector2(0.8, 0.8)
+position = Vector2(-5265, -2467)
 texture = ExtResource("10_rrc73")
 
 [node name="GramaReto27" type="Sprite2D" parent="0/Chao" unique_id=1292810657]
 position = Vector2(-4781, -2467)
-scale = Vector2(0.8, 0.8)
 texture = ExtResource("10_rrc73")
 
 [node name="GramaReto28" type="Sprite2D" parent="0/Chao" unique_id=1196378035]
 position = Vector2(-4472, -2467)
-scale = Vector2(0.8, 0.8)
 texture = ExtResource("10_rrc73")
 
 [node name="GramaReto37" type="Sprite2D" parent="0/Chao" unique_id=2101744041]
 position = Vector2(-5214, -161.40002)
-scale = Vector2(0.8, 0.8)
 texture = ExtResource("10_rrc73")
 
 [node name="GramaReto38" type="Sprite2D" parent="0/Chao" unique_id=475264720]
 position = Vector2(-5653, -161.40002)
-scale = Vector2(0.8, 0.8)
 texture = ExtResource("10_rrc73")
 
 [node name="GramaReto18" type="Sprite2D" parent="0/Chao" unique_id=1141873452]
 position = Vector2(-4316, -1007.00006)
 rotation = 1.5707964
-scale = Vector2(0.8, 0.8)
 texture = ExtResource("10_rrc73")
 
 [node name="GramaReto39" type="Sprite2D" parent="0/Chao" unique_id=607080581]
 position = Vector2(-4316, -1352)
 rotation = 1.5707964
-scale = Vector2(0.8, 0.8)
 texture = ExtResource("10_rrc73")
 
 [node name="GramaReto19" type="Sprite2D" parent="0/Chao" unique_id=1051815935]
 position = Vector2(-4322, -1782.0001)
 rotation = 1.5707964
-scale = Vector2(0.8, 0.8)
-texture = ExtResource("10_rrc73")
-
-[node name="GramaReto20" type="Sprite2D" parent="0/Chao" unique_id=2104274507]
-position = Vector2(-5594, -2965)
-rotation = 1.5707964
-scale = Vector2(0.8, 0.8)
 texture = ExtResource("10_rrc73")
 
 [node name="GramaReto21" type="Sprite2D" parent="0/Chao" unique_id=1353752834]
-position = Vector2(-5594, -2871.0002)
+position = Vector2(-5610, -2874)
 rotation = 1.5707964
-scale = Vector2(0.8, 0.8)
 texture = ExtResource("10_rrc73")
 
 [node name="GramaReto22" type="Sprite2D" parent="0/Chao" unique_id=1116349692]
 position = Vector2(-3120, -161)
-scale = Vector2(0.57534164, 0.8)
 texture = ExtResource("10_rrc73")
 
 [node name="CanvasModulate" type="CanvasModulate" parent="0" unique_id=938813401]
@@ -1006,6 +976,12 @@ position = Vector2(4736, -1726)
 
 [node name="Frontfolha" type="Sprite2D" parent="2/Foreground" unique_id=1486302974]
 position = Vector2(-3527.0002, -2158)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("22_omrxv")
+flip_v = true
+
+[node name="Frontfolha11" type="Sprite2D" parent="2/Foreground" unique_id=69413829]
+position = Vector2(-4052.191, -2052.0955)
 scale = Vector2(0.8, 0.8)
 texture = ExtResource("22_omrxv")
 flip_v = true
