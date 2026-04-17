@@ -18,7 +18,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(1, 0.52854663, 0.22631818, 1)
+color = Color(0.3335453, 0.6821128, 0.39540374, 1)
 
 [node name="Esquerda" type="ColorRect" parent="." unique_id=297505291]
 custom_minimum_size = Vector2(10, 0)
