@@ -2,12 +2,14 @@
 
 [ext_resource type="Texture2D" uid="uid://e4138tmbd6ck" path="res://Sprites/Cenário/Mata_Atlantica/Background/110 Sem Título_20260213153415.png" id="1_82dou"]
 [ext_resource type="Texture2D" uid="uid://cs5tclcq8xish" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/arvore_S2.png" id="2_ql26k"]
+[ext_resource type="Texture2D" uid="uid://3v555i5ve41i" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/arvore_tronco.png" id="3_gytst"]
 [ext_resource type="Shader" uid="uid://c1omtsxv04udh" path="res://Scripts/Shaders/blur_shader.gdshader" id="3_hg2ga"]
 [ext_resource type="Texture2D" uid="uid://cc6yes0bp2w0y" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/arvore_S1.png" id="4_431bo"]
 [ext_resource type="Texture2D" uid="uid://yln77sy1ylrp" path="res://Sprites/Cenário/Mata_Atlantica/Background/Mata/mato03.png" id="5_kw66j"]
 [ext_resource type="Texture2D" uid="uid://i664886fdh55" path="res://Sprites/Cenário/Mata_Atlantica/Background/Mata/mato02.png" id="6_ek7qv"]
 [ext_resource type="Texture2D" uid="uid://b1sv0car32gha" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/arvore_S3.png" id="7_gytst"]
 [ext_resource type="Shader" uid="uid://dc0bwmy1j0o5i" path="res://Scripts/Shaders/fog.gdshader" id="8_40frc"]
+[ext_resource type="Texture2D" uid="uid://cgog2gngmbgvh" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/arvore.png" id="9_40frc"]
 [ext_resource type="Texture2D" uid="uid://yrshunpt0tr8" path="res://Sprites/Cenário/Mata_Atlantica/Background/Mata/mato01.png" id="9_lsfrh"]
 [ext_resource type="Texture2D" uid="uid://sih3o1ksris8" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/arvore05.png" id="10_816ow"]
 [ext_resource type="Texture2D" uid="uid://dphhlbwaebgco" path="res://Sprites/Cenário/Mata_Atlantica/Background/Galhos/composição.png" id="11_fed0x"]
@@ -60,13 +62,13 @@ shader_parameter/lod = 0.800000038
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_uygvq"]
 shader = ExtResource("3_hg2ga")
-shader_parameter/darkness = 0.250000011875
+shader_parameter/darkness = 0.30000001425
 shader_parameter/lod = 0.70000003325
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_sa01y"]
 shader = ExtResource("3_hg2ga")
-shader_parameter/darkness = 0.050000002375
-shader_parameter/lod = 0.400000019
+shader_parameter/darkness = 0.250000011875
+shader_parameter/lod = 0.6000000285
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_owbt5"]
 shader = ExtResource("8_40frc")
@@ -74,6 +76,11 @@ shader_parameter/fog_color = Color(0.47058824, 0.7411765, 0.54901963, 0.43529412
 shader_parameter/density = 1.0
 shader_parameter/speed = 0.0
 shader_parameter/scale = 6.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_gytst"]
+shader = ExtResource("3_hg2ga")
+shader_parameter/darkness = 0.150000007125
+shader_parameter/lod = 0.50000002375
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rnx0k"]
 size = Vector2(458, 83)
@@ -272,18 +279,18 @@ texture = ExtResource("2_ql26k")
 [node name="ArvoreS3" type="Sprite2D" parent="Background/-3/Arvore3" unique_id=1488592714]
 position = Vector2(-2225.077, -3408.8599)
 scale = Vector2(0.46129233, 0.8067565)
-texture = ExtResource("2_ql26k")
+texture = ExtResource("3_gytst")
 flip_v = true
 
 [node name="ArvoreS4" type="Sprite2D" parent="Background/-3/Arvore3" unique_id=768105713]
 position = Vector2(-2225.077, -1625.8998)
 scale = Vector2(0.46129233, 0.8067565)
-texture = ExtResource("2_ql26k")
+texture = ExtResource("3_gytst")
 
 [node name="ArvoreS5" type="Sprite2D" parent="Background/-3/Arvore3" unique_id=1864553967]
 position = Vector2(-2225.614, 114.407394)
 scale = Vector2(0.46129233, 0.8067565)
-texture = ExtResource("2_ql26k")
+texture = ExtResource("3_gytst")
 
 [node name="ArvoreS6" type="Sprite2D" parent="Background/-3/Arvore3" unique_id=323251889]
 position = Vector2(-1419.2, -3408.8599)
@@ -323,7 +330,6 @@ offset_top = -5138.0605
 offset_right = -4803.039
 offset_bottom = -5098.0605
 scale = Vector2(0.9844004, 1.7800354)
-metadata/_edit_use_anchors_ = true
 
 [node name="-25" type="CanvasLayer" parent="Background" unique_id=2118865188]
 follow_viewport_enabled = true
@@ -427,12 +433,12 @@ texture = ExtResource("7_gytst")
 [node name="ArvoreS7" type="Sprite2D" parent="Background/-2/Arvore2" unique_id=736332550]
 position = Vector2(-3444.2148, -508.60754)
 scale = Vector2(0.5373022, 0.93969053)
-texture = ExtResource("7_gytst")
+texture = ExtResource("3_gytst")
 
 [node name="ArvoreS12" type="Sprite2D" parent="Background/-2/Arvore2" unique_id=1645401782]
 position = Vector2(-2879.5105, -599.5227)
 scale = Vector2(0.5373022, 0.93969053)
-texture = ExtResource("7_gytst")
+texture = ExtResource("3_gytst")
 
 [node name="ArvoreS1" type="Sprite2D" parent="Background/-2/Arvore2" unique_id=2042852884]
 position = Vector2(-4349.0313, -3693.218)
@@ -467,24 +473,23 @@ texture = ExtResource("7_gytst")
 [node name="ArvoreS11" type="Sprite2D" parent="Background/-2/Arvore2" unique_id=149925165]
 position = Vector2(-2394.8633, -3210.2185)
 scale = Vector2(0.5373022, 0.9396903)
-texture = ExtResource("7_gytst")
+texture = ExtResource("9_40frc")
 flip_v = true
 
 [node name="ArvoreS13" type="Sprite2D" parent="Background/-2/Arvore2" unique_id=984877809]
 position = Vector2(-2394.8633, -1133.5027)
 scale = Vector2(0.5373022, 0.9396903)
-texture = ExtResource("7_gytst")
+texture = ExtResource("3_gytst")
 
 [node name="ArvoreS14" type="Sprite2D" parent="Background/-2/Arvore2" unique_id=675489326]
 position = Vector2(-2394.8633, 942.2742)
 scale = Vector2(0.5373022, 0.9396903)
-texture = ExtResource("7_gytst")
-flip_v = true
+texture = ExtResource("3_gytst")
 
 [node name="ArvoreS15" type="Sprite2D" parent="Background/-2/Arvore2" unique_id=1042301217]
 position = Vector2(-1591.731, -3978.416)
 scale = Vector2(0.5373022, 0.9396903)
-texture = ExtResource("7_gytst")
+texture = ExtResource("3_gytst")
 
 [node name="ArvoreS16" type="Sprite2D" parent="Background/-2/Arvore2" unique_id=1630052068]
 position = Vector2(-1591.731, 2251.7332)
@@ -495,28 +500,28 @@ flip_v = true
 [node name="ArvoreS17" type="Sprite2D" parent="Background/-2/Arvore2" unique_id=56204813]
 position = Vector2(-1591.731, -1901.6998)
 scale = Vector2(0.5373022, 0.9396903)
-texture = ExtResource("7_gytst")
+texture = ExtResource("3_gytst")
 flip_v = true
 
 [node name="ArvoreS19" type="Sprite2D" parent="Background/-2/Arvore2" unique_id=63720748]
 position = Vector2(-1591.731, 174.077)
 scale = Vector2(0.5373022, 0.9396903)
-texture = ExtResource("7_gytst")
+texture = ExtResource("3_gytst")
 
 [node name="ArvoreS20" type="Sprite2D" parent="Background/-2/Arvore2" unique_id=184803710]
 position = Vector2(-494.9629, 331.00653)
 scale = Vector2(0.5373022, 0.9396903)
-texture = ExtResource("7_gytst")
+texture = ExtResource("3_gytst")
 
 [node name="ArvoreS21" type="Sprite2D" parent="Background/-2/Arvore2" unique_id=1105492666]
 position = Vector2(1002.76685, -175.48727)
 scale = Vector2(0.5373022, 0.9396903)
-texture = ExtResource("7_gytst")
+texture = ExtResource("3_gytst")
 
 [node name="ArvoreS22" type="Sprite2D" parent="Background/-2/Arvore2" unique_id=1486183265]
 position = Vector2(31.5932, -175.48727)
 scale = Vector2(0.5373022, 0.9396903)
-texture = ExtResource("7_gytst")
+texture = ExtResource("3_gytst")
 
 [node name="Fog" type="ColorRect" parent="Background/-2/Arvore2" unique_id=92069412]
 material = SubResource("ShaderMaterial_owbt5")
@@ -545,6 +550,20 @@ position = Vector2(-15541.177, 638.8235)
 scale = Vector2(1.8, 1.7999997)
 texture = ExtResource("9_lsfrh")
 
+[node name="blur3" type="ColorRect" parent="Background/-15" unique_id=893435186]
+material = SubResource("ShaderMaterial_gytst")
+anchors_preset = -1
+anchor_right = 4.892711
+anchor_bottom = 4.0968637
+offset_left = -20237.648
+offset_top = -5522.3525
+offset_right = -16720.836
+offset_bottom = -5304.6255
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.9844004, 1.7800354)
+metadata/_edit_use_anchors_ = true
+
 [node name="-1" type="CanvasLayer" parent="Background" unique_id=2114514563]
 follow_viewport_enabled = true
 follow_viewport_scale = 0.9
@@ -557,7 +576,7 @@ scale = Vector2(1.86115, 1.06418)
 [node name="Arvore05" type="Sprite2D" parent="Background/-1/Arvore1" unique_id=921373926]
 position = Vector2(-2704.349, -3260.0217)
 scale = Vector2(0.5373022, 0.93969053)
-texture = ExtResource("10_816ow")
+texture = ExtResource("3_gytst")
 
 [node name="Composição4" type="Sprite2D" parent="Background/-1/Arvore1/Arvore05" unique_id=1719072891]
 position = Vector2(266.74902, 307.0005)
@@ -627,18 +646,18 @@ texture = ExtResource("14_0d4dn")
 [node name="Arvore08" type="Sprite2D" parent="Background/-1/Arvore1" unique_id=1955560365]
 position = Vector2(-1893.5605, -97.023056)
 scale = Vector2(0.5373022, 0.93969053)
-texture = ExtResource("15_4gvcr")
+texture = ExtResource("3_gytst")
 
 [node name="Arvore09" type="Sprite2D" parent="Background/-1/Arvore1" unique_id=1617458519]
 position = Vector2(-1893.5605, -2174.679)
 scale = Vector2(0.5373022, 0.93969053)
-texture = ExtResource("15_4gvcr")
+texture = ExtResource("3_gytst")
 flip_v = true
 
 [node name="Arvore10" type="Sprite2D" parent="Background/-1/Arvore1" unique_id=1703377466]
 position = Vector2(-1893.5605, -4252.335)
 scale = Vector2(0.5373022, 0.93969053)
-texture = ExtResource("15_4gvcr")
+texture = ExtResource("3_gytst")
 
 [node name="PlataformaSome2" type="StaticBody2D" parent="Background/-1/Arvore1" unique_id=1465149281]
 position = Vector2(-1915.5898, -3122.8267)
