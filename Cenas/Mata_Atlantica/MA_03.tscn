@@ -6,7 +6,7 @@
 [ext_resource type="Shader" uid="uid://c1omtsxv04udh" path="res://Scripts/Shaders/blur_shader.gdshader" id="4_6ski5"]
 [ext_resource type="Texture2D" uid="uid://cc6yes0bp2w0y" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/arvore_S1.png" id="5_hwlog"]
 [ext_resource type="Texture2D" uid="uid://i664886fdh55" path="res://Sprites/Cenário/Mata_Atlantica/Background/Mata/mato02.png" id="6_i10kd"]
-[ext_resource type="Texture2D" uid="uid://b1sv0car32gha" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/arvore_S3.png" id="7_tg5hw"]
+[ext_resource type="Texture2D" uid="uid://b1sv0car32gha" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/arvore_s3.png" id="7_tg5hw"]
 [ext_resource type="Texture2D" uid="uid://yrshunpt0tr8" path="res://Sprites/Cenário/Mata_Atlantica/Background/Mata/mato01.png" id="8_h1j0t"]
 [ext_resource type="Texture2D" uid="uid://c8bkav2g3wyeu" path="res://Sprites/Cenário/Mata_Atlantica/Chao/moita2.png" id="9_7axcw"]
 [ext_resource type="Shader" uid="uid://dc0bwmy1j0o5i" path="res://Scripts/Shaders/fog.gdshader" id="10_bbvfj"]
@@ -92,6 +92,8 @@ size = Vector2(746.98303, 878.96765)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dr2ls"]
 size = Vector2(91, 453)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cfkov"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_n8ivf"]
 size = Vector2(70, 486)
@@ -757,6 +759,14 @@ texture = ExtResource("28_cjmjp")
 position = Vector2(1858, -4668)
 destino = &"res://Cenas/Mata_Atlantica/MA_04.tscn"
 posicao = Vector2(7555, -7421.0005)
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="background/0/MA_04" unique_id=1091131392]
+position = Vector2(-243, -111)
+scale = Vector2(0.65058976, -2.8302176)
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="background/0/MA_04/StaticBody2D2" unique_id=369916409]
+shape = SubResource("RectangleShape2D_cfkov")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="background/0/MA_04" unique_id=2065413524]
 position = Vector2(-22, -253)
