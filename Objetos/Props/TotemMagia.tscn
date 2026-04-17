@@ -48,7 +48,7 @@ animations = [{
 }],
 "loop": false,
 "name": &"Quebrando",
-"speed": 5.0
+"speed": 12.0
 }, {
 "frames": [{
 "duration": 1.0,

@@ -146,6 +146,7 @@ scale = Vector2(4.1601563, 4.1601563)
 texture = ExtResource("1_6rln1")
 
 [node name="CanvasModulate" type="CanvasModulate" parent="-5" unique_id=1145582344]
+visible = false
 position = Vector2(-21272.857, -19224.287)
 scale = Vector2(175.74992, 39.388683)
 color = Color(0.043039218, 0.043039136, 0.04303915, 1)
@@ -179,6 +180,7 @@ position = Vector2(6337, -4077)
 texture = ExtResource("5_oue67")
 
 [node name="CanvasModulate" type="CanvasModulate" parent="-4" unique_id=60724640]
+visible = false
 position = Vector2(-21272.857, -19224.287)
 scale = Vector2(175.74992, 39.388683)
 color = Color(0.043039218, 0.043039136, 0.04303915, 1)
@@ -208,6 +210,7 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="CanvasModulate" type="CanvasModulate" parent="-3" unique_id=675072861]
+visible = false
 position = Vector2(-21272.857, -19224.287)
 scale = Vector2(175.74992, 39.388683)
 color = Color(0.043039218, 0.043039136, 0.04303915, 1)
@@ -246,6 +249,7 @@ texture = ExtResource("2_ygqbx")
 flip_v = true
 
 [node name="CanvasModulate" type="CanvasModulate" parent="-2" unique_id=1494047377]
+visible = false
 position = Vector2(-21272.857, -19224.287)
 scale = Vector2(175.74992, 39.388683)
 color = Color(0.043039218, 0.043039136, 0.04303915, 1)
@@ -263,6 +267,7 @@ position = Vector2(6637, -653)
 texture = ExtResource("8_l0rkm")
 
 [node name="CanvasModulate" type="CanvasModulate" parent="-1" unique_id=445431585]
+visible = false
 position = Vector2(-21272.857, -19224.287)
 scale = Vector2(175.74992, 39.388683)
 color = Color(0.043039218, 0.043039136, 0.04303915, 1)
@@ -304,6 +309,7 @@ position = Vector2(6006, -3930)
 texture = ExtResource("9_fou0x")
 
 [node name="CanvasModulate" type="CanvasModulate" parent="0" unique_id=1450340843]
+visible = false
 position = Vector2(-21272.857, -19224.287)
 scale = Vector2(175.74992, 39.388683)
 color = Color(0.043039218, 0.043039136, 0.04303915, 1)
@@ -376,6 +382,7 @@ position = Vector2(6205, -1309.5)
 texture = ExtResource("28_hx3nd")
 
 [node name="CanvasModulate" type="CanvasModulate" parent="1" unique_id=798258733]
+visible = false
 position = Vector2(-21272.857, -19224.287)
 scale = Vector2(175.74992, 39.388683)
 color = Color(0.043039218, 0.043039136, 0.04303915, 1)
@@ -405,6 +412,7 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="CanvasModulate" type="CanvasModulate" parent="2" unique_id=1740485236]
+visible = false
 position = Vector2(-21272.857, -19224.287)
 scale = Vector2(175.74992, 39.388683)
 color = Color(0.043039218, 0.043039136, 0.04303915, 1)
@@ -513,6 +521,7 @@ offset_right = 8891.467
 offset_bottom = -7770.658
 
 [node name="CanvasModulate" type="CanvasModulate" parent="3" unique_id=1426368633]
+visible = false
 position = Vector2(-21272.857, -19224.287)
 scale = Vector2(175.74992, 39.388683)
 color = Color(0.043039218, 0.043039136, 0.04303915, 1)
@@ -654,287 +663,240 @@ position = Vector2(7480, -358)
 [node name="GramaReto49" type="Sprite2D" parent="4/Cenario/Chao" unique_id=1194907834]
 position = Vector2(-508, -729)
 rotation = 1.5707964
-scale = Vector2(0.65, 0.65)
 texture = ExtResource("9_0hgqb")
 flip_v = true
 
 [node name="GramaReto51" type="Sprite2D" parent="4/Cenario/Chao" unique_id=189474779]
 position = Vector2(-508, -1074)
 rotation = 1.5707964
-scale = Vector2(0.65, 0.65)
 texture = ExtResource("9_0hgqb")
 flip_v = true
 
 [node name="GramaReto63" type="Sprite2D" parent="4/Cenario/Chao" unique_id=131208727]
 position = Vector2(-4090, -1571.0001)
 rotation = 1.5707964
-scale = Vector2(0.65, 0.65)
 texture = ExtResource("9_0hgqb")
 flip_v = true
 
 [node name="GramaReto52" type="Sprite2D" parent="4/Cenario/Chao" unique_id=52511807]
 position = Vector2(-508, -1406.2)
 rotation = 1.5707964
-scale = Vector2(0.65, 0.65)
 texture = ExtResource("9_0hgqb")
 flip_v = true
 
 [node name="GramaReto53" type="Sprite2D" parent="4/Cenario/Chao" unique_id=1725610929]
 position = Vector2(-508, -1751.2)
 rotation = 1.5707964
-scale = Vector2(0.65, 0.65)
 texture = ExtResource("9_0hgqb")
 flip_v = true
 
 [node name="GramaReto64" type="Sprite2D" parent="4/Cenario/Chao" unique_id=98766163]
 position = Vector2(-1273, -583.00006)
 rotation = 1.5707964
-scale = Vector2(0.65, 0.65)
 texture = ExtResource("9_0hgqb")
 flip_v = true
 
 [node name="GramaReto76" type="Sprite2D" parent="4/Cenario/Chao" unique_id=655781500]
 position = Vector2(-4607.0005, -155.00006)
 rotation = 1.5707964
-scale = Vector2(0.65, 0.65)
 texture = ExtResource("9_0hgqb")
 flip_v = true
 
 [node name="GramaReto78" type="Sprite2D" parent="4/Cenario/Chao" unique_id=1116018841]
 position = Vector2(-4754.0005, -2753.0002)
 rotation = 1.5707964
-scale = Vector2(0.65, 0.65)
 texture = ExtResource("9_0hgqb")
 flip_v = true
 
 [node name="GramaReto77" type="Sprite2D" parent="4/Cenario/Chao" unique_id=1401068764]
 position = Vector2(-4349.0005, -555)
 rotation = 1.5707964
-scale = Vector2(0.65, 0.65)
 texture = ExtResource("9_0hgqb")
 flip_v = true
 
 [node name="GramaReto65" type="Sprite2D" parent="4/Cenario/Chao" unique_id=88562780]
 position = Vector2(-823, -681)
 rotation = 1.5707964
-scale = Vector2(0.65, 0.65)
 texture = ExtResource("9_0hgqb")
 
 [node name="GramaReto66" type="Sprite2D" parent="4/Cenario/Chao" unique_id=33666313]
 position = Vector2(-1466, -1249.0002)
 rotation = 1.5707964
-scale = Vector2(0.65, 0.65)
 texture = ExtResource("9_0hgqb")
 
 [node name="GramaReto151" type="Sprite2D" parent="4/Cenario/Chao" unique_id=1356831081]
 position = Vector2(-4540.0005, -1770.0004)
 rotation = 1.5707964
-scale = Vector2(0.65, 0.65)
 texture = ExtResource("9_0hgqb")
 
 [node name="GramaReto149" type="Sprite2D" parent="4/Cenario/Chao" unique_id=1420973134]
 position = Vector2(-3385.9998, -1688.0001)
 rotation = 1.5707964
-scale = Vector2(0.65, 0.65)
 texture = ExtResource("9_0hgqb")
 
 [node name="GramaReto68" type="Sprite2D" parent="4/Cenario/Chao" unique_id=1912048271]
 position = Vector2(-2234, -3396.0005)
 rotation = 1.5707964
-scale = Vector2(0.65, 0.65)
 texture = ExtResource("9_0hgqb")
 
 [node name="GramaReto155" type="Sprite2D" parent="4/Cenario/Chao" unique_id=935545939]
 position = Vector2(-1077, -3191.0002)
 rotation = 1.5707964
-scale = Vector2(0.65, 0.65)
 texture = ExtResource("9_0hgqb")
 
 [node name="GramaReto69" type="Sprite2D" parent="4/Cenario/Chao" unique_id=1632739486]
 position = Vector2(-2366, -4538)
 rotation = 1.5707964
-scale = Vector2(0.65, 0.65)
 texture = ExtResource("9_0hgqb")
 
 [node name="GramaReto70" type="Sprite2D" parent="4/Cenario/Chao" unique_id=1257951369]
 position = Vector2(-2366, -4325)
 rotation = 1.5707964
-scale = Vector2(0.65, 0.65)
 texture = ExtResource("9_0hgqb")
 
 [node name="GramaReto71" type="Sprite2D" parent="4/Cenario/Chao" unique_id=1117118504]
 position = Vector2(-2366, -4325)
 rotation = 1.5707964
-scale = Vector2(0.65, 0.65)
 texture = ExtResource("9_0hgqb")
 
 [node name="GramaReto72" type="Sprite2D" parent="4/Cenario/Chao" unique_id=838753578]
 position = Vector2(-6586, -3044)
 rotation = 1.5707964
-scale = Vector2(0.65, 0.65)
 texture = ExtResource("9_0hgqb")
 
 [node name="GramaReto73" type="Sprite2D" parent="4/Cenario/Chao" unique_id=1584809933]
 position = Vector2(-6586, -957)
 rotation = 1.5707964
-scale = Vector2(0.65, 0.65)
 texture = ExtResource("9_0hgqb")
 
 [node name="GramaReto74" type="Sprite2D" parent="4/Cenario/Chao" unique_id=1818732683]
 position = Vector2(-6586, -249)
 rotation = 1.5707964
-scale = Vector2(0.65, 0.65)
 texture = ExtResource("9_0hgqb")
 
 [node name="GramaReto75" type="Sprite2D" parent="4/Cenario/Chao" unique_id=47944815]
 position = Vector2(-4160.0005, -259)
 rotation = 1.5707964
-scale = Vector2(0.65, 0.65)
 texture = ExtResource("9_0hgqb")
 
 [node name="GramaReto54" type="Sprite2D" parent="4/Cenario/Chao" unique_id=1378611324]
 position = Vector2(-508, -2074.2)
 rotation = 1.5707964
-scale = Vector2(0.65, 0.65)
 texture = ExtResource("9_0hgqb")
 flip_v = true
 
 [node name="GramaReto55" type="Sprite2D" parent="4/Cenario/Chao" unique_id=1455986114]
 position = Vector2(-508, -2419.2)
 rotation = 1.5707964
-scale = Vector2(0.65, 0.65)
 texture = ExtResource("9_0hgqb")
 flip_v = true
 
 [node name="GramaReto56" type="Sprite2D" parent="4/Cenario/Chao" unique_id=1603069263]
 position = Vector2(-508, -2569.0002)
 rotation = 1.5707964
-scale = Vector2(0.65, 0.65)
 texture = ExtResource("9_0hgqb")
 flip_v = true
 
 [node name="GramaReto57" type="Sprite2D" parent="4/Cenario/Chao" unique_id=1910360008]
 position = Vector2(-250, -3314)
 rotation = 1.5707964
-scale = Vector2(0.65, 0.65)
 texture = ExtResource("9_0hgqb")
 flip_v = true
 
 [node name="GramaReto58" type="Sprite2D" parent="4/Cenario/Chao" unique_id=1643416940]
 position = Vector2(-250, -3597.0002)
 rotation = 1.5707964
-scale = Vector2(0.65, 0.65)
 texture = ExtResource("9_0hgqb")
 flip_v = true
 
 [node name="GramaReto59" type="Sprite2D" parent="4/Cenario/Chao" unique_id=1003131139]
 position = Vector2(-379, -4272)
 rotation = 1.5707964
-scale = Vector2(0.65, 0.65)
 texture = ExtResource("9_0hgqb")
 flip_v = true
 
 [node name="GramaReto60" type="Sprite2D" parent="4/Cenario/Chao" unique_id=1761160952]
 position = Vector2(-2557, -4065)
 rotation = 1.5707964
-scale = Vector2(0.65, 0.65)
 texture = ExtResource("9_0hgqb")
 flip_v = true
 
 [node name="GramaReto61" type="Sprite2D" parent="4/Cenario/Chao" unique_id=2024397880]
 position = Vector2(-2557, -3785)
 rotation = 1.5707964
-scale = Vector2(0.65, 0.65)
 texture = ExtResource("9_0hgqb")
 flip_v = true
 
 [node name="GramaReto62" type="Sprite2D" parent="4/Cenario/Chao" unique_id=282982535]
 position = Vector2(-2557, -3447)
 rotation = 1.5707964
-scale = Vector2(0.65, 0.65)
 texture = ExtResource("9_0hgqb")
 flip_v = true
 
 [node name="GramaReto152" type="Sprite2D" parent="4/Cenario/Chao" unique_id=217975431]
 position = Vector2(-1280, -3381.0002)
 rotation = 1.5707964
-scale = Vector2(0.65, 0.65)
 texture = ExtResource("9_0hgqb")
 flip_v = true
 
 [node name="GramaReto50" type="Sprite2D" parent="4/Cenario/Chao" unique_id=1460462422]
 position = Vector2(-3875.9998, 35)
-scale = Vector2(0.65, 0.65)
 texture = ExtResource("9_0hgqb")
 
 [node name="GramaReto79" type="Sprite2D" parent="4/Cenario/Chao" unique_id=1238741337]
 position = Vector2(-3531, 35)
-scale = Vector2(0.65, 0.65)
 texture = ExtResource("9_0hgqb")
 
 [node name="GramaReto80" type="Sprite2D" parent="4/Cenario/Chao" unique_id=1757773926]
 position = Vector2(-3185.2002, 35)
-scale = Vector2(0.65, 0.65)
 texture = ExtResource("9_0hgqb")
 
 [node name="GramaReto81" type="Sprite2D" parent="4/Cenario/Chao" unique_id=1147498893]
 position = Vector2(-2840.2002, 35)
-scale = Vector2(0.65, 0.65)
 texture = ExtResource("9_0hgqb")
 
 [node name="GramaReto91" type="Sprite2D" parent="4/Cenario/Chao" unique_id=20190414]
 position = Vector2(-5622.2, 35)
-scale = Vector2(0.65, 0.65)
 texture = ExtResource("9_0hgqb")
 
 [node name="GramaReto92" type="Sprite2D" parent="4/Cenario/Chao" unique_id=1729705591]
 position = Vector2(-5276.4, 35)
-scale = Vector2(0.65, 0.65)
 texture = ExtResource("9_0hgqb")
 
 [node name="GramaReto93" type="Sprite2D" parent="4/Cenario/Chao" unique_id=1523989314]
 position = Vector2(-4931.4004, 35)
-scale = Vector2(0.65, 0.65)
 texture = ExtResource("9_0hgqb")
 
 [node name="GramaReto94" type="Sprite2D" parent="4/Cenario/Chao" unique_id=1808812925]
 position = Vector2(-6389.2, 35)
-scale = Vector2(0.65, 0.65)
 texture = ExtResource("9_0hgqb")
 
 [node name="GramaReto95" type="Sprite2D" parent="4/Cenario/Chao" unique_id=365892131]
 position = Vector2(-6043.3994, 35)
-scale = Vector2(0.65, 0.65)
 texture = ExtResource("9_0hgqb")
 
 [node name="GramaReto96" type="Sprite2D" parent="4/Cenario/Chao" unique_id=1025815421]
 position = Vector2(-5698.4004, 35)
-scale = Vector2(0.65, 0.65)
 texture = ExtResource("9_0hgqb")
 
 [node name="GramaReto97" type="Sprite2D" parent="4/Cenario/Chao" unique_id=1632662975]
 position = Vector2(-5526.2, -736.69995)
-scale = Vector2(0.65, 0.65)
 texture = ExtResource("9_0hgqb")
 
 [node name="GramaReto98" type="Sprite2D" parent="4/Cenario/Chao" unique_id=129681380]
 position = Vector2(-5180.4, -736.69995)
-scale = Vector2(0.65, 0.65)
 texture = ExtResource("9_0hgqb")
 
 [node name="GramaReto100" type="Sprite2D" parent="4/Cenario/Chao" unique_id=982905383]
 position = Vector2(-6293.2, -736.69995)
-scale = Vector2(0.65, 0.65)
 texture = ExtResource("9_0hgqb")
 
 [node name="GramaReto101" type="Sprite2D" parent="4/Cenario/Chao" unique_id=2104566139]
 position = Vector2(-5947.3994, -736.69995)
-scale = Vector2(0.65, 0.65)
 texture = ExtResource("9_0hgqb")
 
 [node name="GramaReto133" type="Sprite2D" parent="4/Cenario/Chao" unique_id=290899151]
 position = Vector2(-6371.2, -1505.7)
-scale = Vector2(0.65, 0.65)
 texture = ExtResource("9_0hgqb")
 
 [node name="ChapExterno20" type="Sprite2D" parent="4/Cenario/Chao" unique_id=148310018]
@@ -946,312 +908,250 @@ flip_v = true
 
 [node name="GramaReto134" type="Sprite2D" parent="4/Cenario/Chao" unique_id=929943049]
 position = Vector2(-6025.3994, -1505.7)
-scale = Vector2(0.65, 0.65)
 texture = ExtResource("9_0hgqb")
 
 [node name="GramaReto102" type="Sprite2D" parent="4/Cenario/Chao" unique_id=765625374]
 position = Vector2(-5724, -736.69995)
-scale = Vector2(0.65, 0.65)
 texture = ExtResource("9_0hgqb")
 
 [node name="GramaReto99" type="Sprite2D" parent="4/Cenario/Chao" unique_id=83698069]
 position = Vector2(-4849.4004, -1244.7)
-scale = Vector2(0.65, 0.65)
 texture = ExtResource("9_0hgqb")
 
 [node name="GramaReto103" type="Sprite2D" parent="4/Cenario/Chao" unique_id=1259664131]
 position = Vector2(-4534, -1244.7)
-scale = Vector2(0.65, 0.65)
 texture = ExtResource("9_0hgqb")
 
 [node name="GramaReto104" type="Sprite2D" parent="4/Cenario/Chao" unique_id=169509964]
 position = Vector2(-5047.2, -1244.7)
-scale = Vector2(0.65, 0.65)
 texture = ExtResource("9_0hgqb")
 
 [node name="GramaReto105" type="Sprite2D" parent="4/Cenario/Chao" unique_id=1836246603]
 position = Vector2(-5207.2, -2011.7)
-scale = Vector2(0.65, 0.65)
 texture = ExtResource("9_0hgqb")
 
 [node name="GramaReto106" type="Sprite2D" parent="4/Cenario/Chao" unique_id=1153650895]
 position = Vector2(-4861.3994, -2011.7)
-scale = Vector2(0.65, 0.65)
 texture = ExtResource("9_0hgqb")
 
 [node name="GramaReto107" type="Sprite2D" parent="4/Cenario/Chao" unique_id=601833944]
 position = Vector2(-5551.2, -2011.7)
-scale = Vector2(0.65, 0.65)
 texture = ExtResource("9_0hgqb")
 
 [node name="GramaReto108" type="Sprite2D" parent="4/Cenario/Chao" unique_id=347963243]
 position = Vector2(-4995.0005, -3419.7)
-scale = Vector2(0.65, 0.65)
 texture = ExtResource("9_0hgqb")
 
 [node name="GramaReto109" type="Sprite2D" parent="4/Cenario/Chao" unique_id=1430816265]
 position = Vector2(-4649, -3419.7)
-scale = Vector2(0.65, 0.65)
 texture = ExtResource("9_0hgqb")
 
 [node name="GramaReto110" type="Sprite2D" parent="4/Cenario/Chao" unique_id=1019831227]
 position = Vector2(-5332.0005, -3419.7)
-scale = Vector2(0.65, 0.65)
 texture = ExtResource("9_0hgqb")
 
 [node name="GramaReto158" type="Sprite2D" parent="4/Cenario/Chao" unique_id=1061316765]
 position = Vector2(-5593.0005, -3419.7)
-scale = Vector2(0.65, 0.65)
 texture = ExtResource("9_0hgqb")
 
 [node name="GramaReto156" type="Sprite2D" parent="4/Cenario/Chao" unique_id=880395145]
 position = Vector2(-6037.0005, -3422.0002)
-scale = Vector2(0.65, 0.65)
 texture = ExtResource("9_0hgqb")
 
 [node name="GramaReto157" type="Sprite2D" parent="4/Cenario/Chao" unique_id=1223051379]
 position = Vector2(-5869.0005, -3422.0002)
-scale = Vector2(0.65, 0.65)
 texture = ExtResource("9_0hgqb")
 
 [node name="GramaReto111" type="Sprite2D" parent="4/Cenario/Chao" unique_id=1665257461]
 position = Vector2(-3967, -3419.7)
-scale = Vector2(0.65, 0.65)
 texture = ExtResource("9_0hgqb")
 
 [node name="GramaReto112" type="Sprite2D" parent="4/Cenario/Chao" unique_id=344458935]
 position = Vector2(-3390, -3167)
-scale = Vector2(0.65, 0.65)
 texture = ExtResource("9_0hgqb")
 
 [node name="GramaReto113" type="Sprite2D" parent="4/Cenario/Chao" unique_id=179348199]
 position = Vector2(-4314, -3419.7)
-scale = Vector2(0.65, 0.65)
 texture = ExtResource("9_0hgqb")
 
 [node name="GramaReto114" type="Sprite2D" parent="4/Cenario/Chao" unique_id=848478823]
 position = Vector2(-1776.1997, -4065.7002)
-scale = Vector2(0.65, 0.65)
 texture = ExtResource("9_0hgqb")
 
 [node name="GramaReto115" type="Sprite2D" parent="4/Cenario/Chao" unique_id=1129298902]
 position = Vector2(-1430.3989, -4065.7002)
-scale = Vector2(0.65, 0.65)
 texture = ExtResource("9_0hgqb")
 
 [node name="GramaReto117" type="Sprite2D" parent="4/Cenario/Chao" unique_id=1187298308]
 position = Vector2(-1198, -4065.7002)
-scale = Vector2(0.65, 0.65)
 texture = ExtResource("9_0hgqb")
 
 [node name="GramaReto118" type="Sprite2D" parent="4/Cenario/Chao" unique_id=858072183]
 position = Vector2(-1918.2002, -3164.7)
-scale = Vector2(0.65, 0.65)
 texture = ExtResource("9_0hgqb")
 
 [node name="GramaReto119" type="Sprite2D" parent="4/Cenario/Chao" unique_id=1091934442]
 position = Vector2(-1609, -3164.7)
-scale = Vector2(0.65, 0.65)
 texture = ExtResource("9_0hgqb")
 
 [node name="GramaReto153" type="Sprite2D" parent="4/Cenario/Chao" unique_id=1830056315]
 position = Vector2(-1058, -3549.0002)
-scale = Vector2(0.65, 0.65)
 texture = ExtResource("9_0hgqb")
 
 [node name="GramaReto154" type="Sprite2D" parent="4/Cenario/Chao" unique_id=231345397]
 position = Vector2(-860, -3549.0002)
-scale = Vector2(0.65, 0.65)
 texture = ExtResource("9_0hgqb")
 
 [node name="GramaReto120" type="Sprite2D" parent="4/Cenario/Chao" unique_id=1945497925]
 position = Vector2(-1410.2002, -2525.7)
-scale = Vector2(0.65, 0.65)
 texture = ExtResource("9_0hgqb")
 
 [node name="GramaReto121" type="Sprite2D" parent="4/Cenario/Chao" unique_id=360202299]
 position = Vector2(-1101, -2525.7)
-scale = Vector2(0.65, 0.65)
 texture = ExtResource("9_0hgqb")
 
 [node name="GramaReto123" type="Sprite2D" parent="4/Cenario/Chao" unique_id=1351434640]
 position = Vector2(-2230, -2012.0002)
-scale = Vector2(0.65, 0.65)
 texture = ExtResource("9_0hgqb")
 
 [node name="GramaReto124" type="Sprite2D" parent="4/Cenario/Chao" unique_id=1231207993]
 position = Vector2(-2575, -2012.0002)
-scale = Vector2(0.65, 0.65)
 texture = ExtResource("9_0hgqb")
 
 [node name="GramaReto125" type="Sprite2D" parent="4/Cenario/Chao" unique_id=789442914]
 position = Vector2(-2796, -2012.0002)
-scale = Vector2(0.65, 0.65)
 texture = ExtResource("9_0hgqb")
 
 [node name="GramaReto135" type="Sprite2D" parent="4/Cenario/Chao" unique_id=763689376]
 position = Vector2(-1892.2002, -990.69995)
-scale = Vector2(0.65, 0.65)
 texture = ExtResource("9_0hgqb")
 
 [node name="GramaReto147" type="Sprite2D" parent="4/Cenario/Chao" unique_id=688964371]
 position = Vector2(-1936, -1499)
-scale = Vector2(0.65, 0.65)
 texture = ExtResource("9_0hgqb")
 
 [node name="GramaReto148" type="Sprite2D" parent="4/Cenario/Chao" unique_id=1722473468]
 position = Vector2(-1754, -1499)
-scale = Vector2(0.65, 0.65)
 texture = ExtResource("9_0hgqb")
 
 [node name="GramaReto141" type="Sprite2D" parent="4/Cenario/Chao" unique_id=60199389]
 position = Vector2(-1156, -990.69995)
-scale = Vector2(0.65, 0.65)
 texture = ExtResource("9_0hgqb")
 
 [node name="GramaReto136" type="Sprite2D" parent="4/Cenario/Chao" unique_id=226304118]
 position = Vector2(-2237.2002, -990.69995)
-scale = Vector2(0.65, 0.65)
 texture = ExtResource("9_0hgqb")
 
 [node name="GramaReto137" type="Sprite2D" parent="4/Cenario/Chao" unique_id=2094925839]
 position = Vector2(-2458.2002, -990.69995)
-scale = Vector2(0.65, 0.65)
 texture = ExtResource("9_0hgqb")
 
 [node name="GramaReto138" type="Sprite2D" parent="4/Cenario/Chao" unique_id=224320885]
 position = Vector2(-2143.2002, -474.69995)
-scale = Vector2(0.65, 0.65)
 texture = ExtResource("9_0hgqb")
 
 [node name="GramaReto139" type="Sprite2D" parent="4/Cenario/Chao" unique_id=1405296246]
 position = Vector2(-2488.2002, -474.69995)
-scale = Vector2(0.65, 0.65)
 texture = ExtResource("9_0hgqb")
 
 [node name="GramaReto140" type="Sprite2D" parent="4/Cenario/Chao" unique_id=452756295]
 position = Vector2(-2709.2002, -474.69995)
-scale = Vector2(0.65, 0.65)
 texture = ExtResource("9_0hgqb")
 
 [node name="GramaReto142" type="Sprite2D" parent="4/Cenario/Chao" unique_id=1541446271]
 position = Vector2(-2817, -1501.7)
-scale = Vector2(0.65, 0.65)
 texture = ExtResource("9_0hgqb")
 
 [node name="GramaReto144" type="Sprite2D" parent="4/Cenario/Chao" unique_id=1360785531]
 position = Vector2(-3297, -991.0001)
-scale = Vector2(0.65, 0.65)
 texture = ExtResource("9_0hgqb")
 
 [node name="GramaReto145" type="Sprite2D" parent="4/Cenario/Chao" unique_id=171603886]
 position = Vector2(-4056, -732.0001)
-scale = Vector2(0.65, 0.65)
 texture = ExtResource("9_0hgqb")
 
 [node name="GramaReto146" type="Sprite2D" parent="4/Cenario/Chao" unique_id=1952804393]
 position = Vector2(-3832, -732.0001)
-scale = Vector2(0.65, 0.65)
 texture = ExtResource("9_0hgqb")
 
 [node name="GramaReto150" type="Sprite2D" parent="4/Cenario/Chao" unique_id=1952333120]
 position = Vector2(-3814, -1761.0001)
-scale = Vector2(0.65, 0.65)
 texture = ExtResource("9_0hgqb")
 
 [node name="GramaReto143" type="Sprite2D" parent="4/Cenario/Chao" unique_id=1741913519]
 position = Vector2(-3082.2002, -1501.7)
-scale = Vector2(0.65, 0.65)
 texture = ExtResource("9_0hgqb")
 
 [node name="GramaReto126" type="Sprite2D" parent="4/Cenario/Chao" unique_id=94278713]
 position = Vector2(-2559, -2525.0002)
-scale = Vector2(0.65, 0.65)
 texture = ExtResource("9_0hgqb")
 
 [node name="GramaReto127" type="Sprite2D" parent="4/Cenario/Chao" unique_id=569473954]
 position = Vector2(-3085, -2654.0002)
-scale = Vector2(0.65, 0.65)
 texture = ExtResource("9_0hgqb")
 
 [node name="GramaReto128" type="Sprite2D" parent="4/Cenario/Chao" unique_id=1650448345]
 position = Vector2(-6372.0005, -2782)
-scale = Vector2(0.65, 0.65)
 texture = ExtResource("9_0hgqb")
 
 [node name="GramaReto129" type="Sprite2D" parent="4/Cenario/Chao" unique_id=116085267]
 position = Vector2(-5886.0005, -2527.0002)
-scale = Vector2(0.65, 0.65)
 texture = ExtResource("9_0hgqb")
 
 [node name="GramaReto131" type="Sprite2D" parent="4/Cenario/Chao" unique_id=2044262735]
 position = Vector2(-6407.0005, -2016.0002)
-scale = Vector2(0.65, 0.65)
 texture = ExtResource("9_0hgqb")
 
 [node name="GramaReto132" type="Sprite2D" parent="4/Cenario/Chao" unique_id=1393989227]
 position = Vector2(-6650.0005, -3679.0002)
-scale = Vector2(0.65, 0.65)
 texture = ExtResource("9_0hgqb")
 
 [node name="GramaReto130" type="Sprite2D" parent="4/Cenario/Chao" unique_id=2125080460]
 position = Vector2(-5565.2, -2527.0002)
-scale = Vector2(0.65, 0.65)
 texture = ExtResource("9_0hgqb")
 
 [node name="GramaReto122" type="Sprite2D" parent="4/Cenario/Chao" unique_id=1645735495]
 position = Vector2(-533, -3036.0007)
-scale = Vector2(0.65, 0.65)
 texture = ExtResource("9_0hgqb")
 
 [node name="GramaReto116" type="Sprite2D" parent="4/Cenario/Chao" unique_id=1236784926]
 position = Vector2(-2120.2002, -4065.7002)
-scale = Vector2(0.65, 0.65)
 texture = ExtResource("9_0hgqb")
 
 [node name="GramaReto82" type="Sprite2D" parent="4/Cenario/Chao" unique_id=1913096601]
 position = Vector2(-2493.2002, 35)
-scale = Vector2(0.65, 0.65)
 texture = ExtResource("9_0hgqb")
 
 [node name="GramaReto83" type="Sprite2D" parent="4/Cenario/Chao" unique_id=1757112951]
 position = Vector2(-2148.2002, 35)
-scale = Vector2(0.65, 0.65)
 texture = ExtResource("9_0hgqb")
 
 [node name="GramaReto84" type="Sprite2D" parent="4/Cenario/Chao" unique_id=391001965]
 position = Vector2(-1802.4004, 35)
-scale = Vector2(0.65, 0.65)
 texture = ExtResource("9_0hgqb")
 
 [node name="GramaReto85" type="Sprite2D" parent="4/Cenario/Chao" unique_id=1155228013]
 position = Vector2(-1457.4004, 35)
-scale = Vector2(0.65, 0.65)
 texture = ExtResource("9_0hgqb")
 
 [node name="GramaReto86" type="Sprite2D" parent="4/Cenario/Chao" unique_id=1466063568]
 position = Vector2(-1119.2002, 35)
-scale = Vector2(0.65, 0.65)
 texture = ExtResource("9_0hgqb")
 
 [node name="GramaReto87" type="Sprite2D" parent="4/Cenario/Chao" unique_id=1642490825]
 position = Vector2(-774.2002, 35)
-scale = Vector2(0.65, 0.65)
 texture = ExtResource("9_0hgqb")
 
 [node name="GramaReto88" type="Sprite2D" parent="4/Cenario/Chao" unique_id=333420875]
 position = Vector2(-428.4004, 35)
-scale = Vector2(0.65, 0.65)
 texture = ExtResource("9_0hgqb")
 
 [node name="GramaReto89" type="Sprite2D" parent="4/Cenario/Chao" unique_id=1151409670]
 position = Vector2(-83.40039, 35)
-scale = Vector2(0.65, 0.65)
 texture = ExtResource("9_0hgqb")
 
 [node name="GramaReto90" type="Sprite2D" parent="4/Cenario/Chao" unique_id=685594831]
 position = Vector2(196, 35)
-scale = Vector2(0.65, 0.65)
 texture = ExtResource("9_0hgqb")
 
 [node name="ChapInterno25" type="Sprite2D" parent="4/Cenario/Chao" unique_id=132444625]
@@ -2056,6 +1956,7 @@ visibility_rect = Rect2(-7500, -500, 15000, 1000)
 process_material = SubResource("ParticleProcessMaterial_reei2")
 
 [node name="CanvasModulate" type="CanvasModulate" parent="4" unique_id=1860914474]
+visible = false
 position = Vector2(-21272.857, -19224.287)
 scale = Vector2(175.74992, 39.388683)
 color = Color(0.043039218, 0.043039136, 0.04303915, 1)
@@ -4117,6 +4018,7 @@ scale = Vector2(0.5, 0.5)
 texture = ExtResource("24_6t3gw")
 
 [node name="CanvasModulate" type="CanvasModulate" parent="5" unique_id=333686609]
+visible = false
 position = Vector2(-21272.857, -19224.287)
 scale = Vector2(175.74992, 39.388683)
 color = Color(0.043039218, 0.043039136, 0.04303915, 1)

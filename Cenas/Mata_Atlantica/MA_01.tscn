@@ -167,6 +167,10 @@ texture = ExtResource("2_72vla")
 position = Vector2(8338.999, -4626.6665)
 texture = ExtResource("2_72vla")
 
+[node name="110SemTítulo20260213153418" type="Sprite2D" parent="-4" unique_id=1419250009]
+position = Vector2(9790, -4626.6665)
+texture = ExtResource("2_72vla")
+
 [node name="-0,8" type="CanvasLayer" parent="." unique_id=1970661918]
 follow_viewport_enabled = true
 follow_viewport_scale = 0.65
