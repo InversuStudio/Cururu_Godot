@@ -6,7 +6,7 @@
 [ext_resource type="Shader" uid="uid://c1omtsxv04udh" path="res://Scripts/Shaders/blur_shader.gdshader" id="4_3863u"]
 [ext_resource type="Texture2D" uid="uid://cc6yes0bp2w0y" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/arvore_S1.png" id="5_amaw8"]
 [ext_resource type="Texture2D" uid="uid://i664886fdh55" path="res://Sprites/Cenário/Mata_Atlantica/Background/Mata/mato02.png" id="6_htopk"]
-[ext_resource type="Texture2D" uid="uid://b1sv0car32gha" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/arvore_S3.png" id="7_j77bd"]
+[ext_resource type="Texture2D" uid="uid://b1sv0car32gha" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/arvore_s3.png" id="7_j77bd"]
 [ext_resource type="Texture2D" uid="uid://c2ertaandl5u7" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/Arvoresv2/mata atlântica_0_20260313104922.PNG" id="8_15e74"]
 [ext_resource type="Texture2D" uid="uid://yrshunpt0tr8" path="res://Sprites/Cenário/Mata_Atlantica/Background/Mata/mato01.png" id="8_kmkbu"]
 [ext_resource type="Shader" uid="uid://dc0bwmy1j0o5i" path="res://Scripts/Shaders/fog.gdshader" id="9_dm238"]
@@ -836,7 +836,7 @@ position = Vector2(-9071, -92)
 destino = &"res://Cenas/Mata_Atlantica/MA_01.tscn"
 posicao = Vector2(8937, -4471)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="background/0/Transicoes/MA_01" unique_id=1838593708]
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="background/0/Transicoes/MA_01" unique_id=1838593708]
 position = Vector2(65, -280.5)
 shape = SubResource("RectangleShape2D_mw8rc")
 
@@ -852,7 +852,7 @@ position = Vector2(1895, 1047)
 destino = &"res://Cenas/Mata_Atlantica/MA_03.tscn"
 posicao = Vector2(2109, 509)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="background/0/Transicoes/MA_03" unique_id=2058974868]
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="background/0/Transicoes/MA_03" unique_id=2058974868]
 position = Vector2(495, -388)
 shape = SubResource("RectangleShape2D_q40bt")
 
