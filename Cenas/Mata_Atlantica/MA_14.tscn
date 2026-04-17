@@ -15,9 +15,11 @@
 [ext_resource type="Texture2D" uid="uid://0agjwkmg3gef" path="res://Sprites/VFX/Iluminação/luz azul.png" id="9_patjh"]
 [ext_resource type="Texture2D" uid="uid://yrshunpt0tr8" path="res://Sprites/Cenário/Mata_Atlantica/Background/Mata/mato01.png" id="10_28css"]
 [ext_resource type="Texture2D" uid="uid://cj4rj4oj20ogb" path="res://Sprites/Cenário/Mata_Atlantica/Chao/chap_interno.png" id="10_38a5t"]
+[ext_resource type="PackedScene" uid="uid://rwf8qamlwcag" path="res://Objetos/Props/arvorecaju.tscn" id="10_qly01"]
 [ext_resource type="PackedScene" uid="uid://bu62qgilsxetf" path="res://Objetos/Entidades/Escorpiao.tscn" id="11_6t3gw"]
 [ext_resource type="Texture2D" uid="uid://cw2yeg7ynw0kl" path="res://Sprites/Cenário/Mata_Atlantica/Chao/chap_externo.png" id="11_dmd0r"]
 [ext_resource type="Shader" uid="uid://dc0bwmy1j0o5i" path="res://Scripts/Shaders/fog.gdshader" id="11_q6ow8"]
+[ext_resource type="PackedScene" uid="uid://crg4kb7jx0noq" path="res://Objetos/Props/DropCaju.tscn" id="11_qj1xv"]
 [ext_resource type="PackedScene" uid="uid://18e8pqawhowp" path="res://Sprites/Cenário/Mata_Atlantica/Interativos/chama_iluminacao.tscn" id="12_6rln1"]
 [ext_resource type="Texture2D" uid="uid://cxa4pl0scvs5k" path="res://Sprites/VFX/Partículas/folhastx.png" id="13_qly01"]
 [ext_resource type="PackedScene" uid="uid://bos2748v4fxwy" path="res://Objetos/Props/upgrade_vida.tscn" id="15_o4mwd"]
@@ -520,6 +522,10 @@ color = Color(0.043039218, 0.043039136, 0.04303915, 1)
 
 [node name="4" type="CanvasLayer" parent="." unique_id=244682365]
 follow_viewport_enabled = true
+
+[node name="ArvoreCaju" parent="4" unique_id=1939146182 instance=ExtResource("10_qly01")]
+position = Vector2(3565, -2165)
+drop_item = Array[PackedScene]([ExtResource("11_qj1xv")])
 
 [node name="ArvoresFrente" type="Node2D" parent="4" unique_id=1607593797]
 light_mask = 2

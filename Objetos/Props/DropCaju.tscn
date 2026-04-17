@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://du13c3vr4mc5k" path="res://Scripts/Componentes/DropItem.gd" id="1_l5ybf"]
 [ext_resource type="Texture2D" uid="uid://2de6nadjv7s5" path="res://Sprites/UI/HUD/Menu_Rapido/Itens/ACAI.png" id="2_bcaqh"]
+[ext_resource type="Texture2D" uid="uid://bhm4udq7cl1uq" path="res://Sprites/Cenário/Objetos/frutos/caju.png" id="3_bcaqh"]
 [ext_resource type="PackedScene" uid="uid://ffqi6t0ahbmk" path="res://Objetos/Funcionalidade/OtimizadorObjeto.tscn" id="3_o1mpv"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_qvwd5"]
@@ -20,9 +21,9 @@ nome = "Açaí"
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=285016417]
 z_index = 1001
-position = Vector2(0, 8)
-scale = Vector2(0.27539063, 0.27539065)
-texture = ExtResource("2_bcaqh")
+position = Vector2(0, 2.0000005)
+scale = Vector2(0.3272727, 0.3272727)
+texture = ExtResource("3_bcaqh")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=61494932]
 shape = SubResource("CircleShape2D_qvwd5")

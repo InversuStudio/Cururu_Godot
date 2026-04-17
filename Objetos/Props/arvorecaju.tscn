@@ -3,37 +3,41 @@
 [ext_resource type="Script" uid="uid://drxk6hwuv2e3i" path="res://Scripts/Componentes/Bau.gd" id="1_ka44r"]
 [ext_resource type="PackedScene" uid="uid://va5pjd6vuuo2" path="res://Objetos/Funcionalidade/CompHurtBox.tscn" id="2_rdf1a"]
 [ext_resource type="AudioStream" uid="uid://42ve7xiilmug" path="res://Audio/SFX/AMBIENTE/Mexendo no Arbusto.wav" id="3_5uvyu"]
-[ext_resource type="Texture2D" uid="uid://b7osbcusvyx0g" path="res://Sprites/Cenário/Objetos/frutos/guarana_01.png" id="4_wuiuc"]
-[ext_resource type="Texture2D" uid="uid://bq0sb5m0qpmnf" path="res://Sprites/Cenário/Objetos/frutos/guarana_02.png" id="5_6d52b"]
-[ext_resource type="Texture2D" uid="uid://iiue1rna5gao" path="res://Sprites/Cenário/Objetos/frutos/guarana_03.png" id="6_6ekgb"]
-[ext_resource type="Texture2D" uid="uid://v6je3iqnukti" path="res://Sprites/Cenário/Objetos/frutos/guarana_04.png" id="7_03aui"]
-[ext_resource type="Texture2D" uid="uid://csoc5q7br131j" path="res://Sprites/Cenário/Objetos/frutos/guarana.png" id="8_06b7h"]
+[ext_resource type="Texture2D" uid="uid://ck8vuxn5ghmm8" path="res://Sprites/Cenário/Objetos/frutos/caju_01.png" id="4_rdf1a"]
+[ext_resource type="Texture2D" uid="uid://cvcdfumoy6t0r" path="res://Sprites/Cenário/Objetos/frutos/caju_02.png" id="5_5uvyu"]
+[ext_resource type="Texture2D" uid="uid://bdet6sw044wc8" path="res://Sprites/Cenário/Objetos/frutos/caju_03.png" id="6_wuiuc"]
+[ext_resource type="Texture2D" uid="uid://xkxlj002pv7b" path="res://Sprites/Cenário/Objetos/frutos/caju_04.png" id="7_6d52b"]
+[ext_resource type="Texture2D" uid="uid://dieye1sdgx3wj" path="res://Sprites/Cenário/Objetos/frutos/caju_05.png" id="8_6ekgb"]
+[ext_resource type="Texture2D" uid="uid://c44sb02dgcje3" path="res://Sprites/Cenário/Objetos/frutos/cajueiro.png" id="9_03aui"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4vmwf"]
-size = Vector2(228, 140)
+size = Vector2(190, 245)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_5tjap"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("4_wuiuc")
+"texture": ExtResource("4_rdf1a")
 }, {
 "duration": 1.0,
-"texture": ExtResource("5_6d52b")
+"texture": ExtResource("5_5uvyu")
 }, {
 "duration": 1.0,
-"texture": ExtResource("6_6ekgb")
+"texture": ExtResource("6_wuiuc")
 }, {
 "duration": 1.0,
-"texture": ExtResource("7_03aui")
+"texture": ExtResource("7_6d52b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_6ekgb")
 }],
 "loop": false,
 "name": &"Abre",
-"speed": 5.0
+"speed": 8.0
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("8_06b7h")
+"texture": ExtResource("9_03aui")
 }],
 "loop": true,
 "name": &"Normal",
@@ -49,7 +53,7 @@ hit_sfx = ExtResource("3_5uvyu")
 sprite = NodePath("../Sprite")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HurtBox" unique_id=714964957]
-position = Vector2(6, -71)
+position = Vector2(6, -123.5)
 shape = SubResource("RectangleShape2D_4vmwf")
 debug_color = Color(0.7753908, 0.38766962, 0.5591627, 0.41960785)
 
