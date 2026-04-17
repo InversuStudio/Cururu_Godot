@@ -21,6 +21,7 @@ script_logica = NodePath("Script")
 
 [node name="Script" type="Node" parent="." unique_id=422463554]
 script = ExtResource("5_rjhf6")
+valor_magia = 5
 
 [node name="NumItem" type="Label" parent="." unique_id=1362088216]
 unique_name_in_owner = true

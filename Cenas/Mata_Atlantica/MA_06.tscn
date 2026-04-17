@@ -483,6 +483,10 @@ spawn_points = [NodePath("../../Armadilhas/Respawn3"), NodePath("../../Armadilha
 position = Vector2(4136, 72.999756)
 spawn_points = [NodePath("../../Armadilhas/Respawn3"), NodePath("../../Armadilhas/Respawn4")]
 
+[node name="ArvoreCaju" parent="0" unique_id=1939146182 instance=ExtResource("28_4qsii")]
+position = Vector2(6667, -900)
+drop_item = Array[PackedScene]([ExtResource("29_b5o3q")])
+
 [node name="Particula" type="GPUParticles2D" parent="0" unique_id=1040314020]
 position = Vector2(3895, -1068)
 rotation = 3.1415925
@@ -551,10 +555,6 @@ position = Vector2(1477, -581.00024)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="0/Armadilhas/Respawn2" unique_id=483086890]
 position = Vector2(9.5, -460)
 shape = SubResource("RectangleShape2D_31oht")
-
-[node name="ArvoreCaju" parent="0" unique_id=1939146182 instance=ExtResource("28_4qsii")]
-position = Vector2(6667, -900)
-drop_item = Array[PackedScene]([ExtResource("29_b5o3q")])
 
 [node name="Chao" type="Node2D" parent="0" unique_id=717017961]
 position = Vector2(175, -646.99976)
