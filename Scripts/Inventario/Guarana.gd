@@ -11,6 +11,7 @@ extends ScriptItemInventario
 	#pai.connect("pressed", func(): Logica())
 
 func Logica() -> void:
+	if GameData.vida_atual >= GameData.vida_max: return
 	var vida:Vida = get_tree().get_first_node_in_group("Player").vida
 	if vida:
 		vida.RecebeCura(valor_cura)

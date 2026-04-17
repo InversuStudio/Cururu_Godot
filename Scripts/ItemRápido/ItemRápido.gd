@@ -37,6 +37,11 @@ func _input(_event: InputEvent) -> void:
 		if !Mundos.player.pode_item: return
 		if Mundos.player.state_machine.current_state.name != "Chao": return
 		if Inventario.inventario.size() > 0:
+			var nome:String = Inventario.inventario[id_item][0]
+			if nome == "Acai" or nome == "Guarana":
+				if GameData.vida_atual >= GameData.vida_max: return
+			if nome == "Caju":
+				if GameData.magia_atual >= GameData.magia_max: return
 			cena_inventario.UsaItem(id_item)
 			usa_item.emit()
 			if id_item > Inventario.inventario.size() - 1:
