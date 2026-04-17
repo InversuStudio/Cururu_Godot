@@ -81,8 +81,8 @@ frame = 8
 frame_progress = 1.0
 
 [node name="PointLight2D" type="PointLight2D" parent="Sprite" unique_id=767464191]
-position = Vector2(-0.9999924, -68.000015)
-scale = Vector2(7.6, 7.6)
+position = Vector2(-0.9999924, 1.2864294)
+scale = Vector2(6.443618, 6.443618)
 color = Color(0, 0.34523332, 0.49344826, 0.83137256)
 range_layer_max = 1
 texture = ExtResource("7_n8mw8")

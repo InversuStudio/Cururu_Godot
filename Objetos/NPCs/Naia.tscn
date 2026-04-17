@@ -87,7 +87,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lqome"]
-size = Vector2(1386.5391, 1034.7305)
+size = Vector2(804.7905, 590.94604)
 
 [node name="Naia" type="Node2D" unique_id=1048948790 node_paths=PackedStringArray("interacao")]
 scale = Vector2(0.4348958, 0.43489587)
@@ -114,7 +114,7 @@ script = ExtResource("19_k0ubn")
 metadata/_custom_type_script = "uid://dd7svcu8l7fxu"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Interacao" unique_id=1391847400]
-position = Vector2(254.08386, 131.06586)
+position = Vector2(544.9581, -47.137722)
 shape = SubResource("RectangleShape2D_lqome")
 
 [node name="Texto" type="RichTextLabel" parent="." unique_id=1636518439]

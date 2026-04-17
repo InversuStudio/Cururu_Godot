@@ -35,6 +35,8 @@
 [ext_resource type="Texture2D" uid="uid://cxa4pl0scvs5k" path="res://Sprites/VFX/Partículas/folhastx.png" id="26_tkjsf"]
 [ext_resource type="PackedScene" uid="uid://bu62qgilsxetf" path="res://Objetos/Entidades/Escorpiao.tscn" id="27_2wc60"]
 [ext_resource type="AudioStream" uid="uid://c7qftchbhu6xc" path="res://Audio/SFX/AMBIENTE/Musica_Jogo.mp3" id="27_xooja"]
+[ext_resource type="PackedScene" uid="uid://rwf8qamlwcag" path="res://Objetos/Props/arvorecaju.tscn" id="28_4qsii"]
+[ext_resource type="PackedScene" uid="uid://crg4kb7jx0noq" path="res://Objetos/Props/DropCaju.tscn" id="29_b5o3q"]
 [ext_resource type="Texture2D" uid="uid://c7ftx4tv020y8" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/Arvoresv2/mata atlântica_0_20260313104055.PNG" id="33_ri2xm"]
 [ext_resource type="AudioStream" uid="uid://b2vi4qav4gk5r" path="res://Audio/SFX/AMBIENTE/Cururu - Soundscape A.ogg" id="33_teql2"]
 [ext_resource type="Texture2D" uid="uid://ctexd1uqvvg2e" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/Arvoresv2/3E92CD98-C4C7-4426-A0A0-7D548CBC2FB5.PNG" id="34_or7d7"]
@@ -417,7 +419,7 @@ posicao = Vector2(5324, -4502)
 position = Vector2(11, 3)
 shape = SubResource("RectangleShape2D_tensi")
 
-[node name="PointLight2D" type="PointLight2D" parent="0/MA_03" unique_id=211781967]
+[node name="PointLight2D2" type="PointLight2D" parent="0/MA_03" unique_id=211781967]
 position = Vector2(-4, 14.0000305)
 scale = Vector2(0.48535636, 1.4740262)
 energy = 1.3
@@ -432,7 +434,7 @@ posicao = Vector2(764, -391)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="0/MA_07" unique_id=509885727]
 shape = SubResource("RectangleShape2D_tensi")
 
-[node name="PointLight2D" type="PointLight2D" parent="0/MA_07" unique_id=1988828907]
+[node name="PointLight2D2" type="PointLight2D" parent="0/MA_07" unique_id=1988828907]
 position = Vector2(30.000166, -8.9999695)
 scale = Vector2(0.48535636, 1.4740262)
 energy = 1.3
@@ -549,6 +551,10 @@ position = Vector2(1477, -581.00024)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="0/Armadilhas/Respawn2" unique_id=483086890]
 position = Vector2(9.5, -460)
 shape = SubResource("RectangleShape2D_31oht")
+
+[node name="ArvoreCaju" parent="0" unique_id=1939146182 instance=ExtResource("28_4qsii")]
+position = Vector2(6667, -900)
+drop_item = Array[PackedScene]([ExtResource("29_b5o3q")])
 
 [node name="Chao" type="Node2D" parent="0" unique_id=717017961]
 position = Vector2(175, -646.99976)
