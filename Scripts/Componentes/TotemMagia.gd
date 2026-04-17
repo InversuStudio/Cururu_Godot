@@ -24,3 +24,5 @@ func Morte() -> void:
 	if result <= 0: result = 1
 	GameData.magia_atual += result
 	$Sprite.play("Quebrando")
+	$Sprite.animation_finished.connect(func():
+		$Sprite/PointLight2D.queue_free())
