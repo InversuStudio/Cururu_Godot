@@ -1183,29 +1183,29 @@ flip_h = true
 flip_v = true
 
 [node name="ChapExterno22" type="Sprite2D" parent="Fundo/0/Chao" unique_id=1727323654]
-position = Vector2(-8852, 1138.2)
+position = Vector2(-8844, 1138.2)
 texture = ExtResource("29_t842b")
 flip_v = true
 
 [node name="ChapExterno25" type="Sprite2D" parent="Fundo/0/Chao" unique_id=904404177]
-position = Vector2(-5012, 1012.99976)
+position = Vector2(-4998, 1012.99976)
 texture = ExtResource("29_t842b")
 flip_v = true
 
 [node name="ChapExterno23" type="Sprite2D" parent="Fundo/0/Chao" unique_id=970009235]
-position = Vector2(-9379.2, 1138.2)
+position = Vector2(-9387, 1138.2)
 texture = ExtResource("29_t842b")
 flip_h = true
 flip_v = true
 
 [node name="ChapExterno24" type="Sprite2D" parent="Fundo/0/Chao" unique_id=1687833248]
-position = Vector2(-7970, 1009.99976)
+position = Vector2(-7985, 1009.99976)
 texture = ExtResource("29_t842b")
 flip_h = true
 flip_v = true
 
 [node name="ChapExterno26" type="Sprite2D" parent="Fundo/0/Chao" unique_id=1859350182]
-position = Vector2(-3618.9995, 883.99976)
+position = Vector2(-3631, 883.99976)
 texture = ExtResource("29_t842b")
 flip_h = true
 flip_v = true

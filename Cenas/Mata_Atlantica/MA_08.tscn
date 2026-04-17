@@ -355,17 +355,17 @@ offset_right = 504.0
 offset_bottom = -4296.0
 
 [node name="Bau" parent="0" unique_id=1105418947 instance=ExtResource("15_wubi4")]
-position = Vector2(2652, -4499)
+position = Vector2(2652, -4487)
 drop_item = Array[PackedScene]([ExtResource("16_yhvmx")])
 multi_drop = true
 
 [node name="Bau3" parent="0" unique_id=489291052 instance=ExtResource("17_dpay2")]
-position = Vector2(2529, -4485)
+position = Vector2(2529, -4473)
 drop_item = Array[PackedScene]([ExtResource("16_yhvmx"), ExtResource("16_yhvmx"), ExtResource("16_yhvmx")])
 multi_drop = true
 
 [node name="Bau2" parent="0" unique_id=541965556 instance=ExtResource("18_sdyfi")]
-position = Vector2(2782, -4486)
+position = Vector2(2782, -4474)
 drop_item = Array[PackedScene]([ExtResource("16_yhvmx"), ExtResource("16_yhvmx")])
 multi_drop = true
 
@@ -447,6 +447,10 @@ texture = ExtResource("17_ui1e1")
 
 [node name="GramaReto2" type="Sprite2D" parent="0" unique_id=971602666]
 position = Vector2(2284, -4437)
+texture = ExtResource("17_ui1e1")
+
+[node name="GramaReto9" type="Sprite2D" parent="0" unique_id=1847605051]
+position = Vector2(2660, -4437)
 texture = ExtResource("17_ui1e1")
 
 [node name="GramaReto3" type="Sprite2D" parent="0" unique_id=1505364845]
