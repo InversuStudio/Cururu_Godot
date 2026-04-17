@@ -35,7 +35,7 @@ func _ready() -> void:
 	focus_entered.connect(func():
 		if nome_display == "Caju":
 			HUD.MostraItem(nome_display,
-			desc_item, script_logica.valor_magia)
+			desc_item)
 		else:	
 			HUD.MostraItem(nome_display,
 			desc_item, script_logica.valor_cura))
