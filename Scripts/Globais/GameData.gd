@@ -118,6 +118,10 @@ func GetJoyButton(botao:int) -> StringName:
 		JOY_BUTTON_START:
 			pass
 		JOY_BUTTON_BACK:
+			match tipo_input:
+				1: return "res://Sprites/UI/Botoes/TesteInputXboxSelect.png"
+				2: return "res://Sprites/UI/Botoes/TesteInputPSSelect.png"
+				3: return "res://Sprites/UI/Botoes/TesteInputXboxSelect.png"
 			pass
 		JOY_BUTTON_DPAD_UP:
 			return "res://Sprites/UI/Botoes/TesteInputXboxCima.png"

@@ -11,6 +11,7 @@ script = ExtResource("1_200xy")
 
 [node name="In" type="ColorRect" parent="." unique_id=1361796577]
 unique_name_in_owner = true
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
