@@ -75,7 +75,10 @@ metadata/_custom_type_script = "uid://hsdutxxttrp3"
 position = Vector2(0.9999924, -156)
 scale = Vector2(1.9296875, 1.9296875)
 sprite_frames = SubResource("SpriteFrames_rccpc")
+animation = &"Quebrando"
 autoplay = "default"
+frame = 8
+frame_progress = 1.0
 
 [node name="PointLight2D" type="PointLight2D" parent="Sprite" unique_id=767464191]
 position = Vector2(-0.9999924, -68.000015)
