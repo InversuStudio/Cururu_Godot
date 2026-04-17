@@ -410,7 +410,11 @@ tile_map_data = PackedByteArray("AAD+/+L/AQAAAAAAAAD+/+P/AQAAAAAAAAD+/+v/AQAAAAA
 tile_set = ExtResource("21_158ye")
 
 [node name="GramaReto" type="Sprite2D" parent="0" unique_id=978573855]
-position = Vector2(659, -2642)
+position = Vector2(646, -2642)
+texture = ExtResource("10_uqj5l")
+
+[node name="GramaReto8" type="Sprite2D" parent="0" unique_id=113489718]
+position = Vector2(447, -2642)
 texture = ExtResource("10_uqj5l")
 
 [node name="GramaReto4" type="Sprite2D" parent="0" unique_id=1247142744]
@@ -419,6 +423,10 @@ texture = ExtResource("10_uqj5l")
 
 [node name="GramaReto5" type="Sprite2D" parent="0" unique_id=1268712973]
 position = Vector2(-415, -2642)
+texture = ExtResource("10_uqj5l")
+
+[node name="GramaReto9" type="Sprite2D" parent="0" unique_id=272638220]
+position = Vector2(-55, -2642)
 texture = ExtResource("10_uqj5l")
 
 [node name="GramaReto6" type="Sprite2D" parent="0" unique_id=206988890]
@@ -431,21 +439,21 @@ rotation = 1.5707964
 texture = ExtResource("10_uqj5l")
 
 [node name="GramaReto2" type="Sprite2D" parent="0" unique_id=1530907657]
-position = Vector2(1528, -2899)
+position = Vector2(1499, -2899)
 texture = ExtResource("10_uqj5l")
 
 [node name="GramaReto3" type="Sprite2D" parent="0" unique_id=781967573]
-position = Vector2(2016, -2899)
+position = Vector2(1993, -2899)
 texture = ExtResource("10_uqj5l")
 
 [node name="ChapInterno" type="Sprite2D" parent="0" unique_id=201446885]
-position = Vector2(973, -2743)
+position = Vector2(993, -2710)
 texture = ExtResource("11_old6t")
 flip_h = true
 flip_v = true
 
 [node name="ChapInterno2" type="Sprite2D" parent="0" unique_id=1641492002]
-position = Vector2(-976, -2743)
+position = Vector2(-993, -2743)
 texture = ExtResource("11_old6t")
 flip_v = true
 
@@ -459,7 +467,7 @@ texture = ExtResource("11_old6t")
 flip_h = true
 
 [node name="ChapExterno" type="Sprite2D" parent="0" unique_id=1418665393]
-position = Vector2(1168, -2805)
+position = Vector2(1134, -2829)
 texture = ExtResource("12_mcinh")
 flip_h = true
 flip_v = true
