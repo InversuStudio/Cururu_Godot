@@ -15,6 +15,10 @@ extends Area2D
 func _ready() -> void:
 	for i:String in Mundos.pecas_coracao:
 		if i == nome_id: queue_free()
+	# Animação de bobbing
+	var tween := create_tween().set_loops()
+	tween.tween_property(self, "position:y", position.y - 8.0, 0.6).set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_IN_OUT)
+	tween.tween_property(self, "position:y", position.y, 0.6).set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_IN_OUT)
 
 func _on_body_entered(body: Node2D) -> void:
 	if body.is_in_group("Player"):

@@ -16,6 +16,10 @@ func _ready() -> void:
 		if am[0] == Inventario.AmuletosString[tipo_item]:
 			queue_free()
 	connect("body_entered", _on_body_entered)
+		# Animação de bobbing
+	var tween := create_tween().set_loops()
+	tween.tween_property(self, "position:y", position.y - 8.0, 0.6).set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_IN_OUT)
+	tween.tween_property(self, "position:y", position.y, 0.6).set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_IN_OUT)
 
 func _on_body_entered(body: Node2D) -> void:
 	if body.is_in_group("Player"):
