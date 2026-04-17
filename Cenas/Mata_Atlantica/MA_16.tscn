@@ -6,7 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://yln77sy1ylrp" path="res://Sprites/Cenário/Mata_Atlantica/Background/Mata/mato03.png" id="5_l6p7n"]
 [ext_resource type="Texture2D" uid="uid://cc6yes0bp2w0y" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/arvore_S1.png" id="7_ty1hn"]
 [ext_resource type="Texture2D" uid="uid://i664886fdh55" path="res://Sprites/Cenário/Mata_Atlantica/Background/Mata/mato02.png" id="8_acroo"]
-[ext_resource type="Texture2D" uid="uid://b1sv0car32gha" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/arvore_s3.png" id="9_hqaqg"]
+[ext_resource type="Texture2D" uid="uid://b1sv0car32gha" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/arvore_S3.png" id="9_hqaqg"]
 [ext_resource type="Shader" uid="uid://dc0bwmy1j0o5i" path="res://Scripts/Shaders/fog.gdshader" id="9_maupx"]
 [ext_resource type="Texture2D" uid="uid://yrshunpt0tr8" path="res://Sprites/Cenário/Mata_Atlantica/Background/Mata/mato01.png" id="10_7rmnr"]
 [ext_resource type="Texture2D" uid="uid://dbd7u8r5gc1c2" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/Arvoresv2/DF2863DD-A31D-4FD6-8334-087AF5C46BA9.PNG" id="10_a60eu"]
@@ -14,7 +14,6 @@
 [ext_resource type="Texture2D" uid="uid://x1ar0khlrujj" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/arvore_miasma.png" id="12_w6tf2"]
 [ext_resource type="Texture2D" uid="uid://0agjwkmg3gef" path="res://Sprites/VFX/Iluminação/luz azul.png" id="13_6qvld"]
 [ext_resource type="Texture2D" uid="uid://cqbmkgbnj6txv" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/Arvoresv2/mata atlântica_0_2_20260319103434.png" id="13_hbi5w"]
-[ext_resource type="Texture2D" uid="uid://0i7ym5jsaccw" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/Arvoresv2/1C2BE81A-7C3A-4A98-A6E0-122F450D6DE9.PNG" id="13_olhvy"]
 [ext_resource type="Texture2D" uid="uid://6xmqb8rst36e" path="res://Sprites/Cenário/Mata_Atlantica/Chao/moita_miasma1.png" id="13_us20a"]
 [ext_resource type="Texture2D" uid="uid://cimhroq71ngla" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/Arvoresv2/queimada01.PNG" id="14_8ogo1"]
 [ext_resource type="PackedScene" uid="uid://b7m7lb1s11mbw" path="res://Objetos/Boss/Boitata/Boitata.tscn" id="14_ktto4"]
@@ -580,11 +579,11 @@ flip_h = true
 [node name="1c2be81a7c3a4a98A6e0122f450d6de9" type="Sprite2D" parent="-0,5" unique_id=1486760385]
 position = Vector2(-5928.046, -10985.326)
 scale = Vector2(1.01798, 1.0598897)
-texture = ExtResource("13_olhvy")
+texture = ExtResource("17_a60eu")
 
 [node name="1c2be81a7c3a4a98A6e0122f450d6de10" type="Sprite2D" parent="-0,5" unique_id=1024529782]
-position = Vector2(-2115.3062, -10909.183)
-texture = ExtResource("13_olhvy")
+position = Vector2(-2115.3062, -10703.093)
+texture = ExtResource("17_a60eu")
 flip_h = true
 
 [node name="0c32ebbcDff841bfA8d5F1c7de7e83be" type="Sprite2D" parent="-0,5" unique_id=831922289]
@@ -980,7 +979,7 @@ position = Vector2(1139.4286, 189.42871)
 texture = ExtResource("38_0quqb")
 
 [node name="GramaReto20" type="Sprite2D" parent="0/Cenario/Chao" unique_id=881239413]
-position = Vector2(608.4286, 189.42871)
+position = Vector2(762.4286, 189.42871)
 texture = ExtResource("38_0quqb")
 
 [node name="GramaReto9" type="Sprite2D" parent="0/Cenario/Chao" unique_id=1539212623]
