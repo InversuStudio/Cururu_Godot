@@ -1,7 +1,6 @@
 [gd_scene format=3 uid="uid://crg4kb7jx0noq"]
 
 [ext_resource type="Script" uid="uid://du13c3vr4mc5k" path="res://Scripts/Componentes/DropItem.gd" id="1_l5ybf"]
-[ext_resource type="Texture2D" uid="uid://2de6nadjv7s5" path="res://Sprites/UI/HUD/Menu_Rapido/Itens/ACAI.png" id="2_bcaqh"]
 [ext_resource type="Texture2D" uid="uid://bhm4udq7cl1uq" path="res://Sprites/Cenário/Objetos/frutos/caju.png" id="3_bcaqh"]
 [ext_resource type="PackedScene" uid="uid://ffqi6t0ahbmk" path="res://Objetos/Funcionalidade/OtimizadorObjeto.tscn" id="3_o1mpv"]
 
@@ -16,8 +15,8 @@ collision_layer = 32
 collision_mask = 3
 script = ExtResource("1_l5ybf")
 tipo_item = 2
-imagem = ExtResource("2_bcaqh")
-nome = "Açaí"
+imagem = ExtResource("3_bcaqh")
+nome = "Caju"
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=285016417]
 z_index = 1001

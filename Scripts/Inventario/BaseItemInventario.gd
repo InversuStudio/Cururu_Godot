@@ -33,8 +33,12 @@ func _ready() -> void:
 		texture_hover = sprite_select
 		texture_pressed = sprite_select
 	focus_entered.connect(func():
-		HUD.MostraItem(nome_display,
-		desc_item, script_logica.valor_cura))
+		if nome_display == "Caju":
+			HUD.MostraItem(nome_display,
+			desc_item, script_logica.valor_magia)
+		else:	
+			HUD.MostraItem(nome_display,
+			desc_item, script_logica.valor_cura))
 
 func UpdateNumItem() -> void:
 	%NumItem.text = str(num_item)

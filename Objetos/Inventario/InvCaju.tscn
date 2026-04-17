@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://bhm4udq7cl1uq" path="res://Sprites/Cenário/Objetos/frutos/caju.png" id="2_rjhf6"]
 [ext_resource type="Texture2D" uid="uid://dk2lgamqfiohf" path="res://Sprites/Cenário/Objetos/frutos/offcaju.png" id="3_x3qng"]
 [ext_resource type="Texture2D" uid="uid://dieialphn1oe2" path="res://Sprites/UI/Pause/Inventario/ITEM_GUARA_SELECT.png" id="4_lcpbm"]
-[ext_resource type="Script" path="res://Scripts/Inventario/Caju.gd" id="5_rjhf6"]
+[ext_resource type="Script" uid="uid://d276l3hkipxin" path="res://Scripts/Inventario/Caju.gd" id="5_rjhf6"]
 
 [node name="ItemCaju" type="TextureButton" unique_id=255049377 node_paths=PackedStringArray("script_logica")]
 custom_minimum_size = Vector2(200, 200)
@@ -21,6 +21,7 @@ script_logica = NodePath("Script")
 
 [node name="Script" type="Node" parent="." unique_id=422463554]
 script = ExtResource("5_rjhf6")
+valor_magia = 50
 
 [node name="NumItem" type="Label" parent="." unique_id=1362088216]
 unique_name_in_owner = true
