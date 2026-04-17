@@ -542,12 +542,15 @@ texture = ExtResource("38_pfcst")
 [node name="Transicoes" type="Node2D" parent="0" unique_id=256678392]
 
 [node name="MA_10" parent="0/Transicoes" unique_id=789685631 instance=ExtResource("5_fwuoy")]
-position = Vector2(2869, -501)
+position = Vector2(3216, -501)
+rotation = -1.5707964
 vertical = true
 destino = &"res://Cenas/Mata_Atlantica/MA_10.tscn"
 posicao = Vector2(-1222, -1653)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="0/Transicoes/MA_10" unique_id=1571684609]
+position = Vector2(1.4075067e-05, -322)
+rotation = 1.5707964
 shape = SubResource("RectangleShape2D_k1v02")
 
 [node name="MA_14(temp)" parent="0/Transicoes" unique_id=505728752 instance=ExtResource("5_fwuoy")]
@@ -737,7 +740,7 @@ flip_h = true
 flip_v = true
 
 [node name="ChapExterno16" type="Sprite2D" parent="0/Chao" unique_id=1884542769]
-position = Vector2(-4401, -699.99994)
+position = Vector2(-4388, -699.99994)
 texture = ExtResource("12_noowx")
 
 [node name="ChapExterno19" type="Sprite2D" parent="0/Chao" unique_id=92454440]
