@@ -1937,7 +1937,7 @@ vel_anda = 4.0
 vel_aerea = 6.5
 acel_time = 0.2
 decel_time = 0.1
-altura_pulo = 4.2
+altura_pulo = 4.5
 tempo_pulo = 0.4
 tempo_cair = 0.65
 tempo_coyote = 0.1
@@ -1963,6 +1963,7 @@ position = Vector2(0, -115)
 scale = Vector2(0.37, 0.37)
 sprite_frames = SubResource("SpriteFrames_ser7u")
 animation = &"Carga"
+frame = 1
 
 [node name="ColisaoFisica" type="CollisionShape2D" parent="." unique_id=185604391]
 position = Vector2(0, -79)

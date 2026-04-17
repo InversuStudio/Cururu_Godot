@@ -14,9 +14,9 @@
 [ext_resource type="Texture2D" uid="uid://i664886fdh55" path="res://Sprites/Cenário/Mata_Atlantica/Background/Mata/mato02.png" id="9_g8olc"]
 [ext_resource type="Texture2D" uid="uid://x1ar0khlrujj" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/arvore_miasma.png" id="9_ir41t"]
 [ext_resource type="PackedScene" uid="uid://bjvnm0aydr0vd" path="res://Objetos/Entidades/Morcego.tscn" id="10_jb1wv"]
-[ext_resource type="Texture2D" uid="uid://cd0k6180rqklv" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/arvore02.png" id="10_n7put"]
 [ext_resource type="Texture2D" uid="uid://cjl88xeknofui" path="res://Sprites/Cenário/Mata_Atlantica/Chao/grama_reto.png" id="10_rrc73"]
 [ext_resource type="Texture2D" uid="uid://cj4rj4oj20ogb" path="res://Sprites/Cenário/Mata_Atlantica/Chao/chap_interno.png" id="11_bkuxo"]
+[ext_resource type="Texture2D" uid="uid://5ls4mqyykj6l" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/arvore_miasma2.png" id="11_nf0t0"]
 [ext_resource type="Texture2D" uid="uid://yrshunpt0tr8" path="res://Sprites/Cenário/Mata_Atlantica/Background/Mata/mato01.png" id="11_ysdsg"]
 [ext_resource type="Texture2D" uid="uid://cw2yeg7ynw0kl" path="res://Sprites/Cenário/Mata_Atlantica/Chao/chap_externo.png" id="12_noowx"]
 [ext_resource type="PackedScene" uid="uid://bei1s8te3cwko" path="res://Sprites/Cenário/Mata_Atlantica/Interativos/plataforma.tscn" id="13_h3gev"]
@@ -399,9 +399,9 @@ scale = Vector2(0.99999994, 0.99999994)
 texture = ExtResource("9_ir41t")
 
 [node name="Arvore02" type="Sprite2D" parent="-05" unique_id=1936025906]
-position = Vector2(4218, -3721)
+position = Vector2(4218, -3609.4736)
 scale = Vector2(0.99999994, 0.99999994)
-texture = ExtResource("10_n7put")
+texture = ExtResource("11_nf0t0")
 flip_v = true
 
 [node name="ArvoreMiasma5" type="Sprite2D" parent="-05" unique_id=72659819]
@@ -410,9 +410,9 @@ scale = Vector2(0.99999994, 0.99999994)
 texture = ExtResource("9_ir41t")
 
 [node name="Arvore04" type="Sprite2D" parent="-05" unique_id=2079442029]
-position = Vector2(3542, -3721)
+position = Vector2(3542, -3569.4736)
 scale = Vector2(0.99999994, 0.99999994)
-texture = ExtResource("10_n7put")
+texture = ExtResource("11_nf0t0")
 flip_v = true
 
 [node name="ArvoreMiasma4" type="Sprite2D" parent="-05" unique_id=307757426]
@@ -421,9 +421,9 @@ scale = Vector2(0.99999994, 0.99999994)
 texture = ExtResource("9_ir41t")
 
 [node name="Arvore03" type="Sprite2D" parent="-05" unique_id=2001222579]
-position = Vector2(2669.0002, -3587.5)
+position = Vector2(2669.0002, -3444.2104)
 scale = Vector2(0.99999994, 0.99999994)
-texture = ExtResource("10_n7put")
+texture = ExtResource("11_nf0t0")
 flip_v = true
 
 [node name="Composição17" type="Sprite2D" parent="-05" unique_id=212408270]
