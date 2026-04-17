@@ -1054,9 +1054,9 @@ shape = SubResource("RectangleShape2D_td0al")
 debug_color = Color(0, 0.004019165, 0.0056171864, 0)
 
 [node name="PointLight2D" type="PointLight2D" parent="0/Tutorial2" unique_id=750417656]
-position = Vector2(5.5002575, 80.49997)
+position = Vector2(5.5002575, 184.99997)
 scale = Vector2(0.4665273, 3.5519485)
-energy = 1.3
+energy = 0.9
 range_layer_max = 1
 texture = ExtResource("55_sxmps")
 
@@ -1129,136 +1129,110 @@ light_mask = 2
 position = Vector2(-13, 24)
 
 [node name="GramaReto" type="Sprite2D" parent="0/Chão/piso" unique_id=85607000]
-self_modulate = Color(0.8627451, 0.8627451, 1, 1)
 position = Vector2(-38778, -3300)
 texture = ExtResource("40_lymfm")
 
 [node name="GramaReto10" type="Sprite2D" parent="0/Chão/piso" unique_id=1238726377]
-self_modulate = Color(0.8627451, 0.8627451, 1, 1)
 position = Vector2(-38419, -3300)
 texture = ExtResource("40_lymfm")
 
 [node name="GramaReto11" type="Sprite2D" parent="0/Chão/piso" unique_id=377328438]
-self_modulate = Color(0.8627451, 0.8627451, 1, 1)
 position = Vector2(-37889, -3300)
 texture = ExtResource("40_lymfm")
 
 [node name="GramaReto12" type="Sprite2D" parent="0/Chão/piso" unique_id=1467749773]
-self_modulate = Color(0.8627451, 0.8627451, 1, 1)
 position = Vector2(-37315, -3300)
 texture = ExtResource("40_lymfm")
 
 [node name="GramaReto2" type="Sprite2D" parent="0/Chão/piso" unique_id=315285336]
-self_modulate = Color(0.8627451, 0.8627451, 1, 1)
 position = Vector2(-38116, -3300)
 texture = ExtResource("40_lymfm")
 
 [node name="GramaReto3" type="Sprite2D" parent="0/Chão/piso" unique_id=448221480]
-self_modulate = Color(0.8627451, 0.8627451, 1, 1)
 position = Vector2(-37556, -3300)
 texture = ExtResource("40_lymfm")
 
 [node name="GramaReto4" type="Sprite2D" parent="0/Chão/piso" unique_id=1098585363]
-self_modulate = Color(0.8627451, 0.8627451, 1, 1)
 position = Vector2(-37000, -3300)
 texture = ExtResource("40_lymfm")
 
 [node name="GramaReto18" type="Sprite2D" parent="0/Chão/piso" unique_id=1459844181]
-self_modulate = Color(0.8627451, 0.8627451, 1, 1)
 position = Vector2(-36764, -3300)
 texture = ExtResource("40_lymfm")
 
 [node name="GramaReto5" type="Sprite2D" parent="0/Chão/piso" unique_id=237773712]
-self_modulate = Color(0.8627451, 0.8627451, 1, 1)
 position = Vector2(-36346, -3300)
 texture = ExtResource("40_lymfm")
 
 [node name="GramaReto22" type="Sprite2D" parent="0/Chão/piso" unique_id=579807562]
-self_modulate = Color(0.8627451, 0.8627451, 1, 1)
 position = Vector2(-35684, -3300)
 texture = ExtResource("40_lymfm")
 
 [node name="GramaReto23" type="Sprite2D" parent="0/Chão/piso" unique_id=1202544159]
-self_modulate = Color(0.8627451, 0.8627451, 1, 1)
 position = Vector2(-34968, -3300)
 texture = ExtResource("40_lymfm")
 
 [node name="GramaReto6" type="Sprite2D" parent="0/Chão/piso" unique_id=1381787958]
-self_modulate = Color(0.8627451, 0.8627451, 1, 1)
 position = Vector2(-35969, -3300)
 texture = ExtResource("40_lymfm")
 
 [node name="GramaReto7" type="Sprite2D" parent="0/Chão/piso" unique_id=656021340]
-self_modulate = Color(0.8627451, 0.8627451, 1, 1)
 position = Vector2(-35427, -3300)
 texture = ExtResource("40_lymfm")
 
 [node name="GramaReto8" type="Sprite2D" parent="0/Chão/piso" unique_id=1005323977]
-self_modulate = Color(0.8627451, 0.8627451, 1, 1)
 position = Vector2(-34731, -3300)
 texture = ExtResource("40_lymfm")
 
 [node name="GramaReto9" type="Sprite2D" parent="0/Chão/piso" unique_id=999019526]
-self_modulate = Color(0.8627451, 0.8627451, 1, 1)
 position = Vector2(-34351, -3300)
 texture = ExtResource("40_lymfm")
 
 [node name="GramaReto13" type="Sprite2D" parent="0/Chão/piso" unique_id=1092140647]
-self_modulate = Color(0.8627451, 0.8627451, 1, 1)
 position = Vector2(-32160, -3300)
 texture = ExtResource("40_lymfm")
 
 [node name="GramaReto14" type="Sprite2D" parent="0/Chão/piso" unique_id=1816851310]
-self_modulate = Color(0.8627451, 0.8627451, 1, 1)
 position = Vector2(-31688, -3300)
 texture = ExtResource("40_lymfm")
 
 [node name="GramaReto24" type="Sprite2D" parent="0/Chão/piso" unique_id=1925983670]
-self_modulate = Color(0.8627451, 0.8627451, 1, 1)
 position = Vector2(-31278, -3300)
 texture = ExtResource("40_lymfm")
 
 [node name="GramaReto15" type="Sprite2D" parent="0/Chão/piso" unique_id=1645614858]
-self_modulate = Color(0.8627451, 0.8627451, 1, 1)
 position = Vector2(-30833, -3300)
 texture = ExtResource("40_lymfm")
 
 [node name="GramaReto16" type="Sprite2D" parent="0/Chão/piso" unique_id=840008621]
-self_modulate = Color(0.8627451, 0.8627451, 1, 1)
 position = Vector2(-30397, -3300)
 texture = ExtResource("40_lymfm")
 
 [node name="GramaReto17" type="Sprite2D" parent="0/Chão/piso" unique_id=1507943439]
-self_modulate = Color(0.8627451, 0.8627451, 1, 1)
 position = Vector2(-30043, -3300)
 texture = ExtResource("40_lymfm")
 
 [node name="ChapExterno" type="Sprite2D" parent="0/Chão/piso" unique_id=196409777]
-self_modulate = Color(0.8627451, 0.8627451, 1, 1)
 position = Vector2(-34142.5, -3201.5715)
 rotation = -1.5707964
 scale = Vector2(1.1523438, 1.1523438)
 texture = ExtResource("41_3tgem")
 
 [node name="ChapExterno2" type="Sprite2D" parent="0/Chão/piso" unique_id=799590053]
-self_modulate = Color(0.8627451, 0.8627451, 1, 1)
 position = Vector2(-32499, -3222)
 rotation = -1.5707964
 texture = ExtResource("41_3tgem")
 flip_v = true
 
 [node name="GramaReto19" type="Sprite2D" parent="0/Chão/piso" unique_id=832044417]
-self_modulate = Color(0.8627451, 0.8627451, 1, 1)
 position = Vector2(-33750, -3040)
 texture = ExtResource("40_lymfm")
 
 [node name="GramaReto20" type="Sprite2D" parent="0/Chão/piso" unique_id=310650914]
-self_modulate = Color(0.8627451, 0.8627451, 1, 1)
 position = Vector2(-33303, -3040)
 texture = ExtResource("40_lymfm")
 
 [node name="GramaReto21" type="Sprite2D" parent="0/Chão/piso" unique_id=380567985]
-self_modulate = Color(0.8627451, 0.8627451, 1, 1)
 position = Vector2(-32842, -3040)
 texture = ExtResource("40_lymfm")
 
@@ -1274,195 +1248,160 @@ follow_viewport_scale = 1.02
 position = Vector2(39399, 2158)
 
 [node name="MoitaTeste" type="Sprite2D" parent="1/Teto" unique_id=1385841674]
-self_modulate = Color(0.7058824, 0.8627451, 1, 1)
 material = SubResource("ShaderMaterial_74mlv")
 position = Vector2(-38796, -4126)
 texture = ExtResource("27_ytcj4")
 
 [node name="MoitaTeste3" type="Sprite2D" parent="1/Teto" unique_id=2006374181]
-self_modulate = Color(0.7058824, 0.8627451, 1, 1)
 position = Vector2(-38168, -4182)
 texture = ExtResource("27_ytcj4")
 
 [node name="MoitaTeste5" type="Sprite2D" parent="1/Teto" unique_id=825919386]
-self_modulate = Color(0.7058824, 0.8627451, 1, 1)
 material = SubResource("ShaderMaterial_74mlv")
 position = Vector2(-37796, -4192)
 texture = ExtResource("27_ytcj4")
 
 [node name="MoitaTeste9" type="Sprite2D" parent="1/Teto" unique_id=1640509291]
-self_modulate = Color(0.7058824, 0.8627451, 1, 1)
 position = Vector2(-36387, -4163.7144)
 texture = ExtResource("27_ytcj4")
 
 [node name="MoitaTeste26" type="Sprite2D" parent="1/Teto" unique_id=1856787376]
-self_modulate = Color(0.7058824, 0.8627451, 1, 1)
 material = SubResource("ShaderMaterial_74mlv")
 position = Vector2(-36102, -4328)
 texture = ExtResource("27_ytcj4")
 
 [node name="MoitaTeste11" type="Sprite2D" parent="1/Teto" unique_id=1440030707]
-self_modulate = Color(0.7058824, 0.8627451, 1, 1)
 position = Vector2(-35279, -4720.4)
 texture = ExtResource("27_ytcj4")
 
 [node name="MoitaTeste13" type="Sprite2D" parent="1/Teto" unique_id=1469420914]
-self_modulate = Color(0.7058824, 0.8627451, 1, 1)
 material = SubResource("ShaderMaterial_74mlv")
 position = Vector2(-34575, -4794)
 texture = ExtResource("27_ytcj4")
 
 [node name="MoitaTeste15" type="Sprite2D" parent="1/Teto" unique_id=797920146]
-self_modulate = Color(0.7058824, 0.8627451, 1, 1)
 position = Vector2(-33797, -4870)
 texture = ExtResource("27_ytcj4")
 
 [node name="MoitaTeste17" type="Sprite2D" parent="1/Teto" unique_id=88700410]
-self_modulate = Color(0.7058824, 0.8627451, 1, 1)
 material = SubResource("ShaderMaterial_74mlv")
 position = Vector2(-32958, -4830)
 texture = ExtResource("27_ytcj4")
 
 [node name="MoitaTeste7" type="Sprite2D" parent="1/Teto" unique_id=1407178992]
-self_modulate = Color(0.7058824, 0.8627451, 1, 1)
 position = Vector2(-36938, -4161)
 texture = ExtResource("27_ytcj4")
 
 [node name="MoitaTeste19" type="Sprite2D" parent="1/Teto" unique_id=511252882]
-self_modulate = Color(0.7058824, 0.8627451, 1, 1)
 material = SubResource("ShaderMaterial_74mlv")
 position = Vector2(-32175.998, -4716.4)
 texture = ExtResource("27_ytcj4")
 
 [node name="MoitaTeste22" type="Sprite2D" parent="1/Teto" unique_id=1159802585]
-self_modulate = Color(0.7058824, 0.8627451, 1, 1)
 position = Vector2(-31482, -4298.4)
 texture = ExtResource("27_ytcj4")
 
 [node name="MoitaTeste21" type="Sprite2D" parent="1/Teto" unique_id=1904011640]
-self_modulate = Color(0.7058824, 0.8627451, 1, 1)
 material = SubResource("ShaderMaterial_74mlv")
 position = Vector2(-31736.004, -4427.401)
 texture = ExtResource("27_ytcj4")
 
 [node name="MoitaTeste2" type="Sprite2D" parent="1/Teto" unique_id=1375107494]
-self_modulate = Color(0.7058824, 0.8627451, 1, 1)
 position = Vector2(-38588, -4108)
 texture = ExtResource("27_ytcj4")
 
 [node name="MoitaTeste34" type="Sprite2D" parent="1/Teto" unique_id=1213959460]
-self_modulate = Color(0.7058824, 0.8627451, 1, 1)
 material = SubResource("ShaderMaterial_74mlv")
 position = Vector2(-38949, -4020)
 texture = ExtResource("27_ytcj4")
 
 [node name="MoitaTeste28" type="Sprite2D" parent="1/Teto" unique_id=932476691]
-self_modulate = Color(0.7058824, 0.8627451, 1, 1)
 position = Vector2(-38973, -4110)
 texture = ExtResource("27_ytcj4")
 
 [node name="MoitaTeste4" type="Sprite2D" parent="1/Teto" unique_id=31917208]
-self_modulate = Color(0.7058824, 0.8627451, 1, 1)
 material = SubResource("ShaderMaterial_74mlv")
 position = Vector2(-37429, -4161)
 texture = ExtResource("27_ytcj4")
 
 [node name="MoitaTeste6" type="Sprite2D" parent="1/Teto" unique_id=1928840449]
-self_modulate = Color(0.7058824, 0.8627451, 1, 1)
 position = Vector2(-37243, -4208)
 texture = ExtResource("27_ytcj4")
 
 [node name="MoitaTeste8" type="Sprite2D" parent="1/Teto" unique_id=1334651288]
-self_modulate = Color(0.7058824, 0.8627451, 1, 1)
 material = SubResource("ShaderMaterial_74mlv")
 position = Vector2(-36635, -4180.8574)
 texture = ExtResource("27_ytcj4")
 
 [node name="MoitaTeste10" type="Sprite2D" parent="1/Teto" unique_id=1404746586]
-self_modulate = Color(0.7058824, 0.8627451, 1, 1)
 position = Vector2(-35546, -4573)
 texture = ExtResource("27_ytcj4")
 
 [node name="MoitaTeste27" type="Sprite2D" parent="1/Teto" unique_id=423533325]
-self_modulate = Color(0.7058824, 0.8627451, 1, 1)
 material = SubResource("ShaderMaterial_74mlv")
 position = Vector2(-34976, -4706)
 texture = ExtResource("27_ytcj4")
 
 [node name="MoitaTeste25" type="Sprite2D" parent="1/Teto" unique_id=2054614636]
-self_modulate = Color(0.7058824, 0.8627451, 1, 1)
 position = Vector2(-35780, -4411)
 texture = ExtResource("27_ytcj4")
 
 [node name="MoitaTeste12" type="Sprite2D" parent="1/Teto" unique_id=227151879]
-self_modulate = Color(0.7058824, 0.8627451, 1, 1)
 material = SubResource("ShaderMaterial_74mlv")
 position = Vector2(-34887, -4822.4)
 texture = ExtResource("27_ytcj4")
 
 [node name="MoitaTeste14" type="Sprite2D" parent="1/Teto" unique_id=520196488]
-self_modulate = Color(0.7058824, 0.8627451, 1, 1)
 position = Vector2(-34220, -4815)
 texture = ExtResource("27_ytcj4")
 
 [node name="MoitaTeste16" type="Sprite2D" parent="1/Teto" unique_id=2011877102]
-self_modulate = Color(0.7058824, 0.8627451, 1, 1)
 material = SubResource("ShaderMaterial_74mlv")
 position = Vector2(-33361, -4835.4)
 texture = ExtResource("27_ytcj4")
 
 [node name="MoitaTeste18" type="Sprite2D" parent="1/Teto" unique_id=844555561]
-self_modulate = Color(0.7058824, 0.8627451, 1, 1)
 position = Vector2(-32461, -4891)
 texture = ExtResource("27_ytcj4")
 
 [node name="MoitaTeste20" type="Sprite2D" parent="1/Teto" unique_id=562322665]
-self_modulate = Color(0.7058824, 0.8627451, 1, 1)
 material = SubResource("ShaderMaterial_74mlv")
 position = Vector2(-31907, -4627.4)
 texture = ExtResource("27_ytcj4")
 
 [node name="MoitaTeste23" type="Sprite2D" parent="1/Teto" unique_id=1932674952]
-self_modulate = Color(0.7058824, 0.8627451, 1, 1)
 position = Vector2(-31082, -4251)
 texture = ExtResource("27_ytcj4")
 
 [node name="MoitaTeste24" type="Sprite2D" parent="1/Teto" unique_id=1833156225]
-self_modulate = Color(0.7058824, 0.8627451, 1, 1)
 material = SubResource("ShaderMaterial_74mlv")
 position = Vector2(-30644, -4169)
 texture = ExtResource("27_ytcj4")
 
 [node name="MoitaTeste35" type="Sprite2D" parent="1/Teto" unique_id=1893591286]
-self_modulate = Color(0.7058824, 0.8627451, 1, 1)
 material = SubResource("ShaderMaterial_74mlv")
 position = Vector2(-30234.291, -4137.4116)
 texture = ExtResource("27_ytcj4")
 
 [node name="MoitaTeste30" type="Sprite2D" parent="1/Teto" unique_id=821946229]
-self_modulate = Color(0.7058824, 0.8627451, 1, 1)
 position = Vector2(-38331, -4083)
 texture = ExtResource("27_ytcj4")
 
 [node name="MoitaTeste31" type="Sprite2D" parent="1/Teto" unique_id=465095851]
-self_modulate = Color(0.7058824, 0.8627451, 1, 1)
 material = SubResource("ShaderMaterial_74mlv")
 position = Vector2(-37157.824, -4085.451)
 texture = ExtResource("27_ytcj4")
 
 [node name="MoitaTeste32" type="Sprite2D" parent="1/Teto" unique_id=771498298]
-self_modulate = Color(0.7058824, 0.8627451, 1, 1)
 position = Vector2(-38008, -4047)
 texture = ExtResource("27_ytcj4")
 
 [node name="MoitaTeste33" type="Sprite2D" parent="1/Teto" unique_id=1427880386]
-self_modulate = Color(0.7058824, 0.8627451, 1, 1)
 material = SubResource("ShaderMaterial_74mlv")
 position = Vector2(-37742.137, -4115.8433)
 texture = ExtResource("27_ytcj4")
 
 [node name="MoitaTeste29" type="Sprite2D" parent="1/Teto" unique_id=298628146]
-self_modulate = Color(0.7058824, 0.8627451, 1, 1)
 position = Vector2(-38519, -4162)
 texture = ExtResource("27_ytcj4")
 
@@ -1754,7 +1693,7 @@ position = Vector2(-35839.38, -3962.5864)
 scale = Vector2(0.84660274, 1.1854454)
 texture = ExtResource("38_vw05h")
 
-[node name="5c67d19fAad64a128e7fAe0bbbab2055" type="Sprite2D" parent="2/Cipó" unique_id=1642565872]
+[node name="arvore_fore" type="Sprite2D" parent="2/Cipó" unique_id=1642565872]
 self_modulate = Color(0.012617188, 0.012617188, 0.012617188, 1)
 position = Vector2(-30108.904, -3823.7813)
 scale = Vector2(0.91344273, 0.91344273)

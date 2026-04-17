@@ -1704,7 +1704,7 @@ texture = ExtResource("7_4sgns")
 [node name="MoitaChao2" type="Sprite2D" parent="Background2/1/Camada 1" unique_id=1058426222]
 z_index = 1
 material = SubResource("ShaderMaterial_6kw71")
-position = Vector2(-29861, -3202)
+position = Vector2(-29861, -3222.4392)
 texture = ExtResource("25_fo7ry")
 
 [node name="MoitaChao3" type="Sprite2D" parent="Background2/1/Camada 1" unique_id=57149499]
@@ -1934,6 +1934,19 @@ flip_h = true
 [node name="Frontfolha3" type="Sprite2D" parent="Background2/2/Camada 2" unique_id=321979321]
 position = Vector2(-26880, -2841)
 texture = ExtResource("8_646f2")
+
+[node name="arvore_fore" type="Sprite2D" parent="Background2/2/Camada 2" unique_id=528896969]
+self_modulate = Color(0.012617188, 0.012617188, 0.012617188, 1)
+position = Vector2(-29822.855, -3663.8098)
+scale = Vector2(0.91344273, 0.91344273)
+texture = ExtResource("30_phua6")
+
+[node name="arvore_fore2" type="Sprite2D" parent="Background2/2/Camada 2" unique_id=1832630942]
+self_modulate = Color(0.012617188, 0.012617188, 0.012617188, 1)
+position = Vector2(-16062.858, -4503.8096)
+scale = Vector2(0.91344273, 0.91344273)
+texture = ExtResource("30_phua6")
+flip_v = true
 
 [node name="Cipó" type="Sprite2D" parent="Background2/2/Camada 2" unique_id=1995941926]
 position = Vector2(-28349, -4306)

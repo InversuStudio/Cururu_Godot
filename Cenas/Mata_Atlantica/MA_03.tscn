@@ -376,6 +376,18 @@ texture = ExtResource("11_olt6v")
 position = Vector2(5233.421, -284.21045)
 texture = ExtResource("11_olt6v")
 
+[node name="Arvore04" type="Sprite2D" parent="background/-05" unique_id=331462477]
+position = Vector2(3249, -494.5)
+texture = ExtResource("12_83u8g")
+
+[node name="Arvore08" type="Sprite2D" parent="background/-05" unique_id=133392781]
+position = Vector2(3977, -466)
+texture = ExtResource("17_mf344")
+
+[node name="Arvore06" type="Sprite2D" parent="background/-05" unique_id=678241961]
+position = Vector2(3973.6843, -2677)
+texture = ExtResource("11_cfkov")
+
 [node name="Arvore05" type="Sprite2D" parent="background/-05" unique_id=1246984595]
 position = Vector2(3249, -2702.5)
 texture = ExtResource("11_cfkov")
@@ -399,10 +411,6 @@ texture = ExtResource("16_pjxq5")
 position = Vector2(363, -684.5)
 scale = Vector2(1, 1)
 
-[node name="Arvore04" type="Sprite2D" parent="background/-05" unique_id=331462477]
-position = Vector2(3249, -494.5)
-texture = ExtResource("12_83u8g")
-
 [node name="Arvore07" type="Sprite2D" parent="background/-05" unique_id=2038799006]
 position = Vector2(3977, -4888)
 texture = ExtResource("11_cfkov")
@@ -416,14 +424,6 @@ texture = ExtResource("14_bnvg8")
 [node name="Plataforma3" parent="background/-05/Arvore07" unique_id=703700508 instance=ExtResource("15_gbacd")]
 position = Vector2(-368, 693)
 scale = Vector2(1, 1)
-
-[node name="Arvore08" type="Sprite2D" parent="background/-05" unique_id=133392781]
-position = Vector2(3977, -466)
-texture = ExtResource("17_mf344")
-
-[node name="Arvore06" type="Sprite2D" parent="background/-05" unique_id=678241961]
-position = Vector2(3973.6843, -2677)
-texture = ExtResource("11_cfkov")
 
 [node name="Props" type="Node2D" parent="background/-05" unique_id=687810638]
 position = Vector2(1918, 108)
@@ -1627,7 +1627,7 @@ scale = Vector2(0.5, 0.5)
 texture = ExtResource("38_ruwr8")
 
 [node name="MoitaTeste3" type="Sprite2D" parent="background/1/Teto" unique_id=488665321]
-position = Vector2(688, -8)
+position = Vector2(614.9804, -8)
 texture = ExtResource("38_ruwr8")
 
 [node name="MoitaTeste2" type="Sprite2D" parent="background/1/Teto" unique_id=1222255645]
@@ -1883,7 +1883,7 @@ texture = ExtResource("39_u8dco")
 flip_v = true
 
 [node name="Frontfolha7" type="Sprite2D" parent="background/1/Foreground" unique_id=89343190]
-position = Vector2(193.99976, -56)
+position = Vector2(160.07857, -56)
 scale = Vector2(1.4, 1.4)
 texture = ExtResource("39_u8dco")
 flip_v = true
@@ -1907,7 +1907,7 @@ texture = ExtResource("39_u8dco")
 flip_v = true
 
 [node name="Cipó" type="Sprite2D" parent="background/1/Foreground" unique_id=1717003756]
-position = Vector2(220, 152)
+position = Vector2(222.82341, 119.29413)
 texture = ExtResource("45_o8fgi")
 
 [node name="Cipó2" type="Sprite2D" parent="background/1/Foreground" unique_id=1909540372]

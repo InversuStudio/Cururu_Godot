@@ -146,7 +146,6 @@ scale = Vector2(4.1601563, 4.1601563)
 texture = ExtResource("1_6rln1")
 
 [node name="CanvasModulate" type="CanvasModulate" parent="-5" unique_id=1145582344]
-visible = false
 position = Vector2(-21272.857, -19224.287)
 scale = Vector2(175.74992, 39.388683)
 color = Color(0.043039218, 0.043039136, 0.04303915, 1)
@@ -180,7 +179,6 @@ position = Vector2(6337, -4077)
 texture = ExtResource("5_oue67")
 
 [node name="CanvasModulate" type="CanvasModulate" parent="-4" unique_id=60724640]
-visible = false
 position = Vector2(-21272.857, -19224.287)
 scale = Vector2(175.74992, 39.388683)
 color = Color(0.043039218, 0.043039136, 0.04303915, 1)
@@ -210,7 +208,6 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="CanvasModulate" type="CanvasModulate" parent="-3" unique_id=675072861]
-visible = false
 position = Vector2(-21272.857, -19224.287)
 scale = Vector2(175.74992, 39.388683)
 color = Color(0.043039218, 0.043039136, 0.04303915, 1)
@@ -249,7 +246,6 @@ texture = ExtResource("2_ygqbx")
 flip_v = true
 
 [node name="CanvasModulate" type="CanvasModulate" parent="-2" unique_id=1494047377]
-visible = false
 position = Vector2(-21272.857, -19224.287)
 scale = Vector2(175.74992, 39.388683)
 color = Color(0.043039218, 0.043039136, 0.04303915, 1)
@@ -267,7 +263,6 @@ position = Vector2(6637, -653)
 texture = ExtResource("8_l0rkm")
 
 [node name="CanvasModulate" type="CanvasModulate" parent="-1" unique_id=445431585]
-visible = false
 position = Vector2(-21272.857, -19224.287)
 scale = Vector2(175.74992, 39.388683)
 color = Color(0.043039218, 0.043039136, 0.04303915, 1)
@@ -309,7 +304,6 @@ position = Vector2(6006, -3930)
 texture = ExtResource("9_fou0x")
 
 [node name="CanvasModulate" type="CanvasModulate" parent="0" unique_id=1450340843]
-visible = false
 position = Vector2(-21272.857, -19224.287)
 scale = Vector2(175.74992, 39.388683)
 color = Color(0.043039218, 0.043039136, 0.04303915, 1)
@@ -382,7 +376,6 @@ position = Vector2(6205, -1309.5)
 texture = ExtResource("28_hx3nd")
 
 [node name="CanvasModulate" type="CanvasModulate" parent="1" unique_id=798258733]
-visible = false
 position = Vector2(-21272.857, -19224.287)
 scale = Vector2(175.74992, 39.388683)
 color = Color(0.043039218, 0.043039136, 0.04303915, 1)
@@ -412,7 +405,6 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="CanvasModulate" type="CanvasModulate" parent="2" unique_id=1740485236]
-visible = false
 position = Vector2(-21272.857, -19224.287)
 scale = Vector2(175.74992, 39.388683)
 color = Color(0.043039218, 0.043039136, 0.04303915, 1)
@@ -521,7 +513,6 @@ offset_right = 8891.467
 offset_bottom = -7770.658
 
 [node name="CanvasModulate" type="CanvasModulate" parent="3" unique_id=1426368633]
-visible = false
 position = Vector2(-21272.857, -19224.287)
 scale = Vector2(175.74992, 39.388683)
 color = Color(0.043039218, 0.043039136, 0.04303915, 1)
@@ -673,8 +664,9 @@ texture = ExtResource("9_0hgqb")
 flip_v = true
 
 [node name="GramaReto63" type="Sprite2D" parent="4/Cenario/Chao" unique_id=131208727]
-position = Vector2(-4090, -1571.0001)
+position = Vector2(-4090, -1564.4178)
 rotation = 1.5707964
+scale = Vector2(0.6995764, 1)
 texture = ExtResource("9_0hgqb")
 flip_v = true
 
@@ -697,8 +689,9 @@ texture = ExtResource("9_0hgqb")
 flip_v = true
 
 [node name="GramaReto76" type="Sprite2D" parent="4/Cenario/Chao" unique_id=655781500]
-position = Vector2(-4607.0005, -155.00006)
+position = Vector2(-4607.0005, -178)
 rotation = 1.5707964
+scale = Vector2(0.6745974, 1)
 texture = ExtResource("9_0hgqb")
 flip_v = true
 
@@ -709,8 +702,9 @@ texture = ExtResource("9_0hgqb")
 flip_v = true
 
 [node name="GramaReto77" type="Sprite2D" parent="4/Cenario/Chao" unique_id=1401068764]
-position = Vector2(-4349.0005, -555)
+position = Vector2(-4349.0005, -561.8205)
 rotation = 1.5707964
+scale = Vector2(0.7226684, 1)
 texture = ExtResource("9_0hgqb")
 flip_v = true
 
@@ -730,8 +724,9 @@ rotation = 1.5707964
 texture = ExtResource("9_0hgqb")
 
 [node name="GramaReto149" type="Sprite2D" parent="4/Cenario/Chao" unique_id=1420973134]
-position = Vector2(-3385.9998, -1688.0001)
+position = Vector2(-3380, -1717.04)
 rotation = 1.5707964
+scale = Vector2(0.88979137, 1)
 texture = ExtResource("9_0hgqb")
 
 [node name="GramaReto68" type="Sprite2D" parent="4/Cenario/Chao" unique_id=1912048271]
@@ -900,8 +895,8 @@ position = Vector2(-6371.2, -1505.7)
 texture = ExtResource("9_0hgqb")
 
 [node name="ChapExterno20" type="Sprite2D" parent="4/Cenario/Chao" unique_id=148310018]
-position = Vector2(-4283, -1316.4875)
-scale = Vector2(0.65, 0.60363805)
+position = Vector2(-4283, -1327.2438)
+scale = Vector2(1, 0.9220563)
 texture = ExtResource("11_dmd0r")
 flip_h = true
 flip_v = true
@@ -919,7 +914,8 @@ position = Vector2(-4849.4004, -1244.7)
 texture = ExtResource("9_0hgqb")
 
 [node name="GramaReto103" type="Sprite2D" parent="4/Cenario/Chao" unique_id=1259664131]
-position = Vector2(-4534, -1244.7)
+position = Vector2(-4557.25, -1244.7)
+scale = Vector2(0.9117647, 1)
 texture = ExtResource("9_0hgqb")
 
 [node name="GramaReto104" type="Sprite2D" parent="4/Cenario/Chao" unique_id=169509964]
@@ -1031,7 +1027,7 @@ position = Vector2(-1936, -1499)
 texture = ExtResource("9_0hgqb")
 
 [node name="GramaReto148" type="Sprite2D" parent="4/Cenario/Chao" unique_id=1722473468]
-position = Vector2(-1754, -1499)
+position = Vector2(-1754, -1513)
 texture = ExtResource("9_0hgqb")
 
 [node name="GramaReto141" type="Sprite2D" parent="4/Cenario/Chao" unique_id=60199389]
@@ -1067,11 +1063,11 @@ position = Vector2(-3297, -991.0001)
 texture = ExtResource("9_0hgqb")
 
 [node name="GramaReto145" type="Sprite2D" parent="4/Cenario/Chao" unique_id=171603886]
-position = Vector2(-4056, -732.0001)
+position = Vector2(-4056, -740)
 texture = ExtResource("9_0hgqb")
 
 [node name="GramaReto146" type="Sprite2D" parent="4/Cenario/Chao" unique_id=1952804393]
-position = Vector2(-3832, -732.0001)
+position = Vector2(-3832, -738)
 texture = ExtResource("9_0hgqb")
 
 [node name="GramaReto150" type="Sprite2D" parent="4/Cenario/Chao" unique_id=1952333120]
@@ -1083,7 +1079,7 @@ position = Vector2(-3082.2002, -1501.7)
 texture = ExtResource("9_0hgqb")
 
 [node name="GramaReto126" type="Sprite2D" parent="4/Cenario/Chao" unique_id=94278713]
-position = Vector2(-2559, -2525.0002)
+position = Vector2(-2512, -2525.0002)
 texture = ExtResource("9_0hgqb")
 
 [node name="GramaReto127" type="Sprite2D" parent="4/Cenario/Chao" unique_id=569473954]
@@ -1091,7 +1087,8 @@ position = Vector2(-3085, -2654.0002)
 texture = ExtResource("9_0hgqb")
 
 [node name="GramaReto128" type="Sprite2D" parent="4/Cenario/Chao" unique_id=1650448345]
-position = Vector2(-6372.0005, -2782)
+position = Vector2(-6433.75, -2782)
+scale = Vector2(0.7656556, 1)
 texture = ExtResource("9_0hgqb")
 
 [node name="GramaReto129" type="Sprite2D" parent="4/Cenario/Chao" unique_id=116085267]
@@ -1099,7 +1096,8 @@ position = Vector2(-5886.0005, -2527.0002)
 texture = ExtResource("9_0hgqb")
 
 [node name="GramaReto131" type="Sprite2D" parent="4/Cenario/Chao" unique_id=2044262735]
-position = Vector2(-6407.0005, -2016.0002)
+position = Vector2(-6367.25, -2016.0002)
+scale = Vector2(0.8491452, 1)
 texture = ExtResource("9_0hgqb")
 
 [node name="GramaReto132" type="Sprite2D" parent="4/Cenario/Chao" unique_id=1393989227]
@@ -1156,784 +1154,662 @@ texture = ExtResource("9_0hgqb")
 
 [node name="ChapInterno25" type="Sprite2D" parent="4/Cenario/Chao" unique_id=132444625]
 position = Vector2(-1724, -1240.0001)
-scale = Vector2(0.65, 0.65)
 texture = ExtResource("10_38a5t")
 flip_h = true
 
 [node name="ChapInterno28" type="Sprite2D" parent="4/Cenario/Chao" unique_id=1428144474]
 position = Vector2(-1723, -1056)
-scale = Vector2(0.65, 0.65)
 texture = ExtResource("10_38a5t")
 flip_h = true
 flip_v = true
 
 [node name="ChapInterno32" type="Sprite2D" parent="4/Cenario/Chao" unique_id=604743164]
 position = Vector2(-4412.0005, -419)
-scale = Vector2(0.65, 0.65)
 texture = ExtResource("10_38a5t")
 flip_h = true
 flip_v = true
 
 [node name="ChapInterno35" type="Sprite2D" parent="4/Cenario/Chao" unique_id=72472521]
-position = Vector2(-4154.0005, -1441)
-scale = Vector2(0.65, 0.65)
+position = Vector2(-4154.0005, -1459)
 texture = ExtResource("10_38a5t")
 flip_h = true
 flip_v = true
 
 [node name="ChapInterno36" type="Sprite2D" parent="4/Cenario/Chao" unique_id=1600122697]
 position = Vector2(-3649, -1823)
-scale = Vector2(0.65, 0.65)
 texture = ExtResource("10_38a5t")
 flip_h = true
 flip_v = true
 
 [node name="ChapInterno70" type="Sprite2D" parent="4/Cenario/Chao" unique_id=2112372405]
-position = Vector2(-3649, -801)
-scale = Vector2(0.65, 0.65)
+position = Vector2(-3649, -809)
 texture = ExtResource("10_38a5t")
 flip_h = true
 flip_v = true
 
 [node name="ChapInterno33" type="Sprite2D" parent="4/Cenario/Chao" unique_id=1276015231]
 position = Vector2(-4671.0005, -35)
-scale = Vector2(0.65, 0.65)
 texture = ExtResource("10_38a5t")
 flip_h = true
 flip_v = true
 
 [node name="ChapInterno29" type="Sprite2D" parent="4/Cenario/Chao" unique_id=385050349]
 position = Vector2(-1403, -1056)
-scale = Vector2(0.65, 0.65)
 texture = ExtResource("10_38a5t")
 flip_v = true
 
 [node name="ChapInterno27" type="Sprite2D" parent="4/Cenario/Chao" unique_id=503340943]
 position = Vector2(-1340, -729)
-scale = Vector2(0.65, 0.65)
 texture = ExtResource("10_38a5t")
 flip_h = true
 
 [node name="ChapInterno30" type="Sprite2D" parent="4/Cenario/Chao" unique_id=1013585896]
 position = Vector2(-3324, -723)
-scale = Vector2(0.65, 0.65)
 texture = ExtResource("10_38a5t")
 
 [node name="ChapInterno34" type="Sprite2D" parent="4/Cenario/Chao" unique_id=1783200608]
 position = Vector2(-3966, -1232)
-scale = Vector2(0.65, 0.65)
 texture = ExtResource("10_38a5t")
 
 [node name="ChapInterno42" type="Sprite2D" parent="4/Cenario/Chao" unique_id=1569725218]
 position = Vector2(-2169, -3539)
-scale = Vector2(0.65, 0.65)
 texture = ExtResource("10_38a5t")
 
 [node name="ChapInterno44" type="Sprite2D" parent="4/Cenario/Chao" unique_id=219631175]
 position = Vector2(-2620, -3235)
-scale = Vector2(0.65, 0.65)
 texture = ExtResource("10_38a5t")
 flip_h = true
 flip_v = true
 
 [node name="ChapInterno66" type="Sprite2D" parent="4/Cenario/Chao" unique_id=1380821522]
 position = Vector2(-1987, -2080)
-scale = Vector2(0.65, 0.65)
 texture = ExtResource("10_38a5t")
 flip_h = true
 flip_v = true
 
 [node name="ChapInterno67" type="Sprite2D" parent="4/Cenario/Chao" unique_id=689345285]
 position = Vector2(-1721, -2337)
-scale = Vector2(0.65, 0.65)
 texture = ExtResource("10_38a5t")
 flip_h = true
 flip_v = true
 
 [node name="ChapInterno68" type="Sprite2D" parent="4/Cenario/Chao" unique_id=876785695]
 position = Vector2(-1017, -2263)
-scale = Vector2(0.65, 0.65)
 texture = ExtResource("10_38a5t")
 
 [node name="ChapInterno49" type="Sprite2D" parent="4/Cenario/Chao" unique_id=104175063]
 position = Vector2(-3563.475, -3235)
-scale = Vector2(0.65, 0.65)
 texture = ExtResource("10_38a5t")
 flip_v = true
 
 [node name="ChapInterno72" type="Sprite2D" parent="4/Cenario/Chao" unique_id=588401403]
 position = Vector2(-6268, -3488.0002)
-scale = Vector2(0.65, 0.65)
 texture = ExtResource("10_38a5t")
 flip_v = true
 
 [node name="ChapInterno45" type="Sprite2D" parent="4/Cenario/Chao" unique_id=58906576]
 position = Vector2(-3514, -4564.0005)
-scale = Vector2(0.65, 0.65)
 texture = ExtResource("10_38a5t")
 flip_h = true
 
 [node name="ChapInterno46" type="Sprite2D" parent="4/Cenario/Chao" unique_id=29232195]
 position = Vector2(-5629.0005, -4564.0005)
-scale = Vector2(0.65, 0.65)
 texture = ExtResource("10_38a5t")
 
 [node name="ChapInterno47" type="Sprite2D" parent="4/Cenario/Chao" unique_id=2062384112]
 position = Vector2(-830, -4693.0005)
-scale = Vector2(0.65, 0.65)
 texture = ExtResource("10_38a5t")
 flip_h = true
 
 [node name="ChapInterno50" type="Sprite2D" parent="4/Cenario/Chao" unique_id=655414729]
 position = Vector2(-444, -4131.0005)
-scale = Vector2(0.65, 0.65)
 texture = ExtResource("10_38a5t")
 flip_h = true
 flip_v = true
 
 [node name="ChapInterno51" type="Sprite2D" parent="4/Cenario/Chao" unique_id=1704416044]
 position = Vector2(-2298, -4131.0005)
-scale = Vector2(0.65, 0.65)
 texture = ExtResource("10_38a5t")
 flip_v = true
 
 [node name="ChapInterno48" type="Sprite2D" parent="4/Cenario/Chao" unique_id=374670340]
 position = Vector2(-2300, -4693.0005)
-scale = Vector2(0.65, 0.65)
 texture = ExtResource("10_38a5t")
 
 [node name="ChapInterno43" type="Sprite2D" parent="4/Cenario/Chao" unique_id=1718485544]
 position = Vector2(-2169, -3234)
-scale = Vector2(0.65, 0.65)
 texture = ExtResource("10_38a5t")
 flip_v = true
 
 [node name="ChapInterno54" type="Sprite2D" parent="4/Cenario/Chao" unique_id=1124726134]
 position = Vector2(-3323, -2721.0002)
-scale = Vector2(0.65, 0.65)
+texture = ExtResource("10_38a5t")
+flip_v = true
+
+[node name="ChapInterno64" type="Sprite2D" parent="4/Cenario/Chao" unique_id=259750878]
+position = Vector2(-2665, -2590.5)
+scale = Vector2(1, 1.0121951)
 texture = ExtResource("10_38a5t")
 flip_v = true
 
 [node name="ChapInterno69" type="Sprite2D" parent="4/Cenario/Chao" unique_id=536341219]
 position = Vector2(-3323, -1569.0001)
-scale = Vector2(0.65, 0.65)
 texture = ExtResource("10_38a5t")
 flip_v = true
 
 [node name="ChapInterno71" type="Sprite2D" parent="4/Cenario/Chao" unique_id=1237653368]
 position = Vector2(-5757, -1312.0001)
-scale = Vector2(0.65, 0.65)
 texture = ExtResource("10_38a5t")
 flip_v = true
 
 [node name="ChapInterno55" type="Sprite2D" parent="4/Cenario/Chao" unique_id=2094199147]
 position = Vector2(-3323, -2902.0002)
-scale = Vector2(0.65, 0.65)
 texture = ExtResource("10_38a5t")
 
 [node name="ChapInterno56" type="Sprite2D" parent="4/Cenario/Chao" unique_id=10182420]
 position = Vector2(-4814.25, -2594.35)
-scale = Vector2(0.65, 0.65)
 texture = ExtResource("10_38a5t")
 flip_h = true
 flip_v = true
 
 [node name="ChapInterno57" type="Sprite2D" parent="4/Cenario/Chao" unique_id=1827979303]
 position = Vector2(-4814.25, -2902.0002)
-scale = Vector2(0.65, 0.65)
 texture = ExtResource("10_38a5t")
 flip_h = true
 
 [node name="ChapInterno52" type="Sprite2D" parent="4/Cenario/Chao" unique_id=525424545]
 position = Vector2(-1342, -3234)
-scale = Vector2(0.65, 0.65)
 texture = ExtResource("10_38a5t")
 flip_h = true
 flip_v = true
 
 [node name="ChapInterno53" type="Sprite2D" parent="4/Cenario/Chao" unique_id=1094161349]
 position = Vector2(-315, -3106.0002)
-scale = Vector2(0.65, 0.65)
 texture = ExtResource("10_38a5t")
 flip_h = true
 flip_v = true
 
 [node name="ChapInterno31" type="Sprite2D" parent="4/Cenario/Chao" unique_id=380579243]
 position = Vector2(-4090, -469)
-scale = Vector2(0.65, 0.65)
 texture = ExtResource("10_38a5t")
 
 [node name="ChapInterno37" type="Sprite2D" parent="4/Cenario/Chao" unique_id=846403638]
 position = Vector2(-6524.0005, -469)
-scale = Vector2(0.65, 0.65)
 texture = ExtResource("10_38a5t")
 
 [node name="ChapInterno38" type="Sprite2D" parent="4/Cenario/Chao" unique_id=403149084]
 position = Vector2(-6524.0005, -1237.0001)
-scale = Vector2(0.65, 0.65)
 texture = ExtResource("10_38a5t")
 
 [node name="ChapInterno39" type="Sprite2D" parent="4/Cenario/Chao" unique_id=2070659923]
 position = Vector2(-6524.0005, -1751)
-scale = Vector2(0.65, 0.65)
 texture = ExtResource("10_38a5t")
 
 [node name="ChapInterno40" type="Sprite2D" parent="4/Cenario/Chao" unique_id=1462179415]
 position = Vector2(-6524.0005, -2261)
-scale = Vector2(0.65, 0.65)
 texture = ExtResource("10_38a5t")
 
 [node name="ChapInterno58" type="Sprite2D" parent="4/Cenario/Chao" unique_id=239288053]
 position = Vector2(-6524.0005, -2849)
-scale = Vector2(0.65, 0.65)
 texture = ExtResource("10_38a5t")
 flip_v = true
 
 [node name="ChapInterno59" type="Sprite2D" parent="4/Cenario/Chao" unique_id=1090002867]
 position = Vector2(-6137.0005, -2596)
-scale = Vector2(0.65, 0.65)
 texture = ExtResource("10_38a5t")
 flip_v = true
 
 [node name="ChapInterno60" type="Sprite2D" parent="4/Cenario/Chao" unique_id=273155411]
 position = Vector2(-6523, -2085)
-scale = Vector2(0.65, 0.65)
 texture = ExtResource("10_38a5t")
 flip_v = true
 
 [node name="ChapInterno61" type="Sprite2D" parent="4/Cenario/Chao" unique_id=889073168]
 position = Vector2(-6523, -1570.0001)
-scale = Vector2(0.65, 0.65)
 texture = ExtResource("10_38a5t")
 flip_v = true
 
 [node name="ChapInterno62" type="Sprite2D" parent="4/Cenario/Chao" unique_id=1214845209]
 position = Vector2(-6525.0005, -803.0001)
-scale = Vector2(0.65, 0.65)
 texture = ExtResource("10_38a5t")
 flip_v = true
 
 [node name="ChapInterno63" type="Sprite2D" parent="4/Cenario/Chao" unique_id=1438570625]
 position = Vector2(-6525.0005, -36)
-scale = Vector2(0.65, 0.65)
 texture = ExtResource("10_38a5t")
 flip_v = true
 
 [node name="ChapInterno65" type="Sprite2D" parent="4/Cenario/Chao" unique_id=138210141]
 position = Vector2(-4092, -36)
-scale = Vector2(0.65, 0.65)
 texture = ExtResource("10_38a5t")
 flip_v = true
 
 [node name="ChapInterno26" type="Sprite2D" parent="4/Cenario/Chao" unique_id=381928304]
 position = Vector2(-574, -2775.0002)
-scale = Vector2(0.65, 0.65)
 texture = ExtResource("10_38a5t")
 flip_h = true
 
 [node name="ChapExterno3" type="Sprite2D" parent="4/Cenario/Chao" unique_id=1376145175]
 position = Vector2(-2873, -417)
-scale = Vector2(0.65, 0.65)
 texture = ExtResource("11_dmd0r")
 flip_h = true
 flip_v = true
 
 [node name="ChapExterno6" type="Sprite2D" parent="4/Cenario/Chao" unique_id=69311000]
 position = Vector2(-1919.4751, -416)
-scale = Vector2(0.65, 0.65)
 texture = ExtResource("11_dmd0r")
 flip_v = true
 
 [node name="ChapExterno4" type="Sprite2D" parent="4/Cenario/Chao" unique_id=1793466710]
 position = Vector2(-2873, -347)
-scale = Vector2(0.65, 0.65)
 texture = ExtResource("11_dmd0r")
 flip_h = true
 
 [node name="ChapExterno81" type="Sprite2D" parent="4/Cenario/Chao" unique_id=307210740]
 position = Vector2(-443, -474)
-scale = Vector2(0.65, 0.65)
 texture = ExtResource("11_dmd0r")
 flip_h = true
 
 [node name="ChapExterno9" type="Sprite2D" parent="4/Cenario/Chao" unique_id=1939064795]
 position = Vector2(-2617.475, -927.025)
-scale = Vector2(0.65, 0.65)
 texture = ExtResource("11_dmd0r")
 flip_h = true
 flip_v = true
 
 [node name="ChapExterno16" type="Sprite2D" parent="4/Cenario/Chao" unique_id=1205188333]
 position = Vector2(-3515, -927.025)
-scale = Vector2(0.65, 0.65)
 texture = ExtResource("11_dmd0r")
 flip_h = true
 flip_v = true
 
 [node name="ChapExterno21" type="Sprite2D" parent="4/Cenario/Chao" unique_id=1562406536]
-position = Vector2(-4026.0005, -1697)
-scale = Vector2(0.65, 0.65)
+position = Vector2(-4026.0005, -1689)
 texture = ExtResource("11_dmd0r")
 flip_h = true
 flip_v = true
 
 [node name="ChapExterno22" type="Sprite2D" parent="4/Cenario/Chao" unique_id=997918218]
-position = Vector2(-3514, -1826.0249)
-scale = Vector2(0.65, 0.65)
+position = Vector2(-3514, -1840.5125)
+scale = Vector2(1, 0.89501774)
 texture = ExtResource("11_dmd0r")
 flip_h = true
 flip_v = true
 
 [node name="ChapExterno17" type="Sprite2D" parent="4/Cenario/Chao" unique_id=368696311]
 position = Vector2(-4280, -672.0001)
-scale = Vector2(0.65, 0.65)
 texture = ExtResource("11_dmd0r")
 flip_h = true
 flip_v = true
 
 [node name="ChapExterno18" type="Sprite2D" parent="4/Cenario/Chao" unique_id=876930970]
 position = Vector2(-4539.0005, -289.00012)
-scale = Vector2(0.65, 0.65)
 texture = ExtResource("11_dmd0r")
 flip_h = true
 flip_v = true
 
 [node name="ChapExterno10" type="Sprite2D" parent="4/Cenario/Chao" unique_id=801399296]
 position = Vector2(-2617.475, -857.025)
-scale = Vector2(0.65, 0.65)
 texture = ExtResource("11_dmd0r")
 flip_h = true
 
 [node name="ChapExterno13" type="Sprite2D" parent="4/Cenario/Chao" unique_id=664779270]
 position = Vector2(-2106.475, -1440.025)
-scale = Vector2(0.65, 0.65)
 texture = ExtResource("11_dmd0r")
 flip_h = true
 flip_v = true
 
 [node name="ChapExterno14" type="Sprite2D" parent="4/Cenario/Chao" unique_id=784918398]
 position = Vector2(-2106.475, -1370.025)
-scale = Vector2(0.65, 0.65)
 texture = ExtResource("11_dmd0r")
 flip_h = true
 
 [node name="ChapExterno59" type="Sprite2D" parent="4/Cenario/Chao" unique_id=685542214]
 position = Vector2(-960.4751, -1693.0249)
-scale = Vector2(0.65, 0.65)
 texture = ExtResource("11_dmd0r")
 flip_h = true
 flip_v = true
 
 [node name="ChapExterno90" type="Sprite2D" parent="4/Cenario/Chao" unique_id=1054253015]
 position = Vector2(-960.4751, -1496.0001)
-scale = Vector2(0.65, 0.65)
 texture = ExtResource("11_dmd0r")
 flip_h = true
 
 [node name="ChapExterno82" type="Sprite2D" parent="4/Cenario/Chao" unique_id=882410272]
 position = Vector2(-1212, -474)
-scale = Vector2(0.65, 0.65)
 texture = ExtResource("11_dmd0r")
 flip_h = true
 
 [node name="ChapExterno24" type="Sprite2D" parent="4/Cenario/Chao" unique_id=2048426148]
-position = Vector2(-3000.475, -1954.0249)
-scale = Vector2(0.65, 0.65)
+position = Vector2(-3000.475, -1942)
 texture = ExtResource("11_dmd0r")
 flip_h = true
 flip_v = true
 
 [node name="ChapExterno26" type="Sprite2D" parent="4/Cenario/Chao" unique_id=1977361046]
 position = Vector2(-1854, -2206)
-scale = Vector2(0.65, 0.65)
 texture = ExtResource("11_dmd0r")
 flip_h = true
 flip_v = true
 
 [node name="ChapExterno27" type="Sprite2D" parent="4/Cenario/Chao" unique_id=2146002591]
 position = Vector2(-1594, -2463.0002)
-scale = Vector2(0.65, 0.65)
 texture = ExtResource("11_dmd0r")
 flip_h = true
 flip_v = true
 
 [node name="ChapExterno25" type="Sprite2D" parent="4/Cenario/Chao" unique_id=1214625152]
 position = Vector2(-3000.475, -1884.0249)
-scale = Vector2(0.65, 0.65)
 texture = ExtResource("11_dmd0r")
 flip_h = true
 
 [node name="ChapExterno33" type="Sprite2D" parent="4/Cenario/Chao" unique_id=2103872900]
 position = Vector2(-5816.4746, -1950.0249)
-scale = Vector2(0.65, 0.65)
 texture = ExtResource("11_dmd0r")
 flip_h = true
 flip_v = true
 
 [node name="ChapExterno34" type="Sprite2D" parent="4/Cenario/Chao" unique_id=1591352745]
 position = Vector2(-5816.4746, -1880.0249)
-scale = Vector2(0.65, 0.65)
 texture = ExtResource("11_dmd0r")
 flip_h = true
 
 [node name="ChapExterno32" type="Sprite2D" parent="4/Cenario/Chao" unique_id=1180901668]
 position = Vector2(-5187, -1628.0002)
-scale = Vector2(0.65, 0.65)
 texture = ExtResource("11_dmd0r")
 flip_h = true
 
 [node name="ChapExterno5" type="Sprite2D" parent="4/Cenario/Chao" unique_id=1590812180]
 position = Vector2(-1917.4751, -344)
-scale = Vector2(0.65, 0.65)
 texture = ExtResource("11_dmd0r")
 
 [node name="ChapExterno87" type="Sprite2D" parent="4/Cenario/Chao" unique_id=107434896]
-position = Vector2(-3452, -598.00006)
-scale = Vector2(0.65, 0.65)
+position = Vector2(-3468, -598.00006)
 texture = ExtResource("11_dmd0r")
 
 [node name="ChapExterno7" type="Sprite2D" parent="4/Cenario/Chao" unique_id=843270868]
 position = Vector2(-3072.475, -925.025)
-scale = Vector2(0.65, 0.65)
 texture = ExtResource("11_dmd0r")
 flip_v = true
 
 [node name="ChapExterno8" type="Sprite2D" parent="4/Cenario/Chao" unique_id=1535336109]
 position = Vector2(-3070.475, -853.025)
-scale = Vector2(0.65, 0.65)
 texture = ExtResource("11_dmd0r")
 
 [node name="ChapExterno19" type="Sprite2D" parent="4/Cenario/Chao" unique_id=926154776]
 position = Vector2(-4095.0005, -1117)
-scale = Vector2(0.65, 0.65)
 texture = ExtResource("11_dmd0r")
 
 [node name="ChapExterno31" type="Sprite2D" parent="4/Cenario/Chao" unique_id=857982016]
 position = Vector2(-4603.475, -1628.0001)
-scale = Vector2(0.65, 0.65)
 texture = ExtResource("11_dmd0r")
 
 [node name="ChapExterno11" type="Sprite2D" parent="4/Cenario/Chao" unique_id=857457188]
 position = Vector2(-2559.475, -1438.025)
-scale = Vector2(0.65, 0.65)
 texture = ExtResource("11_dmd0r")
 flip_v = true
 
 [node name="ChapExterno23" type="Sprite2D" parent="4/Cenario/Chao" unique_id=1719574434]
-position = Vector2(-3452, -1825.0249)
-scale = Vector2(0.65, 0.65)
+position = Vector2(-3445, -1825.0249)
+scale = Vector2(0.9513889, 1)
 texture = ExtResource("11_dmd0r")
 flip_v = true
 
 [node name="ChapExterno30" type="Sprite2D" parent="4/Cenario/Chao" unique_id=2061722065]
 position = Vector2(-4606.475, -1951.0249)
-scale = Vector2(0.65, 0.65)
 texture = ExtResource("11_dmd0r")
 flip_v = true
 
 [node name="ChapExterno15" type="Sprite2D" parent="4/Cenario/Chao" unique_id=1322839555]
 position = Vector2(-1533, -1438.025)
-scale = Vector2(0.65, 0.65)
 texture = ExtResource("11_dmd0r")
 flip_v = true
 
 [node name="ChapExterno80" type="Sprite2D" parent="4/Cenario/Chao" unique_id=249176750]
 position = Vector2(-889, -927)
-scale = Vector2(0.65, 0.65)
 texture = ExtResource("11_dmd0r")
 flip_v = true
 
 [node name="ChapExterno89" type="Sprite2D" parent="4/Cenario/Chao" unique_id=701012597]
 position = Vector2(-888.4751, -1692)
-scale = Vector2(0.65, 0.65)
 texture = ExtResource("11_dmd0r")
 flip_v = true
 
 [node name="ChapExterno91" type="Sprite2D" parent="4/Cenario/Chao" unique_id=203697086]
 position = Vector2(-888.4751, -1499.0001)
-scale = Vector2(0.65, 0.65)
 texture = ExtResource("11_dmd0r")
 
 [node name="ChapExterno12" type="Sprite2D" parent="4/Cenario/Chao" unique_id=2114157891]
 position = Vector2(-2557.475, -1366.025)
-scale = Vector2(0.65, 0.65)
 texture = ExtResource("11_dmd0r")
 
 [node name="ChapExterno83" type="Sprite2D" parent="4/Cenario/Chao" unique_id=969174560]
 position = Vector2(-891, -472)
-scale = Vector2(0.65, 0.65)
 texture = ExtResource("11_dmd0r")
 
 [node name="ChapExterno35" type="Sprite2D" parent="4/Cenario/Chao" unique_id=1513845944]
 position = Vector2(-6266.4746, -1953.0249)
-scale = Vector2(0.65, 0.65)
 texture = ExtResource("11_dmd0r")
 flip_v = true
 
 [node name="ChapExterno36" type="Sprite2D" parent="4/Cenario/Chao" unique_id=1623438806]
 position = Vector2(-6264.4746, -1881.0251)
-scale = Vector2(0.65, 0.65)
 texture = ExtResource("11_dmd0r")
 
 [node name="ChapExterno37" type="Sprite2D" parent="4/Cenario/Chao" unique_id=414630738]
 position = Vector2(-4920.475, -2464.025)
-scale = Vector2(0.65, 0.65)
 texture = ExtResource("11_dmd0r")
 flip_h = true
 flip_v = true
 
 [node name="ChapExterno38" type="Sprite2D" parent="4/Cenario/Chao" unique_id=1952886020]
 position = Vector2(-4920.475, -2394.025)
-scale = Vector2(0.65, 0.65)
 texture = ExtResource("11_dmd0r")
 flip_h = true
 
 [node name="ChapExterno86" type="Sprite2D" parent="4/Cenario/Chao" unique_id=1700336619]
 position = Vector2(-3511.0005, -2394.025)
-scale = Vector2(0.65, 0.65)
 texture = ExtResource("11_dmd0r")
 flip_h = true
 
 [node name="ChapExterno39" type="Sprite2D" parent="4/Cenario/Chao" unique_id=1684851425]
 position = Vector2(-5371.475, -2463.025)
-scale = Vector2(0.65, 0.65)
 texture = ExtResource("11_dmd0r")
 flip_v = true
 
 [node name="ChapExterno40" type="Sprite2D" parent="4/Cenario/Chao" unique_id=490659150]
 position = Vector2(-5369.475, -2391.025)
-scale = Vector2(0.65, 0.65)
 texture = ExtResource("11_dmd0r")
 
 [node name="ChapExterno71" type="Sprite2D" parent="4/Cenario/Chao" unique_id=417470942]
 position = Vector2(-6396.475, -3615.0002)
-scale = Vector2(0.65, 0.65)
 texture = ExtResource("11_dmd0r")
 flip_v = true
 
 [node name="ChapExterno88" type="Sprite2D" parent="4/Cenario/Chao" unique_id=1480135750]
-position = Vector2(-6267.475, -2719.0002)
-scale = Vector2(0.65, 0.65)
+position = Vector2(-6280, -2711)
 texture = ExtResource("11_dmd0r")
 flip_v = true
 
 [node name="ChapExterno74" type="Sprite2D" parent="4/Cenario/Chao" unique_id=499255848]
 position = Vector2(-5824.475, -3033.0496)
-scale = Vector2(0.65, 0.65)
 texture = ExtResource("11_dmd0r")
 flip_h = true
 
 [node name="ChapExterno56" type="Sprite2D" parent="4/Cenario/Chao" unique_id=1648746651]
 position = Vector2(-4603.0005, -2391.025)
-scale = Vector2(0.65, 0.65)
 texture = ExtResource("11_dmd0r")
 
 [node name="ChapExterno41" type="Sprite2D" parent="4/Cenario/Chao" unique_id=1055882591]
 position = Vector2(-5183.4746, -1183.0248)
-scale = Vector2(0.65, 0.65)
 texture = ExtResource("11_dmd0r")
 flip_h = true
 flip_v = true
 
 [node name="ChapExterno42" type="Sprite2D" parent="4/Cenario/Chao" unique_id=607280236]
 position = Vector2(-5183.4746, -1113.0249)
-scale = Vector2(0.65, 0.65)
 texture = ExtResource("11_dmd0r")
 flip_h = true
 
 [node name="ChapExterno84" type="Sprite2D" parent="4/Cenario/Chao" unique_id=1150968883]
 position = Vector2(-5954.0005, -1113.0249)
-scale = Vector2(0.65, 0.65)
 texture = ExtResource("11_dmd0r")
 flip_h = true
 
 [node name="ChapExterno43" type="Sprite2D" parent="4/Cenario/Chao" unique_id=843927298]
 position = Vector2(-5632.0005, -1187)
-scale = Vector2(0.65, 0.65)
 texture = ExtResource("11_dmd0r")
 flip_v = true
 
 [node name="ChapExterno85" type="Sprite2D" parent="4/Cenario/Chao" unique_id=1644836760]
 position = Vector2(-5884, -1437.0001)
-scale = Vector2(0.65, 0.65)
 texture = ExtResource("11_dmd0r")
 flip_v = true
 
 [node name="ChapExterno44" type="Sprite2D" parent="4/Cenario/Chao" unique_id=1085397285]
 position = Vector2(-5630.475, -1108.0249)
-scale = Vector2(0.65, 0.65)
 texture = ExtResource("11_dmd0r")
 
 [node name="ChapExterno53" type="Sprite2D" parent="4/Cenario/Chao" unique_id=1814044775]
 position = Vector2(-4988.475, -670.025)
-scale = Vector2(0.65, 0.65)
 texture = ExtResource("11_dmd0r")
 flip_v = true
 
 [node name="ChapExterno54" type="Sprite2D" parent="4/Cenario/Chao" unique_id=807048744]
 position = Vector2(-4986.475, -598.025)
-scale = Vector2(0.65, 0.65)
 texture = ExtResource("11_dmd0r")
 
 [node name="ChapExterno45" type="Sprite2D" parent="4/Cenario/Chao" unique_id=277126338]
 position = Vector2(-2744.475, -3108.0002)
-scale = Vector2(0.65, 0.65)
 texture = ExtResource("11_dmd0r")
 flip_h = true
 flip_v = true
 
 [node name="ChapExterno70" type="Sprite2D" parent="4/Cenario/Chao" unique_id=1923792497]
 position = Vector2(-1210, -3487)
-scale = Vector2(0.65, 0.65)
 texture = ExtResource("11_dmd0r")
 flip_h = true
 flip_v = true
 
 [node name="ChapExterno46" type="Sprite2D" parent="4/Cenario/Chao" unique_id=727696606]
 position = Vector2(-2744.475, -3032.025)
-scale = Vector2(0.65, 0.65)
 texture = ExtResource("11_dmd0r")
 flip_h = true
 
 [node name="ChapExterno77" type="Sprite2D" parent="4/Cenario/Chao" unique_id=374165023]
 position = Vector2(-3387, -4439.0005)
-scale = Vector2(0.65, 0.65)
 texture = ExtResource("11_dmd0r")
 flip_h = true
 
 [node name="ChapExterno47" type="Sprite2D" parent="4/Cenario/Chao" unique_id=2088678747]
 position = Vector2(-3197.475, -3104.025)
-scale = Vector2(0.65, 0.65)
 texture = ExtResource("11_dmd0r")
 flip_v = true
 
 [node name="ChapExterno76" type="Sprite2D" parent="4/Cenario/Chao" unique_id=2043351512]
 position = Vector2(-3694.475, -3357.0002)
-scale = Vector2(0.65, 0.65)
 texture = ExtResource("11_dmd0r")
 flip_v = true
 
 [node name="ChapExterno57" type="Sprite2D" parent="4/Cenario/Chao" unique_id=405603412]
-position = Vector2(-2811, -2594.0002)
-scale = Vector2(0.65, 0.65)
+position = Vector2(-2811, -2601.5)
+scale = Vector2(1, 0.9094203)
 texture = ExtResource("11_dmd0r")
 flip_v = true
 
 [node name="ChapExterno48" type="Sprite2D" parent="4/Cenario/Chao" unique_id=178999759]
 position = Vector2(-3195.475, -3032.025)
-scale = Vector2(0.65, 0.65)
 texture = ExtResource("11_dmd0r")
 
 [node name="ChapExterno49" type="Sprite2D" parent="4/Cenario/Chao" unique_id=1445868798]
 position = Vector2(-570.4751, -4002.0005)
-scale = Vector2(0.65, 0.65)
 texture = ExtResource("11_dmd0r")
 flip_h = true
 flip_v = true
 
 [node name="ChapExterno50" type="Sprite2D" parent="4/Cenario/Chao" unique_id=363197810]
 position = Vector2(-570.4751, -3927.025)
-scale = Vector2(0.65, 0.65)
 texture = ExtResource("11_dmd0r")
 flip_h = true
 
 [node name="ChapExterno55" type="Sprite2D" parent="4/Cenario/Chao" unique_id=1356320634]
 position = Vector2(-699, -4567)
-scale = Vector2(0.65, 0.65)
 texture = ExtResource("11_dmd0r")
 flip_h = true
 
 [node name="ChapExterno51" type="Sprite2D" parent="4/Cenario/Chao" unique_id=1436517576]
 position = Vector2(-1014.4751, -3999.025)
-scale = Vector2(0.65, 0.65)
 texture = ExtResource("11_dmd0r")
 flip_v = true
 
 [node name="ChapExterno52" type="Sprite2D" parent="4/Cenario/Chao" unique_id=1122217419]
 position = Vector2(-1012.4751, -3927.025)
-scale = Vector2(0.65, 0.65)
 texture = ExtResource("11_dmd0r")
 
 [node name="ChapExterno60" type="Sprite2D" parent="4/Cenario/Chao" unique_id=1075104924]
 position = Vector2(-697.4751, -2975.025)
-scale = Vector2(0.65, 0.65)
 texture = ExtResource("11_dmd0r")
 flip_h = true
 flip_v = true
 
 [node name="ChapExterno61" type="Sprite2D" parent="4/Cenario/Chao" unique_id=837728796]
 position = Vector2(-697.4751, -2905.025)
-scale = Vector2(0.65, 0.65)
 texture = ExtResource("11_dmd0r")
 flip_h = true
 
 [node name="ChapExterno62" type="Sprite2D" parent="4/Cenario/Chao" unique_id=1094418441]
 position = Vector2(-639.4751, -3488.025)
-scale = Vector2(0.65, 0.65)
 texture = ExtResource("11_dmd0r")
 flip_v = true
 
 [node name="ChapExterno63" type="Sprite2D" parent="4/Cenario/Chao" unique_id=115860244]
 position = Vector2(-637.4751, -3416.025)
-scale = Vector2(0.65, 0.65)
 texture = ExtResource("11_dmd0r")
 
 [node name="ChapExterno28" type="Sprite2D" parent="4/Cenario/Chao" unique_id=2088996249]
 position = Vector2(-2298.475, -2463.025)
-scale = Vector2(0.65, 0.65)
 texture = ExtResource("11_dmd0r")
 flip_v = true
 
 [node name="ChapExterno64" type="Sprite2D" parent="4/Cenario/Chao" unique_id=261400522]
 position = Vector2(-2298.475, -2463.025)
-scale = Vector2(0.65, 0.65)
 texture = ExtResource("11_dmd0r")
 flip_v = true
 
 [node name="ChapExterno29" type="Sprite2D" parent="4/Cenario/Chao" unique_id=1273743528]
 position = Vector2(-2296.475, -2391.025)
-scale = Vector2(0.65, 0.65)
 texture = ExtResource("11_dmd0r")
 
 [node name="ChapExterno78" type="Sprite2D" parent="4/Cenario/Chao" unique_id=1105782833]
 position = Vector2(-5758.0005, -4438)
-scale = Vector2(0.65, 0.65)
 texture = ExtResource("11_dmd0r")
 
 [node name="ChapExterno79" type="Sprite2D" parent="4/Cenario/Chao" unique_id=938648077]
 position = Vector2(-6521.0005, -4183.0005)
-scale = Vector2(0.65, 0.65)
 texture = ExtResource("11_dmd0r")
 
 [node name="ChapExterno65" type="Sprite2D" parent="4/Cenario/Chao" unique_id=372098087]
 position = Vector2(-894.4751, -2463.025)
-scale = Vector2(0.65, 0.65)
 texture = ExtResource("11_dmd0r")
 flip_v = true
 
 [node name="ChapExterno66" type="Sprite2D" parent="4/Cenario/Chao" unique_id=1975546619]
 position = Vector2(-892.4751, -2391.025)
-scale = Vector2(0.65, 0.65)
 texture = ExtResource("11_dmd0r")
 
 [node name="ChapExterno67" type="Sprite2D" parent="4/Cenario/Chao" unique_id=976988982]
 position = Vector2(-1149, -2136)
-scale = Vector2(0.65, 0.65)
 texture = ExtResource("11_dmd0r")
 
 [node name="ChapExterno68" type="Sprite2D" parent="4/Cenario/Chao" unique_id=2072603414]
 position = Vector2(-1789, -1881)
-scale = Vector2(0.65, 0.65)
 texture = ExtResource("11_dmd0r")
 
 [node name="ChapExterno58" type="Sprite2D" parent="4/Cenario/Chao" unique_id=283151077]
 position = Vector2(-1148, -3032.0002)
-scale = Vector2(0.65, 0.65)
 texture = ExtResource("11_dmd0r")
 
 [node name="ChapExterno69" type="Sprite2D" parent="4/Cenario/Chao" unique_id=760268393]
 position = Vector2(-1786, -3671)
-scale = Vector2(0.65, 0.65)
 texture = ExtResource("11_dmd0r")
 
 [node name="Particula" type="GPUParticles2D" parent="4" unique_id=332482112]
@@ -1956,7 +1832,6 @@ visibility_rect = Rect2(-7500, -500, 15000, 1000)
 process_material = SubResource("ParticleProcessMaterial_reei2")
 
 [node name="CanvasModulate" type="CanvasModulate" parent="4" unique_id=1860914474]
-visible = false
 position = Vector2(-21272.857, -19224.287)
 scale = Vector2(175.74992, 39.388683)
 color = Color(0.043039218, 0.043039136, 0.04303915, 1)
@@ -2017,7 +1892,7 @@ texture = ExtResource("17_dug7p")
 flip_v = true
 
 [node name="MoitaMiasma14" type="Sprite2D" parent="5/Teto" unique_id=189829966]
-position = Vector2(-4804, -2280)
+position = Vector2(-4732.7144, -2298.1904)
 scale = Vector2(0.7113702, 0.7113703)
 texture = ExtResource("17_dug7p")
 flip_v = true
@@ -2350,7 +2225,7 @@ scale = Vector2(0.5, 0.5)
 texture = ExtResource("19_ygqbx")
 
 [node name="MoitaTeste100" type="Sprite2D" parent="5/Teto" unique_id=922659487]
-position = Vector2(-3310, -758)
+position = Vector2(-3287.952, -788.66675)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("19_ygqbx")
 
@@ -2741,7 +2616,7 @@ scale = Vector2(0.5, 0.5)
 texture = ExtResource("19_ygqbx")
 
 [node name="MoitaTeste149" type="Sprite2D" parent="5/Teto" unique_id=972829501]
-position = Vector2(-4708, -2318)
+position = Vector2(-4665.0947, -2318)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("19_ygqbx")
 
@@ -3061,7 +2936,7 @@ texture = ExtResource("17_dug7p")
 flip_v = true
 
 [node name="MoitaMiasma29" type="Sprite2D" parent="5/Teto" unique_id=2142207987]
-position = Vector2(-2931, -4333)
+position = Vector2(-2868.9045, -4333)
 scale = Vector2(0.7113702, 0.7113703)
 texture = ExtResource("17_dug7p")
 flip_v = true
@@ -3107,14 +2982,14 @@ texture = ExtResource("20_sux2v")
 flip_v = true
 
 [node name="Frontfolha49" type="Sprite2D" parent="5/Foreground" unique_id=1380955555]
-position = Vector2(-4754, -2329)
-scale = Vector2(0.42382813, 0.5)
+position = Vector2(-4766.238, -2329)
+scale = Vector2(0.39155504, 0.5)
 texture = ExtResource("20_sux2v")
 flip_v = true
 
 [node name="Frontfolha50" type="Sprite2D" parent="5/Foreground" unique_id=1058290825]
-position = Vector2(-5552, -2351)
-scale = Vector2(0.47265625, 0.5)
+position = Vector2(-5568.452, -2351)
+scale = Vector2(0.4405228, 0.5)
 texture = ExtResource("20_sux2v")
 flip_h = true
 flip_v = true
@@ -3132,7 +3007,7 @@ texture = ExtResource("20_sux2v")
 flip_v = true
 
 [node name="Frontfolha53" type="Sprite2D" parent="5/Foreground" unique_id=775254116]
-position = Vector2(-3651, -2572)
+position = Vector2(-3680.0476, -2572)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("20_sux2v")
 flip_v = true
@@ -3149,6 +3024,11 @@ scale = Vector2(0.5, 0.5)
 texture = ExtResource("20_sux2v")
 flip_v = true
 
+[node name="Frontfolha102" type="Sprite2D" parent="5/Foreground" unique_id=1220949853]
+position = Vector2(-2857.1902, -2524.8572)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("20_sux2v")
+
 [node name="Frontfolha95" type="Sprite2D" parent="5/Foreground" unique_id=1933091409]
 position = Vector2(-2625, -2336)
 scale = Vector2(0.5, 0.5)
@@ -3156,7 +3036,7 @@ texture = ExtResource("20_sux2v")
 flip_v = true
 
 [node name="Frontfolha96" type="Sprite2D" parent="5/Foreground" unique_id=896164500]
-position = Vector2(-2493, -2341)
+position = Vector2(-2519.0952, -2341)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("20_sux2v")
 flip_v = true
@@ -3282,7 +3162,7 @@ texture = ExtResource("20_sux2v")
 flip_v = true
 
 [node name="Frontfolha100" type="Sprite2D" parent="5/Foreground" unique_id=473880564]
-position = Vector2(-2632, -4364)
+position = Vector2(-2674.3335, -4383.9053)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("20_sux2v")
 flip_v = true
@@ -3342,7 +3222,7 @@ texture = ExtResource("20_sux2v")
 flip_v = true
 
 [node name="Frontfolha82" type="Sprite2D" parent="5/Foreground" unique_id=1908358193]
-position = Vector2(-1207, -3862)
+position = Vector2(-1236.2378, -3862)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("20_sux2v")
 flip_v = true
@@ -3496,7 +3376,7 @@ flip_h = true
 flip_v = true
 
 [node name="Frontfolha12" type="Sprite2D" parent="5/Foreground" unique_id=1513074787]
-position = Vector2(-4282, -1067)
+position = Vector2(-4310.524, -1067)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("20_sux2v")
 flip_h = true
@@ -3508,6 +3388,12 @@ scale = Vector2(0.5, 0.5)
 texture = ExtResource("20_sux2v")
 flip_h = true
 flip_v = true
+
+[node name="Frontfolha103" type="Sprite2D" parent="5/Foreground" unique_id=1622693295]
+position = Vector2(-3658.6277, -1739.1428)
+scale = Vector2(0.46374476, 0.46374476)
+texture = ExtResource("20_sux2v")
+flip_h = true
 
 [node name="Frontfolha30" type="Sprite2D" parent="5/Foreground" unique_id=531713599]
 position = Vector2(-3378, -1350)
@@ -3552,7 +3438,7 @@ flip_h = true
 flip_v = true
 
 [node name="Frontfolha35" type="Sprite2D" parent="5/Foreground" unique_id=1358079899]
-position = Vector2(-2798, -1816)
+position = Vector2(-2783.857, -1816)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("20_sux2v")
 flip_h = true
@@ -3591,14 +3477,14 @@ flip_h = true
 flip_v = true
 
 [node name="Frontfolha14" type="Sprite2D" parent="5/Foreground" unique_id=938456680]
-position = Vector2(-3650, -549)
-scale = Vector2(0.5, 0.5)
+position = Vector2(-3662.0713, -549)
+scale = Vector2(0.47642326, 0.5)
 texture = ExtResource("20_sux2v")
 flip_h = true
 flip_v = true
 
 [node name="Frontfolha15" type="Sprite2D" parent="5/Foreground" unique_id=256619623]
-position = Vector2(-3264, -814)
+position = Vector2(-3278.1426, -797.2381)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("20_sux2v")
 flip_h = true
@@ -4018,7 +3904,6 @@ scale = Vector2(0.5, 0.5)
 texture = ExtResource("24_6t3gw")
 
 [node name="CanvasModulate" type="CanvasModulate" parent="5" unique_id=333686609]
-visible = false
 position = Vector2(-21272.857, -19224.287)
 scale = Vector2(175.74992, 39.388683)
 color = Color(0.043039218, 0.043039136, 0.04303915, 1)

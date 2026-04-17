@@ -1616,9 +1616,22 @@ texture = ExtResource("28_k84l1")
 
 [node name="MataAtlântica020260313104859" type="Sprite2D" parent="background/2/Teto" unique_id=1309169063]
 self_modulate = Color(0.012617188, 0.012617188, 0.012617188, 1)
-position = Vector2(1710.9525, 36.86245)
+position = Vector2(1921.9047, 271.42856)
 scale = Vector2(1.4604188, 1.8298593)
 texture = ExtResource("15_ts3dy")
+
+[node name="arvore_fore" type="Sprite2D" parent="background/2" unique_id=2041996282]
+self_modulate = Color(0.012617188, 0.012617188, 0.012617188, 1)
+position = Vector2(-8896.19, -431.4286)
+scale = Vector2(0.91344273, 0.91344273)
+texture = ExtResource("36_qh6tj")
+
+[node name="arvore_fore2" type="Sprite2D" parent="background/2" unique_id=453658406]
+self_modulate = Color(0.012617188, 0.012617188, 0.012617188, 1)
+position = Vector2(2362.8572, 743.8096)
+scale = Vector2(0.91344273, 0.91344273)
+texture = ExtResource("36_qh6tj")
+flip_h = true
 
 [node name="3" type="CanvasLayer" parent="background" unique_id=1953598573]
 follow_viewport_enabled = true

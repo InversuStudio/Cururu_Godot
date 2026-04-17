@@ -54,6 +54,7 @@
 [ext_resource type="AudioStream" uid="uid://c7qftchbhu6xc" path="res://Audio/SFX/AMBIENTE/Musica_Jogo.mp3" id="46_an2db"]
 [ext_resource type="AudioStream" uid="uid://b2vi4qav4gk5r" path="res://Audio/SFX/AMBIENTE/Cururu - Soundscape A.ogg" id="47_g3kr1"]
 [ext_resource type="PackedScene" uid="uid://u28e3eudu6ch" path="res://Objetos/Funcionalidade/MainCamera.tscn" id="48_sl87r"]
+[ext_resource type="Texture2D" uid="uid://d4ejwuwkr77qe" path="res://Sprites/Cenário/Mata_Atlantica/Background/Arvores/Arvoresv2/5C67D19F-AAD6-4A12-8E7F-AE0BBBAB2054.PNG" id="50_40frc"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_h4xbm"]
 shader = ExtResource("3_hg2ga")
@@ -2120,6 +2121,23 @@ follow_viewport_enabled = true
 position = Vector2(-11986, -142)
 rotation = -0.08726649
 
+[node name="arvore_fore" type="Sprite2D" parent="Background/2/foreground" unique_id=1720800208]
+self_modulate = Color(0.012617188, 0.012617188, 0.012617188, 1)
+position = Vector2(-6553.4844, -4273.4355)
+rotation = 0.08637722
+scale = Vector2(0.69514346, 0.69504076)
+skew = 0.00023007393
+texture = ExtResource("50_40frc")
+
+[node name="arvore_fore2" type="Sprite2D" parent="Background/2/foreground" unique_id=430240889]
+self_modulate = Color(0.012617188, 0.012617188, 0.012617188, 1)
+position = Vector2(3904.6904, -158.70447)
+rotation = 0.08637722
+scale = Vector2(0.73962694, 0.73951757)
+skew = 0.00023007393
+texture = ExtResource("50_40frc")
+flip_h = true
+
 [node name="Frontfolha" type="Sprite2D" parent="Background/2/foreground" unique_id=1680567159]
 position = Vector2(2483.4941, 1066.5093)
 rotation = 0.0872665
@@ -2484,7 +2502,7 @@ scale = Vector2(0.67027026, 0.67027026)
 texture = ExtResource("44_s6hji")
 
 [node name="Cipó10" type="Sprite2D" parent="Background/2/foreground" unique_id=1925595591]
-position = Vector2(2071.4424, -488.32007)
+position = Vector2(2107.9277, -515.2426)
 rotation = 0.0872665
 scale = Vector2(0.67027026, 0.67027026)
 texture = ExtResource("44_s6hji")
@@ -2496,7 +2514,7 @@ scale = Vector2(0.67027026, 0.67027026)
 texture = ExtResource("44_s6hji")
 
 [node name="Cipó14" type="Sprite2D" parent="Background/2/foreground" unique_id=802471216]
-position = Vector2(3673.5579, -545.9056)
+position = Vector2(3625.0303, -599.33844)
 rotation = 0.0872665
 scale = Vector2(0.67027026, 0.67027026)
 texture = ExtResource("44_s6hji")

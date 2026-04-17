@@ -736,6 +736,19 @@ position = Vector2(8349.524, -4978.667)
 scale = Vector2(0.8, 0.8)
 texture = ExtResource("21_8ydvq")
 
+[node name="arvore_fore" type="Sprite2D" parent="2" unique_id=1042626965]
+self_modulate = Color(0.012617188, 0.012617188, 0.012617188, 1)
+position = Vector2(5097.143, -4738.095)
+scale = Vector2(0.91344273, 0.91344273)
+texture = ExtResource("18_lmfyw")
+
+[node name="arvore_fore2" type="Sprite2D" parent="2" unique_id=1409423927]
+self_modulate = Color(0.012617188, 0.012617188, 0.012617188, 1)
+position = Vector2(9242.857, -4738.095)
+scale = Vector2(0.91344273, 0.91344273)
+texture = ExtResource("18_lmfyw")
+flip_h = true
+
 [node name="Cd9382ad633b4035A55f471d39e87282" type="Sprite2D" parent="2" unique_id=1346646284]
 self_modulate = Color(0.012617188, 0.012617188, 0.012617188, 1)
 position = Vector2(5893.334, -4821.8467)
