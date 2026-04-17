@@ -149,7 +149,7 @@ func TomouDano(vida_atual:int, _vida_antiga:int) -> void:
 func ArmorDano(vida:Vida, h:Array[HitBox]) -> void:
 	for hit:HitBox in h:
 		if hit.is_in_group("Special"):
-			vida.RecebeDano(100)
+			vida.RecebeDano(1.5)
 	vida_miasma_atual = %VidaMCabeca.vida_atual + %VidaMCorpo.vida_atual
 	var tween_a:Tween = create_tween()
 	tween_a.tween_property(%BarraArmor, "value", vida_miasma_max - vida_miasma_atual, .15)
