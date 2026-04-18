@@ -1,7 +1,33 @@
 extends Node
 
 # Registra o nome de todas as fases do jogo
-var lista_fases:Array[PackedStringArray] = [] # [PASTA, ARQUIVO]
+var lista_fases:Array[PackedStringArray] = [
+	["aTutorial", "CutsceneIntro.tscn"],
+	["aTutorial", "CutsceneIntro2.tscn"],
+	["aTutorial", "Tutorial_1.tscn"],
+	["aTutorial", "Tutorial_2.tscn"],
+	["aTutorial", "Tutorial_3.tscn"],
+	["Mata_Atlantica", "MA_01.tscn"],
+	["Mata_Atlantica", "MA_02.tscn"],
+	["Mata_Atlantica", "MA_03.tscn"],
+	["Mata_Atlantica", "MA_04.tscn"],
+	["Mata_Atlantica", "MA_05.tscn"],
+	["Mata_Atlantica", "MA_06.tscn"],
+	["Mata_Atlantica", "MA_07.tscn"],
+	["Mata_Atlantica", "MA_08.tscn"],
+	["Mata_Atlantica", "MA_09.tscn"],
+	["Mata_Atlantica", "MA_10.tscn"],
+	["Mata_Atlantica", "MA_11.tscn"],
+	["Mata_Atlantica", "MA_12.tscn"],
+	["Mata_Atlantica", "MA_13.tscn"],
+	["Mata_Atlantica", "MA_14.tscn"],
+	["Mata_Atlantica", "MA_15.tscn"],
+	["Mata_Atlantica", "MA_16.tscn"],
+	["zDemo", "FinalDemo.tscn"],
+	["zTeste", "ExemploEstruturaFase.tscn"],
+	["zTeste", "FaseTeste1.tscn"],
+	["zTeste", "FaseTeste2.tscn"],
+	["zTeste", "FaseTeste3.tscn"],]
 # Registra as fases que o player já visitou
 var fases_visitadas:PackedStringArray = []
 # Registra fase atual
@@ -19,11 +45,11 @@ func _ready() -> void:
 	fase_atual = nome_cena
 	Console.MudaAbaSelect()
 	
-	var pastas:PackedStringArray = DirAccess.get_directories_at("res://Cenas/")
-	for p:String in pastas:
-		var files:PackedStringArray = DirAccess.get_files_at("res://Cenas/%s/" % p)
-		for f:String in files:
-			lista_fases.append([p, f])
+	#var pastas:PackedStringArray = DirAccess.get_directories_at("res://Cenas/")
+	#for p:String in pastas:
+		#var files:PackedStringArray = DirAccess.get_files_at("res://Cenas/%s/" % p)
+		#for f:String in files:
+			#lista_fases.append([p, f])
 
 # Lista que registra que peças de coração foram coletadas
 var pecas_coracao: Array[String] = []
